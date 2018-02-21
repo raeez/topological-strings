@@ -4,7 +4,7 @@
 \input{mathmacros.tex}
 \input{authors.tex}
 
-\title{Notes on the Topological Super-String}
+\title{Some Calculations Concerning The Topological String}
 
 \begin{document}
 
@@ -19,9 +19,9 @@
   %\input{nomenclature.tex}
   %\printnomenclature
 
-  \section{Introduction}
+\section{Introduction}
 
-  \subsection{Dreams}
+\subsection{Dreams}
   One of the prevalent themes at play in both contemporary theoretical physics
   and mathematics is that of \textit{duality}. In particular, we will adopt a
   form of \textit{Koszul Duality} as a guiding light in our quest to understand
@@ -60,7 +60,7 @@
   These notes will amount to a rigorous check of this form of holography in a
   few (relatively) simple examples.
 
-  \subsection{String Field Theory and Koszul Duality}
+\subsection{String Field Theory and Koszul Duality}
   We expect Koszul duality for string field theories to be captured at the
   level of Calabi-Yau categories and their respective cyclic homologies, via
   the theorem of Loday-Quillen-Tsygan, which says
@@ -79,56 +79,56 @@
   classical level} at the large $N$ limit, while OPE's will coincide with
   string scattering amplitudes.
 
-  \subsection{Flavours of Topological Strings}
-  Topological strings manifest in various flavours. Common examples include
+\subsection{Flavours of Topological Strings}
+Topological strings manifest in various flavours. Common examples include
 
-  \begin{itemize}
-    \item The \textbf{A-model} where $X$ is symplectic and branes are
-      lagrangians $L \inj X$
-    \item The \textbf{B-model} where $X$ is calabi-yau and branes are coherent
-      sheaves.
-    \item \textbf{Mixed A-B models} e.g.\ on $X \times X'$ with branes given by
-      $L\times Z$ for $L \inj X$ lagrangian and $Z \inj Y$ holomorphic.
-  \end{itemize}
+\begin{itemize}
+  \item The \textbf{A-model} where $X$ is symplectic and branes are
+    lagrangians $L \inj X$
+  \item The \textbf{B-model} where $X$ is calabi-yau and branes are coherent
+    sheaves.
+  \item \textbf{Mixed A-B models} e.g.\ on $X \times X'$ with branes given by
+    $L\times Z$ for $L \inj X$ lagrangian and $Z \inj Y$ holomorphic.
+\end{itemize}
 
-  \begin{rmk}
-    The above examples do not exhaust the full landscape of topological
-    strings. % TODO give example
-  \end{rmk}
+\begin{rmk}
+  The above examples do not exhaust the full landscape of topological
+  strings. % TODO give example
+\end{rmk}
 
-  \begin{rmk}
-    The A-model is only interesting with world-sheet instantons taken into
-    account.
-  \end{rmk}
+\begin{rmk}
+  The A-model is only interesting with world-sheet instantons taken into
+  account.
+\end{rmk}
 
-  Regardless of the context we will work in, we'll need to understand
+Regardless of the context we will work in, we'll need to understand
 
-  \begin{itemize}
-    \item The open string theory, which is the theory on a Brane, and
-    \item The closed string field theory, of a gravitational nature
-  \end{itemize}
+\begin{itemize}
+  \item The open string theory, which is the theory on a Brane, and
+  \item The closed string field theory, of a gravitational nature
+\end{itemize}
 
-  \subsection{Open Strings}
-  If $\mc{C}$ is a Calabi-Yau category, with $\mc{F} \in \Cat{Ob}\mc{C}$, one
-  can construct a field theory with a space of
-  fields\footnotemark\footnotetext{If we just produce a category, then the
-    resulting field theory would be defined on a point. If instead we produce a
-    sheaf of categories, we get a field theory on the support of this sheaf of
-  categories i.e.\ a field theory on the given brane}given by
-  $$\RHom(\mc{F},\mc{F})[1],$$
-  also known as the open string states. The action for this field theory is
-  built in terms of the $A_{\infty}$ structure\footnotemark\footnotetext{Via a
-  standard procedure going back to Witten} on this derived $\Hom$ space.
+\subsection{Open Strings}
+If $\mc{C}$ is a Calabi-Yau category, with $\mc{F} \in \Cat{Ob}\mc{C}$, one
+can construct a field theory with a space of
+fields\footnotemark\footnotetext{If we just produce a category, then the
+  resulting field theory would be defined on a point. If instead we produce a
+  sheaf of categories, we get a field theory on the support of this sheaf of
+categories i.e.\ a field theory on the given brane}given by
+$$\RHom(\mc{F},\mc{F})[1],$$
+also known as the open string states. The action for this field theory is
+built in terms of the $A_{\infty}$ structure\footnotemark\footnotetext{Via a
+standard procedure going back to Witten} on this derived $\Hom$ space.
 
   \section{First Example}
 
-  \subsection{Our setup}
+\subsection{Our setup}
   Let $X$ be $\R^2_A \times \C^2_B$. Branes will be of the form $L \times Z$
   where $L$ is a (lagrangian) line in $\R^2_A$ and $Z$ is the support of a
   coherent sheaf on $\C^2_B$. Consider, in particular, the Brane $$\R \times p
   \inj \R^2_A \times \C^2_B$$ for some point $p \in \C^2_B$.
 
-  \subsection{Open String Field States}
+\subsection{Open String Field States}
   The open string states will be a tensor product of A-model and B-model
   states. If one consults the mathematical literature one would find the
   following prescription:
@@ -144,100 +144,200 @@
       representing a normal direction.
   \end{itemize}
 
-  \subsection{Open String Field Theory}
+\subsection{Open String Field Theory}
 
-  We hence find that the fields\footnotemark\footnotetext{in the
-  Batalin-Vilkovisky formalism} are given by
-  $$\alpha \in \Omega^*(\R)[\varepsilon_1,\varepsilon_2] \otimes
-  \lie{gl}_N[1]$$ with action $$S(\alpha) = \int_{\R \times
-  \C^{0|2}}\frac{1}{2}Tr(\alpha d\alpha) + \frac{1}{3} Tr \alpha^3$$
+We hence find that the fields\footnotemark\footnotetext{in the
+Batalin-Vilkovisky formalism} are given by
+$$\alpha \in \Omega^*(\R)[\varepsilon_1,\varepsilon_2] \otimes
+\lie{gl}_N[1]$$ with action $$S(\alpha) = \int_{\R \times
+\C^{0|2}}\frac{1}{2}Tr(\alpha d\alpha) + \frac{1}{3} Tr \alpha^3$$
 
-  \begin{rmk}
-    Note that in the action we perform a Berezin integral over $\C^{0|2}$
-  \end{rmk}
-  \begin{rmk}
-    The shift of 1 in the space of fields above means that the $1$-forms are
-    now in ghost number 0, i.e.\ is a bosonic gauge field. Similarly, the
-    scalars $\varepsilon_i$ (representing the motions of brane) are also ghost
-    number 0.
-  \end{rmk}
+\begin{rmk}
+  Note that in the action we perform a Berezin integral over $\C^{0|2}$
+\end{rmk}
+\begin{rmk}
+  The shift of 1 in the space of fields above means that the $1$-forms are
+  now in ghost number 0, i.e.\ is a bosonic gauge field. Similarly, the
+  scalars $\varepsilon_i$ (representing the motions of brane) are also ghost
+  number 0.
+\end{rmk}
 
-  \begin{rmk}
-    % reference Alberto's writeup
-    In the Non-BV setup, i.e.\ for a starting point from which we can follow
-    the procedure outlined as in ?? to derive the above, we write down ghosts,
-    the anti-fields, the anti-fields to the ghosts etc. to find a Quantum-Mechanical system with fields
-    $$A \in \Omega^1(\R)\otimes \lie{gl}_N$$ a connection form and two scalars
-    $$\phi_1,\phi_2 \in \Omega^0(\R)\otimes\lie{gl}_N$$ and action $$S = \int
-    Tr(\phi_1, d_A\phi_2)$$ with the usual gauge symmetry.
-  \end{rmk}
+\subsubsection{De-BV-fying the open string field theory}
+  % reference Alberto's writeup
+  In the Non-BV setup, i.e.\ for a starting point from which we can follow
+  the procedure outlined as in ?? to derive the above, we write down ghosts,
+  the anti-fields, the anti-fields to the ghosts etc. to find a Quantum-Mechanical system with fields
+  $$A \in \Omega^1(\R)\otimes \lie{gl}_N$$ a connection form and two scalars
+  $$\phi_1,\phi_2 \in \Omega^0(\R)\otimes\lie{gl}_N$$ and action $$S = \int
+  Tr(\phi_1, d_A\phi_2)$$ with the usual gauge symmetry.
 
-  \begin{rmk}
-    We can also proceed directly within the CY category. There we take a given
-    object, tensor it with $\C^N$; passage to endomorphisms yields
-    endomorphisms tensored with that of $\C^N$. More generally, one should take
-    proceed via the cyclic cohomology of the category. What we really need is
-    to be able to consider is an integral over world sheets decorated with
-    cyclic cohomology classes. Then the 3-point function should be computable
-    via the cup-product in cyclic cohomology together with the trace. However,
-    the higher $n$-point functions are trickier.
-  \end{rmk}
+\begin{rmk}
+  We can also proceed directly within the CY category. There we take a given
+  object, tensor it with $\C^N$; passage to endomorphisms yields
+  endomorphisms tensored with that of $\C^N$. More generally, one should take
+  proceed via the cyclic cohomology of the category. What we really need is
+  to be able to consider is an integral over world sheets decorated with
+  cyclic cohomology classes. Then the 3-point function should be computable
+  via the cup-product in cyclic cohomology together with the trace. However,
+  the higher $n$-point functions are trickier.
+\end{rmk}
 
-  \begin{rmk}
-    This is literally 1-dimensional chern simons theory (via AKSZ formalism).
-  \end{rmk}
+\begin{rmk}
+  This is literally 1-dimensional chern simons theory (via AKSZ formalism).
+\end{rmk}
 
-  \begin{rmk}
-    we can also realize this via maps to $\B{G}$ from $\R\times \C^{0|2}$; this
-    point of view makes manifest the origin of this theory as a reduction of chern simons on a
-  2-torus. (The two odd directions generate the cohomology of the 2-torus.)
-  Elaborating on this point of view with an analysis of T-duality recovers
-  Witten's prescriptions for Chern Simons theory via topological string theory.
-  \end{rmk}
+\begin{rmk}
+  we can also realize this via maps to $\B{G}$ from $\R\times \C^{0|2}$; this
+  point of view makes manifest the origin of this theory as a reduction of chern simons on a
+2-torus. (The two odd directions generate the cohomology of the 2-torus.)
+Elaborating on this point of view with an analysis of T-duality recovers
+Witten's prescriptions for Chern Simons theory via topological string theory.
+\end{rmk}
 
-  \subsection{Closed String States}
-  Similarly, the closed string state space will be of the form
-  $$\mathrm{A-model closed states}\otimes \mathrm{B-model closed
-  states}$$
-  For the A-model on $\R^2$ we have the de Rahm cohomology.
-  For the B-model, following BCOV we consider $$\Ker \partial \subset
-  \mbf{PV}^{*,*}(\C^2) \simeq
-  \Omega^{0,*}(\C^2)[\partial_{z_1},\partial_{z_2}]$$
+\subsection{Closed String States}
+Similarly, the closed string state space will be of the form
+$$\mathrm{A-model closed states}\otimes \mathrm{B-model closed
+states}$$
+For the A-model on a symplectic manifold, as usual, we get the cohomology of
+that manifold; but again as we are constructing a field tehory on $\R^2$ we
+take the de Rahm cohomology complex.
+For the B-model, following BCOV's analysis on a CY 3-fold, we consider $$\Ker \partial \subset
+\mbf{PV}^{*,*}(\C^2) \simeq
+\Omega^{0,*}(\C^2)[\partial_{z_1},\partial_{z_2}]$$
+i.e.\ the kernel of a certain operator on the space of poly-vector fields.
+\begin{rmk}
+  The $\partial_{z_i}$ are odd.
+\end{rmk}
 
-  \begin{rmk}
-    The $\partial_{z_i}$ are odd.
-  \end{rmk}
+\begin{rmk}
+  The constructions here are much more homologically involved. Updates coming soon.
+\end{rmk}
 
-  \begin{rmk}
-    The constructions here are much more homologically involved. Updates coming soon.
-  \end{rmk}
+Observe that the action of $\partial$ on PolyVector fields $$\partial :
+\mbf{PV}^{i,*} \rightarrow \mbf{PV}^{i-1,*}$$
+and that $$\mbf{PV}^{0,*}\subset \Ker\partial.$$ Now since $\C^2$ is symplectic, we
+find$$\mbf{PV}^{1,*}(\C^2) \simeq
+\Omega^{1,*}(\C^2)$$ with the restriction of the operator $\partial$ acting as the holomorphic de
+Rahm operator. Hence we are considering the complex of
+closed\footnotemark\footnotetext{closed in the holomorphic sense} holomorphic
+1-forms.
 
-  Observe that the action of $\partial$ on PolyVector fields $$\partial :
-  PV^{i,*} \rightarrow PV^{i-1,*}$$
-  and that $$PV^{0,*}\subset \Ker\partial$$. Now since $\C^2$ is symplectic, we
-  find$$PV^{1,*}(\C^2) \simeq
-  \Omega^{1,*}(\C^2)$$ where the operator $\partial$ becomes the holomorphic de
-  Rahm operator. Hence we are considering the complex of
-  closed\footnotemark\footnotetext{closed in the holomorphic sense} holomorphic
-  1-forms.
+\begin{rmk}
+  Following BCOV, we have stipulated that the fields must satisfy a
+  differential equation, which inevitably produces a technical nightmare.
+  Further, what is worse is that the action functional (coinciding with the
+  inverse of $\partial$) is non-local.
+\end{rmk}
 
-  \begin{rmk}
-    Following BCOV, we have stipulated that the fields must satisfy a
-    differential equation, which inevitably produces a technical nightmare.
-    Further, what is worse is that the action functional (coinciding with the
-    inverse of $\partial$) is non-local.
-  \end{rmk}
-  Thus we are led to divergence free vector fields; equivalently symplectic
-  vector fields in this case. Now we opt to replace $\Ker\partial$ by the image
-  of $\partial$ i.e.\ by $$\Omega^{0,*} - \mathrm{Hamiltonian Vector
-  Fields}$$
+Also, note that when restricting to poly-2-vector-fields $$\mbf{PV}^{2,*}(\C^2) \supset \Ker\partial$$
+$\Ker\partial$ picks out poly-2-vector-fields that are independent of $z$,
+hence
+$$\mbf{PV}^{2,*}(\C^2) \supset \Ker\partial \simeq \C$$
+(the cohomology is $\C$), which is again (almost) trivial. What is more, by the
+definition of a propagator in BCOV theory, this does not propagate---hence form
+background fields which we'll ignore.
 
-  \begin{rmk}
-    We have replaced one complex by another that is almost---but not
-    quite---quasi-isomorphic: they differ by the cohomology of $\C$, which is
-    (almost) trivial.
-  \end{rmk}
+\begin{rmk}
+  this statement generalizes the sheafy setting.
+\end{rmk}
 
-  \subsection{Analysis of $N \rightarrow \infty$}
+\subsection{Closed String Field Theory}
+
+Combining this analysis, for our candidate for the closed string field
+theory we are led to divergence free vector fields; equivalently, in this case, symplectic
+vector fields. Now we opt to replace $\Ker\partial$ by the image
+of $\partial$ i.e.\ by $$\Omega^{0,*} - \mathrm{Hamiltonian Vector
+Fields}$$
+
+\begin{rmk}
+  We have replaced one complex by another that is almost---but not
+  quite---quasi-isomorphic: they differ by the cohomology of $\C$, which is
+  (almost) trivial.
+\end{rmk}
+
+\subsubsection{The Action Functional}
+
+We can now write down the action, for $$\alpha \in
+\Omega^*(\R^2)\hat{\otimes}\Omega^{0,*}(\C^2)[1]$$
+$$\beta \in \Omega^*(\R^2)\hat{\otimes}\Omega^{0,*}(\C^2)[2]$$
+the action is an integral over real 6-dimensional space, cubic in the fields
+$$\int_{\R^2 \times \C^2} \beta\bar{\partial}\alpha dz_1 dz_2 +
+\int_{\R^2\times \C^2} \beta \partial \alpha \partial \alpha$$
+
+\begin{rmk}
+  Observe that the second term of the action can be expressed as
+  $$\int_{\R^2\times \C^2} \beta \partial \alpha \partial \alpha =
+  \int_{\R^2\times \C^2} \beta\{\alpha,\alpha\}dz_1 dz_2$$
+  where the expression $\partial \alpha \partial \alpha$ can be expressed as a
+  poisson bracket, hence we see the lie bracket on hamiltonian vector fields
+  entering the action functional.
+\end{rmk}
+
+\begin{rmk}
+  Before, the quantum mechanical system lived on a line (extent of the brane), while this gravitational theory occupies all of space-time.
+\end{rmk}
+
+\subsubsection{De-BV-fying the closed string field theory}
+
+\begin{rmk}
+  This theory is closely related to a 4-dimensional BF theory.
+  TODO more
+\end{rmk}
+
+Consider space-time $$\R^2_{x_i}\times\C^2_{z_i}$$ where the subscripts
+indicate coordinates. Paying attention to ghost number zero components
+$$\beta = \beta_{x_1 x_2} dx_1 dx_2 + \beta_{x_i \bar{z}_j} dx_i d\bar{z}_j +
+\beta_{\bar{z}_1\bar{z}_2 d\bar{z}_1d\bar{z}_2}$$
+$$\alpha = \alpha_{x_i}dx_i + \alpha_{\bar{z}_j}d\bar{z}_j$$
+and considering the action as given above, we see that $\beta$ has $1$-form gauge
+symmetry, while $\alpha$ has $0$-form gauge symmetry.
+\begin{rmk}
+  As in the previously alluded to $4$-dimensional BF theory, $\beta$---having
+  $1$-form gauge symmetry---also has secondary gauge symmetry, which is why we
+  find a large complex. TODO more.
+\end{rmk}
+
+Analysing $\alpha$, as a Hamiltonian vector field on $\C^2$, we see the
+term $\alpha_{\bar{z}_j}d\bar{z}_j$ is the Beltrami differential, where we
+deform $\C^2$ as a symplectic surface. The term $\alpha_{x_i}dx_i$ is a
+connection on $\R^2$ valued in Hamiltonian vector fields; the terms together
+imply that we have a flat bundle of $\C^2$'s over $\R^2$. In fact, the
+equations of motion determine an integrable deformation of complex structure.
+Analysing $\beta$ in the action functional, it only appears linearly. This
+implies they're just lagrangian multiplier fields in enforcing the equations
+resulting in the integrable deformation of complex structure + flatness of the
+bundle of $\C^2$'s over $\R^2$.
+\begin{rmk}
+  This final statement is analogous to BF theory where $B$ is a lagrangian
+  multiplier and $F$ is zero, hence why we see in the next section that the
+  phase space is a cotangent bundle.
+\end{rmk}
+
+\subsubsection{Phase Space}
+If we put this on $$\R \times S^1 \times X$$ where $X$ is homolomorphic
+symplectic, then the phase space is $$T^*(\mathrm{Moduli of
+holomorphic-symplectic surfaces fibered over} S^1 + \mathrm{flat
+connection})$$
+\begin{rmk}
+  If we work in perturbation theory near $X$ we will find the above moduli
+  space near this configuration.
+\end{rmk}
+
+\subsection{Closed String Fields}
+
+Given a closed string field, we should obtain a deformation of the gauge theory
+on the brane. For example, if the brane is on the line $x_1$ and the closed
+string  field is $$dx_1 z_1^k z_2^l$$ we ought to obtain a deformation of our
+quantum mechanical system on the line $x_1$. We can identify this deformation
+by deforming the action to $$\int Tr \phi_1 d_A \phi_2 + \int dx_1 Tr \phi_1^k
+\phi_2^l$$ by adding on a Hamiltonian. Many matrix models of hamiltonians can
+be engineered by these backgrounds.
+
+\begin{rmk}
+  Geometrically, this just amounts to saying that the $\C^2$ has a connection,
+  allowing parallel transport.
+\end{rmk}
+
+\subsection{Analysis of $N \rightarrow \infty$}
 
 \end{document}
