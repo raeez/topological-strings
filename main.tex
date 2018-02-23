@@ -340,7 +340,7 @@ be engineered by these backgrounds.
   allowing parallel transport.
 \end{rmk}
 
-\subsection{Computation of Operators in the gauge theory, and the large $N$
+\subsection{Operators in the gauge theory, and the large $N$
 limit}
 
 TODO more
@@ -377,7 +377,8 @@ $$Q(Tr(\psi p(\phi_1,\phi_2)) = Tr([\phi_1,\phi_2]p(\phi_1,\phi_2))$$
   and ghost \#$-1$ operators are given by\footnotemark $$Tr(\mathrm{Sym}\{\psi \phi_1^k
     \phi_2^l)$$
     Similarly, the classical local operators are $$\mathbf{S}^*(\C[z_1,z_2]
-      \oplus \C[z_1,z_2][1]$$
+    \oplus \C[z_1,z_2][1])$$
+    where $\mbf{S}^*$ denotes the dual of the symmetric algebra.
 \end{cor}
 \footnotetext{$\mathrm{Sym}\{\cdots\}$ denotes the symmetrized expression:
 i.e.\ the sum of permutations of factors of the product of the expression}
@@ -387,7 +388,7 @@ i.e.\ the sum of permutations of factors of the product of the expression}
   $$z_1^kz_2^l$$
 \end{rmk}
 
-\subsection{Computation of operators in the gravitational theory}
+\subsection{Operators in the gravitational theory}
 TODO write up full argument.
 Similarly, we can build local operators through a limited series of operations:
 we can evaluate $\theta$ and $\alpha$ at a point, we can differentiate etc.\ By
@@ -418,7 +419,123 @@ first, corresponds to the $\beta$ field.
   \C[z_1,z_2][1]$.
   The action is then given by
   $$[\alpha, \beta] = \{\alpha,\beta\}$$ where the poisson bracket is given by
-  the constant poisson tensor $dz_1dz_2$.
+  the constant poisson tensor $dz_1dz_2$. In particular, $[\alpha,\alpha]$ is
+  just the poisson bracket while $[\beta,\beta]$ commutes.
+\end{rmk}
+
+\subsection{Koszul Duality}
+  At this stage we can see that the koszul dual of these two algebras of local
+  operator is nearly koszul dual, i.e. the koszul dual of the above gravity
+  operators is given by $$\mbf{U}(\Hom(\C^2)\oplus\Hom(\C^2)[1]).$$
+  Comparing this to the gauge theory operators, which are
+  $$\mbf{S}^*(\C[z_1,z_2]\oplus\C[z_1,z_2][1])$$ we find that the latter is
+  really the classical i.e.\ commutative limit of the former.
+\subsubsection{Classical free gravity and the commutative limit}
+On the gravitational side, we can interpret the passage to the commutative
+limit as discarding any interactions; these interactions produced the lie
+bracket. Hence via the passage to \textit{classical free
+gravity} we see the effect of koszul duality $$\textrm{Classical free gravity} \leftrightarrow^{\textrm{KD}} \textrm{Classical gauge theory}$$
+It follows that moving to first order away from the classical limit in the
+gauge theory will be necessary to match up both sides via Koszul
+duality\footnotemark.
+
+TODO define free (quadratic) gravity.
+\footnotetext{
+  Going further, in the planar limit, $\hbar$ on the RHS will match up with the interaction
+  strength on the LHS. For example, a two-loop diagram from the gauge theory
+  will correspond to a genus-two string interaction. Correspondingly, passage
+  to quantum gravity, i.e.\ non-trivial $\hbar$
+  on the gravitational side will take us beyond the planar limit and manifest
+  via traces of operators on the gauge theory side. We'll need to include a
+  parameter in the OPE of local operators: e.g.\ the OPE of two single-trace
+  operators will yield a spectrum of operators of various traces---here we will
+  see the appearance of this parameter.
+}
+
+\subsubsection{First order corrections}
+
+Under the koszul duality correspondence we have
+$$z_1^k z_2^l \leftrightarrow Tr \phi_1^k\phi_2^l$$
+and we want the poisson bracket to match up to a non-trivial first-order
+quantum correction $$\{z_1^kz_2^l,z_1^mz_2^n\} \leftrightarrow [Tr
+\phi_1^k\phi_2^l, Tr \phi_1^m\phi_2^n]$$
+
+This we can compute by a diagram linking by an edge the two sub-diagrams corresponding to
+each trace, which produces a match with the poisson bracket.
+\image{firstorder.png}
+
+\subsubsection{Second order corrections: $\hbar^2$}
+Attempting to work to order $\hbar^2$, we can appeal to symmetry: the algebra
+of trace of operators is an even quantization; namely, sending $$\hbar \mapsto
+-\hbar$$ and simultaneously reversing the product yields an equivalence. Thus
+to order $\hbar^2$, we find no corrections.
+
+\subsubsection{Third order corrections}
+Restricting for the moment to ghost \#$0$ operators, we need to account for third order diagrams:
+\image{thirdordera.png}
+\image{thirdorderb.png}
+which are ribbon graphs in the large-$N$ limit.
+
+The first diagram above gives a cubic expression in traces, while the second
+gives a quadratic expression (the degree coincides with the number of
+boundaries of the diagram).\par
+\begin{rmk}
+  We see from the first diagram above that koszul duality switches degrees: a
+  expression taking three generators (the cubic trace) gets mapped to one with
+  two generators. In the $A_{\infty}$ language, the first diagram yields an
+  $m3$ $A_{\infty}$ operation, while the second yields an $m_2$ operation.\par
+
+  Note also that the cubic expression in traces is symmetric,
+  as we expect: a poisson bracket on an exterior algebra ought to be symmetric.
+\end{rmk}
+
+In order to match these with diagrams on the string-gravity side, we need to
+understand the $A_{\infty}$ structure on the algebra of cochains
+$$C^*(\C[z_1,z_2]\oplus\C[z_1,z_2][1]).$$
+
+Given operators $$\mathcal{O}_{k,l} = \partial_z^k\partial_k^l\alpha$$ to
+compute the $A_{\infty}$ structure we'll need to match these two diagrams: the
+first maps to a sum over all feynman diagrams
+
+TODO draw feynman diagram
+%\image{m3feynmandiagram}
+
+yielding a $3 \rightarrow 2$ $A_{\infty}$ operation, which on the koszul dual
+side maps to a $2 \rightarrow 3$ operation, while the second diagram maps to a
+sum over all feynman diagrams.
+
+TODO dram feynman diagram
+%\image{m2feynmandiagram}
+
+\begin{rmk}
+  In practice in trying to work more generally, in order to show uniqueness,
+  we'd need to identify the underlying algebra and show (homologically) that it
+  has only one deformation.
+\end{rmk}
+
+\begin{rmk}
+  throughout, we could have treated $lie{gl}_N$ in two ways: as a lie algebra,
+  or as a reductive group. Taking invariants with respect tothe latter choice
+  is an exact functor, hence obviating the need for Chevalley cochains and
+  discarding all ghosts.\par
+
+  Including all of cyclic cohomology would match up with
+  higher degree polynomial invariants in the ghosts: i.e.\ including more
+  topological data in our gravitational theory.
+\end{rmk}
+
+\begin{rmk}
+  On the gravity side we did not choose a brane: we just worked with string
+  states. On the gauge theory side we picked a brane of the form a point cross
+  a lagrangian. By choosing a different $B$-brane, we move away from the
+  structure of an associative algebra to a more general factorization algebra.
+  Koszul duality should then extend to this more general setting. For example,
+  if we had two topological directions (instead of one), then we would expect
+  to obtain an $E_2$ algebra and hence $E_2$ koszul duality
+\end{rmk}
+
+\begin{rmk}
+  We could also study $D_0$ branes $\R^2\times \C^4$ from this point of view.
 \end{rmk}
 
 \end{document}
