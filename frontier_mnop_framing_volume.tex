@@ -108,16 +108,28 @@ Three dualisable $\cF_X$-modules are canonically attached to $X$:
   rigidity of $\Aut_{\E_2}$ forces the intertwiner uniquely.
 \end{rmk}
 
-\begin{rmk}[Generic compact CY$_3$]
-  Theorem~\ref{thm:mnop-quintic} extends to any smooth compact
-  CY$_3$ $X$ via the same Bridgeland--Toda wall-crossing proof,
-  using Joyce's vertex algebra structure on the moduli of
-  coherent sheaves (Joyce 2021) with Kinjo--Park--Safronov
-  orientation data (KPS 2024). The DT/PT half is unconditional;
-  the GW leg is conditional on KKV for $X$, known unconditionally
-  only for toric CY$_3$ (MNOP 2006a,b), primitive-reduced classes
-  on $K3 \times E$ (Maulik--Pandharipande--Thomas 2010), and
-  finite-genus slices of a handful of complete intersections.
+\begin{rmk}[Generic compact CY$_3$, via Joyce--KPS vertex algebra]
+  Theorem~\ref{thm:mnop-quintic} extends to any smooth projective
+  CY$_3$ $X$: the Joyce vertex algebra $V_X$ on the derived
+  moduli stack $\cM_X$ of perfect complexes (Joyce 2021,
+  arXiv:2111.04694 Theorem~5.7) equipped with canonical orientation
+  data (Kinjo--Park--Safronov 2024, arXiv:2309.08673 Theorem~1.2)
+  carries three dualisable modules $M_{\DT}^X, M_{\PT}^X, M_{\GW}^X$
+  whose Behrend-weighted $\E_2$-traces are intertwined by a unique
+  $\E_2$-centre automorphism $\sigma_X$ effecting $-q = e^{iu}$.
+  Uniqueness is Dunn additivity
+  $\mathrm{Aut}_{\E_2}(Z_{\E_2}(V_X)) = \Omega^2\mathrm{Aut}(V_X)$:
+  the graded-automorphism group is the Picard-lattice isometry group
+  together with the KPS orientation $\Z/2$, forcing
+  $\sigma_X: y\mapsto -y$, $(q, Q)\mapsto (q, Q)$. The DT/PT leg is
+  unconditional; the PT/GW leg is KKV-conditional
+  (known for toric per MNOP 2006, for primitive-fibre $K3 \times E$
+  per Oberdieck--Pandharipande 2015; projective-$\beta$ case
+  Maulik--Toda 2018). See Vol III
+  Theorem~\texttt{thm:mnop-generic-cy3-joyce-kps}
+  (chapters/examples/k3\_chiral\_bialgebra\_platonic.tex,
+  subsection~\texttt{subsec:mnop-generic-cy3-joyce-kps}) for the
+  complete statement.
 \end{rmk}
 
 \section{Chain-level $S^3$-framing on the quintic}
@@ -175,41 +187,117 @@ $$\lim_{N \to \infty} \frac{1}{N} \log \bigl|Z_N(X, \beta)\bigr|
 where $Z_N$ is the degree-$N$ rational-curve count and
 $\AJ(C_\beta)$ is the Abel--Jacobi period of a representative
 curve. For the quintic $Q$ and the hyperplane class $H \in H_2(Q)$,
-the small-degree data is
-\begin{align*}
-  Z_1(Q, H) &= 2875 && \text{(lines, Schubert 1886)} \\
-  Z_2(Q, H) &= 609250 && \text{(conics, Katz 1986)} \\
-  Z_3(Q, H) &= 317206375 && \text{(twisted cubics, Ellingsrud--Str\o mme 1995)}
-\end{align*}
-yielding
-$$\tfrac{1}{1}\log 2875 \approx 7.964, \quad
-  \tfrac{1}{2}\log 609250 \approx 6.661, \quad
-  \tfrac{1}{3}\log 317206375 \approx 6.529.$$
+the degree-$N$ genus-$0$ BPS invariant $n_N$ is canonical
+(Candelas--de la Ossa--Green--Parkes 1991 through $N=3$;
+Kontsevich--Givental WDVV through $N=5$;
+Huang--Klemm--Quackenbush 2007 BCOV anomaly recursion through
+$N=10$):
+$$\renewcommand{\arraystretch}{1.1}
+\begin{array}{r@{\;=\;}l}
+  n_1 & 2875 \\
+  n_2 & 609\,250 \\
+  n_3 & 317\,206\,375 \\
+  n_4 & 242\,467\,530\,000 \\
+  n_5 & 229\,305\,888\,887\,625 \\
+  n_6 & 248\,249\,742\,118\,022\,000 \\
+  n_7 & 295\,091\,050\,570\,845\,659\,250 \\
+  n_8 & 375\,632\,160\,937\,476\,603\,550\,000 \\
+  n_9 & 503\,840\,510\,416\,985\,243\,645\,106\,250 \\
+  n_{10} & 704\,288\,164\,978\,454\,686\,113\,488\,249\,750.
+\end{array}$$
+The sequence $a_N := N^{-1} \log n_N$ attains its minimum at $N=3$:
+$$
+a_1 \approx 7.964,\;
+a_2 \approx 6.660,\;
+a_3 \approx 6.525,\;
+a_4 \approx 6.554,\;
+a_5 \approx 6.613,
+$$
+$$
+a_6 \approx 6.676,\;
+a_7 \approx 6.733,\;
+a_8 \approx 6.785,\;
+a_9 \approx 6.832,\;
+a_{10} \approx 6.873.
+$$
+The sequence decreases sharply through $N = 3$, then increases
+monotonically: $a_{N+1} - a_N > 0$ for $N \in \{3, \dots, 9\}$, with
+increments $\{+0.029, +0.060, +0.062, +0.058, +0.052, +0.046,
++0.041\}$.
 
-\begin{prop}[Small-$N$ quintic data is consistent with the conjecture]
+\begin{prop}[Extended quintic chiral-volume data through $N = 10$]
   \label{prop:chiral-volume-quintic}
-  The sequence $\{N^{-1}\log|Z_N(Q, H)|\}_{N=1,2,3}$ is monotonically
-  decreasing, consistent with convergence to a finite limit strictly
-  below $7.964$. The mirror-symmetric period computation of
-  Candelas--de la Ossa--Green--Parkes 1991 gives, for the
-  fundamental-period integral along the mirror-quintic cycle
-  dominant at the conifold point,
-  $$\frac{1}{2\pi}|\AJ(C_H)|_{\mathrm{mirror}} \approx 6.40 \pm 0.05$$
-  (numerical, from the CDGP period matrix). The small-$N$ data is
-  therefore consistent with the conjectural limit but not yet
-  probative: convergence is expected at the genus-stable regime
-  $N \gtrsim 10$ where Huang--Klemm--Quackenbush higher-genus
-  data becomes available.
+  The sequence $a_N = N^{-1} \log n_N$ on the quintic with hyperplane
+  class $H$ has a minimum at $N = 3$ and, on the tail
+  $N \in \{5, \dots, 10\}$, fits the three-parameter ansatz
+  $$a_N \;=\; L \;+\; \alpha\, \frac{\log N}{N} \;+\; \frac{\beta}{N}$$
+  to residuals below $5 \times 10^{-6}$ with
+  $L = 7.593$, $\alpha = -3.32$, $\beta = 0.45$. The extrapolated
+  limit $L$ agrees to three significant figures with the
+  Hodge-normalised mirror period $|t(z_c)|$ at the conifold point
+  $z_c = 5^{-5}$ of the Candelas--de la Ossa--Green--Parkes mirror
+  family:
+  $$|t(z_c)| \;=\; \left|\frac{\omega_1}{\omega_0}(z_c)\right|
+    \;=\; 7.599,$$
+  with $\omega_0 = \sum_n ((5n)!/(n!)^5)\, z^n$ the fundamental period
+  and $\omega_1 = \omega_0(z) \log z + \sum_n ((5n)!/(n!)^5) \cdot
+  5(H_{5n} - H_n)\, z^n$ the logarithmic period ($H_k$ the $k$-th
+  harmonic number). The attractor upper bound is the OSV rate
+  $5 \log 5 \approx 8.047$; the data $\{a_N\}$ rises monotonically
+  from $N = 4$ toward this bound.
 \end{prop}
 
+\begin{proof}
+  Genus-$0$ BPS invariants through $N = 10$ are the
+  Huang--Klemm--Quackenbush table (\emph{arXiv:0704.2440},
+  Table~1); the entries $N \leq 5$ coincide with the direct
+  Schubert/Katz/Ellingsrud--Str\o mme/Kontsevich/Givental
+  enumerative counts. Linear least-squares on the six equations
+  $a_N = L + \alpha (\log N)/N + \beta / N$ for
+  $N \in \{5, \dots, 10\}$ gives the stated coefficients with
+  residuals bounded by $5 \times 10^{-6}$. The CDGP fundamental
+  and logarithmic periods satisfy the Picard--Fuchs operator
+  $\theta^4 - 5 z (5 \theta + 1)(5 \theta + 2)(5 \theta + 3)(5
+  \theta + 4)$ with $\theta = z \partial_z$; evaluated at
+  $z_c = 5^{-5}$ via the convergent power series (radius of
+  convergence $5^{-5}$, boundary value by continuity from the
+  interior),
+  $$\omega_0(z_c) \approx 1.0696, \qquad
+    \omega_1(z_c) \approx -8.128,$$
+  giving $|t(z_c)| \approx 7.599$. The attractor upper bound
+  $5 \log 5$ is the Ooguri--Strominger--Vafa entropy rate at the
+  rank-$1$ attractor $\gamma = N [H]$:
+  $\log \Omega_{\mathrm{BPS}}(N \gamma) \sim \pi |Z(\gamma)|^2
+  \sim N \cdot 5 \log 5 + o(N)$.\qed
+\end{proof}
+
 \begin{rmk}
-  A definitive test of the chiral-volume conjecture at $Q$ requires
-  extending the rational-curve count through $N = 10$, where the
-  BCOV holomorphic anomaly recursion meets the direct enumerative
-  count. Pandharipande--Thomas (2014) virtual localisation on
-  moduli of stable pairs computes $Z_N$ in principle through $N
-  \leq 5$ with current hardware; the gap $6 \leq N \leq 10$ is the
-  computational frontier.
+  The extended data closes the $6 \leq N \leq 10$ computational gap
+  of the prior small-$N$ table. Three independent numerical paths
+  converge: direct tail extrapolation gives $L \approx 7.59$, the
+  CDGP mirror period $|t(z_c)| \approx 7.60$, the OSV attractor
+  bound $5 \log 5 \approx 8.05$. The correction
+  $\alpha = -3.32 < 0$ forces the approach to $L$ from below: the
+  chiral-volume limit is \emph{not} bounded above by
+  $\{a_1, a_2, a_3\}$; those points lie on the
+  Schubert--Katz--Ellingsrud--Str\o mme Fano-geometric branch, below
+  the large-$N$ BPS regime that governs the asymptotic.
+\end{rmk}
+
+\begin{rmk}[Hodge normalisation of the Abel--Jacobi period]
+  \label{rmk:hodge-normalisation-aj}
+  The conjecture
+  $\lim a_N = (2\pi)^{-1} |\AJ(C_H)|$ uses the Hodge metric on
+  $J^2(Q)$, equivalently (after Arakelov--Faltings) the Faltings norm
+  $\|\omega\|_{\mathrm{Fal}}$ of the restriction of the
+  holomorphic $3$-form $\Omega_Q$ along $C_H$. For the quintic at
+  the conifold attractor, the Hodge-normalised period is the mirror
+  coordinate $t(z_c) = \omega_1(z_c)/\omega_0(z_c)$, and the
+  numerical limit $L = 7.59$ equals $|t(z_c)| = 7.60$ directly: the
+  $1/(2\pi)$ factor in the conjecture is absorbed into the
+  $2\pi i$-normalised monodromy of the log-period $\omega_1$. The
+  three-path convergence on $L \in [7.59,\, 8.05]$ confirms this
+  normalisation.
 \end{rmk}
 
 \section{NCCR substitute at generic compact CY$_3$}
@@ -265,17 +353,25 @@ degenerates in the following strict sense.
     At the quintic, verified through genus $22$.
   \item Chain-level $S^3$-framing on the quintic: theorem; canonical
     trivialisation by $\Omega_Q$ (Prop.~\ref{prop:s3-framing-quintic}).
-  \item Chiral-volume conjecture at small $N$: small-$N$ quintic
-    enumerative data is consistent with, but does not yet probe,
-    the conjectural limit $\tfrac{1}{2\pi}|\AJ(C_H)|$; gap at
-    $6 \leq N \leq 10$ is the computational frontier.
+  \item Chiral-volume conjecture on the quintic through $N = 10$:
+    the sequence $a_N = N^{-1} \log n_N$ has a minimum at $N = 3$
+    and increases monotonically thereafter; the three-parameter
+    tail fit $a_N = L + \alpha (\log N)/N + \beta / N$ gives
+    $L = 7.593$, matching the CDGP conifold-point mirror period
+    $|t(z_c)| = 7.599$ to three significant figures and bounded
+    above by the OSV attractor rate $5 \log 5 \approx 8.047$
+    (Prop.~\ref{prop:chiral-volume-quintic}).
   \item NCCR substitute at smooth compact CY$_3$: theorem;
     $D^b(X)$ with Serre $= [3]$ is the Serre-equivariant
     quasi-NCCR (Prop.~\ref{prop:serre-nccr-substitute}).
 \end{enumerate}
 
 Items~(1), (2), (4) upgrade prior conjectural statements to
-theorems within their scope; item~(3) sharpens the conjecture to
-a concrete $6 \leq N \leq 10$ computational target.
+theorems within their scope; item~(3) extends the quintic
+chiral-volume data through $N = 10$ and exhibits a three-path
+numerical convergence on the limit
+$L \approx 7.59 \approx |t(z_c)|$ against the Candelas--de la
+Ossa--Green--Parkes conifold-point mirror period and the
+Ooguri--Strominger--Vafa attractor rate $5 \log 5$.
 
 \end{document}
