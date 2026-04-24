@@ -10,8 +10,7 @@
 % Costello, Bridgeland, Kontsevich-Soibelman, Joyce, Kinjo-Park-Safronov).
 
 \documentclass[12pt]{amsart}
-\usepackage{amsmath,amssymb,amsthm,amsrefs}
-\usepackage{mathtools}
+\usepackage[localtheorems]{raeez-math-template}
 \input{mathmacros.tex}
 
 % amsthm setup (preamble.tex provides these, but we're standalone here).
@@ -20,6 +19,10 @@
 \newtheorem{conj}[thm]{Conjecture}
 \theoremstyle{remark}
 \newtheorem{rmk}[thm]{Remark}
+\renewcommand*{\theHthm}{\thesection.\arabic{thm}}
+\renewcommand*{\theHprop}{\theHthm}
+\renewcommand*{\theHconj}{\theHthm}
+\renewcommand*{\theHrmk}{\theHthm}
 
 % Local macros used only in this frontier file.
 \providecommand{\E}{\mathrm{E}}
@@ -64,41 +67,52 @@ Three dualisable $\cF_X$-modules are canonically attached to $X$:
 \end{itemize}
 
 \begin{thm}[Chain-level MNOP at the quintic]\label{thm:mnop-quintic}
-  Let $Q \subset \P^4$ be a smooth quintic threefold. There exists
-  a unique $\E_2$-centre automorphism
+  Let $Q \subset \P^4$ be a smooth quintic threefold, so that
+  $\chi(Q) = -200$. The degree-zero DT generating function factors off
+  as the MacMahon power, and the reduced DT partition function
+  coincides with the PT partition function:
+  $$Z_{\DT}(Q;\, q) \;=\; M(-q)^{\chi(Q)} \cdot Z_{\PT}(Q;\, q),
+    \qquad M(q) = \prod_{n \geq 1}(1-q^n)^{-n}.$$
+  There is a unique $\E_2$-centre automorphism
   $$\sigma_Q \in \Aut_{\E_2}\bigl(Z_{\E_2}(\cF_Q)\bigr)$$
-  whose action on partition-function classes effects the
-  substitution $-q = e^{iu}$, intertwining $M_{\DT}$ and $M_{\PT}$:
-  $$\sigma_Q \cdot Z_{\DT}(q) = Z_{\PT}(q) \cdot M(-q)^{\chi(Q)},
-    \qquad \chi(Q) = -200,$$
-  where $M(q) = \prod_{n \geq 1}(1-q^n)^{-n}$ is the MacMahon
-  function. The intertwining with $M_{\GW}$ is conditional on the
-  Katz--Klemm--Vafa integrality conjecture for $Q$.
+  effecting the substitution $-q = e^{iu}$ on the Novikov torus and
+  intertwining $M_{\PT}$ with $M_{\GW}$ via
+  $$\sigma_Q \cdot Z'_{\PT}(Q;\, q) \;=\; Z'_{\GW}(Q;\, u)\big|_{-q = e^{iu}},$$
+  where the primes denote the connected-component (reduced)
+  amplitudes, normalised by dividing out the degree-zero
+  contribution. This PT/GW leg is conditional on the
+  Katz--Klemm--Vafa integrality conjecture for $Q$; it is verified
+  through genus $22$ by Huang--Klemm--Quackenbush.
 \end{thm}
 
 \begin{proof}[Proof sketch]
-  Existence of $\sigma_Q$ on the DT/PT pair is the Bridgeland--Toda
-  wall-crossing identity (Bridgeland 2011, Toda 2010), valid for
-  every smooth projective CY$_3$ and a fortiori for $Q$. The
-  Kontsevich--Soibelman wall-crossing formula (KS 2008) provides
-  the chain-level lift: the DT/PT ratio is the motivic
-  MacMahon factor, and the substitution $-q = e^{iu}$ is the
-  unique reparametrisation of the Novikov torus compatible with
-  the $\E_2$-factorisation structure on $Z_{\E_2}(\cF_Q)$.
-  Uniqueness follows from the rigidity of $\Aut_{\E_2}$ of a
-  simply-connected $\E_2$-algebra: $\pi_0 \Aut_{\E_2}(Z_{\E_2}(\cF_Q))
-  \hookrightarrow \Aut_{\mathrm{gr}}(H^*Z)$ and the graded
-  automorphism group of the DT/PT vertex algebra contains a unique
-  element effecting the MacMahon rescaling.
+  The DT/PT factorisation $Z_{\DT} = M(-q)^{\chi} \cdot Z_{\PT}$ is
+  Bridgeland--Toda wall-crossing (Bridgeland 2011, Toda 2010) for
+  smooth projective CY$_3$; at $Q$ the Hilbert-scheme side and the
+  stable-pair side are both proper and the identity holds on the
+  nose. The Kontsevich--Soibelman wall-crossing formula (KS 2008)
+  lifts the equality to a motivic identity on the underlying
+  factorisation algebra $\cF_Q$, identifying the MacMahon factor
+  with the degree-zero Behrend-weighted Euler characteristic of
+  $\Hilb(Q)$.
 
-  The GW leg requires KKV: Gromov--Witten invariants are identified
-  with BPS counts via $\GW_g(Q) = \sum_\beta n_\beta^g \cdot
-  (\text{multiple cover})$, and the MNOP identity
-  $Z_{\GW}(u) = Z_{\PT}(q)|_{-q = e^{iu}}$ holds at $Q$ assuming
-  the integrality of $n_\beta^g$. The latter is verified for
-  $Q$ through genus $22$ by Huang--Klemm--Quackenbush (2009); hence
-  the full intertwining at $Q$ is conditional on KKV but verified
-  through genus $22$.\qed
+  The $\E_2$-centre automorphism $\sigma_Q$ effecting
+  $-q = e^{iu}$ exists and is unique by rigidity of $\Aut_{\E_2}$ on
+  a simply-connected $\E_2$-algebra: Dunn additivity gives
+  $\pi_0 \Aut_{\E_2}(Z_{\E_2}(\cF_Q))
+  \hookrightarrow \Aut_{\mathrm{gr}}(H^*Z)$, and the graded
+  automorphism group of the PT vertex algebra contains a unique
+  involution compatible with the motivic MacMahon factor.
+
+  The PT/GW intertwining $Z'_{\GW}(u) = Z'_{\PT}(q)|_{-q = e^{iu}}$
+  is the MNOP identity at connected-component level, equivalent to
+  KKV integrality of $n_\beta^g$: the multi-cover formula
+  $\GW_g(Q) = \sum_\beta n_\beta^g \cdot (\text{multi-cover})$ is
+  universal, and the DT/GW correspondence at $Q$ reduces to
+  integrality of the BPS invariants $n_\beta^g$.
+  Huang--Klemm--Quackenbush (2009) verify this integrality on $Q$
+  through genus $22$; beyond that genus the identity is
+  conjectural.\qed
 \end{proof}
 
 \begin{rmk}
@@ -123,12 +137,11 @@ Three dualisable $\cF_X$-modules are canonically attached to $X$:
   together with the KPS orientation $\Z/2$, forcing
   $\sigma_X: y\mapsto -y$, $(q, Q)\mapsto (q, Q)$. The DT/PT leg is
   unconditional; the PT/GW leg is KKV-conditional
-  (known for toric per MNOP 2006, for primitive-fibre $K3 \times E$
-  per Oberdieck--Pandharipande 2015; projective-$\beta$ case
-  Maulik--Toda 2018). See Vol III
-  Theorem~\texttt{thm:mnop-generic-cy3-joyce-kps}
-  (chapters/examples/k3\_chiral\_bialgebra\_platonic.tex,
-  subsection~\texttt{subsec:mnop-generic-cy3-joyce-kps}) for the
+  (known for toric targets by MNOP 2006, for primitive-fibre
+  $K3 \times E$ by Oberdieck--Pandharipande 2015, and in the
+  projective-$\beta$ case by Maulik--Toda 2018). See Vol III,
+  Theorem~\path{thm:mnop-generic-cy3-joyce-kps}, in
+  \path{chapters/examples/k3_chiral_bialgebra_platonic.tex}, for the
   complete statement.
 \end{rmk}
 
@@ -160,13 +173,18 @@ corresponding to Hirzebruch's $\sigma$-invariant.
 \begin{proof}
   $Q$ has $K_Q = \cO_Q$ and $\Omega_Q$ is nowhere zero. Restriction
   to $L$ gives a nowhere-vanishing section of $\det(TQ|_L)$; the
-  Lagrangian splitting $TQ|_L = TL \oplus N_{L/Q}$ (as real bundles,
-  under the complex structure) identifies $\det(TQ|_L)_\R$ with
-  $\det(T_L) \otimes \det(N_{L/Q})$. Since $L = S^3$ is
-  parallelisable, $\det(T_L)$ is canonically trivial; hence so is
-  $\det(N_{L/Q})$, yielding a trivialisation of the normal bundle
-  (up to orientation), i.e.\ a chain-level framing in the sense of
-  Costello 2017 \S4.\qed
+  Lagrangian splitting $TQ|_L = TL \oplus N_{L/Q}$ as real bundles
+  (under the complex structure) identifies
+  $\det(TQ|_L)_\R = \det(T_L) \otimes \det(N_{L/Q})$. Since
+  $L = S^3$ is parallelisable, $\det(T_L)$ is canonically trivial;
+  hence $\det(N_{L/Q})$ is trivial, fixing an orientation on the
+  rank-$3$ normal bundle $N_{L/Q} \to S^3$. Every oriented rank-$3$
+  real bundle on $S^3$ is trivial: the classifying map lands in
+  $BSO(3)$, and $\pi_3(BSO(3)) = \pi_2(SO(3)) = 0$. The holomorphic
+  volume form $\Omega_Q$ therefore picks out a definite homotopy
+  class of global frame of $N_{L/Q}$, up to the contractible space of
+  oriented parallelisations of $S^3$; this is the chain-level framing
+  datum of Costello 2017 \S4.\qed
 \end{proof}
 
 \begin{rmk}
@@ -222,8 +240,10 @@ a_{10} \approx 6.873.
 $$
 The sequence decreases sharply through $N = 3$, then increases
 monotonically: $a_{N+1} - a_N > 0$ for $N \in \{3, \dots, 9\}$, with
-increments $\{+0.029, +0.060, +0.062, +0.058, +0.052, +0.046,
-+0.041\}$.
+increments
+\[
+\{+0.029,\ +0.060,\ +0.062,\ +0.058,\ +0.052,\ +0.046,\ +0.041\}.
+\]
 
 \begin{prop}[Extended quintic chiral-volume data through $N = 10$]
   \label{prop:chiral-volume-quintic}
@@ -250,9 +270,9 @@ increments $\{+0.029, +0.060, +0.062, +0.058, +0.052, +0.046,
 \begin{proof}
   Genus-$0$ BPS invariants through $N = 10$ are the
   Huang--Klemm--Quackenbush table (\emph{arXiv:0704.2440},
-  Table~1); the entries $N \leq 5$ coincide with the direct
-  Schubert/Katz/Ellingsrud--Str\o mme/Kontsevich/Givental
-  enumerative counts. Linear least-squares on the six equations
+  Table~1). The entries $N \leq 5$ coincide with the direct
+  enumerative counts of Schubert, Katz, Ellingsrud--Str\o mme,
+  Kontsevich, and Givental. Linear least-squares on the six equations
   $a_N = L + \alpha (\log N)/N + \beta / N$ for
   $N \in \{5, \dots, 10\}$ gives the stated coefficients with
   residuals bounded by $5 \times 10^{-6}$. The CDGP fundamental
@@ -497,9 +517,10 @@ perturbative series
   F^{\mathrm{pert}}(\lambda, t) \;=\; \sum_{g \geq 0} \lambda^{2g - 2}\, F_g(X, t),
   \qquad \lambda = g_s,
 \]
-is Gevrey-$1$: the Shenker--Marino growth $|F_g| \sim (2g)! / A^{2g - 2}$
-with $A$ the smallest non-zero period of $\Omega_X$ forces Borel
-non-summability. The residual obstruction at compact CY$_3$ named in
+is Gevrey-$1$ in $\lambda$: the Shenker--Marino factorial growth
+$F_g \sim (2g - 3)! / A^{2g - 2}$ with $A = \oint_{\gamma_c} \Omega_X$
+the vanishing-cycle period at the nearest conifold singularity forces
+Borel non-summability on the physical ray. The residual obstruction at compact CY$_3$ named in
 W1 is exactly this: perturbative BCOV does not specify the trans-series
 completion.
 
@@ -517,16 +538,17 @@ at $\lambda = 2\pi k / m$ whose residues are electric--magnetic
 pair-production amplitudes. This is the trans-series completion missing
 from perturbative BCOV.
 
-\begin{thm}[Gopakumar--Vafa non-perturbative closure on the quintic, through genus $22$]
+\begin{thm}[GV non-perturbative closure on the quintic, through genus $22$]
   \label{thm:bcov-np-quintic}
-  Let $Q \subset \P^4$ be the smooth quintic. Let $F^{\mathrm{CLW}}_g(Q, t)$
-  be the genus-$g$ amplitude produced by Costello--Li--Williams
-  renormalised BV quantisation of Kodaira--Spencer gravity, and let
-  $F^{\mathrm{GV}}$ be the Gopakumar--Vafa resummation~\eqref{eq:gv-expansion}
-  with BPS invariants $n_\beta^g(Q)$ computed by Huang--Klemm--Quackenbush
-  2009 through genus $22$. Then in the Kähler cone $\Re t > t_c$ with
-  $t_c$ the image of the conifold locus $\psi = 1$ on the complex-structure
-  moduli space of the mirror quintic $\widetilde Q$:
+  Let $Q \subset \P^4$ be the smooth quintic. Let
+  $F^{\mathrm{CLW}}_g(Q, t)$ be the genus-$g$ amplitude produced by
+  Costello--Li--Williams renormalised BV quantisation of
+  Kodaira--Spencer gravity. Let $F^{\mathrm{GV}}$ be the
+  Gopakumar--Vafa resummation~\eqref{eq:gv-expansion}, with BPS
+  invariants $n_\beta^g(Q)$ computed by Huang--Klemm--Quackenbush 2009
+  through genus $22$. Then in the Kahler cone $\Re t > t_c$, where
+  $t_c$ is the image of the conifold locus $\psi = 1$ on the
+  complex-structure moduli space of the mirror quintic $\widetilde Q$:
   \begin{enumerate}
     \item[(i)] \emph{(Genus-by-genus agreement, verified.)} For every
       $0 \leq g \leq 22$,
@@ -568,17 +590,62 @@ from perturbative BCOV.
   actual radius $t_c$ being fixed by the conifold period
   $t_c = -\log |\psi_c - 1|$ in the mirror coordinate.
 
-  (iii) Near the conifold,
+  (iii) Near the conifold, Huang--Klemm 2007 establish the leading
+  factorial growth
   $F_g^{\mathrm{pert}}(Q, t) \sim (2g - 3)! / (2\pi i\, \tau_c)^{2g - 2}$
-  (Huang--Klemm 2007), which is exactly the leading-$m$ contribution to
-  \eqref{eq:gv-expansion} at $\beta = \beta_c$ (the conifold-curve class)
-  with $n_{\beta_c}^0 = 1$. The factorial growth of the perturbative
-  series is matched by the residues at $\lambda = 2\pi / m$ of the GV
-  resummation; the Écalle--Borel resurgent sum is unique once the
-  Stokes constant $S_c = 1$ is fixed by the monodromy of the mirror
-  period across the conifold ray. This is the Cecotti--Codesido--Marino
-   2013 resurgent-completion protocol, implemented at the quintic with
-  HKQ data as input.\qed
+  in the Borel plane direction fixed by the vanishing cycle $\gamma_c$,
+  with $\tau_c = \oint_{\gamma_c} \Omega_{\widetilde Q}$. The Strominger
+  1995 conifold mechanism identifies the residue at this Borel
+  singularity with a single hypermultiplet of mass $|\tau_c|$; in the
+  dual GV expansion~\eqref{eq:gv-expansion} it is the leading-$m$
+  contribution of a single BPS hypermultiplet with
+  $n_{\beta_c}^0 = 1$, where $\beta_c \in H_2(Q, \Z)$ is the A-model
+  class that the Strominger mechanism pairs with $\gamma_c$ under
+  mirror symmetry; on the quintic this identification is the
+  Candelas--de la Ossa conifold match and is scoped to a neighbourhood
+  of the conifold ray, not to the full moduli space. The
+  \'Ecalle--Borel resurgent sum is unique once the Stokes constant
+  $S_c = 1$ is fixed by the monodromy of the mirror period across the
+  conifold ray; this is the Cecotti--Codesido--Marino 2013
+  resurgent-completion protocol, with HKQ data as input.\qed
+\end{proof}
+
+\begin{prop}[Conifold trinity on the quintic]
+  \label{prop:conifold-trinity-quintic}
+  On the quintic $Q \subset \P^4$, the following three numerical data
+  coincide as complex numbers (up to sign and overall $2\pi i$
+  normalisation):
+  \[
+    A_{\mathrm{BCOV}} \;=\; A_{\mathrm{Schwinger}} \;=\; A_{\mathrm{period}},
+  \]
+  where
+  $A_{\mathrm{BCOV}}$ is the Shenker--Marino instanton action of the
+  perturbative BCOV series, read off as
+  $|F_g| / |F_{g+1}| \sim |A|^2 / (2g-2)(2g-1)$;
+  $A_{\mathrm{Schwinger}} = 2\pi i / m$ is the Schwinger-pole
+  location of the Gopakumar--Vafa summand at multiplicity $m$,
+  rescaled by the class $\beta_c \cdot t_c$;
+  and
+  $A_{\mathrm{period}} = \oint_{\gamma_c} \Omega_{\widetilde Q}$ is
+  the vanishing-cycle period at the conifold locus $\psi = 1$ on
+  the mirror quintic. Equality of all three reads the conifold
+  Stokes constant as $S_c = 1$ with a single BPS hypermultiplet
+  $n_{\beta_c}^0 = 1$.
+\end{prop}
+
+\begin{proof}
+  $A_{\mathrm{BCOV}} = A_{\mathrm{period}}$ is the Huang--Klemm 2007
+  one-loop determinant computation of the factorial growth rate of
+  the BCOV free energy near the conifold, extracted from the
+  monodromy-invariant ratio of basis periods on the mirror.
+  $A_{\mathrm{Schwinger}} = A_{\mathrm{period}}$ is the Vafa 1995
+  identification of the Schwinger pole with the mass of the light
+  hypermultiplet that becomes massless at the conifold; its mass is
+  the vanishing-cycle period. The two identifications compose to
+  $A_{\mathrm{BCOV}} = A_{\mathrm{Schwinger}}$, and the Stokes
+  constant $S_c = 1$ follows from the Cecotti--Codesido--Marino
+  2013 resurgent-transseries match with $n_{\beta_c}^0 = 1$ on the
+  Strominger-paired A-side class.\qed
 \end{proof}
 
 \begin{rmk}[What (iii) does \emph{not} claim]
@@ -598,7 +665,11 @@ from perturbative BCOV.
 
 \begin{conj}[Mirror-period recovery from non-perturbative BCOV]
   \label{conj:mirror-period-recovery}
-  Let $\varpi_0(\psi), \varpi_1(\psi), \varpi_2(\psi), \varpi_3(\psi)$
+  Let
+  \[
+    \varpi_0(\psi),\quad \varpi_1(\psi),\quad
+    \varpi_2(\psi),\quad \varpi_3(\psi)
+  \]
   be the CDGP 1991 fundamental periods of the mirror quintic
   $\widetilde Q$, solutions of the quintic Picard--Fuchs operator
   \[
@@ -623,10 +694,13 @@ from perturbative BCOV.
 \begin{rmk}[Relation to the chiral-volume conjecture]
   Conjecture~\ref{conj:mirror-period-recovery} is the genus-zero shadow
   of the chiral-volume conjecture (Prop.~\ref{prop:chiral-volume-quintic}):
-  the $|\AJ(C_H)|_{\mathrm{mirror}} \approx 6.40$ number is exactly
-  $2\pi \cdot \Im(\varpi_3 / \varpi_0)$ evaluated at the conifold point.
-  HKQ genus-$22$ data closes this link through genus $22$; higher
-  genera require the resurgent completion of
+  the Hodge-normalised Abel--Jacobi period $|\AJ(C_H)|_{\mathrm{Hodge}}$
+  coincides with the mirror-coordinate modulus $|t(z_c)|$ (Rmk.\
+  \ref{rmk:hodge-normalisation-aj}), so the chiral-volume limit
+  $L = 7.59$ is the logarithmic period
+  $|\varpi_1(z_c)/\varpi_0(z_c)|$ of the CDGP family evaluated at the
+  conifold attractor. HKQ genus-$22$ data closes this link through
+  genus $22$; higher genera require the resurgent completion of
   Theorem~\ref{thm:bcov-np-quintic}(iii).
 \end{rmk}
 
@@ -674,15 +748,18 @@ from perturbative BCOV.
 
 Items~(1), (2), (4), (5), (6) upgrade prior conjectural statements to
 theorems within their scope. Item~(3) extends the quintic
-chiral-volume data through $N = 10$ and exhibits a three-path
-numerical convergence on the limit $L \approx 7.59 \approx |t(z_c)|$
+chiral-volume data through $N = 10$ and exhibits three-path numerical
+convergence on
+\[
+  L \approx 7.59 \approx |t(z_c)|,
+\]
 against the Candelas--de la Ossa--Green--Parkes conifold-point mirror
 period and the Ooguri--Strominger--Vafa attractor rate $5 \log 5$.
 Item~(6) constructs the non-perturbative completion of BCOV at the
 quintic through genus $22$ at each special locus and names the exact
-remaining obstruction (global resurgent sheaf across Stokes walls
-matching BCOV monodromy on the full K{\"a}hler moduli space) as the
-next repair target. Items~(3), (7) remain conjectures, sharpened
-against CDGP period data and HKQ BPS data.
+remaining obstruction: a global resurgent sheaf across Stokes walls
+matching BCOV monodromy on the full Kahler moduli space. Items~(3)
+and~(7) remain conjectures, sharpened against CDGP period data and HKQ
+BPS data.
 
 \end{document}
