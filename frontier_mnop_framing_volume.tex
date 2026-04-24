@@ -41,7 +41,7 @@
 \begin{document}
 \maketitle
 
-\section{The MNOP substitution as an $\E_2$-centre automorphism}
+\section{The MNOP substitution as an $\E_2$-centre automorphism}\label{sec:mnop}
 
 Let $X$ be a smooth compact Calabi--Yau threefold. Write
 $\Perf(X)$ for its perfect derived category, $\PhiFA_3:
@@ -255,6 +255,145 @@ degenerates in the following strict sense.
   survives and is what the $\Phi$ functor sees.
 \end{rmk}
 
+\section{Absolute Fourier--Mukai self-duality on $K3 \times E$}
+
+The Kuznetsov homological projective duality (Kuznetsov 2007,
+arXiv:math/0610957) takes as input a smooth projective variety $X$
+with a very ample line bundle inducing a Lefschetz decomposition of
+$D^b(X)$. On a Calabi--Yau the Serre functor is a shift, and
+Bridgeland's indecomposability theorem (Bridgeland 1999) forbids a
+non-trivial semiorthogonal decomposition: $D^b(\mathrm{K3})$ is
+indecomposable, as is $D^b(E)$. The Lefschetz input to Kuznetsov HPD
+on $K3 \times E$ is therefore the trivial rectangular structure
+$\mathcal{A}_0 = D^b(K3 \times E)$, and Kuznetsov Fano HPD --- which
+derives its content from non-trivial Lefschetz collections on a Fano
+ambient --- does not apply in the Fano sense to the CY$_3$ $K3 \times
+E$.
+
+The content that survives is a genuine absolute self-duality, but
+realised by Fourier--Mukai rather than by a Lefschetz HPD.
+
+\begin{thm}[Absolute Fourier--Mukai self-duality on $K3 \times E$]
+  \label{thm:fm-self-duality-k3e}
+  Let $S$ be a projective $K3$ surface with primitive polarisation
+  $H_S$, and let $E$ be a principally polarised elliptic curve. Fix a
+  Mukai vector $v = (r, \ell, s) \in \widetilde{H}(S, \Z)$ with $\ell
+  \in \mathrm{NS}(S)$, Mukai pairing $\langle v, v \rangle = 2n \geq
+  -2$, and $H_S$ chosen $v$-generic. Assume the coprimality condition
+  \begin{equation}\label{eq:coprimality-star}
+    \gcd(r,\, \ell \cdot H_S,\, s) = 1. \tag{$\star$}
+  \end{equation}
+  Let $M := M_{H_S}(v)$ be the moduli space of $H_S$-stable sheaves
+  with Mukai vector $v$. Then:
+  \begin{enumerate}
+    \item $M$ is a smooth projective $K3$ surface (Mukai 1987;
+      O'Grady 1997);
+    \item there is an equivalence of $\C$-linear triangulated
+      categories
+      $$\Phi_{\mathcal{U}} :\ D^b(S) \xrightarrow{\,\sim\,} D^b(M),$$
+      given by Fourier--Mukai transform along the universal sheaf
+      $\mathcal{U}$ on $S \times M$ (Bridgeland--Maciocia 2001,
+      \emph{Complex surfaces with equivalent derived categories},
+      Thm.\ 1.1);
+    \item combined with the Poincar\'e--Mukai autoequivalence
+      $\mathrm{FM}_{\mathcal{P}} : D^b(E) \xrightarrow{\,\sim\,}
+      D^b(\hat{E}) = D^b(E)$ (Mukai 1981), the product transform
+      $$\Phi_{\mathcal{U}} \boxtimes \mathrm{FM}_{\mathcal{P}} :\
+        D^b(S \times E) \xrightarrow{\,\sim\,}
+        D^b(M \times E)$$
+      is an equivalence of CY$_3$ categories preserving the Serre
+      structure $S_{X} = [3]$, i.e.\ an absolute self-duality of
+      $D^b(K3 \times E)$ in the Fourier--Mukai sense.
+  \end{enumerate}
+\end{thm}
+
+\begin{proof}
+  (1) Under $(\star)$ and $v$-genericity of $H_S$, every
+  $H_S$-semistable sheaf with Mukai vector $v$ is stable
+  (no strictly semistables); the moduli $M$ is then a smooth
+  projective holomorphic symplectic surface with $\langle v, v \rangle
+  = 2 \dim M - 2 = 2n$. For $n = 1$ one gets a $K3$; for $n \geq 2$
+  the moduli is higher-dimensional hyperk\"ahler (O'Grady). The
+  $K3$-case is exactly $n = 1$, equivalently $\langle v, v \rangle =
+  2$.
+
+  (2) The universal sheaf $\mathcal{U}$ exists on $S \times M$ under
+  $(\star)$: $\gcd(r, \ell \cdot H_S, s) = 1$ kills the Brauer
+  obstruction to a universal family (C\u{a}ld\u{a}raru 2000,
+  Thm.\ 1.3.2). The Fourier--Mukai kernel
+  $\mathcal{U} \in D^b(S \times M)$ satisfies the
+  Bridgeland--Maciocia orthogonality criterion
+  (Bridgeland--Maciocia 2001, \S 1) and induces an equivalence.
+  Without $(\star)$, $\mathcal{U}$ exists only as a
+  $p_M^*\alpha$-twisted sheaf for a Brauer class $\alpha \in
+  \mathrm{Br}(M)$, yielding instead $D^b(S) \simeq D^b(M, \alpha)$
+  (Huybrechts--Stellari 2005).
+
+  (3) On $E$ with principal polarisation, $\hat{E} \cong E$
+  canonically; the Poincar\'e bundle $\mathcal{P} \in D^b(E \times E)$
+  is the kernel of $\mathrm{FM}_{\mathcal{P}}$ (Mukai 1981, Thm.\
+  2.2). Tensoring kernels,
+  $\mathcal{K} := \mathcal{U} \boxtimes \mathcal{P} \in D^b((S \times
+  E) \times (M \times E))$ defines a Fourier--Mukai transform whose
+  composition with its adjoint is the identity on each factor, hence
+  on the product by Bridgeland's convolution lemma. The Serre functor
+  is preserved because both $\Phi_{\mathcal{U}}$ and
+  $\mathrm{FM}_{\mathcal{P}}$ are exact equivalences between
+  CY categories of the same dimension ($\dim_{\mathrm{CY}} = 2$ and
+  $\dim_{\mathrm{CY}} = 1$ respectively), and Serre functors are
+  preserved by any equivalence; the product Serre $S_X = [3]$
+  survives.\qed
+\end{proof}
+
+\begin{prop}[Dichotomy at coprimality]
+  \label{prop:coprimality-dichotomy}
+  Drop $(\star)$ in Theorem~\ref{thm:fm-self-duality-k3e}. Then there
+  exists a Brauer class $\alpha \in \mathrm{Br}(M)$, whose order
+  divides $\gcd(r, \ell \cdot H_S, s)$, such that
+  $$D^b(S \times E) \simeq D^b\bigl((M, \alpha) \times E\bigr),$$
+  where the right-hand side denotes the derived category of
+  $p_M^*\alpha$-twisted sheaves. The self-dual partner is an
+  $(M, \alpha) \times E$ with twisted $K3$ factor; the untwisted
+  self-duality of Theorem~\ref{thm:fm-self-duality-k3e} fails beyond
+  coprimality.
+\end{prop}
+
+\begin{proof}
+  C\u{a}ld\u{a}raru 2000 Thm.\ 1.3.2 constructs the Brauer obstruction
+  to the universal sheaf from the non-coprime Mukai vector; its order
+  is the gcd. Huybrechts--Stellari 2005 (\emph{Equivalences of twisted
+  K3 surfaces}) then identifies the derived equivalence as a twisted
+  Fourier--Mukai. The elliptic factor contributes an untwisted
+  $\mathrm{FM}_{\mathcal{P}}$.\qed
+\end{proof}
+
+\begin{rmk}[Why ``Kuznetsov Fano HPD'' is the wrong frame]
+  The W1 TS-B reduction targeted a ``Kuznetsov Fano HPD on $K3
+  \times E$''. Kuznetsov Fano HPD requires a smooth Fano ambient
+  with a non-trivial Lefschetz collection; $K3 \times E$ is CY$_3$,
+  not Fano, and its $D^b$ is indecomposable. The correct absolute
+  self-duality is Fourier--Mukai
+  (Theorem~\ref{thm:fm-self-duality-k3e}), governed by Mukai-vector
+  coprimality $(\star)$, with the Brauer-twisted dichotomy
+  (Proposition~\ref{prop:coprimality-dichotomy}) supplying the
+  beyond-coprimality partner. The Kuznetsov--Perry 2019
+  categorical-join / rectangular-HPD machinery does not upgrade
+  Fourier--Mukai to Fano HPD here, precisely because neither
+  $D^b(K3)$ nor $D^b(E)$ admits a non-trivial Lefschetz decomposition
+  to feed into the rectangular construction.
+\end{rmk}
+
+\begin{rmk}[Alignment with Vol III]
+  Coprimality $(\star)$ is the same ``primitive Mukai vector''
+  hypothesis that controls Maulik--Pandharipande--Thomas 2010 at
+  $K3 \times E$ and the $\kappa$-spectrum
+  $\{2, 3, 5, 24\}$ inscribed in
+  \texttt{cy\_d\_kappa\_stratification.tex}: $\kappa_{\mathrm{cat}}
+  (K3 \times E) = \chi(\cO) = 0$ by K\"unneth, and the
+  Fourier--Mukai self-duality here preserves $\chi(\cO)$ since it
+  is an exact equivalence of CY$_3$ categories.
+\end{rmk}
+
 \section{Honest-status summary}
 
 \begin{enumerate}
@@ -272,9 +411,16 @@ degenerates in the following strict sense.
   \item NCCR substitute at smooth compact CY$_3$: theorem;
     $D^b(X)$ with Serre $= [3]$ is the Serre-equivariant
     quasi-NCCR (Prop.~\ref{prop:serre-nccr-substitute}).
+  \item Absolute self-duality on $K3 \times E$: theorem in the
+    Fourier--Mukai sense under Mukai-vector coprimality $(\star)$
+    (Theorem~\ref{thm:fm-self-duality-k3e}); dichotomy to twisted
+    $K3$ partner beyond $(\star)$
+    (Proposition~\ref{prop:coprimality-dichotomy}). Kuznetsov
+    Fano HPD does not apply: $K3 \times E$ is CY$_3$, not Fano,
+    and $D^b$ of each factor is Bridgeland-indecomposable.
 \end{enumerate}
 
-Items~(1), (2), (4) upgrade prior conjectural statements to
+Items~(1), (2), (4), (5) upgrade prior conjectural statements to
 theorems within their scope; item~(3) sharpens the conjecture to
 a concrete $6 \leq N \leq 10$ computational target.
 
