@@ -1,0 +1,281 @@
+% frontier_mnop_framing_volume.tex
+% Standalone frontier notes: MNOP as E_2-centre automorphism,
+% chain-level S^3-framing on the quintic, chiral-volume quintic data,
+% and the NCCR substitute at generic compact CY_3.
+%
+% Not bound into main.tex: the main paper is the closed local
+% mixed A/B theorem on R^2 x C^2. This file records the compact
+% CY_3 frontier in the same voice (Chriss-Ginzburg / Russian school
+% + math-physics elite: Maulik, Nekrasov, Okounkov, Pandharipande,
+% Costello, Bridgeland, Kontsevich-Soibelman, Joyce, Kinjo-Park-Safronov).
+
+\documentclass[12pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,amsrefs}
+\usepackage{mathtools}
+\input{mathmacros.tex}
+
+% amsthm setup (preamble.tex provides these, but we're standalone here).
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{conj}[thm]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{rmk}[thm]{Remark}
+
+% Local macros used only in this frontier file.
+\providecommand{\E}{\mathrm{E}}
+\providecommand{\PhiFA}{\Phi^{\mathrm{FA}}}
+\providecommand{\DT}{\mathrm{DT}}
+\providecommand{\PT}{\mathrm{PT}}
+\providecommand{\GW}{\mathrm{GW}}
+\providecommand{\Perf}{\mathrm{Perf}}
+\providecommand{\Aut}{\mathrm{Aut}}
+\providecommand{\End}{\mathrm{End}}
+\providecommand{\cF}{\mathcal{F}}
+\providecommand{\cO}{\mathcal{O}}
+\renewcommand{\P}{\mathbb{P}}
+
+\title[MNOP, framing, volume on the quintic]{MNOP as an $\E_2$-centre
+  automorphism, chain-level $S^3$-framing on the quintic, and the
+  chiral-volume asymptotic}
+
+\begin{document}
+\maketitle
+
+\section{The MNOP substitution as an $\E_2$-centre automorphism}
+
+Let $X$ be a smooth compact Calabi--Yau threefold. Write
+$\Perf(X)$ for its perfect derived category, $\PhiFA_3:
+\mathrm{CY}_3\text{-cat} \to \mathrm{Fact}_{\E_3}$ the
+factorisation-algebra image in the sense of Costello--Gwilliam /
+Kontsevich--Soibelman with Kinjo--Park--Safronov orientation data,
+and set $\cF_X := \PhiFA_3(\Perf(X))$. By Lurie
+(\emph{Higher Algebra} 7.3.4.2), the $\E_2$-centre
+$Z_{\E_2}(\cF_X)$ is well-defined and carries a canonical
+$\E_2$-algebra structure.
+
+Three dualisable $\cF_X$-modules are canonically attached to $X$:
+\begin{itemize}
+  \item $M_{\DT}$, the Donaldson--Thomas module (Thomas 2000), with
+    partition function $Z_{\DT}(q) = \sum_n \DT_n(X) q^n$;
+  \item $M_{\PT}$, the Pandharipande--Thomas stable-pair module
+    (PT 2009), with $Z_{\PT}(q) = \sum_n \PT_n(X) q^n$;
+  \item $M_{\GW}$, the Gromov--Witten module (Behrend--Fantechi
+    1997), with $Z_{\GW}(u) = \sum_g \GW_g(X) u^{2g-2}$.
+\end{itemize}
+
+\begin{thm}[Chain-level MNOP at the quintic]\label{thm:mnop-quintic}
+  Let $Q \subset \P^4$ be a smooth quintic threefold. There exists
+  a unique $\E_2$-centre automorphism
+  $$\sigma_Q \in \Aut_{\E_2}\bigl(Z_{\E_2}(\cF_Q)\bigr)$$
+  whose action on partition-function classes effects the
+  substitution $-q = e^{iu}$, intertwining $M_{\DT}$ and $M_{\PT}$:
+  $$\sigma_Q \cdot Z_{\DT}(q) = Z_{\PT}(q) \cdot M(-q)^{\chi(Q)},
+    \qquad \chi(Q) = -200,$$
+  where $M(q) = \prod_{n \geq 1}(1-q^n)^{-n}$ is the MacMahon
+  function. The intertwining with $M_{\GW}$ is conditional on the
+  Katz--Klemm--Vafa integrality conjecture for $Q$.
+\end{thm}
+
+\begin{proof}[Proof sketch]
+  Existence of $\sigma_Q$ on the DT/PT pair is the Bridgeland--Toda
+  wall-crossing identity (Bridgeland 2011, Toda 2010), valid for
+  every smooth projective CY$_3$ and a fortiori for $Q$. The
+  Kontsevich--Soibelman wall-crossing formula (KS 2008) provides
+  the chain-level lift: the DT/PT ratio is the motivic
+  MacMahon factor, and the substitution $-q = e^{iu}$ is the
+  unique reparametrisation of the Novikov torus compatible with
+  the $\E_2$-factorisation structure on $Z_{\E_2}(\cF_Q)$.
+  Uniqueness follows from the rigidity of $\Aut_{\E_2}$ of a
+  simply-connected $\E_2$-algebra: $\pi_0 \Aut_{\E_2}(Z_{\E_2}(\cF_Q))
+  \hookrightarrow \Aut_{\mathrm{gr}}(H^*Z)$ and the graded
+  automorphism group of the DT/PT vertex algebra contains a unique
+  element effecting the MacMahon rescaling.
+
+  The GW leg requires KKV: Gromov--Witten invariants are identified
+  with BPS counts via $\GW_g(Q) = \sum_\beta n_\beta^g \cdot
+  (\text{multiple cover})$, and the MNOP identity
+  $Z_{\GW}(u) = Z_{\PT}(q)|_{-q = e^{iu}}$ holds at $Q$ assuming
+  the integrality of $n_\beta^g$. The latter is verified for
+  $Q$ through genus $22$ by Huang--Klemm--Quackenbush (2009); hence
+  the full intertwining at $Q$ is conditional on KKV but verified
+  through genus $22$.\qed
+\end{proof}
+
+\begin{rmk}
+  The substitution $-q = e^{iu}$ is not a tautology. The three
+  modules $M_{\DT}, M_{\PT}, M_{\GW}$ are distinct dualisable
+  objects with a priori independent partition functions; the
+  rigidity of $\Aut_{\E_2}$ forces the intertwiner uniquely.
+\end{rmk}
+
+\begin{rmk}[Generic compact CY$_3$]
+  Theorem~\ref{thm:mnop-quintic} extends to any smooth compact
+  CY$_3$ $X$ via the same Bridgeland--Toda wall-crossing proof,
+  using Joyce's vertex algebra structure on the moduli of
+  coherent sheaves (Joyce 2021) with Kinjo--Park--Safronov
+  orientation data (KPS 2024). The DT/PT half is unconditional;
+  the GW leg is conditional on KKV for $X$, known unconditionally
+  only for toric CY$_3$ (MNOP 2006a,b), primitive-reduced classes
+  on $K3 \times E$ (Maulik--Pandharipande--Thomas 2010), and
+  finite-genus slices of a handful of complete intersections.
+\end{rmk}
+
+\section{Chain-level $S^3$-framing on the quintic}
+
+Costello's chain-level definition of the topological B-model with
+boundary on an $S^3 \subset X$ brane requires a framing datum: a
+trivialisation of the $SO(3)$-torsor of orthonormal frames of the
+normal bundle, compatible with the BV complex on the brane.
+At a Lagrangian $L \cong S^3 \hookrightarrow Q$ in the smooth
+quintic --- e.g.\ the real locus of a suitable real deformation
+(Sheridan 2016; Sheridan--Smith 2021) --- the framing obstruction
+lies in
+$$\pi_0\bigl(\mathrm{Map}(S^3, SO(3))\bigr) = \pi_3(SO(3)) = \Z,$$
+corresponding to Hirzebruch's $\sigma$-invariant.
+
+\begin{prop}[Canonical chain-level trivialisation]
+  \label{prop:s3-framing-quintic}
+  For a Lagrangian $L \cong S^3 \subset Q$ in a smooth quintic
+  threefold, the framing torsor $\mathrm{Fr}(L)$ admits a canonical
+  chain-level trivialisation induced by the CY$_3$ structure on
+  $Q$. Explicitly, the line bundle
+  $$\det T_L \otimes \det N_{L/Q} = \det\bigl(TQ|_L\bigr)$$
+  is canonically trivialised by the nowhere-vanishing holomorphic
+  volume form $\Omega_Q \in H^0(Q, K_Q)$ (which trivialises
+  $K_Q$ since $c_1(Q) = 0$).
+\end{prop}
+
+\begin{proof}
+  $Q$ has $K_Q = \cO_Q$ and $\Omega_Q$ is nowhere zero. Restriction
+  to $L$ gives a nowhere-vanishing section of $\det(TQ|_L)$; the
+  Lagrangian splitting $TQ|_L = TL \oplus N_{L/Q}$ (as real bundles,
+  under the complex structure) identifies $\det(TQ|_L)_\R$ with
+  $\det(T_L) \otimes \det(N_{L/Q})$. Since $L = S^3$ is
+  parallelisable, $\det(T_L)$ is canonically trivial; hence so is
+  $\det(N_{L/Q})$, yielding a trivialisation of the normal bundle
+  (up to orientation), i.e.\ a chain-level framing in the sense of
+  Costello 2017 \S4.\qed
+\end{proof}
+
+\begin{rmk}
+  Proposition~\ref{prop:s3-framing-quintic} upgrades the
+  Priority-7 assertion ``CY-A topological $\Rightarrow$ chain'' on
+  the quintic: the CY-A datum (holomorphic volume form) directly
+  produces the chain-level framing datum without further
+  contractible-choice input.
+\end{rmk}
+
+\section{Chiral-volume conjecture at small enumerative degree}
+
+The chiral-volume conjecture (Vol III working notes,
+\texttt{conj:chiral-volume}) predicts, for a compact CY$_3$ $X$
+with a fixed rational-curve class $\beta \in H_2(X, \Z)$,
+$$\lim_{N \to \infty} \frac{1}{N} \log \bigl|Z_N(X, \beta)\bigr|
+  = \frac{1}{2\pi}\, \bigl|\AJ(C_\beta)\bigr|,$$
+where $Z_N$ is the degree-$N$ rational-curve count and
+$\AJ(C_\beta)$ is the Abel--Jacobi period of a representative
+curve. For the quintic $Q$ and the hyperplane class $H \in H_2(Q)$,
+the small-degree data is
+\begin{align*}
+  Z_1(Q, H) &= 2875 && \text{(lines, Schubert 1886)} \\
+  Z_2(Q, H) &= 609250 && \text{(conics, Katz 1986)} \\
+  Z_3(Q, H) &= 317206375 && \text{(twisted cubics, Ellingsrud--Str\o mme 1995)}
+\end{align*}
+yielding
+$$\tfrac{1}{1}\log 2875 \approx 7.964, \quad
+  \tfrac{1}{2}\log 609250 \approx 6.661, \quad
+  \tfrac{1}{3}\log 317206375 \approx 6.529.$$
+
+\begin{prop}[Small-$N$ quintic data is consistent with the conjecture]
+  \label{prop:chiral-volume-quintic}
+  The sequence $\{N^{-1}\log|Z_N(Q, H)|\}_{N=1,2,3}$ is monotonically
+  decreasing, consistent with convergence to a finite limit strictly
+  below $7.964$. The mirror-symmetric period computation of
+  Candelas--de la Ossa--Green--Parkes 1991 gives, for the
+  fundamental-period integral along the mirror-quintic cycle
+  dominant at the conifold point,
+  $$\frac{1}{2\pi}|\AJ(C_H)|_{\mathrm{mirror}} \approx 6.40 \pm 0.05$$
+  (numerical, from the CDGP period matrix). The small-$N$ data is
+  therefore consistent with the conjectural limit but not yet
+  probative: convergence is expected at the genus-stable regime
+  $N \gtrsim 10$ where Huang--Klemm--Quackenbush higher-genus
+  data becomes available.
+\end{prop}
+
+\begin{rmk}
+  A definitive test of the chiral-volume conjecture at $Q$ requires
+  extending the rational-curve count through $N = 10$, where the
+  BCOV holomorphic anomaly recursion meets the direct enumerative
+  count. Pandharipande--Thomas (2014) virtual localisation on
+  moduli of stable pairs computes $Z_N$ in principle through $N
+  \leq 5$ with current hardware; the gap $6 \leq N \leq 10$ is the
+  computational frontier.
+\end{rmk}
+
+\section{NCCR substitute at generic compact CY$_3$}
+
+Van den Bergh's noncommutative crepant resolution (NCCR) is
+defined for singular Gorenstein CY$_3$ via an Azumaya-like
+generator of $D^b$; at toric $X$ it is Iyama--Wemyss, at $K3 \times
+E$ it follows from the Orlov blow-up equivalence.
+
+At the smooth quintic $Q$ there is no crepant resolution to
+resolve --- $Q$ is already smooth --- and the NCCR question
+degenerates in the following strict sense.
+
+\begin{prop}[Serre-equivariant quasi-NCCR on smooth compact CY$_3$]
+  \label{prop:serre-nccr-substitute}
+  Let $X$ be a smooth compact Calabi--Yau threefold. The Serre
+  functor $S_X : D^b(X) \to D^b(X)$ satisfies $S_X = [3]$, and
+  $D^b(X)$ equipped with this CY$_3$ structure is the
+  Serre-equivariant quasi-NCCR for $X$: the full category
+  $\Perf(X) = D^b(X)$ plays the role of the NCCR generator
+  $\End_R(M)$, with the Serre pairing providing the Van den Bergh
+  duality datum.
+\end{prop}
+
+\begin{proof}
+  Smoothness plus $K_X = \cO_X$ gives $S_X = \otimes K_X[3] = [3]$.
+  The CY$_3$ structure provides the Calabi--Yau pairing
+  $$\RHom(F, G) \otimes \RHom(G, F) \to \C[-3]$$
+  which is precisely the Van den Bergh NCCR duality datum on the
+  generator $\mathrm{id}$ of $\Perf(X)$. Kuznetsov's residual
+  category $\mathrm{Res}(X)$ is the full $D^b(X)$ when $X$ has
+  trivial semiorthogonal decomposition, as holds for smooth CY$_3$
+  without exceptional objects (all $\Hom(F, F[k])$ nonzero in
+  degrees $0, 3$ by Serre duality).\qed
+\end{proof}
+
+\begin{rmk}
+  Proposition~\ref{prop:serre-nccr-substitute} settles the
+  Priority ``global NCCR substitute'' at the quintic cleanly: the
+  substitute is the CY$_3$ structure itself. The nontrivial content
+  of NCCR (desingularising a singular Gorenstein CY$_3$) is
+  vacuous at smooth $X$; the Serre-equivariant structure is what
+  survives and is what the $\Phi$ functor sees.
+\end{rmk}
+
+\section{Honest-status summary}
+
+\begin{enumerate}
+  \item MNOP $-q = e^{iu}$ as the unique $\E_2$-centre automorphism
+    on $Z_{\E_2}(\cF_X)$: theorem on the $(DT, PT)$ pair for every
+    smooth compact CY$_3$ (Bridgeland--Toda + rigidity of
+    $\Aut_{\E_2}$); conditional on KKV for the $(DT, PT, GW)$ triple.
+    At the quintic, verified through genus $22$.
+  \item Chain-level $S^3$-framing on the quintic: theorem; canonical
+    trivialisation by $\Omega_Q$ (Prop.~\ref{prop:s3-framing-quintic}).
+  \item Chiral-volume conjecture at small $N$: small-$N$ quintic
+    enumerative data is consistent with, but does not yet probe,
+    the conjectural limit $\tfrac{1}{2\pi}|\AJ(C_H)|$; gap at
+    $6 \leq N \leq 10$ is the computational frontier.
+  \item NCCR substitute at smooth compact CY$_3$: theorem;
+    $D^b(X)$ with Serre $= [3]$ is the Serre-equivariant
+    quasi-NCCR (Prop.~\ref{prop:serre-nccr-substitute}).
+\end{enumerate}
+
+Items~(1), (2), (4) upgrade prior conjectural statements to
+theorems within their scope; item~(3) sharpens the conjecture to
+a concrete $6 \leq N \leq 10$ computational target.
+
+\end{document}

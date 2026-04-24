@@ -17,20 +17,20 @@
 \newcommand\mrm[1]{\mathrm{#1}}
 
 \newcommand\image[1]{
-  \begin{figure}[H]\label{fig-#1}
+  \begin{figure}[H]
     \centering
+    \refstepcounter{figure}\label{fig:#1}
     \includegraphics[scale=.5]{#1}
   \end{figure}
 }
 \newcommand\imageopt[3]{ % \imageopt #1-filename #2-scale #3-caption
   \begin{figure}[H]
     \centering
-    \ifstrequal{#2}{}{%if no scale provided
-      \includegraphics{#1}}{ % don't set the scale
-      }{\includegraphics[scale=#2]{#1}}\label{fig:#1}
-    \ifstrequal{#3}{}{%if no caption provided
-      }{ % don't try to set one
-      }{\caption{#3}} % otherwise do
+    \ifstrequal{#2}{}
+      {\includegraphics{#1}}
+      {\includegraphics[scale=#2]{#1}}
+    \ifstrequal{#3}{}{}{\caption{#3}}
+    \label{fig:#1}
   \end{figure}}
 
 \newcommand\mathsc[1]{\text{\normalfont\scshape#1}}
@@ -425,7 +425,7 @@
 \nc\VermaL[2]{\mathbf{L}_{#1,#2}}
 \nc\V[1]{\mathbb{V}_{#1}}
 
-\nc\lie[1]{\mathfrak{#1]}}
+\nc\lie[1]{\mathfrak{#1}}
 \nc\so{\lie{so}}
 \nc\su{\lie{su}}
 \rc\sl{\lie{sl}}

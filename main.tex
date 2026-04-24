@@ -4,7 +4,7 @@
 \input{mathmacros.tex}
 \input{authors.tex}
 
-\title{Some Calculations Concerning The Topological String}
+\title[Remarks on Topological Strings]{Remarks on Topological Strings}
 
 \begin{document}
 
@@ -16,8 +16,6 @@
   \maketitle
   \tableofcontents
   \mbox{}
-  %\input{nomenclature.tex}
-  %\printnomenclature
 
 \section{Introduction}
 
@@ -25,517 +23,1255 @@
   One of the prevalent themes at play in both contemporary theoretical physics
   and mathematics is that of \textit{duality}. In particular, we will adopt a
   form of \textit{Koszul Duality} as a guiding light in our quest to understand
-  some of the salient characteristics of \textbf{M-Theory}.\par
+  some of the salient characteristics of \textbf{twisted M-Theory}.\par
 
   \begin{rmk}
-    This introduction serves a motivational purpose, and subsequently lacks in
-    rigour; Mathematicians may prefer to skip ahead to later sections.
+    This introduction serves a motivational purpose and consequently de-emphasises
+    rigour in favour of intuition; the precise statements appear in the body.
   \end{rmk}
 
-  Let $X$ be a manifold of dimension $\dim X = n$. We will consider
-  M-theory on $\R \times X$ in the presence of a stack of $N$ 1-dimensional
-  branes supported
-  on $\R \times p$, for some point $p \in X$.
+  Let $X$ be a holomorphic symplectic manifold. We will consider a topological
+  twist of M-theory on $\R \times X$ in the presence of a stack of $N$
+  one-dimensional topological branes supported on $\R \times p$, for some point
+  $p \in X$.
 
-  In this scenario one expects to be able to construct two algebras
-
+  In this scenario one expects to be able to construct two algebras:
   \begin{itemize}
-    \item The algebra $\mc{A}_N$ of operators on the stack of $N$ branes supported
-      on $\R \times p$
-    \item the algebra $\mc{B}$ of local operators of the gravitational theory
-      on $\R \times X$. Operator product expansions in the direction of $\R$ equips $\mc{B}$ with the
-  structure of associative algebra.
+    \item The algebra $\mc{A}_N$ of operators on the stack of $N$ branes
+      supported on $\R \times p$.
+    \item The algebra $\mc{B}$ of local operators of the gravitational theory
+      on $\R \times X$. Operator product expansions in the direction of $\R$
+      equip $\mc{B}$ with the structure of an associative algebra.
   \end{itemize}
 
-  Holography then leads us to expect
+  Twisted holography then leads us to expect:
   \begin{conj}
-    In the limit as $\lim_{N \rightarrow \infty}$, $\mc{A}_N$ is the Koszul
-    dual of $\mc{B}$.
+    As $N \to \infty$, $\mc{A}_N$ is the Koszul dual of $\mc{B}$.
   \end{conj}
 
   \begin{rmk}
-    One should be able to exploit Witten's proposal for holographic
-    calculations of the OPE.
+    One should be able to exploit Witten's proposal \cite{witten-cs} for
+    holographic calculations of the OPE.
   \end{rmk}
 
-  These notes will amount to a rigorous check of this form of holography in a
-  few (relatively) simple examples.
+  These notes isolate one local mixed A/B example and verify the classical
+  stable operator-algebra match. The quantum discussion is restricted to the
+  canonical first-order bracket and the formal odd-power Moyal targets; the
+  full closed-string Feynman integral calculation is not claimed here.
+
+\subsection{The local theorem}
+
+Let
+$$\bar A=\C[z_1,z_2]/\C\cdot1,\qquad
+  \mathfrak h=\bar A,\qquad
+  \mathfrak g=\mathfrak h\ltimes\mathfrak h^\vee[1],$$
+where $\mathfrak h$ carries the Poisson bracket
+$$\{f,g\}=\partial_{z_1}f\,\partial_{z_2}g
+  -\partial_{z_2}f\,\partial_{z_1}g,$$
+understood after projection modulo constants, and $\mathfrak h^\vee$ is the continuous Taylor dual with its coadjoint
+$\mathfrak h$-module structure. Constants are removed because a constant
+Hamiltonian has zero Hamiltonian vector field, while on the open side
+$\mathrm{Tr}(1)=N$ is a scalar parameter rather than a nontrivial operator.
+The symbol $\bar A_{\mathrm{desc}}$ denotes an abstract copy of $\bar A$ whose
+basis vectors are represented by the first descendant cycles constructed below.
+
+\begin{thm}[Local stable Hamiltonian-sector Koszul duality]\label{thm:main-local}
+  In the formal local mixed A/B model on $\R^2\times\C^2$ with brane
+  $\R\times p$, the stable large-$N$ scalar-reduced open Hamiltonian
+  degree-zero trace algebra, enlarged by the distinguished first Koszul
+  descendants, is
+  $$\mc{O}^{\mathrm{cl}}_{\mathrm{brane}}
+    \cong \mathbf{S}\bigl(\bar A\oplus\bar A_{\mathrm{desc}}[1]\bigr).$$
+  The closed local operator algebra is the continuous Chevalley-Eilenberg
+  algebra
+  $$\mc{O}^{\mathrm{cl}}_{\mathrm{grav}}
+    \cong C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g)
+    =\widehat{\mathbf{S}}\bigl(\mathfrak g^\vee[-1]\bigr).$$
+  Its Koszul dual is the completed graded enveloping algebra
+  $$\bigl(\mc{O}^{\mathrm{cl}}_{\mathrm{grav}}\bigr)^!
+    \simeq \widehat{U(\mathfrak g)}.$$
+  The Rees algebra $U_\hbar(\mathfrak g)$ has special fibre
+  $$U_\hbar(\mathfrak g)/(\hbar)\cong
+    \mathbf{S}\bigl(\bar A\oplus\mathfrak h^\vee[1]\bigr),$$
+  which identifies the PBW classical limit of the closed Koszul dual with the
+  open stable Hamiltonian-sector algebra after choosing the monomial-dual basis
+  $\mathfrak h^\vee\cong\bar A_{\mathrm{desc}}$. On degree-zero generators the
+  identification is induced by the scalar-reduced bulk-to-boundary evaluation
+  map
+  $$\partial_{\mathrm{bb}}(f)=\overline{\mathrm{Tr}\,f(\phi_1,\phi_2)},$$
+  which sends a closed Hamiltonian to the corresponding brane Hamiltonian and
+  intertwines Poisson brackets. The shifted generators are sent to the first
+  Koszul descendants $\Psi_{k,l}$. On monomials,
+  $$z_1^kz_2^l\longleftrightarrow
+    \overline{\mathrm{Tr}(\phi_1^k\phi_2^l)},\qquad k+l>0,$$
+  the first bracket is
+  $$\{\overline{\mathrm{Tr}(\phi_1^k\phi_2^l)},
+      \overline{\mathrm{Tr}(\phi_1^m\phi_2^n)}\}
+    =\overline{(kn-lm)\mathrm{Tr}(\phi_1^{k+m-1}\phi_2^{l+n-1})},$$
+  matching the Poisson bracket on $\bar A$.
+\end{thm}
+
+\subsection{Status of assertions}
+
+The theorem above is the precise local assertion proved in these notes; the
+terms appearing in it are constructed in the subsections below. The proof
+consists of the affine Ext calculation, the open BV reduction, the stable
+invariant-theory calculation of the scalar-reduced Hamiltonian trace algebra,
+the construction of the first descendant cycles, the formal Hamiltonian BF model
+for the closed side, the construction of the bulk-to-boundary Hamiltonian
+evaluation map, the CE/Koszul-duality computation, and the first bracket
+calculation.
+
+The Moyal $\hbar^3$ formula below is a formal deformation-quantization target
+checked by an exact script. It is not presented as the value of a closed-string
+Feynman integral. The ambient twisted-holography and M-theory discussion is
+motivation for this local theorem, not an input to its proof.
+
+\subsection{Conventions for the local calculation}
+
+Everything below is over $\C$. The phrase \emph{formal local model} means the
+completed Taylor model at the chosen point of $\C^2$; equivalently, one may
+work polynomially degree by degree and then complete at the augmentation ideal.
+The symbol $\widehat{\mathbf S}$ denotes this completed symmetric algebra, and
+all Chevalley-Eilenberg cochains are continuous cochains for the same
+filtration.
+
+Shifts follow the BV convention used in the field descriptions: an element of
+$V[1]$ has parity reversed and cohomological degree one lower than the
+corresponding element of $V$. The notation $\mathbf S(V)$ always means the free
+graded-commutative algebra on the graded vector space $V$.
+
+We write $\bar A_{\mathrm{desc}}$ for an abstract copy of $\bar A$ whose basis
+vector labelled by $z_1^kz_2^l$ is represented on the brane by the first
+descendant $\Psi_{k,l}$. On the closed side the cotangent field gives the
+continuous Taylor dual $\mathfrak h^\vee$, not an adjoint copy of
+$\mathfrak h$. Choosing the monomial Taylor basis identifies
+$\mathfrak h^\vee$ with $\bar A_{\mathrm{desc}}$ as a filtered vector space;
+this is a basis identification, not a claim that the coadjoint module is
+canonically the adjoint module.
+
+Boundary terms on $\R$ are discarded by taking compactly supported variations,
+or equivalently by working on an interval with fixed boundary values and then
+passing to local operators in the interior. The term \emph{stable large-$N$}
+means the degreewise stable value of the invariant algebras under block
+restriction as $N\to\infty$; no finite-$N$ trace identity is being suppressed
+inside a fixed finite matrix algebra. The scalar trace $\mathrm{Tr}(1)=N$ is
+treated as a parameter and is removed from the reduced operator algebra.
+If $T$ is a trace expression, $\overline T$ denotes its class modulo the scalar
+line $\C\cdot\mathrm{Tr}(1)$.
+
+On the open side we compute the scalar-reduced degree-zero Hamiltonian traces
+and adjoin the distinguished first Koszul descendants. The full stable BV
+invariant Koszul homology, including possible higher antifield sectors and
+possible boundaries involving two or more $\psi$'s, is not computed here and is
+not used in the bracket comparison.
+
+\subsection{The concrete dictionary}
+
+The comparison is the following explicit dictionary. For $k,l\geq0$ and
+$k+l>0$, set
+$$H_{k,l}=z_1^kz_2^l\in\bar A,\qquad
+  E_{k,l}=\delta_{k,l}[1]\in\mathfrak h^\vee[1],$$
+where $\delta_{k,l}$ is dual to the Taylor monomial $z_1^kz_2^l$.
+On the brane side set
+$$O_{k,l}=\overline{\mathrm{Tr}(\phi_1^k\phi_2^l)},$$
+and let $\Psi_{k,l}$ be the symmetrised trace obtained by inserting one
+$\psi$ into the word with $k$ copies of $\phi_1$ and $l$ copies of $\phi_2$;
+the odd matrix $\psi$ is the Koszul variable for the moment-map equation,
+introduced in Construction~\ref{constr:reduced-bv-algebra}.
+The theorem proves that the assignment
+$$H_{k,l}\longmapsto O_{k,l},\qquad E_{k,l}\longmapsto\Psi_{k,l}$$
+extends to an isomorphism of the scalar-reduced Hamiltonian descendant algebra
+with
+$$\mathbf S(\bar A\oplus\bar A_{\mathrm{desc}}[1])
+  \xrightarrow{\ \sim\ }\mc O_{\mathrm{brane}}^{\mathrm{cl}}$$
+in the sector considered here. On the closed side the symbols
+$H_{k,l},E_{k,l}$ form PBW generators of the Rees specialization of
+$U_\hbar(\bar A\ltimes\mathfrak h^\vee[1])$.
+
+Thus every later step has a concrete target: construct the symbols
+$O_{k,l},\Psi_{k,l}$ from the open fields, construct $H_{k,l},E_{k,l}$ from
+Hamiltonians and cotangent Hamiltonians, prove that commutators of words reduce
+to commutative monomials, and check that the bracket coefficient is
+$(kn-lm)$.
 
 \subsection{String Field Theory and Koszul Duality}
-  We expect Koszul duality for string field theories to be captured at the
-  level of Calabi-Yau categories and their respective cyclic homologies, via
-  analogues of
-  the theorem of Loday-Quillen-Tsygan, which says
-  \begin{thm}
-    \textbf{Loday-Quillen-Tsygan} the Chevalley-Eilenberg-Lie homology of the
-    lie algebra of infinite matrices over a unital associative algebra $A$ is
-    generated by the cyclic homology of $A$ as an exterior algebra.
+  We expect Koszul duality for string field theories to be reflected in
+  stable trace invariants and cyclic homology. The algebraic template is the
+  Loday-Quillen-Tsygan theorem \cites{loday-quillen}{tsygan}:
+  \begin{thm}[Loday-Quillen-Tsygan]
+    Let $A$ be a unital associative algebra over a field of characteristic
+    zero. The stable Chevalley-Eilenberg homology of
+    $\lie{gl}_{\infty}(A)$ is the free graded-commutative algebra generated by
+    the shifted cyclic homology of $A$:
+    $$H_*^{\mathrm{CE}}\bigl(\lie{gl}_{\infty}(A)\bigr)
+      \cong \mathbf{S}\bigl(HC_{*-1}(A)\bigr).$$
   \end{thm}
 
-  The associative algebra $A$ will coincide with the algebra of cochains arising in the
-  large $N$ limit, dual to the cyclic homology produced on the gravitational
-  side.\par
+  Thus stable matrix invariants are controlled by cyclic words. In the
+  particular reduced model below, BRST exactness of $[\phi_1,\phi_2]$ turns
+  cyclic words into ordinary commutative monomials, and the surviving
+  single-trace generators are represented by
+  $\mathrm{Tr}(\phi_1^k\phi_2^l)$ with $k+l>0$.
 
-  Thus, for example, we will obtain an explicit matching between single string states and
-  generators given by single trace operators\footnotemark\footnotetext{At the
-  classical level} at the large $N$ limit, while OPE's will coincide with
-  string scattering amplitudes.
+  The calculation below is the corresponding classical shadow: closed
+  Hamiltonian modes match stable single-trace generators, and the first
+  nontrivial bracket agrees with the Poisson bracket.
 
 \subsection{Flavours of Topological Strings}
-Topological strings manifest in various flavours. Common examples include
+Topological strings manifest in various flavours. Common examples include:
 
 \begin{itemize}
-  \item The \textbf{A-model} where $X$ is symplectic and branes are
-    lagrangians $L \inj X$
-  \item The \textbf{B-model} where $X$ is calabi-yau and branes are coherent
-    sheaves.
-  \item \textbf{Mixed A-B models} e.g.\ on $X \times X'$ with branes given by
-    $L\times Z$ for $L \inj X$ lagrangian and $Z \inj Y$ holomorphic.
+  \item The \textbf{A-model}, where branes are objects of a Fukaya category:
+    Lagrangians equipped with the grading, spin or Pin, local-system, and
+    unobstructedness data required to define Floer theory.
+  \item The \textbf{B-model}, where branes are objects of
+    $D^b\mathrm{Coh}(X)$, or of $\mathrm{Perf}(X)$ in the affine local model.
+  \item \textbf{Mixed A-B models}, e.g.\ on $X \times X'$ with branes given by
+    $L\times Z$ for $L \inj X$ Lagrangian and $Z \inj X'$ holomorphic.
 \end{itemize}
-
-\begin{rmk}
-  The above examples do not exhaust the full landscape of topological
-  strings. % TODO give example
-\end{rmk}
 
 \begin{rmk}
   The A-model is only interesting with world-sheet instantons taken into
   account.
 \end{rmk}
 
-Regardless of the context we will work in, we'll need to understand
-
+Regardless of the context we will work in, we need to understand:
 \begin{itemize}
-  \item The open string theory, which is the theory on a Brane, and
-  \item The closed string field theory, of a gravitational nature
+  \item The open string theory, which is the theory on a brane, and
+  \item The closed string field theory, of a gravitational nature.
 \end{itemize}
 
 \subsection{Open Strings}
-If $\mc{C}$ is a Calabi-Yau category, with $\mc{F} \in \Cat{Ob}\mc{C}$, one
-can construct a field theory with a space of
-fields\footnotemark\footnotetext{If we just produce a category, then the
-  resulting field theory would be defined on a point. If instead we produce a
-  sheaf of categories, we get a field theory on the support of this sheaf of
-categories i.e.\ a field theory on the given brane}given by
-$$\RHom(\mc{F},\mc{F})[1],$$
-also known as the open string states. The action for this field theory is
-built in terms of the $A_{\infty}$ structure\footnotemark\footnotetext{Via a
-standard procedure going back to Witten} on this derived $\Hom$ space.
+If $\mc{C}$ is a cyclic Calabi-Yau $A_\infty$ category and
+$\mc{F}\in\mathrm{Ob}\,\mc{C}$, set $A=\RHom(\mc{F},\mc{F})$. The open-string
+states are $A$. The BV fields are\footnotemark\footnotetext{If we produce a category, the resulting field
+  theory is defined on a point. If instead we produce a sheaf of categories,
+  we get a field theory on the support of this sheaf, i.e.\ a field theory on
+  the given brane.}
+$$A[1].$$
+The Calabi-Yau structure supplies a cyclic trace $\mathrm{Tr}:A\to\C[-d]$.
+For a cyclic $A_\infty$ algebra with operations $m_n$, the formal
+Chern-Simons action is
+$$S(a)=\sum_{n\geq1}\frac{1}{n+1}\mathrm{Tr}\bigl(a\,m_n(a,\ldots,a)\bigr),
+  \qquad a\in A[1].$$
+This is the algebraic core of Witten's open string field theory
+\cite{witten-cs} and of the AKSZ packaging \cite{aksz}.
 
-  \section{First Example}
+  \section{The Local Model}
 
-\subsection{Our setup}
-  Let $X$ be $\R^2_A \times \C^2_B$. Branes will be of the form $L \times Z$
-  where $L$ is a (lagrangian) line in $\R^2_A$ and $Z$ is the support of a
-  coherent sheaf on $\C^2_B$. Consider, in particular, the Brane $$\R \times p
-  \inj \R^2_A \times \C^2_B$$ for some point $p \in \C^2_B$.
+\subsection{Setup}
+  Let $X = \R^2_A \times \C^2_B$. We use the exact A-brane given by the
+  standard line $\R\subset\R^2_A$ with trivial brane data and the B-brane
+  $\mc{O}_p\in\mathrm{Perf}(\C^2_B)$. Consider the product brane
+  $$\R \times p \inj \R^2_A \times \C^2_B$$
+  for some point $p \in \C^2_B$. The A-model lives on $\R^2_A$ (equipped with
+  its standard symplectic structure) and the B-model lives on $\C^2_B$
+  (equipped with its standard holomorphic-symplectic structure $\omega =
+  dz_1\wedge dz_2$).
 
 \subsection{Open String Field States}
-  The open string states will be a tensor product of A-model and B-model
-  states. If one consults the mathematical literature one would find the
-  following prescription:
+  The open string states are the tensor product of A-model and B-model states.
 
   \begin{itemize}
-    \item $\R \inj \R^2_A$ has open string states given by the Floer
-      cohomology, which in this instance is uninteresting and reduces to the
-      regular cohomology of $\R$. Since we need this in its sheaf incarnation,
-      our open sring states will be the de Rahm complex $\Omega^*(\R)$
-    \item $\{p\} \inj \C^2_B$ has open string states is given by
-      $\Ext^*_{\mc{O}(\C)}(\C,\C)$ which has the form of an exterior algebra on
-      2 generators $ = \C[\varepsilon_1,\varepsilon_2]$, each generator
-      representing a normal direction.
+    \item \textit{A-model factor.} In the exact self-Floer model for
+      $\R\subset T^*\R\cong\R^2$, a small Hamiltonian perturbation identifies
+      $CF^*(\R,\R)$ with the Morse complex of $\R$. Hence
+      $HF^*(\R,\R)\cong H^*(\R;\C)$, and the de Rham complex $\Omega^*(\R)$ is
+      the chain-level model used below.
+    \item \textit{B-model factor.} Put affine coordinates at $p=0$ and write
+      $R=\C[z_1,z_2]$, $\mathfrak m=(z_1,z_2)$, and $\mc{O}_p=R/\mathfrak m$.
+      The skyscraper sheaf has open string states
+      $$\Ext^*_R(R/\mathfrak m,R/\mathfrak m),$$
+      computed in Proposition~\ref{prop:skyscraper-ext}.
   \end{itemize}
+
+\begin{prop}[Affine skyscraper self-Ext]\label{prop:skyscraper-ext}
+  Let $R=\C[z_1,z_2]$, $\mathfrak m=(z_1,z_2)$, and $k=R/\mathfrak m$. Then
+  the Yoneda algebra of the skyscraper sheaf at the origin is
+  $$\Ext^*_R(k,k)\cong\Lambda_{\C}(\varepsilon_1,\varepsilon_2),$$
+  where $|\varepsilon_i|=1$. In particular this is the free
+  graded-commutative algebra on two odd generators.
+\end{prop}
+
+\begin{proof}
+  The pair $(z_1,z_2)$ is a regular sequence in the polynomial ring $R$, so the
+  affine Koszul complex
+  $$K=\bigl(0\to R\,e_{12}\xrightarrow{d_2}R\,e_1\oplus R\,e_2
+        \xrightarrow{d_1}R\to0\bigr)$$
+  is a free resolution of $k$, with
+  $$d_1(ae_1+be_2)=az_1+bz_2,\qquad
+    d_2(e_{12})=z_2e_1-z_1e_2.$$
+  Applying $\Hom_R(-,k)$ gives
+  $$0\to k\xrightarrow{0}k\,\varepsilon_1\oplus k\,\varepsilon_2
+    \xrightarrow{0}k\,\varepsilon_{12}\to0,$$
+  because $z_1$ and $z_2$ act by zero on $k$. Hence the graded vector space of
+  Ext groups is $k$ in degree $0$, $k\varepsilon_1\oplus k\varepsilon_2$ in
+  degree $1$, and $k\varepsilon_{12}$ in degree $2$.
+
+  The product is the Yoneda product. The Koszul resolution is the exterior
+  dg-algebra $R\otimes\Lambda(e_1,e_2)$ with $d(e_i)=z_i$; its diagonal sends
+  $e_i$ to $e_i\otimes1+1\otimes e_i$. Dualising this diagonal gives
+  $\varepsilon_i^2=0$ and
+  $\varepsilon_1\varepsilon_2=-\varepsilon_2\varepsilon_1$, while
+  $\varepsilon_1\varepsilon_2$ spans the top Ext group. Thus the Yoneda
+  algebra is $\Lambda_{\C}(\varepsilon_1,\varepsilon_2)$.
+\end{proof}
 
 \subsection{Open String Field Theory}
 
-We hence find that the fields\footnotemark\footnotetext{in the
-Batalin-Vilkovisky formalism} are given by
-$$\alpha \in \Omega^*(\R)[\varepsilon_1,\varepsilon_2] \otimes
-\lie{gl}_N[1]$$ with action $$S(\alpha) = \int_{\R \times
-\C^{0|2}}\frac{1}{2}Tr(\alpha d\alpha) + \frac{1}{3} Tr \alpha^3$$
+The total space of fields (in the Batalin-Vilkovisky formalism) is
+$$\alpha \in \Omega^*(\R)\otimes\Lambda(\varepsilon_1,\varepsilon_2)
+  \otimes \lie{gl}_N[1]$$
+with action
+$$S(\alpha) = \int_{\R \times \C^{0|2}}\frac{1}{2}\,\mathrm{Tr}(\alpha\, d\alpha) + \frac{1}{3}\,\mathrm{Tr}\,\alpha^3.$$
+Here $d = d_{\mathrm{dR}}$; the Ext algebra
+$\Lambda(\varepsilon_1,\varepsilon_2)$ has zero differential. The integral
+over $\C^{0|2}$ is the Berezin integral $\int d\varepsilon_1\,d\varepsilon_2$,
+which picks out the top component in the odd directions.
+
+\begin{constr}[The open field from the Ext basis]\label{constr:open-field-basis}
+  Write $\varepsilon_{12}=\varepsilon_1\varepsilon_2$. Before imposing ghost
+  number, an open field is a finite sum
+  $$\alpha=a_0+a_1\varepsilon_1+a_2\varepsilon_2+a_{12}\varepsilon_{12},$$
+  where each $a_I$ is a de Rham form on $\R$ with values in $\lie{gl}_N$,
+  shifted by $[1]$. The ghost-number-zero components are exactly
+  $$A\in\Omega^1(\R)\otimes\lie{gl}_N,\qquad
+    \phi_1,\phi_2\in\Omega^0(\R)\otimes\lie{gl}_N,$$
+  and they appear as
+  $$\alpha_0=A+\phi_1\varepsilon_1+\phi_2\varepsilon_2.$$
+  The Berezin integral kills every monomial except the coefficient of
+  $\varepsilon_{12}$, so every term in the ghost-zero action is obtained by
+  multiplying the displayed three summands and keeping exactly one real
+  one-form and exactly the product $\varepsilon_1\varepsilon_2$.
+\end{constr}
 
 \begin{rmk}
-  Note that in the action we perform a Berezin integral over $\C^{0|2}$
-\end{rmk}
-\begin{rmk}
-  The shift of 1 in the space of fields above means that the $1$-forms are
-  now in ghost number 0, i.e.\ is a bosonic gauge field. Similarly, the
-  scalars $\varepsilon_i$ (representing the motions of brane) are also ghost
-  number 0.
+  The shift $[1]$ acts on the total cohomological degree: a form of de Rham
+  degree $p$ and Grassmann degree $q$ has total degree $p+q$, which after the
+  shift sits in ghost number $p+q-1$. In particular, the 1-form component of
+  $\alpha$ (de Rham degree 1, Grassmann degree 0) sits in ghost number 0 and
+  is the bosonic gauge field. The scalar components proportional to
+  $\varepsilon_i$ (de Rham degree 0, Grassmann degree 1) also sit in ghost
+  number 0 and represent the motion of the brane in the two normal directions.
 \end{rmk}
 
 \subsubsection{De-BV-fying the open string field theory}
-  % reference Alberto's writeup
-  In the Non-BV setup, i.e.\ for a starting point from which we can follow
-  the procedure outlined as in ?? to derive the above, we write down ghosts,
-  the anti-fields, the anti-fields to the ghosts etc. to find a Quantum-Mechanical system with fields
-  $$A \in \Omega^1(\R)\otimes \lie{gl}_N$$ a connection form and two scalars
-  $$\phi_1,\phi_2 \in \Omega^0(\R)\otimes\lie{gl}_N$$ and action $$S = \int
-  Tr(\phi_1, d_A\phi_2)$$ with the usual gauge symmetry.
+  The ghost-number-zero part of the BV field is
+  $$\alpha_0=A+\phi_1\varepsilon_1+\phi_2\varepsilon_2,$$
+  where $A\in\Omega^1(\R)\otimes\lie{gl}_N$ and
+  $\phi_i\in\Omega^0(\R)\otimes\lie{gl}_N$.
+
+  \begin{lem}\label{lem:open-action-reduction}
+    With the Berezin convention
+    $\int_{\C^{0|2}}\varepsilon_1\varepsilon_2=1$, the restriction of the
+    BV action to $\alpha_0$ is, up to a boundary term on $\R$,
+    $$S(\alpha_0)=\int_\R\mathrm{Tr}\bigl(\phi_1\,d\phi_2
+      +A[\phi_1,\phi_2]\bigr).$$
+  \end{lem}
+
+  \begin{proof}
+    Only monomials containing one real one-form and the factor
+    $\varepsilon_1\varepsilon_2$ survive the integration over
+    $\R\times\C^{0|2}$. In the quadratic term this leaves
+    $$\frac12\int_\R\mathrm{Tr}\bigl(\phi_1\,d\phi_2-\phi_2\,d\phi_1\bigr),$$
+    where the sign is the Koszul sign from interchanging the two odd
+    generators. Since
+    $d\,\mathrm{Tr}(\phi_1\phi_2)=\mathrm{Tr}(d\phi_1\,\phi_2+\phi_1\,d\phi_2)$,
+    the second summand differs from $\mathrm{Tr}(\phi_1\,d\phi_2)$ by an exact
+    one-form. In the cubic term the six orderings of
+    $A,\phi_1\varepsilon_1,\phi_2\varepsilon_2$ reduce by cyclicity of the trace
+    and the odd relation $\varepsilon_2\varepsilon_1=-\varepsilon_1\varepsilon_2$
+    to $\mathrm{Tr}(A\phi_1\phi_2-A\phi_2\phi_1)$. This is
+    $\mathrm{Tr}(A[\phi_1,\phi_2])$.
+  \end{proof}
+
+  The ghost-number-zero truncation of the BV master action is closed under the
+  classical equations and gives a quantum-mechanical system with a connection
+  form
+  $$A \in \Omega^1(\R)\otimes \lie{gl}_N,$$
+  two adjoint scalars
+  $$\phi_1,\phi_2 \in \Omega^0(\R)\otimes\lie{gl}_N,$$
+  and action
+  $$S = \int_\R \mathrm{Tr}\bigl(\phi_1\,d\phi_2
+    + A[\phi_1,\phi_2]\bigr).$$
+  This action is invariant under
+  $$\delta_{\varepsilon}\phi_i=[\varepsilon,\phi_i],\qquad
+    \delta_{\varepsilon}A=d\varepsilon+[A,\varepsilon],$$
+  for $\varepsilon\in\Omega^0(\R)\otimes\lie{gl}_N$. Indeed the variation of
+  $\mathrm{Tr}(\phi_1d\phi_2)$ containing $d\varepsilon$ is
+  $-\mathrm{Tr}(d\varepsilon[\phi_1,\phi_2])$, and this cancels the
+  $d\varepsilon$ variation of $\mathrm{Tr}(A[\phi_1,\phi_2])$; the remaining
+  terms cancel by invariance of the trace pairing.
 
 \begin{rmk}
-  We can also proceed directly within the CY category. There we take a given
-  object, tensor it with $\C^N$; passage to endomorphisms yields
-  endomorphisms tensored with that of $\C^N$. More generally, one should take
-  proceed via the cyclic cohomology of the category. What we really need is
-  to be able to consider is an integral over world sheets decorated with
-  cyclic cohomology classes. Then the 3-point function should be computable
-  via the cup-product in cyclic cohomology together with the trace. However,
-  the higher $n$-point functions are trickier.
+  One can also proceed directly within the Calabi-Yau category: take a given
+  object, tensor with $\C^N$, and pass to endomorphisms. More generally, one
+  should work with the cyclic cohomology of the category; the 3-point function
+  is computable via the cup-product in cyclic cohomology together with the
+  trace, while higher $n$-point functions require additional structure.
 \end{rmk}
 
 \begin{rmk}
-  This is literally 1-dimensional chern simons theory (via AKSZ formalism).
+  In AKSZ language this is the one-dimensional gauged sigma model with
+  Hamiltonian target $\lie{gl}_N\oplus\lie{gl}_N$ and symplectic potential
+  $\mathrm{Tr}(\phi_1\,d\phi_2)$. We use the resulting Poisson bivector
+  $$\Pi=\sum_{i,j}\frac{\partial}{\partial(\phi_1)^i{}_j}
+    \wedge\frac{\partial}{\partial(\phi_2)^j{}_i},$$
+  so $\{(\phi_1)^i{}_j,(\phi_2)^k{}_l\}=\delta^i_l\delta^k_j$. Equivalently,
+  with the convention $\iota_{X_f}\omega=df$, the symplectic form is
+  $-\mathrm{Tr}(d\phi_1\wedge d\phi_2)$. The $GL_N$ moment map is
+  $\mu=[\phi_1,\phi_2]$, up to the same harmless sign convention for the
+  infinitesimal conjugation action. The classical reduced phase space is the
+  stack of commuting pairs of matrices modulo conjugation.
 \end{rmk}
 
 \begin{rmk}
-  we can also realize this via maps to $\B{G}$ from $\R\times \C^{0|2}$; this
-  point of view makes manifest the origin of this theory as a reduction of chern simons on a
-2-torus. (The two odd directions generate the cohomology of the 2-torus.)
-Elaborating on this point of view with an analysis of T-duality recovers
-Witten's prescriptions for Chern Simons theory via topological string theory.
+  Equivalently, take Chern-Simons theory on $\R\times T^2$ and restrict to the
+  harmonic forms $1,\eta_1,\eta_2,\eta_1\eta_2$ on $T^2$. Writing
+  $A_{3d}=A_t\,dt+\phi_1\eta_1+\phi_2\eta_2$ and integrating over $T^2$
+  gives the same action; the odd variables $\varepsilon_i$ are the algebraic
+  avatars of the degree-one cohomology classes $\eta_i$.
 \end{rmk}
 
 \subsection{Closed String States}
-Similarly, the closed string state space will be of the form
-$$\mathrm{A-model closed states}\otimes \mathrm{B-model closed
-states}$$
-For the A-model on a symplectic manifold, as usual, we get the cohomology of
-that manifold; but again as we are constructing a field tehory on $\R^2$ we
-take the de Rahm cohomology complex.
-For the B-model, following BCOV's analysis on a CY 3-fold, we consider $$\Ker \partial \subset
-\mbf{PV}^{*,*}(\C^2) \simeq
-\Omega^{0,*}(\C^2)[\partial_{z_1},\partial_{z_2}]$$
-i.e.\ the kernel of a certain operator on the space of poly-vector fields.
+Similarly, the closed string state space is of the form
+$$\text{A-model closed states}\otimes \text{B-model closed states.}$$
+For the A-model on $\R^2$, we take the de Rham cohomology complex
+$\Omega^*(\R^2)$.
+
+For the B-model on $\C^2$, we use the local holomorphic-symplectic
+Kodaira-Spencer model obtained from Hamiltonian holomorphic vector fields. It
+is BCOV-like in its use of polyvectors and the divergence operator, but it is
+not the Calabi-Yau threefold BCOV theory with one sector simply deleted.
+
 \begin{rmk}
-  The $\partial_{z_i}$ are odd.
+  The original BCOV analysis \cite{bcov} is written for Calabi-Yau threefolds.
+  On a holomorphic symplectic surface the natural local cotangent theory is the
+  BF theory for the dg Lie algebra of Hamiltonian vector fields. The
+  holomorphic symplectic form supplies the Poisson bracket, while the
+  holomorphic volume form supplies the divergence operator on polyvectors.
 \end{rmk}
 
+We consider the space of polyvector fields
+$$\mathbf{PV}^{*,*}(\C^2) \cong \Omega^{0,*}(\C^2)[\partial_{z_1},\partial_{z_2}]$$
+where $\partial_{z_i}$ are odd generators of poly-vector degree 1 (corresponding
+to the two holomorphic vector fields on $\C^2$). The operator
+$$\partial: \mathbf{PV}^{i,*} \to \mathbf{PV}^{i-1,*}$$
+is the divergence operator determined by the holomorphic volume form
+$\Omega=dz_1\wedge dz_2$:
+$$\partial_{\Omega}=\iota_{\Omega}^{-1}\circ\partial_{\mathrm{hol}}\circ
+  \iota_{\Omega},\qquad
+  \iota_{\Omega}:\mathbf{PV}^{i,*}\xrightarrow{\sim}\Omega^{2-i,*}.$$
+Thus for $X=a_1\partial_{z_1}+a_2\partial_{z_2}$,
+$$\partial_{\Omega}X=(\partial_{z_1}a_1+\partial_{z_2}a_2),$$
+while $\partial_{\Omega}$ vanishes on functions.
+
+We work in the formal polynomial local model at $0\in\C^2$, so Dolbeault
+cohomology is represented by holomorphic Taylor polynomials. In this model the
+small closed-string state space is the $\partial_{\Omega}$-closed part of
+polyvectors. Analysing degree by degree:
+\begin{itemize}
+  \item $\mathbf{PV}^{0,*}(\C^2) = \Omega^{0,*}(\C^2)\subset\Ker\partial$
+    trivially.
+  \item $\mathbf{PV}^{1,*}(\C^2)\cong\Omega^{1,*}(\C^2)$ via
+    $\iota_{(-)}\omega$. Under this identification, with the Hamiltonian
+    convention $\iota_{X_f}\omega=-df$ used below,
+    $\Ker\partial_{\Omega}$ is the space of closed holomorphic one-forms.
+    Lemma~\ref{lem:polynomial-poincare} identifies these with $df$, uniquely
+    modulo constants.
+  \item The constant Hamiltonians act trivially, since their Hamiltonian vector
+    fields vanish. We therefore use the reduced polynomial algebra
+    $$\bar A=\C[z_1,z_2]/\C\cdot1$$
+    for nontrivial Hamiltonian fields.
+\end{itemize}
+
+\begin{lem}[Polynomial Poincare primitive]\label{lem:polynomial-poincare}
+  Let
+  $$\theta=a(z_1,z_2)\,dz_1+b(z_1,z_2)\,dz_2$$
+  be a polynomial one-form on $\C^2$. If
+  $\partial_{z_2}a=\partial_{z_1}b$, then there is a polynomial
+  $f\in\C[z_1,z_2]$, unique modulo constants, such that $\theta=df$.
+\end{lem}
+
+\begin{proof}
+  Define
+  $$f(z_1,z_2)=\int_0^1
+    \bigl(z_1a(tz_1,tz_2)+z_2b(tz_1,tz_2)\bigr)\,dt.$$
+  Since $a$ and $b$ are polynomials, the integral is just division of each
+  homogeneous term by its degree plus one, hence $f$ is polynomial. Differentiate
+  under the integral sign. Closedness says
+  $\partial_{z_2}a=\partial_{z_1}b$, so
+  \begin{align*}
+  \partial_{z_1}f
+    &=\int_0^1\bigl(a(tz)+tz_1\partial_{z_1}a(tz)
+       +tz_2\partial_{z_1}b(tz)\bigr)\,dt\\
+    &=\int_0^1\bigl(a(tz)+t z_1\partial_{z_1}a(tz)
+       +t z_2\partial_{z_2}a(tz)\bigr)\,dt\\
+    &=\int_0^1\frac{d}{dt}\bigl(t\,a(tz)\bigr)\,dt
+      =a(z).
+  \end{align*}
+  The same calculation, with $a$ and $b$ interchanged, gives
+  $\partial_{z_2}f=b(z)$. Therefore $df=\theta$.
+  If $df=dg$, then $d(f-g)=0$, hence $f-g$ is constant.
+\end{proof}
+
 \begin{rmk}
-  The constructions here are much more homologically involved. Updates coming soon.
+  A global analytic theory on noncompact $\C^2$ requires boundary conditions,
+  a gauge slice, and a choice of Green kernel. The computations below use only
+  the formal local algebra of polynomial Hamiltonians and do not require a
+  global propagator.
 \end{rmk}
 
-Observe that the action of $\partial$ on PolyVector fields $$\partial :
-\mbf{PV}^{i,*} \rightarrow \mbf{PV}^{i-1,*}$$
-and that $$\mbf{PV}^{0,*}\subset \Ker\partial.$$ Now since $\C^2$ is symplectic, we
-find$$\mbf{PV}^{1,*}(\C^2) \simeq
-\Omega^{1,*}(\C^2)$$ with the restriction of the operator $\partial$ acting as the holomorphic de
-Rahm operator. Hence we are considering the complex of
-closed\footnotemark\footnotetext{closed in the holomorphic sense} holomorphic
-1-forms.
+For the closed string field theory we replace $\Ker\partial$ (on
+poly-1-vectors) by the Dolbeault-valued Hamiltonian vector fields:
+$$\Omega^{0,*}(\C^2)\text{-valued Hamiltonian vector fields},$$
+i.e.\ sections of $\Omega^{0,*}(\C^2)$ identified with Hamiltonian vector
+fields via the symplectic form $\omega = dz_1\wedge dz_2$. Concretely, a
+section $f\in\Omega^{0,*}(\C^2)$ corresponds to the Hamiltonian vector field
+$X_f=\{f,-\}_\omega$, where
+$$\{f,g\}_\omega=
+  \partial_{z_1}f\,\partial_{z_2}g-\partial_{z_2}f\,\partial_{z_1}g.$$
+With this convention
+$$X_f=(\partial_{z_1}f)\partial_{z_2}
+  -(\partial_{z_2}f)\partial_{z_1},\qquad \iota_{X_f}\omega=-df.$$
 
 \begin{rmk}
-  Following BCOV, we have stipulated that the fields must satisfy a
-  differential equation, which inevitably produces a technical nightmare.
-  Further, what is worse is that the action functional (coinciding with the
-  inverse of $\partial$) is non-local.
-\end{rmk}
-
-Also, note that when restricting to poly-2-vector-fields $$\mbf{PV}^{2,*}(\C^2) \supset \Ker\partial$$
-$\Ker\partial$ picks out poly-2-vector-fields that are independent of $z$,
-hence
-$$\mbf{PV}^{2,*}(\C^2) \supset \Ker\partial \simeq \C$$
-(the cohomology is $\C$), which is again (almost) trivial. What is more, by the
-definition of a propagator in BCOV theory, this does not propagate---hence form
-background fields which we'll ignore.
-
-\begin{rmk}
-  this statement generalizes the sheafy setting.
+  The replacement is the elementary statement
+  $$\Ker(\partial_{\Omega}:\mathbf{PV}^{1}\to\mathbf{PV}^{0})
+    \cong \{df:f\in\C[z_1,z_2]\}
+    \cong \bar A.$$
+  The first isomorphism uses the holomorphic symplectic form and the second
+  is the polynomial Poincare lemma on affine space. Constants are removed
+  because $X_f=0$ exactly when $f$ is constant.
 \end{rmk}
 
 \subsection{Closed String Field Theory}
 
-Combining this analysis, for our candidate for the closed string field
-theory we are led to divergence free vector fields; equivalently, in this case, symplectic
-vector fields. Now we opt to replace $\Ker\partial$ by the image
-of $\partial$ i.e.\ by $$\Omega^{0,*} - \mathrm{Hamiltonian Vector
-Fields}$$
-
-\begin{rmk}
-  We have replaced one complex by another that is almost---but not
-  quite---quasi-isomorphic: they differ by the cohomology of $\C$, which is
-  (almost) trivial.
-\end{rmk}
-
 \subsubsection{The Action Functional}
 
-We can now write down the action, for $$\alpha \in
-\Omega^*(\R^2)\hat{\otimes}\Omega^{0,*}(\C^2)[1]$$
-$$\beta \in \Omega^*(\R^2)\hat{\otimes}\Omega^{0,*}(\C^2)[2]$$
-the action is an integral over real 6-dimensional space, cubic in the fields
-$$\int_{\R^2 \times \C^2} \beta\bar{\partial}\alpha dz_1 dz_2 +
-\int_{\R^2\times \C^2} \beta \partial \alpha \partial \alpha$$
+Let
+$$D=d_{\R^2}+\bar\partial_{\C^2}.$$
+Write
+$$\alpha\in\Omega^*(\R^2)\,\hat{\otimes}\,\Omega^{0,*}(\C^2)\otimes\bar A[1]$$
+for the Hamiltonian connection field and
+$$\beta\in\Omega^*(\R^2)\,\hat{\otimes}\,\Omega^{0,*}(\C^2)\otimes\bar A^{\vee}[2]$$
+for its cotangent field. The bracket on form-valued Hamiltonians is obtained
+by wedging the form parts and taking the Poisson bracket of the Hamiltonian
+parts. The action is
+$$S=\int_{\R^2\times\C^2}\Bigl\langle\beta,\,
+  D\alpha+\frac12\{\alpha,\alpha\}\Bigr\rangle\,dz_1\,dz_2.$$
+The pairing is the evaluation pairing between $\bar A^{\vee}$ and $\bar A$
+(or, in a formal residue model, the corresponding continuous residue pairing).
+For ghost-number-zero fields, $\alpha$ has total real/Dolbeault form degree
+$1$ and $\beta$ has total degree $2$. Hence
+$\beta\wedge D\alpha$ and $\beta\wedge\{\alpha,\alpha\}$ have total
+real/Dolbeault degree $4$; multiplying by $dz_1\wedge dz_2$ gives a top real
+degree $6$ form on $\R^2\times\C^2$.
 
 \begin{rmk}
-  Observe that the second term of the action can be expressed as
-  $$\int_{\R^2\times \C^2} \beta \partial \alpha \partial \alpha =
-  \int_{\R^2\times \C^2} \beta\{\alpha,\alpha\}dz_1 dz_2$$
-  where the expression $\partial \alpha \partial \alpha$ can be expressed as a
-  poisson bracket, hence we see the lie bracket on hamiltonian vector fields
-  entering the action functional.
-\end{rmk}
-
-\begin{rmk}
-  Before, the quantum mechanical system lived on a line (extent of the brane), while this gravitational theory occupies all of space-time.
+  Before, the quantum mechanical system lived on a line (the extent of the
+  brane), while this gravitational theory occupies all of space-time.
 \end{rmk}
 
 \subsubsection{De-BV-fying the closed string field theory}
 
-\begin{rmk}
-  This theory is closely related to a 4-dimensional BF theory.
-  TODO more
-\end{rmk}
+This theory is closely related to a 4-dimensional BF theory: $\beta$ plays the
+role of the $B$-field (Lagrange multiplier) and the equations of motion of
+$\beta$ enforce $F_\alpha = 0$, where
+$$F_\alpha = D\alpha + \tfrac{1}{2}\{\alpha,\alpha\}$$
+is the ``curvature'' of $\alpha$ (viewed as a connection on a bundle of
+holomorphic-symplectic surfaces over $\R^2$).
 
-Consider space-time $$\R^2_{x_i}\times\C^2_{z_i}$$ where the subscripts
-indicate coordinates. Paying attention to ghost number zero components
-$$\beta = \beta_{x_1 x_2} dx_1 dx_2 + \beta_{x_i \bar{z}_j} dx_i d\bar{z}_j +
-\beta_{\bar{z}_1\bar{z}_2 d\bar{z}_1d\bar{z}_2}$$
-$$\alpha = \alpha_{x_i}dx_i + \alpha_{\bar{z}_j}d\bar{z}_j$$
-and considering the action as given above, we see that $\beta$ has $1$-form gauge
-symmetry, while $\alpha$ has $0$-form gauge symmetry.
-\begin{rmk}
-  As in the previously alluded to $4$-dimensional BF theory, $\beta$---having
-  $1$-form gauge symmetry---also has secondary gauge symmetry, which is why we
-  find a large complex. TODO more.
-\end{rmk}
+Consider the space-time $\R^2_{x_i}\times\C^2_{z_i}$. The ghost-number-zero
+components of $\alpha$ and $\beta$ are:
+$$\alpha = \alpha_{x_i}\,dx_i + \alpha_{\bar z_j}\,d\bar z_j,\qquad
+  \beta = \beta_{x_1 x_2}\,dx_1\,dx_2 + \beta_{x_i\bar z_j}\,dx_i\,d\bar z_j
+  + \beta_{\bar z_1\bar z_2}\,d\bar z_1\,d\bar z_2.$$
+Here the coefficients of $\alpha$ are Hamiltonian functions modulo constants.
+The gauge symmetries are the BF-type transformations
+$$\delta_{\varepsilon}\alpha=D\varepsilon+\{\alpha,\varepsilon\},\qquad
+  \delta_{\varepsilon}\beta=\operatorname{ad}^{\vee}_{\varepsilon}\beta,$$
+and
+$$\delta_{\lambda}\alpha=0,\qquad
+  \delta_{\lambda}\beta=D_{\alpha}\lambda,$$
+where $D_{\alpha}=D+\{\alpha,-\}$ and $\lambda$ is a one-form valued in
+$\bar A^{\vee}$. The second symmetry is reducible on shell: if
+$\lambda=D_{\alpha}\mu$, then
+$D_{\alpha}\lambda=D_{\alpha}^2\mu=\{F_{\alpha},\mu\}$, which vanishes when
+$F_{\alpha}=0$.
 
-Analysing $\alpha$, as a Hamiltonian vector field on $\C^2$, we see the
-term $\alpha_{\bar{z}_j}d\bar{z}_j$ is the Beltrami differential, where we
-deform $\C^2$ as a symplectic surface. The term $\alpha_{x_i}dx_i$ is a
-connection on $\R^2$ valued in Hamiltonian vector fields; the terms together
-imply that we have a flat bundle of $\C^2$'s over $\R^2$. In fact, the
-equations of motion determine an integrable deformation of complex structure.
-Analysing $\beta$ in the action functional, it only appears linearly. This
-implies they're just lagrangian multiplier fields in enforcing the equations
-resulting in the integrable deformation of complex structure + flatness of the
-bundle of $\C^2$'s over $\R^2$.
+Analysing $\alpha$ as a Hamiltonian function on $\C^2$: the component
+$\alpha_{\bar z_j}d\bar z_j$ is the Hamiltonian potential whose vector field
+$X_{\alpha_{\bar z_j}}d\bar z_j$ is the Beltrami differential encoding a
+deformation of the complex structure of $\C^2$; the component
+$\alpha_{x_i}dx_i$ similarly defines a connection on $\R^2$ valued in
+Hamiltonian vector fields on $\C^2$, encoding a bundle of $\C^2$s over
+$\R^2$. Together, the
+equation of motion $F_\alpha=0$ says this data constitutes an integrable
+deformation of complex structure with flat holonomy. Since $\beta$ appears
+only linearly in the action, it is a Lagrange multiplier enforcing exactly this
+equation.
+
 \begin{rmk}
-  This final statement is analogous to BF theory where $B$ is a lagrangian
-  multiplier and $F$ is zero, hence why we see in the next section that the
-  phase space is a cotangent bundle.
+  This is entirely analogous to BF theory, where $B$ is a Lagrange multiplier
+  enforcing $F_A=0$, and the phase space is $T^*\mathcal{M}_{\mathrm{flat}}$.
 \end{rmk}
 
 \subsubsection{Phase Space}
-If we put this on $$\R \times S^1 \times X$$ where $X$ is homolomorphic
-symplectic, then the phase space is $$T^*(\mathrm{Moduli of
-holomorphic-symplectic surfaces fibered over} S^1 + \mathrm{flat
-connection})$$
+Compactify one real direction and put the theory on $\R\times S^1\times X$
+where $X$ is holomorphic symplectic. The equations of motion $F_\alpha=0$
+cut out the Maurer-Cartan moduli problem for Hamiltonian vector fields on
+$S^1\times X$. The perturbative phase space is the derived cotangent stack
+$$T^*_{\mathrm{der}}\mathrm{MC}\bigl(\Omega^*(S^1)\widehat{\otimes}
+  \Omega^{0,*}(X,\mathrm{Ham}(X)),D,\{-,-\}\bigr).$$
+After passing to the underived tangent space at the trivial solution this
+reduces to the ordinary cotangent bundle of the linearized deformation complex.
+
+\subsection{Closed String Fields and Brane Deformations}
+
+At the algebraic level, a closed Hamiltonian supplies a candidate deformation
+of the gauge theory on the brane by evaluation on the normal matrix fields. For
+example, if the brane lies along $x_1$ and the closed string field is
+$dx_1\,z_1^k z_2^l$, the boundary-evaluation prescription gives the deformed
+action
+$$\int_\R\mathrm{Tr}\bigl(\phi_1\,d\phi_2+A[\phi_1,\phi_2]\bigr)
+  + \int_\R dx_1\,\mathrm{Tr}\,\phi_1^k\phi_2^l.$$
+Deriving this coupling from a full BV bulk-boundary action requires boundary
+conditions and a gauge-fixing choice; it is not part of the local algebra
+theorem below.
+Construction~\ref{constr:boundary-evaluation} is the algebraic form of this
+bulk-to-boundary prescription, and Theorem~\ref{thm:bulk-boundary} below proves
+that the resulting Hamiltonian evaluation preserves the classical bracket.
+
 \begin{rmk}
-  If we work in perturbation theory near $X$ we will find the above moduli
-  space near this configuration.
+  Geometrically, specifying a closed string field on $\C^2$ amounts to
+  equipping $\C^2$ with a connection, so that the brane can parallel-transport
+  its internal degrees of freedom as it moves along $\R$.
 \end{rmk}
 
-\subsection{Closed String Fields}
+\subsection{Operators in the Gauge Theory and the Large-$N$ Limit}
 
-Given a closed string field, we should obtain a deformation of the gauge theory
-on the brane. For example, if the brane is on the line $x_1$ and the closed
-string  field is $$dx_1 z_1^k z_2^l$$ we ought to obtain a deformation of our
-quantum mechanical system on the line $x_1$. We can identify this deformation
-by deforming the action to $$\int Tr \phi_1 d_A \phi_2 + \int dx_1 Tr \phi_1^k
-\phi_2^l$$ by adding on a Hamiltonian. Many matrix models of hamiltonians can
-be engineered by these backgrounds.
+The local-operator calculation is performed in the reduced BV model with
+fields $\phi_1,\phi_2$ and the antifield $\psi=A^*$ for the Lagrange
+multiplier $A$. We take $GL_N$-invariants in characteristic zero, so the
+Chevalley part of the gauge BRST differential acts trivially on trace
+functions by cyclicity.
 
-\begin{rmk}
-  Geometrically, this just amounts to saying that the $\C^2$ has a connection,
-  allowing parallel transport.
-\end{rmk}
+\begin{constr}[The reduced BV algebra at the insertion point]\label{constr:reduced-bv-algebra}
+  At a fixed point of the brane line, introduce three matrix variables
+  $$\phi_1,\phi_2\in\lie{gl}_N,\qquad \psi\in\lie{gl}_N[1].$$
+  The reduced local polynomial algebra is
+  $$\mc R_N=\C[(\phi_1)^i{}_j,(\phi_2)^i{}_j]
+    \otimes\Lambda\bigl((\psi)^i{}_j\bigr).$$
+  Its BRST differential is the derivation determined on generators by
+  $$Q(\phi_1)^i{}_j=0,\qquad Q(\phi_2)^i{}_j=0,\qquad
+    Q(\psi)^i{}_j=([\phi_1,\phi_2])^i{}_j.$$
+  This formula is the algebraic shadow of the $A$-equation of motion:
+  varying
+  $$\int_\R\mathrm{Tr}\bigl(\phi_1\,d\phi_2+A[\phi_1,\phi_2]\bigr)$$
+  with respect to $A$ gives $[\phi_1,\phi_2]=0$, and the antifield $\psi=A^*$
+  records that equation as a Koszul differential.
+\end{constr}
 
-\subsection{Operators in the gauge theory, and the large $N$
-limit}
+\begin{lem}[De Rham jets]\label{lem:derivative-jets}
+  Positive jets in the topological direction do not contribute to local
+  operator cohomology. Equivalently, every cohomology class has a representative
+  depending only on the values of the fields and antifields at the insertion
+  point.
+\end{lem}
 
-TODO more
-In any theory where we find the de Rahm complex as a space of fields, all the
-local operators cannot have any derivatives (in $X$); anything involving a
-derivative in $X$ can be killed by the BRST operator.\par
+\begin{proof}
+  For a coordinate $t$ on the line, the de Rham part of the BRST operator is
+  $d_{\R}$. On the jet algebra one has the contraction homotopy
+  $[d_{\R},\iota_{\partial_t}]=\partial_t$. Hence a local expression containing
+  a positive $t$-derivative is cohomologous to zero after applying the usual
+  Euler homotopy on jet degree. This kills topological-direction jets, not the
+  holomorphic $z_i$-derivatives used later on the closed side.
+\end{proof}
 
-It follows that we will only care about values of fields at a point, but also
-of anti-fields etc.\
+\begin{prop}[Stable trace invariants]\label{prop:stable-trace-invariants}
+  Let $F=\C\langle x_1,x_2\rangle$ and let $\mathrm{Cyc}(F)=F/[F,F]$ be the
+  vector space of cyclic words. For each $N$, $GL_N$ acts on
+  $\lie{gl}_N^2$ by simultaneous conjugation. The stable invariant algebra
+  $$\C[\lie{gl}_\infty^2]^{GL_\infty}
+    :=\varprojlim_{N}\C[\lie{gl}_N^2]^{GL_N}$$
+  with respect to block-restriction maps
+  is the free commutative algebra generated by the nonempty cyclic words:
+  $$\C[\lie{gl}_\infty^2]^{GL_\infty}
+    \cong\mathbf S\bigl(\mathrm{Cyc}(F)_{\mathrm{nonempty}}\bigr),$$
+  where a cyclic word $w$ maps to the trace function
+  $(\phi_1,\phi_2)\mapsto\mathrm{Tr}\,w(\phi_1,\phi_2)$.
+\end{prop}
 
-\subsubsection{Ghost $0$ operators}
-These will be generated by elements of the form $$Tr(p(\phi_1,\phi_2))$$ where $P$ is a
-non-commutative polynomial\footnotemark.\footnotetext{Here we are appealing to invariant theory, where
-the algebra of invariant matrices is generated by elements of the above form.}
-As $N \lim \infty$, there are no relations, these are freely generated.
-\subsubsection{Ghost $-1$ operators}
-Ghost number $-1$ operators will be generated by elements of the form
-$$Tr(\psi(p(\phi_1,\phi_2))$$
-  where $$\psi = A^*$$
-  is the anti-field to the field given by a connection $A$.
-  TODO write up rest of fields
+\begin{proof}
+  Procesi--Razmyslov invariant theory \cites{procesi}{razmyslov} gives two
+  inputs. First, $\C[\lie{gl}_N^2]^{GL_N}$ is generated by trace functions of
+  words in the two generic matrices. Second, all polynomial relations among
+  these trace functions are consequences of the fundamental trace identities
+  of matrix size $N$; in particular every homogeneous trace relation has total
+  word-degree at least $N+1$. Fix a total word-degree $d$. For every
+  $N\geq d$ there are therefore no relations in degree $d$ beyond cyclicity
+  of the trace. Passing degree by degree to the stable inverse limit removes
+  all finite-$N$ trace identities, and the only surviving identification is
+  $\mathrm{Tr}(uv)=\mathrm{Tr}(vu)$. This is exactly the symmetric algebra on
+  cyclic words.
 
-\subsubsection{Algebra of local operators on the brane}
-By cyclic symmetry of the trace $$\int Tr(\phi_1[A,\phi_2]) = \int
-Tr(A[\phi_1,\phi_2])$$
-Since the BRST operator acts on the anti-field of the connection, and it
-appears at $\phi_1,\phi_2$, it turns it into a commutator, hence
-$$Q(Tr(\psi p(\phi_1,\phi_2)) = Tr([\phi_1,\phi_2]p(\phi_1,\phi_2))$$
+  For the one-$\psi$ sector used below, apply the same theorem to three even
+  generic matrices and take the part linear in the third matrix. This gives
+  traces of words with one marked letter and no stable relations beyond
+  cyclicity. Declaring the marked letter odd only changes the
+  graded-commutative signs in products of such traces; no relation with two
+  marked letters is used in the Hamiltonian descendant sector.
+\end{proof}
 
-\begin{cor}
-  In $Q$-cohomology, expressions involving words in $\phi_1,\phi_2$ can be
-  commuted past one-another. We have a basis of ghost \#$0$ operators given by
-  $$Tr(\phi_1^k\phi_2^l)$$
-  and ghost \#$-1$ operators are given by\footnotemark $$Tr(\mathrm{Sym}\{\psi \phi_1^k
-    \phi_2^l)$$
-    Similarly, the classical local operators are $$\mathbf{S}^*(\C[z_1,z_2]
-    \oplus \C[z_1,z_2][1])$$
-    where $\mbf{S}^*$ denotes the dual of the symmetric algebra.
+Varying
+$$S=\int_\R\mathrm{Tr}\bigl(\phi_1\,d\phi_2+A[\phi_1,\phi_2]\bigr)$$
+with respect to $A$ gives the moment-map equation
+$[\phi_1,\phi_2]=0$. In the reduced BV complex,
+$$Q\psi=[\phi_1,\phi_2],\qquad Q\phi_1=Q\phi_2=0$$
+on invariant trace functions.
+
+\begin{constr}[Boundary evaluation of a closed Hamiltonian]\label{constr:boundary-evaluation}
+  Let $f=\sum_{k,l}c_{k,l}z_1^kz_2^l\in\C[z_1,z_2]$. The brane replaces the
+  two normal coordinates $z_1,z_2$ by the two adjoint scalar fields
+  $\phi_1,\phi_2$. Choosing the ordered lift with all $\phi_1$'s to the left
+  of all $\phi_2$'s gives the invariant function
+  $$\widetilde\partial_{\mathrm{bb},N}(f)
+    =\sum_{k,l}c_{k,l}\,\mathrm{Tr}(\phi_1^k\phi_2^l)
+    \in\mc R_N^{GL_N}.$$
+  Let
+  $$H^0_{\mathrm{red}}(\mc R_N^{GL_N},Q)
+    :=H^0(\mc R_N^{GL_N},Q)/\C\cdot\mathrm{Tr}(1).$$
+  Constants give the scalar $c_{0,0}N$ and therefore vanish in this quotient.
+  Thus the construction descends to a linear map
+  $$\partial_{\mathrm{bb},N}:\bar A\to
+    H^0_{\mathrm{red}}(\mc R_N^{GL_N},Q),\qquad
+    [f]\longmapsto \overline{\widetilde\partial_{\mathrm{bb},N}(f)}.$$
+  Let $\mathsf W_{k,l}$ be the set of words in two letters containing $k$
+  copies of the first letter and $l$ copies of the second. The first descendant
+  is obtained by inserting one Koszul variable and summing over all ordered
+  lifts:
+  $$\partial_{\mathrm{bb},N}^{(1)}(z_1^kz_2^l[1])=\Psi_{k,l},\qquad
+    \Psi_{k,l}:=\sum_{w\in\mathsf W_{k,l}}
+      \mathrm{Tr}\bigl(\psi\,w(\phi_1,\phi_2)\bigr).$$
+\end{constr}
+
+\begin{lem}[First descendants are cycles]\label{lem:first-descendant-cycles}
+  For every $k,l\geq0$, the symmetrised trace $\Psi_{k,l}$ satisfies
+  $Q\Psi_{k,l}=0$.
+\end{lem}
+
+\begin{proof}
+  Write $x=\phi_1$ and $y=\phi_2$. Since $x$ and $y$ are even and
+  $Q\psi=[x,y]$, one has
+  $$Q\Psi_{k,l}
+    =\sum_{w\in\mathsf W_{k,l}}\mathrm{Tr}\bigl((xy-yx)w(x,y)\bigr).$$
+  Group the resulting traces by cyclic word of multidegree $(k+1,l+1)$. The
+  coefficient of a cyclic word in the positive sum is the number of cyclic
+  adjacent occurrences of the block $xy$; the coefficient in the negative sum
+  is the number of cyclic adjacent occurrences of the block $yx$. On a circle
+  the number of transitions from an $x$-run to a $y$-run equals the number of
+  transitions from a $y$-run to an $x$-run. The two grouped sums are therefore
+  equal, so $Q\Psi_{k,l}=0$.
+\end{proof}
+
+\begin{lem}[Adjacent swaps]\label{lem:adjacent-swaps}
+  In the invariant reduced BV cohomology,
+  $$\mathrm{Tr}(u\phi_1\phi_2v)-\mathrm{Tr}(u\phi_2\phi_1v)$$
+  is $Q$-exact for all words $u,v$.
+\end{lem}
+
+\begin{proof}
+  By cyclicity of the trace,
+  \begin{align*}
+  Q\,\mathrm{Tr}(\psi vu)
+    &=\mathrm{Tr}([\phi_1,\phi_2]vu)\\
+    &=\mathrm{Tr}(\phi_1\phi_2vu-\phi_2\phi_1vu)\\
+    &=\mathrm{Tr}(u\phi_1\phi_2v)-\mathrm{Tr}(u\phi_2\phi_1v).
+  \end{align*}
+\end{proof}
+
+\begin{cor}[Matrix evaluation is commutative in cohomology]\label{cor:matrix-evaluation-well-defined}
+  If two words in $\phi_1,\phi_2$ have the same numbers of $\phi_1$ and
+  $\phi_2$, then their traces define the same class in the reduced BV
+  cohomology. Consequently $\partial_{\mathrm{bb},N}(f)$ depends only on the
+  commutative polynomial $f\in\C[z_1,z_2]$, not on the chosen ordered lift.
 \end{cor}
-\footnotetext{$\mathrm{Sym}\{\cdots\}$ denotes the symmetrized expression:
-i.e.\ the sum of permutations of factors of the product of the expression}
+
+\begin{proof}
+  Adjacent transpositions generate all reorderings of a finite word. Each
+  adjacent transposition of the adjacent letters $\phi_1,\phi_2$ changes the
+  trace by a $Q$-exact term by Lemma~\ref{lem:adjacent-swaps}; cyclicity moves
+  the chosen adjacent pair into the displayed position of that lemma. Summing
+  the resulting exact differences proves the claim.
+\end{proof}
+
+Let $\bar A=\C[z_1,z_2]/\C\cdot1$. The removed constant corresponds on the
+gauge side to the scalar $\mathrm{Tr}(1)=N$, not to a nontrivial Hamiltonian
+generator.
+
+\begin{prop}[Brane Hamiltonian sector]\label{prop:brane-ops}
+  In the stable large-$N$ scalar-reduced BV model, the Hamiltonian descendant
+  algebra generated by the nonconstant ghost-zero traces and the distinguished
+  first Koszul descendant cycles is
+  $$\mc{O}^{\mathrm{cl}}_{\mathrm{brane}}
+    \cong \mathbf{S}\bigl(\bar A\oplus \bar A_{\mathrm{desc}}[1]\bigr).$$
+  The class of $z_1^kz_2^l$ with $k+l>0$ corresponds to
+  $\overline{\mathrm{Tr}(\phi_1^k\phi_2^l)}$. The corresponding descendant
+  basis vector corresponds to the symmetrised trace with one $\psi$ and $k,l$
+  copies of $\phi_1,\phi_2$.
+\end{prop}
+
+\begin{proof}
+  Proposition~\ref{prop:stable-trace-invariants} gives the free commutative
+  algebra on cyclic words.
+  Lemma~\ref{lem:adjacent-swaps} identifies any two cyclic words with the same
+  numbers of $\phi_1$ and $\phi_2$, because adjacent transpositions generate
+  all reorderings. Thus the scalar-reduced ghost-zero cyclic words reduce to
+  the monomials $\overline{\mathrm{Tr}(\phi_1^k\phi_2^l)}$ with $k+l>0$.
+  Lemma~\ref{lem:first-descendant-cycles}
+  gives the distinguished closed one-$\psi$ class
+  $\Psi_{k,l}$ for each multidegree $(k,l)$. Products of these single-trace
+  classes give the free graded-commutative multi-trace algebra in the
+  Hamiltonian sector.
+  By definition of the Hamiltonian sector, single traces containing two or
+  more occurrences of $\psi$ are not part of this algebra.
+\end{proof}
 
 \begin{rmk}
-  The ghost \#$0$ operators in the corollary above correspond on the string-gravitational side to polynomial observables
-  $$z_1^kz_2^l$$
+  The word ``sector'' is literal. The calculation above presents the stable
+  algebra generated by the no-$\psi$ Hamiltonians and the distinguished first
+  descendants $\Psi_{k,l}$. It does not assert a presentation of the full
+  invariant Koszul homology including all classes and boundaries with two or
+  more occurrences of $\psi$.
 \end{rmk}
 
-\subsection{Operators in the gravitational theory}
-TODO write up full argument.
-Similarly, we can build local operators through a limited series of operations:
-we can evaluate $\theta$ and $\alpha$ at a point, we can differentiate etc.\ By
-a standard cohomological argument, only the zero-form parts of $\alpha$ and
-$\beta$ will yield physical operators in the $Q$-cohomology, while only the
-$z_1$ and $z_2$ derivatives can contribute, as the other derivatives can be
-cancelled by the image of $Q$.\par
+\subsection{Operators in the Gravitational Theory}\label{sec:grav-ops}
 
-The ring of local operators is generated by the operators of ghost \#$1$: $$\alpha \mapsto
-\partial_{z_1}^k \partial_{z_2}^l \alpha$$
-and operators of ghost \#$2$:
-$$\beta \mapsto \partial_{z_1}^k \partial_{z_2}^l \beta$$
-These operators have the opposite transformation properties as those from the
-gauge theory.\par
+Let $\mathfrak h=\bar A$ with Poisson bracket, and let
+$\mathfrak h^\vee$ be the continuous Taylor dual. The cotangent field is a
+coadjoint module, so the local Hamiltonian Lie algebra is
+$$\mathfrak g=\mathfrak h\ltimes\mathfrak h^\vee[1].$$
+For $f,g\in\mathfrak h$ and $\lambda,\mu\in\mathfrak h^\vee$, the brackets are
+$$[f,g]=\{f,g\},\qquad [f,\eta_\lambda]=\eta_{\operatorname{ad}^{\vee}_f\lambda},
+  \qquad [\eta_\lambda,\eta_\mu]=0,$$
+where $(\operatorname{ad}^{\vee}_f\lambda)(g)=-\lambda(\{f,g\})$.
+On monomials this reads
+$$[z_1^kz_2^l,z_1^mz_2^n]
+  =\overline{(kn-lm)z_1^{k+m-1}z_2^{l+n-1}},$$
+where the bar means projection to $\bar A$; in particular the constant bracket
+of $z_1$ and $z_2$ is zero in the reduced Hamiltonian Lie algebra.
 
-We find similarly that the ring of classical local operators is given by
-$$C^*(\C[z_1,z_2] \ltimes \C[z_1,z_2][1])$$
-Chevalley cochains of a semi-direct product of (shifted) polynomial rings. The
-first $\C[z_1,z_2]$ in the semi-direct product, via the equations of motion,
-corresponds to the $\alpha$ field and is a lie algebra with poisson bracket,
-while the second $\C[z_1,z_2][1]$ as the adjoint module acted upon by the
-first, corresponds to the $\beta$ field.
+The kinematic BRST operator is
+$$Q_0=d_{\R^2}+\bar\partial_{\C^2}.$$
+The same jet contraction as in Lemma~\ref{lem:derivative-jets}, together with
+the Dolbeault Poincare lemma in the formal local model, leaves only
+holomorphic Taylor coefficients. Thus the linear local coordinates are the
+functionals
+$$\partial_{z_1}^k\partial_{z_2}^l\alpha|_0,\qquad
+  \partial_{z_1}^k\partial_{z_2}^l\beta|_0.$$
+These are dual to the Taylor monomials $z_1^kz_2^l$ up to the factorial
+normalisation fixed by the chosen pairing. Since zero-form components of
+$\alpha$ and $\beta$ have negative field ghost numbers, the corresponding
+linear functions have positive ghost numbers.
 
-\begin{rmk}
-  Recall again that think of $\alpha$'s as
-  hamiltonian vector fields, while the $\beta$'s are functions admitting an action
-  of hamiltonian vector fields, when  we can consider $\alpha \in \C[z_1,z_2]$ and $\beta \in
-  \C[z_1,z_2][1]$.
-  The action is then given by
-  $$[\alpha, \beta] = \{\alpha,\beta\}$$ where the poisson bracket is given by
-  the constant poisson tensor $dz_1dz_2$. In particular, $[\alpha,\alpha]$ is
-  just the poisson bracket while $[\beta,\beta]$ commutes.
-\end{rmk}
+\begin{prop}\label{prop:grav-ops}
+  The classical local operators of the formal closed theory are the continuous
+  Chevalley-Eilenberg cochains
+  $$\mc{O}^{\mathrm{cl}}_{\mathrm{grav}}
+    \cong C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g)
+    =\widehat{\mathbf{S}}\bigl(\mathfrak g^\vee[-1]\bigr),$$
+  with CE differential dual to the Lie brackets above.
+\end{prop}
+
+\begin{proof}
+  Work at the formal insertion point. The jet algebra of the fields is the
+  completed free graded-commutative algebra on the Taylor coefficients of
+  $\alpha$ and $\beta$. The kinematic differential
+  $Q_0=d_{\R^2}+\bar\partial_{\C^2}$ contracts all positive real and
+  anti-holomorphic jets: in the real directions the homotopy is
+  $[d_{\R^2},\iota_{\partial_{x_i}}]=\partial_{x_i}$, and in the
+  anti-holomorphic directions it is the formal Dolbeault Poincare homotopy.
+  The $Q_0$-cohomology of the jet algebra is therefore generated by the
+  holomorphic Taylor coefficients alone.
+
+  The remaining $\alpha$-coefficients are Hamiltonians modulo constants, hence
+  elements of $\mathfrak h=\bar A$. The cotangent field $\beta$ supplies the
+  odd shifted continuous dual $\mathfrak h^\vee[1]$. Thus the linear space of
+  residual local modes is
+  $\mathfrak g=\mathfrak h\ltimes\mathfrak h^\vee[1]$.
+
+  It remains to identify the nonlinear BRST differential. The BV Hamiltonian
+  is
+  $$S=\int\left\langle\beta,D\alpha+\frac12\{\alpha,\alpha\}\right\rangle.$$
+  The linear part is exactly $Q_0$, already killed in cohomology. The quadratic
+  term sends two Hamiltonian $\alpha$-modes $f,g$ to their reduced Poisson
+  bracket $\{f,g\}$, and the action on the cotangent variable is the coadjoint
+  action displayed above. There is no quadratic term with two cotangent inputs,
+  so $[\eta_\lambda,\eta_\mu]=0$. Hence the residual BRST differential on
+  functions is precisely the derivation dual to the Lie bracket on
+  $\mathfrak g$, which is the Chevalley-Eilenberg differential. Continuity
+  records the completion over polynomial degree.
+\end{proof}
 
 \subsection{Koszul Duality}
-  At this stage we can see that the koszul dual of these two algebras of local
-  operator is nearly koszul dual, i.e. the koszul dual of the above gravity
-  operators is given by $$\mbf{U}(\Hom(\C^2)\oplus\Hom(\C^2)[1]).$$
-  Comparing this to the gauge theory operators, which are
-  $$\mbf{S}^*(\C[z_1,z_2]\oplus\C[z_1,z_2][1])$$ we find that the latter is
-  really the classical i.e.\ commutative limit of the former.
-\subsubsection{Classical free gravity and the commutative limit}
-On the gravitational side, we can interpret the passage to the commutative
-limit as discarding any interactions; these interactions produced the lie
-bracket. Hence via the passage to \textit{classical free
-gravity} we see the effect of koszul duality $$\textrm{Classical free gravity} \leftrightarrow^{\textrm{KD}} \textrm{Classical gauge theory}$$
-It follows that moving to first order away from the classical limit in the
-gauge theory will be necessary to match up both sides via Koszul
-duality\footnotemark.
 
-TODO define free (quadratic) gravity.
-\footnotetext{
-  Going further, in the planar limit, $\hbar$ on the RHS will match up with the interaction
-  strength on the LHS. For example, a two-loop diagram from the gauge theory
-  will correspond to a genus-two string interaction. Correspondingly, passage
-  to quantum gravity, i.e.\ non-trivial $\hbar$
-  on the gravitational side will take us beyond the planar limit and manifest
-  via traces of operators on the gauge theory side. We'll need to include a
-  parameter in the OPE of local operators: e.g.\ the OPE of two single-trace
-  operators will yield a spectrum of operators of various traces---here we will
-  see the appearance of this parameter.
-}
+\begin{defn}
+  For an augmented complete dg algebra $B$, its Koszul dual is
+  $$B^!=\RHom_B(\C,\C).$$
+  We regard commutative Chevalley-Eilenberg cochains as $E_1$ algebras by
+  restriction. All bar and cobar constructions below are taken in the category
+  of complete filtered vector spaces, with continuous maps and the polynomial
+  degree filtration; degree by degree the CE coalgebra is conilpotent, so the
+  completed cobar algebra is well-defined.
+\end{defn}
 
-\subsubsection{First order corrections}
+\begin{prop}\label{prop:ce-koszul}
+  Let $\mathfrak g=\mathfrak h\ltimes\mathfrak h^\vee[1]$ be the completed
+  graded Lie algebra above, and let
+  $$B=C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g)
+    =\widehat{\mathbf{S}}\bigl(\mathfrak g^\vee[-1]\bigr).$$
+  Then
+  $$B^!\simeq \widehat{U(\mathfrak g)},$$
+  the completed graded universal enveloping algebra.
+\end{prop}
 
-Under the koszul duality correspondence we have
-$$z_1^k z_2^l \leftrightarrow Tr \phi_1^k\phi_2^l$$
-and we want the poisson bracket to match up to a non-trivial first-order
-quantum correction $$\{z_1^kz_2^l,z_1^mz_2^n\} \leftrightarrow [Tr
-\phi_1^k\phi_2^l, Tr \phi_1^m\phi_2^n]$$
+\begin{proof}
+  Let
+  $$C_*^{\mathrm{CE}}(\mathfrak g)=\mathbf S^c(\mathfrak g[1])$$
+  be the Chevalley-Eilenberg coalgebra, with coderivation determined by the
+  bracket of $\mathfrak g$. By definition
+  $$B=\Hom_{\mathrm{cont}}\bigl(C_*^{\mathrm{CE}}(\mathfrak g),\C\bigr).$$
+  The augmentation $B\to\C$ has the standard bar resolution, and continuous
+  duality identifies
+  $$\RHom_B(\C,\C)\simeq
+    \Omega\,C_*^{\mathrm{CE}}(\mathfrak g),$$
+  the completed cobar algebra of the CE coalgebra. The Lie bar-cobar
+  comparison \cites{priddy}{loday-vallette} identifies this cobar algebra
+  with the completed associative algebra generated by $\mathfrak g$ modulo the
+  graded Lie relations; this is $\widehat{U(\mathfrak g)}$.
 
-This we can compute by a diagram linking by an edge the two sub-diagrams corresponding to
-each trace, which produces a match with the poisson bracket.
+  Thus, for the generators $f,g\in\mathfrak h$ and
+  $\eta_\lambda,\eta_\mu\in\mathfrak h^\vee[1]$, the completed enveloping
+  algebra has relations
+  \begin{align*}
+    fg-gf&=\{f,g\},\\
+    f\eta_\lambda-\eta_\lambda f&=\eta_{\operatorname{ad}^{\vee}_f\lambda},\\
+    \eta_\lambda\eta_\mu+\eta_\mu\eta_\lambda&=0.
+  \end{align*}
+\end{proof}
+
+For comparison with the classical brane algebra introduce the Rees enveloping
+algebra $U_{\hbar}(\mathfrak g)$ with relations
+$$xy-(-1)^{|x||y|}yx=\hbar[x,y].$$
+At $\hbar=0$ one obtains
+$$U_{\hbar}(\mathfrak g)/(\hbar)\cong
+  \mathbf{S}(\mathfrak g)
+  =\mathbf{S}\bigl(\bar A\oplus\mathfrak h^\vee[1]\bigr).$$
+After choosing the monomial-dual Taylor basis
+$\mathfrak h^\vee\cong\bar A_{\mathrm{desc}}$, this is the stable classical
+brane Hamiltonian descendant algebra of Proposition~\ref{prop:brane-ops}. Thus
+the free, abelian closed theory is Koszul dual directly to this symmetric
+algebra, while the interacting Hamiltonian bracket deforms it to the completed
+enveloping algebra via PBW.
+
+\subsubsection{First-order corrections ($\hbar^1$)}
+
+Under the Koszul duality correspondence we have
+$$z_1^kz_2^l \leftrightarrow
+  \overline{\mathrm{Tr}(\phi_1^k\phi_2^l)}.$$
+The reduced Poisson bracket on the gravity side is:
+$$\{z_1^kz_2^l,\, z_1^mz_2^n\}_{\bar A}
+  =\overline{(kn - lm)\,z_1^{k+m-1}z_2^{l+n-1}}.$$
+If an exponent in the displayed monomial is negative then the coefficient
+$kn-lm$ is already zero; if the displayed monomial is constant, its class in
+$\bar A$ is zero.
+The matching bracket on the open side is not an $A$-propagator computation:
+$A$ is a Lagrange multiplier. It is the canonical bracket induced by the
+first-order kinetic term $\int\mathrm{Tr}(\phi_1\,d\phi_2)$:
+$$\{(\phi_1)^i{}_j,(\phi_2)^k{}_l\}
+  =\delta^i_l\delta^k_j,\qquad
+  \{(\phi_1)^i{}_j,(\phi_1)^k{}_l\}=0=\{(\phi_2)^i{}_j,(\phi_2)^k{}_l\}.$$
+
+\begin{lem}[Hamiltonian reduction of the trace bracket]\label{lem:trace-bracket-descends}
+  The canonical matrix Poisson bracket descends to the scalar-reduced
+  invariant quotient used above.
+\end{lem}
+
+\begin{proof}
+  For $\epsilon\in\lie{gl}_N$, the component
+  $\mu_\epsilon=\mathrm{Tr}(\epsilon[\phi_1,\phi_2])$ of the moment map
+  generates the infinitesimal conjugation action, with the sign fixed by the
+  convention for the bracket. Hence $\{F,\mu_\epsilon\}=0$ for every invariant
+  function $F$. If $I_\mu$ is the ideal generated by all $\mu_\epsilon$, then
+  $\{F,\mu_\epsilon K\}=\mu_\epsilon\{F,K\}$ lies again in $I_\mu$. Therefore
+  the bracket of invariant functions descends to
+  $(\mc R_N/I_\mu)^{GL_N}$, equivalently to the degree-zero reduced BV
+  cohomology. The scalar line $\C\cdot\mathrm{Tr}(1)$ is central, so quotienting
+  by it is also compatible with the bracket.
+\end{proof}
+
+\begin{prop}\label{prop:first-order-bracket}
+  In the stable scalar-reduced cohomology,
+  $$\{\overline{\mathrm{Tr}(\phi_1^k\phi_2^l)},
+      \overline{\mathrm{Tr}(\phi_1^m\phi_2^n)}\}
+    =\overline{(kn-lm)\mathrm{Tr}
+      (\phi_1^{k+m-1}\phi_2^{l+n-1})}.$$
+\end{prop}
+
+\begin{proof}
+  Write $F_{k,l}=\mathrm{Tr}(\phi_1^k\phi_2^l)$. The matrix Poisson bracket
+  induced by
+  $$\{(\phi_1)^i{}_j,(\phi_2)^k{}_l\}=\delta^i_l\delta^k_j$$
+  is
+  $$\{F,G\}=\mathrm{Tr}\left(
+      \frac{\partial F}{\partial\phi_1}\frac{\partial G}{\partial\phi_2}
+      -\frac{\partial F}{\partial\phi_2}\frac{\partial G}{\partial\phi_1}
+    \right),$$
+  where the derivatives are cyclic matrix derivatives. Varying one occurrence
+  at a time gives
+  \begin{align*}
+  \frac{\partial F_{k,l}}{\partial\phi_1}
+    &=\sum_{a=0}^{k-1}\phi_1^{k-1-a}\phi_2^l\phi_1^a,\\
+  \frac{\partial F_{k,l}}{\partial\phi_2}
+    &=\sum_{b=0}^{l-1}\phi_2^{l-1-b}\phi_1^k\phi_2^b.
+  \end{align*}
+  Therefore the first summand in the bracket is a sum of $kn$ traces, each
+  obtained by removing one $\phi_1$ from the first word and one $\phi_2$ from
+  the second word. The second summand is a sum of $lm$ traces obtained by
+  removing one $\phi_2$ from the first word and one $\phi_1$ from the second.
+  Every trace appearing in either nonzero sum has multidegree
+  $(k+m-1,l+n-1)$. Lemma~\ref{lem:adjacent-swaps} identifies all cyclic words
+  with this multidegree in reduced BRST cohomology. The coefficient is
+  therefore $kn-lm$, and the common class is
+  $\overline{\mathrm{Tr}(\phi_1^{k+m-1}\phi_2^{l+n-1})}$. When the common word
+  has multidegree $(0,0)$, this class is the scalar trace and is zero in the
+  scalar-reduced quotient.
+\end{proof}
+
+\begin{thm}[Classical bulk-to-boundary Hamiltonian map]\label{thm:bulk-boundary}
+  In the stable scalar-reduced Hamiltonian sector, the boundary evaluation maps
+  $\partial_{\mathrm{bb},N}$ of Construction~\ref{constr:boundary-evaluation}
+  stabilize to a linear map
+  $$\partial_{\mathrm{bb}}:\bar A\longrightarrow
+    H^0_{\mathrm{red}}(\mc O_{\mathrm{brane}}^{\mathrm{cl}}),\qquad
+    f\longmapsto \overline{\mathrm{Tr}\,f(\phi_1,\phi_2)}.$$
+  This map is a morphism of Lie algebras from the closed Hamiltonian Poisson
+  algebra $\bar A$ to the scalar-reduced open trace Poisson algebra:
+  $$\{\partial_{\mathrm{bb}}(f),\partial_{\mathrm{bb}}(g)\}_{\mathrm{open}}
+    =\partial_{\mathrm{bb}}\bigl(\{f,g\}_{\bar A}\bigr).$$
+\end{thm}
+
+\begin{proof}
+  The map is well-defined on $\bar A$ by
+  Corollary~\ref{cor:matrix-evaluation-well-defined}; constants map to the
+  scalar $N$ and are removed in the scalar-reduced sector. Lemma
+  \ref{lem:trace-bracket-descends} gives the open reduced Poisson bracket. For
+  $f=z_1^kz_2^l$ and $g=z_1^mz_2^n$, Proposition~\ref{prop:first-order-bracket}
+  gives
+  $$\{\partial_{\mathrm{bb}}(f),\partial_{\mathrm{bb}}(g)\}_{\mathrm{open}}
+    =\overline{(kn-lm)\mathrm{Tr}
+      (\phi_1^{k+m-1}\phi_2^{l+n-1})}.$$
+  The closed Poisson bracket is
+  $$\{f,g\}_{\bar A}=\overline{(kn-lm)z_1^{k+m-1}z_2^{l+n-1}},$$
+  and applying $\partial_{\mathrm{bb}}$ gives the same expression. Bilinearity
+  proves the identity for all polynomials.
+\end{proof}
+
 \image{firstorder.png}
+The picture records this single canonical contraction.
 
-\subsubsection{Second order corrections: $\hbar^2$}
-Attempting to work to order $\hbar^2$, we can appeal to symmetry: the algebra
-of trace of operators is an even quantization; namely, sending $$\hbar \mapsto
--\hbar$$ and simultaneously reversing the product yields an equivalence. Thus
-to order $\hbar^2$, we find no corrections.
+\begin{proof}[Proof of Theorem~\ref{thm:main-local}]
+  The open Hamiltonian-sector algebra is obtained from the product of the exact
+  A-model self-Floer model for $\R\subset T^*\R$ and the affine Koszul
+  calculation for $\Ext^*_R(R/\mathfrak m,R/\mathfrak m)$.
+  Lemma~\ref{lem:open-action-reduction} identifies the ghost-zero reduction
+  with the gauged first-order matrix model
+  $$\int_\R\mathrm{Tr}\bigl(\phi_1\,d\phi_2+A[\phi_1,\phi_2]\bigr).$$
+  Lemma~\ref{lem:derivative-jets} removes positive topological jets, and
+	  Lemma~\ref{lem:adjacent-swaps} identifies cyclic words with the same
+	  commutative monomial. Proposition~\ref{prop:stable-trace-invariants} then
+	  gives Proposition~\ref{prop:brane-ops}:
+	  $$\mc{O}^{\mathrm{cl}}_{\mathrm{brane}}
+	    \cong \mathbf{S}(\bar A\oplus\bar A_{\mathrm{desc}}[1]).$$
 
-\subsubsection{Third order corrections}
-Restricting for the moment to ghost \#$0$ operators, we need to account for third order diagrams:
+	  On the closed side, the divergence computation and
+	  Lemma~\ref{lem:polynomial-poincare} identify the local Hamiltonian modes
+	  with $\bar A$. The cotangent BF field supplies the shifted coadjoint copy, so
+	  the local Lie algebra is
+	  $\mathfrak g=\mathfrak h\ltimes\mathfrak h^\vee[1]$. Proposition~\ref{prop:grav-ops}
+	  computes local observables as
+	  $C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g)$.
+	  Proposition~\ref{prop:ce-koszul} gives the Koszul dual
+	  $\widehat{U(\mathfrak g)}$, and the Rees/PBW specialization gives
+	  $\mathbf{S}(\mathfrak g)=\mathbf{S}(\bar A\oplus\mathfrak h^\vee[1])$ at
+	  $\hbar=0$. Choosing the monomial-dual basis identifies
+	  $\mathfrak h^\vee$ with $\bar A_{\mathrm{desc}}$ as a filtered vector space.
+  Finally Theorem~\ref{thm:bulk-boundary} constructs the map from closed
+  Hamiltonians to brane Hamiltonians and shows that it preserves the Poisson
+  bracket. On monomials this gives the coefficient $(kn-lm)$ on both sides.
+\end{proof}
+
+\subsubsection{Formal Moyal target at order $\hbar^2$}
+We use the Weyl/Moyal Rees convention for the formal quantization of the
+constant Poisson tensor:
+$$f*g=m\circ\exp\left(\frac{\hbar}{2}
+  (\partial_{z_1}\otimes\partial_{z_2}
+   -\partial_{z_2}\otimes\partial_{z_1})\right)(f\otimes g).$$
+Then the star commutator is odd in $\hbar$:
+$$[f,g]_*=\hbar\{f,g\}+\frac{\hbar^3}{24}P^3(f,g)+O(\hbar^5),$$
+where $P=\partial_{z_1}\otimes\partial_{z_2}
+-\partial_{z_2}\otimes\partial_{z_1}$. Thus there is no $\hbar^2$ term in
+this quantization convention.
+
+\subsubsection{Formal Moyal target at order $\hbar^3$}
+For monomials $f=z_1^kz_2^l$ and $g=z_1^mz_2^n$, the third-order Moyal
+coefficient is completely explicit:
+$$P^3(f,g)=
+  \sum_{a=0}^3(-1)^a\binom{3}{a}
+  (k)_{3-a}(l)_a(m)_a(n)_{3-a}
+  z_1^{k+m-3}z_2^{l+n-3},$$
+where $(r)_s=r(r-1)\cdots(r-s+1)$ and $(r)_0=1$. Therefore
+$$[f,g]_*=\hbar(kn-lm)z_1^{k+m-1}z_2^{l+n-1}
+  +\frac{\hbar^3}{24}P^3(f,g)+O(\hbar^5).$$
+The script \texttt{scripts/check\_moyal\_coefficients.py} checks this
+first-order coefficient, the vanishing of the second-order commutator
+coefficient, the displayed third-order formula, and the star-commutator
+normalisation on every monomial pair with exponents between $0$ and $6$, using
+exact rational arithmetic.
+
 \image{thirdordera.png}
 \image{thirdorderb.png}
-which are ribbon graphs in the large-$N$ limit.
 
-The first diagram above gives a cubic expression in traces, while the second
-gives a quadratic expression (the degree coincides with the number of
-boundaries of the diagram).\par
-\begin{rmk}
-  We see from the first diagram above that koszul duality switches degrees: a
-  expression taking three generators (the cubic trace) gets mapped to one with
-  two generators. In the $A_{\infty}$ language, the first diagram yields an
-  $m3$ $A_{\infty}$ operation, while the second yields an $m_2$ operation.\par
-
-  Note also that the cubic expression in traces is symmetric,
-  as we expect: a poisson bracket on an exterior algebra ought to be symmetric.
-\end{rmk}
-
-In order to match these with diagrams on the string-gravity side, we need to
-understand the $A_{\infty}$ structure on the algebra of cochains
-$$C^*(\C[z_1,z_2]\oplus\C[z_1,z_2][1]).$$
-
-Given operators $$\mathcal{O}_{k,l} = \partial_z^k\partial_k^l\alpha$$ to
-compute the $A_{\infty}$ structure we'll need to match these two diagrams: the
-first maps to a sum over all feynman diagrams
-
-TODO draw feynman diagram
-%\image{m3feynmandiagram}
-
-yielding a $3 \rightarrow 2$ $A_{\infty}$ operation, which on the koszul dual
-side maps to a $2 \rightarrow 3$ operation, while the second diagram maps to a
-sum over all feynman diagrams.
-
-TODO dram feynman diagram
-%\image{m2feynmandiagram}
+The displayed ribbon graphs are only graph-topology reminders. To turn them
+into a theorem one still has to specify the closed-string gauge fixing,
+bulk-to-boundary map, propagator on the noncompact surface, trace
+normalisation, and large-$N$ weighting. Those data are not part of the present
+calculation, so no multi-trace third-order coefficient is asserted here.
 
 \begin{rmk}
-  In practice in trying to work more generally, in order to show uniqueness,
-  we'd need to identify the underlying algebra and show (homologically) that it
-  has only one deformation.
+  In characteristic zero, passing to underived $GL_N$-invariants is exact on
+  rational representations. This is the convention used in the reduced
+  brane-operator computation above. Keeping the full derived quotient would
+  retain the Chevalley ghosts and produces a larger BRST complex; that
+  refinement is not used in the stable comparison made here.
 \end{rmk}
 
 \begin{rmk}
-  throughout, we could have treated $lie{gl}_N$ in two ways: as a lie algebra,
-  or as a reductive group. Taking invariants with respect tothe latter choice
-  is an exact functor, hence obviating the need for Chevalley cochains and
-  discarding all ghosts.\par
-
-  Including all of cyclic cohomology would match up with
-  higher degree polynomial invariants in the ghosts: i.e.\ including more
-  topological data in our gravitational theory.
+  On the gravity side we did not choose a brane: we worked with string states.
+  On the gauge theory side we chose a brane of the form a point cross a
+  Lagrangian. By choosing a different B-brane, we move away from the structure
+  of an associative algebra to a more general factorization algebra. Koszul
+  duality should extend to this setting. For example, with two topological
+  directions (instead of one) we would obtain an $E_2$ algebra and hence $E_2$
+  Koszul duality.
 \end{rmk}
 
 \begin{rmk}
-  On the gravity side we did not choose a brane: we just worked with string
-  states. On the gauge theory side we picked a brane of the form a point cross
-  a lagrangian. By choosing a different $B$-brane, we move away from the
-  structure of an associative algebra to a more general factorization algebra.
-  Koszul duality should then extend to this more general setting. For example,
-  if we had two topological directions (instead of one), then we would expect
-  to obtain an $E_2$ algebra and hence $E_2$ koszul duality
+  One could also study $D_0$ branes on $\R^2\times\C^4$ from this point of view.
 \end{rmk}
 
-\begin{rmk}
-  We could also study $D_0$ branes $\R^2\times \C^4$ from this point of view.
-\end{rmk}
+\begin{biblist}
+
+\bib{bcov}{article}{
+   author={Bershadsky, M.},
+   author={Cecotti, S.},
+   author={Ooguri, H.},
+   author={Vafa, C.},
+   title={Kodaira-Spencer theory of gravity and exact results for quantum string amplitudes},
+   journal={Comm. Math. Phys.},
+   volume={165},
+   date={1994},
+   pages={311--428},
+}
+
+\bib{loday-quillen}{article}{
+   author={Loday, J.-L.},
+   author={Quillen, D.},
+   title={Cyclic homology and the Lie algebra homology of matrices},
+   journal={Comment. Math. Helv.},
+   volume={59},
+   date={1984},
+   pages={565--591},
+}
+
+\bib{tsygan}{article}{
+   author={Tsygan, B. L.},
+   title={Homology of matrix Lie algebras over rings and the Hochschild homology},
+   journal={Uspekhi Mat. Nauk},
+   volume={38},
+   date={1983},
+   pages={217--218},
+}
+
+\bib{witten-cs}{article}{
+   author={Witten, E.},
+   title={Chern-Simons gauge theory as a string theory},
+   book={
+     title={The Floer Memorial Volume},
+     series={Progr. Math.},
+     volume={133},
+     publisher={Birkh\"auser},
+     place={Basel},
+   },
+   date={1995},
+   pages={637--678},
+}
+
+\bib{aksz}{article}{
+   author={Alexandrov, M.},
+   author={Kontsevich, M.},
+   author={Schwarz, A.},
+   author={Zaboronsky, O.},
+   title={The geometry of the master equation and topological quantum field theory},
+   journal={Internat. J. Modern Phys. A},
+   volume={12},
+   date={1997},
+   number={7},
+   pages={1405--1430},
+}
+
+\bib{procesi}{article}{
+   author={Procesi, C.},
+   title={The invariant theory of {$n\times n$} matrices},
+   journal={Advances in Math.},
+   volume={19},
+   date={1976},
+   number={3},
+   pages={306--381},
+}
+
+\bib{razmyslov}{article}{
+   author={Razmyslov, Yu. P.},
+   title={Trace identities of full matrix algebras over a field of characteristic zero},
+   journal={Math. USSR Izv.},
+   volume={8},
+   date={1974},
+   number={4},
+   pages={727--760},
+}
+
+\bib{priddy}{article}{
+   author={Priddy, S. B.},
+   title={Koszul resolutions},
+   journal={Trans. Amer. Math. Soc.},
+   volume={152},
+   date={1970},
+   pages={39--60},
+}
+
+\bib{loday-vallette}{book}{
+   author={Loday, Jean-Louis},
+   author={Vallette, Bruno},
+   title={Algebraic Operads},
+   series={Grundlehren der Mathematischen Wissenschaften},
+   volume={346},
+   publisher={Springer},
+   place={Heidelberg},
+   date={2012},
+}
+
+\end{biblist}
 
 \end{document}

@@ -16,7 +16,11 @@
 \usepackage{inconsolata}
 %\usepackage{euler}
 \usepackage{epigraph} % TODO how does this work
-\usepackage{showkeys} % TODO http://texdoc.net/texmf-dist/doc/latex/tools/showkeys.pdf
+\newif\ifdraftlabels
+\draftlabelsfalse
+\ifdraftlabels
+  \usepackage{showkeys}
+\fi
 \usepackage{etoolbox}
 \usepackage{ifthen} % one route to argument overloading
 
@@ -135,6 +139,7 @@
 \newtheorem{stmt}[thm]{Statement}
 \newtheorem{qn}[thm]{Question}
 \newtheorem{ans}[thm]{Answer}
+\newtheorem{constr}[thm]{Construction}
 
 %%%%%%%%%%%%%%%%%%
 %% Nomenclature %%
