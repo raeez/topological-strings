@@ -1,10 +1,15 @@
-\documentclass[12pt]{amsart}
+% !TEX root = main.tex
+\documentclass[11pt]{memoir}
 
-\input{preamble.tex}
+\usepackage{raeez-math-template}
 \input{mathmacros.tex}
 \input{authors.tex}
 
-\title[Remarks on Topological Strings]{Remarks on Topological Strings}
+\title{Remarks on Topological Strings}
+
+\ifdefined\mainpreambleonly
+  \endinput
+\fi
 
 \begin{document}
 
@@ -12,8 +17,8 @@
   %% Title etc. %%
   %%
 
-  \input{abstract.tex}
   \maketitle
+  \input{abstract.tex}
   \tableofcontents
   \mbox{}
 
@@ -212,7 +217,7 @@ $(kn-lm)$.
   particular reduced model below, BRST exactness of $[\phi_1,\phi_2]$ turns
   cyclic words into ordinary commutative monomials, and the surviving
   single-trace generators are represented by
-  $\mathrm{Tr}(\phi_1^k\phi_2^l)$ with $k+l>0$.
+  $\overline{\mathrm{Tr}(\phi_1^k\phi_2^l)}$ with $k+l>0$.
 
   The calculation below is the corresponding classical shadow: closed
   Hamiltonian modes match stable single-trace generators, and the first
@@ -752,7 +757,7 @@ on invariant trace functions.
   copies of the first letter and $l$ copies of the second. The first descendant
   is obtained by inserting one Koszul variable and summing over all ordered
   lifts:
-  $$\partial_{\mathrm{bb},N}^{(1)}(z_1^kz_2^l[1])=\Psi_{k,l},\qquad
+  $$\partial_{\mathrm{bb},N}^{(1)}(\delta_{k,l}[1])=\Psi_{k,l},\qquad
     \Psi_{k,l}:=\sum_{w\in\mathsf W_{k,l}}
       \mathrm{Tr}\bigl(\psi\,w(\phi_1,\phi_2)\bigr).$$
 \end{constr}
