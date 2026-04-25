@@ -20,6 +20,8 @@ VIEWHTML   :=open -a $(HTMLVIEWER)
 INSTALLURL :=notes/wip
 INSTALLDIR :=$(PROJ)/www/raeez.com/$(INSTALLURL)
 OUTDIR:=out
+LOGDIR:=.build_logs
+ICLOUD_DIR :=/Users/raeez/Library/Mobile Documents/com~apple~CloudDocs/research
 
 # -- pdf config
 LTXDIR        :=$(shell kpsewhich -var-value=TEXMFHOME)
@@ -28,6 +30,10 @@ TEX           :=pdflatex $(TEXFLAGS)
 BUILDTEX      :=$(TEX) $(TEXMAIN).tex
 QUICKBUILDTEX :=$(TEX) $(TEXFLAGS) $(TEXMAIN).tex
 TEXDEBRIS     :=*.toc *.ilg *.log *.nlo *.dvi *.aux *.tar.gz *.nlo *.nls *.nls *.out *.toc *.sta *.gla *.fdb_latexmk *.fls *.synctex.gz
+STANDALONE_TEX :=$(wildcard standalone/*.tex)
+STANDALONE_PASSES :=3
+STANDALONE_TEXENGINE :=pdflatex
+STANDALONE_TEXFLAGS :=-interaction=nonstopmode -file-line-error -synctex=0
 
 # -- html config
 HTMLTARGET :=--css-filename $(TEXMAIN).css --dest-dir $(OUTDIR)
@@ -99,12 +105,105 @@ NOW := $(shell date +"%c" | tr ' :' '__')
 # ----------------------------------------------------------------------------
 # -- default and meta build rules
 #
-.PHONY: all quick
+.DEFAULT_GOAL := pdf
+
+.PHONY: all quick fast release standalone icloud help
 quick:
+	$(MKDIR) $(OUTDIR)
 	$(QUICKBUILDTEX)
 	open $(OUTDIR)/$(TEXMAIN).pdf
 
+fast: quick
+
 all: clean pdf html tar install
+
+release:
+	$(MKDIR) $(OUTDIR) $(LOGDIR)
+	@echo ""
+	@echo "  =========================================="
+	@echo "  -- RELEASE BUILD (topological strings) --"
+	@echo "  =========================================="
+	@echo ""
+	@echo "  [1/1] Paper, standalone documents and iCloud"
+	@$(MAKE) --no-print-directory icloud
+	@echo ""
+	@echo "  =========================================="
+	@echo "  Release complete. All output in out/:"
+	@ls -1 $(OUTDIR)/*.pdf 2>/dev/null | sed 's/^/    /'
+	@echo "  =========================================="
+
+standalone:
+	@echo "  -- Building standalone documents --"
+	@$(MKDIR) $(OUTDIR) $(LOGDIR)
+	@if [ -z "$(strip $(STANDALONE_TEX))" ]; then \
+		echo "  (no standalone documents found)"; \
+	else \
+		failures=0; \
+		for tex in $(STANDALONE_TEX); do \
+			if [ ! -f "$$tex" ]; then continue; fi; \
+			base=$$(basename "$$tex" .tex); \
+			if [ -f "$(OUTDIR)/$$base.pdf" ] && [ "$(OUTDIR)/$$base.pdf" -nt "$$tex" ]; then \
+				echo "  ok  $(OUTDIR)/$$base.pdf (up to date)"; \
+				continue; \
+			fi; \
+			tmpdir=$$(mktemp -d "/tmp/mkd-$$(basename "$$(pwd)")-standalone-$$base.XXXXXX"); \
+			echo "  [standalone] $$tex -> $(OUTDIR)/$$base.pdf"; \
+			for pass in $$(seq 1 $(STANDALONE_PASSES)); do \
+				TEXINPUTS="$$tmpdir:$$(pwd):$$(pwd)/standalone:" $(STANDALONE_TEXENGINE) $(STANDALONE_TEXFLAGS) -output-directory="$$tmpdir" "$$tex" >"$(LOGDIR)/standalone-$$base-pass$$pass.log" 2>&1; rc=$$?; \
+				if [ -f "$$tmpdir/$$base.idx" ]; then makeindex -q "$$tmpdir/$$base.idx" >/dev/null 2>&1 || true; fi; \
+				if [ $$rc -ne 0 ]; then \
+					if grep -aE '^! |Emergency stop|Runaway argument|Fatal error|Undefined control sequence|File ended while scanning|No pages of output' "$(LOGDIR)/standalone-$$base-pass$$pass.log" >/dev/null 2>&1; then \
+						echo "  fail  $$tex failed on pass $$pass. See $(LOGDIR)/standalone-$$base-pass$$pass.log"; \
+						grep -aE '^! |Emergency stop|Runaway argument|Fatal error|Undefined control sequence|File ended while scanning|No pages of output' "$(LOGDIR)/standalone-$$base-pass$$pass.log" | head -n 20 || tail -n 40 "$(LOGDIR)/standalone-$$base-pass$$pass.log"; \
+						failures=$$((failures + 1)); \
+						break; \
+					else \
+						echo "  warn  $$tex returned $$rc on pass $$pass; continuing."; \
+					fi; \
+				fi; \
+			done; \
+			if [ -f "$$tmpdir/$$base.pdf" ]; then \
+				$(CP) "$$tmpdir/$$base.pdf" "$(OUTDIR)/$$base.pdf"; \
+				echo "  ok  $(OUTDIR)/$$base.pdf"; \
+			elif [ $$failures -eq 0 ]; then \
+				echo "  fail  no PDF produced for $$tex"; \
+				failures=$$((failures + 1)); \
+			fi; \
+		done; \
+		if [ $$failures -ne 0 ]; then \
+			echo "  fail  $$failures standalone document(s) failed."; \
+			exit 1; \
+		fi; \
+	fi
+
+icloud: pdf standalone
+	@echo "  -- Copying topological strings PDFs to iCloud --"
+	@$(MKDIR) "$(ICLOUD_DIR)/topological_strings"
+	@[ -f "$(OUTDIR)/$(TEXMAIN).pdf" ] || { echo "  fail  missing $(OUTDIR)/$(TEXMAIN).pdf"; exit 1; }
+	@$(CP) "$(OUTDIR)/$(TEXMAIN).pdf" "$(ICLOUD_DIR)/topological_strings/topological_strings.pdf"
+	@echo "    ok  topological_strings/topological_strings.pdf"
+	@for pdf in $(OUTDIR)/*.pdf; do \
+		[ -e "$$pdf" ] || continue; \
+		name=$$(basename "$$pdf"); \
+		if [ "$$name" != "$(TEXMAIN).pdf" ]; then \
+			$(CP) "$$pdf" "$(ICLOUD_DIR)/topological_strings/$$name"; \
+			echo "    ok  topological_strings/$$name"; \
+		fi; \
+	done
+	@echo "  Topological strings PDFs copied to iCloud."
+
+help:
+	@echo ""
+	@echo "  Topological strings -- Build System"
+	@echo "  ------------------------------------"
+	@echo "  make            Full legacy build"
+	@echo "  make fast       Quick PDF build"
+	@echo "  make release    Full rebuild -> out/ + standalones + iCloud"
+	@echo "  make standalone Build standalone documents -> out/"
+	@echo "  make icloud     Build and copy PDFs to iCloud Drive"
+	@echo "  make clean      Remove build debris"
+	@echo "  make help       This message"
+	@echo ""
 
 # ----------------------------------------------------------------------------
 # -- view output
@@ -140,19 +239,25 @@ p:
 	$(BUILDTEX)
 
 pdf:
+	$(MKDIR) $(OUTDIR)
 	$(BUILDTEX)
-	make index
-	$(BUILDTEX)
-	$(BUILDTEX)
-	$(BUILDTEX)
-	make index
+	$(MAKE) index
 	$(BUILDTEX)
 	$(BUILDTEX)
 	$(BUILDTEX)
+	$(MAKE) index
+	$(BUILDTEX)
+	$(BUILDTEX)
+	$(BUILDTEX)
+	@[ -f "$(OUTDIR)/$(TEXMAIN).pdf" ] || { echo "  fail  missing $(OUTDIR)/$(TEXMAIN).pdf"; exit 1; }
 
 
 index:
-	makeindex $(OUTDIR)/$(TEXMAIN).nlo -s nomencl.ist -o $(OUTDIR)/$(TEXMAIN).nls
+	@if [ -f "$(OUTDIR)/$(TEXMAIN).nlo" ]; then \
+		makeindex "$(OUTDIR)/$(TEXMAIN).nlo" -s nomencl.ist -o "$(OUTDIR)/$(TEXMAIN).nls"; \
+	else \
+		echo "  (no nomenclature file: $(OUTDIR)/$(TEXMAIN).nlo)"; \
+	fi
 
 # TODO track dependencies
 html:
