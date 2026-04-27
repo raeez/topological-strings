@@ -1411,18 +1411,17 @@ BF sector and to recover the first and third graph normalizations.
 
 \subsection{Setup}
 Let
-$$M=\R^2,\qquad Y=\C^2,\qquad X=M\times Y.$$
-The real factor $M$ is the topological direction and the complex factor $Y$
-is the holomorphic direction; all Hamiltonian calculations are completed at
-the formal neighbourhood of $p=0\in Y$. We use the exact A-brane given by the
-standard line $\R\subset M$ with trivial brane data and the B-brane
-  $\mc{O}_p\in\mathrm{Perf}(Y)$. Consider the mixed brane
-  $$\R \times p \inj \R^2 \times \C^2$$
-  for some point $p \in Y$. We take $p=0$ in coordinates. The holomorphic
-  factor carries the standard holomorphic symplectic form
-  $$\omega=dz_1\wedge dz_2.$$
-  Thus the model is topological along $\R^2$ and holomorphic Hamiltonian along
-  $\C^2$.
+$$M=\R^2,\qquad Y=\C^2,\qquad X=M\times Y,$$
+with $M$ the topological factor, $Y$ the holomorphic factor, and all
+Hamiltonian calculations completed at the formal neighbourhood of $p=0\in Y$.
+The exact A-brane is the standard line $\R\subset M$ with trivial brane data;
+the B-brane is the skyscraper $\mc{O}_p\in\mathrm{Perf}(Y)$. Their product is
+the mixed brane
+$$\R\times\{p\}\hookrightarrow\R^2\times\C^2,\qquad p=0.$$
+The holomorphic factor carries the standard holomorphic symplectic form
+$$\omega=dz_1\wedge dz_2,$$
+so the model is topological along $\R^2$ and holomorphic Hamiltonian along
+$\C^2$.
 
 \begin{prop}[Local mixed model]\label{prop:local-model-mixed-definition}
   The formal local Hamiltonian data used here define a closed mixed
@@ -1612,36 +1611,35 @@ $-1$.
 \end{rmk}
 
 \subsubsection{Ghost-zero open field content}
-  The ghost-number-zero part of the BV field is
-  $$\alpha_0=A+\phi_1\varepsilon_1+\phi_2\varepsilon_2,$$
-  where $A\in\Omega^1(\R)\otimes\lie{gl}_N$ and
-  $\phi_i\in\Omega^0(\R)\otimes\lie{gl}_N$.
 
-  \begin{lem}\label{lem:open-action-reduction}
-    With the Berezin convention
-    $\int_{\C^{0|2}}\varepsilon_1\varepsilon_2=1$, the restriction of the
-    BV action to $\alpha_0$ is, up to a boundary term on $\R$,
-    $$S(\alpha_0)=\int_\R\mathrm{Tr}\bigl(\phi_1\,d\phi_2
-      +A[\phi_1,\phi_2]\bigr).$$
-  \end{lem}
+The ghost-zero truncation $\alpha_0=A+\phi_1\varepsilon_1+\phi_2\varepsilon_2$
+of \ref{constr:open-field-basis} is the physical sector. Reducing the
+Chern-Simons action to it produces the first-order matrix mechanics governing
+the brane:
 
-  \begin{proof}
-    Only monomials containing one real one-form and the factor
-    $\varepsilon_1\varepsilon_2$ survive the integration over
-    $\R\times\C^{0|2}$. In the quadratic term this leaves
-    $$\frac12\int_\R\mathrm{Tr}\bigl(\phi_1\,d\phi_2-\phi_2\,d\phi_1\bigr),$$
-    where the sign is the Koszul sign from interchanging the two odd
-    generators. Since
-    $d\,\mathrm{Tr}(\phi_1\phi_2)=\mathrm{Tr}(d\phi_1\,\phi_2+\phi_1\,d\phi_2)$,
-    the second summand differs from $\mathrm{Tr}(\phi_1\,d\phi_2)$ by an exact
-    one-form. In the cubic term the six orderings of
-    $A,\phi_1\varepsilon_1,\phi_2\varepsilon_2$ reduce by cyclicity of the trace
-    and the odd relation $\varepsilon_2\varepsilon_1=-\varepsilon_1\varepsilon_2$
-    to
-    $$3\,\mathrm{Tr}(A\phi_1\phi_2-A\phi_2\phi_1).$$
-    The coefficient $\frac13$ in the Chern-Simons action therefore gives exactly
-    $\mathrm{Tr}(A[\phi_1,\phi_2])$.
-  \end{proof}
+\begin{lem}\label{lem:open-action-reduction}
+  With the Berezin convention
+  $\int_{\C^{0|2}}\varepsilon_1\varepsilon_2=1$, the restriction of the
+  BV action to $\alpha_0$ is, up to a boundary term on $\R$,
+  $$S(\alpha_0)=\int_\R\mathrm{Tr}\bigl(\phi_1\,d\phi_2
+    +A[\phi_1,\phi_2]\bigr).$$
+\end{lem}
+
+\begin{proof}
+  Only monomials containing one real one-form and the factor
+  $\varepsilon_1\varepsilon_2$ survive integration over
+  $\R\times\C^{0|2}$. In the quadratic term this leaves
+  $$\frac12\int_\R\mathrm{Tr}\bigl(\phi_1\,d\phi_2-\phi_2\,d\phi_1\bigr),$$
+  with the sign produced by interchanging the two odd generators. The identity
+  $d\,\mathrm{Tr}(\phi_1\phi_2)=\mathrm{Tr}(d\phi_1\,\phi_2+\phi_1\,d\phi_2)$
+  rewrites the second summand as $\mathrm{Tr}(\phi_1\,d\phi_2)$ modulo an exact
+  one-form. In the cubic term the six orderings of
+  $A,\phi_1\varepsilon_1,\phi_2\varepsilon_2$ reduce, by cyclicity of the trace
+  and $\varepsilon_2\varepsilon_1=-\varepsilon_1\varepsilon_2$, to
+  $$3\,\mathrm{Tr}(A\phi_1\phi_2-A\phi_2\phi_1).$$
+  The coefficient $\tfrac13$ in the Chern-Simons action therefore produces
+  $\mathrm{Tr}(A[\phi_1,\phi_2])$.
+\end{proof}
 
 \begin{lem}[Dirac reduction of the probe phase space]\label{lem:dirac-probe-reduction}
   Let
@@ -1714,23 +1712,14 @@ $-1$.
   ghost-zero truncation; the residual ordinary $GL_N$ gauge symmetry remains.
 \end{proof}
 
-  The ghost-number-zero truncation of the BV master action is closed under the
-  classical equations and gives a quantum-mechanical system with a connection
-  form
-  $$A \in \Omega^1(\R)\otimes \lie{gl}_N,$$
-  two adjoint scalars
-  $$\phi_1,\phi_2 \in \Omega^0(\R)\otimes\lie{gl}_N,$$
-  and action
-  $$S = \int_\R \mathrm{Tr}\bigl(\phi_1\,d\phi_2
-    + A[\phi_1,\phi_2]\bigr).$$
-  This action is invariant under
-  $$\delta_{\varepsilon}\phi_i=[\varepsilon,\phi_i],\qquad
-    \delta_{\varepsilon}A=d\varepsilon+[A,\varepsilon],$$
-  for $\varepsilon\in\Omega^0(\R)\otimes\lie{gl}_N$. Indeed the variation of
-  $\mathrm{Tr}(\phi_1d\phi_2)$ containing $d\varepsilon$ is
-  $-\mathrm{Tr}(d\varepsilon[\phi_1,\phi_2])$, and this cancels the
-  $d\varepsilon$ variation of $\mathrm{Tr}(A[\phi_1,\phi_2])$; the remaining
-  terms cancel by invariance of the trace pairing.
+The truncated action is invariant under
+$$\delta_{\varepsilon}\phi_i=[\varepsilon,\phi_i],\qquad
+  \delta_{\varepsilon}A=d\varepsilon+[A,\varepsilon],
+  \qquad \varepsilon\in\Omega^0(\R)\otimes\lie{gl}_N:$$
+the $d\varepsilon$ variation of $\mathrm{Tr}(\phi_1\,d\phi_2)$ produces
+$-\mathrm{Tr}(d\varepsilon[\phi_1,\phi_2])$, which cancels the $d\varepsilon$
+variation of $\mathrm{Tr}(A[\phi_1,\phi_2])$; the remaining terms cancel by
+invariance of the trace pairing.
 
 \begin{rmk}
   The same local open model is obtained from the Calabi-Yau $2$ point-brane
@@ -1903,71 +1892,60 @@ degree:
   $\bar A$.
 \end{proof}
 
-For the Hamiltonian sector of the closed mixed field theory we replace
-$\Ker\partial$ (on poly-1-vectors) by the Dolbeault-valued Hamiltonian vector
-fields:
-$$\Omega^{0,*}(\C^2)\text{-valued Hamiltonian vector fields},$$
-i.e.\ sections of $\Omega^{0,*}(\C^2)$ identified with Hamiltonian vector
-fields via the symplectic form $\omega = dz_1\wedge dz_2$. Concretely, a
-section $f\in\Omega^{0,*}(\C^2)$ corresponds to the Hamiltonian vector field
-$X_f=\{f,-\}_\omega$, where
-$$\{f,g\}_\omega=
-  \partial_{z_1}f\,\partial_{z_2}g-\partial_{z_2}f\,\partial_{z_1}g.$$
-With this convention
-$$X_f=(\partial_{z_1}f)\partial_{z_2}
-  -(\partial_{z_2}f)\partial_{z_1},\qquad \iota_{X_f}\omega=-df.$$
+The Dolbeault-valued upgrade is immediate. The Hamiltonian sector of the closed
+mixed field theory replaces the divergence kernel $\Ker\partial_\Omega$ on
+poly-1-vectors with its Dolbeault enhancement: a Hamiltonian potential
+$f\in\Omega^{0,*}(\C^2)\,\widehat\otimes\,\bar A$ generates the Hamiltonian
+vector field
+$$X_f=(\partial_{z_1}f)\partial_{z_2}-(\partial_{z_2}f)\partial_{z_1},
+  \qquad \iota_{X_f}\omega=-df,
+  \qquad \{f,g\}_\omega=
+    \partial_{z_1}f\,\partial_{z_2}g-\partial_{z_2}f\,\partial_{z_1}g.$$
+Constants drop because $X_f=0$ if and only if $f$ is constant; this is
+\ref{prop:hamiltonian-polyvector-reduction} read on Dolbeault-valued
+coefficients.
 
-\begin{rmk}
-  The replacement is the elementary statement
-  of Proposition~\ref{prop:hamiltonian-polyvector-reduction}. Constants are
-  removed because $X_f=0$ exactly when $f$ is constant.
-\end{rmk}
+\subsection{Hamiltonian BF action}
 
-\subsection{Hamiltonian BF closed sector}
+\subsubsection{The action functional}
 
-\subsubsection{The Action Functional}
-
-Let
-$$D=d_{\R^2}+\bar\partial_{\C^2}.$$
-Write
-$$\alpha\in\Omega^*(\R^2)\,\hat{\otimes}\,\Omega^{0,*}(\C^2)
-  \widehat{\otimes}\widehat{\mathfrak h}[1]$$
-for the Hamiltonian connection field and
-$$\beta\in\Omega^*(\R^2)\,\hat{\otimes}\,\Omega^{0,*}(\C^2)
-  \widehat{\otimes}\widehat{\mathfrak h}^{\vee}_{\mathrm{cont}}[2]$$
-for its cotangent field. The bracket on form-valued Hamiltonians is obtained
-by wedging the form parts and taking the Poisson bracket of the Hamiltonian
-parts with the tensor-product Koszul sign:
+The closed BF action for the dg Lie algebra
+$\widehat{\mathfrak h}$ of formal Hamiltonians, with kinematic differential
+$D=d_{\R^2}+\bar\partial_{\C^2}$, has fields
+$$\alpha\in\Omega^*(\R^2)\,\widehat\otimes\,\Omega^{0,*}(\C^2)
+  \widehat\otimes\widehat{\mathfrak h}[1],\qquad
+  \beta\in\Omega^*(\R^2)\,\widehat\otimes\,\Omega^{0,*}(\C^2)
+  \widehat\otimes\widehat{\mathfrak h}^{\vee}_{\mathrm{cont}}[2],$$
+the Hamiltonian connection $\alpha$ and the cotangent partner $\beta$.
+The form-valued Hamiltonian bracket wedges the form factors and takes the
+Poisson bracket on the Hamiltonian factors with the tensor-product Koszul
+sign,
 $$[\eta\otimes f,\theta\otimes g]
   =(-1)^{|f||\theta|}(\eta\wedge\theta)\otimes\{f,g\},$$
-for homogeneous form $\eta,\theta$ and homogeneous Hamiltonian coefficients
-$f,g$. In the ghost-zero Hamiltonian calculations used below the coefficients
-are even, so this sign is $+1$. The action is
+which equals $+1$ on the ghost-zero (even-coefficient) sector used below.
+The action is the BF Hamiltonian
 $$S=\int_{\R^2\times\C^2}\Bigl\langle\beta,\,
-  D\alpha+\frac12\{\alpha,\alpha\}\Bigr\rangle\,dz_1\,dz_2.$$
-The pairing is the continuous evaluation pairing between
-$\widehat{\mathfrak h}^{\vee}_{\mathrm{cont}}$ and $\widehat{\mathfrak h}$.
-The dense polynomial submodel replaces these by $\bar A^\vee$ and $\bar A$ in
-each finite degree.
-For ghost-number-zero fields, $\alpha$ has total real/Dolbeault form degree
-$1$ and $\beta$ has total degree $2$. Hence
-$\beta\wedge D\alpha$ and $\beta\wedge\{\alpha,\alpha\}$ have total
-real/Dolbeault degree $4$; multiplying by $dz_1\wedge dz_2$ gives a top real
-degree $6$ form on $\R^2\times\C^2$.
+  D\alpha+\tfrac12\{\alpha,\alpha\}\Bigr\rangle\,dz_1\,dz_2,$$
+with the pairing the continuous evaluation
+$\widehat{\mathfrak h}^{\vee}_{\mathrm{cont}}\otimes\widehat{\mathfrak h}\to\C$;
+the dense polynomial submodel pairs $\bar A^\vee$ with $\bar A$ in each finite
+degree. On ghost-zero fields, $\alpha$ has total real/Dolbeault form degree
+$1$ and $\beta$ has total degree $2$, so $\beta\wedge D\alpha$ and
+$\beta\wedge\{\alpha,\alpha\}$ have total degree $4$; wedge with $dz_1\wedge
+dz_2$ produces a top form on $\R^2\times\C^2$.
 
 \begin{rmk}
-  The open mixed brane system lives on the brane line. The closed Hamiltonian
+  The open mixed brane theory lives on the brane line; the closed Hamiltonian
   BF theory lives on the full mixed space-time $\R^2\times\C^2$.
 \end{rmk}
 
 \subsubsection{Classical field content}
 
-This theory is closely related to a 4-dimensional BF theory: $\beta$ plays the
-role of the $B$-field (Lagrange multiplier) and the equations of motion of
-$\beta$ enforce $F_\alpha = 0$, where
-$$F_\alpha = D\alpha + \tfrac{1}{2}\{\alpha,\alpha\}$$
-is the ``curvature'' of $\alpha$ (viewed as a connection on a bundle of
-holomorphic-symplectic surfaces over $\R^2$).
+The BF action exhibits $\beta$ as a Lagrange multiplier whose equation of
+motion enforces flatness of the Hamiltonian connection,
+$$F_\alpha = D\alpha + \tfrac{1}{2}\{\alpha,\alpha\}=0,$$
+where $\alpha$ is read as a connection on a bundle of holomorphic-symplectic
+surfaces over $\R^2$.
 
 Consider the space-time $\R^2_{x_i}\times\C^2_{z_i}$. The ghost-number-zero
 components of $\alpha$ and $\beta$ are:
@@ -1999,50 +1977,44 @@ deformation of complex structure with flat holonomy. The field $\beta$ appears
 linearly in the action and enforces exactly this equation.
 
 \begin{rmk}
-  This is entirely analogous to BF theory, where $B$ is a Lagrange multiplier
-  enforcing $F_A=0$, and the phase space is $T^*\mathcal{M}_{\mathrm{flat}}$.
+  This is the BF specialization to the dg Lie algebra of formal Hamiltonians:
+  the multiplier $\beta$ enforces $F_\alpha=0$, and the classical phase space
+  is $T^*\mathcal M_{\mathrm{flat}}(\widehat{\mathfrak h})$.
 \end{rmk}
 
-\subsubsection{Phase Space}
-As an optional analytic model for propagators, formally compactify one real
-direction and put the perturbative local model on
-$\R\times S^1\times Y_{\mathrm{hol}}$, where $Y_{\mathrm{hol}}$ is holomorphic
-symplectic and the calculation is completed at the trivial solution. This is a
-compactified avatar of the formal local model, not a change of notation for the
-product $X=M\times Y$ used above. The equations of motion $F_\alpha=0$ cut
-out the Maurer-Cartan moduli problem for Hamiltonian vector fields on
-$S^1\times Y_{\mathrm{hol}}$. Fix the analytic package of
-Problem~\ref{prob:analytic-graph-realization} in this compact or formal
-setting: elliptic complex, brane-defect or boundary condition, gauge fixing,
-propagator, renormalization scheme, and anomaly cancellation. The perturbative
-phase space
-is the derived cotangent stack
-$$T^*_{\mathrm{der}}\mathrm{MC}\bigl(\Omega^*(S^1)\widehat{\otimes}
-  \Omega^{0,*}(Y_{\mathrm{hol}},\mathrm{Ham}(Y_{\mathrm{hol}})),D,\{-,-\}\bigr).$$
-After passing to the underived tangent space at the trivial solution this
-reduces to the ordinary cotangent bundle of the linearized deformation complex.
+\subsubsection{Phase space}
+
+For an analytic model adequate to propagators, compactify one real direction
+to obtain $\R\times S^1\times Y_{\mathrm{hol}}$ with $Y_{\mathrm{hol}}$
+holomorphic symplectic, completed at the trivial solution: a compactified
+avatar of the formal local model, not a renaming of $X=M\times Y$. The
+equations of motion $F_\alpha=0$ cut out the Maurer-Cartan problem for
+Hamiltonian vector fields on $S^1\times Y_{\mathrm{hol}}$, with the analytic
+package of \ref{prob:analytic-graph-realization} fixed in this compact or
+formal setting (elliptic complex, brane-defect or boundary condition, gauge
+fixing, propagator, renormalization scheme, anomaly cancellation). The
+perturbative phase space is the derived cotangent stack
+$$T^*_{\mathrm{der}}\mathrm{MC}\bigl(\Omega^*(S^1)\widehat\otimes
+  \Omega^{0,*}(Y_{\mathrm{hol}},\mathrm{Ham}(Y_{\mathrm{hol}})),D,\{-,-\}\bigr),$$
+collapsing on the underived tangent at the trivial solution to the ordinary
+cotangent of the linearized deformation complex.
 
 \subsection{Closed-open brane coupling}
 
-This is the point at which the physical picture becomes a formula. A closed
-Hamiltonian is not observed by the brane as an abstract vector field; it is
-observed by evaluating it on the brane's matrix-valued normal coordinates and
-taking the trace over Chan-Paton indices.
-
-The local classical bulk-boundary operation is the Hamiltonian shadow of the
-desired closed-open morphism: evaluate a closed Hamiltonian on the brane normal
-fields. If the brane lies along $x_1$ and the closed field is
-$dx_1\,z_1^k z_2^l$, the local boundary functional is
+The brane sees a closed Hamiltonian by evaluating it on its matrix-valued
+normal coordinates and tracing over Chan-Paton indices. For a brane along
+$x_1$ and a closed field $dx_1\otimes z_1^kz_2^l$, this gives the local
+boundary functional
 $$\int_\R\mathrm{Tr}\bigl(\phi_1\,d\phi_2+A[\phi_1,\phi_2]\bigr)
-  + \int_\R dx_1\,\mathrm{Tr}\,\phi_1^k\phi_2^l.$$
-This is a statement inside the formal local algebraic model: the closed
-Hamiltonian is pulled back along the matrix-valued normal coordinate map
-$z_i\mapsto\phi_i$ and then traced.
-Construction~\ref{constr:boundary-evaluation} is the algebraic form of this
-bulk-to-boundary prescription. Theorem~\ref{thm:bulk-boundary} below proves
-that the resulting Hamiltonian evaluation preserves the classical bracket. This
-is the degree-zero Hamiltonian component expected from a full closed-open map;
-the full Poisson factorization-center morphism is not constructed here.
+  +\int_\R dx_1\,\mathrm{Tr}\,\phi_1^k\phi_2^l$$
+inside the formal local algebraic model: the closed Hamiltonian is pulled
+back along the matrix-valued normal-coordinate map $z_i\mapsto\phi_i$ and
+traced. \ref{constr:boundary-evaluation} is the algebraic form of this
+bulk-to-boundary prescription; \ref{thm:bulk-boundary} below proves that the
+resulting Hamiltonian evaluation preserves the classical bracket. This is the
+degree-zero Hamiltonian component of the closed-open map; the full Poisson
+factorization-center morphism is left to
+\ref{prob:formal-factorization-center}.
 
 \begin{constr}[Reduced line-defect current kernel]\label{constr:reduced-line-defect-current-kernel}
   Let
@@ -2427,7 +2399,7 @@ corollary of
   stalk recovers \ref{thm:bulk-boundary}.
 \end{proof}
 
-\begin{prop}[CE-source obstruction, reframed]\label{prop:ce-source-obstruction}
+\begin{prop}[CE-source obstruction for perfect Hamiltonian Lie algebras]\label{prop:ce-source-obstruction}
   Let $\mathfrak h$ be a perfect Lie algebra in $\Cat{TateVec}$
   (i.e.\ $[\mathfrak h,\mathfrak h]=\mathfrak h$). Then no length-one CE
   coordinate $c^I$ dual to a Hamiltonian generator $H_I\in\mathfrak h$
@@ -2496,13 +2468,12 @@ corollary of
   $u_I$ is the CE coordinate dual to the shifted cotangent generator
   $\eta_{\delta_I}\in\mathfrak h^\vee[1]$.
 
-  Moreover, $\mathrm{PV}(A_\partial)$ identifies with the derived
-  $P_0$-factorization center of the constant factorization algebra
-  $A_\partial$, so
+  Identifying $\mathrm{PV}(A_\partial)$ with the derived $P_0$-factorization
+  center of the constant factorization algebra $A_\partial$ promotes $\Phi$ to
   $$\Phi:C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g)
-    \xrightarrow{\ \sim\ } Z^{P_0}_{\mathrm{fact}}(A_\partial)$$
-  is the cochain-level open-closed derived center isomorphism in the
-  formal/local sector.
+    \xrightarrow{\ \sim\ } Z^{P_0}_{\mathrm{fact}}(A_\partial),$$
+  the cochain-level open-closed derived center isomorphism in the formal/local
+  sector.
 \end{thm}
 
 \begin{proof}
@@ -2785,23 +2756,19 @@ corollary of
 \end{prob}
 
 \begin{prob}[Unreduced Tate-coefficient cotangent lift]\label{prob:formal-factorization-center}
-  Originally stated as the single residual of \ref{thm:main-local};
-  now substantially resolved by the four routes recorded in
-  Section~\ref{ssec:tate-residual-resolution}. We retain the
-  formulation here as a checkpoint and as the named target of the
-  resolution. Construct a Tate or weighted-coefficient extension of
-  the BV heat-kernel calculus on $\R^2\times\C^2$ in which:
+  Construct a Tate or weighted-coefficient extension of the BV heat-kernel
+  calculus on $\R^2\times\C^2$ in which:
   \begin{enumerate}
     \item the formal Casimir
       $C_{\mathfrak h}=\sum_{d\geq 1}\sum_i e_{d,i}\otimes e^i_d$
       converges as an element of
       $\widehat{\mathfrak h}\,\widehat\otimes\,
       \widehat{\mathfrak h}^{\vee}_{\mathrm{cont}}$
-      [closed by Theorem~\ref{thm:wt-cotangent-lift}(a) via the weighted
+      [closed: \ref{thm:wt-cotangent-lift}(a) via the weighted
       Tate completion of \ref{defn:wt-coefficient-pair}];
     \item the Costello propagator $P_{\epsilon,L}$ extends to that
       coefficient category
-      [closed by Theorem~\ref{thm:wt-cotangent-lift}(b)];
+      [closed: \ref{thm:wt-cotangent-lift}(b)];
     \item the unreduced principal-part current sub-factorization
       algebra
       $\widetilde{\mathrm{Obs}}^{\mathrm{cl,pp}}_{\partial,N}(I)
@@ -2810,19 +2777,16 @@ corollary of
       admits a chain-level primitive projection $\pi_{\mathrm{prim}}$
       with verified $Q$-compatibility, factorization compatibility, and
       $P_0$-bracket homotopies
-      [closed unconditionally at chain level by
-      Theorem~\ref{thm:chain-level-primitive-projection}, with all
+      [closed: \ref{thm:chain-level-primitive-projection}, all
       homotopies identically zero];
     \item statement~(d) of \ref{thm:main-local} lifts to the
       unreduced factorization-algebra model and statement~(e) extends
       to the cotangent (one-antifield) sector at all orders in $\hbar$
-      [(d)-classical: closed unconditionally by
-      Corollary~\ref{cor:unreduced-d-closed}; (e)-quantum on the
-      one-antifield sector: closed conditionally on
-      Problem~\ref{prob:weighted-rg-locality}; the truncated nilpotent
-      sector $\mathfrak m^3/\mathfrak m^{N+1}$ closes unconditionally
-      via Theorem~\ref{thm:phi-trunc-classical} and
-      Theorem~\ref{thm:phi-hbar-trunc}].
+      [(d)-classical closed: \ref{cor:unreduced-d-closed}; (e)-quantum on the
+      one-antifield sector closed conditionally on
+      \ref{prob:weighted-rg-locality}; the truncated nilpotent
+      sector $\mathfrak m^3/\mathfrak m^{N+1}$ closed unconditionally:
+      \ref{thm:phi-trunc-classical}, \ref{thm:phi-hbar-trunc}].
   \end{enumerate}
 
   Equivalently, lift the cochain-level
@@ -2843,65 +2807,35 @@ corollary of
   disk map is not a Weiss/Ran descent theorem for factorization
   centers.
 
-  Two routes are named, neither yet executed.
-  \begin{itemize}
-    \item \emph{Route R1: weighted Tate completion.} Replace the
-      direct sum $\bigoplus_{d\geq 1}H_d^{\vee}$ by a weighted Tate
-      completion in which the Casimir converges. The
-      $\mathfrak m$-adic completion fails by the finite-window
-      obstruction; a candidate is a graded-Mittag-Leffler completion
-      controlled by a polynomial weight in the degree filtration,
-      checked compatible with the Costello RG flow at every order.
-    \item \emph{Route R2: nilpotent truncation.} Restrict to the
-      smaller Lie sector $\mathfrak m^2/\mathfrak m^{N+1}$ or analogous
-      nilpotent truncation, declaring that translations and the
-      constant-Hamiltonian $\hbar$-normalization have been removed
-      (the Costello--Li $\mathfrak{gl}(N\mid N)$ precedent). This
-      loses the fully stable connected statement on $\mathfrak h$ but
-      recovers a meaningful nilpotent sector unconditionally.
-  \end{itemize}
-
-  The deciding evidence to close: either (R1) yields a
-  Tate-coefficient category with the displayed Casimir convergence
-  and BV propagator extension, or (R2) gives an explicit obstruction
-  class for the unreduced cotangent lift (which would itself be a
-  major theorem and would not invalidate the reduced umbrella
-  \ref{thm:main-local}, parts (a)--(f)).
-
-  The residual is identified across four independent obstruction
-  routes as the same obstruction. The cotangent direction
-  $\mathfrak h^{\vee}_{\mathrm{cont}}[1]$ supports the
-  deformation-correct realization $\mc P$ at the cochain level; fails
-  to admit a polynomial sub-bimodule realization in any
-  locally-nilpotent category; admits a factorization-algebra
-  realization at the reduced post-contraction level; and obstructs
-  the unreduced lift at the analytic level. The umbrella theorem is
-  unconditional in parts (a), (b), (c), (e) on the degree-zero
-  Hamiltonian sector, and (f); part~(d) is unconditional at the
-  reduced post-contraction level and conditional on this problem for
-  the unreduced extension; part~(e) is unconditional on the
-  degree-zero Hamiltonian sector at all orders in $\hbar$ and
-  conditional on this problem for the descendant (one-antifield)
-  sector.
+  Four interlocking routes (\S\ref{ssec:tate-residual-resolution}) resolve the
+  residual: (R0) BV-cohomology vanishing of Costello--Li 2012, refuted on the
+  present geometry; (R1) weighted Tate completion replacing the cotangent
+  $\widehat{\mathfrak h}^{\vee}_{\mathrm{cont}}$ by a graded-Mittag-Leffler
+  completion under a polynomial weight in the degree filtration, checked
+  compatible with the Costello RG flow at every order; (R2) nilpotent
+  truncation to the smaller Lie sector $\mathfrak m^2/\mathfrak m^{N+1}$
+  (Costello--Li $\mathfrak{gl}(N\mid N)$ precedent), unconditional in classical
+  and all-order quantum form; (R3) direct chain-level primitive projection
+  closing the cosheaf and factorization compatibilities without analytic
+  input.
 \end{prob}
 
 \subsection{Resolution of the unreduced Tate-coefficient cotangent lift}\label{ssec:tate-residual-resolution}
 
-The residual problem \ref{prob:formal-factorization-center} is
-substantially resolved by four interlocking routes. The
-BV-cohomology vanishing route of Costello--Li 2012 is documented
-first as a refuted approach (it does not transfer to the present
-geometry); the weighted Tate completion of Route R1 closes the
-Casimir convergence and the heat-kernel propagator extension; the
-nilpotent truncation of Route R2 closes a conformal-symplectic-quotient
-sector unconditionally, in classical and all-order quantum form; and
-the direct chain-level primitive projection closes the cosheaf and
-factorization compatibilities without any analytic input. Together
-the four routes reduce the original residual to the single sharp
-sub-residual \ref{prob:weighted-rg-locality} (Costello-locality
-compatibility for the Hadamard parametrix on a Mittag-Leffler
-coefficient module), which controls only the cotangent-direction
-all-order quantum graph realization on the full Hamiltonian sector.
+The four routes \ref{ssec:tate-residual-resolution} reducing
+\ref{prob:formal-factorization-center} are stated and proved below. The
+BV-cohomology vanishing strategy of Costello--Li 2012 (R0) is recorded as a
+counter-example: it does not transfer to the present geometry, and the failure
+mode is the input that makes R1--R3 necessary. The weighted Tate completion
+(R1) closes the Casimir convergence and the heat-kernel propagator extension.
+The nilpotent truncation (R2) closes a conformal-symplectic-quotient sector
+unconditionally, classical and all-order quantum. The chain-level primitive
+projection (R3) closes the cosheaf and factorization compatibilities without
+analytic input. Together they reduce the residual to the sharp single
+sub-residual \ref{prob:weighted-rg-locality}: Costello-locality compatibility
+for the Hadamard parametrix on a Mittag-Leffler coefficient module, controlling
+only the cotangent-direction all-order quantum graph realization on the full
+Hamiltonian sector.
 
 \input{tate-T4-bv-vanishing}
 
