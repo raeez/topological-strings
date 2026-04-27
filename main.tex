@@ -3023,7 +3023,6 @@ cohomology to commutative monomials on the formal symplectic plane.
   all finite-$N$ trace identities. The surviving identification is
   $\mathrm{Tr}(uv)=\mathrm{Tr}(vu)$. This is exactly the symmetric algebra on
   cyclic words.
-
 \end{proof}
 
 \begin{lem}[Stable marked trace invariants]\label{lem:stable-marked-traces}
@@ -3206,14 +3205,14 @@ on invariant trace functions.
 
 \begin{rmk}
   The script \texttt{scripts/check\_one\_psi\_homology.py} constructs the
-  finite complex $C_2(k,l)\to C_1(k,l)\to C_0(k,l)$ over $\Q$ and verifies
-  $\dim\ker\partial_1/\mathrm{im}\,\partial_2=1$ for $0\leq k,l\leq5$. It also
-  checks the open Hamiltonian action of
-  Proposition~\ref{prop:open-descendant-action} for exponents at most $3$, and
-  checks the closed coadjoint Taylor-dual formula and the principal-part
-  realization of Proposition~\ref{prop:principal-part-coadjoint} for exponents
-  at most $5$.
-  These checks verify the displayed finite models without adding assumptions.
+  finite complex $C_2(k,l)\to C_1(k,l)\to C_0(k,l)$ over $\Q$ and confirms
+  $\dim\ker\partial_1/\mathrm{im}\,\partial_2=1$ for $0\leq k,l\leq5$. It
+  also checks the open Hamiltonian descendant action of
+  Proposition~\ref{prop:open-descendant-action} (below) for exponents at most
+  $3$, and the closed coadjoint Taylor-dual formula together with the
+  principal-part realization of Proposition~\ref{prop:principal-part-coadjoint}
+  (below) for exponents at most $5$. The script verifies the displayed
+  finite models without adding assumptions.
 \end{rmk}
 
 \begin{cor}[Boundary pairing for cotangent generators]\label{cor:cotangent-boundary-pairing}
@@ -3295,8 +3294,8 @@ on invariant trace functions.
   $\Psi_{k,l}$ are closed by Lemma~\ref{lem:first-descendant-cycles} and are
   central for the same graded-commutative reason. Ordered-lift independence for
   $B_f$ is cohomological and is exactly
-  Corollary~\ref{cor:matrix-evaluation-well-defined}. The Poisson identity is
-  Theorem~\ref{thm:bulk-boundary}.
+  Corollary~\ref{cor:matrix-evaluation-well-defined}. The Poisson identity
+  follows from Theorem~\ref{thm:bulk-boundary} (below).
 \end{proof}
 
 Let $\bar A=\C[z_1,z_2]/\C\cdot1$. The removed constant corresponds on the
@@ -3380,6 +3379,13 @@ field.
 \end{prob}
 
 \subsection{Operators in the closed Hamiltonian sector}\label{sec:grav-ops}
+
+The brane side has produced a stable algebra of trace classes generated
+by the primitive ghost-zero monomials $\overline{\mathrm{Tr}(\phi_1^k\phi_2^l)}$
+and the primitive one-$\psi$ descendants $\Psi_{k,l}$. The closed
+Hamiltonian sector must produce the same data as a Lie algebra of local
+modes whose Chevalley--Eilenberg cochains carry the residual BRST
+differential.
 
 Let $\mathfrak h=\widehat{\mathfrak h}=\C[[z_1,z_2]]/\C\cdot1$ with the
 projected Poisson bracket, and let $\mathfrak h^\vee$ be its continuous Taylor
@@ -3471,6 +3477,13 @@ linear functions have positive ghost numbers.
 
 \subsection{Koszul Duality}
 
+The closed local operators have been identified with continuous
+Chevalley--Eilenberg cochains of $\mathfrak g$. The brane Hamiltonian
+sector is a free graded-commutative algebra on $\bar A$ and $\bar
+A_{\mathrm{desc}}[1]$. To compare these as $E_1$-algebras one passes to
+the operation that exchanges commutative cochains and associative
+enveloping algebras: Koszul duality.
+
 \begin{defn}
   For an augmented complete dg algebra $B$, its Koszul dual is
   $$B^!=\RHom_B(\C,\C)$$
@@ -3499,9 +3512,9 @@ linear functions have positive ghost numbers.
   with $\widehat\otimes$ the completed tensor product
   $V\widehat\otimes W=\varprojlim_w(V_{\leq w}\otimes W_{\leq w})$ and
   $V^\vee_{\mathrm{cont}}=\varinjlim_w V_{\leq w}^*$ the continuous
-  dual. Admissible quasi-isomorphisms are the filtered
-  quasi-isomorphisms, i.e.\ chain maps inducing quasi-isomorphisms on
-  every quotient $V/F^wV$ and on the associated graded.
+  dual. Admissible quasi-isomorphisms are the filtered ones: chain
+  maps inducing a quasi-isomorphism on every quotient $V/F^wV$ and on
+  the associated graded.
 
   Let $\mathfrak g$ be a Tate graded Lie algebra, conilpotent in the
   sense that the descending Lie powers $\mathfrak g^{(\geq m)}=
@@ -3602,12 +3615,12 @@ linear functions have positive ghost numbers.
   disk satisfies
   $\mathfrak h^{(\geq m)}\cap\mathfrak h_{\leq w}=0$ for $m>w-1$, since
   the bracket strictly lowers Taylor degree. The general hypothesis is
-  named here so that the lemma applies to any pro-finite-dimensional
-  Lie algebra of bounded-below filtration. The earlier explicit
-  product/direct-sum Tate convention of Beilinson--Feigin--Mazur
-  \cite{beilinson-feigin-mazur} is recovered as a special case: take
+  named so the lemma applies to any pro-finite-dimensional Lie algebra
+  of bounded-below filtration. The Beilinson--Feigin--Mazur explicit
+  product/direct-sum Tate convention \cite{beilinson-feigin-mazur} is
+  the special case
   $\mathfrak g=\bigl(\prod P_d\bigr)\oplus\bigl(\bigoplus Q_d\bigr)$
-  with the bracket bilinear in the displayed pieces.
+  with the bracket bilinear in the two displayed pieces.
 \end{rmk}
 
 \begin{lem}[Linear Poisson Schouten differential]\label{lem:linear-poisson-schouten}
@@ -3679,11 +3692,12 @@ linear functions have positive ghost numbers.
   when $q-p+2\geq1$, and it is zero otherwise. Finite-support Taylor duals
   remain finite-support: for fixed $\lambda\in H_q^\vee$ only the Hamiltonian
   degrees $p\leq q+1$ can act nontrivially, and for a finite direct-sum support
-  in $\mathfrak h^\vee$ the union of those contributing $p$ is finite. Thus the
+  in $\mathfrak h^\vee$ the union of those contributing $p$ is finite. The
   product/direct-sum coefficient-finiteness hypotheses of
-  Lemma~\ref{lem:continuous-bar-cobar} hold. The abelian bracket on
-  $\mathfrak h^\vee[1]$ is trivial. The Taylor coefficient topology is
-  independent of the PBW/order filtration used for the Rees algebra below.
+  Lemma~\ref{lem:continuous-bar-cobar} therefore hold, and the abelian
+  bracket on $\mathfrak h^\vee[1]$ is trivial. The Taylor coefficient
+  topology is independent of the tensor-length filtration used by the
+  Rees enveloping algebra below.
 
   Let
   $$C_*^{\mathrm{CE}}(\mathfrak g)
@@ -3713,28 +3727,28 @@ linear functions have positive ghost numbers.
   \end{align*}
 \end{proof}
 
-For comparison with the classical brane algebra introduce the completed
-PBW/order Rees enveloping algebra
+The completed PBW/order Rees enveloping algebra
 $$U_{\hbar}(\mathfrak g)
   =\widehat T(\mathfrak g)[[\hbar]]\Big/
   \overline{\left\langle
   xy-(-1)^{|x||y|}yx-\hbar[x,y]\right\rangle},$$
-where the closure is for tensor length and the Tate coefficient topology.
-This Rees parameter records word length in the enveloping algebra and is
-independent of Taylor degree. At $\hbar=0$ one obtains the completed PBW special
-fibre
+with closure in tensor length and the Tate coefficient topology, makes
+the brane-closed comparison precise. The Rees parameter $\hbar$ records
+word length in the enveloping algebra and is independent of Taylor
+degree. At $\hbar=0$ the completed PBW special fibre is
 $$U_{\hbar}(\mathfrak g)/(\hbar)\cong
   \widehat{\mathbf{S}}(\mathfrak g)
   =\widehat{\mathbf{S}}\bigl(\widehat{\mathfrak h}\oplus\mathfrak h^\vee[1]\bigr).$$
-After choosing the monomial-dual Taylor basis
+Under the monomial-dual Taylor basis
 $\mathfrak h^\vee\cong\bar A_{\mathrm{desc}}$, the degreewise polynomial
-subalgebra $\mathbf{S}(\bar A\oplus\mathfrak h^\vee[1])$ is the stable classical
-brane Hamiltonian descendant algebra of Proposition~\ref{prop:brane-ops}. Thus
-the degreewise polynomial part of the PBW associated graded of the closed
-Koszul dual is the stable classical brane Hamiltonian descendant algebra. The
-interacting closed Hamiltonian bracket deforms the closed special fibre to
-$\widehat{U(\mathfrak g)}$; on the brane side the deformation checked here is
-the degree-zero Hamiltonian trace bracket below.
+subalgebra $\mathbf{S}(\bar A\oplus\mathfrak h^\vee[1])$ is the stable
+classical brane Hamiltonian descendant algebra of
+Proposition~\ref{prop:brane-ops}: the degreewise polynomial part of the
+PBW associated graded of the closed Koszul dual is the brane Hamiltonian
+descendant algebra. The interacting closed Hamiltonian bracket deforms
+the special fibre to $\widehat{U(\mathfrak g)}$; on the brane side the
+matching deformation at order one is the Hamiltonian trace bracket
+proved below.
 
 \subsubsection{First-order corrections, order hbar one}
 
