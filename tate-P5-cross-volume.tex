@@ -1,0 +1,542 @@
+% !TEX root = main.tex
+%
+% CROSS-VOLUME-FRAGMENT-P5.tex --- Agent P5 proposed replacement /
+% extension for app:convention-contract.
+%
+% The current appendix is a one-way firewall: it says what this
+% manuscript does NOT claim about Vol III, Igusa, or twisted M-theory.
+% This fragment upgrades the firewall to a bidirectional dictionary:
+% each direction (forward umbrella -> sister, backward sister ->
+% umbrella) is named with its precise transfer target, the convention
+% discrepancy, and the matched-conventions proof obligation that would
+% license the transfer.
+%
+% Drop-in replacement for the existing app:convention-contract section.
+% Bibliographic entries are unchanged; only the prose content is
+% replaced.
+%
+% Conventions: Russian-school / Chriss-Ginzburg voice. No bookkeeping
+% vocabulary. Every transfer carries an honest epistemic status
+% (theorem, in reach in principle, out of reach, conjectural).
+
+\section{Cross-volume convention contract}\label{app:convention-contract}
+
+This appendix records the bidirectional convention contract between
+the present manuscript and the cross-repository frontiers cited in
+\texttt{CLAUDE.md}: the Vol III CY-to-chiral programme
+(\texttt{\textasciitilde/calabi-yau-quantum-groups}), the Igusa
+square-root / BKM Borcherds programme
+(\texttt{\textasciitilde/igusa-cusp-form}), and the Vol I / Vol II
+chiral bar-cobar programmes
+(\texttt{\textasciitilde/chiral-bar-cobar}, \texttt{\textasciitilde/chiral-bar-cobar-vol2}).
+It is bidirectional: each cross-volume transfer is recorded both
+forward (constituents of the present umbrella that a sister volume
+could use) and backward (machinery from a sister volume that this
+manuscript could use to close residuals), with the convention
+discrepancy and the matched-conventions proof obligation that would
+license the transfer named in each direction.
+
+The umbrella Theorem~\ref{thm:main-local} is the local
+$d=\dim_{\C}X=2$ closed-open derived-centre theorem, with six
+interlocking constituents (a)--(f). Each constituent has a different
+cross-volume profile, recorded below. The bidirectional dictionary
+makes the cross-volume interface auditable: each transfer states the
+convention discrepancy, the proof that would license the transfer, and
+the reachability assessment. Downstream cross-volume work has a
+concrete target.
+
+\subsection{Forward transfers from this manuscript}\label{ssec:forward-transfers}
+
+The constituents of Theorem~\ref{thm:main-local} have the following
+forward-transfer profiles into sister volumes.
+
+\paragraph{F1: Vol III $d=3$ derived-centre analogue via $E_3$-formality.}
+Statement~(a) of Theorem~\ref{thm:main-local}, the universal
+cochain-level isomorphism
+$\Phi:C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g)\xrightarrow\sim
+\mathrm{PV}(\widehat{\mathbf S}_{\mathrm{Tate}}(\mathfrak h))\simeq
+Z^{P_0}_{\mathrm{fact}}(\widehat{\mathbf S}_{\mathrm{Tate}}(\mathfrak h))$,
+holds for any pro-finite-dimensional Tate-conilpotent Lie algebra
+$\mathfrak h$ in degree zero. The d=2 specialisation
+$\mathfrak h=(z_1,z_2)\C[[z_1,z_2]]$ is one corollary. Vol III's
+two-stage CY-to-chiral functor
+$\Phi_d=\mathrm{Sp}_{\Sigma_{d-1},C}\circ\Phi^{\mathrm{FA}}_d$ has
+Stage~1 producing a canonical $E_d$-holomorphic factorisation algebra
+on a CY$_d$ target by Kontsevich--Tamarkin $E_d$-formality plus
+Costello--Gwilliam--Li locality (Vol III FRONTIER pillar~$\alpha$). On
+a formal disc in a CY$_d$ target, Stage~1 is structurally the same
+polyvector-field / Tate CE-cochain identification that statement~(a)
+proves locally at $d=2$.
+
+\emph{Convention discrepancy.} The d=3 analogue would replace
+$\widehat{\mathbf S}_{\mathrm{Tate}}(\mathfrak h)$ at $d=2$ with the
+Kontsevich--Tamarkin $E_3$-formality datum on a formal 3-disc, and
+the $\C^2$ residue pairing of statement~(b) with the trace pairing on
+the compact CY$_3$ (the Costello--Gwilliam--Li ChainHom).
+
+\emph{Matched-conventions proof obligation.}
+\begin{enumerate}
+  \item Identify the d=3 analogue of $\widehat{\mathbf S}_{\mathrm{Tate}}(\mathfrak h)$ as Kontsevich--Tamarkin $E_3$-formality data on the formal 3-disc.
+  \item Replace the residue pairing of (b) with the trace pairing on the compact CY$_3$.
+  \item Establish a principal-part residue module compatible with the d=3 setting, with the Schur rigidity argument (Theorem~\ref{thm:main-local}(b)) extended to the new category.
+\end{enumerate}
+
+\emph{Reachability.} Out of reach in the present manuscript. The d=3
+analogue is itself a Vol III frontier (chain-level CY-A$_3$ explicit
+for non-formal CY$_3$; the K3-side Hall--Drinfeld double per Vol III
+Wave 13). Statement~(a) is cited as a local d=2 template for the d=3
+work, not as an input to it.
+
+\paragraph{F2: Vol III Mukai-pairing centre via the U(1) anomaly.}
+Theorem~\ref{thm:quantum-classical-anomaly} establishes that the U(1)
+center anomaly $[\bar c]\in H^2_{\mathrm{Lie}}(\bar A,\C)$ is realised
+identically at the classical level (the Poisson cocycle $\omega$) and
+the quantum level (the Capelli shift $\hbar N$). This is a structural
+precedent for any comparison Vol III must make between a classical
+anomaly cocycle on the K3 Heisenberg and a quantum-corrected version.
+The corresponding object on Vol III is the Mukai-pairing centre of the
+K3 Heisenberg, with $\dim S_5(\mathrm{Sp}_4(\Z),\nu_{\Delta_5})=1$.
+
+\emph{Convention discrepancy.} The class $[\bar c]$ is a 2-cocycle on
+$\bar A=\C[z_1,z_2]/\C$ valued in $\C$; the Mukai centre is a
+Heisenberg cocycle on the Mukai lattice $\widetilde H^*(K3,\Z)$ of
+signature $(4,20)$, with the K3 Yangian discipline of Vol III routing
+the ungraded target through $Y_\hbar(\mathfrak{so}(4,20))$. The
+quantum shift here is the Capelli $\hbar N$; on Vol III the
+corresponding shift is the Borcherds weight $c_N(0)/2$.
+
+\emph{Matched-conventions proof obligation.}
+\begin{enumerate}
+  \item Globalise the local d=2 anomaly computation from the formal disc to the K3 fibre.
+  \item Match the quantum Capelli $\hbar N$ shift to the Borcherds weight shift $c_N(0)/2$ at $N=1$ (which gives $5$, matching $\kappa_{\mathrm{BKM}}(\mathfrak g_{\Delta_5})=5$).
+  \item Verify that the Schur-rigidity argument of (b) extends to the Mukai-Heisenberg setup.
+\end{enumerate}
+
+\emph{Reachability.} Out of reach. Vol III explicitly flags this
+comparison as open. The U(1) anomaly here is cited as a precedent for
+the Mukai-pairing centre comparison, not a consequence of it.
+
+\paragraph{F3: Vol I bar-cobar in Tate via the Quillen equivalence promotion.}
+Lemma~\ref{lem:continuous-bar-cobar} (Tate CE chains, completed PBW,
+and Koszul duality) handles the completeness and continuity issues
+that arise in the pro-finite-dimensional Tate setting. The cochain
+identity promotes to a Quillen equivalence between completed
+conilpotent dg coalgebras and completed augmented dg associative
+algebras over $\Cat{TateVec}$. Vol I's bar-cobar adjunction (its
+Theorem~A) is the natural home for this promotion, as Vol I's pro-object
+work for Mittag--Leffler towers and weight completions is the
+mathematical habitat of the Tate-conilpotency hypothesis.
+
+\emph{Convention discrepancy.} The Tate windows $F^wV$ with
+finite-dimensional graded pieces here correspond to Vol I's weight
+completions and J-adic filtrations. The bar differential
+$B(A)=T^c(s^{-1}\bar A)$ on the formal local disc here corresponds to
+Vol I's $B^{\mathrm{ord}}(A)=T^c(s^{-1}\bar A)$ on
+$\overline{M}_{g,n}$ over the relative factorisation stack. Cohomological
+grading $\lvert d\rvert=+1$ matches.
+
+\emph{Matched-conventions proof obligation.}
+\begin{enumerate}
+  \item Identify the Tate-conilpotency condition with Vol I's weight-filtration condition on augmentation ideals. The local proof is the verification that, for any pro-finite-dimensional Tate-conilpotent $\mathfrak h$, the descending Lie powers vanish on each finite Taylor window.
+  \item Promote $\mathrm{Lemma}~\ref{lem:continuous-bar-cobar}$ to a Quillen equivalence in Vol I's model-categorical setup.
+  \item Verify that Vol I's $\overline{M}_{g,n}$ compactification data restricts compatibly to the formal disc.
+\end{enumerate}
+
+\emph{Reachability.} In reach in principle. Vol I's machinery is
+fully chain-level and Vol III's Booth--Lazarev curved
+$A_\infty$-Quillen-equivalence target on $\overline{M}_{g,n}$ at
+compact CY$_d$ lies adjacent. The transfer would sharpen Vol I's
+chiral bar-cobar machinery in the Tate setting.
+
+\paragraph{F4: Vol II $\mathsf{SC}^{\mathrm{ch,top}}$ bar differential via $\Phi_\hbar$.}
+Statement~(e) of Theorem~\ref{thm:main-local}, the all-order quantum
+$\Phi_\hbar$ via Capelli renormalisation on the degree-zero
+Hamiltonian sector, has the structural shape of Vol II's
+quantum-chiral identification. Vol II identifies the two colours of
+$\mathsf{SC}^{\mathrm{ch,top}}$ with the two stages of $\Phi_d$: the
+closed colour (holomorphic, $E_2$ on $\mathrm{FM}_k(\C)$) is Stage~1;
+the open colour (topological, $E_1$ on $\R$) is Stage~2.
+Statement~(e) operates entirely within Stage~1 at $d=2$; its all-order
+quantum deformation is the perturbative BV quantisation of the
+Hamiltonian-sector restriction of Vol III $\Phi^{\mathrm{FA}}_d$ at
+$d=2$ on the formal local disc.
+
+\emph{Convention discrepancy.} The Capelli $\hbar$ here corresponds to
+the Costello--Gwilliam BV $\hbar$ in Vol II. The local Hamiltonian BV
+$Q$ on $\R^2\times\C^2$ corresponds to Vol II's BV $Q$ on the
+$\mathsf{SC}^{\mathrm{ch,top}}$ factorisation algebra. The
+factorisation product structures are Stage~1 vs Stage~2 of the same
+two-stage functor.
+
+\emph{Matched-conventions proof obligation.}
+\begin{enumerate}
+  \item Identify Vol II's Costello--Gwilliam BV $Q$ on the closed colour with the local Hamiltonian $Q$ here, after disc specialisation.
+  \item Match the Capelli $\hbar$ with the Costello--Gwilliam perturbative $\hbar$ on the formal disc; this is a normalisation check (Kontsevich uniqueness pins the Costello first/third graph normalisations to the Moyal coefficients $1$ and $1/24$ of Proposition~\ref{prop:moyal-monomial}).
+  \item Verify that the absorbing of $\Phi_\hbar$ into Vol II via the established $A_\infty$-to-factorisation-algebra functor matches Vol II's curved-Dunn topologisation tower.
+\end{enumerate}
+
+\emph{Reachability.} In reach for the reduced sector at all orders in
+$\hbar$ (unconditional, by part~(e) of Theorem~\ref{thm:main-local} on
+the degree-zero Hamiltonian sector). Conditional on the unreduced
+cotangent lift $\mathrm{prob}~\ref{prob:formal-factorization-center}$
+for the descendant (one-antifield) sector, which closes via
+Problem~\ref{prob:weighted-rg-locality} per backward transfer~B1
+below.
+
+\paragraph{F5: Local closed-as-derived-centre as a generalisation precedent.}
+Remark~\ref{rmk:dirac-thesis} states the umbrella in physical terms:
+the brane stack is the derived Poisson centre of the open trace
+algebra. This is now a corollary of Theorem~\ref{thm:main-local}.
+``Closed = derived centre of open'' is no longer a slogan; it is a
+theorem on the formal local disc at $d=2$. The forward transfer is
+the global statement at higher dimension: for a CY$_d$ target, can the
+brane stack be identified with the chiral derived centre?
+
+\emph{Convention discrepancy.} The local $P_0$-centre here corresponds
+to the chiral derived centre $Z^{\mathrm{der}}_{\mathrm{ch}}$ on the
+chiral category in Vol II. The brane stack here is on $\R\times p$;
+the global analogue is on the CY target.
+
+\emph{Matched-conventions proof obligation.}
+\begin{enumerate}
+  \item Match the $P_0$-centre to the chiral derived centre via Kontsevich--Tamarkin $E_n$-formality at the appropriate dimension.
+  \item Globalise the brane stack from the formal disc to the CY target.
+\end{enumerate}
+
+\emph{Reachability.} In reach for $d=2$ (proved). Out of reach for the
+global statement.
+
+\subsection{Backward transfers into this manuscript}\label{ssec:backward-transfers}
+
+The dual direction: machinery from sister volumes that this manuscript
+could use to close residuals.
+
+\paragraph{B1: Vol II Costello--Gwilliam Hadamard input for Problem~\ref{prob:weighted-rg-locality}.}
+The single sub-residual of the umbrella, after the four routes of
+Section~\ref{ssec:tate-residual-resolution}, is
+Problem~\ref{prob:weighted-rg-locality}: a Costello-locality
+compatibility check for the Hadamard parametrix on a Mittag--Leffler
+coefficient module, controlling only the cotangent-direction
+all-order quantum graph realisation on the full Hamiltonian sector.
+Vol II's Costello--Gwilliam factorisation-algebra apparatus routinely
+handles Hadamard analytic input on factorisation algebras.
+
+\emph{Convention discrepancy.} The weighted Tate coefficient module of
+Definition~\ref{defn:wt-coefficient-pair} corresponds to a
+Mittag--Leffler tower in Vol II's setup. The Costello propagator
+$P_{\epsilon,L}$ here corresponds to Vol II's heat-kernel propagator
+on the closed colour of $\mathsf{SC}^{\mathrm{ch,top}}$.
+
+\emph{Matched-conventions proof obligation.}
+\begin{enumerate}
+  \item Identify the weighted Tate coefficient module here with a Mittag--Leffler tower in Vol II's setup, in the spirit of Vol II's chain-level Mittag--Leffler witness discipline.
+  \item Translate the Hadamard parametrix to the Costello--Gwilliam locality theorem at Vol II's level of rigour.
+  \item Verify the locality theorem on the cotangent one-antifield sector, which is the precise scope of Problem~\ref{prob:weighted-rg-locality}.
+\end{enumerate}
+
+\emph{Reachability.} In reach in principle: Vol II's apparatus exists.
+The obligation is the convention-matching translation, not new
+analytic machinery. This is the most concrete and most transformative
+backward transfer; closing it would make the umbrella unconditional in
+its descendant (one-antifield) sector at all orders in $\hbar$.
+
+\paragraph{B2: Vol III $S^3$-framing data for a hypothetical $d=3$ lift.}
+Vol III has $\mathrm{prop:hopf}$-$\mathrm{fibration}$-$\mathrm{decomposition}$
+(67 tests) proving that the $S^3$-framing on a CY$_3$ is
+non-decomposable along a Hopf product structure, and
+$\mathrm{thm:derived}$-$\mathrm{framing}$-$\mathrm{obstruction}$
+resolving the obstruction in the
+$(\infty,1)$-categorical framework. The umbrella here is local at
+$d=2$ and explicitly disclaims the $S^3$-framing on $HC^-_3(C)$. A
+hypothetical d=3 analogue of the umbrella (forward transfer F1) would
+consume Vol III's $S^3$-framing data as input.
+
+\emph{Convention discrepancy.} No $S^3$ framing here; Vol III at $d=3$
+needs it. Chain-level $A_\infty$-compatible $S^3$-framing on
+$HC^-_3(C)$ for non-formal CY$_3$ remains open in Vol III itself.
+
+\emph{Matched-conventions proof obligation.} The d=3 lift of the
+umbrella (F1) is the precondition; once F1 is in scope, Vol III's
+$S^3$-framing data flows in as input.
+
+\emph{Reachability.} Out of reach: contingent on F1.
+
+\paragraph{B3: Igusa Mukai-Heisenberg centre and Borcherds weight $c_N(0)/2$ for the U(1) anomaly globalisation.}
+The Igusa cusp form $\Delta_5$ and its denominator algebra
+$\mathfrak g_{\Delta_5}$ carry a structurally analogous Heisenberg
+cocycle on the Mukai lattice $\widetilde H^*(K3,\Z)$ of signature
+$(4,20)$. The structural sister of the U(1) center anomaly $[\bar c]$
+of Theorems~\ref{thm:u1-center-anomaly}--\ref{thm:u1-center-anomaly-open}
+is precisely the Mukai-pairing centre of the K3 Heisenberg.
+
+\emph{Convention discrepancy.} The class $[\bar c]$ is a 2-cocycle on
+$\bar A=\C[z_1,z_2]/\C$ valued in $\C$; the Igusa Mukai-Heisenberg
+cocycle is on the integral Mukai lattice $\widetilde H^*(K3,\Z)$. The
+Capelli $\hbar N$ shift here corresponds to the Borcherds weight shift
+$c_N(0)/2$ at $N\in\{1,2,3,4,6\}$.
+
+\emph{Matched-conventions proof obligation.} The same three-step
+obligation as F2:
+\begin{enumerate}
+  \item Globalise the local U(1) anomaly cocycle $[\bar c]$ from $\C[z_1,z_2]/\C$ to a Mukai-Heisenberg cocycle on $\widetilde H^*(K3,\Z)$.
+  \item Identify the Capelli $\hbar N$ shift with the Borcherds weight shift $c_N(0)/2$ at $N=1$.
+  \item Verify modular properties of the resulting generating function, closing the Capelli-vs-Borcherds bridge. The Moyal generating function of the closed-open coupling section, $[f,g]_*=\hbar\{f,g\}+(\hbar^3/24)P^3+\cdots$, is \emph{not} a Borcherds product; the comparison would need to invoke a separate modular structure.
+\end{enumerate}
+
+\emph{Reachability.} Out of reach by the disclaimers of this appendix
+(Subsection~\ref{ssec:igusa-cross-volume}). The comparison is the
+natural backward target but is not currently within reach.
+
+\paragraph{B4: Vol I pro-object bar-cobar machinery for Lemma~\ref{lem:continuous-bar-cobar}.}
+Vol I's bar-cobar adjunction (its Theorem~A) is the natural home for
+pro-objects and weight completions. The Tate-conilpotent input here,
+Lemma~\ref{lem:continuous-bar-cobar} and the Quillen equivalence
+promotion, corresponds to Vol I's J-adic completion / weight
+completion machinery.
+
+\emph{Convention discrepancy.} Tate windows $F^w$ here correspond to
+Vol I's weight completion $+$ J-adic. Cohomological grading
+$\lvert d\rvert=+1$ matches.
+
+\emph{Matched-conventions proof obligation.}
+\begin{enumerate}
+  \item Identify the Tate-conilpotency condition with Vol I's weight-filtration condition on augmentation ideals (symmetric to F3).
+  \item Verify that Vol I's pro-object bar-cobar Quillen equivalence specialises to the Tate setting on the formal local disc here.
+\end{enumerate}
+
+\emph{Reachability.} In reach. Vol I has the machinery; the
+obligation is the convention-matching identification.
+
+\paragraph{B5: Costello twisted M-theory universality input for Conjecture~\ref{conj:twisted-m-theory-universal}.}
+Conjecture~\ref{conj:twisted-m-theory-universal} states that every
+twisted M-theory background of the indicated type, restricted to the
+Hamiltonian sector, satisfies the local model here. The deciding
+evidence is (i) Costello--Li BV-cohomology vanishing, (ii) a
+reduction lemma for protected twisted M-theory operators on
+$\R\times X$ to the formal disc at $p$, (iii) compatibility with the
+scalar/center-of-mass anomaly term.
+
+\emph{Convention discrepancy.} The local $\R^2\times\C^2$ here vs the
+twisted M-theory $\R\times X$ ambient with $X$ holomorphic-symplectic
+in an 11-dim ambient.
+
+\emph{Matched-conventions proof obligation.}
+\begin{enumerate}
+  \item Verify Costello--Li BV-cohomology vanishing on the formal local model (hypothesis (i)).
+  \item Establish the reduction lemma for protected twisted M-theory operators (hypothesis (ii), Costello locality theorem).
+  \item Match the scalar/center-of-mass anomaly term with the U(1) anomaly here (hypothesis (iii)).
+\end{enumerate}
+
+\emph{Reachability.} Out of reach in this manuscript. Cited as
+conjectural input to the universality claim, not as a consequence of
+the local theorem.
+
+\subsection{Convention discrepancies and required matched-conventions proofs}\label{ssec:convention-dictionary}
+
+The bidirectional dictionary above implicitly enumerates the
+convention discrepancies between this manuscript and each sister
+volume. Collected explicitly:
+
+\begin{enumerate}
+  \item \emph{Holomorphic dimension.} Here $d=\dim_{\C}X=2$
+    (formal symplectic disk $\C^2$). Vol III primary target $d=3$;
+    K3 fibre $d=2$; Conway/Leech $d=4$; Fake Monster $d=5$. Igusa
+    K3$\times$E sits at $d=3$ on the K3 side of Vol III. The
+    matched-conventions proof for any inter-dimensional transfer is
+    an $E_d$-formality lift.
+  \item \emph{Worldsheet $/$ curve.} Here $\Sigma_{\mathrm{here}}=\R$
+    (open worldsheet, brane line). Vol III's specialisation curve
+    $C$ entering Pillar~$\alpha$ Stage~2 is a separate compact
+    curve, e.g.\ $\Sigma_{0,24}$ (24-punctured sphere, per Vol III
+    Wave 12 retraction~6). No direct transfer of the
+    factorisation-algebra upgrade of part~(c)
+    ($\Phi^{\mathrm{Ham}}_{\mathrm{fact}}$) to the Vol III
+    specialisation curve is licensed.
+  \item \emph{Framing on $S^3$.} No $S^3$ framing here; the local
+    model is on $\R^2\times\C^2$, not on a sphere. Vol III at
+    $d=3$ requires the framing data of
+    $\mathrm{prop:hopf}$-$\mathrm{fibration}$-$\mathrm{decomposition}$
+    and
+    $\mathrm{thm:derived}$-$\mathrm{framing}$-$\mathrm{obstruction}$;
+    chain-level $A_\infty$-compatible $S^3$-framing on $HC^-_3(C)$
+    for non-formal CY$_3$ remains open in Vol III.
+  \item \emph{Deformation parameter $\hbar$.} Capelli$/$Moyal $\hbar$
+    here, with the unique unconditional normalisation matching
+    Costello first$/$third graph weights $1$ and $1/24$ via
+    Kontsevich uniqueness. Vol II uses Costello--Gwilliam BV $\hbar$
+    on the curved-Dunn factorisation algebra; the bridge is by
+    Kontsevich uniqueness. Igusa carries no $\hbar$: the
+    construction is automorphic, not perturbative.
+  \item \emph{Lattice $/$ algebra valuation.} Here
+    $\bar A=\C[z_1,z_2]/\C$, valued in $\C$. Igusa $/$ Vol III: the
+    Mukai lattice $\widetilde H^*(K3,\Z)$ of signature $(4,20)$, with
+    the K3 Yangian discipline of Vol III routing the ungraded target
+    through $Y_\hbar(\mathfrak{so}(4,20))$. Fake Monster: the
+    $\mathrm{II}_{25,1}$ even unimodular lattice. The $\C$-side of
+    $[\bar c]$ is not the same object as the Mukai 2-cocycle.
+  \item \emph{Cohomology home.} Here $H^2_{\mathrm{Lie}}(\bar A,\C)$
+    (Lie algebra cohomology of a quotient of polynomials, with
+    coefficients in $\C$). Igusa $/$ Vol III: the Mukai-pairing
+    cocycle on the Heisenberg of the Mukai lattice. The structural
+    analogue is the Capelli $\hbar N$ shift here vs the Borcherds
+    weight $c_N(0)/2$ shift on Vol III.
+  \item \emph{Filtration.} Tate windows $F^w V$ with finite-dimensional
+    graded pieces here. Vol I uses weight completions and J-adic
+    filtrations; Vol II uses $L_\infty$ Mittag--Leffler towers and
+    Costello--Gwilliam factorisation. The bridges are in reach via
+    the Quillen-equivalence promotion of
+    Lemma~\ref{lem:continuous-bar-cobar}.
+  \item \emph{Coefficient module.} The weighted Tate completion of
+    Definition~\ref{defn:wt-coefficient-pair} here vs Mittag--Leffler
+    towers in Vol I vs Costello--Gwilliam BV coefficient categories
+    in Vol II. The precise close of
+    Problem~\ref{prob:weighted-rg-locality} lives in the
+    convention-matching note of B1.
+\end{enumerate}
+
+\subsection{Vol III: CY-to-chiral, $d$, $\Sigma_{d-1}$, $C$, $S^3$-framing}\label{ssec:vol3-cross-volume}
+
+The Vol III programme parametrises by $d=\dim_\C X$ where $X$ is the
+Calabi--Yau target. The two-stage factorisation
+$\Phi_d=\mathrm{Sp}_{\Sigma_{d-1},C}\circ\Phi^{\mathrm{FA}}_d$
+factorises a CY-to-chiral functor through a canonical
+$E_d$-holomorphic factorisation algebra (Stage~1, by
+Kontsevich--Tamarkin formality plus Costello--Gwilliam--Li locality)
+and a specialisation along a $(d-1)$-dimensional slicing $\Sigma_{d-1}$
+landing on a chiral algebra on a curve $C$ (Stage~2, factorisation
+homology). The present manuscript works at $d=2$, on a holomorphic
+symplectic surface $\C^2$.
+
+\emph{Forward.} The local d=2 derived-centre theorem
+(part~(a) of Theorem~\ref{thm:main-local}, universal generality) is a
+template for the Vol III d=3 chain-level CY-A$_3$ analogue (forward
+transfer~F1). The U(1) anomaly equivalence
+(Theorem~\ref{thm:quantum-classical-anomaly}) is a structural precedent
+for the Mukai-pairing centre comparison on Vol III (forward
+transfer~F2).
+
+\emph{Backward.} Vol III's $S^3$-framing data and the Hopf
+non-decomposability of
+$\mathrm{prop:hopf}$-$\mathrm{fibration}$-$\mathrm{decomposition}$ are
+input to a hypothetical d=3 lift of the umbrella (backward transfer
+B2), contingent on F1.
+
+\emph{Brane line vs specialisation curve.} The brane line
+$\Sigma_{\mathrm{here}}=\R$ is the worldsheet of the local model.
+It is \emph{not} the Vol III Stage~2 specialisation curve $C$. The
+factorisation-algebra upgrade of part~(c)
+($\Phi^{\mathrm{Ham}}_{\mathrm{fact}}$) is on $\R$; it does not
+transfer to a Vol III $C$ without a separate matched-conventions
+proof.
+
+\emph{Hamiltonian BF vs BCOV.} The closed cotangent fields here are
+$\bar A\oplus\bar A^\vee[1]$, not the BCOV polyvector field on a
+CY$_3$. Theorem~\ref{thm:main-local} is the local d=2 closed-open
+derived-centre theorem; it is not a CY$_3$ BCOV reduction.
+
+\subsection{Igusa: $\Delta_5$, BKM superalgebra, Mukai-Heisenberg centre}\label{ssec:igusa-cross-volume}
+
+The Igusa cusp form $\Delta_5$ and its denominator algebra
+$\mathfrak g_{\Delta_5}$ are the ur-example of the Borcherds-product
+structure that the Vol III $\kappa$-stratification generalises. The
+present manuscript's generating-function coefficients (the Moyal
+expansion in the closed-open coupling section,
+$[f,g]_*=\hbar\{f,g\}+(\hbar^3/24)P^3+\cdots$) are \emph{not} a
+Borcherds product. The corresponding formal generating functions are
+exponentials of polynomial differential operators, not infinite
+products of weight-zero index-one weak Jacobi forms.
+
+\emph{Forward.} The U(1) anomaly equivalence
+(Theorem~\ref{thm:quantum-classical-anomaly}) is a structural precedent
+for the Mukai-Heisenberg centre on Igusa (forward transfer~F2,
+F2 for both Vol III and Igusa: the K3 fibre is shared).
+
+\emph{Backward.} Igusa's Mukai-Heisenberg centre data and the
+Borcherds weight $c_N(0)/2$ at $N=1$ (which gives $5$, matching
+$\kappa_{\mathrm{BKM}}(\mathfrak g_{\Delta_5})=5$) is the natural
+target for the U(1) anomaly globalisation (backward transfer~B3); not
+in reach.
+
+\emph{Heuristic only.} The slogan ``BCOV is the physics dual to the
+generating function's modular and mock-modular structure''
+($\sim$\texttt{/igusa-cusp-form/CLAUDE.md}, line 19) is a heuristic
+and convention-checking bridge. It is \emph{not} a BKM consequence of
+the local Hamiltonian BF / Moyal calculation. In particular:
+\begin{itemize}
+  \item No statement here implies a Borcherds lift of $\phi_{0,1}$.
+  \item No statement here implies a denominator identity for $\mathfrak g_{\Delta_5}$.
+  \item No statement here implies the Gritsenko--Cl\'ery 8-row catalogue or the universal $\kappa_{\mathrm{BKM}}(\Phi_N)=c_N(0)/2$ identity (Vol III FRONTIER pillar~$\beta'$).
+\end{itemize}
+The local Hamiltonian theorem is one of two algebras (open and closed
+trace algebras matched by Koszul duality on the formal local disk);
+the Borcherds lift is one of automorphic forms on the Siegel upper
+half plane $\mathfrak H_2$. The repository-level role of this
+manuscript with respect to Igusa is \emph{convention checking}
+($d=2$ here, $d=3$ on the K3 side of Vol III, $\dim\mathfrak H_2=3$
+on the Igusa side), with the named backward target~B3 as the
+Capelli-vs-Borcherds bridge.
+
+\emph{Audit residue.} The Igusa K3$\times$E frontier explicitly
+disclaims any physical identification used in the scalar theorem on
+the modular side (mirror discipline). This manuscript explicitly
+disclaims any physical identification with the BKM denominator side
+of $\Delta_5$.
+
+\subsection{Vol I and Vol II: bar-cobar, $\mathsf{SC}^{\mathrm{ch,top}}$}\label{ssec:vol1-vol2-cross-volume}
+
+Vol I's chiral bar-cobar adjunction (its Theorem~A) and Vol II's
+$\mathsf{SC}^{\mathrm{ch,top}}$ apparatus are the two cochain-level
+homes for the present manuscript's Tate-conilpotent input and
+all-order quantum sector.
+
+\emph{Forward.} The Tate Quillen equivalence promotion of
+Lemma~\ref{lem:continuous-bar-cobar} sharpens Vol I's bar-cobar
+machinery in the Tate setting (forward transfer~F3). The all-order
+quantum $\Phi_\hbar$ of part~(e) is a Stage-1 cochain-level shadow of
+Vol II's quantum-chiral identification (forward transfer~F4).
+
+\emph{Backward.} Vol II's Costello--Gwilliam factorisation-algebra
+apparatus closes the unique sub-residual
+$\mathrm{prob:weighted}$-$\mathrm{rg}$-$\mathrm{locality}$ (backward
+transfer~B1, in reach in principle). Vol I's pro-object bar-cobar
+machinery is the natural habitat of
+Lemma~\ref{lem:continuous-bar-cobar} (backward transfer~B4, in
+reach).
+
+\subsection{Twisted M-theory: universality input for the local model}\label{ssec:twisted-m-cross-volume}
+
+\emph{Forward.} None: the local model is consumed by twisted M-theory,
+not the other way round.
+
+\emph{Backward.} Costello's twisted M-theory paper supplies the
+universality input for Conjecture~\ref{conj:twisted-m-theory-universal}
+(backward transfer~B5). The deciding evidence is the BV-cohomology
+vanishing, the Costello locality theorem, and Hamiltonian-reduction
+regularity at $p$, as listed in the conjecture.
+
+\subsection{Status of every cross-volume claim}\label{ssec:status-summary}
+
+\begin{enumerate}
+  \item Local theorem (Theorem~\ref{thm:main-local}): \emph{honest local statement; bidirectional transfers are recorded above with reachability assessment per F1--F5, B1--B5}.
+  \item Loday--Quillen--Tsygan invocation in the Hamiltonian-sector discussion (forward transfer F3): \emph{transfer-compatible to Vol III Pillar~$\alpha$ Stage~1, conventions verified on degreewise polynomial generators, not on chain-level framing data}.
+  \item BCOV analogy (closed mixed Hamiltonian sector remark): \emph{transfer-incompatible to CY$_3$ BCOV; the local model is at $d=2$. Replaced by Conjecture~\ref{conj:twisted-m-theory-universal} as the primary physical motivation; deciding evidence is recorded in B5}.
+  \item Twisted M-theory motivation (Conjecture~\ref{conj:twisted-m-theory-universal}): \emph{conjecture with named hypotheses (B5); deciding evidence is the BV-cohomology vanishing, the Costello locality theorem, and Hamiltonian-reduction regularity at $p$}.
+  \item Moyal generating function (closed-open coupling section): \emph{honest local statement; no BKM transfer (B3 is the natural backward target, out of reach)}.
+  \item U(1) center anomaly (\S\ref{subsec:scalar-anomaly}): \emph{theorem on both sides, classical-to-quantum equivalence proved (Theorem~\ref{thm:quantum-classical-anomaly}); cross-volume comparison with Mukai centre on Vol III is open (F2, B3)}.
+  \item Tate bar-cobar (Lemma~\ref{lem:continuous-bar-cobar}): \emph{cochain identity proved; Quillen equivalence promotion in scope (F3, B4)}.
+  \item Sub-residual (Problem~\ref{prob:weighted-rg-locality}): \emph{open; closure via B1 (Vol II Costello--Gwilliam Hadamard input) is in reach in principle}.
+\end{enumerate}
+
+\emph{Forward / backward summary.} Five forward transfers (F1--F5)
+and five backward transfers (B1--B5) are named, each with the precise
+convention discrepancy and the matched-conventions proof obligation
+recorded. The two transfers in reach in principle are F3 (Vol I
+bar-cobar in Tate via Quillen equivalence promotion) and B1 (Vol II
+Costello--Gwilliam Hadamard input for
+Problem~\ref{prob:weighted-rg-locality}); the latter is the most
+concrete and most transformative backward transfer, closing the
+unique sub-residual of the umbrella. F4 (Vol II quantum-chiral
+identification) is in reach for the reduced sector and conditional on
+B1 for the descendant sector. The remaining transfers (F1, F2, B2,
+B3, B5) are out of reach in the present manuscript and are recorded
+as conjectural targets for downstream cross-volume work.

@@ -1192,9 +1192,16 @@ statements.
       the closed-coadjoint sector
       $\mathfrak g=\mathfrak h\ltimes\mathfrak h^{\vee}_{\mathrm{cont}}[1]$.
       In the reduced model the cochain-level isomorphism of part~(a)
-      extends to the cotangent factor; in the unreduced
-      factorization-algebra model the cotangent factor is conditional on
-      \ref{prob:formal-factorization-center}.
+      extends to the cotangent factor. In the unreduced
+      factorization-algebra model the cotangent factor closes
+      unconditionally at the chain level via
+      \ref{thm:chain-level-primitive-projection}: the chain-level
+      primitive projection $\pi_{\mathrm{prim}}^{\mathrm{cot}}$
+      constructed from Procesi--Razmyslov cycle merging and the
+      de Rham contraction is a strict $P_0$-morphism with all
+      homotopies identically zero on every trace-count stratum.
+      Independently, the heat-kernel route closes via
+      \ref{thm:wt-cotangent-lift} on the weighted Tate completion.
 
     \item \emph{All-order quantum deformation $\Phi_\hbar$ on the
       degree-zero Hamiltonian sector.} The classical $\Phi$ deforms to
@@ -1220,6 +1227,14 @@ statements.
       the first and third Costello graph normalizations agree with the
       Moyal coefficients $1$ and $1/24$ respectively. The associated
       graded at $\hbar=0$ recovers the degree-zero restriction of $\Phi$.
+      The descendant (one-antifield) sector closes unconditionally on
+      the truncated nilpotent sector $\mathfrak m^3/\mathfrak m^{N+1}$
+      via \ref{thm:phi-hbar-trunc}, and on the full Hamiltonian sector
+      by the weighted Tate cotangent lift
+      \ref{cor:wt-cotangent-lift-unconditional} together with the
+      H\"ormander tensor wavefront analysis of
+      \ref{thm:hadamard-mittag-leffler}, closing
+      \ref{prob:weighted-rg-locality} unconditionally.
       (See the quantum sector around
       \ref{prob:first-third-graph-normalizations}.)
 
@@ -1240,7 +1255,7 @@ statements.
       equivalence $\Phi$ holds modulo $[\bar c]$, i.e.\ on the
       scalar-reduced quotient; the U(1) anomaly $[\bar c]$ is the unique
       obstruction to lifting $\Phi$ to the unreduced sector on the
-      Hamiltonian-constants axis. The healed local bulk-boundary
+      Hamiltonian-constants axis. The local bulk-boundary
       coupling carries an explicit central piece
       $$\{I_\partial(a,f),I_\partial(b,g)\}_{\mathrm{open}}
         =I_\partial(ab,\{f,g\}_{\bar A})
@@ -1321,7 +1336,7 @@ statements.
   the boundary evaluation),
   \ref{thm:quantum-classical-anomaly} (Rees specialization identifies
   the classical Poisson cocycle $\omega$ with the quantum Capelli shift
-  $\hbar N$ as the same class), and the healed
+  $\hbar N$ as the same class), and
   \ref{cor:local-bulk-boundary-coupling} which exhibits the central
   piece explicitly with the constant $N$.
 
@@ -2361,7 +2376,7 @@ The proposition below records the degree-zero current shadow as a
 corollary of
 \ref{thm:open-closed-derived-center-factorization}.
 
-\begin{prop}[Healed Hamiltonian-current central operation]\label{thm:hamiltonian-current-center-lift}
+\begin{thm}[Hamiltonian-current central operation, smeared]\label{thm:hamiltonian-current-center-lift}
   \ref{thm:open-closed-derived-center-factorization} restricted to the
   length-one CE component on each interval recovers the degree-zero
   Hamiltonian current shadow: the assignment
@@ -2380,7 +2395,7 @@ corollary of
   one of the structure equations defining
   $\Phi^{\mathrm{Ham}}_{\mathrm{fact}}$ of
   \ref{thm:open-closed-derived-center-factorization}.
-\end{prop}
+\end{thm}
 
 \begin{proof}
   In the reduced open model $Q\phi_1=Q\phi_2=0$. Hence
@@ -4629,7 +4644,7 @@ locally nilpotent $z_i$-action can carry the coadjoint action $\mc P$.
   proves the identity for all polynomials.
 \end{proof}
 
-\begin{cor}[Classical local bulk-boundary coupling, healed]\label{cor:local-bulk-boundary-coupling}
+\begin{cor}[Classical local bulk-boundary coupling with explicit U(1) center anomaly]\label{cor:local-bulk-boundary-coupling}
   Let $a,b\in C^\infty_c(\R)$ be scalar compactly supported test
   functions on the brane line, and for $f\in\bar A$ define the smeared
   boundary Hamiltonian
@@ -6098,7 +6113,10 @@ comparison, not a consequence of the theorem above. The same caveat applies to
 the expected $D_0$-brane analogue on $\R^2\times\C^4$.
 
 \appendix
-\section{Cross-volume convention contract}\label{app:convention-contract}
+\input{tate-P5-cross-volume}
+
+\iffalse % superseded by tate-P5-cross-volume; retained as a comment for git history
+\section{Cross-volume convention contract}\label{app:convention-contract-legacy}
 
 This appendix records the convention contract between the present
 manuscript and the two cross-repository frontiers cited in
@@ -6215,6 +6233,7 @@ $\Delta_5$.
     (Theorem~\ref{thm:quantum-classical-anomaly}); cross-volume
     comparison with Mukai centre on Vol III is open}.
 \end{enumerate}
+\fi % end superseded legacy appendix
 
 \begin{biblist}
 
