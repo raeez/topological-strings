@@ -1,24 +1,68 @@
 \begin{abstract}
-This paper proves a local large-$N$ Koszul-duality theorem for the Hamiltonian
-sector of the mixed A/B topological string on $\R^2\times\C^2$ with brane
-$\R\times p$. The ghost-zero open BV theory reduces to the gauged first-order
-matrix model
+This paper studies a local constrained system. The formal holomorphic normal
+surface has coordinates $z_1,z_2$ and symplectic form $dz_1\wedge dz_2$.
+On a stack of $N$ probes these coordinates become matrices
+$\phi_1,\phi_2$. The open ghost-zero theory is the Dirac first-order system
 $$\int_\R \mathrm{Tr}\bigl(\phi_1\,d\phi_2+A[\phi_1,\phi_2]\bigr).$$
-After scalar reduction and degreewise stabilization, its Hamiltonian algebra is
+Here $A$ is the multiplier for the first-class constraint
+$[\phi_1,\phi_2]=0$, and the BV/Koszul variable $\psi=A^*$ records it by
+$Q\psi=[\phi_1,\phi_2]$. This is the open local model for a mixed
+holomorphic-topological BV sector on $\R^2\times\C^2$ with brane
+$\R\times p$.
+
+After removing constant Hamiltonians and passing to the degreewise stable
+connected trace sector, the classical open Hamiltonian algebra is
 $$\mathbf S\bigl(\bar A\oplus\bar A_{\mathrm{desc}}[1]\bigr),
   \qquad \bar A=\C[z_1,z_2]/\C\cdot1,$$
 where $\bar A_{\mathrm{desc}}$ is represented by the nonconstant primitive
 one-antifield Koszul cycles. The closed Hamiltonian sector is cotangent BF
-theory for the Tate Lie algebra
-$$\mathfrak g=(z_1,z_2)\C[[z_1,z_2]]
-  \ltimes\bigl((z_1,z_2)\C[[z_1,z_2]]\bigr)^\vee_{\mathrm{cont}}[1].$$
+theory for the reduced Tate Lie algebra
+$$\widehat{\mathfrak h}=\C[[z_1,z_2]]/\C\cdot1,\qquad
+  \mathfrak g=\widehat{\mathfrak h}\ltimes
+  \widehat{\mathfrak h}^{\vee}_{\mathrm{cont}}[1],$$
+with bracket induced by the usual Poisson bracket after projection modulo
+constants.
 Its local observables are the continuous Chevalley-Eilenberg cochains
-$C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g)$, and their Koszul dual is
-the completed enveloping algebra $\widehat U(\mathfrak g)$. The PBW special
-fibre identifies degree by degree with the stable open Hamiltonian algebra.
-Boundary evaluation
+$C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g)$. The reduced derived
+Poisson center of the degree-zero open algebra is computed explicitly:
+$$C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g)
+  \cong
+  \bigl(PV_{\mathrm{cont}}(\widehat{\mathbf S}(\mathfrak h)),
+  [\pi_\partial,-]\bigr),$$
+with $c_I\mapsto\partial/\partial O_I$ and $u_I\mapsto O_I$. Thus the boundary
+Hamiltonian function is the image of the shifted cotangent CE coordinate, not
+of the nonclosed CE coordinate dual to a Hamiltonian mode.
+
+The Koszul dual of the closed CE algebra is the completed enveloping algebra
+$\widehat U(\mathfrak g)$. Its PBW special fibre identifies degree by degree
+with the connected stable open Hamiltonian trace sector as a filtered
+graded-commutative product. The polynomial descendants are PBW special-fibre
+labels; they do not realize the closed coadjoint deformation-level action.
+Principal parts provide the correct coadjoint algebraic model. Boundary
+evaluation on Hamiltonian modes
 $$f(z_1,z_2)\longmapsto
   \overline{\mathrm{Tr}\,f(\phi_1,\phi_2)}$$
 identifies the degree-zero generators and intertwines the closed Hamiltonian
-Poisson bracket with the scalar-reduced open trace bracket.
+Poisson bracket with the connected open trace bracket. This degree-zero
+Hamiltonian current map has an interval-wise ordinary central-operation
+representative after the de Rham jet contraction and satisfies the $P_0$
+bracket identity on stable connected local cohomology. The full unreduced
+BV/factorization-center lift remains a problem: compact-support functoriality
+before contraction, $P_0$ center homotopies, principal-part boundary currents,
+and descent must all be constructed.
+
+The formal deformation-quantization target is the $\hbar$-adic Weyl/Moyal
+deformation. The first-order bracket is proved, and the all-order Weyl/Moyal
+local coefficients are computed algebraically. At finite $N$, Weyl-ordered
+traces descend through quantum Hamiltonian reduction; the Harish-Chandra
+radial-parts theorem proves the reduced Moyal commutator identity for the
+Weyl/Capelli-renormalized generators. The stable connected quantum quotient and
+the factorization-level quantum theorem remain open. The scalar
+Hamiltonian/center-of-mass term and its Capelli quantum form are treated as a
+named obstruction. The reduced open-line midpoint model gives the first and
+third Weyl graph weights, but the paper does not construct the Costello
+closed-open Feynman weights. The remaining analytic problem is to identify the
+Costello boundary graph expansion, in this local Hamiltonian model, with the
+Weyl/Moyal coefficients, including anomaly control, stable connected trace
+normalization, and the first and third graph normalizations.
 \end{abstract}

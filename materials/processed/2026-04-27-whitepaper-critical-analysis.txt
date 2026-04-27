@@ -1,0 +1,2492 @@
+27/04/2026, 20:50                                                               Whitepaper Critical Analysis
+
+
+
+
+                                                                                                               main(2).pdf
+                                                                                                               PDF
+                                                        foundationally, adversarially and from first-principles
+                                                        attack this whitepaper I'm busy writing. the intent should
+                                                        be clear.
+                                                        Attack the mathematics AND the physics. I'm both a
+                                                        Show more
+
+            Thought for 9m 23s
+            I read the uploaded draft as a hostile referee would. The strongest defensible core is
+            much narrower than the current framing: you have a formal algebraic PBW-shadow
+            theorem for a selected stable trace sector, plus a degree-zero Hamiltonian Poisson
+            trace map. You do not yet have a closed-open string theorem, a cochain-level
+            factorization-center map, or a deformation-level cotangent/descendant match.
+                    main
+
+            1. Main kill shot: the theorem is not “Koszul duality” in the
+            advertised sense
+            Your theorem says the open stable Hamiltonian sector is
+                                                         cl
+                                                        Obrane,H ≅ S(Aˉ ⊕ Aˉdesc [1]),
+                                                                    ​                             ​
+
+
+
+
+            while the closed observables are
+                                                                      ∙
+                                                              cl
+                                                             Ograv ≅ CCE,cont
+                                                                        ​     (g),         ​
+
+
+
+
+            whose Koszul dual is
+                                                                cl
+                                                              (Ograv )! ≃ U (g).
+                                                                            ​
+
+
+
+
+            But the actual comparison to the open side is only after passing to the PBW special
+            fibre
+                                                             Uℏ (g)/(ℏ) ≅ S (g).
+                                                                ​
+
+
+
+
+https://chatgpt.com/c/69efa84c-a760-83ea-ae70-183a06ecd2d3                                                                   1/37
+27/04/2026, 20:50                                                          Whitepaper Critical Analysis
+
+            The paper itself states that the identification is “a filtered graded-commutative PBW
+            special-fibre product identification, not a deformation-level identification of the
+            descendant module actions.” That is a major downgrade, not a technical caveat. It
+            means the open algebra is not shown to be the Koszul dual of the closed algebra; it is
+            shown to match the associated graded commutative shadow of that Koszul dual, and
+            only in a selected sector. main
+            So the theorem title “Local stable Hamiltonian-sector Koszul duality” is too strong. A
+            more honest title would be:
+                PBW special-fibre comparison for the stable Hamiltonian trace sector.
+            If you keep the current title, a referee can fairly say the title claims a deformation-level
+            Koszul duality theorem that the body explicitly disclaims.
+            2. The closed-open map is not a map from closed observables
+            This is the deepest mathematical obstruction, and your own draft proves it.
+            You define closed local observables as CE cochains
+                                                                    ∙
+                                                                   CCE,cont (g).
+                                                                               ​
+
+
+
+
+            But your boundary assignment
+                                                             f ↦ Tr f (ϕ1 , ϕ2 )       ​       ​
+
+
+
+
+            starts from a Hamiltonian mode f ∈ Aˉ, not from a closed CE cochain. Proposition
+            0.2.18 proves that Aˉ is perfect and that the CE length-one coordinate dual to a
+            Hamiltonian mode is not closed; no CE cocycle has that length-one part. The draft
+            explicitly concludes that the boundary assignment is “a Hamiltonian-mode, or
+            PBW/Koszul-dual, construction” and “not a cochain-level map out of CCE,cont
+                                                                                    ∙
+                                                                                           (g).”          ​
+
+
+
+
+                    main
+
+            That means the physical closed-open slogan is currently wrong at the observable level.
+            A closed-open map should be something like
+                                                      Obscl          P0       cl
+                                                         closed ∂ ⟶ Zfact (Obsopen ),
+                                                               ​   ​   ​
+                                                                                   ​
+
+
+
+
+                                                                                           ​        ​
+
+
+
+
+            but you do not construct that. You construct a map from Hamiltonian generators / PBW
+            modes to boundary functions.
+https://chatgpt.com/c/69efa84c-a760-83ea-ae70-183a06ecd2d3                                                    2/37
+27/04/2026, 20:50                                                                Whitepaper Critical Analysis
+
+            This is not a cosmetic source-convention issue. It is a categorical-level mismatch:
+                                closed observable =
+                                                   Hamiltonian Lie algebra element.
+
+            Your Problem 0.2.20 states exactly this, but then the theorem language keeps sounding
+            as if the closed-open map exists. It does not.
+            3. The cotangent/descendant sector does not match the closed BF
+            module
+            The closed Lie algebra is
+                                                                          g = h ⋉ h∨ [1],
+
+            so the h∨ [1] part must carry the coadjoint action of h. But the polynomial one-ψ
+            descendants carry the wrong action. Your Corollary 0.2.45 proves this explicitly:
+                                                     Fp,q : Ψa,b ↦ (pb − qa)Ψa+p−1,b+q−1 ,
+                                                              ​       ​                                         ​
+
+
+
+
+            whereas the closed coadjoint action is
+                                          ad∨z p z q δa,b = −(pb − qa + p − q)δa−p+1,b−q+1 .
+                                                          ​       ​                                                 ​
+
+
+
+
+                                               1 2
+                                                 ​    ​
+
+
+
+
+            Even the direction is wrong in the simplest case: z1 lowers the open descendant index b,
+            while it raises the closed coadjoint dual index. The draft itself says the polynomial
+                                                                                            ​
+
+
+
+
+            descendants do not realize the coadjoint deformation-level action. main
+            This is devastating for the advertised closed cotangent BF comparison. The best you
+            currently have is:
+                                                                          h∨ [1] ≅ ⟨Ψa,b ⟩      ​
+
+
+
+
+            as a graded vector space / PBW special-fibre label set, not as an h-module, not as a
+            Lie algebra representation, and not as a deformation-compatible boundary sector.
+            Your principal-part repair is mathematically natural, but it is not part of the open
+            polynomial brane theory. The paper admits it must be promoted to a factorization object
+            before it can participate in the full cotangent lift. main
+            So the descendant part of the theorem should be phrased as a basis-level
+            identification only. Anything stronger is false.
+            4. Corollary 0.2.51 is false as written unless you explicitly quotient
+            out constants
+https://chatgpt.com/c/69efa84c-a760-83ea-ae70-183a06ecd2d3                                                              3/37
+27/04/2026, 20:50                                                                                                              Whitepaper Critical Analysis
+
+            Take the simplest possible test:
+                                                                      f = z1 ,                                 ​                           g = z2 .            ​
+
+
+
+
+            In the reduced Hamiltonian algebra
+                                                                      Aˉ = C[z1 , z2 ]/C ⋅ 1,                              ​               ​
+
+
+
+
+            one has
+                                                        {z1 , z2 }Aˉ = 1
+                                                                  ​            ​               ​                                       mod C = 0.
+
+            So your Corollary 0.2.51 predicts
+                                                             {I∂ (a, z1 ), I∂ (b, z2 )} = 0.
+                                                                       ​                               ​                           ​                   ​
+
+
+
+
+            But on the open matrix side,
+                        I∂ (a, z1 ) = ∫ a(t) Tr ϕ1 (t) dt,
+                            ​        ​                                     ​                                                                   I∂ (b, z2 ) = ∫ b(t) Tr ϕ2 (t) dt.
+                                                                                                                                                   ​               ​       ​
+
+
+
+
+            Using
+                                                                  {(ϕ1 )ij , (ϕ2 )kl } = δli δjk ,
+                                                                                       ​           ​                           ​       ​                   ​           ​
+
+
+
+
+            one gets
+                                                                      {Tr ϕ1 , Tr ϕ2 } = N .               ​                                   ​
+
+
+
+
+            Therefore
+                                              {I∂ (a, z1 ), I∂ (b, z2 )} = N ∫ a(t)b(t) dt,
+                                                    ​         ​                    ​                                   ​
+
+
+
+
+            not zero.
+            Theorem 0.2.50 is safe because it explicitly works in the connected Hamiltonian trace
+            quotient where constants vanish. But Corollary 0.2.51 states the smeared identity
+            without repeating that quotient, even though the displayed formula fails for the most
+            basic generators. main
+            This is not a minor edge case. It is the central extension of the trace Poisson algebra.
+            Physically, it is the center-of-mass symplectic pairing of the brane stack. You cannot
+            silently throw it away in a “bulk-boundary coupling” statement.
+            Fix: every bracket identity involving z1, z2 must say                          ​                       ​
+
+
+
+
+https://chatgpt.com/c/69efa84c-a760-83ea-ae70-183a06ecd2d3                                                                                                                          4/37
+27/04/2026, 20:50                                                          Whitepaper Critical Analysis
+
+
+               after projection to the Hamiltonian quotient by scalar trace classes.
+            Without that, the formula is wrong.
+            5. The “central operation” theorem is too close to tautological
+            Theorem 0.2.17 constructs an interval-wise operation by multiplication with
+                                                            ∫ a(t) Tr f (ϕ1 (t), ϕ2 (t)) dt.
+                                                                 ​           ​             ​
+
+
+
+
+                                                             I
+
+            But in the reduced open model the observable algebra is graded-commutative, so
+            multiplication by any closed element is automatically an ordinary Hochschild central
+            operation. The paper itself says the proof uses Qϕi = 0, graded-commutativity, and
+            then the Poisson identity after projection. main
+                                                                                       ​
+
+
+
+
+            So the ordinary E1-centrality part is not evidence of a closed-open theorem. The only
+            nontrivial part is the Poisson bracket identity, and that identity is degree-zero, quotient-
+                                         ​
+
+
+
+
+            dependent, and not a full P0 factorization-center map.
+                                                        ​
+
+
+
+
+            This should be demoted rhetorically. It is a useful check, but not a central construction
+            of closed-open string theory.
+            6. The “sector” is selected by hand
+            The open Hamiltonian algebra is defined as the sector generated by:
+             1. nonempty primitive degree-zero traces;
+             2. nonconstant primitive one-ψ Koszul classes.
+            Then you exclude:
+             1. the scalar trace Tr(1) = N ;
+             2. Tr(ψ);
+             3. all higher-ψ primitive homology;
+             4. finite-N trace identities;
+             5. the genuine coadjoint action mismatch.
+            The draft is honest that “sector” is literal and that higher-ψ homology lies outside the
+            sector. main
+            But then the introduction and theorem language still make it sound like the open brane
+            algebra itself is being matched to the closed Koszul dual. It is not. You are matching a
+            deliberately carved-out subquotient/subsector.
+https://chatgpt.com/c/69efa84c-a760-83ea-ae70-183a06ecd2d3                                                 5/37
+27/04/2026, 20:50                                                          Whitepaper Critical Analysis
+
+            A hostile formulation would be:
+               The theorem proves that, after discarding the scalar central extension, discarding
+               higher antifield classes, discarding the scalar antifield, stabilizing away finite-N
+               identities, forgetting the closed coadjoint module action, and passing to the PBW
+               associated graded, the remaining symbols can be placed in bijection.
+            That may sound brutal, but it is structurally accurate.
+            7. The large-N limit is algebraic, not physical
+            Your stable large-N limit is degreewise invariant theory under block restriction. That is a
+            valid algebraic stabilization. But it is not the physical large-N limit used in matrix models
+            unless you also specify:
+                                                                                    1
+                                                             Tr       versus          Tr,
+                                                                                       ​
+
+
+
+
+                                                                                    N
+            connected correlators/cumulants, scaling of ℏ, planar versus nonplanar terms, and the
+            fate of central terms like
+                                                             {Tr ϕ1 , Tr ϕ2 } = N .
+                                                                       ​        ​
+
+
+
+
+            Right now “connected stable trace sector” is doing several jobs at once: removing the
+            empty trace, selecting primitive single traces, killing constants, and evading finite-rank
+            trace identities. Those are not the same operation physically.
+            You need a separate definition:
+                             Primst ,    ​          ConnN →∞ ,    ​        Hamiltonian scalar quotient,
+
+            and you should not conflate them.
+            8. The reduced gauge/BV model suppresses a real quotient-stack
+            issue
+            You say you take GLN -invariants in characteristic zero, so the Chevalley part of gauge
+            BRST acts trivially on trace functions. That is fine for trace functions, but it does not by
+                                                ​
+
+
+
+
+            itself identify the full BV quotient with the invariant Koszul complex.
+            There are two different models hiding here:
+              1. Algebraic quotient by a linearly reductive group, where taking invariants is exact.
+https://chatgpt.com/c/69efa84c-a760-83ea-ae70-183a06ecd2d3                                                  6/37
+27/04/2026, 20:50                                                        Whitepaper Critical Analysis
+
+             2. Lie-algebra/BRST Chevalley-Eilenberg quotient, where gauge ghosts can have
+                 their own cohomology unless a precise presentation kills them.
+            Your Remark 0.2.67 tries to justify this, but the main calculation uses the reduced
+            invariant complex as if the quotient-stack subtleties were automatically absent. That is
+            acceptable only if you explicitly state:
+                We are computing the algebraic invariant functions on the derived commuting
+                scheme, not the full CE/BRST cohomology of the infinitesimal gauge algebra.
+            Otherwise a referee can object that “the Chevalley part acts trivially on trace functions”
+            is not the same as “the Chevalley sector has disappeared.”
+            9. The one-ψ homology proof is plausible but under-proved
+            Proposition 0.2.28 is one of the technically interesting parts of the paper. But the proof
+            leans heavily on the chip-moving state complex and an Abel-map argument. The draft
+            says the quotient state complex has the homology of S 1, with convex fibres and affine
+            stabilizer quotients. main
+            That is the kind of argument that will get attacked unless made completely formal. The
+            danger points are:
+             1. the passage from cyclic words with graded signs to cellular chains;
+             2. the quotient by cyclic relabelling;
+             3. stabilizers of configurations with symmetry;
+             4. compatibility of orientations/signs with the two-ψ boundary;
+             5. the claim that higher cells do not affect H1;
+             6. the identification of the particular generator with Ψk,l .
+                                                                              ​
+
+
+
+
+                                                                                               ​
+
+
+
+
+            The computational script checks up to small degree, but that does not replace the proof.
+                    main
+
+            If this proposition is essential, give it a standalone, fully combinatorial proof, or relegate
+            it to a conjectural/computational lemma. Right now it is probably the most vulnerable
+            purely algebraic proof in the paper.
+            10. The Tate/Koszul-duality formalism is under-specified
+            The claim
+                                                              ∙
+                                                             CCE,cont​(g)! ≃ U (g)
+
+https://chatgpt.com/c/69efa84c-a760-83ea-ae70-183a06ecd2d3                                                   7/37
+27/04/2026, 20:50                                                     Whitepaper Critical Analysis
+
+            for a completed Tate Lie algebra is believable, but the draft’s Lemma 0.2.40 is doing a
+            huge amount of foundational work. A hostile reader will ask:
+             1. What exact category of complete filtered Tate spaces is being used?
+             2. What are the admissible quasi-isomorphisms?
+             3. Is the CE coalgebra genuinely conilpotent after coefficient completion?
+             4. Which completed bar/cobar adjunction is being invoked?
+             5. Are the dualizations continuous in both length and Taylor degree?
+             6. Is the PBW filtration complete and separated?
+             7. Does the coadjoint action preserve the claimed topology for arbitrary formal
+                 Hamiltonians?
+            You gesture at these, but not enough to make the theorem mechanically checkable.
+            Since this lemma underwrites the closed-side Koszul dual, it cannot remain a sketch.
+            11. The closed sector is a formal BF model, not yet a physical closed
+            string sector
+            The paper distinguishes itself from Gwilliam–Williams and says it is not their
+            holomorphic bosonic string. Good. But it still uses phrases like “mixed holomorphic-
+            topological strings,” “twisted M-theory,” “closed string sector,” and “brane coupling.”
+            The actual constructed object is a formal local Hamiltonian cotangent BF theory on
+                                                                  R2 × C2
+
+            with coefficient Lie algebra
+                                                             h = C[[z1 , z2 ]]/C.
+                                                              ​        ​     ​
+
+
+
+
+            That is a perfectly reasonable BV toy model. But the physics origin is not derived. In
+            particular:
+             1. No parent 11-dimensional M-theory background is specified.
+             2. The dimension count is not explained.
+             3. The twist is not constructed.
+             4. The brane boundary condition/defect theory is not derived from a worldvolume
+                 theory.
+             5. No anomaly cancellation/QME theorem is proved.
+             6. No propagator or defect kernel is constructed.
+             7. The quantum graph realization is explicitly left open.
+            So the physics claim should be downgraded from “this is a local mixed string model” to:
+https://chatgpt.com/c/69efa84c-a760-83ea-ae70-183a06ecd2d3                                            8/37
+27/04/2026, 20:50                                                     Whitepaper Critical Analysis
+
+
+               This is a formal local BV model motivated by the Hamiltonian sector expected in a
+               mixed holomorphic-topological brane setup.
+            That wording is much harder to attack.
+            12. The BCOV/Kodaira-Spencer analogy is dangerous
+            You describe the closed sector as Hamiltonian Kodaira-Spencer/BF. But the actual
+            construction is not BCOV theory on a Calabi-Yau threefold, and not a direct truncation of
+            BCOV. You use divergence-free vector fields on a holomorphic symplectic surface,
+            identify them locally with Hamiltonians modulo constants, and then add a cotangent BF
+            partner.
+            That is mathematically coherent, but the phrase “Kodaira-Spencer” invites the wrong
+            comparison. In BCOV, the field complex, divergence operator, anomaly structure, and
+            quantization problem are much more rigid. Here the Hamiltonian reduction is a chosen
+            local sector.
+            I would use “Hamiltonian BF theory for the formal symplectic disk” as the primary name,
+            and mention Kodaira-Spencer only as motivation.
+            13. The quantum section is a target, not a result
+            The Weyl/Moyal formulas are correct as algebraic deformation-quantization targets for
+            the constant Poisson disk. But the draft is clear that the actual quantum boundary
+            theorem is not proved. Proposition 0.2.52 only proves BRST descent of individual Weyl-
+            ordered traces; the Moyal commutator identity in quantum Hamiltonian reduction is left
+            as Problem 0.2.54. The draft also identifies the normal-ordering/Capelli shift
+                                                             Y X − XY + ℏN I = 0
+
+            as an obstruction that can feed lower-degree traces into the connected sector. main
+            This is not a small technical issue. It is exactly where the classical trace-bracket story
+            can fail quantum mechanically.
+            So any sentence suggesting that the open quantum brane algebra is the Weyl/Moyal
+            algebra should be changed to:
+                    The Weyl/Moyal algebra is the proposed formal target; the reduced finite-N and
+                    stable connected identities remain open.
+https://chatgpt.com/c/69efa84c-a760-83ea-ae70-183a06ecd2d3                                               9/37
+27/04/2026, 20:50                                                               Whitepaper Critical Analysis
+
+            Your draft mostly says this, but the abstract and introduction should be ruthlessly
+            consistent.
+            14. The central extension is physically meaningful, not disposable
+            bookkeeping
+            Classically,
+                                                                 {z1 , z2 } = 1
+                                                                        ​        ​
+
+
+
+
+            becomes zero in Aˉ, because constants are removed. But on the brane,
+                                                             {Tr ϕ1 , Tr ϕ2 } = N .
+                                                                    ​                 ​
+
+
+
+
+            You remove this by projecting out scalar trace classes. Algebraically that is allowed for
+            the reduced Hamiltonian vector-field algebra. Physically it is not innocent: it removes the
+            center-of-mass canonical pair of the brane stack.
+            This same issue reappears quantum mechanically as the normal-ordering shift. So the
+            central term is not just a nuisance; it is the obstruction that keeps returning.
+            I would make this a named obstruction:
+               Scalar Hamiltonian / center-of-mass anomaly.
+            Then every theorem should state whether it is before or after killing it.
+            15. The figures weaken the paper
+            The schematic ovals on pages 41, 50, and 51 do not communicate mathematical data:
+            no labels, no propagator convention, no orientation, no automorphism factor, no
+            boundary ordering, no kernel. The captions say they are not Feynman-integral proofs.
+            That makes them look ornamental.
+            Either remove them or replace them with real graph notation:
+                                 Γ1 ,​     Γ3 ,​     Aut(Γ),      P∂ ,      ​        ordered boundary inputs.
+
+            As drawn, they invite the accusation that the graph discussion is gestural.
+            16. Reference and notation cleanup matters
+            There are malformed citation labels in the body, for example things like “[13]razmyslov”
+            and “[2]tsygan.” The PBW discussion appears to cite “[16]loday-vallette,” but [16] is
+https://chatgpt.com/c/69efa84c-a760-83ea-ae70-183a06ecd2d3                                                      10/37
+27/04/2026, 20:50                                                             Whitepaper Critical Analysis
+
+            Priddy and Loday–Vallette is [17]. These are small, but in a paper already making
+            delicate claims, citation sloppiness reduces trust.
+            17. What the paper can safely claim
+            A defensible theorem would be something like:
+               Let
+                                             RN = C[ϕ1 , ϕ2 ] ⊗ Λ(ψ),
+                                                   ​         ​    ​                                 Qψ = [ϕ1 , ϕ2 ],
+                                                                                                              ​   ​
+
+
+
+
+                    with GLN -invariants and degreewise stable trace limit. In the selected Hamiltonian
+                    sector generated by nonempty degree-zero primitive traces and nonconstant
+                                 ​
+
+
+
+
+                    primitive one-ψ classes, the stable open algebra is
+                                                                 S(Aˉ ⊕ Aˉdesc [1]).    ​
+
+
+
+
+                    The closed formal Hamiltonian BF Lie algebra is
+                                                                 g = h ⋉ h∨cont [1].
+                                                                          ​         ​           ​
+
+
+
+
+                    The PBW associated graded of U (g) has degreewise polynomial part
+                                                                      S(Aˉ ⊕ h∨ [1]).
+
+                    After choosing the monomial-dual basis, this graded-commutative algebra is
+                    identified with the selected stable open sector. On degree-zero Hamiltonians, the
+                    boundary evaluation
+                                                                 f ↦ Tr f (ϕ1 , ϕ2 )        ​       ​
+
+
+
+
+               is a Lie algebra map after quotienting scalar trace classes. The polynomial one-ψ
+               descendants do not realize the closed coadjoint action; the full CE/factorization-
+               center and cotangent boundary maps remain open.
+            That version is strong, precise, and hard to refute.
+            Bottom line
+            The algebraic skeleton is interesting and mostly coherent. The vulnerable claims are the
+            words around it: “string,” “closed-open,” “Koszul duality,” “cotangent BF sector,”
+            “factorization center,” and “quantum Moyal upgrade.” Right now those phrases outrun
+            the proved content.
+
+https://chatgpt.com/c/69efa84c-a760-83ea-ae70-183a06ecd2d3                                                             11/37
+27/04/2026, 20:50                                                               Whitepaper Critical Analysis
+
+            The paper becomes much stronger if you openly demote the main result to a PBW
+            special-fibre Hamiltonian trace comparison and isolate three unsolved obstructions as
+            first-class problems:
+            CE-source obstruction,                                   coadjoint descendant mismatch,                scalar/Capelli cen
+
+            Those are not peripheral. They are the actual mathematical and physical boundary of
+            the current result.
+              Sources
+
+                                                                      Sources
+
+
+                                                        No you don't seem to get it.
+                                                        The point is NOT to cut the paper down to size. it's to
+                                                        understand what it is trying to prove and produce those
+                                                        constructions, derivations, deductions & mathematics
+                                                        and physics
+                                                        Let's construct, deduct, prove the open closed derived
+                                                        center structure which is the central unresolved issue.
+                                                        Show less
+
+            Thought for 13m 43s
+            You are right. The way to solve the central obstruction is not to shrink the claim; it is to
+            identify the correct derived-center model. The missing construction is this:
+                                                       ∙
+                                                      CCE (h ⋉ h∨ [1]) ≅ Zfact
+                                                             ​
+                                                                          P0
+                                                                               (S(h))          ​
+
+
+
+
+                                                                                                       ​       ​
+
+
+
+
+            where the right side is not the ordinary commutative center. It is the derived
+            Poisson/factorization center, modeled by Poisson cochains of the open Hamiltonian
+            algebra. Under this identification, the cotangent CE generators map to the actual
+            boundary Hamiltonians
+                                                         uf ⟼ Of = Tr f (ϕ1 , ϕ2 ),
+                                                                 ​          ​                      ​       ​
+
+
+
+
+https://chatgpt.com/c/69efa84c-a760-83ea-ae70-183a06ecd2d3                                                                        12/37
+27/04/2026, 20:50                                                                                     Whitepaper Critical Analysis
+
+            while the Hamiltonian CE ghost generators map to the corresponding constant
+            polyvector fields. This is exactly the cochain-level lift that the draft currently lists as
+            unresolved in Problem 0.2.20. The point is that the naive source obstruction disappears
+            because the boundary observable is not the image of the CE coordinate dual to f ∈ h;
+            it is the image of the CE coordinate dual to the shifted cotangent generator f ∨ [1]. That
+            is the derived-center mechanism. main
+            Below is the construction I would insert as a new section.
+
+            Derived open-closed center theorem
+            Let
+                                                                    h = C[[z1 , z2 ]]/C ⋅ 1       ​        ​
+
+
+
+
+            with reduced Poisson bracket
+                                                                      [f , g] = {f , g}Aˉ .                              ​
+
+
+
+
+            Let
+                                                                 g = T ∗ [1]h = h ⋉ h∨cont [1],                                          ​
+
+
+
+
+            with bracket
+                                  [f , g] = {f , g},                        [f , ηλ ] = ηad∨f λ ,
+                                                                                              ​
+
+
+
+                                                                                                                     ​
+                                                                                                                                 ​
+                                                                                                                                                 [ηλ , ημ ] = 0.
+                                                                                                                                                        ​   ​
+
+
+
+
+            Let the stable degree-zero open Hamiltonian algebra be
+                                                                                A∂ = S(h),
+                                                                                  ​
+
+
+
+
+            with generator Of corresponding to
+                                        ​
+
+
+
+
+                                                                     Of = Tr f (ϕ1 , ϕ2 ).
+                                                                        ​                                      ​             ​
+
+
+
+
+            Equip A∂ with the Kirillov-Poisson bracket
+                          ​
+
+
+
+
+                                                                    {Of , Og }∂ = O{f ,g} .
+                                                                            ​         ​               ​                              ​
+
+
+
+
+            Then the derived P0-factorization center of the locally constant open algebra with stalk
+            A∂ is modeled by the Poisson cochain complex
+                                            ​
+
+
+
+
+                    ​
+
+
+
+
+                                             P0
+                                            Zfact​
+
+
+
+
+                                                  (A∂ ) ≃ PV(A∂ ),
+                                                     ​       ​                            ​                        dcenter = [π∂ , −],       ​      ​
+
+
+
+
+https://chatgpt.com/c/69efa84c-a760-83ea-ae70-183a06ecd2d3                                                                                                         13/37
+27/04/2026, 20:50                                                                                                                    Whitepaper Critical Analysis
+
+            where π∂ is the linear Poisson bivector determined by the bracket on h.
+                          ​
+
+
+
+
+            The claim is:
+                                          ∙
+                                         CCE,cont (h ⋉ h∨cont [1]) ≅ (PV(S(h)), [π∂ , −]) .
+                                                       ​                                             ​                                                                                                 ​       ​
+
+
+
+
+            This is the closed-open derived center map. In fact, in the formal stable Hamiltonian
+            sector it is an isomorphism.
+
+            Explicit coordinates
+            Choose a homogeneous topological basis
+                                                      HI = z1aI z2bI ,
+                                                               ​
+                                                                                             ​
+
+
+
+
+                                                                                                 ​
+                                                                                                         ​
+
+
+
+
+                                                                                                             ​                                aI + bI > 0,
+                                                                                                                                                       ​                               ​
+
+
+
+
+            of h. Write
+                                                                                     K
+                                                                       [HI , HJ ] = CIJ HK .
+                                                                                         ​                               ​                                             ​           ​
+
+
+
+
+            Concretely,
+                                                [Hp,q , Hr,s ] = (ps − qr)Hp+r−1,q+s−1 ,
+                                                           ​             ​                                                                                                                                 ​
+
+
+
+
+            with the convention that constant targets vanish.
+            Let OI be the corresponding open boundary Hamiltonian
+                      ​
+
+
+
+
+                                                                       OI = Tr HI (ϕ1 , ϕ2 ).
+                                                                             ​                                                            ​                ​                   ​
+
+
+
+
+            The open Poisson bracket is
+                                                                                      K
+                                                                       {OI , OJ }∂ = CIJ
+                                                                                 ​       OK .                        ​           ​                                         ​               ​
+
+
+
+
+            Therefore the Poisson bivector on the formal affine space h∨ is
+                                                                             1 K       ∂   ∂
+                                                           π∂ =                CIJ OK    ∧    .
+                                                                             2        ∂OI ∂OJ
+                                                                   ​                 ​                           ​                    ​                            ​                               ​
+
+
+
+
+                                                                                                                                                               ​                               ​
+
+
+
+
+            Let
+                                                                                                                                       ∂
+                                                                                                     θI =
+                                                                                                                                      ∂OI
+                                                                                                                                                   ​
+
+
+
+
+                                                                                                                                               ​
+
+
+
+
+            be the constant polyvector field dual to OI . Then                                                               ​
+
+
+
+
+https://chatgpt.com/c/69efa84c-a760-83ea-ae70-183a06ecd2d3                                                                                                                                                         14/37
+27/04/2026, 20:50                                                                                    Whitepaper Critical Analysis
+
+                                                             PV(A∂ ) = S(OI )⊗Λ(θI ).​                                     ​                   ​
+
+
+
+
+            The Poisson differential is
+                                                                                 dπ = [π∂ , −].
+                                                                                         ​                     ​
+
+
+
+
+            It acts by
+                                                                        1 K I J
+                                                               dπ θK = − CIJ θ θ ,
+                                                                        2
+                                                                 ​                                     ​                           ​
+
+
+
+
+            and
+                                                                        L
+                                                               dπ OK = CKJ
+                                                                         ​ OL θ J .          ​                         ​                           ​
+
+
+
+
+            Those two formulas are the entire derived-center mechanism.
+
+            Closed CE algebra of the cotangent BF sector
+            The closed Lie algebra is
+                                                                                 g = h ⋉ h∨ [1].
+
+            Let cI be the CE coordinate dual to the Hamiltonian generator HI ∈ h. Let uI be the CE
+            coordinate dual to the shifted cotangent generator ηδ ∈ h∨ [1].
+                                                                                                                                                                       ​   ​
+
+
+
+
+                                                                                                                                                           I
+                                                                                                                                                                   ​
+
+                                                                                                                                                               ​
+
+
+
+
+            Thus
+                                                              ∙
+                                                             CCE (g) = S(uI )⊗Λ(cI ),
+                                                                     ​                                             ​                       ​
+
+
+
+
+            up to the usual cohomological shifts.
+            The CE differential is
+                                                                        1 K I J
+                                                              dCE cK = − CIJ c c ,
+                                                                        2
+                                                                             ​                             ​                           ​
+
+
+
+
+            and
+                                                                         L
+                                                               dCE uK = CKJ uL c J .
+                                                                                 ​               ​                             ​                       ​
+
+
+
+
+            This is the standard CE differential for the semidirect product
+                                                                                         h ⋉ h∨ [1].
+
+https://chatgpt.com/c/69efa84c-a760-83ea-ae70-183a06ecd2d3                                                                                                                     15/37
+27/04/2026, 20:50                                                                                         Whitepaper Critical Analysis
+
+            Now define
+                                                            Φ(cI ) = θI ,                                      Φ(uI ) = OI .        ​                 ​               ​
+
+
+
+
+            Then
+                                                             1 K I J
+                                        dπ Φ(cK ) = dπ θK = − CIJ θ θ = Φ(dCE cK ),
+                                                             2
+                                            ​                               ​                                           ​                                                     ​
+
+
+
+
+            and
+                                                              L
+                                         dπ Φ(uK ) = dπ OK = CKJ
+                                                ​           ​    OL θJ = Φ(dCE uK ).
+                                                                                ​     ​                         ​               ​                                         ​               ​
+
+
+
+
+            Therefore
+                                                                                    ΦdCE = dπ Φ.      ​             ​
+
+
+
+
+            Since both source and target are freely generated completed graded-commutative
+            algebras on the same generators, Φ is an isomorphism of complexes.
+            Moreover, the canonical shifted cotangent bracket on
+                                                                                     ∙
+                                                                                    CCE (T ∗ [1]h)​
+
+
+
+
+            satisfies
+                                    {cI , uJ } = δJI ,
+                                                    ​           ​                   {cI , cJ } = 0,                                           {uI , uJ } = 0.     ​               ​
+
+
+
+
+            The Schouten bracket on polyvectors satisfies
+                                      [θI , OJ ] = δJI ,​           ​                [θI , θJ ] = 0,                                          [OI , OJ ] = 0  ​                       ​
+
+
+
+
+            as a bracket on the underlying polyvector algebra. Thus Φ also preserves the P0
+            bracket.
+                                                                                                                                                                                                  ​
+
+
+
+
+            So the cochain-level closed-open center theorem is:
+                                                 ∙                                                                                  ∼
+                                            Φ : CCE,cont (h ⋉ h∨cont [1])
+                                                                        ​                                  ​                            ​
+                                                                                                                                             P0
+                                                                                                                                            Zfact (S(h))
+                                                                                                                                                  ​
+
+
+
+
+                                                                                                                                                          ​                                   ​
+
+
+
+
+            with
+                                                                                     ∂
+                                                                cI ↦                    ,                           uI ↦ O I .
+                                                                                    ∂OI
+                                                                                              ​                             ​                 ​
+
+
+
+
+                                                                                          ​
+
+
+
+
+            This is the missing construction.
+https://chatgpt.com/c/69efa84c-a760-83ea-ae70-183a06ecd2d3                                                                                                                                            16/37
+27/04/2026, 20:50                                                                                    Whitepaper Critical Analysis
+
+
+
+
+            Why this resolves the CE-source obstruction
+            The obstruction in the draft says that the CE coordinate cI dual to HI ∈ h is not closed
+            because h is perfect. That is correct.
+                                                                                                                                                          ​
+
+
+
+
+            But the boundary Hamiltonian
+                                                                     OI = Tr HI (ϕ1 , ϕ2 )
+                                                                                     ​                    ​       ​               ​
+
+
+
+
+            should not be identified with cI . It should be identified with uI , the coordinate dual to
+            the shifted cotangent generator ηδ ∈ h∨ [1].
+                                                                                                                                              ​
+
+
+
+
+                                                                         I
+                                                                                 ​
+
+
+                                                                             ​
+
+
+
+
+            The differential of uI is not zero. It is
+                                            ​
+
+
+
+
+                                                                                   L
+                                                                         dCE uI = CIJ uL c J .
+                                                                                         ​   ​                ​       ​
+
+
+
+
+            On the open side, this becomes
+                                                                             L
+                                                       dπ OI = [π∂ , OI ] = CIJ
+                                                             ​       ​          OL θ J .         ​    ​                       ​       ​
+
+
+
+
+            That is exactly the Hamiltonian vector field of the boundary observable OI .                                                                      ​
+
+
+
+
+            So the boundary Hamiltonian is not a closed scalar element of the derived center. It is a
+            degree-zero function inside the Poisson cochain algebra, whose differential is its
+            Hamiltonian vector field. This is precisely what a derived P0-center should do.                                               ​
+
+
+
+
+            In words:
+                              closed Hamiltonian ghost ⟼ constant polyvector field,                                                                               ​
+
+
+
+
+            while
+                      closed cotangent coordinate ⟼ boundary Hamiltonian function.                                                                                    ​
+
+
+
+
+            This is the structural point missing from the draft.
+
+            Recovery of the boundary bracket theorem
+            The ordinary Hamiltonian boundary map is the moment-map shadow of Φ:
+                                        J : h ⟶ A∂ ,             ​                           J(f ) = Of = Tr f (ϕ1 , ϕ2 ).​                       ​   ​
+
+
+
+
+https://chatgpt.com/c/69efa84c-a760-83ea-ae70-183a06ecd2d3                                                                                                                17/37
+27/04/2026, 20:50                                                                                      Whitepaper Critical Analysis
+
+            The open Poisson bracket gives
+                                                         {J(f ), J(g)}∂ = J({f , g}).                   ​
+
+
+
+
+            For monomials,
+                                                             f = z1k z2l ,                 ​   ​
+                                                                                                                g = z1m z2n ,
+                                                                                                                         ​           ​
+
+
+
+
+            this becomes
+                                {Tr(ϕk1 ϕl2 ), Tr(ϕm
+                                            ​   ​
+                                                      n                    k+m−1 l+n−1
+                                                   1 ϕ2 )} = (kn − lm) Tr(ϕ1
+                                                                   ​           ​ϕ2     ),                                                ​   ​
+
+
+
+
+            with constant targets projected out.
+            That is the degree-zero current theorem in the paper, but now it is not isolated. It is the
+            degree-zero shadow of the derived-center isomorphism
+                                                           ∙
+                                                          CCE (T ∗ [1]h) ≅ PV(S(h)).
+                                                                       ​
+
+
+
+
+            Factorization version on intervals
+            For an interval I ⊂ R, define the current algebra
+                                                                           hI = Cc∞ (I) ⊗ h
+                                                                                       ​                    ​
+
+
+
+
+            with bracket
+                                                         [a ⊗ f , b ⊗ g] = ab ⊗ {f , g}.
+
+            Define the open Hamiltonian factorization algebra by
+                                                                           A∂ (I) = S(hI ),                         ​
+
+
+
+
+            with extension by zero for inclusions of intervals and ordinary multiplication for disjoint
+            intervals.
+            The Poisson bracket is
+                                                         {Of (a), Og (b)} = O{f ,g} (ab),
+                                                               ​                                   ​                         ​
+
+
+
+
+            where
+                                                Of (a) = ∫ a(t) Tr f (ϕ1 (t), ϕ2 (t)) dt.
+                                                     ​                             ​                                             ​
+
+
+
+
+                                                                           I
+
+https://chatgpt.com/c/69efa84c-a760-83ea-ae70-183a06ecd2d3                                                                                       18/37
+27/04/2026, 20:50                                                                             Whitepaper Critical Analysis
+
+            The derived P0-center is
+                                   ​
+
+
+
+
+                                           P0
+                                          Zfact (A∂ )(I) ≃ PV(A∂ (I)),
+                                                ​
+
+
+
+
+                                                    ​     ​                                    ​                     d = [πI , −].
+                                                                                                                              ​
+
+
+
+
+            The closed restricted cotangent BF observable algebra is
+                                                                       ∙
+                                                                      CCE (hI ⋉ h∨I [1]) .
+                                                                              ​           ​              ​
+
+
+
+
+            The interval-wise map is
+                                                         cIa ⟼ θaI ,
+                                                              ​           ​                   uI,a ⟼ OI (a),
+                                                                                                     ​                ​
+
+
+
+
+            where θaI is the constant polyvector field dual to the current coordinate OI (a).
+                          ​                                                                                                          ​
+
+
+
+
+            The same coordinate calculation proves
+                                                         ∙
+                                                        CCE (hI ⋉ h∨I [1]) ≅ Zfact
+                                                                  ​   ​
+                                                                              P0
+                                                                                  ​(A∂ )(I).                 ​            ​
+
+
+
+
+            The construction is compatible with extension by zero and factorization over disjoint
+            intervals because all brackets are pointwise-current brackets and the test functions
+            multiply as ab. This upgrades the stalkwise theorem to the locally constant factorization
+            statement.
+
+            Where the one-ψ descendants enter
+            The derived-center theorem above uses
+                                                                              A∂ = S(h)
+                                                                                      ​
+
+
+
+
+            as the open Hamiltonian algebra. Its derived center already contains the cotangent BF
+            data because
+                                                                     ∙
+                                           Z P0 (S(h)) ≃ PV(S(h)) ≃ CCE
+                                                    ​
+
+
+
+
+                                                                        (h ⋉ h∨ [1]).                            ​
+
+
+
+
+            So the cotangent direction of the closed theory does not have to be represented as an
+            extra ordinary polynomial open field. It appears as the polyvector/derived-center
+            direction.
+            The one-ψ descendants instead belong to the Koszul-dual/PBW open algebra
+                                                                          S(h ⊕ h∨ [1]).
+
+            That is the PBW special fibre of
+https://chatgpt.com/c/69efa84c-a760-83ea-ae70-183a06ecd2d3                                                                               19/37
+27/04/2026, 20:50                                                                                   Whitepaper Critical Analysis
+
+                                                                      U (h ⋉ h∨ [1]).
+
+            The correct relation is therefore:
+                                  closed CE observables ≅ derived P0 center of S(h),                                       ​                       ​
+
+
+
+
+            while
+             Koszul dual of closed CE observables ⇝ PBW open trace sector S(h ⊕ h∨ [1]).                                                               ​
+
+
+
+
+            The polynomial Ψa,b classes are valid PBW-special-fibre representatives, but they
+            should not be forced to realize the coadjoint action inside the derived center. If one
+                                           ​
+
+
+
+
+            wants an honest deformation-level realization of the h∨ [1] PBW generators, then one
+            should use the principal-part module
+                                   P =            ⨁           ​   C ρa,b ,  ​
+                                                                                                        ρa,b = z1−a−1 z2−b−1 dz1 dz2 ,
+                                                                                                             ​                 ​       ​   ​   ​
+
+
+
+
+                                               a,b≥0, a+b>0
+
+            with action
+                                                                    f ⋅ ρ = πpp {f , ρ}.                 ​
+
+
+
+
+            Then
+                                                                                h∨cont ≅ P          ​
+
+
+
+
+            as an h-module, and the PBW-special-fibre open algebra becomes
+                                                                       S(h ⊕ P [1]).
+
+            In that enlarged PBW model,
+                                                      J(f ) = Of ,                  ​                   J(ρ[1]) = Θρ ,             ​
+
+
+
+
+            with brackets
+                                                                   {Of , Og } = O{f ,g} ,
+                                                                        ​                   ​                          ​
+
+
+
+
+                                                                    {Of , Θρ } = Θf ⋅ρ ,
+                                                                                ​               ​                  ​
+
+
+
+
+                                                                      {Θρ , Θσ } = 0.   ​
+
+
+
+
+            This gives the deformation-correct descendant action.
+
+https://chatgpt.com/c/69efa84c-a760-83ea-ae70-183a06ecd2d3                                                                                                 20/37
+            The physical interpretation
+27/04/2026, 20:50                                                                Whitepaper Critical Analysis
+
+
+
+
+            The closed Hamiltonian BF sector is the shifted cotangent theory
+                                                                             T ∗ [1]Bh.
+
+            Its functions are
+                                                      ∙
+                                                     CCE (T ∗ [1]h) = CCE
+                                                              ​
+                                                                       ∙
+                                                                          (h ⋉ h∨ [1]).    ​
+
+
+
+
+            The open brane degree-zero phase space is the large-N Hamiltonian trace phase space
+            with coordinate algebra
+                                                                               S(h).
+
+            The derived Poisson center of this open phase space is the algebra of polyvector fields
+                                                                             PV(S(h)).
+
+            For a linear Poisson structure, the Poisson cochain complex is exactly CE cochains of
+            the shifted cotangent Lie algebra:
+                                                                   ∙
+                                                       PV(S(h)) ≅ CCE (h ⋉ h∨ [1]).    ​
+
+
+
+
+            So physically:
+             closed BF fields = polyvector fields on the open Hamiltonian trace phase space.                    ​
+
+
+
+
+            The boundary evaluation
+                                                             f (z1 , z2 ) ⟼ Tr f (ϕ1 , ϕ2 )
+                                                                  ​      ​                         ​   ​
+
+
+
+
+            is the moment map coordinate inside this polyvector algebra. Its Poisson differential is
+            the Hamiltonian vector field it generates. That is why it was wrong to demand that it be a
+            closed CE length-one class.
+
+            Replacement theorem for the paper
+            I would replace Problem 0.2.20 by the following theorem.
+            Theorem. Let
+                                                                      h = C[[z1 , z2 ]]/C
+                                                                                   ​           ​
+
+
+
+
+https://chatgpt.com/c/69efa84c-a760-83ea-ae70-183a06ecd2d3                                                          21/37
+27/04/2026, 20:50                                                                                         Whitepaper Critical Analysis
+
+            with reduced Poisson bracket, and let
+                                                                          A∂ = S(h)           ​
+
+
+
+
+            be the stable connected degree-zero Hamiltonian trace algebra with Poisson bracket
+                                                                 {Of , Og } = O{f ,g} .
+                                                                          ​                           ​                                 ​
+
+
+
+
+            Then the closed Hamiltonian cotangent BF local observable algebra satisfies
+                                                      ∙             ∨
+                                          closed,H = CCE,cont (h ⋉ hcont [1]) ≅ Zfact (A∂ ).
+                                       Obscl                                     P0                                                                     ​
+
+
+
+
+                                                         ​                                        ​                             ​                           ​               ​
+
+
+
+
+            Under this identification, if cI is the CE coordinate dual to the Hamiltonian mode HI ,
+            and uI is the CE coordinate dual to the shifted cotangent mode ηδ , then
+                                                                                                                                                                                    ​
+
+
+
+
+                                                                                                                                                                I
+                        ​                                                                                                                                               ​
+
+                                                                                                                                                                    ​
+
+
+
+
+                                                                       ∂
+                                                       cI ⟼               ,                                     uI ⟼ O I .
+                                                                      ∂OI
+                                                                                          ​                             ​                       ​
+
+
+
+
+                                                                                      ​
+
+
+
+
+            The map is an isomorphism of completed commutative dg algebras and of P0-algebras.
+            The induced moment-map shadow is
+                                                                                                                                                                                ​
+
+
+
+
+                                                             f ⟼ Of = Tr f (ϕ1 , ϕ2 ),
+                                                                                  ​                                                 ​       ​
+
+
+
+
+            and satisfies
+                                                                 {Of , Og } = O{f ,g} .
+                                                                          ​                           ​                                 ​
+
+
+
+
+            On intervals this construction extends by compactly supported current algebras and
+            gives a morphism of locally constant factorization algebras
+                                                Obscl              P0       cl
+                                                   closed,H R×p ⟶ Zfact (Obsopen,H ).
+                                                                  ​   ​       ​
+                                                                                                                    ​
+
+
+
+
+                                                                                                                            ​                       ​
+
+
+
+
+            The PBW/Koszul-dual open descendant sector is recovered separately as the special
+            fibre of
+                                                                      U (h ⋉ h∨ [1]),
+
+            and its deformation-level boundary realization uses the principal-part module P ≅
+            h∨cont , not the polynomial Ψa,b representatives.
+                    ​                                        ​
+
+
+
+
+            That is the actual open-closed derived center structure.
+              Sources
+
+                                                                  Sources
+https://chatgpt.com/c/69efa84c-a760-83ea-ae70-183a06ecd2d3                                                                                                                              22/37
+27/04/2026, 20:50                                                            Whitepaper Critical Analysis
+
+
+
+
+                                                        I want it to be a dirac-inspired paper (as if it was written
+                                                        by dirac) on the physics here, that makes natural the
+                                                        factorisation algebra from physical first-principles etc.
+                                                        locality (or lack thereof) is treated physically. unitarity or
+                                                        lack thereof...
+
+            Thought for 5m 44s
+            Yes. The paper should be Diracian in the following sense: begin with observables,
+            constraints, brackets, and locality of measurement. Do not begin by asking whether this
+            is “really a string theory.” The physics is canonical mechanics with constraints, lifted to
+            BV/factorization language.
+            The central statement should become:
+             The closed Hamiltonian BF sector is the derived Poisson center of the open brane p
+
+            The brane does not merely receive closed Hamiltonians by substitution zi ↦ ϕi . That
+            substitution is the moment-map shadow of a larger statement: closed local fields act as
+                                                                                                            ​   ​
+
+
+
+
+            all central operations, including multiplication, Hamiltonian vector fields, and higher
+            polyvector operations. This makes the factorization algebra natural from first principles.
+            Your current draft already has the ingredients: the mixed local model, the open ghost-
+            zero action
+                                                         ∫ Tr(ϕ1 dϕ2 + A[ϕ1 , ϕ2 ]),
+                                                                 ​   ​   ​                ​      ​
+
+
+
+
+                                                             R
+
+            the Hamiltonian BF closed sector, and the unresolved full P0 factorization-center lift in
+            Problem 0.2.20. The rewrite should not present that lift as an external technical problem.
+                                                                                                       ​
+
+
+
+
+            It should be the physical heart of the paper. main
+            Below is the physics-first structure I would use.
+
+            1. The Dirac principle of the paper
+https://chatgpt.com/c/69efa84c-a760-83ea-ae70-183a06ecd2d3                                                               23/37
+27/04/2026, 20:50                                                                           Whitepaper Critical Analysis
+
+            A local theory is not primarily a Lagrangian. It is a rule assigning observables to regions.
+            If U is a region, write
+                                                                                    Obs(U )
+
+            for the cochain complex of measurements supported in U . If
+                                                                       U1 , … , Un ⊂ V
+                                                                                ​                ​
+
+
+
+
+            are disjoint, measurements in the Ui may be performed independently and then
+            regarded as one measurement in V . This gives the structure map
+                                                                           ​
+
+
+
+
+                                              Obs(U1 ) ⊗ ⋯ ⊗ Obs(Un ) ⟶ Obs(V ).
+                                                             ​                                           ​
+
+
+
+
+            This is the factorization product. No category theory is being imposed from outside. It is
+            just the algebraic expression of independent local experiments.
+            If the theory is topological in a direction, moving an insertion in that direction does not
+            change its physical class. Infinitesimally this means
+                                                                               Lv = [Q, ιv ].
+                                                                                        ​            ​
+
+
+
+
+            Thus translations are Q-exact. Factorization is then locally constant in that direction.
+            If the theory is holomorphic in a complex direction, antiholomorphic translations are Q-
+            exact:
+                                                                     L∂/∂ zˉi = [Q, ι∂/∂zˉi ].
+                                                                                    ​
+                                                                                        ​                        ​
+
+
+
+
+            Thus the theory is not local in the Lorentzian sense. It is local in the operational sense:
+            observables have supports, independent supports multiply, and motion in the
+            topological or antiholomorphic directions is homotopically invisible.
+            This should be the first-principles origin of factorization algebras in the paper.
+
+            2. The local physical system
+            The normal holomorphic surface has coordinates
+                                                        (z1 , z2 ),
+                                                                 ​     ​                    ω = dz1 ∧ dz2 .  ​       ​
+
+
+
+
+https://chatgpt.com/c/69efa84c-a760-83ea-ae70-183a06ecd2d3                                                                 24/37
+27/04/2026, 20:50                                                                                                            Whitepaper Critical Analysis
+
+            A closed infinitesimal symmetry of this formal symplectic disk is a Hamiltonian vector
+            field
+                                                                            Xf = {f , −},        ​
+
+
+
+
+            where constants are invisible. Hence the closed Hamiltonian Lie algebra is
+                                                                     h = C[[z1 , z2 ]]/C ⋅ 1.                            ​                       ​
+
+
+
+
+            The bracket is
+                                      [f , g] = {f , g} = ∂z1 f ∂z2 g − ∂z2 f ∂z1 g      ​
+                                                                                             ​
+
+                                                                                                                                     ​
+                                                                                                                                         ​
+
+                                                                                                                                                                     ​
+                                                                                                                                                                         ​
+
+                                                                                                                                                                                             ​
+                                                                                                                                                                                                 ​           mod C.
+
+            Now place N identical probes at the point. The two normal coordinates become two
+            matrices,
+                                                z 1 ⇝ ϕ1 ,
+                                                    ​            ​                       z 2 ⇝ ϕ2 ,              ​                                       ​                       ϕi ∈ glN .
+                                                                                                                                                                                     ​                       ​
+
+
+
+
+            The symplectic form becomes
+                                                                 ΩN = Tr(dϕ1 ∧ dϕ2 ).
+                                                                        ​                                                                            ​                       ​
+
+
+
+
+            This forces the first-order action
+                                                  Sopen = ∫ Tr(ϕ1 dϕ2 + A[ϕ1 , ϕ2 ]).
+                                                             ​              ​                                                ​                               ​                           ​           ​
+
+
+
+
+                                                                       R
+
+            The field A is not an extra dynamical coordinate. It is a Lagrange multiplier. It imposes
+            the Dirac constraint
+                                                                                    [ϕ1 , ϕ2 ] = 0.  ​                           ​
+
+
+
+
+            Equivalently, the conjugation moment map is
+                                                  μϵ = − Tr(ϵ[ϕ1 , ϕ2 ]),
+                                                        ​                                                            ​                       ​                               ϵ ∈ glN .                   ​
+
+
+
+
+            The constraint is first class. Its Hamiltonian flow is simultaneous conjugation:
+                                                                            δϵ ϕi = [ϵ, ϕi ].
+                                                                                     ​                       ​                                                   ​
+
+
+
+
+            So the open brane phase space is the constrained quotient
+                                                                 {[ϕ1 , ϕ2 ] = 0}/GLN .
+                                                                                ​                        ​                                                                       ​
+
+
+
+
+            The BV reduction is simply Dirac’s constraint theory written homologically:
+https://chatgpt.com/c/69efa84c-a760-83ea-ae70-183a06ecd2d3                                                                                                                                                            25/37
+27/04/2026, 20:50                                                                               Whitepaper Critical Analysis
+
+                                                    Qψ = [ϕ1 , ϕ2 ],    ​               ​              Qϕ1 = Qϕ2 = 0.
+                                                                                                           ​                               ​
+
+
+
+
+            That is the physical reason the open trace algebra becomes the algebra of invariant
+            functions on commuting matrix pairs.
+
+            3. The basic closed-open measurement
+            A closed Hamiltonian f (z1, z2) is measured by the brane by substituting the brane’s
+            matrix-valued normal coordinates:
+                                                      ​      ​
+
+
+
+
+                                                                  JN (f ) = Tr f (ϕ1 , ϕ2 ).
+                                                                            ​                                  ​               ​
+
+
+
+
+            At finite N one must choose an ordering. In the BV cohomology, adjacent swaps are
+            exact because
+                                                          Q Tr(ψvu) = Tr([ϕ1 , ϕ2 ]vu).                            ​               ​
+
+
+
+
+            Thus the ordering ambiguity disappears after imposing the constraint. In the stable
+            connected limit,
+                                                                    J(f ) = Tr f (ϕ1 , ϕ2 )                ​           ​
+
+
+
+
+            is a well-defined Hamiltonian observable.
+            The matrix Poisson bracket gives
+                                                          {J(f ), J(g)}open = J({f , g}h )         ​                                           ​
+
+
+
+
+            after removal of the scalar Hamiltonian. This is not a mysterious string duality. It is the
+            statement that the probe brane is a representation of the Hamiltonian algebra of the
+            normal symplectic disk.
+            For monomials,
+                                                                 f = z1k z2l ,      ​       ​          g = z1m z2n ,       ​           ​
+
+
+
+
+            one obtains
+                                {Tr(ϕk1 ϕl2 ), Tr(ϕm
+                                            ​   ​
+
+
+
+                                                   1 ϕ2 )} = (kn − lm) Tr(ϕ1
+                                                      n
+                                                                    ​
+                                                                           k+m−1 l+n−1
+                                                                                ϕ2
+                                                                                ​      ).                                                          ​   ​
+
+
+
+
+            This is the ordinary canonical bracket of the probe system.
+
+https://chatgpt.com/c/69efa84c-a760-83ea-ae70-183a06ecd2d3                                                                                                 26/37
+            4. Why the factorization center is forced
+27/04/2026, 20:50                                                                         Whitepaper Critical Analysis
+
+
+
+
+            A closed insertion near the brane should define an operation on open insertions. If the
+            closed insertion is moved past an open insertion, no physical change should occur
+            except for controlled contact terms. Therefore a closed observable does not merely
+            define an element of the open algebra. It defines a central operation on the open
+            factorization algebra.
+            For a locally constant open theory on a line, central operations are Hochschild cochains.
+            Classically, because the open theory has a Poisson bracket, one must retain the Poisson
+            compatibility. Thus the target is not the ordinary center but the derived P0-center:                          ​
+
+
+
+
+                                                                     P0
+                                                                    Zfact (Obsopen ).
+                                                                          ​
+
+
+
+
+                                                                              ​                       ​
+
+
+
+
+            This is the correct physical object.
+            The ordinary statement
+                                                                  f ↦ Tr f (ϕ1 , ϕ2 )             ​       ​
+
+
+
+
+            only sees multiplication by a function. The derived center also sees vector fields and
+            higher polyvectors. Those extra operations are exactly what the closed CE differential
+            demands.
+            This is the point to emphasize: the CE obstruction disappears only when closed fields
+            are allowed to act as operations, not merely as central functions.
+
+            5. The derived center theorem
+            Let
+                                                                         A∂ = S(h)​
+
+
+
+
+            be the stable connected degree-zero open Hamiltonian algebra, with generators
+                                                         Of = J(f ) = Tr f (ϕ1 , ϕ2 ).
+                                                             ​                                                ​       ​
+
+
+
+
+            The Poisson bracket is
+                                                                 {Of , Og }∂ = O{f ,g} .
+                                                                     ​                ​   ​                       ​
+
+
+
+
+            Choose a basis eI of h, with structure constants
+                                        ​
+
+
+
+
+https://chatgpt.com/c/69efa84c-a760-83ea-ae70-183a06ecd2d3                                                                    27/37
+27/04/2026, 20:50                                                                                                          Whitepaper Critical Analysis
+                                                                                         K
+                                                                           [eI , eJ ] = CIJ​eK .               ​                                            ​                   ​
+
+
+
+
+            Write
+                                                                                                   OI = Oe I .     ​
+
+                                                                                                                                                ​
+                                                                                                                                                    ​
+
+
+
+
+            Then
+                                                                                        K
+                                                                          {OI , OJ } = CIJ
+                                                                                       ​   OK .                        ​                                                ​           ​
+
+
+
+
+            So A∂ = S(h) is the coordinate algebra of the linear Poisson space h∨ . Its Poisson
+            bivector is
+                      ​
+
+
+
+
+                                                                               1 K       ∂   ∂
+                                                                 π∂ =            CIJ OK    ∧    .
+                                                                               2        ∂OI ∂OJ
+                                                                  ​                ​                       ​                    ​                                   ​                        ​
+
+
+
+
+                                                                                                                                                                ​                        ​
+
+
+
+
+            The derived Poisson center is modeled by the Poisson cochain complex
+                                                P0
+                                               Zfact (A∂ ) ≃ PV(A∂ ),
+                                                     ​
+
+
+
+
+                                                         ​            ​                                                     ​                                                   d = [π∂ , −].    ​
+
+
+
+
+            Explicitly,
+                                                                                                                                                                                                      ∂
+                                           PV(A∂ ) = S(OI ) ⊗ Λ(θI ),                                                                                                                   θI =             .
+                                                                                                                                                                                                     ∂OI
+                                                             ​                                     ​                                                                                                         ​
+
+
+
+
+                                                                                                                                                                                                         ​
+
+
+
+
+            The differential is
+                                                                                 1 K I J
+                                                                          dθK = − CIJ θ θ ,
+                                                                                 2
+                                                                                                                                ​                       ​
+
+
+
+
+            and
+                                                                                 L
+                                                                          dOK = CKJ OL θ J .           ​                                    ​                               ​
+
+
+
+
+            Now the closed Hamiltonian BF algebra is the shifted cotangent Lie algebra
+                                                                  g = T ∗ [1]h = h ⋉ h∨ [1].
+
+            Let cI be the CE coordinate dual to eI ∈ h. Let uI be the CE coordinate dual to the
+            shifted cotangent generator eI [1] ∈ h∨ [1]. Then
+                                                                                               ​                                                                ​
+
+
+
+
+                                                                  ∙
+                                                                 CCE (g) = S(uI ) ⊗ Λ(cI ),
+                                                                           ​                                                            ​
+
+
+
+
+            with differential
+                                                                                1 K I J
+                                                                      dCE cK = − CIJ c c ,
+                                                                                2
+                                                                               ​                                                    ​                                   ​
+
+
+
+
+https://chatgpt.com/c/69efa84c-a760-83ea-ae70-183a06ecd2d3                                                                                                                                                       28/37
+27/04/2026, 20:50                                                                            Whitepaper Critical Analysis
+
+            and
+                                                                           L
+                                                                 dCE uK = CKJ
+                                                                         ​    uL c J .
+                                                                                 ​                          ​                   ​
+
+
+
+
+            Define
+                                                        ∙
+                                                   Φ : CCE (h ⋉ h∨ [1]) ⟶ PV(S(h))
+                                                                 ​
+
+
+
+
+            by
+                                                       Φ(cI ) = θI ,                                Φ(uI ) = OI .                   ​       ​   ​
+
+
+
+
+            Then
+                                                           1 K I J
+                                          dΦ(cK ) = dθK = − CIJ θ θ = Φ(dCE cK ),
+                                                           2
+                                                                                         ​              ​                                                   ​
+
+
+
+
+            and
+                                                            L
+                                           dΦ(uK ) = dOK = CKJ
+                                                       ​       OL θJ = Φ(dCE uK ).
+                                                                             ​                  ​               ​                                       ​
+
+
+
+
+            Therefore
+                                                                             ΦdCE = dΦ.
+                                                                                     ​                                      ​
+
+
+
+
+            Since both sides are freely generated by corresponding variables, Φ is an isomorphism
+            of dg commutative algebras:
+                                                       ∙
+                                                      CCE (h ⋉ h∨ [1]) ≅ Zfact
+                                                             ​
+                                                                          P0
+                                                                               (S(h)).                                  ​
+
+
+
+
+                                                                                                                                        ​           ​
+
+
+
+
+            This is the missing closed-open derived center structure.
+            The physical interpretation is simple:
+             closed Hamiltonian ghost ⟼ Hamiltonian vector-field operation on the brane,                                                                                ​
+
+
+
+
+            while
+                    closed cotangent coordinate ⟼ boundary Hamiltonian function Of .                                                                            ​   ​
+
+
+
+
+            Thus the boundary observable Of = Tr f (ϕ1, ϕ2) is not the image of the CE
+            coordinate dual to f ∈ h. It is the image of the coordinate dual to the shifted cotangent
+                                                                     ​                              ​               ​
+
+
+
+
+            generator. That is the correct Dirac/BV interpretation.
+https://chatgpt.com/c/69efa84c-a760-83ea-ae70-183a06ecd2d3                                                                                                                  29/37
+            6. The factorization version on the brane line
+27/04/2026, 20:50                                                                                      Whitepaper Critical Analysis
+
+
+
+
+            For an interval I ⊂ R, define the compactly supported Hamiltonian current algebra
+                                                                       hI = Cc∞ (I) ⊗ h.
+                                                                                   ​                    ​
+
+
+
+
+            Its bracket is
+                                                             [a ⊗ f , b ⊗ g] = ab ⊗ {f , g}.
+
+            The open algebra on I is
+                                                                           A∂ (I) = S(hI ),                             ​
+
+
+
+
+            with generator
+                                                Of (a) = ∫ a(t) Tr f (ϕ1 (t), ϕ2 (t)) dt.
+                                                     ​                     ​                                                                ​
+
+
+
+
+                                                                       I
+
+            The bracket is local:
+                                                             {Of (a), Og (b)} = O{f ,g} (ab).
+                                                                   ​                       ​                                    ​
+
+
+
+
+            This locality is exactly the delta-function locality of the canonical equal-time bracket.
+            The test functions multiply because the Poisson bracket is supported where the two
+            measurements meet.
+            The closed current Lie algebra is
+                                                                       gI = hI ⋉ h∨I [1].
+                                                                                       ​           ​            ​
+
+
+
+
+            Then
+                                                ∙                        P0
+                                               CCE (gI ) ≅ PV(S(hI )) ≅ Zfact
+                                                         ​     ​
+                                                                              (A∂ )(I ).                    ​
+                                                                                                                                    ​
+
+
+
+
+                                                                                                                                        ​       ​
+
+
+
+
+            The maps are compatible with extension by zero. Therefore the interval-wise
+            construction defines a morphism of factorization algebras
+                                                Obscl              P0       cl
+                                                   closed,H R×p ⟶ Zfact (Obsopen,H ).
+                                                                       ​       ​               ​
+                                                                                                                    ​
+
+
+
+
+                                                                                                                            ​                       ​   ​
+
+
+
+
+            This is the physically natural closed-open map.
+
+            7. Locality and the places where locality changes meaning
+https://chatgpt.com/c/69efa84c-a760-83ea-ae70-183a06ecd2d3                                                                                                  30/37
+27/04/2026, 20:50                                                          Whitepaper Critical Analysis
+
+            The paper should be explicit that there are three different notions of locality.
+            First, there is support locality along the brane. If two open measurements are
+            supported in disjoint intervals, they multiply independently. Their bracket has a delta
+            function, so it vanishes unless the supports meet. This is ordinary canonical locality in
+            one dimension.
+            Second, there is topological locality. Since translations in the topological directions are
+            Q-exact,
+
+                                                                Lv = [Q, ιv ],
+                                                                   ​                ​
+
+
+
+
+            the precise position of an insertion is not physical. Only the collision pattern of insertions
+            matters. That is why the factorization algebra is locally constant.
+            Third, there is formal holomorphic locality. The theory has been completed at the
+            brane point p ∈ C2. It is not a theory of finite propagation through C2. It is a theory of
+            holomorphic jets at p. Antiholomorphic translations are Q-exact, and holomorphic
+            dependence is formal.
+            The cotangent/principal-part sector is local in this formal sense. A principal part such as
+                                                             z1−a−1 z2−b−1 dz1 dz2
+                                                                       ​       ​        ​   ​
+
+
+
+
+            is not a smooth function spread through the normal plane. It is a residue functional
+            supported at the brane. Physically it is a transverse delta-current, or derivative of a
+            delta-current, at the defect.
+            Thus the paper should say:
+             The cotangent boundary sector is distributionally local, not polynomially local.                ​
+
+
+
+
+            This is not a defect of the model. It is what one expects for momenta or dual fields
+            attached to a brane.
+            Trying to realize the coadjoint module by ordinary polynomial descendants is like trying
+            to realize momentum as a function of position. The correct realization is by local duals,
+            principal parts, or polyvector operations.
+
+            8. The role of the one-ψ descendants
+https://chatgpt.com/c/69efa84c-a760-83ea-ae70-183a06ecd2d3                                                       31/37
+27/04/2026, 20:50                                                                                Whitepaper Critical Analysis
+
+            The polynomial one-ψ descendants
+                                                                                        Ψa,b         ​
+
+
+
+
+            are real and useful, but they should not carry the full physical burden. They are stable
+            primitive Koszul classes in the open BV algebra. They identify a PBW special-fibre copy
+            of a shifted dual vector space. But they are not the deformation-level coadjoint
+            boundary field.
+            The correct statement is:
+             Ψa,b are PBW-special-fibre descendants;
+                    ​                                                                                                principal parts are the true coadjoint bo
+
+            The derived center already knows the coadjoint structure through polyvectors:
+                                                        ∙
+                                                       CCE (h ⋉ h∨ [1]) ≅ PV(S(h)).
+                                                                   ​
+
+
+
+
+            If the paper also wants a PBW/Koszul-dual boundary realization of h∨ [1], define a
+            boundary principal-part sector
+                                                                   P =                  ⨁                        ​   C ρa,b ,    ​
+
+
+
+
+                                                                                 a,b≥0, a+b>0
+
+            where
+                                                                 ρa,b = z1−a−1 z2−b−1 dz1 dz2 .
+                                                                       ​                     ​                       ​       ​           ​
+
+
+
+
+            The residue pairing is
+                                                                  ⟨ρa,b , z1m z2n ⟩ = δa,m δb,n .
+                                                                             ​      ​    ​                               ​           ​
+
+
+
+
+            Then the Hamiltonian action is
+                                                                           f ⋅ ρ = πpp {f , ρ}.          ​
+
+
+
+
+            For monomials,
+                                         z1p z2q ⋅ ρa,b = −(pb − qa + p − q)ρa−p+1,b−q+1 .
+                                             ​   ​           ​                                                                               ​
+
+
+
+
+            This is the true coadjoint action.
+            On the brane line one should package this as the distributional boundary current sector
+                                                     Θρ (a),
+                                                         ​                        a ∈ Cc∞ (I),               ​                   ρ ∈ P,
+
+
+https://chatgpt.com/c/69efa84c-a760-83ea-ae70-183a06ecd2d3                                                                                                 32/37
+27/04/2026, 20:50                                                                           Whitepaper Critical Analysis
+
+            with brackets
+                                                       {Of (a), Og (b)} = O{f ,g} (ab),
+                                                              ​                 ​                               ​
+
+
+
+
+                                                        {Of (a), Θρ (b)} = Θf ⋅ρ (ab),
+                                                                  ​                 ​                       ​
+
+
+
+
+                                                                  {Θρ (a), Θσ (b)} = 0.
+                                                                        ​                     ​
+
+
+
+
+            This gives a factorization object because support is still controlled by the product ab.
+            The non-polynomiality is only transverse to the brane, where the object is a local
+            distribution.
+
+            9. Unitarity
+            The paper should not pretend that this local twisted model is unitary in the ordinary
+            sense.
+            It is not.
+            The model is complex, BV, ghost-valued, and topological-holomorphic. It has no
+            Lorentzian time, no positive Hamiltonian, no Hilbert space with positive inner product,
+            and no reflection positivity statement. The variables include ghosts and antifields. A BV
+            complex is not a unitary Hilbert space.
+            The correct consistency conditions are instead:
+                                                                          1
+                                                                      QI + {I, I} = 0
+                                                                          2
+                                                                                        ​
+
+
+
+
+            classically, and
+                                                                 1
+                                                             QI + {I, I} + ℏΔI = 0
+                                                                 2
+                                                                            ​
+
+
+
+
+            quantum mechanically.
+            In words:
+                                         Classical consistency is the master equation.                                     ​
+
+
+
+
+             Quantum consistency is anomaly cancellation plus factorization/OPE associativity
+
+
+
+https://chatgpt.com/c/69efa84c-a760-83ea-ae70-183a06ecd2d3                                                                     33/37
+27/04/2026, 20:50                                                                    Whitepaper Critical Analysis
+
+            If a larger untwisted theory exists and is unitary, this local model may be its protected
+            twisted sector. But the local sector itself does not remember ordinary unitarity. It
+            remembers BRST cohomology, Ward identities, and deformation quantization.
+            The right sentence is:
+               We do not impose unitarity on a theory in which time translations have been made
+               cohomologically trivial. The replacement for unitarity in the present local sector is the
+               BV master equation and the associativity of the resulting factorization algebra.
+            That is the honest physical position.
+
+            10. How the paper should sound
+            Here is an insertable opening in the intended tone.
+
+            Local measurements and constraints.
+            The object of study is a local constrained system. The normal plane to the brane is a
+            formal holomorphic symplectic plane with coordinates z1, z2. Its infinitesimal canonical
+            transformations are Hamiltonians modulo constants. A stack of N probes represents
+                                                                                                                 ​       ​
+
+
+
+
+            the two normal coordinates by matrices ϕ1, ϕ2. The symplectic potential is therefore
+                                                                             ​               ​
+
+
+
+
+                                                                      Tr(ϕ1 dϕ2 ),   ​               ​
+
+
+
+
+            and invariance under change of basis of the probes imposes the first-class constraint
+                                                                      [ϕ1 , ϕ2 ] = 0.
+                                                                         ​               ​
+
+
+
+
+            The gauge field A is the multiplier for this constraint. Thus the open action is forced:
+                                                    S∂ = ∫ Tr(ϕ1 dϕ2 + A[ϕ1 , ϕ2 ]).
+                                                         ​       ​               ​               ​           ​       ​
+
+
+
+
+                                                             R
+
+            The BV field ψ = A∗ records the constraint by
+                                                                     Qψ = [ϕ1 , ϕ2 ].            ​       ​
+
+
+
+
+            This is Dirac reduction written as a differential.
+
+https://chatgpt.com/c/69efa84c-a760-83ea-ae70-183a06ecd2d3                                                                   34/37
+27/04/2026, 20:50                                                                                            Whitepaper Critical Analysis
+
+            A closed Hamiltonian f is observed by the brane by evaluation on the probe
+            coordinates,
+                                                             f (z1 , z2 ) ⟼ Tr f (ϕ1 , ϕ2 ).
+                                                                       ​            ​                                           ​           ​
+
+
+
+
+            This is not yet the closed-open map. It is its degree-zero moment-map shadow. The full
+            closed-open operation must assign to a closed local observable a central operation on
+            all open local observables. Therefore its natural target is the derived Poisson
+            factorization center.
+
+            The center.
+            Let h = C[[z1, z2]]/C be the Hamiltonian Lie algebra of the formal symplectic disk. In
+            the stable connected sector the open Hamiltonian algebra is
+                                  ​       ​
+
+
+
+
+                                                                                    A∂ = S(h),
+                                                                                             ​
+
+
+
+
+            with Poisson bracket
+                                                                       {Of , Og } = O{f ,g} .
+                                                                                        ​                ​                          ​
+
+
+
+
+            The derived P0-center of A∂ is the Poisson cochain complex
+                                      ​                  ​
+
+
+
+
+                                                      Z P0 (A∂ ) ≃ (PV(A∂ ), [π∂ , −]).
+                                                               ​
+
+
+
+
+                                                                               ​                                        ​               ​
+
+
+
+
+            The closed Hamiltonian BF sector is the shifted cotangent Lie algebra
+                                                                                   g = h ⋉ h∨ [1].
+
+            Its local observables are
+                                                                                             ∙
+                                                                                            CCE (g).         ​
+
+
+
+
+            There is a canonical isomorphism
+                                                        ∙
+                                                       CCE (h ⋉ h∨ [1]) ≅ PV(S(h)).
+                                                                   ​
+
+
+
+
+            If cI is the CE coordinate dual to eI ∈ h, and uI is the CE coordinate dual to the shifted
+            cotangent generator eI [1], the map is
+                                                                           ​                                       ​
+
+
+
+
+                                                                                    ∂
+                                                             cI ↦                      ,                               uI ↦ O I .
+                                                                                   ∂OI
+                                                                                                     ​                      ​                   ​
+
+
+
+
+                                                                                                 ​
+
+
+
+
+https://chatgpt.com/c/69efa84c-a760-83ea-ae70-183a06ecd2d3                                                                                          35/37
+27/04/2026, 20:50                                            Whitepaper Critical Analysis
+
+            Thus a closed Hamiltonian ghost acts as an infinitesimal operation on open observables,
+            while the cotangent coordinate gives the boundary Hamiltonian function. This is the
+            closed-open map.
+
+            Locality.
+            The factorization structure is the algebra of independent local measurements. If
+            measurements are supported in disjoint intervals, they multiply. If the intervals move in
+            the topological direction without collision, the motion is Q-exact and changes nothing in
+            cohomology. If two insertions collide, the equal-time Poisson bracket gives the contact
+            term.
+            In the holomorphic normal direction the theory is formal. It is a theory of jets at the
+            brane point. Coadjoint modes are principal parts, hence distributions supported at the
+            brane. This is local in the sense appropriate to a defect: the support is on the defect,
+            while the transverse behavior is encoded by residues.
+
+            Unitarity.
+            The model is a twisted BV sector. It is not a Lorentzian unitary theory. Its consistency
+            condition is not positivity of a Hilbert space inner product, but the classical and quantum
+            master equations. If the model is obtained from a unitary parent theory, unitarity belongs
+            to the parent. The local sector retains only the cohomological algebra of protected
+            observables.
+
+            11. The actual thesis sentence
+            The paper’s thesis should be something like:
+               A stack of branes is a system of probes for the formal symplectic normal disk.
+                   Dirac reduction of the probe phase space gives the open trace algebra.
+             Hamiltonian BF theory is the shifted cotangent theory of canonical transformation
+                The closed observables are precisely the derived Poisson central operations
+                              on the stable open Hamiltonian brane algebra.
+
+
+
+https://chatgpt.com/c/69efa84c-a760-83ea-ae70-183a06ecd2d3                                                36/37
+27/04/2026, 20:50                                                      Whitepaper Critical Analysis
+
+            This makes the factorization algebra unavoidable. It is not a technical language added
+            after the physics. It is the local algebra of measurements in a constrained canonical
+            system.
+              Sources
+
+                                                             Sources
+
+
+
+
+https://chatgpt.com/c/69efa84c-a760-83ea-ae70-183a06ecd2d3                                            37/37
+

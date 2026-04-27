@@ -17,9 +17,9 @@ Computations and remarks on **Kodaira–Spencer gravity and quantum string ampli
 - `scripts/` — computation scripts.
 - `amstex-template`, `tex-documentation` — build apparatus.
 
-**Research constellation role.** BCOV / Kodaira–Spencer gravity is the physics dual to the chiral homology of a Calabi–Yau threefold: the closed-string amplitude stratification at $\hat{s}$. Conventions ($d = \dim_{\mathbb{C}} X$, worldsheet $\Sigma$, framing datum on $S^3$) must agree with Vol III (`~/calabi-yau-quantum-groups`) when stated in both. Any divergence is load-bearing — report, do not silently reconcile.
+**Research constellation role.** BCOV / Kodaira–Spencer gravity supplies the physics motivation and convention-checking interface for the Vol III CY-to-chiral frontier in `~/calabi-yau-quantum-groups`. Treat this as context unless a local theorem states and proves a precise comparison. No statement in this repository implies a compact CY$_3$, Vol III, or global BCOV theorem without a separate matched-conventions proof. Conventions ($d = \dim_{\mathbb{C}} X$, worldsheet $\Sigma$, framing datum on $S^3$) must agree with Vol III when stated in both. Any divergence is load-bearing — report, do not silently reconcile.
 
-Modular-form frontier: the generating functions that appear here tie to the Igusa cusp form $\Delta_5$ construction in `~/igusa-cusp-form` via the Borcherds / BKM route.
+Modular-form frontier: generating functions in topological-string theory motivate comparison with the Igusa cusp form $\Delta_5$ construction in `~/igusa-cusp-form` via the Borcherds / BKM route. This is a heuristic and convention-checking bridge here, not a BKM consequence of the local Hamiltonian BF/Moyal calculation.
 
 **Voice.** `~/ecosystem/INVARIANTS.md §IV` — Russian mathematical school + mathematical-physics frontier. Named attribution (Bershadsky–Cecotti–Ooguri–Vafa 1993, Witten 1988, Costello 2011, Polyakov 1987), honest epistemic status, physical intuition and formal rigor coexisting without either subordinating the other.
 

@@ -199,8 +199,8 @@ If any category falls short — restart that category. Do not patch.
 
 - `~/chiral-bar-cobar` — Vol I of the chiral bar–cobar series.
 - `~/chiral-bar-cobar-vol2` — Vol II ($A_\infty$ chiral algebras + 3D HT QFT).
-- `~/calabi-yau-quantum-groups` — Vol III (CY-to-chiral frontier). BCOV / Kodaira–Spencer is the **physics dual** of the chiral homology of a CY threefold; conventions must agree when stated in both, and any divergence is load-bearing.
-- `~/igusa-cusp-form` — Borcherds lift + BKM + $\Delta_5$. The modular generating functions that appear in the topological-string partition function (elliptic genera, $\mathcal{N}=4$ / second-quantized $K3$) tie to the Borcherds / BKM route there.
+- `~/calabi-yau-quantum-groups` — Vol III (CY-to-chiral frontier). BCOV / Kodaira–Spencer supplies physics motivation and convention-checking for the chiral homology of a Calabi-Yau threefold. Treat this as context unless a local theorem states and proves a precise comparison; no compact CY$_3$, Vol III, or global BCOV theorem follows from this repository without a separate matched-conventions proof.
+- `~/igusa-cusp-form` — Borcherds lift + BKM + $\Delta_5$. Topological-string generating functions motivate comparison with the Borcherds / BKM route there. In this repository that relation is heuristic and convention-checking unless a theorem explicitly proves otherwise; no BKM consequence follows from the local Hamiltonian BF/Moyal calculation alone.
 
 Load-bearing claims about $F_g$, the holomorphic anomaly equation, worldsheet instanton sums, or mirror-symmetric corrections must be consistent with the Vol III CY frontier. Disagreement is the deliverable; report, do not silently reconcile.
 

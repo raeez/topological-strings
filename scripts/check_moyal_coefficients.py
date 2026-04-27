@@ -81,6 +81,13 @@ def star_commutator_coeff(f: Poly, g: Poly, r: int) -> Poly:
     )
 
 
+def expected_star_commutator_coeff(f: Poly, g: Poly, r: int) -> Poly:
+    """All-order coefficient forced by P^r(g,f)=(-1)^r P^r(f,g)."""
+    if r == 0 or r % 2 == 0:
+        return {}
+    return scale(Fraction(1, 2 ** (r - 1) * factorial(r)), p_power(f, g, r))
+
+
 def expected_p1(k: int, l: int, m: int, n: int) -> Poly:
     return monomial(k + m - 1, l + n - 1, Fraction(k * n - l * m))
 
@@ -100,7 +107,8 @@ def expected_p3(k: int, l: int, m: int, n: int) -> Poly:
 
 
 def run() -> None:
-    max_exp = 6
+    max_exp = 10
+    max_order = 11
     checked = 0
     for k in range(max_exp + 1):
         for l in range(max_exp + 1):
@@ -117,8 +125,21 @@ def run() -> None:
                     assert star_commutator_coeff(f, g, 3) == scale(
                         Fraction(1, 24), expected_p3(k, l, m, n)
                     )
+                    for r in range(max_order + 1):
+                        assert p_power(g, f, r) == scale(
+                            Fraction((-1) ** r), p_power(f, g, r)
+                        )
+                        assert star_commutator_coeff(
+                            f, g, r
+                        ) == expected_star_commutator_coeff(f, g, r)
                     checked += 1
-    print(f"checked {checked} Moyal coefficient cases with exponents <= {max_exp}")
+    print(
+        "checked "
+        f"{checked} Moyal coefficient cases with exponents <= {max_exp} "
+        f"and orders <= {max_order}"
+    )
+    for r in range(1, max_order + 1, 2):
+        print(f"r={r}: odd commutator coefficient = 1/{2 ** (r - 1) * factorial(r)}")
 
 
 if __name__ == "__main__":

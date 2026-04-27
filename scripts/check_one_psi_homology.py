@@ -176,7 +176,11 @@ def check_bidegree(k: int, l: int) -> tuple[int, int, int]:
     psi = [1 for _ in w_basis]
     assert mat_vec(d1, psi) == [0 for _ in n_basis], (k, l, "Psi is not closed")
     rank_with_psi = rank(columns_to_rows(d2_cols + [psi], len(w_basis)))
-    assert rank_with_psi == rank_d2 + 1, (k, l, "Psi is a boundary")
+    assert rank_with_psi == rank_d2 + 1, (
+        k,
+        l,
+        "Psi is not independent modulo boundaries",
+    )
     assert hom_dim == 1, (k, l, hom_dim)
     return len(w_basis), len(n_basis), rank_d2
 
@@ -285,6 +289,37 @@ def check_coadjoint_formula(max_exp: int) -> int:
     return checked
 
 
+def principal_part_action_expected(
+    ham_k: int, ham_l: int, pole_k: int, pole_l: int
+) -> dict[tuple[int, int], int]:
+    """Compute {x^ham_k y^ham_l, x^-pole_k-1 y^-pole_l-1 dx dy}_pp."""
+    target_k = pole_k - ham_k + 1
+    target_l = pole_l - ham_l + 1
+    coefficient = -(ham_k * pole_l - ham_l * pole_k + ham_k - ham_l)
+    if target_k < 0 or target_l < 0 or target_k + target_l == 0 or coefficient == 0:
+        return {}
+    return {(target_k, target_l): coefficient}
+
+
+def check_principal_part_formula(max_exp: int) -> int:
+    checked = 0
+    for ham_k in range(max_exp + 1):
+        for ham_l in range(max_exp + 1):
+            if ham_k + ham_l == 0:
+                continue
+            for pole_k in range(max_exp + 1):
+                for pole_l in range(max_exp + 1):
+                    if pole_k + pole_l == 0:
+                        continue
+                    assert principal_part_action_expected(
+                        ham_k, ham_l, pole_k, pole_l
+                    ) == coadjoint_action_expected(
+                        ham_k, ham_l, pole_k, pole_l
+                    ), (ham_k, ham_l, pole_k, pole_l)
+                    checked += 1
+    return checked
+
+
 def run() -> None:
     max_exp = 5
     checked = 0
@@ -305,6 +340,11 @@ def run() -> None:
     print(
         "checked closed coadjoint Taylor-dual formula in "
         f"{coadjoint_checked} cases with exponents <= 5"
+    )
+    principal_part_checked = check_principal_part_formula(5)
+    print(
+        "checked principal-part coadjoint realization in "
+        f"{principal_part_checked} cases with exponents <= 5"
     )
 
 
