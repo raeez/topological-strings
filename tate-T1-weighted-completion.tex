@@ -113,9 +113,11 @@
       $C_w\geq 0$ such that
       $w(p+q-2)\leq C_w\,w(p)w(q)$ for every $p,q\geq2$;
     \item\label{w:W2} \emph{Coadjoint-tame:} there exists a constant
-      $C'_w\geq 0$ such that
-      $w(q-p+2)\leq C'_w\,w(p)w(q)^{-1}$ for every $p\geq1$,
-      $q\geq p-1$;
+      $C'_w\geq 0$ such that, for every $p,q\geq 1$ and every degree
+      pair $(a,b)\in\Z_{\geq 0}^2$ with $a\geq p-1$, $b\geq q-1$, the
+      output-versus-input weight ratio of the principal-part coadjoint
+      shift $\rho_{a,b}\mapsto\rho_{a-p+1,b-q+1}$ obeys
+      $w(a+b-p-q+2)\leq C'_w\,w(p+q)\,w(a+b)^{-1}$;
     \item\label{w:W3} \emph{Coevaluation-summable:} the formal series
       \begin{equation}\label{eq:wt-coevaluation-summable}
         \sum_{d\geq1}w(d)^{-1}\dim_\C H_d
@@ -136,15 +138,12 @@
 
 \begin{proof}
   For $w(d)=q^d$, \ref{w:W1} reads $q^{p+q-2}\leq C_w q^{p+q}$, i.e.\
-  $C_w\geq q^{-2}$, so any $C_w\geq q^{-2}$ works. \ref{w:W2} reads
-  $q^{q-p+2}\leq C'_w q^{p-q}=C'_wq^{-(q-p)}$, i.e.\
-  $C'_w\geq q^{(q-p+2)+(q-p)}=q^{2(q-p)+2}$, which is uniform in $p,q$
-  only if we require $q\leq p+1$, i.e.\ the coadjoint factor only acts
-  on lower degrees, which is the case in the Hamiltonian setup since
-  the bracket $\{f,g\}=fg^\vee\partial-\cdots$ has the displayed
-  degree shift only for $p\leq q+1$ in the coadjoint action. Outside
-  this range the coadjoint vanishes, so the inequality is vacuous.
-  \ref{w:W3} is the convergence
+  $C_w\geq q^{-2}$. \ref{w:W2} reads
+  $q^{a+b-p-q+2}\leq C'_w\,q^{p+q-a-b}$, i.e.\
+  $C'_w\geq q^{2(a+b-p-q)+2}$. The coadjoint range
+  $a\geq p-1$, $b\geq q-1$ gives $a+b\geq p+q-2$, hence the exponent
+  $2(a+b-p-q)+2\geq -2$ and $C'_w\geq q^{-2}$ suffices uniformly in
+  $(p,q,a,b)$. \ref{w:W3} is the convergence
   $\sum_d q^{-d}\dim H_d=\sum_d q^{-d}(d+1)<\infty$ for $q>1$.
 
   For $w(d)=(d!)^c$, \ref{w:W1} is the Stirling estimate

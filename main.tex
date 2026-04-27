@@ -251,10 +251,9 @@ multidegree $(k+m-1,l+n-1)$ is $(0,0)$; this is exactly the bidegree the
 manuscript discards as ``scalar trace''.
 
 \begin{lem}\label{lem:omega-cocycle}
-  $\omega$ is a Lie 2-cocycle on $\mathfrak h_{\mathrm{poly}}$, and its
-  cohomology class
-  $$[c]:=[\omega]\in H^2_{\mathrm{Lie}}(\mathfrak h_{\mathrm{poly}},\C)$$
-  is nontrivial. After projection to $\bar A=\mathfrak h_{\mathrm{poly}}/\C$,
+  $\omega$ is a Lie 2-cocycle on $\mathfrak h_{\mathrm{poly}}$.  On
+  $\mathfrak h_{\mathrm{poly}}$ itself it is a coboundary; on the
+  scalar-reduced quotient $\bar A=\mathfrak h_{\mathrm{poly}}/\C\cdot 1$
   the same formula represents a nontrivial class
   $[\bar c]\in H^2_{\mathrm{Lie}}(\bar A,\C)$.
 \end{lem}
@@ -267,18 +266,22 @@ manuscript discards as ``scalar trace''.
   $$\omega(f,\{g,h\})+\omega(g,\{h,f\})+\omega(h,\{f,g\})=0.$$
   Antisymmetry $\omega(g,f)=-\omega(f,g)$ is inherited from antisymmetry of
   the bracket. Hence $\omega\in Z^2_{\mathrm{Lie}}(\mathfrak h_{\mathrm{poly}},\C)$.
-  Suppose $\omega=\delta\eta$ for some linear $\eta:\mathfrak h_{\mathrm{poly}}\to\C$.
-  Then $\omega(f,g)=-\eta(\{f,g\})$. Test on $f=z_1$, $g=z_2$:
-  $\omega(z_1,z_2)=1$ while $\{z_1,z_2\}=1$, so
-  $\eta(1)=-1$. But $z_1\cdot 1$ and $1\cdot z_1$ both bracket to zero with
-  any $g\in\mathfrak h_{\mathrm{poly}}$ except via the same calculation, so
-  the system $\eta(\{f,g\})=-\omega(f,g)$ overdetermines $\eta$: testing on
-  $f=z_1^2,g=z_2$ gives $\eta(2z_1)=0$, hence $\eta$ vanishes on
-  $z_1\C[z_1,z_2]_+$, contradicting $\eta(1)=-1$. Therefore
-  $[\omega]\neq 0\in H^2_{\mathrm{Lie}}(\mathfrak h_{\mathrm{poly}},\C)$.
-  The same argument descends to $\bar A=\mathfrak h_{\mathrm{poly}}/\C$, since
-  $\omega$ vanishes on the line $\C\cdot 1$ already, so it descends to a
-  cocycle on the quotient and remains nontrivial.
+
+  On $\mathfrak h_{\mathrm{poly}}$ the cocycle is a coboundary. Define
+  $\eta:\mathfrak h_{\mathrm{poly}}\to\C$ by $\eta(f)=-[f]_0$, the
+  negative of the constant Taylor coefficient. Then for all
+  $f,g\in\mathfrak h_{\mathrm{poly}}$,
+  $\delta\eta(f,g)=-\eta(\{f,g\})=[\{f,g\}]_0=\omega(f,g)$, so $\omega=\delta\eta$.
+
+  After projection to $\bar A=\mathfrak h_{\mathrm{poly}}/\C\cdot 1$ the
+  primitive $\eta$ does not descend, since $\eta(1)=-1\neq 0$. The
+  cocycle $\omega$ does descend, because it already vanishes on the line
+  $\C\cdot 1$. The class $[\bar c]\in H^2_{\mathrm{Lie}}(\bar A,\C)$ is
+  nontrivial: any putative primitive $\bar\eta:\bar A\to\C$ would lift,
+  by setting $\tilde\eta(1)=0$, to a primitive of $\omega$ on
+  $\mathfrak h_{\mathrm{poly}}$. The lifted $\tilde\eta$ would satisfy
+  $\tilde\eta(\{z_1,z_2\})=\tilde\eta(1)=0$, but
+  $\omega(z_1,z_2)=1\neq 0$, a contradiction.
 \end{proof}
 
 \begin{thm}[U(1) center anomaly: closed side]\label{thm:u1-center-anomaly}
@@ -403,11 +406,14 @@ manuscript discards as ``scalar trace''.
   $$X_{\hbar}Y_{\hbar}-Y_{\hbar}X_{\hbar}=\hbar N+O(\hbar^3),$$
   and at finite $N$ the higher-order terms vanish on these linear generators
   because $P^r$ requires at least $r$ derivatives in each tensor factor.
-  Rearranging gives the displayed Capelli/canonical identity. This is the
-  classical-to-quantum reduction in the sense of Razmyslov~\cite{razmyslov}
-  and Procesi~\cite{procesi}: the trace identities of $\lie{gl}_N$ at level
-  $N$ are exactly the Capelli identities~\cites{capelli,howe-capelli}, and
-  the abelian Capelli at $r=1$ is the canonical-commutator shift.
+  Rearranging gives the displayed canonical commutator
+  $Y_\hbar X_\hbar-X_\hbar Y_\hbar+\hbar N\,I=0$, the defining
+  relation of the rank-$N$ matrix Weyl algebra. The Capelli
+  identity~\cites{capelli,howe-capelli} of order one supplies the same
+  relation as the leading nontrivial trace identity, and the
+  Razmyslov--Procesi description~\cites{razmyslov,procesi} identifies
+  the full ideal of trace relations at level $N$ as a separate fact;
+  the present argument uses only the order-one canonical commutator.
 
   For the cohomology-class identification, observe that the Rees algebra
   $U_{\hbar}(\bar A_{[\bar c]})$ has central fibre
