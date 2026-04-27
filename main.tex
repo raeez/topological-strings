@@ -3901,20 +3901,17 @@ $$\{(\phi_1)^i{}_j,(\phi_2)^k{}_l\}
   pulled back through the basis identification
   $\rho\leftrightarrow\delta\leftrightarrow\Psi$, which is non-zero
   unless both targets vanish identically; this happens exactly on the
-  trivial $p=q=0$ action. The corollary uses
-  Corollary~\ref{cor:cotangent-boundary-pairing} for the PBW
-  special-fibre product identification, and
-  Theorem~\ref{thm:principal-part-coadjoint-uniqueness} for the
-  coadjoint half of the comparison. The descendant deformation match
-  is supplied by the Laurent / distributional principal-part
-  realization of
-  Theorem~\ref{prop:principal-part-coadjoint} together with the
-  interpolation of Theorem~\ref{thm:pbw-vs-deformation}.
+  trivial $p=q=0$ action. The PBW special-fibre product identification
+  is Corollary~\ref{cor:cotangent-boundary-pairing}; the coadjoint
+  half is Theorem~\ref{thm:principal-part-coadjoint-uniqueness}; the
+  Laurent/distributional principal-part realization is
+  Theorem~\ref{prop:principal-part-coadjoint} and the interpolation
+  Theorem~\ref{thm:pbw-vs-deformation}.
 \end{proof}
 
-The reader who has come this far has met three different things called
-``local'' on the brane line $\R$, and we keep them apart once and for all
-before identifying the coadjoint module on the principal-part side.
+Three notions of ``local'' on the brane line $\R$ now coexist; the
+coadjoint identification on the principal-part side requires that they
+remain distinct.
 
 \begin{lem}[Three notions of locality]\label{lem:three-notions-of-locality}
   On the brane line $\R$ with formal holomorphic transverse coordinates
@@ -4006,11 +4003,11 @@ before identifying the coadjoint module on the principal-part side.
   projection gives the displayed formula.
 \end{proof}
 
-The existence of the principal-part identification just established is
-strengthened by two rigidity statements: the residue pairing is canonical
-up to a single nonzero scalar, and the resulting coadjoint isomorphism
-$\mc P\cong\mathfrak h^\vee_{\mathrm{cont}}$ is the unique continuous
-$\mathfrak h$-equivariant isomorphism modulo that scalar.
+Two rigidity statements pin the principal-part identification: the
+residue pairing is canonical up to a single nonzero scalar, and the
+coadjoint isomorphism $\mc P\cong\mathfrak h^\vee_{\mathrm{cont}}$ is
+the unique continuous $\mathfrak h$-equivariant isomorphism modulo that
+scalar.
 
 \begin{thm}[Canonical residue pairing]\label{thm:canonical-residue-pairing}
   Up to a nonzero scalar, the residue pairing
@@ -4296,10 +4293,10 @@ $\mathfrak h$-equivariant isomorphism modulo that scalar.
   observables in the current open BV/Koszul model.
 \end{proof}
 
-The proposition rules out one specific polynomial realization. The
-sharper statement, which we record next, is categorical: \emph{no}
-polynomial sub-bimodule of any boundary observable algebra carrying a
-locally nilpotent $z_i$-action can carry the coadjoint action $\mc P$.
+The categorical refinement rules out the same obstruction at the
+level of every polynomial sub-bimodule: \emph{no} polynomial
+sub-bimodule of any boundary observable algebra carrying a locally
+nilpotent $z_i$-action carries the coadjoint action $\mc P$.
 
 \begin{thm}[Categorical no-go: principal parts have no polynomial realisation]\label{thm:no-polynomial-realization-categorical}
   Let $\mathsf P_{\mathrm{pol}}$ denote the abelian category of
@@ -4351,13 +4348,10 @@ locally nilpotent $z_i$-action can carry the coadjoint action $\mc P$.
 \end{proof}
 
 \begin{rmk}\label{rmk:no-polynomial-categorical-status}
-  Theorem~\ref{thm:no-polynomial-realization-categorical} promotes
-  Proposition~\ref{prop:no-polynomial-principal-part-boundary} from a
-  no-go statement about \emph{specific} polynomial boundary classes
-  $\Theta_{a,b}$ to a categorical statement: \emph{no} polynomial
-  sub-bimodule of any boundary observable algebra carrying the locally
-  nilpotent $z_i$-action can carry the coadjoint action $\mc P$. The
-  distributional / Laurent / principal-part construction of
+  The categorical no-go applies to every polynomial sub-bimodule of
+  every boundary observable algebra with locally nilpotent
+  $z_i$-action, not only to specific classes $\Theta_{a,b}$. The
+  distributional/Laurent principal-part construction of
   Construction~\ref{constr:boundary-local-dual-principal-parts} is
   therefore forced.
 \end{rmk}
@@ -5022,11 +5016,11 @@ Theorem~\ref{thm:bulk-boundary}.
   For (iii), expand
   $$\mathrm{Tr}(A\,XY)-\mathrm{Tr}(A\,YX)
     =\mathrm{Tr}(A[X,Y])
-    =-\hbar N\,\mathrm{Tr}(A)
-      +\mathrm{Tr}\bigl(A(YX-XY+\hbar N I)\bigr)$$
-  using the Weyl relation $YX-XY+\hbar N I=0$ from
-  Remark~\ref{rmk:normal-ordering-obstruction}; the last term lies in
-  $I_N$ and the displayed image is $\hbar N\,\mathrm{Tr}(A)$. On $J_N$
+    =\hbar N\,\mathrm{Tr}(A)
+      -\mathrm{Tr}\bigl(A(YX-XY+\hbar N I)\bigr)$$
+  using the Weyl moment relation $YX-XY+\hbar N I=0\bmod I_N$ from
+  Remark~\ref{rmk:normal-ordering-obstruction}; the subtracted term lies
+  in $I_N$ and the displayed image is $\hbar N\,\mathrm{Tr}(A)$. On $J_N$
   generators this is the $r=1$ tail term of the triangular expansion, by
   direct comparison with Remark~\ref{rmk:capelli-renormalized-traces}.
   Consequently, in the $J_N$-basis the Capelli contact term is the
@@ -5291,12 +5285,12 @@ Theorem~\ref{thm:bulk-boundary}.
 
 \subsubsection{Imported graph package and specialization problem}
 
-The graph problem is the analytic form of the same statement. The algebra says
-which coefficients must appear; a closed-open BV theory must produce those
-coefficients as renormalized observable products, with propagator, counterterm,
-anomaly, and trace-normalization choices fixed. Costello's formalism supplies
-the general construction. The present paper must still identify the Hamiltonian
-input to that construction.
+The graph problem is the analytic form of the same statement. The algebra
+fixes the coefficients; a closed-open BV theory must produce those
+coefficients as renormalized observable products, with propagator,
+counterterm, anomaly, and trace-normalization choices specified.
+Costello's formalism supplies the general construction. The Hamiltonian
+input to that construction is the open task below.
 
 \begin{stmt}[Imported Costello perturbative BV package]\label{stmt:costello-bv-package}
   For an elliptic BV theory with a gauge fixing, heat kernel $K_t$, propagator
@@ -5340,9 +5334,8 @@ input to that construction.
 
 \begin{lem}[Finite-window obstruction for the full Hamiltonian sector]\label{lem:finite-window-hamiltonian-obstruction}
   The polynomial Hamiltonian Lie algebra of the formal symplectic plane admits
-  no naive finite-dimensional Lie truncation compatible with the full sector
-  used in this paper.
-  More precisely:
+  no naive finite-dimensional Lie truncation compatible with the full
+  Hamiltonian sector. More precisely:
   \begin{enumerate}
     \item finite degree windows are not Lie subalgebras;
     \item projected degree-window brackets need not satisfy Jacobi;
@@ -5434,7 +5427,10 @@ input to that construction.
   convergent tensor. The same support obstruction holds with the tensor factors
   reversed. Costello's heat-kernel BV formalism requires the inverse pairing as
   an actual distributional kernel, not merely an abstract continuous operator on
-  the field complex.
+  the field complex. The weighted Tate completion of
+  Theorem~\ref{thm:wt-cotangent-lift} resolves this Casimir obstruction by
+  changing the coefficient category; the unweighted diagnosis here remains
+  the structural reason that change is required.
 \end{proof}
 
 \begin{prob}[Hamiltonian specialization of Costello perturbative BV]\label{prob:analytic-graph-realization}
@@ -5608,11 +5604,11 @@ $$\{f,g\}_\hbar=\hbar^{-1}[f,g]_*
   factor $2/(2^r r!)$ in order $r$.
 \end{proof}
 
-Combining the all-order Moyal expansion with the reduced commutator and
-the Capelli-renormalized stable trace gives the supremum statement of this
-quantum subsection: a $\C[[\hbar]]$-linear cochain isomorphism on the
-degree-zero Hamiltonian sector. Let $\mathfrak g_\hbar=\mathfrak h_\hbar
-\ltimes\mathfrak h^\vee_{\hbar,\mathrm{cont}}[1]$ be the formal-Weyl
+The all-order Moyal expansion, the reduced commutator, and the
+Capelli-renormalized stable trace assemble into a $\C[[\hbar]]$-linear
+cochain isomorphism on the degree-zero Hamiltonian sector. Let
+$\mathfrak g_\hbar=\mathfrak h_\hbar\ltimes
+\mathfrak h^\vee_{\hbar,\mathrm{cont}}[1]$ be the formal-Weyl
 deformation of the cotangent extension $\mathfrak g=\mathfrak h\ltimes
 \mathfrak h^\vee[1]$ of Theorem~\ref{thm:main-local}, and let
 $\mathrm{Obs}^{\hbar}_{\mathrm{open}}$ denote the Weyl/Moyal deformation
