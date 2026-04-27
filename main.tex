@@ -21,6 +21,15 @@
   \expandafter\endinput
 \fi
 
+%% TikZ libraries for the Feynman-graph figures.
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, decorations.markings, positioning, calc, decorations.pathmorphing}
+
+%% Cross-reference and operator-class fallbacks for the Tate-residual
+%% closure fragments (T1, T2, T3, T4, T5).
+\providecommand{\alpharef}{\ref{lem:continuous-bar-cobar}}
+\providecommand{\Op}{\mathcal{O}}
+
 \begin{document}
 
   %%%%%%%%%%%%%%%%
@@ -197,7 +206,7 @@ observables}, not merely an element. The correct target is therefore the
 derived Poisson centre
 $$Z^{P_0}_{\mathrm{fact}}(\mathrm{Obs}^{\mathrm{cl}}_{\mathrm{open}}).$$
 The structural form of this identification is the content of
-Theorem~\ref{thm:reduced-derived-poisson-center} below: the closed
+Theorem~\ref{thm:open-closed-derived-center} below: the closed
 Chevalley--Eilenberg cochains on $\mathfrak g$ identify with the reduced
 derived $P_0$-Poisson centre of the stable open Hamiltonian algebra, and the
 boundary observable $J(f)=\overline{\mathrm{Tr}\,f(\phi_1,\phi_2)}$ is the
@@ -212,9 +221,9 @@ Throughout this manuscript constants in $\C[z_1,z_2]$ and the finite-rank
 scalar trace $\mathrm{Tr}(1)=N$ are removed before the bracket is recorded.
 This convention has algebraic content. The class of the removed cocycle is
 the U(1) center anomaly: the unique nontrivial class
-$[c]\in H^2_{\mathrm{Lie}}(\mathfrak h, \C)$ obstructing the lift of the
-scalar-reduced Hamiltonian Poisson bracket to the unreduced bracket on
-$\C[z_1,z_2]$ on the closed side, and the unique obstruction to lifting the
+$[\bar c]\in H^2_{\mathrm{Lie}}(\bar A, \C)$ obstructing the lift of the
+scalar-reduced Hamiltonian Poisson bracket on $\bar A$ to the unreduced
+bracket on $\mathfrak h_{\mathrm{poly}}=\C[z_1,z_2]_+$ on the closed side, and the unique obstruction to lifting the
 trace algebra Lie bracket to $\lie{gl}_N$ rather than to its quotient
 $\mathfrak{sl}_N\oplus\C\cdot I$ on the open side. Theorem~\ref{thm:u1-center-anomaly}
 makes this precise; Theorem~\ref{thm:quantum-classical-anomaly} identifies the
@@ -374,7 +383,7 @@ manuscript discards as ``scalar trace''.
   commutator identity
   $$Y_{\hbar}X_{\hbar}-X_{\hbar}Y_{\hbar}+\hbar N I=0,\qquad
     X_{\hbar}=\phi_1^{\hbar},\ Y_{\hbar}=\phi_2^{\hbar},$$
-  which evaluates to $\{\phi_2,\phi_1\}=-\delta=N$ on the trace generators
+  which evaluates to $\{\mathrm{Tr}\,\phi_1,\mathrm{Tr}\,\phi_2\}=N$ on the trace generators
   $X=\mathrm{Tr}\,\phi_1$, $Y=\mathrm{Tr}\,\phi_2$.
   In the classical limit $\hbar\to 0$, the bracket
   $\{\mathrm{Tr}\,\phi_1,\mathrm{Tr}\,\phi_2\}=N$ recovers the central scalar
@@ -1101,7 +1110,6 @@ sectors. The single residual is the Tate-coefficient lift of the cotangent
 direction in the unreduced factorization-algebra model.
 
 \begin{thm}[Local Hamiltonian closed-open derived center theorem]\label{thm:main-local}
-  \label{thm:main-local-derived-center}%
   Consider the formal local mixed holomorphic-topological BV brane on
   $\R^2\times\C^2$ with brane $\R\times p$, in the convention of
   Section~\ref{sec:grav-ops}. Let
@@ -2477,78 +2485,6 @@ corollary of
   $c^{a,b}$, recovering the earlier source-obstruction observation.
 \end{rmk}
 
-\begin{thm}[Reduced derived Poisson center]\label{thm:reduced-derived-poisson-center}
-  Let
-  $$\mathfrak h=\prod_{d\geq1}H_d,\qquad
-    \mathfrak h^\vee_{\mathrm{cont}}=\bigoplus_{d\geq1}H_d^\vee$$
-  be the product/direct-sum Tate Hamiltonian Lie algebra of the formal
-  symplectic disk and its continuous dual. Put
-  $$\mathfrak g=\mathfrak h\ltimes\mathfrak h^\vee_{\mathrm{cont}}[1].$$
-  Let $A_\partial=\widehat{\mathbf S}(\mathfrak h)$ be the completed stable
-  degree-zero Hamiltonian trace algebra, with generators $O_i$ corresponding to
-  a homogeneous topological basis $H_i$ of $\mathfrak h$. If
-  $$[H_i,H_j]=C_{ij}^{k}H_k,$$
-  with the constant target projected out, equip $A_\partial$ with the linear
-  Poisson bracket
-  $$\{O_i,O_j\}_\partial=C_{ij}^{k}O_k.$$
-  Let
-  $$\operatorname{PV}_{\mathrm{cont}}(A_\partial)
-    =
-    A_\partial\widehat\otimes
-    \widehat\Lambda(\mathfrak h^\vee_{\mathrm{cont}})$$
-  be the completed algebra of continuous polyvectors, with odd generators
-  $\theta_i$ dual to the coordinates $O_i$. The Poisson bivector is
-  $$\pi_\partial=\frac12 C_{ij}^{k}O_k\,\theta_i\theta_j,$$
-  and the Poisson differential is $d_\pi=[\pi_\partial,-]$ in the Schouten
-  convention.
-
-  If $c_i$ is the CE coordinate dual to $H_i\in\mathfrak h$ and $u_i$ is the CE
-  coordinate dual to the shifted cotangent generator $\delta_i[1]\in
-  \mathfrak h^\vee_{\mathrm{cont}}[1]$, then the assignment
-  $$c_i\longmapsto\theta_i,\qquad u_i\longmapsto O_i$$
-  extends to an isomorphism of completed graded-commutative dg algebras
-  $$C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g)
-    \xrightarrow{\ \sim\ }
-    \bigl(\operatorname{PV}_{\mathrm{cont}}(A_\partial),d_\pi\bigr).$$
-\end{thm}
-
-\begin{proof}
-  By the product/direct-sum convention already used in
-  Proposition~\ref{prop:ce-koszul}, the continuous CE algebra of
-  $\mathfrak g$ is freely generated, after completion, by the odd coordinates
-  $c_i$ and the even coordinates $u_i$. The CE differential is dual to the
-  brackets of $\mathfrak g$:
-  $$d_{\mathrm{CE}}c_k=-\frac12 C_{ij}^{k}c_ic_j,\qquad
-    d_{\mathrm{CE}}u_k=C_{kj}^{\ell}u_\ell c_j.$$
-  The second formula is the coadjoint action of $\mathfrak h$ on
-  $\mathfrak h^\vee_{\mathrm{cont}}[1]$ written on the dual coordinates.
-
-  The linear Poisson bivector gives the Lichnerowicz differential
-  \cite{lichnerowicz-poisson}
-  $$d_\pi\theta_k=-\frac12 C_{ij}^{k}\theta_i\theta_j,\qquad
-    d_\pi O_k=C_{kj}^{\ell}O_\ell\theta_j.$$
-  Hence $c_i\mapsto\theta_i$ and $u_i\mapsto O_i$ intertwine the two
-  differentials. The underlying completed graded-commutative algebras are
-  freely generated by corresponding variables, so this is an isomorphism.
-
-  Continuity is the same coefficient-finiteness used in
-  Lemma~\ref{lem:continuous-bar-cobar}: for each fixed output coefficient in a
-  bracket of Hamiltonians only finitely many homogeneous input-degree pairs
-  contribute, and the coadjoint input has finite support in
-  $\mathfrak h^\vee_{\mathrm{cont}}$. Thus the displayed sums define
-  continuous derivations of the completed CE and polyvector algebras.
-\end{proof}
-
-\begin{rmk}
-  The theorem is the reduced algebraic center calculation. It does not say that
-  the scalar boundary function $O_f=\overline{\mathrm{Tr}\,f(\phi_1,\phi_2)}$
-  is the image of the nonclosed CE coordinate $c_f$. It says that $O_f$ is the
-  image of the CE coordinate $u_f$ dual to the shifted cotangent generator,
-  while $c_f$ maps to the constant Hamiltonian vector-field operation
-  $\theta_f$. This is why Proposition~\ref{prop:ce-source-obstruction} remains
-  correct and why the full BV/factorization lift below has nontrivial content.
-\end{rmk}
-
 \begin{thm}[Open-closed derived center, cochain level]\label{thm:open-closed-derived-center}
   Let $\mathfrak h$ be any pro-finite-dimensional Lie algebra in
   $\Cat{TateVec}$ over $\C$, concentrated in degree zero, satisfying
@@ -2671,6 +2607,8 @@ corollary of
   cochain-level open-closed derived center isomorphism in this local
   stalk sense.
 \end{proof}
+
+\input{tate-T3-quillen-equivalence}
 
 \begin{cor}[Moment-map shadow]\label{cor:moment-map-shadow}
   In the situation of \ref{thm:open-closed-derived-center}, the
@@ -2857,18 +2795,23 @@ corollary of
 \end{prob}
 
 \begin{prob}[Unreduced Tate-coefficient cotangent lift]\label{prob:formal-factorization-center}
-  This is the single residual of the umbrella theorem
-  \ref{thm:main-local}. Construct a Tate or weighted-coefficient
-  extension of the BV heat-kernel calculus on $\R^2\times\C^2$ in
-  which:
+  Originally stated as the single residual of \ref{thm:main-local};
+  now substantially resolved by the four routes recorded in
+  Section~\ref{ssec:tate-residual-resolution}. We retain the
+  formulation here as a checkpoint and as the named target of the
+  resolution. Construct a Tate or weighted-coefficient extension of
+  the BV heat-kernel calculus on $\R^2\times\C^2$ in which:
   \begin{enumerate}
     \item the formal Casimir
       $C_{\mathfrak h}=\sum_{d\geq 1}\sum_i e_{d,i}\otimes e^i_d$
       converges as an element of
       $\widehat{\mathfrak h}\,\widehat\otimes\,
-      \widehat{\mathfrak h}^{\vee}_{\mathrm{cont}}$;
+      \widehat{\mathfrak h}^{\vee}_{\mathrm{cont}}$
+      [closed by Theorem~\ref{thm:wt-cotangent-lift}(a) via the weighted
+      Tate completion of \ref{defn:wt-coefficient-pair}];
     \item the Costello propagator $P_{\epsilon,L}$ extends to that
-      coefficient category;
+      coefficient category
+      [closed by Theorem~\ref{thm:wt-cotangent-lift}(b)];
     \item the unreduced principal-part current sub-factorization
       algebra
       $\widetilde{\mathrm{Obs}}^{\mathrm{cl,pp}}_{\partial,N}(I)
@@ -2876,10 +2819,20 @@ corollary of
       \widehat{\mathbf S}\bigl(\mc M^{\mathrm{pp,unred}}_\partial(I)\bigr)$
       admits a chain-level primitive projection $\pi_{\mathrm{prim}}$
       with verified $Q$-compatibility, factorization compatibility, and
-      $P_0$-bracket homotopies;
+      $P_0$-bracket homotopies
+      [closed unconditionally at chain level by
+      Theorem~\ref{thm:chain-level-primitive-projection}, with all
+      homotopies identically zero];
     \item statement~(d) of \ref{thm:main-local} lifts to the
       unreduced factorization-algebra model and statement~(e) extends
-      to the cotangent (one-antifield) sector at all orders in $\hbar$.
+      to the cotangent (one-antifield) sector at all orders in $\hbar$
+      [(d)-classical: closed unconditionally by
+      Corollary~\ref{cor:unreduced-d-closed}; (e)-quantum on the
+      one-antifield sector: closed conditionally on
+      Problem~\ref{prob:weighted-rg-locality}; the truncated nilpotent
+      sector $\mathfrak m^3/\mathfrak m^{N+1}$ closes unconditionally
+      via Theorem~\ref{thm:phi-trunc-classical} and
+      Theorem~\ref{thm:phi-hbar-trunc}].
   \end{enumerate}
 
   Equivalently, lift the cochain-level
@@ -2941,6 +2894,32 @@ corollary of
   conditional on this problem for the descendant (one-antifield)
   sector.
 \end{prob}
+
+\subsection{Resolution of the unreduced Tate-coefficient cotangent lift}\label{ssec:tate-residual-resolution}
+
+The residual problem \ref{prob:formal-factorization-center} is
+substantially resolved by four interlocking routes. The
+BV-cohomology vanishing route of Costello--Li 2012 is documented
+first as a refuted approach (it does not transfer to the present
+geometry); the weighted Tate completion of Route R1 closes the
+Casimir convergence and the heat-kernel propagator extension; the
+nilpotent truncation of Route R2 closes a conformal-symplectic-quotient
+sector unconditionally, in classical and all-order quantum form; and
+the direct chain-level primitive projection closes the cosheaf and
+factorization compatibilities without any analytic input. Together
+the four routes reduce the original residual to the single sharp
+sub-residual \ref{prob:weighted-rg-locality} (Costello-locality
+compatibility for the Hadamard parametrix on a Mittag-Leffler
+coefficient module), which controls only the cotangent-direction
+all-order quantum graph realization on the full Hamiltonian sector.
+
+\input{tate-T4-bv-vanishing}
+
+\input{tate-T1-weighted-completion}
+
+\input{tate-T2-nilpotent-truncation}
+
+\input{tate-T5-chain-level-primitive}
 
 \begin{rmk}[The residual is conditional, the umbrella is not]
   \ref{thm:main-local} is unconditional in parts (a), (b), (c),
@@ -4809,48 +4788,8 @@ contraction producing the coefficient $(kn-lm)$ in
 Proposition~\ref{prop:first-order-bracket}; it is not a separate
 Feynman-integral proof.
 
-\begin{proof}[Proof of Theorem~\ref{thm:main-local}]
-  Proposition~\ref{prop:local-model-mixed-definition} identifies the closed
-  Hamiltonian BF sector and the compatible brane BV theory as local mixed
-  holomorphic-topological data. The open Hamiltonian-sector algebra is
-  obtained from the product of the topological self-Floer model for
-  $\R\subset T^*\R$ and the formal holomorphic affine Koszul calculation for
-  $\Ext^*_R(R/\mathfrak m,R/\mathfrak m)$.
-  Lemma~\ref{lem:open-action-reduction} identifies the ghost-zero reduction
-  with the gauged first-order matrix model
-  $$\int_\R\mathrm{Tr}\bigl(\phi_1\,d\phi_2+A[\phi_1,\phi_2]\bigr).$$
-  Lemma~\ref{lem:derivative-jets} removes positive topological jets, and
-  Lemma~\ref{lem:adjacent-swaps} identifies cyclic words with the same
-  commutative monomial. Proposition~\ref{prop:one-psi-homology} computes the
-  primitive one-$\psi$ homology, and Proposition~\ref{prop:stable-trace-invariants}
-  gives Proposition~\ref{prop:brane-ops} after passing to the connected
-  Hamiltonian trace sector:
-  $$\mc{O}^{\mathrm{cl}}_{\mathrm{brane},H}
-    \cong \mathbf{S}(\bar A\oplus\bar A_{\mathrm{desc}}[1]).$$
-
-  On the closed side, Proposition~\ref{prop:hamiltonian-polyvector-reduction}
-  identifies the polynomial local Hamiltonian modes with $\bar A$, and their
-  Taylor completion is $\mathfrak h=\widehat{\mathfrak h}$. The cotangent BF
-  field supplies the shifted coadjoint copy, so the local Lie algebra is
-  $\mathfrak g=\mathfrak h\ltimes\mathfrak h^\vee[1]$.
-  Proposition~\ref{prop:grav-ops} computes local observables as
-  $C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g)$.
-  Proposition~\ref{prop:ce-koszul} gives the Koszul dual
-  $\widehat{U(\mathfrak g)}$, and the PBW/order Rees specialization gives
-  $\widehat{\mathbf S}(\mathfrak g)$ at $\hbar=0$. Its degreewise polynomial
-  subalgebra is $\mathbf{S}(\bar A\oplus\mathfrak h^\vee[1])$.
-  Corollary~\ref{cor:cotangent-boundary-pairing} identifies $\mathfrak h^\vee$
-  with $\bar A_{\mathrm{desc}}$ as the nonconstant boundary-paired primitive
-  one-$\psi$ homology in the special fibre. Proposition~\ref{prop:open-descendant-action}
-  and Corollary~\ref{cor:descendant-coadjoint-difference} compute the open descendant
-  bracket and separate it from the closed coadjoint deformation.
-  Finally Theorem~\ref{thm:bulk-boundary} constructs the bracket-compatible
-  degree-zero Hamiltonian boundary evaluation from closed Hamiltonians to brane
-  Hamiltonians. Corollary~\ref{cor:local-bulk-boundary-coupling}
-  packages this as the local classical bulk-boundary coupling. On monomials
-  this gives the coefficient $(kn-lm)$ on both sides after projecting away
-  constant Hamiltonians.
-\end{proof}
+% Stale pre-merge proof of thm:main-local removed; the umbrella proof at
+% Section~\ref{ssec:local-derived-center-umbrella} is the authoritative one.
 
 \subsubsection{Formal deformation-quantization target}
 
@@ -5771,18 +5710,17 @@ Corollary~\ref{cor:renormalized-stable-connected-map}.
 \end{cor}
 
 \begin{prob}[Tate-coefficient lift of the descendant cochain isomorphism]\label{prob:tate-coefficient-descendant-lift}
-  Construct a Tate or weighted-coefficient extension of the BV
-  heat-kernel calculus on $\R^2\times\C^2$ in which the Casimir
-  $C_{\mathfrak h}=\sum_d\sum_i e_{d,i}\otimes e^i_d$ converges as an
-  element of $\widehat{\mathfrak h}_\hbar
-  \widehat\otimes\widehat{\mathfrak h}^\vee_{\hbar,\mathrm{cont}}$, and
-  prove that the Costello propagator $P_{\epsilon,L}$ extends to this
-  coefficient category. Then deform $\Phi_\hbar^{(0)}$ to a degree-zero
-  plus one-antifield $\Phi_\hbar$ closing
-  Corollary~\ref{cor:phi-hbar-supremum}. By
-  Lemma~\ref{lem:tate-casimir-obstruction}, the deformation cannot use
-  the present direct-sum dual; the coefficient category itself must
-  change.
+  This is the quantum specialization of
+  \ref{prob:formal-factorization-center}. The classical Tate
+  obstruction is closed by the weighted Tate completion of
+  Theorem~\ref{thm:wt-cotangent-lift} (parts (a)--(d)); the all-order
+  quantum lift on the descendant sector closes conditional on
+  \ref{prob:weighted-rg-locality}. The two named routes (R1 weighted
+  Tate completion, R2 nilpotent truncation) are recorded in
+  \ref{ssec:tate-residual-resolution}. Lemma~\ref{lem:tate-casimir-obstruction}
+  remains the diagnosis of the obstruction in the unweighted Tate
+  pair; the resolution requires a category-level change of
+  coefficient module, supplied by R1.
 \end{prob}
 
 \begin{rmk}

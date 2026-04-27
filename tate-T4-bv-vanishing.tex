@@ -1,0 +1,195 @@
+% proposed-bv-vanishing.tex
+% Agent T4 — Tate-residual swarm
+% BV-cohomology vanishing on R^2 x C^2 with brane R x p:
+% applicability of Costello-Li 2012 (arXiv:1201.4501) to
+% prob:formal-factorization-center.
+%
+% This is a worktree-only deliverable. It records: (i) the precise
+% Costello-Li hypotheses; (ii) a hypothesis-by-hypothesis applicability
+% check against the present R^2 x C^2 with brane R x p, gl_N gauge
+% setup; (iii) the verdict that Costello-Li 2012 does *not* close the
+% unreduced Tate-coefficient cotangent lift; (iv) the precise gap.
+
+\section*{T4: BV-cohomology vanishing route to the unreduced cotangent lift}
+
+\subsection*{Costello--Li 2012 hypotheses, restated}
+
+\begin{stmt}[Costello--Li 2012 BV-cohomology vanishing,
+   restated]\label{stmt:costello-li-2012-restated}
+  Let $X$ be a compact Calabi--Yau manifold of complex dimension $d$,
+  with holomorphic volume form $\Omega$. Let $\mathrm{PV}(X)[[t]]$ be
+  the polyvector field complex with the Tate parameter $t$ (the
+  worldsheet $S^1$ rotation), with differential
+  $Q=\bar\partial+t\,\partial_\Omega$ and $(-1)$-shifted symplectic
+  pairing
+  $$\langle \alpha,\beta\rangle
+    =\int_X (\alpha\wedge\beta)\big|_{\mathrm{PV}^{d,d}}\cdot\Omega^2.$$
+  The classical BCOV interaction $I_{\mathrm{BCOV}}$ is the cubic
+  vertex on $\mathrm{PV}(X)[[t]]$ supplied by
+  \cite{costello-li-quantum-bcov}. Then:
+  \begin{enumerate}
+    \item the cohomology of the local-functional obstruction complex
+      $H^*\bigl(\operatorname{Loc}(X),\,Q+\{I_{\mathrm{BCOV}},-\}\bigr)$
+      is concentrated in known degrees;
+    \item the one-loop quantization obstruction is a single explicit
+      local class which vanishes by the Calabi--Yau condition
+      ($\partial_\Omega$ is exact on $\mathrm{PV}(X)$ via $\Omega$);
+    \item all higher-loop obstructions vanish, giving a unique
+      perturbative quantization compatible with the $S^1$ symmetry.
+  \end{enumerate}
+  The hypotheses are $X$ compact Calabi--Yau, $\Omega$ a holomorphic
+  volume form, BCOV gauge fixing (K\"ahler metric, harmonic
+  projection, $L^2$-regularized propagator), polyvector fields with
+  the $t$-Tate completion, and pure closed BCOV without brane
+  defects.
+\end{stmt}
+
+The 2015 sequel \cite{costello-li-open-closed-bcov} extends to
+open-closed BCOV with open gauge data $\lie{gl}(N\mid N)$, anomaly
+cancellation by the supertrace, on flat $\mathbb C^d$, $d$ odd. That
+is the precedent for defects in the Costello--Li line, but on
+$\mathbb C^d$, not on $\R^2\times\C^2$ with topological factor.
+
+\subsection*{Applicability check on \texorpdfstring{$\R^2\times\C^2$}{R2 x C2}
+   with brane \texorpdfstring{$\R\times p$}{R x p} and \texorpdfstring{$\lie{gl}_N$}{gl\_N}}
+
+\begin{prop}[Costello--Li 2012 hypotheses fail for the local
+   model]\label{prop:costello-li-2012-fail-local}
+  The hypotheses of \ref{stmt:costello-li-2012-restated} fail for
+  the formal local model on $\R^2\times\C^2$ with brane $\R\times p$
+  and gauge data $\lie{gl}_N$ for five independent reasons.
+
+  \begin{enumerate}
+    \item[(F1)] \emph{Non-compactness.} $\C^2$ is not compact.
+      Costello--Li's harmonic projection and $L^2$-regularized
+      propagator depend on Hodge theory for $X$ compact. The
+      formal local jet model is at most a stalk of the global theory
+      and is not directly a Costello--Li target.
+    \item[(F2)] \emph{Topological--holomorphic mixing.} The local
+      theory has a topological factor $\R^2$ (de~Rham) crossed with
+      a holomorphic factor $\C^2$ (Dolbeault). Costello--Li 2012 is
+      pure BCOV/HCS on a single holomorphic Calabi--Yau; there is no
+      pure BCOV statement covering the mixed kinematics. The
+      protected sector of twisted M-theory \cite{costello-twistedM}
+      has the right shape, but Costello--Li 2012 is not stated for
+      it.
+    \item[(F3)] \emph{Brane defect.} The brane $\R\times p$ is
+      one-real-dimensional in the topological direction and
+      point-supported in the holomorphic direction. Costello--Li
+      2012 has no brane sector. Costello--Li 2015
+      \cite{costello-li-open-closed-bcov} has a brane sector but on
+      flat $\C^d$ (not $\R^2\times\C^2$) with $\lie{gl}(N\mid N)$
+      open gauge data.
+    \item[(F4)] \emph{Gauge data.} Ordinary $\lie{gl}_N$ is not
+      $\lie{gl}(N\mid N)$. Costello--Li 2015 cancel the U(1) center
+      anomaly by the supertrace, which fails for ordinary
+      $\lie{gl}_N$. The U(1) center class $[\bar c]$ in
+      part~(f) of \ref{thm:main-local} is precisely this anomaly.
+    \item[(F5)] \emph{Tate direction.} Costello--Li's $t$-Tate
+      completion is along the worldsheet $S^1$ rotation, not along
+      the coefficient system. The Tate completion required by
+      \ref{prob:formal-factorization-center} is along the
+      \emph{coefficient} direction
+      $\widehat{\mathfrak h}\,\widehat\otimes\,
+      \widehat{\mathfrak h}^{\vee}_{\mathrm{cont}}$ in which the
+      Casimir
+      $C_{\mathfrak h}=\sum_{d\geq 1}\sum_i e_{d,i}\otimes e^i_d$
+      must converge. By \ref{lem:tate-casimir-obstruction}, the
+      present direct-sum dual obstructs convergence, and the
+      coefficient category itself must change. Costello--Li
+      provide no convergence theorem in this direction.
+  \end{enumerate}
+
+  Hypothesis (F5) is the decisive obstruction: even if (F1)--(F4)
+  were repaired by an Omega-background or twisted M-theory
+  extension, the coefficient-system Tate completion would still be
+  unprovided.
+\end{prop}
+
+\begin{proof}
+  Each clause is a direct comparison of the hypotheses of
+  \ref{stmt:costello-li-2012-restated} (and its 2015 sequel) with
+  the data of \ref{thm:main-local} and the topology declared in
+  the linear-heat / coefficient-Casimir analysis
+  (\ref{rmk:linear-heat-versus-bv-kernel},
+  \ref{lem:tate-casimir-obstruction}). The non-compactness of
+  $\C^2$ blocks the harmonic-projection step in Costello--Li's
+  one-loop anomaly cancellation; the topological factor $\R^2$ is
+  not BCOV kinematics; the brane $\R\times p$ is a topological
+  line transverse to a holomorphic point, not an open boundary on a
+  flat $\C^d$; ordinary $\lie{gl}_N$ does not admit the Costello--Li
+  supertrace cancellation (which is exactly the class
+  $[\bar c]$ of part~(f)); and the worldsheet-$t$ Tate completion
+  is orthogonal to the coefficient-Casimir Tate direction.
+\end{proof}
+
+\begin{cor}[Costello--Li 2012 does not close
+   \ref{prob:formal-factorization-center}]\label{cor:costello-li-2012-does-not-close-residual}
+  The unreduced Tate-coefficient cotangent lift remains conditional.
+  Parts (d) and (e) of \ref{thm:main-local} are unconditional at
+  the reduced post-contraction level (part (d)) and on the
+  degree-zero Hamiltonian sector at all orders in $\hbar$
+  (part (e)); the unreduced extension of part (d) and the
+  one-antifield extension of part (e) remain governed by
+  \ref{prob:formal-factorization-center}.
+\end{cor}
+
+\begin{proof}
+  By \ref{prop:costello-li-2012-fail-local}, the BV-cohomology
+  vanishing of \cite{costello-li-quantum-bcov} does not transfer to
+  the present setup. In particular it does not provide the
+  coefficient-system Tate completion in which the Casimir converges,
+  nor does it provide a brane-defect extension of the propagator.
+  Hence \ref{prob:formal-factorization-center}, items (1)--(4),
+  remain open. The umbrella's (a), (b), (c), (e) at degree zero,
+  and (f) are unaffected; (d) at the reduced post-contraction
+  level is unaffected; only the unreduced extension of (d) and the
+  one-antifield extension of (e) remain conditional.
+\end{proof}
+
+\subsection*{What an extension of Costello--Li would have to supply}
+
+\begin{rmk}[Gap analysis: the four missing theorems]\label{rmk:t4-four-missing}
+  An applicable analog of Costello--Li 2012 to the present setup
+  would have to supply the following four theorems
+  simultaneously:
+  \begin{enumerate}
+    \item \emph{Non-compact / Omega-background BV-cohomology
+      vanishing.} A version of \ref{stmt:costello-li-2012-restated}
+      on $\R^2\times\C^2$, possibly via Costello's
+      Omega-background \cite{costello-twistedM} or via a
+      compactification with Lagrangian boundary at infinity.
+    \item \emph{Topological--holomorphic mixed kinematics.} The
+      vanishing must hold on the kinematic differential
+      $D=d_{\R^2}+\bar\partial_{\C^2}$, with the linearized
+      complex of \ref{rmk:linear-heat-versus-bv-kernel}, and on
+      the Hamiltonian sector with cotangent $[1]$ extension.
+    \item \emph{Brane-defect extension.} The vanishing must allow
+      a transverse one-real-dimensional defect $\R\times p$ on
+      which open gauge data $\lie{gl}_N$ live; not the flat-$\C^d$
+      $\lie{gl}(N\mid N)$ setup of
+      \cite{costello-li-open-closed-bcov}.
+    \item \emph{Coefficient-system Tate completion.} The
+      coefficient direction
+      $\widehat{\mathfrak h}\,\widehat\otimes\,
+      \widehat{\mathfrak h}^{\vee}_{\mathrm{cont}}$ must support the
+      Casimir as a convergent kernel. By
+      \ref{lem:tate-casimir-obstruction} this is a category-level
+      change, not a damping factor.
+  \end{enumerate}
+  None of the four is currently in print; together they constitute
+  \ref{prob:formal-factorization-center}, and they remain a
+  named open problem after T4.
+\end{rmk}
+
+\begin{rmk}[Convention firewall, restated]\label{rmk:t4-convention-firewall}
+  The local Hamiltonian BF sector here is not a compact Calabi--Yau
+  output of any $\Phi_d$ functor, carries no $\kappa_{\mathrm{ch}}$
+  or $\kappa_{\mathrm{BKM}}$ consequence, and is not evidence for
+  compact $\mathrm{CY}_3$ BCOV anomaly cancellation. Costello--Li
+  2012 is cited as motivation and convention template, not as a
+  closing theorem for the unreduced cotangent lift. The Vol~III
+  CY-to-chiral frontier and the Igusa $\Delta_5$ / Borcherds /
+  BKM frontier are independent obligations and are not affected
+  by T4.
+\end{rmk}
