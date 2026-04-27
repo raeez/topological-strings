@@ -1,5 +1,5 @@
 % =============================================================================
-% Agent T5: chain-level primitive projection.
+% Chain-level primitive projection.
 % Proposal-only fragment.  Insertion target in main.tex: immediately after
 % prob:formal-factorization-center (around line 2942) and before
 % rmk:weiss-ran-descent-firewall (line 2959).  Macros and conventions
@@ -118,7 +118,7 @@ $P_0$ bracket]\label{lem:filtration-preservation}
   (the abelianization of cyclic words: the trace of a cyclic word in
   the commuting variables $\phi_1,\phi_2$, taken modulo $Q$-exact
   reordering, is exactly the polynomial Hamiltonian
-  $f\in\bar A$ — a stable cyclic-word/polynomial dictionary recorded
+  $f\in\bar A$, a stable cyclic-word/polynomial dictionary recorded
   by Construction~\ref{constr:boundary-evaluation} and
   Lemma~\ref{lem:trace-bracket-descends}), gives
   $$\pi_{\mathrm{prim}}:
@@ -211,7 +211,7 @@ $P_0$ bracket]\label{lem:filtration-preservation}
     \Omega^\bullet_c(V)\widehat\otimes\bar A
   \end{array}$$
   commutes strictly modulo a homotopy $h_{\mathrm{fact}}$ that
-  vanishes identically — $h_{\mathrm{fact}}\equiv 0$.
+  vanishes identically: $h_{\mathrm{fact}}\equiv 0$.
 
   Here $\mu$ is the brane factorization product (multiplication in
   $\mc R_N^{GL_N}$ after extension by zero from $C^\infty_c(I_j)$ to
@@ -247,7 +247,7 @@ $P_0$ bracket]\label{lem:filtration-preservation}
   (constants are excluded from the Hamiltonian quotient).  The
   $(1,0)$ pair sends a single-trace $B_w(a)$ on $I_1$ tensored with a
   scalar de Rham form on $I_2$ to the single-trace $B_w(a)$ on $V$,
-  multiplied by the same scalar form on $I_2$ — and similarly for
+  multiplied by the same scalar form on $I_2$, and similarly for
   $(0,1)$.  Modulo the scalar de Rham form, this is exactly the
   cosheaf extension-by-zero map $\mathfrak h_{I_j}\hookrightarrow
   \mathfrak h_V$ for $j=1,2$.
@@ -278,9 +278,8 @@ $P_0$ bracket]\label{lem:filtration-preservation}
     -\bigl\{\pi_{\mathrm{prim}}F,\pi_{\mathrm{prim}}G\bigr\}_{\bar A}
     =(Q\circ h_{P_0}+h_{P_0}\circ Q)(F\otimes G),$$
   with the explicit homotopy $h_{P_0}\equiv 0$ on every stratum
-  $F_{k_1}\otimes F_{k_2}$.  In other words, the chain-level
-  $P_0$-bracket compatibility square commutes strictly modulo a
-  zero homotopy.
+  $F_{k_1}\otimes F_{k_2}$. The chain-level $P_0$-bracket compatibility
+  square commutes strictly.
 \end{thm}
 
 \begin{proof}
