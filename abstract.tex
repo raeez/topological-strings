@@ -1,8 +1,9 @@
 \begin{abstract}
-This paper studies a local constrained system. The formal holomorphic normal
-surface has coordinates $z_1,z_2$ and symplectic form $dz_1\wedge dz_2$.
-On a stack of $N$ probes these coordinates become matrices
-$\phi_1,\phi_2$. The open ghost-zero theory is the Dirac first-order system
+This paper studies a local constrained mechanical system. The formal
+holomorphic normal surface has coordinates $z_1,z_2$ and symplectic form
+$dz_1\wedge dz_2$. On a stack of $N$ probes these coordinates become
+matrices $\phi_1,\phi_2\in\mathfrak{gl}_N$. The open ghost-zero theory is
+the Dirac first-order system
 $$\int_\R \mathrm{Tr}\bigl(\phi_1\,d\phi_2+A[\phi_1,\phi_2]\bigr).$$
 Here $A$ is the multiplier for the first-class constraint
 $[\phi_1,\phi_2]=0$, and the BV/Koszul variable $\psi=A^*$ records it by
@@ -10,59 +11,60 @@ $Q\psi=[\phi_1,\phi_2]$. This is the open local model for a mixed
 holomorphic-topological BV sector on $\R^2\times\C^2$ with brane
 $\R\times p$.
 
-After removing constant Hamiltonians and passing to the degreewise stable
-connected trace sector, the classical open Hamiltonian algebra is
-$$\mathbf S\bigl(\bar A\oplus\bar A_{\mathrm{desc}}[1]\bigr),
-  \qquad \bar A=\C[z_1,z_2]/\C\cdot1,$$
-where $\bar A_{\mathrm{desc}}$ is represented by the nonconstant primitive
-one-antifield Koszul cycles. The closed Hamiltonian sector is cotangent BF
-theory for the reduced Tate Lie algebra
-$$\widehat{\mathfrak h}=\C[[z_1,z_2]]/\C\cdot1,\qquad
-  \mathfrak g=\widehat{\mathfrak h}\ltimes
-  \widehat{\mathfrak h}^{\vee}_{\mathrm{cont}}[1],$$
-with bracket induced by the usual Poisson bracket after projection modulo
-constants.
-Its local observables are the continuous Chevalley-Eilenberg cochains
-$C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g)$. The reduced derived
-Poisson center of the degree-zero open algebra is computed explicitly:
-$$C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g)
-  \cong
-  \bigl(PV_{\mathrm{cont}}(\widehat{\mathbf S}(\mathfrak h)),
-  [\pi_\partial,-]\bigr),$$
-with $c_I\mapsto\partial/\partial O_I$ and $u_I\mapsto O_I$. Thus the boundary
-Hamiltonian function is the image of the shifted cotangent CE coordinate, not
-of the nonclosed CE coordinate dual to a Hamiltonian mode.
+The infinitesimal canonical symmetries of the formal symplectic disk
+form the reduced Tate Lie algebra
+$\widehat{\mathfrak h}=\C[[z_1,z_2]]/\C\cdot 1$. Its shifted cotangent
+semidirect extension
+$\mathfrak g=\widehat{\mathfrak h}\ltimes
+  \widehat{\mathfrak h}^{\vee}_{\mathrm{cont}}[1]$
+is the dg Lie algebra of closed Hamiltonian BF theory. The classical
+local theorem is the umbrella of six interlocking statements. There is a
+universal cochain-level isomorphism of completed dg graded-commutative
+$P_0$-algebras
+$$\Phi:C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g)
+  \xrightarrow{\sim}\mathrm{PV}\bigl(\widehat{\mathbf S}_{\mathrm{Tate}}
+  (\widehat{\mathfrak h})\bigr)
+  \simeq Z^{P_0}_{\mathrm{fact}}\bigl(\widehat{\mathbf S}_{\mathrm{Tate}}
+  (\widehat{\mathfrak h})\bigr),$$
+sending the CE coordinate $c^I$ dual to the Hamiltonian generator
+$H_I\in\widehat{\mathfrak h}$ to the constant polyvector
+$\theta^I=\partial/\partial O_I$, and the CE coordinate $u_I$ dual to the
+shifted cotangent generator $\eta_{\delta_I}$ to the boundary Hamiltonian
+function $O_I=\overline{\mathrm{Tr}\,H_I(\phi_1,\phi_2)}$. The boundary
+trace observable is the image of the shifted cotangent CE coordinate, not
+of the unclosed CE coordinate dual to a Hamiltonian mode. The continuous
+dual $\widehat{\mathfrak h}^{\vee}_{\mathrm{cont}}$ is canonically the
+principal-part residue module $\mathcal P=\bigoplus_{a+b>0}\C\,\rho_{a,b}$
+with $\rho_{a,b}=z_1^{-a-1}z_2^{-b-1}\,dz_1\,dz_2$, paired by the
+Grothendieck residue. The polynomial Koszul descendants $\Psi_{a,b}$ are
+PBW special-fibre representatives carrying a raising action; the principal
+parts $\rho_{a,b}$ are deformation-correct coadjoint representatives
+carrying the lowering action; the Rees parameter $\hbar$ of the formal
+Moyal deformation interpolates them.
 
-The Koszul dual of the closed CE algebra is the completed enveloping algebra
-$\widehat U(\mathfrak g)$. Its PBW special fibre identifies degree by degree
-with the connected stable open Hamiltonian trace sector as a filtered
-graded-commutative product. The polynomial descendants are PBW special-fibre
-labels; they do not realize the closed coadjoint deformation-level action.
-Principal parts provide the correct coadjoint algebraic model. Boundary
-evaluation on Hamiltonian modes
-$$f(z_1,z_2)\longmapsto
-  \overline{\mathrm{Tr}\,f(\phi_1,\phi_2)}$$
-identifies the degree-zero generators and intertwines the closed Hamiltonian
-Poisson bracket with the connected open trace bracket. This degree-zero
-Hamiltonian current map has an interval-wise ordinary central-operation
-representative after the de Rham jet contraction and satisfies the $P_0$
-bracket identity on stable connected local cohomology. The full unreduced
-BV/factorization-center lift remains a problem: compact-support functoriality
-before contraction, $P_0$ center homotopies, principal-part boundary currents,
-and descent must all be constructed.
+The cochain isomorphism upgrades to a quasi-isomorphism of locally
+constant $P_0$ factorization algebras on the brane line $\R$, in the
+connected Hamiltonian sub-sector, with strict factorization product on
+disjoint supports and equal-time delta-function bracket. It deforms to
+all orders in $\hbar$ on the degree-zero Hamiltonian sector: the
+Capelli/Weyl-renormalized stable trace $J_N(f)$ realizes the all-order
+Moyal target, the Harish-Chandra radial-parts identity gives the reduced
+Moyal commutator at all $N$, and the Costello first/third graph
+normalizations are fixed by Kontsevich uniqueness. The scalar
+Hamiltonian/center-of-mass mode carries a single nontrivial class
+$[\bar c]\in H^2_{\mathrm{Lie}}(\bar A,\C)$ realised identically by the
+classical Poisson cocycle $\omega(z_1^kz_2^l,z_1^mz_2^n)=
+(kn-lm)\mathbf 1[(k+m,l+n)=(1,1)]$ and the quantum Capelli shift
+$YX-XY+\hbar NI=0$; the equivalence holds modulo $[\bar c]$.
 
-The formal deformation-quantization target is the $\hbar$-adic Weyl/Moyal
-deformation. The first-order bracket is proved, and the all-order Weyl/Moyal
-local coefficients are computed algebraically. At finite $N$, Weyl-ordered
-traces descend through quantum Hamiltonian reduction; the Harish-Chandra
-radial-parts theorem proves the reduced Moyal commutator identity for the
-Weyl/Capelli-renormalized generators. The stable connected quantum quotient and
-the factorization-level quantum theorem remain open. The scalar
-Hamiltonian/center-of-mass term and its Capelli quantum form are treated as a
-named obstruction. The reduced open-line midpoint model gives the first and
-third Weyl graph weights, but the paper does not construct the Costello
-closed-open Feynman weights. The remaining analytic problem is to identify the
-Costello boundary graph expansion, in this local Hamiltonian model, with the
-Weyl/Moyal coefficients, including anomaly control, stable connected trace
-normalization, and the first and third graph normalizations.
+The single dependency-closed residual is the unreduced Tate-coefficient
+lift of the cotangent direction. Two completion routes are named: a
+weighted graded-Mittag-Leffler completion compatible with the Costello
+heat-kernel calculus; or a nilpotent truncation in the Costello-Li
+$\mathfrak{gl}(N\mid N)$ tradition. The classical and quantum problems
+are pinned to the same obstruction, with the deformation adding no new
+conditionality. Cross-volume convention contracts to
+\textasciitilde/calabi-yau-quantum-groups (Vol III) and
+\textasciitilde/igusa-cusp-form ($\Delta_5$/BKM) are local-only and
+explicitly non-transferable without separate matched-conventions proofs.
 \end{abstract}
