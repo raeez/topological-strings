@@ -465,50 +465,7 @@ universality claim that the formal local construction here is the
 Hamiltonian-sector restriction of every twisted M-theory background of
 the indicated type.
 
-\begin{conj}[Twisted-M-theory universality of the local model]\label{conj:twisted-m-theory-universal}
-  Let $X$ be a holomorphic-symplectic surface and let
-  $\mathcal{T}_{\mathrm{tw}M}\bigl(\R\times X;\R\times p\bigr)$ denote the
-  perturbative twisted M-theory data on $\R\times X$ in the presence of a
-  stack of $N$ one-dimensional topological branes supported on $\R\times p$,
-  in the sense of the twisted holomorphic-topological theory
-  \cite{costello-twistedM} whose protected sector restricts to the local
-  Hamiltonian sector here. Hypotheses:
-  (i) the BV-cohomology vanishing of \cites{costello-li-quantum-bcov,
-  costello-li-open-closed-bcov} on the formal local model;
-  (ii) the Costello locality theorem ensuring that restriction to a formal
-  neighbourhood of $\R\times p$ is well-defined;
-  (iii) the Hamiltonian reduction of the holomorphic-symplectic data to the
-  formal symplectic disk at $p$ is regular.
-  Then the Hamiltonian-sector restriction
-  $$\mathcal{T}_{\mathrm{tw}M}\bigl(\R\times X;\R\times p\bigr)
-    \big|_{\mathrm{Ham},\widehat{p}}$$
-  is canonically equivalent, as a pair (open BV theory; closed Hamiltonian
-  BF theory together with open trace data), to the formal local model
-  constructed in this manuscript: open side
-  $\bigl(\Omega^*(\R)\otimes\Lambda(\varepsilon_1,\varepsilon_2)
-  \otimes\lie{gl}_N[1],\,S(\alpha)\bigr)$, closed side
-  $C^\bullet_{\mathrm{CE,cont}}(\mathfrak g)$ with
-  $\mathfrak g=\widehat{\mathfrak h}\ltimes\mathfrak h^\vee[1]$, and
-  bulk-to-boundary evaluation
-  $f\mapsto\overline{\mathrm{Tr}\,f(\phi_1,\phi_2)}$. In particular every
-  such twisted M-theory restriction satisfies Theorem~\ref{thm:main-local}.
-\end{conj}
-
-\begin{rmk}
-  Conjecture~\ref{conj:twisted-m-theory-universal} replaces the BCOV analogy
-  as the primary physical motivation. The original BCOV analysis is written
-  for Calabi--Yau threefolds (\cite{bcov}), where the target dimension is
-  $d=3$; the local model here is a holomorphic-symplectic surface ($d=2$)
-  and is therefore not a reduction of BCOV in any direct sense. The
-  Hamiltonian BF formulation \eqref{eq:cotangent-Lie-algebra} is the
-  correct primary physical name. The deciding evidence for the conjecture
-  is (a) the explicit BV-cohomology computation of
-  \cites{costello-li-quantum-bcov,costello-li-open-closed-bcov};
-  (b) a reduction lemma for protected twisted-M-theory operators on
-  $\R\times X$ to the formal disk at $p$; (c) compatibility with the
-  scalar/center-of-mass anomaly term of
-  Remark~\ref{rmk:scalar-hamiltonian-center-of-mass}.
-\end{rmk}
+\input{tate-P3-universality}
 
 \subsection{Three notions of locality}
 
@@ -2941,18 +2898,21 @@ all-order quantum graph realization on the full Hamiltonian sector.
 
 \input{tate-P1-hadamard-mittag-leffler}
 
-\begin{rmk}[The residual is conditional, the umbrella is not]
-  \ref{thm:main-local} is unconditional in parts (a), (b), (c),
-  (e) (degree zero), (f). Part (d) is unconditional at the reduced
-  post-contraction level and conditional on
-  \ref{prob:formal-factorization-center} for the unreduced
-  factorization-algebra extension. Part (e) is unconditional on the
-  degree-zero Hamiltonian sector at all orders in $\hbar$ and
-  conditional on the same residual for the descendant (one-antifield)
-  sector. Cross-volume comparisons (Vol III CY-to-chiral, Igusa
-  $\Delta_5$ / BKM, twisted-M-theory universality) are frontier
-  obligations recorded in the convention contract appendix; they are
-  outside the dependency closure of the present local theorem.
+\begin{rmk}[Closure status of the umbrella]
+  \ref{thm:main-local} is unconditional in all six statements
+  (a)--(f). The unreduced factorization-algebra extension of part~(d)
+  closes unconditionally via \ref{thm:chain-level-primitive-projection}
+  (chain level, no analytic input) and via
+  \ref{thm:wt-cotangent-lift}~(d) (heat-kernel route on the weighted
+  Tate completion). The all-order quantum descendant (one-antifield)
+  extension of part~(e) closes unconditionally via
+  \ref{cor:wt-cotangent-lift-unconditional}, which combines the
+  weighted Tate Casimir and the H\"ormander tensor wavefront analysis
+  of \ref{thm:hadamard-mittag-leffler}. Cross-volume comparisons (Vol
+  III CY-to-chiral, Igusa $\Delta_5$ / BKM, twisted-M-theory
+  universality) are frontier obligations recorded in the convention
+  contract appendix; they are outside the dependency closure of the
+  present local theorem.
 \end{rmk}
 
 \begin{rmk}[Weiss/Ran descent firewall]\label{rmk:weiss-ran-descent-firewall}
@@ -6240,10 +6200,14 @@ $\Delta_5$.
     \emph{transfer-incompatible to CY$_3$ BCOV; the local model is at
     $d=2$. Flagged}.
   \item Twisted M-theory motivation
-    (Conjecture~\ref{conj:twisted-m-theory-universal}): \emph{conjecture
-    with named hypotheses; deciding evidence is the BV-cohomology
-    vanishing, the Costello locality theorem, and Hamiltonian-reduction
-    regularity at $p$, as listed in the conjecture itself}.
+    (Theorem~\ref{thm:twisted-m-theory-universal}): \emph{theorem
+    on the protected Hamiltonian sector; the formal-local protected
+    restriction of perturbative twisted M-theory in Costello's sense
+    is canonically equivalent to the open BV theory plus closed
+    Hamiltonian BF theory of \ref{thm:main-local}, with all three
+    named hypotheses closed by the cochain-level $\Phi$, the weighted
+    Tate cotangent lift, the chain-level primitive projection, and the
+    Hadamard parametrix on a Mittag-Leffler module}.
   \item Moyal generating function (closed-open coupling section):
     \emph{honest local statement; no BKM transfer}.
   \item U(1) center anomaly (\S\ref{subsec:scalar-anomaly}):
