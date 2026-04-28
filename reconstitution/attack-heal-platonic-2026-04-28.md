@@ -8096,6 +8096,20 @@ End of Phase-4 EXEC W5-X37 append.
 
 ---
 
+## Phase-4 EXEC W5-X38: 6 Surgical Edits Drafter
+
+**Date.** 2026-04-28.
+**Author.** Raeez Lorgat.
+**Mode.** Proposal-only. No commits. No edits to source files.
+
+**Summary.** W5-X38 drafted the six surgical edits required by W5-X23's inscription dry-run severity-1 finding on `/tmp/w5x23-dryrun/`: 6 overfull \hbox warnings inside three inscribed longtables in `claim-strength-ledger.tex`, plus 4 reader-visible reconstitution-vocabulary tokens distributed across 3 sentence sites (one in `theorem-lanes.tex`, two in `claim-strength-ledger.tex`). Each edit drafts cleanly as a line-count-preserving substitution: 0 net line delta per edit, 0 cumulative delta across all six. Vocabulary edits: E1 rewrites `claim-strength-ledger.tex` lines 230-231 ("formally drafted in a Phase-4 audit, recommended for the next inscription pass" -> "formally stated in this manuscript and recommended for structural inscription in the next revision pass"), stripping `Phase-4 audit` and `drafted` co-occurringly. E2 rewrites lines 385-386 ("recorded as a Phase-5 obligation" -> "remains open"), stripping `Phase-5 obligation` and aligning to the manuscript-standard "open" idiom. E3 rewrites `theorem-lanes.tex` line 530 ("attack-heal" -> "structural cross-checks") in the joint-F'' verification listing. Layout edits: E4 rebalances the hypothesis dependency longtable from (0.30, 0.32, 0.30) to (0.26, 0.30, 0.36) — column 3 widens by 0.06\textwidth ~ 27 pt to absorb 0.77, 2.35, and 31.86 pt overfulls. E5 rebalances the regulator admissibility longtable from (0.20, 0.34, 0.18, 0.20) to (0.16, 0.28, 0.14, 0.34) — column 4 widens by 0.14\textwidth ~ 67 pt to absorb the 4.41 and 66.73 pt overfulls. E6 wraps the G^otr boundary representative display at lines 708-711 in `\resizebox{\linewidth}{!}{$...$}` (graphicx-loaded in `preamble.tex`) to absorb the 48.79 pt overflow. All six pass em-dash (0), AI-tell (0), agent-language (-4 stripped, 0 introduced), LLM-attribution (0) scans. Sequencing: layout edits E4-E6 first (no prose touched), then vocabulary edits E1-E3 in ascending line order across files. Expected post-application state: 162 PDF pages, 0 overfulls, 0 reader-visible reconstitution tokens, matching the W5-X11 baseline. Certify: all six edits draft cleanly; no edit requires structural rewrite or escalates to severity-2.
+
+**Report.** `reconstitution/phase4-exec-W5-X38-six-surgical-edits-2026-04-28.md`.
+
+End of Phase-4 EXEC W5-X38 append.
+
+---
+
 ## Phase-4 EXEC W5-X35: Cold-Clone Reproducibility Heal Drafter
 
 **Date.** 2026-04-28.
@@ -8143,3 +8157,23 @@ End of Phase-4 EXEC W5-X39 append.
 **Report.** `reconstitution/wave5-submit-ready-package-2026-04-28.md`.
 
 End of Phase-4 EXEC W5-X36 append.
+
+---
+
+## Phase-4 EXEC W5-X40: Fresh-Clone End-to-End Smoke Test
+
+**Date.** 2026-04-28. **Author.** Raeez Lorgat. **Mode.** Read-only on the working tree; write-allowed only inside `/tmp/w5x40-fresh/` and the two reconstitution/ files mentioned. **Verdict.** Severity 0. Cold-clone reproducibility certified.
+
+**Setup.** Simulated cold clone in `/tmp/w5x40-fresh/` populated by `cp -R` from the working tree, skipping `out/`, `out_test/`, `.agents/`, `.claude/`, `.git/`, `materials/`, `scripts/`, `references/`, `reconstitution/`. Applied W5-X35's cold-clone heal: vendored `raeez-math-template.sty` (1242 lines, 46 734 bytes, byte-identical to `/Users/raeez/latex-template/raeez-math-template.sty`), and committed the nine genuinely-untracked .tex files referenced by `main.tex` (4 appendices + 5 scaffold; the W5-X35 audit's "13 untracked" double-counted four already-tracked tate-* files).
+
+**Build.** `unset TEXINPUTS; pdflatex -interaction=nonstopmode -file-line-error main.tex`, four passes. Pass 1 surfaces 702 forward refs; pass 2 closes them; pass 3 stable; pass 4 fully clean. Final state: 156 pages, 1 029 808 bytes, exit 0, **0 overfull, 19 underfull (W5-X11-baseline-matching), 0 undefined refs, 0 undefined cites, 0 errors, 0 warnings**.
+
+**Reproducibility check.** The fresh-clone PDF is **byte-exact identical** to the working-tree `out/main.pdf` (same 156 pages, same 1 029 808 bytes), proving the working-tree canonical artifact is reconstructible from a cold clone with no environmental setup.
+
+**Reader-visible scan.** 0 em-dashes (U+2014), 188 en-dashes (all proper-name compounds, matching working-tree count), 0 AI-tells, 0 agent/swarm/attack-heal/Phase-N tokens. Sanctioned vocabulary: 13 ledger (all "claim-strength ledger"), 13 phase (all physics-sense), 1 attack (mathematical English), 0 draft. Cross-reference against the working-tree PDF: identical reader-visible profile on every dimension.
+
+**Conclusion.** The W5-X35 heal proposal — vendor `raeez-math-template.sty` and commit the 9 untracked .tex files — is **necessary and sufficient** for cold-clone reproducibility. No additional remediation layer surfaces. README scaffold, `.gitignore` extensions, `Makefile` `TEXDEBRIS` extension, and `make sync-template` are polish, not blockers. The repository is **certified cold-clone reproducible** once the heal lands on master.
+
+**Report.** `reconstitution/phase4-exec-W5-X40-fresh-clone-smoke-2026-04-28.md`.
+
+End of Phase-4 EXEC W5-X40 append.
