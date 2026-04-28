@@ -1,25 +1,28 @@
-% proposed-nilpotent-truncation.tex
-% Nilpotent truncation route to the unreduced cotangent lift.
-% Closes route R2 of \ref{prob:formal-factorization-center} on a
-% precisely specified nilpotent truncation of the reduced Hamiltonian
-% Lie algebra \mathfrak h.
+% Nilpotent truncation fragment.
+% Nilpotent truncation route to the classical cotangent shadow.
+% Gives a finite classical CE/PV calculation on a precisely specified
+% nilpotent truncation of the reduced Hamiltonian Lie algebra \mathfrak h.
+% It does not construct the unreduced open BV factorization centre.
 
-\section*{Nilpotent truncation of the unreduced cotangent
-factorization-center lift}
+\section*{Nilpotent truncation of the cotangent shadow}
 
-The umbrella theorem \ref{thm:main-local} is unconditional in parts
-(a), (b), (c), (e) on the degree-zero Hamiltonian sector, and (f).
-Parts (d) on the unreduced extension and (e) on the descendant
-(one-antifield) sector are conditional on
+The main theorem \ref{thm:main-local} is unconditional for the
+cochain-level derived-centre, principal-part, brane-line factorization,
+degree-zero Hamiltonian Moyal, and scalar-anomaly statements.
+Part (d) is proved at the reduced principal-part level after de Rham-current contraction;
+its unreduced primitive shadow and part (e) on the descendant
+(one-antifield) sector are governed by
 \ref{prob:formal-factorization-center}, the unreduced Tate-coefficient
 cotangent lift. The deciding obstructions are
 \ref{lem:tate-casimir-obstruction} (Casimir support fails in the
 direct-sum dual) and \ref{lem:finite-window-hamiltonian-obstruction}
 (no naive finite-dimensional Lie truncation of the full sector). Two
 routes were named in \ref{prob:formal-factorization-center}: a
-weighted Tate completion (R1) or a nilpotent truncation (R2). This
-section closes (R2) on a precisely specified truncation, identifies
-exactly what is lost, and states the colim recovery question.
+weighted Tate completion or a nilpotent truncation. This
+section closes the classical nilpotent-truncation route on a precisely specified
+truncation, records what is lost, and records the quantum
+Moyal obstruction that prevents the same finite truncation from being
+an all-order descendant theorem.
 
 \subsection*{The truncation}
 
@@ -47,7 +50,7 @@ and the structure is exactly $\mathfrak{sl}_2$:
 $$\{z_1^2,z_2^2\}=4z_1z_2,\quad
   \{z_1^2,z_1z_2\}=2z_1^2,\quad
   \{z_1z_2,z_2^2\}=2z_2^2.$$
-Thus $\mathfrak m^3/\mathfrak m^{N+1}$ contains a nonabelian
+Thus $\mathfrak m^2/\mathfrak m^{N+1}$ contains a nonabelian
 semisimple subalgebra and is not nilpotent, hence does not satisfy
 the Tate-conilpotency hypothesis of
 \ref{lem:continuous-bar-cobar}. The truncation $k=3$ removes the
@@ -65,8 +68,7 @@ For every $N\geq 3$:
     $\binom{N+2}{2}-6$ (the number of
     monomials of degree between $3$ and $N$ inclusive).
   \item $\mathfrak h_{\leq N}$ is nilpotent of class at most
-    $\lceil(N-2)/(k-2)\rceil-1=\lceil(N-2)\rceil-1$ in the
-    descending Lie series, where $k=3$.
+    $N-2$ in the lower central series.
   \item $\mathfrak h_{\leq N}^\vee$ is finite-dimensional, hence the
     formal Casimir
     $C_{\mathfrak h_{\leq N}}=\sum_{3\leq d\leq N}\sum_i
@@ -149,33 +151,34 @@ $\mathfrak h_{\leq N}\otimes\mathfrak h_{\leq N}^\vee$. There is
 no convergence question.
 \end{rmk}
 
-\subsection*{The classical truncated cotangent factorization-center
-isomorphism}
+\subsection*{The classical truncated cotangent CE/PV shadow}
 
-\begin{thm}[Classical truncated cotangent factorization-center
-isomorphism]\label{thm:phi-trunc-classical}
+\begin{thm}[Classical truncated cotangent CE/PV shadow]\label{thm:phi-trunc-classical}
 Set
 $\mathfrak g_{\leq N}=\mathfrak h_{\leq N}\ltimes
 \mathfrak h_{\leq N}^\vee[1]$. For every interval $I\subset\R$ let
 $\mathfrak g_{\leq N,I}=
-C^\infty_c(I)\,\widehat\otimes\,\mathfrak h_{\leq N}\,\ltimes\,
+\Omega^\bullet_c(I)\,\widehat\otimes\,\mathfrak h_{\leq N}\,\ltimes\,
 \mathcal D'_c(I)\,\widehat\otimes\,\mathfrak h_{\leq N}^\vee[1]$.
-Then there is a canonical filtered cochain isomorphism of completed
+Then, after the Poisson, residue, and interval-smearing conventions fixed
+above, there is a filtered cochain isomorphism of completed
 dg graded-commutative $P_0$-algebras
 $$\Phi_{\leq N}:
   C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g_{\leq N,I})
   \xrightarrow{\ \sim\ }
-  Z^{P_0}_{\mathrm{fact}}\bigl(\widehat{\mathbf S}(\mathfrak h_{\leq N,I})\bigr)$$
-on every interval $I\subset\R$, full-chain, unconditional. The
-isomorphism is determined on generators by
+  \mathrm{PV}\bigl(\widehat{\mathbf S}(\mathfrak h_{\leq N,I})\bigr)$$
+on every interval \(I\subset\R\). This is the finite nilpotent
+CE/PV cotangent shadow of the reduced Hamiltonian model; it is not an
+unreduced open BV factorization-centre morphism. The isomorphism is determined on generators by
 $\Phi_{\leq N}(c^I)=\theta^I$, $\Phi_{\leq N}(u_I)=O_I$, with the
 same Schouten/Lichnerowicz convention as in
-\ref{thm:open-closed-derived-center}. The map is compatible with
-extension by zero and with disjoint-interval factorization products,
-recovers the stalkwise central operation $f\mapsto L_{B_f}$ at the
-point limit $I\to\{t_0\}$, and on the cotangent generators realizes
-the bulk-to-boundary map $\widetilde\partial_{\mathrm{bb},\leq N}$
-of \ref{thm:bulk-boundary} restricted to $\mathfrak h_{\leq N}$.
+\ref{thm:open-closed-derived-center}. It is compatible with extension
+by zero and with disjoint-interval products in this reduced finite
+model, and on the Hamiltonian generators it recovers the stalkwise
+operation \(f\mapsto L_{B_f}\). The cotangent generators are finite
+principal-part labels in the CE/PV shadow; their unreduced boundary
+centrality homotopies remain part of
+Problem~\ref{prob:formal-factorization-center}.
 \end{thm}
 
 \begin{proof}
@@ -200,9 +203,7 @@ graded-commutative $P_0$-algebras
 $$\Phi_{\leq N}^{\mathrm{stalk}}:
   C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g_{\leq N})
   \xrightarrow{\ \sim\ }
-  \mathrm{PV}\bigl(\widehat{\mathbf S}(\mathfrak h_{\leq N})\bigr)
-  \simeq Z^{P_0}_{\mathrm{fact}}\bigl(
-    \widehat{\mathbf S}(\mathfrak h_{\leq N})\bigr),$$
+  \mathrm{PV}\bigl(\widehat{\mathbf S}(\mathfrak h_{\leq N})\bigr),$$
 with the explicit generator-level data of
 \ref{thm:open-closed-derived-center}.
 
@@ -213,28 +214,28 @@ applies verbatim with $\mathfrak h$ replaced by
 $\mathfrak h_{\leq N}$: the locality input
 $\{(\phi_1)^i{}_j(t),(\phi_2)^k{}_l(s)\}=\delta^i_l\delta^k_j\delta(t-s)$
 is unchanged, the smearing
-$\mathfrak h_{\leq N,I}=C^\infty_c(I)\,\widehat\otimes\,
-\mathfrak h_{\leq N}$ is canonical because $\mathfrak h_{\leq N}$
+  $\mathfrak h_{\leq N,I}=\Omega^\bullet_c(I)\,\widehat\otimes\,
+  \mathfrak h_{\leq N}$ is canonical because $\mathfrak h_{\leq N}$
 is finite-dimensional (no Tate completion), and the strict $P_0$
 bracket follows from the delta-function locality.
 
-The cotangent factor on the unreduced sector now closes
-unconditionally. The principal-part sub-factorization algebra
+In this finite truncated classical sector, the cotangent factor has no
+Tate-Casimir convergence problem. The principal-part sub-factorization algebra
 $$\widetilde{\mathrm{Obs}}^{\mathrm{cl,pp}}_{\partial,\leq N}(I)
   =\mathrm{Obs}^{\mathrm{cl}}_{\mathrm{open},\leq N}(I)
    \,\widehat\otimes\,
    \widehat{\mathbf S}\bigl(\mathfrak h_{\leq N,I}^\vee[1]\bigr)$$
-admits a chain-level primitive projection
-$\pi_{\mathrm{prim}}^{\leq N}$ because the Tate Casimir
-$C_{\mathfrak h_{\leq N}}=\sum_{d=2}^N\sum_i e_{d,i}\otimes e_d^i$
+    admits a chain-level primitive projection
+    $\pi_{\mathrm{prim}}^{\leq N}$ because the Tate Casimir
+    $C_{\mathfrak h_{\leq N}}=\sum_{d=3}^N\sum_i e_{d,i}\otimes e_d^i$
 is a finite sum, hence a literal element of the (uncompleted) tensor
 product $\mathfrak h_{\leq N}\otimes\mathfrak h_{\leq N}^\vee$. The
 $Q$-compatibility, factorization compatibility, and $P_0$-bracket
 homotopies are then formal, since at no step does one need an
 infinite-support tensor in the direct-sum dual.
 
-The bracket compatibility and graded Leibniz extension to the full
-completed algebra is the same argument as in
+The bracket compatibility and graded Leibniz extension to the completed
+finite CE/PV algebra is the same argument as in
 \ref{thm:open-closed-derived-center}, with the additional
 simplification that all completions are trivial because
 $\mathfrak h_{\leq N}$ is finite-dimensional. Compatibility with
@@ -243,157 +244,74 @@ stalkwise limit follow as in
 \ref{thm:open-closed-derived-center-factorization}.
 \end{proof}
 
-\subsection*{The all-order quantum truncated isomorphism}
+\subsection*{Quantum status of the finite truncation}
 
-\begin{thm}[All-order quantum truncated derived-center isomorphism,
-degree-zero sector]\label{thm:phi-hbar-trunc}
-There is a $\C[[\hbar]]$-linear cochain isomorphism of completed dg
-graded-commutative $P_{0,\hbar}$-algebras
-$$\Phi_{\hbar,\leq N}^{(0)}:
-  \bigl[C^\bullet_{\mathrm{CE},\mathrm{cont},\hbar}\bigl(
-    \mathfrak h_{\leq N,\hbar}\ltimes
-    \mathfrak h_{\leq N,\hbar}^\vee[1]\bigr)\bigr]^{(0)}[[\hbar]]
-  \xrightarrow{\ \sim\ }
-  Z^{P_{0,\hbar}}_{\mathrm{fact}}\bigl(
-    \mathrm{Obs}^\hbar_{\mathrm{open},\leq N}\bigr)^{(0)}$$
-on every interval $I\subset\R$, on the \emph{degree-zero
-Hamiltonian sector}, unconditional. The classical limit
-$\hbar=0$ is the degree-zero part of $\Phi_{\leq N}$ of
-\ref{thm:phi-trunc-classical}. This is
-$\Phi_{\hbar,\leq N}^{(0)}=\Phi_\hbar^{(0)}\big|_{\mathfrak h_{\leq N}}$,
-namely \ref{thm:phi-hbar-all-order} restricted to monomials of
-$\mathfrak m$-adic degree between $3$ and $N$.
+\begin{thm}[Quantum status of the nilpotent truncation]
+\label{thm:phi-hbar-trunc}
+  The classical finite truncation
+  \ref{thm:phi-trunc-classical} is unconditional.  The same finite
+  Lie algebra
+  $\mathfrak h_{\leq N}=\mathfrak m^3/\mathfrak m^{N+1}$ does
+  \emph{not} carry an all-order Moyal deformation for $N\geq4$:
+  it is not closed under the reduced Moyal bracket. Consequently the
+  nilpotent truncation
+  supplies no all-order quantum descendant theorem on the strict
+  finite truncation unless an additional Moyal-flat replacement or a
+  projected bracket with Jacobi and cochain compatibility is supplied.
 
-The full-sector statement (descendant included) at all orders in
-$\hbar$ on the truncation requires a \emph{Moyal-flat refinement}
-of the truncation,
-$\mathfrak h_{\leq N,\hbar}^{\mathrm{flat}}\subset\mathfrak h[[\hbar]]$,
-in which the higher-order Moyal corrections (which lower
-$\mathfrak m$-adic degree by more than $2$) are accommodated
-order-by-order; see the proof. On the classical level
-($\hbar=0$) the full-sector descendant lift on
-$\mathfrak h_{\leq N}$ is
-\ref{thm:phi-trunc-classical}, unconditional.
+  What remains true at quantum level is the restriction of the
+  full-sector degree-zero map
+  \ref{thm:phi-hbar-all-order} to the finite set of generators of
+  $\mathfrak h_{\leq N}$, viewed inside the full
+  $\mathfrak h_\hbar$.  This is a restriction of a proved map on the
+  full Hamiltonian source, not a closed CE theorem for a finite
+  quantum Lie subalgebra.
 \end{thm}
 
 \begin{proof}
-\emph{Moyal stability of the truncation.} The Moyal bracket
-$\{f,g\}_\hbar=\sum_{j\geq 0}\frac{\hbar^{2j}}{(2j+1)!\,2^{2j}}
-P^{2j+1}(f,g)$ with
-$P=\partial_{z_1}\otimes\partial_{z_2}-\partial_{z_2}\otimes\partial_{z_1}$
-takes $f\in\mathfrak m^p$, $g\in\mathfrak m^q$ to a sum whose
-order-$\hbar^{2j}$ piece lies in $\mathfrak m^{p+q-2(2j+1)}$
-(when this is non-negative; zero otherwise). At leading order
-$j=0$: in $\mathfrak m^{p+q-2}$, the classical Poisson bracket. At
-order $\hbar^{2j}$ for $j\geq 1$: in $\mathfrak m^{p+q-4j-2}$, which
-can be lower than $\mathfrak m^3$. Specifically for $p=q=3$ and
-$j=1$: $P^3(z_1^3,z_2^3)=6\cdot 6=36\in\mathfrak m^0$.
+  The Moyal bracket is
+  $$\{f,g\}_\hbar=\sum_{j\geq 0}
+    \frac{\hbar^{2j}}{(2j+1)!\,2^{2j}}P^{2j+1}(f,g),\qquad
+    P=\partial_{z_1}\otimes\partial_{z_2}
+      -\partial_{z_2}\otimes\partial_{z_1}.$$
+  If $f\in\mathfrak m^p$ and $g\in\mathfrak m^q$, the
+  order-$\hbar^{2j}$ summand lies in
+  $\mathfrak m^{p+q-2(2j+1)}$ when nonzero.  The Poisson term
+  $j=0$ preserves $\mathfrak m^3$ as a Lie subalgebra, but the
+  higher Moyal terms need not.  For $N\geq4$,
+  $$P^3(z_1^4,z_2^4)=24z_1\cdot24z_2=576z_1z_2,$$
+  so
+  $$\{z_1^4,z_2^4\}_\hbar
+    =16z_1^3z_2^3+24\hbar^2 z_1z_2+\cdots.$$
+  The term $24\hbar^2z_1z_2$ has $\mathfrak m$-adic degree $2$.
+  It is neither in $\mathfrak m^3$ nor a constant killed by the
+  reduction modulo $\C\cdot1$.  Thus
+  $\mathfrak m^3/\mathfrak m^{N+1}$ is not a Moyal Lie subalgebra
+  for $N\geq4$.
 
-The Moyal deformation therefore does \emph{not} preserve
-$\mathfrak m^3$ as a Lie subalgebra at all orders in $\hbar$;
-the higher-order Moyal corrections produce lower-degree
-terms in $\mathfrak m\setminus\mathfrak m^3$. Hence the strict
-all-order truncation $\mathfrak m^3/\mathfrak m^{N+1}$ is not
-Moyal-flat.
-
-\emph{Repair: order-shifted truncation.} The Moyal-flat truncation is
-$$\mathfrak h_{\leq N,\hbar}^{\mathrm{flat}}:=
-   \bigl\{f\in\mathfrak h\mid f=
-   \sum_{j\geq 0}\hbar^{2j}f_j,\ f_j\in\mathfrak m^{4j+3}/
-   \mathfrak m^{N+1}\bigr\}.$$
-The $\mathfrak m$-adic shift by $4j$ at order $\hbar^{2j}$ matches
-the Moyal correction's degree-lowering: a Moyal bracket of
-$f=\sum\hbar^{2j}f_j$ with $g=\sum\hbar^{2j}g_j$ has
-order-$\hbar^{2k}$ contribution
-$\sum_{j_1+j_2+l=k}\frac{1}{(2l+1)!2^{2l}}P^{2l+1}(f_{j_1},g_{j_2})$,
-in $\mathfrak m^{(4j_1+3)+(4j_2+3)-2(2l+1)}=
-\mathfrak m^{4(j_1+j_2)+4-4l}=\mathfrak m^{4(k-l)+4-4l}=
-\mathfrak m^{4k-8l+4}$, which is in $\mathfrak m^{4k+3}$ exactly
-when $4k-8l+4\geq 4k+3$, i.e.\ $1\geq 8l$, i.e.\ $l=0$. For $l\geq 1$
-the term lies in $\mathfrak m^{4k-8l+4}\subset\mathfrak m^{-8(l-1)+4}$
-which is generically lower; the truncation must be modified
-order-by-order. The cleanest version uses the directed limit over
-the order-shifted truncations.
-
-\emph{Alternative: degree-zero Moyal stability.} The all-order
-quantum derived-center isomorphism on the degree-zero Hamiltonian
-sector is \ref{thm:phi-hbar-all-order}, which holds for the full
-$\mathfrak h$ unconditionally. Restricted to
-$\mathfrak h_{\leq N}=\mathfrak m^3/\mathfrak m^{N+1}$ at the
-classical level, then deformed only to all orders in $\hbar$ on the
-\emph{degree-zero source} (not the descendant), the Moyal stability
-problem does not arise: the source is just monomials in
-$\mathfrak h_{\leq N}$ as a vector space, and the target is the
-Capelli-renormalized stable connected Weyl trace algebra. The
-flatness argument of \ref{thm:phi-hbar-all-order} restricts
-literally to the truncated source.
-
-\emph{Target flatness over $\C[[\hbar]]$.} The Capelli triangular
-system of \ref{lem:capelli-renormalized-stable-trace}(ii) is
-unipotent over $\C[[\hbar N]]$, hence over $\C[[\hbar]]$, and the
-truncated stable connected single-trace projection is the literal
-restriction of the full one to monomials in
-$\mathfrak h_{\leq N}$. Both source and target are flat
-$\C[[\hbar]]$-modules with the same associated graded at $\hbar=0$.
-
-\emph{Cochain identity.} The Hamiltonian-sector cochain identity
-$$\hbar^{-1}[\partial_{\mathrm{bb},\hbar}(f),
-   \partial_{\mathrm{bb},\hbar}(g)]_{\mathrm{conn,raw}}
-  =\partial_{\mathrm{bb},\hbar}\bigl(\{f,g\}_\hbar\bigr)$$
-of \ref{thm:phi-hbar-all-order} restricts to
-$f,g\in\mathfrak h_{\leq N}=\mathfrak m^3/\mathfrak m^{N+1}$.
-
-\emph{Cotangent (descendant) compatibility, classical level.} On
-the truncation at $\hbar=0$, the Costello propagator $P_{\epsilon,L}$
-extends trivially to the finite-dimensional coefficient module
-$\mathfrak h_{\leq N}\oplus\mathfrak h_{\leq N}^\vee[2]$: the
-operator-level homotopy of
-\ref{rmk:linear-heat-versus-bv-kernel} becomes the BV propagator
-because the missing coefficient coevaluation
-$$C_{\mathfrak h_{\leq N}}\in\mathfrak h_{\leq N}
-  \otimes\mathfrak h_{\leq N}^\vee$$
-is now a finite sum, hence a literal kernel. The BV Laplacian and
-renormalized graph weights are then defined for the full sector at
-$\hbar=0$, and the obstruction class of the QME computation lives
-in a finite-dimensional cohomology. This is the descendant content
-of \ref{thm:phi-trunc-classical}.
-
-\emph{Cotangent (descendant) compatibility, all-order $\hbar$.}
-At order $\hbar^{2j}$ for $j\geq 1$, the Moyal corrections to the
-Lie bracket and to the BV propagator extend to a slightly larger
-$\mathfrak m$-adic window than $\mathfrak h_{\leq N}$, by the
-order-shifted argument above. The Moyal-flat refinement
-$\mathfrak h_{\leq N,\hbar}^{\mathrm{flat}}$ accommodates this by
-allowing higher-order $\hbar$ pieces to live in deeper
-$\mathfrak m$-adic shells. On
-$\mathfrak h_{\leq N,\hbar}^{\mathrm{flat}}$ the descendant cochain
-isomorphism extends to the full sector by the Mittag-Leffler /
-unipotent-deformation argument of \ref{thm:phi-hbar-all-order},
-applied order-by-order to a finite-dimensional Lie source. The
-Capelli contact term
-$\omega_{\mathrm{Cap}}(A)=N\overline{\mathrm{Tr}(A)}$ retains the
-classical role on the constant axis $\C\cdot 1\subset\bar A$; the
-constant axis is not in $\mathfrak h_{\leq N,\hbar}^{\mathrm{flat}}$,
-so the $\omega_{\mathrm{Cap}}$ class evaluates to zero on truncated
-boundary observables.
-
-\emph{Conclusion of degree-zero statement.} The degree-zero source
-of the truncated CE algebra is just $\mathfrak h_{\leq N,\hbar}=
-\mathfrak m^3/\mathfrak m^{N+1}$ as a $\C[[\hbar]]$-module
-(the deformation is in the bracket, not the underlying space). The
-target is the Capelli-renormalized stable connected Weyl trace
-algebra restricted to monomials in $\mathfrak h_{\leq N}$. The
-flatness argument of \ref{thm:phi-hbar-all-order} restricts
-literally, and the cochain identity holds on the truncation. The
-isomorphism follows by the same Mittag-Leffler argument.
+  Therefore the CE differential for a hypothetical finite quantum
+  source
+  $\mathfrak h_{\leq N,\hbar}\ltimes
+  \mathfrak h_{\leq N,\hbar}^\vee[1]$ is not defined by restriction
+  of the Moyal bracket.  Any projected bracket would require a new
+  Jacobi proof; the projected-degree warning of
+  \ref{lem:finite-window-hamiltonian-obstruction} shows that this is
+  a real condition, not a formality.  The all-order theorem
+  \ref{thm:phi-hbar-all-order} remains valid on the full
+  Hamiltonian algebra $\mathfrak h_\hbar$, and one may evaluate its
+  map on generators of degrees $3,\ldots,N$.  That operation does not
+  make those generators a finite quantum CE source.  The descendant
+  cotangent sector at $\hbar=0$ is exactly
+  \ref{thm:phi-trunc-classical}; at $\hbar\neq0$ it remains a named
+  Moyal-flat truncation problem.
 \end{proof}
 
 \subsection*{What is lost}
 
 \begin{prop}[Lost sectors]\label{prop:trunc-lost-sectors}
 The truncation $\mathfrak h\rightsquigarrow\mathfrak h_{\leq N}=
-\mathfrak m^3/\mathfrak m^{N+1}$ removes exactly the following five
-data from the umbrella \ref{thm:main-local}:
+\mathfrak m^3/\mathfrak m^{N+1}$ removes the following five
+data from the local theorem \ref{thm:main-local}:
 \begin{enumerate}
   \item\label{lost:translations}
     The linear Hamiltonians $z_1,z_2\in\mathfrak m\setminus\mathfrak m^2$,
@@ -434,12 +352,14 @@ data from the umbrella \ref{thm:main-local}:
     $\mathfrak m^3$-truncation of the Hamiltonian Lie algebra, not
     the full $\mathfrak h=\mathfrak m$.
 \end{enumerate}
-What remains: the third-order and higher canonical
+What remains classically: the third-order and higher canonical
 transformations, which form a nilpotent Lie subalgebra
 $\mathfrak m^3\subset\mathfrak h$, a Lie ideal in $\mathfrak m^2$,
-admitting the full classical and
-all-order quantum cotangent factorization-center lift
-unconditionally.
+admitting the classical finite cotangent CE/PV shadow unconditionally.
+The unreduced open BV factorization-centre morphism is not constructed
+by this truncation. The all-order Moyal descendant lift is excluded by
+\ref{thm:phi-hbar-trunc} unless extra quantum truncation data are
+added.
 \end{prop}
 
 \begin{proof}
@@ -461,11 +381,11 @@ system: for every $N\leq M$, the diagram
 $$\begin{array}{ccc}
   C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g_{\leq M,I})
   & \xrightarrow{\ \Phi_{\leq M}\ } &
-  Z^{P_0}_{\mathrm{fact}}\bigl(\widehat{\mathbf S}(\mathfrak h_{\leq M,I})\bigr)\\
+  Z^{P_0}_{\mathrm{red,Ham}}\bigl(\widehat{\mathbf S}(\mathfrak h_{\leq M,I})\bigr)\\
   \downarrow\pi_{M\to N} & & \downarrow\pi_{M\to N}\\
   C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g_{\leq N,I})
   & \xrightarrow{\ \Phi_{\leq N}\ } &
-  Z^{P_0}_{\mathrm{fact}}\bigl(\widehat{\mathbf S}(\mathfrak h_{\leq N,I})\bigr)
+  Z^{P_0}_{\mathrm{red,Ham}}\bigl(\widehat{\mathbf S}(\mathfrak h_{\leq N,I})\bigr)
 \end{array}$$
 commutes, where $\pi_{M\to N}$ is induced by the surjection
 $\mathfrak h_{\leq M}\twoheadrightarrow\mathfrak h_{\leq N}$. Passing to
@@ -474,7 +394,7 @@ $$\Phi_{\mathfrak m^3}:=\varprojlim_N\Phi_{\leq N}:
   C^\bullet_{\mathrm{CE},\mathrm{cont}}\bigl(\mathfrak m^3\ltimes
     (\mathfrak m^3)^\vee_{\mathrm{cont}}[1]\bigr)
   \xrightarrow{\ \sim\ }
-  Z^{P_0}_{\mathrm{fact}}\bigl(\widehat{\mathbf S}_{\mathrm{Tate}}(\mathfrak m^3)\bigr).$$
+  Z^{P_0}_{\mathrm{red,Ham}}\bigl(\widehat{\mathbf S}_{\mathrm{Tate}}(\mathfrak m^3)\bigr).$$
 \end{prop}
 
 \begin{proof}
@@ -514,8 +434,8 @@ surjection of finite-dimensional spaces.
 \begin{rmk}[The colim does NOT recover the full $\mathfrak h$]
 \label{rmk:colim-does-not-recover-full}
 The inverse limit
-$\Phi_{\mathfrak m^3}$ of \ref{prop:colim-recovery} is the
-unconditional cotangent lift on $\mathfrak m^3$, not on
+  $\Phi_{\mathfrak m^3}$ of \ref{prop:colim-recovery} is the
+  classical cotangent lift on $\mathfrak m^3$, not on
 $\mathfrak h=\mathfrak m$. To extend to all of $\mathfrak h$ one must
 include the low-degree sectors
 $\mathfrak m/\mathfrak m^3=H_1\oplus H_2=\C\cdot z_1\oplus
@@ -554,8 +474,8 @@ Tate-conilpotency hypothesis of
 \ref{rmk:colim-does-not-recover-full} this is the
 low-degree-sector failure; by \ref{lem:tate-casimir-obstruction}
 this is the same coefficient-category problem as
-\ref{prob:formal-factorization-center}. Thus the truncation route
-(R2) closes the unreduced cotangent lift on $\mathfrak m^3$, and the
+\ref{prob:formal-factorization-center}. Thus the nilpotent-truncation route
+closes the classical nilpotent cotangent shadow on $\mathfrak m^3$, and the
 residual moves from \ref{prob:formal-factorization-center} as stated
 to its restricted form on the low-degree sector
 $\mathfrak m/\mathfrak m^3=H_1\oplus H_2$ alone.
@@ -568,13 +488,13 @@ $\mathfrak h$ is structural rather than analytic: the inclusion of
 $H_2=\mathfrak{sl}_2$ violates Tate-conilpotency because
 $[H_2,H_2]=H_2$ is its own descending Lie series. Even if the
 degree-$1$ and degree-$2$ Casimir components converged in some
-weighted Tate completion (route R1), the universal cochain-level
+weighted Tate completion, the universal cochain-level
 \ref{thm:open-closed-derived-center} would not apply directly to
 the resulting Lie algebra: a Koszul-bar/cobar duality argument for
 the semisimple $\mathfrak{sl}_2$ direction is non-trivial and is
 the same as the failure of the cobar formalism for non-conilpotent
 coalgebras (\cite{loday-vallette}). One either restricts to
-nilpotent radicals (the present route) or replaces the Lie source
+nilpotent radicals (the route taken here) or replaces the Lie source
 by a model that builds in semisimple subalgebras separately.
 \end{rmk}
 
@@ -590,7 +510,7 @@ $\mathfrak{gl}(N\mid N)\hookrightarrow\mathfrak{gl}(N+k\mid N+k)$
 and the BV-cohomology vanishing
 $H^*_{\mathrm{BV}}\bigl(\mathfrak{gl}(N\mid N)\bigr)=0$
 (supertrace identity $\mathrm{str}(I)=N-N=0$ kills the would-be
-U(1)-anomaly). The structural analogy with the present truncation:
+U(1)-anomaly). The structural analogy with the truncation here:
 \begin{enumerate}
   \item Each window $\mathfrak{gl}(N\mid N)$ is finite-dimensional,
     BV-cohomology vanishes, the universal CE/Schouten identification
@@ -598,18 +518,18 @@ U(1)-anomaly). The structural analogy with the present truncation:
     each window.
   \item The inverse / direct system is the Lie embedding
     $\mathfrak{gl}(N\mid N)\hookrightarrow\mathfrak{gl}(N+1\mid N+1)$
-    in their case, the Lie surjection
+    on the Costello--Li side, the Lie surjection
     $\mathfrak h_{\leq N+1}\twoheadrightarrow\mathfrak h_{\leq N}$
-    in our case.
+    here.
   \item The U(1)-anomaly is killed by the structure of each window
-    in their case (supertrace), and is removed by the truncation
-    $\mathfrak m^3$-cutoff in our case (the cocycle $\omega$
+    on the Costello--Li side (supertrace), and is removed by the
+    $\mathfrak m^3$-truncation here (the cocycle $\omega$
     pairs only multidegree-$(1,0)$ with multidegree-$(0,1)$, both
     in $H_1\subset\mathfrak m\setminus\mathfrak m^2$, hence outside
     $\mathfrak m^3$).
-  \item The colimit $N\to\infty$ converges in their case to the
-    full $\mathfrak{gl}(\infty\mid\infty)$, providing the stable
-    connected single-trace algebra. In our case the inverse limit
+  \item The colimit $N\to\infty$ converges on the Costello--Li side
+    to the full $\mathfrak{gl}(\infty\mid\infty)$, providing the
+    stable connected single-trace algebra. Here the inverse limit
     converges to $\mathfrak m^3\subsetneq\mathfrak h$, not to all
     of $\mathfrak h$, by \ref{rmk:colim-does-not-recover-full}.
 \end{enumerate}
@@ -630,25 +550,27 @@ Tate-conilpotency.
 
 The nilpotent truncation
 $\mathfrak h_{\leq N}=\mathfrak m^3/\mathfrak m^{N+1}$ closes
-the unreduced cotangent factorization-center lift unconditionally,
-classically and at all orders in $\hbar$, in the full sector
-(degree-zero Hamiltonian plus one-antifield descendant). The
-isomorphism $\Phi_{\hbar,\leq N}$ of \ref{thm:phi-hbar-trunc} is
-the truncated all-order quantum derived-center isomorphism on the
-intervals $I\subset\R$. The inverse limit
+the classical finite nilpotent cotangent CE/PV shadow on the truncated
+sector (degree-zero Hamiltonian plus finite cotangent labels). It does
+not construct the unreduced open BV factorization-centre morphism. The quantum
+all-order version on the same finite source is obstructed by
+\ref{thm:phi-hbar-trunc}: the Moyal bracket leaves
+$\mathfrak m^3/\mathfrak m^{N+1}$ for $N\geq4$.  The inverse limit
 $\Phi_{\mathfrak m^3}=\varprojlim_N\Phi_{\leq N}$ of
-\ref{prop:colim-recovery} is the unconditional cotangent lift on the
-full $\mathfrak m^3$ sector. What is lost: the low-degree sector
+\ref{prop:colim-recovery} is the classical cotangent lift on the
+full classical $\mathfrak m^3$ sector. What is lost: the low-degree sector
 $\mathfrak m/\mathfrak m^3=H_1\oplus H_2$ (linear translations and
 the conformal-symplectic $\mathfrak{sl}_2$), the
 constant-Hamiltonian $\hbar$-normalization, the U(1) center anomaly
 $[\bar c]$, and the stable connected limit on the full
 $\mathfrak h$. Recovering the low-degree sector requires the
 coefficient-category change of
-\ref{prob:formal-factorization-center} (route R1) together with a
+\ref{prob:formal-factorization-center} together with a
 non-conilpotent extension of \ref{lem:continuous-bar-cobar} to
-accommodate the semisimple $\mathfrak{sl}_2\subset H_2$. The
-truncation route (R2) is closed.
+accommodate the semisimple $\mathfrak{sl}_2\subset H_2$. Thus the
+nilpotent truncation
+closes only the classical $\mathfrak m^3$ truncation; its all-order
+quantum version is the separate Moyal-flat truncation problem above.
 
 This is the same structural truncation as Costello--Li
 $\mathfrak{gl}(N\mid N)\to\mathfrak{gl}(\infty\mid\infty)$, with the

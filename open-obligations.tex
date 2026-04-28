@@ -1,0 +1,223 @@
+\section{Open obligations}\label{sec:open-obligations}
+
+The proved local core is confined to the formal Hamiltonian,
+residue, factorization-current, scalar-reduced Moyal, and scalar-anomaly
+claims stated above. The following statements are outside those
+theorems.
+
+\begin{enumerate}
+  \item \emph{Proof ownership behind theorem-lane entries.}
+  Each index lane requires a cited theorem, proposition, lemma, or
+  computation whose hypotheses and conclusion match the lane. The index
+  entry itself is not a proof-bearing theorem.
+
+  \item \emph{Sign and convention appendix.}
+  A convention block must record the BV degrees, Ext shifts, CE/PV
+  shifts, current-density pairings, interval-orientation sign, scalar
+  quotient, and Capelli/Weyl normalization. It must distinguish
+  convention signs from computed signs.
+
+  \item \emph{Matlis/local-cohomology source boundary.}
+  Appendix~\ref{sec:app-matlis-principal-parts} contains the topology on
+  \(\mathfrak h\), the continuous dual calculation, the residue action,
+  the local-cohomology uniqueness statement, and the
+  no-polynomial-descendant theorem.  It also contains the limited
+  Fourier--Rees label bridge: the bridge is a Weyl-module
+  Fourier-normalization and associated-graded label comparison through
+  the Fourier delta Rees lattice, not an \(\mathfrak h\)-module
+  identification and not an equality with the full Cech lattice before
+  \(\hbar\) is inverted.  The remaining obligation is any theorem that
+  changes the Hamiltonian action or the boundary target enough to evade
+  the same-action local-nilpotence obstruction.
+
+  \item \emph{Radial-parts source matching.}
+  Appendix~\ref{sec:app-radial-parts-moyal} fixes the Weyl algebra
+  conventions, Capelli triangular signs, scalar \(U(1)\) quotient, and
+  relation to the stated finite exact ranges.  The finite-\(N\) all-\(N\)
+  radial-parts identity remains conditional on matching the
+  Harish-Chandra--Wallach--Levasseur--Stafford input to this quantum
+  Hamiltonian reduction.  The finite exact check is independent finite-range
+  evidence, not a substitute for that source match.
+
+  \item \emph{Unreduced cotangent factorization centre.}
+  An unreduced open BV model whose cotangent sector carries
+  principal-part currents before de Rham-current contraction remains open.
+  The corresponding centrality homotopies against arbitrary open
+  observables are also open.  The obstruction is visible before any
+  analytic graph integral is chosen.  In the grading used here,
+  \(|\phi_i|=0\), \(\psi=A^*\) is odd of BV degree \(-1\),
+  a Hamiltonian generator \(H_f\) has degree \(0\), a shifted cotangent
+  generator \(\eta_\rho=\rho[1]\) has degree \(-1\), and the CE
+  coordinates have \(|c_f|=1\), \(|u_\rho|=0\).  The polynomial
+  one-\(\psi\) descendants cannot serve as unreduced cotangent
+  representatives: for the linear Hamiltonians,
+  \[
+    \{O_{1,0},\widetilde\Psi_{a,b}\}=b\,\widetilde\Psi_{a,b-1},
+    \qquad
+    \{O_{0,1},\widetilde\Psi_{a,b}\}
+      =-a\,\widetilde\Psi_{a-1,b},
+  \]
+  while the principal-part coadjoint action is
+  \[
+    z_1\cdot\rho_{a,b}=-(b+1)\rho_{a,b+1},
+    \qquad
+    z_2\cdot\rho_{a,b}=(a+1)\rho_{a+1,b}.
+  \]
+  The index shifts go in opposite directions.  Hence the primitive
+  one-\(\psi\) projection is only the indecomposable \(P_0\) shadow of
+  this problem; it is not a centrality homotopy and not an unreduced
+  factorization-centre morphism.
+
+  \item \emph{One-antifield quantum lift.}
+  The extension of the degree-zero Moyal/Weyl comparison to the
+  descendant sector is open at the unreduced open-BV and
+  factorization-centre level. The finite nilpotent source
+  \(\mathfrak m^3/\mathfrak m^{N+1}\) is not stable under the Moyal
+  bracket for \(N\geq4\), so the lift requires a different
+  Moyal-flat source or a weighted coefficient construction with its own
+  hypotheses.  There is, however, a target-side reduced complex:
+  Construction~\ref{constr:quantum-principal-part-descendant-target}
+  defines the distributional principal-part target with full Moyal
+  coadjoint action
+  \[
+    \{B_f(a),\Theta_\rho(B)\}_\hbar
+      =
+      \Theta_{\operatorname{ad}^{\vee}_{f,\hbar}\rho}(aB),
+    \qquad
+    \{\Theta_\rho(B),\Theta_\sigma(C)\}_\hbar=0.
+  \]
+  This target does not come from the primitive polynomial one-\(\psi\)
+  classes.  Proposition~\ref{prop:quantum-descendant-label-obstruction}
+  computes
+  \[
+    \operatorname{ad}^{\vee}_{z_1^4,\hbar}\delta_{1,1}
+      =-24\hbar^2\delta_{0,4}+\cdots,
+  \]
+  whereas the PBW one-\(\psi\) action sends
+  \(\widetilde\Psi_{1,1}\) to \(4\widetilde\Psi_{4,0}\).  Thus the
+  obstruction survives after primitive projection and is not a
+  multi-trace artifact.  Theorem~\ref{thm:no-hbar-primitive-descendant-intertwiner}
+  strengthens this: no \(\hbar\)-adic deformation whose leading term is
+  \(\widetilde\Psi_{a,b}\mapsto\rho_{a,b}\) and whose source linear
+  Hamiltonians have the PBW leading action can intertwine the Moyal
+  coadjoint action.  The remaining obligation is therefore not to add
+  higher corrections to the old label map, but to construct the
+  unreduced boundary model, centrality homotopies, and analytic
+  Costello/QME lift landing in the principal-part target.
+
+  \item \emph{Regulator independence and the strict endpoint.}
+  The weighted Tate regulator is independent of the chosen admissible
+  degree weight inside the finite-window Mittag-Leffler sector, by
+  Theorem~\ref{thm:wt-regulator-independence-admissible}.  This is not
+  a theorem that the original product/direct-sum Tate pair carries the
+  same closed-open graph theory: in that strict topology the Costello
+  coefficient Casimir is absent by
+  Lemma~\ref{lem:tate-casimir-obstruction}.  The stronger strict
+  endpoint is ruled out, under the Costello coefficient-kernel and
+  finite-window compatibility hypotheses, by
+  Theorem~\ref{thm:strict-unweighted-no-go}.  Tail-sensitive observables
+  in the weighted product completion remain outside the proved
+  regulator-admissible sector, and ordinary cohomology of the weighted
+  product is not identified with the strict direct-sum dual.
+
+  \item \emph{Mixed brane-defect QME.}
+  The quantum master equation for the brane-defect Costello graph model,
+  with the required boundary kernel and scalar-anomaly normalization, is
+  open. The Hadamard/Mittag-Leffler theorem supplies the analytic
+  reduction, not the vanishing of the obstruction class.  The residual
+  class is the brane-defect local functional
+  \[
+    \operatorname{Ob}\in
+    H^1\bigl(\mathcal O_{\mathrm{loc}}(\mathcal E_w),
+      Q+\{I_0,-\}\bigr),
+  \]
+  together with the scalar contact normalization.  Classically, before
+  scalar reduction,
+  \[
+    \{I_\partial(a,f),I_\partial(b,g)\}_{\mathrm{open}}
+    =I_\partial(ab,\{f,g\}_{\bar A})
+      +N\,\omega(f,g)\int_\R a(t)b(t)\,dt .
+  \]
+  Quantum mechanically the same boundary contact appears as
+  \[
+    \operatorname{Tr}(A\,XY)-\operatorname{Tr}(A\,YX)
+      =\hbar N\,\operatorname{Tr}(A)
+      \quad\bmod\ \mathcal W_N\widehat\mu(\mathfrak{gl}_N).
+  \]
+  Here \(X,Y\) are the Weyl generators corresponding to
+  \(\phi_1,\phi_2\).  Known candidate QME lifts include cancellation by a
+  closed exchange graph and counterterm, removal by an explicitly
+  stated supertrace or central-character normalization, or absorption
+  into renormalized boundary generators.  Exhaustiveness would require
+  a computation of the relevant degree-one obstruction complex.
+
+  \item \emph{All-order Costello graph realization.}
+  An all-order renormalized BV graph model whose boundary product is the
+  Weyl/Moyal product in the normalization used here remains open. The
+  first and third graph normalizations remain computations to stated
+  order.
+
+  \item \emph{Rees/Fourier bridge between \(\Psi\) and \(\rho\).}
+  The constructed Fourier--Rees comparison relates the PBW polynomial
+  labels and the principal-part labels only after Fourier twist and
+  degreewise Rees normalization:
+  \[
+    z_1^az_2^b\mapsto
+    \partial_1^a\partial_2^be_0
+    \mapsto
+    (-1)^{a+b}\hbar^{a+b}a!b!\rho_{a,b}.
+  \]
+  Before \(\hbar\) is inverted this is the Fourier delta Rees lattice
+  \(\mathcal D_\hbar/(z_1,z_2)\), not the full Cech lattice
+  \(\bigoplus\C[[\hbar]]\rho_{a,b}\).  It does not intertwine the
+  original Hamiltonian action: Fourier sends the Rees-normalized
+  operators \(\hbar X_{z_1},\hbar X_{z_2}\) to multiplication
+  operators, while the Matlis cotangent module uses the original
+  coadjoint vector fields on principal parts.  A same-action bridge
+  from \(\Psi_{a,b}\) to \(\rho_{a,b}\) is ruled out on the generic
+  fibre by local nilpotence unless the Hamiltonian action or the
+  boundary target is changed.  Theorem~\ref{thm:no-hbar-primitive-descendant-intertwiner}
+  records the corresponding \(\hbar\)-adic no-go for deformations of
+  the classical primitive projection.
+
+  \item \emph{Claim-status vocabulary.}
+  Theorem boxes, the claim-strength ledger, outlook material, and
+  theorem-lane entries require the same status vocabulary:
+  proved in finite algebraic model, proved degreewise stable, proved in
+  weighted Tate coefficient model, computed to stated order, conditional
+  on named QME/radial-parts/unweighted-regulator theorem, conjectural,
+  open, or not asserted.
+
+  \item \emph{Global and cross-volume transfer.}
+  Any compact Calabi--Yau, global BCOV, Vol III chiral-homology,
+  \(\Phi_d\), Igusa/BKM/Borcherds, \(K3\times E\), or
+  higher-dimensional derived-centre consequence requires a separate
+  matched-conventions theorem containing the datum of
+  Definition~\ref{defn:matched-conventions-theorem-datum}.  The local
+  Hamiltonian BF/Moyal calculation supplies no such transfer by itself,
+  and may be cited by sibling volumes only as a local \(d=2\) convention
+  check unless they supply their own proof.  The templates in
+  Remark~\ref{rmk:matched-conventions-templates} are obligations, not
+  theorems; citing the template or the no-transfer lemma does not create
+  a comparison morphism.
+
+  \item \emph{Rendered-page, table, and figure verification.}
+  The rendered title and abstract pages, claim-strength ledger, local
+  dictionary, principles, theorem lanes, open obligations, and first- and
+  third-order figures require visual verification. The figure labels and
+  captions must state the computed order and hypothesis they support. A
+  successful TeX run by itself does not verify these pages.
+
+  \item \emph{Notation and macro hygiene.}
+  Rendered and support notation files should contain no stale macros,
+  duplicated definitions, informal text, or dead notation. A symbol
+  should appear in the support files only when it is used with the same
+  meaning in the manuscript or retained for a declared local convention.
+
+  \item \emph{Primary-source anchoring.}
+  For each use of Witten centrality, Costello graph/QME formalism, BCOV,
+  Loday--Quillen--Tsygan, Procesi--Razmyslov, Matlis duality, and
+  radial parts, record the source theorem, the local convention
+  translation, what is used, and what is not used. A name citation alone
+  does not transfer a theorem into the local model.
+\end{enumerate}

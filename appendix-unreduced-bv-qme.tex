@@ -1,0 +1,180 @@
+\section{Unreduced BV Cotangent and Scalar QME Obstructions}
+\label{sec:app-unreduced-bv-qme}
+
+This appendix records the obstruction which remains after the reduced
+principal-part current theorem and the weighted Hadamard reduction.  It
+is a no-go statement for the current polynomial unreduced boundary
+category, not a construction of the missing analytic brane-defect graph
+realization.
+
+\begin{defn}[BV degrees and signs]
+\label{def:app-unreduced-bv-degrees}
+  The open polynomial BV/Koszul model uses
+  \[
+    |\phi_1|=|\phi_2|=0,\qquad |\psi=A^*|=-1,\qquad
+    Q\psi=[\phi_1,\phi_2],\qquad |Q|=1 .
+  \]
+  A Hamiltonian generator \(H_f\) has degree \(0\).  A shifted cotangent
+  generator \(\eta_\rho=\rho[1]\) is odd of BV degree \(-1\).  The CE
+  coordinates satisfy
+  \[
+    |c_f|=1,\qquad |u_\rho|=0 .
+  \]
+  The reduced \(P_0\) bracket has degree \(0\).  The QME obstruction
+  differential \(Q+\{I_0,-\}\) has degree \(1\).  The Poisson sign
+  convention is \(\{z_1,z_2\}=1\), and the principal-part coadjoint
+  action is
+  \[
+    z_1^p z_2^q\cdot\rho_{a,b}
+    =
+    -(pb-qa+p-q)\rho_{a-p+1,b-q+1}.
+  \]
+\end{defn}
+
+\begin{thm}[Polynomial unreduced centrality no-go]
+\label{thm:app-unreduced-polynomial-centrality-no-go}
+  Let \(M_{\mathrm{pol}}\) be any \(Q\)-stable subcomplex of the
+  unreduced polynomial open BV observables in which every element has
+  finite polynomial degree in \(\phi_1,\phi_2,\psi\).  There is no
+  assignment
+  \[
+    \rho_{a,b}[1]\longmapsto \Theta_{a,b}\in H^\bullet(M_{\mathrm{pol}},Q)
+  \]
+  and no system of centrality homotopies in \(M_{\mathrm{pol}}\) whose
+  induced \(Q\)-cohomology action realizes the principal-part module
+  \(\mc P\).  Equivalently, the reduced map
+  \(\rho_{a,b}[1]\mapsto\Theta_{a,b}\) cannot be lifted to unreduced
+  polynomial boundary representatives with homotopies satisfying
+  \[
+    \{O_f,\Theta_\rho\}\simeq\Theta_{f\cdot\rho},
+    \qquad
+    \{\Theta_\rho,\Theta_\sigma\}\simeq0
+  \]
+  for all polynomial Hamiltonians \(f\).
+\end{thm}
+
+\begin{proof}
+  The linear Hamiltonians act on polynomial open observables by the
+  canonical scalar-translation derivations
+  \[
+    O_{1,0}\mapsto \partial_{\phi_2},\qquad
+    O_{0,1}\mapsto -\partial_{\phi_1}.
+  \]
+  These derivations commute with \(Q\), since translating
+  \(\phi_1\) or \(\phi_2\) by a scalar matrix leaves the moment-map
+  equation \(Q\psi=[\phi_1,\phi_2]\) unchanged. On every finite
+  polynomial observable, repeated application of either derivation
+  eventually vanishes. Hence their induced actions on
+  \(H^\bullet(M_{\mathrm{pol}},Q)\) are locally nilpotent.
+
+  On the principal-part module the same two Hamiltonians act by
+  \[
+    z_1\cdot\rho_{a,b}=-(b+1)\rho_{a,b+1},\qquad
+    z_2\cdot\rho_{a,b}=(a+1)\rho_{a+1,b}.
+  \]
+  Iterating gives
+  \[
+    z_1^r\cdot\rho_{a,b}
+      =(-1)^r(b+1)\cdots(b+r)\rho_{a,b+r}\neq0,
+  \]
+  and similarly for \(z_2\), for every \(r\geq1\).  Thus no nonzero
+  principal part is locally nilpotent for the linear Hamiltonian action.
+
+  If the stated homotopies existed in \(M_{\mathrm{pol}}\), then after
+  passing to \(Q\)-cohomology the action of \(O_{1,0}\) and \(O_{0,1}\)
+  on the classes \([\Theta_{a,b}]\) would be isomorphic to the displayed
+  principal-part action.  Local nilpotence is invariant under module
+  isomorphism and under passage to a submodule. This contradicts the
+  previous paragraph. Therefore the unreduced lift cannot live in the
+  polynomial open BV/Koszul category. A corrected target must add
+  genuinely distributional principal-part boundary fields and then prove
+  new centrality homotopies there.
+\end{proof}
+
+\begin{prop}[Scalar contact QME class]
+\label{prop:app-scalar-contact-qme-class}
+  Let
+  \[
+    \omega(f,g)=[\{f,g\}]_0
+  \]
+  be the constant Taylor coefficient cocycle of
+  Lemma~\ref{lem:omega-cocycle}.  For compactly supported
+  \(a,b\in\Omega^0_c(\R)\), the unreduced scalar boundary contact is
+  \[
+    \{I_\partial(a,f),I_\partial(b,g)\}_{\mathrm{open}}
+    =
+    I_\partial(ab,\{f,g\}_{\bar A})
+    +N\,\omega(f,g)\int_\R a(t)b(t)\,dt .
+  \]
+  In the quantum Weyl normalization it is equivalently represented by
+  \[
+    \operatorname{Tr}(A\,XY)-\operatorname{Tr}(A\,YX)
+      =
+      \hbar N\,\operatorname{Tr}(A)
+      \quad\bmod\ \mathcal W_N\widehat\mu(\lie{gl}_N).
+  \]
+  After insertion of the central boundary ghost
+  \(\gamma_{\mathbf 1}\), \(|\gamma_{\mathbf 1}|=1\), the degree-one
+  obstruction representative is
+  \[
+    \operatorname{Ob}_{\mathrm{sc}}(\gamma_{\mathbf 1};a,f;b,g)
+    =
+    \hbar N\,\omega(f,g)
+    \int_\R a(t)b(t)\gamma_{\mathbf 1}(t)\,dt .
+  \]
+  Its associated graded CE class is \(\hbar N[\bar c]\).  This class is
+  not exact in the scalar-reduced Hamiltonian source.
+\end{prop}
+
+\begin{proof}
+  The first displayed formula is
+  Corollary~\ref{cor:local-bulk-boundary-coupling}. The second is the
+  quantum version of the same central term: the Weyl convention gives
+  \([X^i{}_j,Y^k{}_l]=\hbar\delta^i_l\delta^k_j\), and the normal
+  ordered moment relation is
+  \(Y_\hbar X_\hbar-X_\hbar Y_\hbar+\hbar N I\equiv0\). Hence
+  \(XY-YX=\hbar N I\) in the quantum Hamiltonian reduction, and tracing
+  against \(A\) gives the stated sign.
+
+  The scalar contact itself has degree \(0\). Multiplication by the
+  central ghost \(\gamma_{\mathbf 1}\) makes the QME obstruction
+  representative degree \(1\), the degree of the obstruction complex.
+  The CE associated graded of this representative is the scalar
+  extension cocycle \(\hbar N\omega\), hence the class
+  \(\hbar N[\bar c]\).
+
+  If it were exact in the scalar-reduced Hamiltonian source, the leading
+  scalar term would give a linear primitive
+  \(\bar\eta:\bar A\to\C\) with
+  \(\delta\bar\eta=\omega\). Pulling \(\bar\eta\) back to
+  \(\C[z_1,z_2]\) and setting the value on \(1\) to zero would contradict
+  the computation
+  \[
+    \omega(z_1,z_2)=1,\qquad \{z_1,z_2\}=1 .
+  \]
+  Equivalently, the only primitive
+  \(\eta(f)=-[f]_0\) lives on the unreduced polynomial Hamiltonian
+  algebra and does not descend to \(\bar A\). Thus the scalar-reduced
+  source has no counterterm whose associated graded kills the class.
+\end{proof}
+
+\begin{rmk}[Allowed escape routes]
+\label{rmk:app-scalar-contact-escape-routes}
+  A closed-exchange cancellation would have to produce a local graph
+  contribution \(W_{\mathrm{closed\,exch}}\) and a counterterm \(C\)
+  satisfying
+  \[
+    \operatorname{Ob}_{\mathrm{sc}}
+    +W_{\mathrm{closed\,exch}}
+    +(Q+\{I_0,-\})C=0,
+  \]
+  with associated graded
+  \([W_{\mathrm{closed\,exch}}]=-\hbar N[\bar c]\). The current
+  reduced closed source has no constant-Hamiltonian line from which this
+  scalar primitive can be built. The other honest exits change the input
+  data: use a supertrace theory with \(\operatorname{Str}(1)=0\), impose
+  a central character \(\chi\) with \(\chi(I)=0\), or reintroduce the
+  unreduced scalar Hamiltonian and its primitive
+  \(\eta(f)=-[f]_0\). None is a proof of QME vanishing for the ordinary
+  \(\lie{gl}_N\), scalar-reduced Hamiltonian model.
+\end{rmk}

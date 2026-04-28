@@ -1,0 +1,170 @@
+\section{Factorization Current Conventions on the Brane Line}
+\label{sec:app-factorization-current-conventions}
+
+This appendix fixes the current conventions used in
+Theorem~\ref{thm:lane-factorization-current}.  Its stable core is the
+degree-zero Hamiltonian current source, the continuous current dual,
+the CE coordinate which maps to \(B_f(a)\), and the density sign under
+orientation reversal.  It does not construct the unreduced BV
+cotangent factorization centre; that remains the obligation recorded
+in Remark~\ref{rmk:unreduced-lift-status}.
+
+\begin{defn}[Hamiltonian current source]
+\label{def:app-factorization-current-source}
+  For an open interval \(I\subset\R\), the reduced Hamiltonian current
+  Lie algebra is
+  \[
+    \mathfrak h_I=\Omega^\bullet_c(I)\widehat\otimes\mathfrak h .
+  \]
+  In the polynomial degree-zero formulas one may replace
+  \(\mathfrak h\) by its dense scalar-reduced polynomial subalgebra
+  \(\bar A=\C[z_1,z_2]/\C\cdot1\).  If
+  \(\alpha,\beta\in\Omega^\bullet_c(I)\) and \(f,g\in\mathfrak h\),
+  the bracket is
+  \[
+    [\alpha\otimes f,\beta\otimes g]
+      =\alpha\wedge\beta\otimes\{f,g\}.
+  \]
+  For degree-zero test functions \(a,b\in\Omega^0_c(I)\) this is
+  \[
+    [a\otimes f,b\otimes g]=ab\otimes\{f,g\}.
+  \]
+  The measurement notation writes the oriented density associated to
+  \(a\) as \(a(t)\,dt\); this density notation does not change the
+  de Rham degree of the source test function \(a\).
+\end{defn}
+
+\begin{defn}[Current dual and shifted cotangent source]
+\label{def:app-factorization-current-dual}
+  Let
+  \[
+    \mc P\simeq\mathfrak h^\vee_{\mathrm{cont}}
+  \]
+  be the reduced Matlis principal-part module of
+  Section~\ref{sec:app-matlis-principal-parts}.  The current dual used
+  on \(I\) is
+  \[
+    \mathcal P_I=\mathcal D'_c(I)\widehat\otimes\mc P,
+  \]
+  with pairing
+  \[
+    \langle B\otimes\rho,\;a\otimes f\rangle
+      =B(a)\operatorname{Res}(\rho f).
+  \]
+  If \(B=b(t)\,dt\) is a regular compactly supported density, then
+  \(B(a)=\int_I a(t)b(t)\,dt\).
+
+  The interval shifted-cotangent Lie algebra is
+  \[
+    \mathfrak g_I=\mathfrak h_I\ltimes\mathcal P_I[1].
+  \]
+  In degree zero the shifted cotangent generator
+  \(B\otimes\rho[1]\) is odd.  The CE coordinate dual to such a
+  shifted cotangent generator has degree zero.  We denote the
+  coordinate dual to the cotangent functional labelled by
+  \(a(t)\,dt\otimes f\) by
+  \[
+    u_{a(t)dt\otimes f},\qquad |u_{a(t)dt\otimes f}|=0.
+  \]
+  The Hamiltonian CE coordinate \(c_{a\otimes f}\), dual to the
+  unshifted Hamiltonian generator \(a\otimes f\), has degree one.
+\end{defn}
+
+\begin{prop}[Source of the smeared boundary Hamiltonian]
+\label{prop:app-factorization-source-of-B}
+  The length-one shifted-cotangent CE coordinate, not a shifted dual of
+  the unshifted Hamiltonian current, is the source of the smeared
+  Hamiltonian operation:
+  \[
+    u_{a(t)dt\otimes f}\longmapsto
+    B_f(a)
+      =\int_I a(t)\,
+        \overline{\operatorname{Tr}
+        f(\phi_1(t),\phi_2(t))}\,dt .
+  \]
+  With this convention the degree-zero current bracket is
+  \[
+    \{B_f(a),B_g(b)\}=B_{\{f,g\}}(ab).
+  \]
+\end{prop}
+
+\begin{proof}
+  The CE algebra of
+  \(\mathfrak g_I=\mathfrak h_I\ltimes\mathcal P_I[1]\) is the
+  completed symmetric algebra on the continuous dual shifted by
+  \([-1]\).  A generator of \(\mathcal P_I[1]\) has degree one in the
+  degree-zero current sector; its CE coordinate therefore has degree
+  zero and is written \(u\).  Under the CE/PV dictionary this
+  coordinate maps to multiplication by the corresponding Hamiltonian
+  boundary observable.  Applying boundary evaluation
+  \(f\mapsto\overline{\operatorname{Tr}f(\phi_1,\phi_2)}\) and
+  smearing against the compactly supported density \(a(t)\,dt\) gives
+  the displayed \(B_f(a)\).  The bracket identity is then the
+  equal-time Poisson bracket smeared against \(a(t)b(s)\delta(t-s)\),
+  which gives the pointwise product \(ab\).
+\end{proof}
+
+\begin{prop}[Principal-part current bracket]
+\label{prop:app-factorization-principal-part-bracket}
+  In the reduced \(P_0\) current model after de Rham-current contraction,
+  \[
+    A_\partial^{\mathrm{pp}}(I)
+      =\widehat{\mathbf S}(\mathfrak h_I)
+        \widehat\otimes
+        \widehat{\mathbf S}(\mathcal P_I[1]),
+  \]
+  the degree-zero brackets are
+  \[
+  \begin{aligned}
+    \{B_f(a),B_g(b)\}&=B_{\{f,g\}}(ab),\\
+    \{B_f(a),\Theta_\rho(B)\}&=\Theta_{f\cdot\rho}(aB),\\
+    \{\Theta_\rho(B),\Theta_\sigma(C)\}&=0.
+  \end{aligned}
+  \]
+  Here \(aB\) is multiplication of a compactly supported current by a
+  smooth test function.  On monomial labels and a regular current
+  \(B=b(t)\,dt\),
+  \[
+    \{B_{z_1^p z_2^q}(a),\Theta_{\rho_{i,j}}(B)\}
+      =-(pj-qi+p-q)\Theta_{\rho_{i-p+1,j-q+1}}(aB),
+  \]
+  with negative-index targets equal to zero.
+\end{prop}
+
+\begin{proof}
+  The first bracket is the Hamiltonian current bracket from
+  Proposition~\ref{prop:app-factorization-source-of-B}.  The second
+  bracket is the negative transpose of the first under the product of
+  the de Rham-current pairing and the residue pairing:
+  \[
+    \langle B\otimes\rho,\;a\otimes f\rangle
+      =B(a)\operatorname{Res}(\rho f).
+  \]
+  The residue factor gives the coadjoint action
+  \(f\cdot\rho\), computed in
+  Proposition~\ref{prop:app-matlis-coadjoint-action}; the line factor
+  gives \(aB\).  The \(\Theta\)-sector is declared abelian in the
+  reduced semidirect product, giving the third bracket.
+\end{proof}
+
+\begin{rmk}[Orientation reversal]
+\label{rmk:app-factorization-orientation-reversal}
+  The orientation convention is the ordinary one for one-dimensional
+  densities.  Under an orientation-reversing coordinate change,
+  \(dt\) contributes its usual sign.  No additional sign is inserted
+  from the CE coordinate \(u_{a(t)dt\otimes f}\), from the
+  principal-part label \(\rho\), or from the shifted cotangent
+  notation.  Thus the displayed operations are orientation-covariant
+  after transforming the densities and currents in the usual way; if
+  one reverses only the chosen orientation while holding the written
+  density fixed, the sign is exactly the sign of \(dt\).
+\end{rmk}
+
+\begin{rmk}[Residual convention boundary]
+\label{rmk:app-factorization-residual}
+  These conventions prove the reduced \(P_0\) current bookkeeping.
+  They do not supply the missing unreduced BV current complex, the
+  primitive cumulant projection before reduction, or the homotopies
+  making \(\Theta_\rho\) central against arbitrary unreduced open
+  observables.
+\end{rmk}

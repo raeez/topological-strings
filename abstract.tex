@@ -1,96 +1,45 @@
 \begin{abstract}
-This paper studies a local constrained mechanical system. The formal
-holomorphic normal surface has coordinates $z_1,z_2$ and symplectic form
-$dz_1\wedge dz_2$. On a stack of $N$ probes these coordinates become
-matrices $\phi_1,\phi_2\in\mathfrak{gl}_N$. The open ghost-zero theory is
-the Dirac first-order system
-$$\int_\R \mathrm{Tr}\bigl(\phi_1\,d\phi_2+A[\phi_1,\phi_2]\bigr).$$
-Here $A$ is the multiplier for the first-class constraint
-$[\phi_1,\phi_2]=0$, and the BV/Koszul variable $\psi=A^*$ records it by
-$Q\psi=[\phi_1,\phi_2]$. This is the open local model for a mixed
-holomorphic-topological BV sector on $\R^2\times\C^2$ with brane
-$\R\times p$.
+We study the formal local mixed holomorphic-topological brane at the
+symplectic disk with coordinates \(z_1,z_2\) and form
+\(dz_1\wedge dz_2\). On a stack of \(N\) probes these coordinates are
+matrices \(\phi_1,\phi_2\in\mathfrak{gl}_N\), and the open ghost-zero
+system is the Dirac first-order theory
+\[
+  \int_\R\operatorname{Tr}\bigl(\phi_1\,d\phi_2
+  +A[\phi_1,\phi_2]\bigr)
+\]
+with first-class constraint \([\phi_1,\phi_2]=0\) and BV/Koszul
+variable \(\psi=A^*\) satisfying \(Q\psi=[\phi_1,\phi_2]\). Closed
+Hamiltonian modes act through the reduced CE/PV Hamiltonian
+central-operation model. A full \(P_0\)-factorization-centre theorem for the
+unreduced open theory is not asserted. The cotangent modes are not polynomial
+descendants: in the local theorem they are Grothendieck--Matlis
+residue currents in
+\[
+  \mathcal P=\operatorname{Ann}_{\mathrm{res}}(\C\cdot1)\subset
+  H^2_{\mathfrak m}(\C[[z_1,z_2]])\,dz_1dz_2
+  =\bigoplus_{a+b>0}\C\,\rho_{a,b}.
+\]
+The stable polynomial one-\(\psi\) classes \(\Psi_{a,b}\) are PBW
+special-fibre open labels; they are not another basis of
+\(\mathcal P\) as an \(\mathfrak h\)-module.
 
-The infinitesimal canonical symmetries of the formal symplectic disk
-form the reduced Tate Lie algebra
-$\widehat{\mathfrak h}=\C[[z_1,z_2]]/\C\cdot 1$. Its shifted cotangent
-semidirect extension
-$\mathfrak g=\widehat{\mathfrak h}\ltimes
-  \widehat{\mathfrak h}^{\vee}_{\mathrm{cont}}[1]$
-is the dg Lie algebra of closed Hamiltonian BF theory. The classical
-local theorem is the umbrella of six interlocking statements. There is a
-universal cochain-level isomorphism of completed dg graded-commutative
-$P_0$-algebras
-$$\Phi:C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g)
-  \xrightarrow{\sim}\mathrm{PV}\bigl(\widehat{\mathbf S}_{\mathrm{Tate}}
-  (\widehat{\mathfrak h})\bigr)
-  \simeq Z^{P_0}_{\mathrm{fact}}\bigl(\widehat{\mathbf S}_{\mathrm{Tate}}
-  (\widehat{\mathfrak h})\bigr),$$
-sending the CE coordinate $c^I$ dual to the Hamiltonian generator
-$H_I\in\widehat{\mathfrak h}$ to the constant polyvector
-$\theta^I=\partial/\partial O_I$, and the CE coordinate $u_I$ dual to the
-shifted cotangent generator $\eta_{\delta_I}$ to the boundary Hamiltonian
-function $O_I=\overline{\mathrm{Tr}\,H_I(\phi_1,\phi_2)}$. The boundary
-trace observable is the image of the shifted cotangent CE coordinate, not
-of the unclosed CE coordinate dual to a Hamiltonian mode. The continuous
-dual $\widehat{\mathfrak h}^{\vee}_{\mathrm{cont}}$ is canonically the
-principal-part residue module $\mathcal P=\bigoplus_{a+b>0}\C\,\rho_{a,b}$
-with $\rho_{a,b}=z_1^{-a-1}z_2^{-b-1}\,dz_1\,dz_2$, paired by the
-Grothendieck residue. The polynomial Koszul descendants $\Psi_{a,b}$ are
-PBW special-fibre representatives carrying a raising action; the principal
-parts $\rho_{a,b}$ are deformation-correct coadjoint representatives
-carrying the lowering action; the Rees parameter $\hbar$ of the formal
-Moyal deformation interpolates them.
-
-The cochain isomorphism upgrades to a quasi-isomorphism of locally
-constant $P_0$ factorization algebras on the brane line $\R$, in the
-connected Hamiltonian sub-sector, with strict factorization product on
-disjoint supports and equal-time delta-function bracket. It deforms to
-all orders in $\hbar$ on the degree-zero Hamiltonian sector: the
-Capelli/Weyl-renormalized stable trace $J_N(f)$ realizes the all-order
-Moyal target, the Harish-Chandra radial-parts identity gives the reduced
-Moyal commutator at all $N$, and the Costello first/third graph
-normalizations are fixed by Kontsevich uniqueness. The scalar
-Hamiltonian/center-of-mass mode carries a single nontrivial class
-$[\bar c]\in H^2_{\mathrm{Lie}}(\bar A,\C)$ realised identically by the
-classical Poisson cocycle $\omega(z_1^kz_2^l,z_1^mz_2^n)=
-(kn-lm)\mathbf 1[(k+m,l+n)=(1,1)]$ and the quantum Capelli shift
-$YX-XY+\hbar NI=0$; the equivalence holds modulo $[\bar c]$.
-
-The unreduced Tate-coefficient cotangent lift is closed by five
-interlocking routes. The weighted Tate completion with exponential
-weight $w(d)=q^d$, $q>1$, makes the formal Casimir converge as a kernel
-in $\mathfrak h_w\,\widehat\otimes\,\mathfrak h^{\vee,w}_{\mathrm{cont}}$,
-extends the Costello heat-kernel propagator, and is preserved by the
-RG flow on polynomial-degree-bounded interactions. The nilpotent
-truncation $\mathfrak m^3/\mathfrak m^{N+1}$ closes the full cotangent
-factorization-center lift unconditionally on the truncated sector, in
-classical and degree-zero quantum form. The naive truncation
-$\mathfrak m^2/\mathfrak m^{N+1}$ fails because $H_2=\mathfrak{sl}_2$
-is semisimple. The Tate $\infty$-categorical Quillen adjunction
-$\Omega\dashv\mathrm{Bar}$, transferred via Hinich/Berger--Moerdijk
-and Lefevre--Hasegawa, promotes the strict cochain $\Phi$ to an
-equivalence of presentable $\infty$-categories of completed dg
-$P_0$-algebras (independent of Casimir convergence). The chain-level
-primitive projection
-$\pi_{\mathrm{prim}}\colon\mathrm{Obs}^{\mathrm{cl}}_{\mathrm{open},N}(I)
-\to\Omega^\bullet_c(I)\,\widehat\otimes\,\bar A$
-is constructed from Procesi--Razmyslov cycle merging and the de Rham
-contraction, with $P_0$-bracket homotopy identically zero on every
-trace-count stratum, and is independent of any analytic propagator.
-The Costello-locality compatibility of the Hadamard parametrix on a
-Mittag-Leffler coefficient module is closed by the exact tensor
-factorization of the Costello propagator $P^w_{\epsilon,L}=
-P^{\mathrm{base}}_{\epsilon,L}\,\widehat\otimes\,C_{\mathfrak h,w}$:
-the spacetime piece carries all analytic content, the coefficient
-piece is a purely algebraic Casimir with empty wavefront, and
-H\"ormander's tensor wavefront theorem makes the Mittag-Leffler limit
-on the coefficient side commute with bulk locality. The all-order
-quantum derived-center isomorphism extends unconditionally to the
-weighted cotangent direction at all orders in $\hbar$. The umbrella
-theorem is therefore unconditional in all six statements, with no
-remaining sub-residual. Cross-volume convention contracts to
-\textasciitilde/calabi-yau-quantum-groups (Vol III) and
-\textasciitilde/igusa-cusp-form ($\Delta_5$/BKM) are local-only and
-explicitly non-transferable without separate matched-conventions proofs.
+The finite algebraic part proves the Dirac brane reduction, the
+scalar-reduced degree-zero Weyl/Moyal comparison, and the scalar
+\(U(1)\) anomaly. The degreewise stable part proves the PBW trace
+sector, the cochain-level CE/PV derived-centre map for
+\(\mathfrak h=\C[[z_1,z_2]]/\C\cdot1\), the Matlis principal-part
+cotangent module, the compactly supported brane-line current model, and
+the principal-part defect model after de Rham-current contraction. The weighted Tate
+construction is proved only in the weighted Tate coefficient model and
+makes no regulator-independence claim. The first and third Costello
+graph normalizations are reduced open-line Weyl/Moyal boundary
+coefficient computations to stated order. The all-order brane-defect
+graph realization is conditional on a mixed brane-defect QME theorem,
+the radial-parts input where finite \(N\) is used, and the required
+centrality homotopies. The unreduced
+cotangent factorization-centre morphism, a one-antifield descendant
+Moyal lift, a Rees/Fourier bridge between \(\Psi_{a,b}\) and
+\(\rho_{a,b}\), compact Calabi--Yau consequences, BKM/Igusa
+consequences, and sister-volume transfers are not asserted here.
 \end{abstract}

@@ -1,9 +1,5 @@
 % =============================================================================
 % Chain-level primitive projection.
-% Proposal-only fragment.  Insertion target in main.tex: immediately after
-% prob:formal-factorization-center (around line 2942) and before
-% rmk:weiss-ran-descent-firewall (line 2959).  Macros and conventions
-% follow main.tex (commands.tex, mathmacros.tex).  Voice: Russian school.
 %
 % Conventions:
 % - bar A = C[z_1,z_2]/C·1, the reduced closed Hamiltonian Lie algebra.
@@ -24,14 +20,15 @@
 \subsection{Chain-level primitive projection}
 \label{ssec:chain-level-primitive}
 
-We now construct the chain-level primitive projection
+The chain-level primitive projection
 $$\pi_{\mathrm{prim}}:
   \mathrm{Obs}^{\mathrm{cl}}_{\mathrm{open},N}(I)
   \longrightarrow
   \Omega^\bullet_c(I)\widehat\otimes\bar A$$
 required by Problem~\ref{prob:formal-factorization-center}, item (3),
-without recourse to any heat-kernel propagator or finite-scale
-regularization.  The construction relies only on the chain structure
+is constructed below without recourse to any heat-kernel propagator or
+finite-scale regularization.  The construction relies only on the chain
+structure
 of the reduced BV algebra (Construction~\ref{constr:reduced-bv-algebra}),
 the de Rham contraction (Lemma~\ref{lem:derivative-jets}), and the
 stable trace invariant theory of
@@ -106,8 +103,8 @@ $P_0$ bracket]\label{lem:filtration-preservation}
   $\mc R_\infty^{GL_\infty,\mathrm{st}}\cong
   \mathbf S(\mathrm{Cyc}(F)_{\mathrm{nonempty}})$ has the natural
   cumulant projection onto the linear span of generators (the
-  Hopf-algebraic primitive), which we tensor with the identity on
-  $\Omega^\bullet_c(I)$:
+  Hopf-algebraic primitive). Tensored with the identity on
+  $\Omega^\bullet_c(I)$, this gives
   $$\pi_{\mathrm{prim}}:
     \Omega^\bullet_c(I)\widehat\otimes\mathbf S(\mathrm{Cyc}(F)_{\mathrm{nonempty}})
     \twoheadrightarrow
@@ -125,12 +122,14 @@ $P_0$ bracket]\label{lem:filtration-preservation}
     \mathrm{Obs}^{\mathrm{cl}}_{\mathrm{open},N}(I)
     \twoheadrightarrow
     \Omega^\bullet_c(I)\widehat\otimes\bar A.$$
-  At finite $N$ the projection is the same map composed with the
-  block-restriction map
-  $\mc R_N\twoheadrightarrow\mc R_\infty^{\mathrm{st}}$ (which
-  factorizes through the trace-count filtration in each fixed
-  word-degree once $N\geq d$ for the relevant total word-degree $d$,
-  by Proposition~\ref{prop:stable-trace-invariants}).
+  At finite $N$ this is a degreewise stable construction, not a
+  global map $\mc R_N\to\mc R_\infty^{\mathrm{st}}$.  For a fixed
+  word-degree $d$ and $N\geq d$,
+  Proposition~\ref{prop:stable-trace-invariants} identifies the
+  degree-$d$ trace invariants with the stable cyclic-word span, and
+  the above projection is applied on that stable range.  Outside the
+  stable range the finite-$N$ trace identities are not discarded; the
+  statement is made after passing to the stable connected limit.
 \end{constr}
 
 \begin{lem}[Cumulant kernel is the closed ideal of decomposables]\label{lem:cumulant-kernel}
@@ -168,7 +167,7 @@ $P_0$ bracket]\label{lem:filtration-preservation}
   $$F_0\oplus(F_1/F_0)\oplus F_{\geq 2}\,/\,F_{\geq 2}$$
   in the associated graded sense.  $\pi_{\mathrm{prim}}$ is by
   construction the projection onto $F_1/F_0$ in this splitting; the
-  scalar empty-trace summand $F_0$ is killed because we tensor with
+  scalar empty-trace summand $F_0$ is killed by the tensor factor
   $\bar A=\C[z_1,z_2]/\C\cdot 1$.  Therefore
   $\pi_{\mathrm{prim}}\circ Q$ and $Q\circ\pi_{\mathrm{prim}}$ both
   agree on each summand: on $F_1/F_0$ both equal $Q$ restricted to
@@ -185,7 +184,7 @@ $P_0$ bracket]\label{lem:filtration-preservation}
   $A_\partial^{\mathrm{Ham}}(I)=\widehat{\mathbf S}(\mathfrak h_I)$
   of Construction~\ref{constr:interval-fact-algebras}: it is the
   generating Lie subspace
-  $\mathfrak h_I=C^\infty_c(I)\widehat\otimes\bar A$.  Equivalently,
+  $\mathfrak h_I=\Omega^\bullet_c(I)\widehat\otimes\bar A$.  Equivalently,
   it is the quotient
   $\widehat{\mathbf S}(\mathfrak h_I)/\widehat{\mathbf S}^{\geq 2}(\mathfrak h_I)
   \cong\mathfrak h_I$ in the augmentation-ideal grading, after
@@ -204,7 +203,9 @@ $P_0$ bracket]\label{lem:filtration-preservation}
     \mathrm{Obs}^{\mathrm{cl}}_{\mathrm{open},N}(I_2)
     & \xrightarrow{\,\mu\,} &
     \mathrm{Obs}^{\mathrm{cl}}_{\mathrm{open},N}(V) \\
-    \pi_{\mathrm{prim}}\otimes\pi_{\mathrm{prim}}\;\downarrow & & \downarrow\;\pi_{\mathrm{prim}} \\
+    \mathrm{aug}_{\oplus}\circ
+    (\pi_{\mathrm{prim}}\otimes\pi_{\mathrm{prim}})\;\downarrow & &
+    \downarrow\;\pi_{\mathrm{prim}} \\
     \bigl(\Omega^\bullet_c(I_1)\widehat\otimes\bar A\bigr)\oplus
     \bigl(\Omega^\bullet_c(I_2)\widehat\otimes\bar A\bigr)
     & \xrightarrow{\,\mu_{\bar A}\,} &
@@ -214,8 +215,8 @@ $P_0$ bracket]\label{lem:filtration-preservation}
   vanishes identically: $h_{\mathrm{fact}}\equiv 0$.
 
   Here $\mu$ is the brane factorization product (multiplication in
-  $\mc R_N^{GL_N}$ after extension by zero from $C^\infty_c(I_j)$ to
-  $C^\infty_c(V)$), the bottom horizontal $\mu_{\bar A}$ is the
+  $\mc R_N^{GL_N}$ after extension by zero from $\Omega^\bullet_c(I_j)$ to
+  $\Omega^\bullet_c(V)$), the bottom horizontal $\mu_{\bar A}$ is the
   cosheaf direct-sum extension by zero
   $\mathfrak h_{I_1}\oplus\mathfrak h_{I_2}\hookrightarrow\mathfrak h_V$
   on the indecomposable (linear) part of the brane $P_0$ factorization
@@ -287,7 +288,7 @@ $P_0$ bracket]\label{lem:filtration-preservation}
 
   \emph{Stratum $(k_1,k_2)=(1,1)$.}  Both inputs are single traces
   $B_f(a)$ and $B_g(b)$ for $f,g\in\bar A$ and
-  $a,b\in C^\infty_c(I)$.  By
+  $a,b\in\Omega^0_c(I)$.  By
   Lemma~\ref{lem:filtration-preservation}, the open
   $P_0$ bracket of two single traces is again a single trace
   (cycle merging in Procesi-Razmyslov), and by
@@ -295,7 +296,7 @@ $P_0$ bracket]\label{lem:filtration-preservation}
   quotient,
   $\{B_f(a),B_g(b)\}_{\mathrm{open}}=B_{\{f,g\}_{\bar A}}(ab)$.
   Apply $\pi_{\mathrm{prim}}$: the result is the single-trace
-  $a\otimes b\otimes\{f,g\}_{\bar A}$ in
+  $ab\otimes\{f,g\}_{\bar A}$ in
   $\Omega^\bullet_c(I)\widehat\otimes\bar A$.
 
   Independently, $\pi_{\mathrm{prim}}B_f(a)=a\otimes f$ and
@@ -308,8 +309,10 @@ $P_0$ bracket]\label{lem:filtration-preservation}
   \emph{Stratum $(k_1,k_2)=(1,k)$ with $k\geq 2$.}  $F=B_f(a)$ is a
   single trace; $G$ is a $k$-trace product
   $B_{w_1}(b_1)\cdots B_{w_k}(b_k)$.  By the Leibniz rule,
-  $\{F,G\}_{\mathrm{open}}=\sum_{i=1}^k(\pm)
-    B_{w_1}(b_1)\cdots\{B_f(a),B_{w_i}(b_i)\}_{\mathrm{open}}\cdots B_{w_k}(b_k).$
+  $$\{F,G\}_{\mathrm{open}}=\sum_{i=1}^k(\pm)
+    B_{w_1}(b_1)\cdots
+    \{B_f(a),B_{w_i}(b_i)\}_{\mathrm{open}}\cdots
+    B_{w_k}(b_k).$$
   Each term is a $k$-trace product (cycle merging joined to a
   remaining $(k-1)$-trace tail).  Hence the result lies in $F_k$,
   and by Lemma~\ref{lem:cumulant-kernel}, $\pi_{\mathrm{prim}}$ of
@@ -347,9 +350,9 @@ $P_0$ bracket]\label{lem:filtration-preservation}
   must lie in the multi-trace stratum, where both sides are zero.
 \end{rmk}
 
-\begin{constr}[Cotangent extension]\label{constr:chain-level-primitive-cotangent}
-  Extend $\pi_{\mathrm{prim}}$ to the cotangent (descendant) sector
-  by including the one-$\psi$ symmetrised traces $\Psi_{a,b}$ of
+\begin{constr}[Primitive one-$\psi$ shadow]\label{constr:chain-level-primitive-cotangent}
+  Extend $\pi_{\mathrm{prim}}$ to the one-$\psi$ primitive shadow by
+  recording the labels of the symmetrised traces $\Psi_{a,b}$ of
   Construction~\ref{constr:boundary-evaluation}.  Define
   $$\pi_{\mathrm{prim}}^{\mathrm{cot}}:
     \mathrm{Obs}^{\mathrm{cl,cot}}_{\mathrm{open},N}(I)
@@ -363,30 +366,33 @@ $P_0$ bracket]\label{lem:filtration-preservation}
     \item on a primitive one-$\psi$ class
       $\Psi_{a,b}$ smeared by a distributional test current
       $B\in\mathcal D'_c(I)$,
-      $$\pi_{\mathrm{prim}}^{\mathrm{cot}}\bigl(B\otimes\Psi_{a,b}\bigr)
-        =B\otimes\rho_{a,b}[1]
-        =\Theta_{a,b}(B);$$
+	      $$\pi_{\mathrm{prim}}^{\mathrm{cot}}\bigl(B\otimes\Psi_{a,b}\bigr)
+	        =B\otimes\rho_{a,b}[1]
+	        =\Theta_{a,b}(B);$$
     \item on multi-trace products of one-$\psi$ classes (or mixed
       products of zero-$\psi$ and one-$\psi$ traces),
       $\pi_{\mathrm{prim}}^{\mathrm{cot}}\equiv 0$ (cumulant on the
       multi-trace stratum).
   \end{itemize}
-  Note that the cotangent target is the principal-part module $\mc P$,
-  not a polynomial sub-bimodule of $\bar A$, exactly as required by
-  Theorem~\ref{thm:no-polynomial-realization-categorical} and the
-  three-notions-of-locality lemma
-  (Lemma~\ref{lem:three-notions-of-locality}): the cotangent fields
-  are distributional currents, while the Hamiltonian fields are
-  smooth densities.
+	  This is a projection to the reduced principal-part label target, not
+	  a polynomial realization of the coadjoint module. The
+	  no-polynomial theorem \ref{thm:no-polynomial-realization-categorical}
+	  says precisely that the open polynomial one-$\psi$ descendants and
+	  the principal-part currents do not carry the same
+	  $\mathfrak h$-module structure. The map above is therefore an
+	  indecomposable shadow map after imposing the reduced current target
+	  $\mc P[1]$; it is not an unreduced boundary observable realizing
+	  $\mc P$ inside the polynomial BV/Koszul algebra.
 \end{constr}
 
-\begin{thm}[Chain-level primitive projection, full theorem]\label{thm:chain-level-primitive-projection}
+\begin{thm}[Chain-level primitive projection and one-$\psi$ shadow]\label{thm:chain-level-primitive-projection}
   In the stable connected limit, the chain-level primitive projection
   $\pi_{\mathrm{prim}}$ of
   Construction~\ref{constr:chain-level-primitive-projection} (and its
-  cotangent extension $\pi_{\mathrm{prim}}^{\mathrm{cot}}$ of
+  one-$\psi$ shadow $\pi_{\mathrm{prim}}^{\mathrm{cot}}$ of
   Construction~\ref{constr:chain-level-primitive-cotangent}) is a
-  surjection of $P_0$ factorization algebras
+  surjection to the indecomposable $P_0$ shadow of the boundary
+  factorization algebra
   $$\pi_{\mathrm{prim}}^{\mathrm{cot}}:
     \widetilde{\mathrm{Obs}}^{\mathrm{cl,pp}}_{\partial,N}
     \twoheadrightarrow
@@ -404,22 +410,34 @@ $P_0$ bracket]\label{lem:filtration-preservation}
       The factorization-product compatibility square commutes strictly
       modulo a zero homotopy
       (Theorem~\ref{thm:chain-level-primitive-projection-factorization}),
-      with the same statement extended to the cotangent generators by
-      the same trace-count argument;
-    \item \emph{($P_0$ bracket.)} The $P_0$-bracket compatibility
-      square commutes strictly modulo a zero homotopy
-      (Theorem~\ref{thm:chain-level-primitive-projection-P0}),
-      with the cotangent bracket $\{B_f(a),\Theta_\rho(B)\}=\Theta_{f\cdot\rho}(aB)$
-      arising on the cumulant target as the principal-part coadjoint
-      action of Theorem~\ref{thm:principal-part-coadjoint-uniqueness};
+	      with the same trace-count argument on the one-$\psi$ label
+	      projection;
+	    \item \emph{($P_0$ bracket.)} The $P_0$-bracket compatibility
+	      square commutes strictly modulo a zero homotopy on the
+	      Hamiltonian zero-$\psi$ indecomposable quotient
+	      (Theorem~\ref{thm:chain-level-primitive-projection-P0}). On the
+	      one-$\psi$ shadow the projection records labels only; it does
+	      not intertwine the open polynomial descendant raising action
+	      with the principal-part coadjoint lowering action. The reduced
+	      target bracket
+	      $\{B_f(a),\Theta_\rho(B)\}=\Theta_{f\cdot\rho}(aB)$ is supplied
+	      separately by
+	      Theorem~\ref{thm:reduced-principal-part-boundary-current};
     \item \emph{(Cosheaf.)} $\pi_{\mathrm{prim}}^{\mathrm{cot}}$ is
       compatible with extension by zero in $\Omega^\bullet_c$,
       because both source and target are tensored over the de Rham
       cosheaf $\Omega^\bullet_c$ on $\R$.
   \end{enumerate}
+  The target is the nonunital indecomposable quotient: multiplication
+  of two positive primitive generators is zero after projection,
+  while the Lie/$P_0$ bracket remains the Hamiltonian bracket.  Thus
+  the statement is not an algebra map to $\bar A$ with its ordinary
+  commutative multiplication.
+
   Equivalently, $\pi_{\mathrm{prim}}^{\mathrm{cot}}$ is the chain-level
-  realization of the unreduced-to-reduced primitive projection
-  required by Problem~\ref{prob:formal-factorization-center}, item~(3).
+  realization of the unreduced-to-reduced primitive shadow required by
+  Problem~\ref{prob:formal-factorization-center}, item~(3). It is not a
+  proof of the unreduced cotangent factorization-center lift.
 \end{thm}
 
 \begin{proof}
@@ -428,22 +446,25 @@ $P_0$ bracket]\label{lem:filtration-preservation}
   \ref{thm:chain-level-primitive-projection-factorization},
   \ref{thm:chain-level-primitive-projection-P0} above.
 
-  Cotangent extension.  By Lemma~\ref{lem:first-descendant-cycles},
+  One-$\psi$ shadow.  By Lemma~\ref{lem:first-descendant-cycles},
   $Q\Psi_{a,b}=0$ at the chain level.  Hence
   $Q\,\pi_{\mathrm{prim}}^{\mathrm{cot}}(B\otimes\Psi_{a,b})
   =\partial B\otimes\rho_{a,b}[1]=\pi_{\mathrm{prim}}^{\mathrm{cot}}(\partial B\otimes\Psi_{a,b}
    +B\otimes Q\Psi_{a,b})=\pi_{\mathrm{prim}}^{\mathrm{cot}}\circ Q(B\otimes\Psi_{a,b})$
   (the only contribution comes from the de Rham differential $\partial$
   on the distributional test current $B$, since $Q$ kills
-  $\Psi_{a,b}$).  The factorization-product compatibility on
-  cotangent generators uses the same trace-count
-  filtration: a one-$\psi$ trace tensored with another trace is a
-  multi-trace, killed by cumulant projection.  The
-  $P_0$-bracket compatibility is the principal-part coadjoint formula
-  $\{B_f(a),\Theta_\rho(B)\}=\Theta_{f\cdot\rho}(aB)$ recorded in
-  Theorem~\ref{prop:reduced-principal-part-boundary-current}; the
-  bracket of two cotangent generators is zero on both sides because
-  $\mc P[1]$ is an abelian odd ideal in
+	  $\Psi_{a,b}$).  The factorization-product compatibility on
+	  one-$\psi$ generators uses the same trace-count
+	  filtration: a one-$\psi$ trace tensored with another trace is a
+	  multi-trace, killed by cumulant projection.  The
+	  $P_0$-bracket compatibility asserted here is the zero-$\psi$
+	  Hamiltonian statement already proved above. The one-$\psi$ shadow
+	  deliberately does not assert compatibility between the open
+	  descendant raising action and the principal-part coadjoint lowering
+	  action; their difference is
+	  Corollary~\ref{cor:descendant-coadjoint-difference}. The
+	  bracket of two cotangent generators is zero on both sides because
+	  $\mc P[1]$ is an abelian odd ideal in
   $\mathfrak g_I=\mathfrak h_I\ltimes\mathcal P_I[1]$.
 
   Cosheaf compatibility is automatic: extension by zero on the
@@ -454,10 +475,215 @@ $P_0$ bracket]\label{lem:filtration-preservation}
 
   The chain-level surjectivity is the surjectivity of the cumulant
   projection onto generators in the stable symmetric algebra (each
-  generator is hit by itself).  Surjectivity of the cosheaf factor is
-  the surjectivity of the de Rham extension-by-zero map.
+  generator is hit by itself), tensored with the identity on the
+  compactly supported de Rham/current factor on the same interval.
 
   This establishes all four items.
+\end{proof}
+
+\begin{prop}[Quantum obstruction to the primitive one-\(\psi\) label map]
+  \label{prop:quantum-descendant-label-obstruction}
+  Let \(\mathfrak h_\hbar=\bar A_\hbar\) carry the Weyl/Moyal bracket
+  \[
+    \{f,g\}_\hbar
+    =
+    \sum_{j\geq0}
+    \frac{\hbar^{2j}}{(2j+1)!\,2^{2j}}P^{2j+1}(f,g),
+    \qquad
+    P=\partial_{z_1}\otimes\partial_{z_2}
+      -\partial_{z_2}\otimes\partial_{z_1}.
+  \]
+  The chain-level one-\(\psi\) primitive label map
+  \(\Psi_{a,b}\mapsto\rho_{a,b}\) is not compatible with the
+  \(\mathfrak h_\hbar\)-coadjoint action.  The failure already occurs in
+  the indecomposable target; it is not a decomposable multi-trace
+  correction.
+\end{prop}
+
+\begin{proof}
+  Compatibility would require the polynomial PBW descendant action
+  of Proposition~\ref{prop:open-descendant-action}, after the label
+  replacement \(\widetilde\Psi_{a,b}\mapsto\rho_{a,b}\), to agree with
+  the Moyal coadjoint action
+  \[
+    (\operatorname{ad}^{\vee}_{f,\hbar}\delta)(g)
+    =-\delta(\{f,g\}_\hbar).
+  \]
+  Test this on the single Hamiltonian \(f=z_1^4\) and the single
+  descendant label \((a,b)=(1,1)\).
+
+  On the polynomial one-\(\psi\) side,
+  Proposition~\ref{prop:open-descendant-action} gives
+  \[
+    z_1^4:\widetilde\Psi_{1,1}
+    \longmapsto 4\,\widetilde\Psi_{4,0}.
+  \]
+  On the Moyal coadjoint side the classical Poisson term has negative
+  first target index and vanishes, but the \(P^3\) term does not:
+  \[
+    P^3(z_1^4,z_2^4)=576\,z_1z_2,\qquad
+    \frac{1}{3!\,2^2}P^3(z_1^4,z_2^4)=24\,z_1z_2.
+  \]
+  Hence
+  \[
+    \operatorname{ad}^{\vee}_{z_1^4,\hbar}\delta_{1,1}
+    =-24\,\hbar^2\delta_{0,4}+\cdots,
+  \]
+  equivalently
+  \(z_1^4\cdot_\hbar\rho_{1,1}=-24\,\hbar^2\rho_{0,4}+\cdots\) in the
+  principal-part realization.  The two answers have different
+  \(\hbar\)-order and different primitive label.  Since both sides have
+  already been projected to the linear indecomposable summand, adding
+  decomposable multi-trace terms cannot repair this square after
+  applying \(\pi_{\mathrm{prim}}^{\mathrm{cot}}\).
+
+  The finite exact-arithmetic attack verifies the same
+  obstruction through exponents \(\leq5\) and Moyal order \(\leq5\):
+  \(1200\) of \(1225\) nonzero test cases disagree under the naive label
+  map, and \(958\) cases have genuine higher Moyal coadjoint terms.  The
+  same finite computation also checks the corrected principal-part target below in
+  \(3375\) finite representation identities with exponents \(\leq3\),
+  Moyal order \(\leq5\), and \(\hbar\)-power \(\leq4\), and checks the
+  linear-generator leading-term obstruction to every \(\hbar\)-adic
+  deformation of the classical label projection in \(70\) tests with
+  labels \(\leq5\).
+  The displayed \(z_1^4\) calculation is already a proof that the
+  classical primitive one-\(\psi\) projection does not itself quantize
+  to the descendant coadjoint sector.
+\end{proof}
+
+\begin{constr}[Reduced Moyal principal-part descendant target]
+  \label{constr:quantum-principal-part-descendant-target}
+  The corrected quantum descendant target is obtained by changing the
+  target, not by correcting the polynomial one-\(\psi\) representatives.
+  For an interval \(I\subset\R\) put
+  \[
+    \mathfrak h_{\hbar,I}
+      =\Omega^\bullet_c(I)\widehat\otimes\bar A_\hbar,\qquad
+    \mathcal P_{\hbar,I}
+      =\mathcal D'_c(I)\widehat\otimes\mc P[[\hbar]].
+  \]
+  Define the reduced quantum principal-part descendant complex
+  \[
+    A^{\mathrm{pp}}_{\partial,\hbar}(I)
+    =
+    \widehat{\mathbf S}_{\C[[\hbar]]}(\mathfrak h_{\hbar,I})
+    \widehat\otimes
+    \widehat{\mathbf S}_{\C[[\hbar]]}(\mathcal P_{\hbar,I}[1]).
+  \]
+  The differential is the de Rham/current differential on the interval
+  factors and zero on the coefficient modules \(\bar A_\hbar\) and
+  \(\mc P[[\hbar]]\).  The bracket is the Moyal semidirect bracket
+  \[
+    \{B_f(a),B_g(b)\}_\hbar
+      =B_{\{f,g\}_\hbar}(ab),\qquad
+    \{B_f(a),\Theta_\rho(B)\}_\hbar
+      =\Theta_{\operatorname{ad}^{\vee}_{f,\hbar}\rho}(aB),
+  \]
+  with
+  \[
+    \{\Theta_\rho(B),\Theta_\sigma(C)\}_\hbar=0.
+  \]
+  Here \(a,b\in\Omega^0_c(I)\), \(B,C\in\mathcal D'_c(I)\), and
+  \(aB\) denotes multiplication of a compactly supported distribution by
+  a smooth test function.
+
+  In monomial coordinates the full coadjoint action is as follows.  Put
+  \[
+    C_r(p,q;m,n)=
+      \sum_{\alpha=0}^{r}(-1)^\alpha\binom r\alpha
+      (p)_{r-\alpha}(q)_\alpha(m)_\alpha(n)_{r-\alpha}.
+  \]
+  Then
+  \[
+    z_1^pz_2^q\cdot_\hbar\rho_{a,b}
+    =
+    -\sum_{\substack{r\geq1\\ r\ \mathrm{odd}}}
+      \frac{\hbar^{r-1}}{2^{r-1}r!}\,
+      C_r(p,q;a-p+r,b-q+r)\,
+      \rho_{a-p+r,b-q+r},
+  \]
+  with the convention that negative indices and the scalar target
+  \((0,0)\) are zero.  This is a finite sum for each monomial
+  \(z_1^pz_2^q\), because the falling factorials vanish for
+  \(r>p+q\).  The \(r=1\) term is the classical Matlis coadjoint action
+  of Theorem~\ref{thm:principal-part-coadjoint-uniqueness}; the
+  \(r\geq3\) terms are the genuine Moyal corrections.
+
+  This construction supplies a reduced distributional principal-part
+  target for the quantum descendant sector.  It does not make the
+  polynomial PBW classes \(\Psi_{a,b}\) into that target.
+\end{constr}
+
+\begin{thm}[No \(\hbar\)-adic deformation of the primitive label projection]
+  \label{thm:no-hbar-primitive-descendant-intertwiner}
+  Let \(M_{\Psi,\hbar}\) be a \(\C[[\hbar]]\)-flat complex generated
+  over \(\C[[\hbar]]\) by lifts of the primitive polynomial
+  one-\(\psi\) classes \(\widetilde\Psi_{a,b}\), \(a+b>0\).  Assume:
+  \begin{enumerate}
+    \item the source action of the linear Hamiltonians reduces modulo
+      \(\hbar\) to the PBW descendant action
+      \[
+        z_1\cdot_0\widetilde\Psi_{a,b}
+          =b\,\widetilde\Psi_{a,b-1},\qquad
+        z_2\cdot_0\widetilde\Psi_{a,b}
+          =-a\,\widetilde\Psi_{a-1,b};
+      \]
+    \item the target coefficient module is \(\mc P[[\hbar]][1]\),
+      equivalently any fixed interval-current summand of
+      \(\mathcal P_{\hbar,I}[1]\) from
+      Construction~\ref{constr:quantum-principal-part-descendant-target},
+      with the full Moyal coadjoint action;
+    \item a candidate comparison
+      \(T_\hbar:M_{\Psi,\hbar}\to\mc P[[\hbar]][1]\) has the
+      classical primitive label projection as leading term:
+      \[
+        T_\hbar(\widetilde\Psi_{a,b})
+          =\rho_{a,b}[1]+O(\hbar).
+      \]
+  \end{enumerate}
+  Then \(T_\hbar\) cannot intertwine the
+  \(\mathfrak h_\hbar\)-action.  The obstruction already appears after
+  reduction modulo \(\hbar\) and for the linear Hamiltonian \(z_1\).
+  Consequently no strict quantum descendant lift of the classical
+  primitive projection exists under these assumptions.  The only
+  surviving quantum target in this lane is the reduced
+  principal-part complex itself, not the polynomial one-\(\psi\) source.
+\end{thm}
+
+\begin{proof}
+  Reduce a hypothetical intertwiner modulo \(\hbar\).  For the class
+  \(\widetilde\Psi_{1,0}\), the PBW source action gives
+  \[
+    z_1\cdot_0\widetilde\Psi_{1,0}=0.
+  \]
+  Hence the source-then-target route gives
+  \[
+    T_0(z_1\cdot_0\widetilde\Psi_{1,0})=0.
+  \]
+  The target-then-action route gives, by the \(r=1\) term of
+  Construction~\ref{constr:quantum-principal-part-descendant-target},
+  \[
+    z_1\cdot_0T_0(\widetilde\Psi_{1,0})
+      =z_1\cdot\rho_{1,0}[1]
+      =-\rho_{1,1}[1].
+  \]
+  The principal-part basis vector \(\rho_{1,1}\) is nonzero in
+  \(\mc P\).  This contradiction is independent of all higher
+  \(\hbar\)-corrections to \(T_\hbar\), because those corrections vanish
+  after taking the leading term.  It is also independent of the higher
+  Moyal terms: the linear Hamiltonian has no \(r\geq3\) Moyal
+  correction.
+
+  The same computation with \(z_2\) gives
+  \(z_2\cdot_0\widetilde\Psi_{0,1}=0\) on the PBW side but
+  \(z_2\cdot\rho_{0,1}=\rho_{1,1}\) on the principal-part side.  Thus
+  the mismatch is not a special feature of one coordinate.
+  Since the coefficient differential on \(\mc P[[\hbar]]\) is zero,
+  this leading coefficient is not a boundary in the reduced target.
+  A higher homotopy can remove it only after changing the target
+  complex or the classical source action, which is outside the stated
+  assumptions.
 \end{proof}
 
 \begin{rmk}[Comparison with the heat-kernel propagator route]
@@ -467,10 +693,10 @@ $P_0$ bracket]\label{lem:filtration-preservation}
   Costello--Gwilliam BV propagator approach, the primitive
   projection is realized as a homotopy retraction onto the cohomology
   of the free open observable algebra, with the homotopy given by
-  $G_L=\int_0^L K_t\,dt$ (the partial heat kernel).  In our chain-level
-  construction the role of $G_L$ is played by the symmetric-algebra
-  splitting, and the key analytic fact (positive jets are
-  $Q$-exact, Lemma~\ref{lem:derivative-jets}) is needed only to
+  $G_L=\int_0^L K_t\,dt$ (the partial heat kernel).  Here the role of
+  $G_L$ is played by the symmetric-algebra splitting, and the key
+  analytic fact (positive jets are $Q$-exact,
+  Lemma~\ref{lem:derivative-jets}) is needed only to
   identify the $E_1$-stalk of the brane factorization algebra with its
   $C^\infty$-smearing.  The two routes agree on the classical
   cocycle level by uniqueness of the cumulant projection on a
@@ -487,84 +713,80 @@ $P_0$ bracket]\label{lem:filtration-preservation}
   Problem~\ref{prob:formal-factorization-center}, items (1)--(2).
 \end{rmk}
 
-\begin{cor}[Closing the unreduced lift in part (d) of the umbrella]
+\begin{cor}[Primitive shadow of the reduced cotangent comparison]
   \label{cor:unreduced-d-closed}
   Combining
   Theorem~\ref{thm:chain-level-primitive-projection} with the
   cochain-level closed-open derived center
   (Theorem~\ref{thm:open-closed-derived-center}) and the Hamiltonian
   factorization-algebra equivalence
-  (Theorem~\ref{thm:open-closed-derived-center-factorization}), the
-  unreduced lift required in part (d) of
-  Theorem~\ref{thm:main-local} is constructed at the chain level as
-  the composition
+  (Theorem~\ref{thm:open-closed-derived-center-factorization}), one
+  obtains a chain-level primitive shadow of the reduced cotangent
+  comparison:
   \begin{align*}
-    \mathrm{Obs}^{\mathrm{cl}}_{\mathrm{closed},H}\big|_{\R\times p}
+    \mathrm{Obs}^{\mathrm{cl}}_{\mathrm{closed},H}\big|_{L}
     &\xrightarrow{\;\Phi_{\mathrm{cl}}\;}
-    \mathrm Z^{P_0}_{\mathrm{fact}}\bigl(A_\partial^{\mathrm{pp}}\bigr) \\
+    \mathrm Z^{P_0}_{\mathrm{red,Ham}}\bigl(A_\partial^{\mathrm{pp}}\bigr) \\
     &\xrightarrow{\;\pi_{\mathrm{prim}}^{\mathrm{cot}*}\;}
-    \mathrm Z^{P_0}_{\mathrm{fact}}\bigl(\widetilde{\mathrm{Obs}}^{\mathrm{cl,pp}}_{\partial,N}\bigr)
-    \subset
-    \mathrm Z^{P_0}_{\mathrm{fact}}\bigl(\mathrm{Obs}^{\mathrm{cl}}_{\mathrm{open},N}\bigr).
+    \text{primitive indecomposable shadow of the open boundary sector}.
   \end{align*}
-  In particular, part (d) of the umbrella holds unconditionally at
-  the chain level for the open-line first-order classical theory,
-  including the cotangent (one-antifield) sector.  The remaining
-  obligations recorded in
-  Problem~\ref{prob:formal-factorization-center} concern the
-  Tate-completion convergence of the formal Casimir and the heat-kernel
-  propagator extension to the quantum sector
-  (items (1)--(2) and (4) at all orders in $\hbar$); these are
-  outside the scope of the present chain-level result.
+  This corollary does not construct the unreduced cotangent
+  factorization-center morphism. The missing data are the centrality
+  homotopies for principal-part currents against arbitrary unreduced
+  open observables, together with the Tate/weighted coefficient kernel
+  and the brane-defect propagator extension recorded in
+  Problem~\ref{prob:formal-factorization-center}.
 \end{cor}
 
 \begin{proof}
   $\Phi_{\mathrm{cl}}$ is constructed at the cochain level by
-  Theorem~\ref{thm:open-closed-derived-center} (zero-$\psi$ part) and
-  by the descendant lift of
-  Construction~\ref{constr:boundary-evaluation},
-  Lemma~\ref{lem:first-descendant-cycles}, and
-  Proposition~\ref{prop:one-psi-homology} (one-$\psi$ part) on the
-  reduced post-contraction sector.  Theorem~\ref{thm:open-closed-derived-center-factorization}
+  Theorem~\ref{thm:open-closed-derived-center} on the reduced sector
+  after de Rham-current contraction.  Theorem~\ref{thm:open-closed-derived-center-factorization}
   promotes this to a $P_0$ factorization algebra equivalence
   in the Hamiltonian sector.
   Theorem~\ref{thm:chain-level-primitive-projection} gives the
-  chain-level $\pi_{\mathrm{prim}}^{\mathrm{cot}}$ pulling back from
-  the reduced post-contraction model $A_\partial^{\mathrm{pp}}$ to the
-  unreduced model
-  $\widetilde{\mathrm{Obs}}^{\mathrm{cl,pp}}_{\partial,N}$.
-  Composing gives a chain-level morphism of $P_0$ factorization
-  algebras
-  $\Phi^{\mathrm{cot}}_{\mathrm{cl}}=\pi_{\mathrm{prim}}^{\mathrm{cot}*}\circ\Phi_{\mathrm{cl}}$.
+  chain-level primitive projection and one-$\psi$ label shadow. The
+  composition therefore exists only at the indecomposable-shadow level.
+  Since the one-$\psi$ projection does not intertwine the descendant
+  raising action with the principal-part coadjoint lowering action, the
+  asserted result is exactly the shadow statement and nothing stronger.
 \end{proof}
 
-\begin{rmk}[Status of the construction in the umbrella]
-  \label{rmk:T5-umbrella-status}
+\begin{rmk}[Status of the primitive-shadow construction]
+  \label{rmk:T5-primitive-shadow-status}
   The chain-level primitive projection of
-  Theorem~\ref{thm:chain-level-primitive-projection} is the precise
-  chain-level deliverable named in
-  Residual~R-beta-01 of \texttt{RESIDUALS-beta.md} (option (a)) and
-  in Residual~R1 of \texttt{RESIDUALS-gamma.md}.  It does not by
-  itself close Problem~\ref{prob:formal-factorization-center},
+  Theorem~\ref{thm:chain-level-primitive-projection} supplies the
+  local primitive-projection component of
+  Problem~\ref{prob:formal-factorization-center}, item~(3), and the
+  primitive-shadow component of
+  Theorem~\ref{thm:main-local}. It does not by itself close
+  Problem~\ref{prob:formal-factorization-center},
   because the Tate-completion of the Casimir
   ($\bigoplus_{d\geq 1}H_d^\vee\to$ a topological coefficient in
   which the Casimir converges) and the propagator extension are
-  separate analytic obligations not addressed here.  The chain-level
-  construction is, however, sufficient to upgrade part (d) of
-  Theorem~\ref{thm:main-local} from a reduced post-contraction
-  statement to a chain-level statement on the unreduced sector.
+  separate analytic obligations not addressed here. Nor does it supply
+  the missing centrality homotopies for principal-part currents against
+  arbitrary unreduced open observables.
+  Proposition~\ref{prop:quantum-descendant-label-obstruction} further
+  shows that the one-\(\psi\) label map is not compatible with the
+  Moyal coadjoint action after quantization. The chain-level
+  construction is therefore sufficient only for the classical primitive
+  indecomposable shadow.
 \end{rmk}
 
 \begin{rmk}[On the role of the de Rham contraction]
   \label{rmk:role-of-deRham-contraction}
   The de Rham contraction Lemma~\ref{lem:derivative-jets} enters
   Construction~\ref{constr:chain-level-primitive-projection} only
-  through the statement that the brane stalk is the value at a point,
-  not through any analytic propagator.  Specifically, it is what
-  identifies $\Omega^\bullet_c(I)$ as the topological-direction
-  cosheaf on $I$, with
-  $H^\bullet(\Omega^\bullet_c(I))=H^\bullet_c(I;\C)$ supported in
-  degree zero on the line.  The cosheaf structure is then transparent.
+  through the compactly supported density class on the brane line, not
+  through any analytic propagator.  Specifically,
+  \(H^\bullet(\Omega^\bullet_c(I))=H^\bullet_c(I;\C)\) is one-dimensional
+  in degree \(1\) for an open interval \(I\), represented by a compactly
+  supported density \(\lambda_I(t)\,dt\) with integral \(1\). The
+  degree-zero notation in the primitive projection comes from the shifted
+  BV/cotangent coordinate paired with this density; it is not ordinary
+  point-evaluation in \(H_c^0(I)\).  The cosheaf structure is then
+  transparent.
   No further analytic input is required; in particular no
   smoothing kernel, mollifier, or finite-scale BV gauge fix appears.
 \end{rmk}

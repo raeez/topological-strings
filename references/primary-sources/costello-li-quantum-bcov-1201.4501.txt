@@ -1,0 +1,3655 @@
+                                           QUANTUM BCOV THEORY ON CALABI-YAU MANIFOLDS AND
+                                                      THE HIGHER GENUS B-MODEL
+
+
+
+
+arXiv:1201.4501v1 [math.QA] 21 Jan 2012
+                                                                        KEVIN COSTELLO AND SI LI
+
+
+
+
+                                                                             1. Introduction
+
+                                             Since it was first formulated more than twenty years ago [CdlOGP91, GP90], the
+                                          mirror symmetry conjecture has had a huge influence on mathematics. The original
+                                          form of the conjecture states that one can count numbers of rational curves on a Calabi-
+                                          Yau 3-fold X by analyzing the variations of Hodge structure of a mirror Calabi-Yau
+                                          3-fold X ∨ . Soon after this form of the conjecture was first formulated, it was rigorously
+                                          proved by Givental [Giv98] and Lian-Liu-Yau [LLY97].
+
+                                            This paper is concerned with mirror symmetry at higher genus. The count of rational
+                                          curves on a Calabi-Yau variety X is referred to as the genus 0 A-model on X. The
+                                          theory of Gromov-Witten invariants allows one to define the A-model at all genera; the
+                                          genus g A-model is concerned with counts of genus g curves mapping to X.
+
+                                             The B-model at genus 0 on the mirror Calabi-Yau X ∨ is described by the variations
+                                          of Hodge structure of X ∨ (as X ∨ moves in the moduli space of Calabi-Yau varieties).
+                                          The higher genus B-model is, however, much more mysterious.
+
+                                             One mathematical approach to the higher genus B-model is categorical. Kontsevich’s
+                                          homological mirror symmetry conjecture states that the mirror symmetry phenomenon
+                                          is explained by an equivalence of Calabi-Yau categories, between the Fukaya category
+                                          of X and the derived category of coherent sheaves on the mirror X ∨ . From this point of
+                                          view, it is natural to expect to be able to construct the all-genus B-model directly from
+                                          the category of coherent sheaves on X ∨ , or, indeed, from any Calabi-Yau category. A
+                                          candidate for the B-model partition function associated to a Calabi-Yau category was
+                                          proposed on [Cos07, Cos05, KS06] based on a classification of a class of 2-dimensional
+                                          topological field theories. Unfortunately, it is extremely difficult to compute this B-
+                                          model partition function.
+                                                                                       1
+2                              KEVIN COSTELLO AND SI LI
+
+
+   In the physics literature, the Bershadsk-Cecotti-Ooguri-Vafa [BCOV94] initiated a
+differrent approach to the B-model. BCOV suggested that we should think of the B-
+model as a quantum field theory on X. This is in contrast to most other formulations
+of mirror symmetry, where both the A- and B- model are viewed as as two-dimensional
+field theories. The genus expansion of the B-model should correspond to the expansion
+in powers of the Planck constant ~ of this quantum field theory on X. The genus 0
+part of the B-model on a Calabi-Yau X is concerned with deformations of the complex
+structure of X. Thus, BCOV proposed a quantum field theory whose classical equations
+of motion describe the moduli space of deformations of complex structure of X. They
+called this theory the Kodaira-Spencer theory of gravity. We will call it the BCOV
+theory.
+
+   Because the BCOV theory is a six-dimensional quantum field theory, it is very dif-
+ficult to construct rigorously. In this paper we initiate a mathematical analysis of the
+BCOV theory.
+
+
+1.1. The original BCOV theory was defined only for Calabi-Yau 3-folds. The first
+step in our work is to define a variant of the classical BCOV theory which works for
+Calabi-Yau varieties of any dimension. The fields of our generalized BCOV theory on
+X are
+
+                           PV(X)[[t]] = Ω0,∗ (X, ∧∗ T X)[[t]]
+
+that is, polyvector fields on X with a formal parameter t adjoined. Our generalized
+BCOV theory is defined by an action functional S on PV(X)[[t]] satisfying the classical
+master equation. Our generalization of the classical BCOV theory is explained in
+section 2
+
+
+1.2. We then turn to the problem of quantization. In section 3, we give a general
+definition of a quantization of our generalized BCOV theory on a Calabi-Yau manifold,
+using the renormalization techniques developed in [Cos11]. Our notion of quantization
+relates to Givental’s symplectic formalism for the study of the A-model [Giv04]. In
+section 4, we show that the quantum master equation in the quantum BCOV theory
+implies that the partition function is a state in a Fock space constructed from the
+cohomology of X.
+
+   The first result of this paper – which partially relies on some results from [CL12] –
+is the following.
+QUANTUM BCOV THEORY ON CALABI-YAU MANIFOLDS AND THE HIGHER GENUS B-MODEL3
+
+
+Theorem. There exists a unique quantization of the BCOV theory on any elliptic curve
+E, subject to one additional constraint: the dilaton equation (which is the mirror to
+the well-known dilaton equation in Gromov-Witten theory).
+
+   The existence part of the proof will appear in [CL12], as part of our more general
+analysis. The uniqueness part is proved using obstruction theory. The proof is presented
+in section 7 (although some detailed computations of Lie algebra cohomology are placed
+in an Appendix).
+
+
+
+1.3. Our interpretation of BCOV theory has a close relationship to Givental’s sym-
+plectic formalism [Giv01, CG07, Giv04], and to Barannikov’s work [Bar99, Bar00] on
+semi-infinite variations of Hodge structure. In sections 4 and 5 we show that the parti-
+tion function for our version of BCOV theory provides a state in the Fock space built
+from H ∗ (X)((t)), equipped with the symplectic pairing defined by the formula
+                                     Z
+                          k   l
+                     ω(αt , βt ) =           α ∧ β Res(t2−d f (t)g(−t)dt).
+                                         X
+
+
+Here d is the complex dimension of X, and H ∗ (X) is the de Rham cohomology.
+
+   In order to define the correlation functions of our theory, we need to choose a po-
+larization of this symplectic vector space. This is because the choice of a polarization
+allows us to identify the Fock space with a symmetric algebra, and the correlation
+functions are then defined as the Taylor coefficients of the partition function.
+
+   As we explain in section 5, the Hodge filtration on H ∗ (X) yields a Lagrangian sub-
+space of this symplectic vector space, and so one half of a polarization. In order to get
+a complete polarization, we need to choose a splitting of the Hodge filtration.
+
+   If F denotes a filtration complementary to the Hodge filtration on H ∗ (X), we define
+in section 5 correlation functions
+
+                         h−iX,F     ∗     ∗
+                            g,n : (H (X, ∧ T X)[[t]])
+                                                      ⊗n
+                                                         → C.
+
+Here H i (X, ∧j T X) denotes the coherent cohomology of X with coefficients in the j’th
+exterior power of the tangent bundle of X. Note that this algebra of polyvector fields
+on X is a differential graded Frobenius algebra, with a trace given by the holomorphic
+volume form on X.
+4                                                  KEVIN COSTELLO AND SI LI
+
+
+1.4. Mirror symmetry predicts that the correlators of the BCOV theory on X (with
+an appropriate choice of splitting of the Hodge filtration) coincide with the Gromov-
+Witten invariants of the mirror X ∨ . In a companion paper [Li11] by the second-named
+author, this result is proved for the elliptic curve E.
+
+  The A-model correlators (or Gromov-Witten invariants) of a projective variety X ∨
+are the linear maps
+
+                                       X ∨ ;A                               ⊗n
+                                    h−ig,n,d  : H ∗ (X ∨ , ∧∗ T ∗ X ∨ )[[t]]    →C
+
+defined by by
+           D                              EX ∨ ;A       Z                                                       
+                    k1
+               α1 t , . . . , αn t   kn
+                                                    =                              ψ1k1 ev∗1 α1 · · · ψnkn ev∗n αn
+                                           g,n,d            [Mg,n,d (X ∨ )]virt
+
+
+where Mg,n,d (X ∨ ) is the Kontsevich moduli space of stable maps of degree d, [Mg,n,d (X ∨ )]virt
+is the virtual fundamental class of this space, evi : Mg,n,d (X ∨ ) → X ∨ are the evaluation
+maps, and ψi is the first Chern class of the cotangent line to the i’th marked point of
+Mg,n,d (X ∨ ).
+
+
+
+1.5. In this paper, we prove that the correlators of the BCOV theory on an elliptic
+curve E satisfy Virasoro constraints identical to those satisfied by the Gromov-Witten
+invariants of the dual elliptic curve E ∨ .
+
+  The Virasoro constraints for Gromov-Witten invariants were proposed in [EHX97a]
+(and are still conjectural, in general). In the case of a point, these Virasoro constraints
+are equivalent to Kontsevich’s theorem [Kon92] on intersection numbers on the moduli
+space of curves.
+
+   The Virasoro in the case of an elliptic curve can be expressed in the following simple
+form:
+
+                                    EE ∨ ;A            n                                                                EE ∨ ;A
+      D                                                X   l + HW(α) D
+                l
+          1 · t , α1 , . . . , αn                  =                                  α1 , . . . , tl−1 αi , . . . , αn             .
+                                     g,d,n+1                           l                                                   g,d,n
+                                                       i=1
+
+
+Here α ∈ H ∗,∗ (E) is an arbitrary element. The Hodge weight HW(α) is defined by
+HW(α) = p − 1 if αH p,q (E).
+
+    A second main theorem of this paper is as follows.
+QUANTUM BCOV THEORY ON CALABI-YAU MANIFOLDS AND THE HIGHER GENUS B-MODEL5
+
+
+Theorem. For any choice of splitting F of the Hodge filtration on the cohomology of
+E, the B-model correlators satisfy the Virasoro constraints
+                                         n                                               EE,F
+      D                         EE,F     X   l + HW(α) D
+             l
+        1 · t , α1 , . . . , αn        =                 α1 , . . . , tl−1 αi , . . . , αn      .
+                                 g,n+1            l                                         g,n
+                                     i=1
+
+Here, the Hodge weight of an element α ∈ PVp,q (E) is HW(α) = p − 1.
+
+  The proof, presented in section 11, is by obstruction theory.
+
+
+1.6. The Virasoro constraints allow us to reduce the calculation of the even B-model
+correlators1 to the calculation of certain primitive correlators
+                                  D                     EE,F ;B
+                                    ωtk1 , . . . , ωtkn
+                                                        g,n
+
+where
+                                        ω ∈ H 1 (E, T E)
+is the class with Tr(ω) = 1. In [OP06a], the corresponding A-model correlators are
+called the stationary sector.
+
+    We next show that the correlators in the stationary sector are modular forms. Let
+Eτ denote the elliptic curve with modulus τ ∈ H. For σ ∈ H, let F σ denote the splitting
+on the Hodge filtration on H 1 (Eτ ) arising from the complex conjugate to the Hodge
+filtration on H 1 (Eσ ). This makes sense, because there is a canonical isomorphism
+H 1 (Eτ ) ∼
+          = H 1 (Eσ ), arising from parallel transport along a path connecting τ and σ in
+H.
+
+  We will let
+                             Eτ ,σ;B
+                          h−ig,n     : (H ∗ (Eτ , ∧∗ T Eτ )[[t]])⊗n → C
+denote the correlators for this splitting.
+                                                                         1
+   One can check easily that the σ → i∞ limit of the space F σ ⊂ H 1 (Eτ ) still defines a
+splitting of the Hodge filtration. We will let h−iE τ ,∞;B
+                                                  g,n      denote the correlators defined
+using this limiting splitting.
+
+Theorem. The stationary correlators
+                             D                     EE,σ;B
+                               ωtk1 , . . . , ωtkn
+                                                        g,n
+
+  1Even means that all of the inputs are of even cohomological degree.
+6                                                KEVIN COSTELLO AND SI LI
+
+
+are holomorphic functions of τ and anti-holomorphic functions of σ. Further, they are
+modular functions on H×H (using the diagonal SL2 (Z)-action) of weight (2g−2+2n, 0).
+In other words, if                         !
+                                     a b
+                              A=             ∈ SL2 (Z),
+                                     c d
+then
+    D                                                           EEA(τ ) ,A(σ)
+        1 · tk1 , . . . , 1 · tkm , ω · tl1 , . . . , ω · tln
+                                                                 g,n+m
+                                                      D                                                      EEτ ,σ
+                                     = (cτ + d)2g−2+2n 1 · tk1 , . . . , 1 · tkm , ω · tl1 , . . . , ω · tln        .
+                                                                                                            g,n+m
+
+
+1.7. Consider the generating function
+               D                     EE ∨ ,A       X D                      EE ∨ ,A
+                 ωtk1 , . . . , ωtkn         (q) =  q d ωtk1 , . . . , ωtkn
+                                                    g,n                                      g,n,d
+
+of the A-model stationary correlation functions. (Here ω ∈ H 2 (E ∨ ) is the fundamental
+class). Okounkov and Pandharipande show that this generating function is a quasi-
+modular form of weght 2g − 2 + n, and they give an explicit formula for this form.
+
+  In [Li11], the corresponding B-model correlators are determined, and the following
+theorem is shown.
+
+Theorem (Li). The A-model and B-model stationary correlators coincide:
+             D                     EE ∨ ,A           D                    EE,∞;B
+               ωtk1 , . . . , ωtkn         (e2πiτ ) = ωtk1 , . . . , ωtkn        .
+                                                    g,n                                   g,n
+
+Here, the B-model correlators are defined with respect to the limiting splitting limσ→i∞ F σ
+of the Hodge filtration of E.
+
+   Since the stationary correlators and the Virasoro constraints determine all even cor-
+relators, we see that all A- and B-model even correlators coincide.
+
+   Li also shows that certain generalized Virasoro constraints hold on the B-model; the
+A-model version of these generalized Virasoro constraints were proved by Okounkov and
+Pandharipande [OP06b]. These generalized Virasoro constraints allow one to reduce
+the computation of an arbitrary (not necessarily even) correlator to the stationary
+sector. Thus, Li’s results prove that all correlators of the A and B-model agree.
+
+    A more precise statement of Li’s theorem is as follows. Let
+
+                      Φτ : ⊕H i (E ∨ , ∧j T ∗ E ∨ )[−i − j] → ⊕H i (Eτ , ∧j T Eτ )[−i − j]
+QUANTUM BCOV THEORY ON CALABI-YAU MANIFOLDS AND THE HIGHER GENUS B-MODEL7
+
+
+be the unique isomorphism of commutative bigraded algebras which is compatible with
+the trace on both sides. Let us extend Φτ to a C[[t]]-linear isomorphism
+
+                       H ∗ (E ∨ , ∧∗ T ∗ E)[[t]] → H ∗ (E, ∧∗ T E)[[t]].
+
+Corollary (Li). For all
+
+                           a1 , . . . , an ∈ H ∗ (E ∨ , ∧∗ T ∗ E ∨ )[[t]],
+
+the A-model correlators are the same as the σ → i∞ limit of the B-model correlators:
+              X                              ∨ ;A
+                  e2πidτ ha1 , . . . , an iE                                   Eτ ,∞;B
+                                           g,n,d = hΦτ (a1 ), . . . , Φτ (an )ig,n     .
+                d
+
+
+   Thus, this theorem states that the generating function for the Gromov-Witten invari-
+ants of E ∨ , where degree d invariants are accompanied by a coefficient of e2πidτ = q d ,
+coincides with the B-model correlators of the elliptic curve Eτ . Note that the left hand
+side of this equality is a priori only defined as a formal expansion in the parameter
+q = e2πiτ . The right hand side, however, is defined for all values of τ in the upper
+half-plane. Thus, this equality should be understood as saying that the left hand side
+is an expansion of the right hand side as τ → i∞ (or, equivalently, as q → 0).
+
+
+
+                                          Contents
+
+  1. Introduction                                                                       1
+
+  2. Classical BCOV theory                                                              8
+
+  3. Quantization                                                                      17
+
+  4. BCOV theory and the Givental formalism                                            28
+
+  5. Correlation functions and complements to the Hodge filtration                     39
+
+  6. The classical action functional as a Lagrangian cone                              45
+
+  7. Quantization on an elliptic curve                                                 51
+
+  8. Correlation functions and the τ → ∞ limit                                         53
+
+  9. Holomorphic properties of correlation functions                                   55
+
+  10.   Modular properties                                                             57
+8                                 KEVIN COSTELLO AND SI LI
+
+
+    11.   Virasoro constraints                                                          60
+
+    Appendix I : The obstruction group on an elliptic curve                             65
+
+    References                                                                          74
+
+
+
+
+                             2. Classical BCOV theory
+
+   In this section we will describe our generalization of the BCOV theory, at the classical
+level. This classical theory is defined on a Calabi-Yau manifold of any dimension.
+
+  Thus, let X be a Calabi-Yau manifold of dimension d. For simplicity we will assume
+that X is compact, although this is not necessary.
+
+    Let
+                                 PVi,j (X) = Ω0,j (X, ∧i T X)
+denote the space of polyvector fields on X. PV(X) is a differential bi-graded algebra;
+the differential is the operator
+
+                                 ∂ : PVi,j (X) → PVi,j+1 (X).
+
+and the algebra structure arises from wedging polyvector fields. The cohomological
+degree of an element of PVi,j (X) is i + j.
+
+  Give the algebra Ω∗,∗ (X) of forms on X the ∂ differential. With this differential,
+Ω∗,∗ (X) is a differential bi-graded module for the differential bi-graded algebra PV(X).
+The module structure is given by Ω0,∗ (X) linear map
+
+                           PVk,l (X) ⊗ Ωi,j (X) → Ωi−k,j+l (X)
+                                           α ⊗ φ 7→ α ∨ φ.
+
+This map is the unique Ω0,∗ (X) linear extension of the contraction map
+
+                            PVk,0 (X) ⊗ Ωi,0 (X) → Ωi−k,0 (X).
+
+
+    Let
+                                        ω ∈ Ωd,0 (X)
+denote the holomorphic volume form on X.
+QUANTUM BCOV THEORY ON CALABI-YAU MANIFOLDS AND THE HIGHER GENUS B-MODEL9
+
+
+  Contracting with ω yields an isomorphism
+
+                                         α 7→ α ∨ ω
+                                PVi,j (X) ∼
+                                          = Ωd−i,j (X).
+
+Define an operator
+
+                             ∂ : PVi,j (X) → PVi−1,j (X)
+
+by the formula
+
+                                (∂α) ∨ ω = ∂(α ∨ ω).
+
+Thus, ∂ is the operator on PV∗,∗ (X) which corresponds to the holomorphic de Rham
+differential ∂ on Ω∗,∗ (X) under the isomorphism PVi,j (X) ∼
+                                                           = Ωd−i,j (X).
+
+
+
+2.1. The operator ∂ endows the space PV(X) of polyvector fields on X of with the
+structure of a bigraded Batalin-Vilkovisky algebra. This means that ∂ is an order two
+differential operator with respect to the algebra structure on PV(X).
+
+  If α ∈ PV(X), let
+
+                                αl : PV(X) → PV(X)
+
+denote the operator of left multiplication with α. The statement that ∂ is an order two
+differential operator means that, for all α, β, γ,
+
+                                 [[[∂, αl ], βl ], γl ] = 0.
+
+
+  It follows from this that there is a uniquely defined bilinear map
+
+                  {−, −} : PVi,j (X) ⊗ PVk,l (X) → PVi+k−1,j+l (X)
+
+which satisfies
+
+                                [[∂, αl ], βl ]γ = {α, β}γ
+
+for all α, β, γ ∈ PV(X).
+
+   It follows from the fact that ∂ 2 = 0 that {−, −} is a Gerstenhaber bracket on the
+bi-graded algebra PV(X) (see [Get94] for details).
+10                              KEVIN COSTELLO AND SI LI
+
+
+2.2. Define a map
+                                     Tr : PV(X) → C
+by                            R
+                               (α ∨ ω) ∧ ω         if α ∈ PVd,d (X)
+                                X
+                      Tr(α) =
+                              0                    if α 6∈ PVd,d (X).
+The pairing
+
+                          PVi,j (X) ⊗ PVd−i,d−j (X) → C
+                                                 α ⊗ β → Tr(αβ)
+
+is non-degenerate (that is, it has no kernel).
+
+2.2.1 Lemma. The operator ∂ is skew self adjoint for the pairing Tr(αβ), and the
+operator ∂ is self adjoint for this pairing.
+
+2.3. The space of fields for the original BCOV theory is the subspace
+
+                              H = (Ker ∂) [2] ⊂ PV(X)[2].
+
+(The shift of two puts the deformations of complex structure of X – which lie in
+Ω0,1 (X, T X) – in degree 0).
+
+     The original BCOV action on H is defined by the formula
+                                  1               1
+                            S(a) = T r(a∂∂ −1 a) + Tr(a3 ).
+                                  2               6
+
+2.4. There are many difficulties with the BCOV action, as originally defined. The most
+obvious difficulty is that it involves the expression ∂ −1 . This difficulty can be resolved
+by restricting attention to those fields a in Im ∂ ⊂ Ker ∂.
+
+   The second difficulty is that the space of fields is Ker ∂. Note that Ker ∂ is the global
+sections of a sheaf of cochain complexes on X, whose sections on an open subset U ⊂ X
+is simply
+                                    Ker ∂ |U ⊂ PV(U ).
+Note that this sheaf of cochain complexes is not fine: the hypercohomology with coef-
+ficients in this sheaf does not coincide with the cohomology of Ker∂ ⊂ PV(X).
+
+  In this paper we will consider a modification of the BCOV theory which works on a
+Calabi-Yau manifold of any dimension. In this modified theory, the space of fields is
+the derived version of the kernel of ∂.
+QUANTUM BCOV THEORY ON CALABI-YAU MANIFOLDS AND THE HIGHER GENUS B-MODEL
+                                                                       11
+
+
+2.5. The operator
+                                 ∂ : PV(X) → PV(X)
+is a cochain map of cohomological degree −1. Thus, ∂ can be viewed as an action of
+the Abelian Lie algebra C[1] situated in degree −1, or, equivalently, as an action of the
+commutative algebra C[ε] where ε is placed in degree −1.
+
+  The derived version of the kernel of ∂ is the homotopy fixed points for the action of
+C[1]. Abstractly, we can define this as the derived tensor product
+
+                                    PV(X) ⊗LC[ε] C.
+
+A concrete model for this complex is the complex
+
+                                       PV(X)[[t]]
+
+with differential ∂ − t∂. We will take this complex to be the space of fields for our
+modified BCOV theory (after, as before, shifting by 2). Thus, let
+
+                                 E (X) = PV(X)[[t]][2],
+
+and let
+                              Q = ∂ − t∂ : E (X) → E (X)
+be the differential on E (X). Note that E (X) is a topological vector space, and in fact
+a nuclear Fréchet space.
+
+
+2.6. We are interested constructing a local action functional on E (X) which satisfies
+the classical master equation. Before we do this, we need to introduce some notation
+for various classes of functions on E (X).
+
+  Let PV(X) denote the space of distributional polyvector fields on X. Thus, if D(X)
+denotes the space of distributions on X,
+
+                           PV(X) = PV(X) ⊗C ∞ (X) D(X).
+
+Let
+                                 E (X) = PV(X)[[t]][2].
+We will give E (X) the differential Q = ∂ − t∂, as before.
+
+   Note that both E (X) and E (X) are cochain complexes of topological vector space
+in a natural way; in fact, both are complete nuclear spaces. The category of complete
+nuclear spaces is a symmetric monoidal category, with the completed projective tensor
+12                             KEVIN COSTELLO AND SI LI
+
+
+product. Further, the category of nuclear spaces is closed under all products and under
+countable coproducts. If V is a nuclear space, we will let
+                                           Y
+                                d ∗V =
+                                Sym           Symi (V )
+                                            i
+
+denote the completed symmetric algebra on V , where Symi V is defined using the
+completed projective tensor product.
+
+   Now suppose that V is a nuclear space with the property that the strong dual V ∗
+of V is also a nuclear space. (The spaces E (X) and E (X) both have this property).
+Then we define the algebra of formal power series on V by
+
+                                          d ∗ (V ∗ ).
+                                  O(V ) = Sym
+
+This definition extends, in a straightfoward way, to cochain complexes of nuclear spaces.
+We are particularly interested in the spaces O(E (X)) and O(E (X)) of functions on
+spaces of fields on X.
+
+     We will let
+                               Q : O(E (X)) → O(E (X))
+
+denote the differential induced from the differential Q on E (X).
+
+     The pairing
+                                     ha, bi = Tr(ab)
+
+of cohomological degree −2d on PV(X) leads to an isomorphism
+
+                                 PV(X)∗ = PV(X)[2d]
+
+and so to an isomorphism
+
+                           E (X)∗ = t−1 PV(X)[t−1 ][2d − 4].
+
+Here, t is given degree 2 as usual, and we view t−1 C[t−1 ] as the dual to C[[t]] via the
+residue pairing.
+
+     Thus,
+                                                            
+                                 d ∗ t−1 PV(X)[t−1 ][2d − 4] .
+                      O(E (X)) = Sym
+
+Similarly,
+                                                            
+                                 d ∗ t−1 PV(X)[t−1 ][2d − 4] .
+                      O(E (X)) = Sym
+QUANTUM BCOV THEORY ON CALABI-YAU MANIFOLDS AND THE HIGHER GENUS B-MODEL
+                                                                       13
+
+
+2.7. If f ∈ E (X), then there is a derivation
+                               ∂
+                                 : O(E (X)) → O(E (X)).
+                              ∂f
+This is the continuous unique derivation which, on the generators E (X)∗ of O(E (X)),
+                                                                                    ∂
+is given by pairing with f . Thus, if f has cohomological degree i, the derivation ∂f
+also has cohomological degree i.
+
+  If Φ ∈ O(E (X)), and then we can define the Taylor coefficients of Φ as follows. These
+are continuous linear maps
+                                  Dn Φ : E (X)⊗n → C
+which are uniquely defined by the property that
+                                                            
+                                                 ∂       ∂
+                     Dn Φ(f1 ⊗ · · · ⊗ fn ) =       ···     Φ (0).
+                                                ∂f1     ∂fn
+One has
+                                         X 1
+                               Φ(f ) =       Dn Φ(f ⊗n ).
+                                          n!
+(once both sides are suitable interpreted, using, for example, the functor of points
+formalism [DM99]).
+
+
+2.8. We are particularly interested in a subspace
+
+                                Oloc (E (X)) ⊂ O(E (X))
+
+of local functionals.
+
+2.8.1 Definition. A functional Φ ∈ O(E (X)) is local if the Taylor coefficients
+
+                                 Dn Φ : E (X)⊗n → C,
+
+which are distributions on X n with coefficients in a certain vector bundle, have the
+following properties.
+
+   (1) Dn Φ is supported in the small diagonal X ⊂ X n .
+   (2) The wave-front set (or microsupport) of Dn Φ is the conormal bundle to the
+       small diagonal in X.
+
+
+  The second condition is equivalent to the statement that we can find differential
+operators
+                             A1 , . . . , An : E (X) → C ∞ (X)
+14                                    KEVIN COSTELLO AND SI LI
+
+
+such that                                         Z
+                        Dn (Φ1 ⊗ · · · ⊗ Φn ) =         A1 (Φ1 ) · · · An (Φn )d Vol
+                                                    X
+for some volume form d Vol on X.
+
+  The space Oloc (E (X)) is a subcomplex of O(E (X)), when the latter is equipped with
+the differnetial Q = ∂ − t∂.
+
+
+2.9. We want to construct a function I ∈ Oloc (E (X)) which satisfies the classical
+master equation. The classical master equation is the Maurer-Cartan equation for a
+certain Lie bracket on Oloc (E (X)).
+
+     We will first describe a Lie bracket on the subalgebra
+
+                                        O(E (X)) ⊂ O(E (X)).
+
+This is the subalgebra consisting of all funcitonals Φ whose Taylor coefficients, which
+are a priori distributional sections of a vector bundle on X, are in fact smooth sections.
+
+   The Lie bracket on O(E (X)) will be a Poisson bracket of cohomological degree 2d−5.
+We will define it on the generators of O(E (X)); the Leibniz rule allows one to extend
+it to all elements of O(E (X)).
+
+     Recall that
+                                  E (X)∗ = t−1 PV(X)[t−1 ][2d − 4].
+The Poisson bracket on E (X)∗ is defined by the pairing
+                                              1
+                        f (t)α ⊗ g(t)β →         Rest=0 tf (t)g(−t) Tr(∂α)β.
+                                             2πi
+Note that this is a symmetric map of cohomological degree 2d − 5, and so induces a
+Poisson bracket on O(E (X)) of degree 2d − 5.
+
+   Although this Poisson bracket does not extend to O(E (X)), it is clear that it extends
+to a bilinear map2
+                                O(E (X)) × O(E (X)) → O(E (X)).
+In particular, any S ∈ Oloc (E (X)) defines a continuous linear map
+
+                                  {S, −} : O(E (X)) → O(E (X)).
+
+     2This bilinear map is only separetely continuous, and so does not extend to the completed projective
+
+tensor product.
+QUANTUM BCOV THEORY ON CALABI-YAU MANIFOLDS AND THE HIGHER GENUS B-MODEL
+                                                                       15
+
+
+2.9.1 Lemma. For all S ∈ Oloc (E (X)), the map {S, −} extends uniquely to a contin-
+uous map
+
+                                     O(E (X)) → O(E (X)).
+
+
+Further, T ∈ Oloc (E (X)) ⊂ O(E (X)), then {S, T } ∈ Oloc (E (X)).
+
+
+
+Proof. See [Cos11], Chapter 5.                                                                      
+
+2.9.2 Definition. A function S ∈ Oloc (E (X)) satisfies the classical master equation
+if
+
+                                        QS + 12 {S, S} = 0.
+
+
+2.10. Now we are ready to define the classical action functional for our generalized
+BCOV theory.
+
+2.10.1 Definition. Define the classical BCOV action functional I ∈ Oloc (E (X)) by
+saying that the Taylor coefficients
+
+
+                                        Dn I : E (X)⊗n → C
+
+
+are defined by
+
+                                        Z
+                                        
+                                                    ψ1k1 · · · ψnkn Tr(α1 · · · αn )   if n ≥ 3
+                 k1        kn
+         Dn I(t α1 , . . . , t αn ) =        M0,n
+                                        
+                                        0                                              if n < 3.
+
+2.10.2 Lemma. I satisfies the classical master equation
+
+
+                                        QI + 21 {I, I} = 0.
+
+
+
+Proof. In what follows, we will use the notation
+
+                                                     Z
+                                hτk1 . . . τkn i =           ψ1k1 . . . ψnkn .
+                                                      M0,n
+16                                                KEVIN COSTELLO AND SI LI
+
+
+Note that ∂I = 0. Thus, we only need to consider the term −t∂ in the differential Q.
+We have
+
+                       (QI)(tk1 α1 , · · · , tkn αn )
+                         X
+                     = −    ± hτk1 · · · τki +1 · · · τkn i0 Tr α1 · · · ∂αi · · · αn
+                                  i
+                           1X
+                     =         ± hτk1 · · · τki +1 · · · τkn i0 Tr{αi , α1 · · · α̂i · · · αn }
+                           2
+                             i
+                           1X
+                     =         ± hτk1 · · · τki +1 · · · τkn i0 Tr{αi , αj }α1 · · · α̂i · · · αˆj · · · αn
+                           2
+                                 i6=j
+
+where we have used the formula
+                                                              1
+                                                   Tr(△α)β = − Tr{α, β}
+                                                              2
+which follows from the BV relation △(αβ) = (△α)β + (−1)|α| α△β + {α, β} and the
+self-adjointness of △ with respect to the trace pairing. On the other hand,
+
+          {I, I}(tk1 α1 , · · · , tkn αn )
+                                                                                             !
+               X                   Y                  Y                           Y              Y
+     =                   ±hτ0            τki i0 hτ0           τkj i0 Tr ∂               αi               αj
+          J⊂{1,··· ,n}             i∈J                j∈J c                       i∈J            j∈J c
+                                                                                                                
+              1      X                   Y                    Y                   Y                Y            
+     = −                         ±hτ0          τki i0 hτ0            τkj i0 Tr               αi ,           αj
+              2                                                                                                 
+                  J⊂{1,··· ,n}           i∈J                 j∈J c                    i∈J           j∈J c
+              1      X                   Y                    Y                  X
+     = −                         ±hτ0          τki i0 hτ0            τkj i0               Tr{αi , αj }α1 · · · α̂i · · · αˆj · · · αn
+              2
+                  J⊂{1,··· ,n}           i∈J                 j∈J c            i∈J,j∈J c
+                 1                X                   Y                  Y                    X             X
+     = −                                    ±hτ0            τki i0 hτ0           τkj i0                          Tr{αi , αj }α1 · · · α̂i · · · αˆj · · · αn
+              2(n − 2)
+                           J⊂{1,··· ,n}               i∈J                j∈J c            i∈J,j∈J c k6=i,j
+                 1     X                 X                    Y                    Y
+     = −                                              ±hτ0           τki i0 hτ0           τkj i0 Tr{αi , αj }α1 · · · α̂i · · · αˆj · · · αn
+              2(n − 2)
+                           i,j,k {i,k}⊂J,j∈J c                i∈J                 j∈J c
+                 1     X                 X                    Y                   Y
+          −                                           ±hτ0           τki i0 hτ0           τkj i0 Tr{αi , αj }α1 · · · α̂i · · · αˆj · · · αn
+              2(n − 2)
+                           i,j,k i∈J,{j,k}⊂J c                i∈J                 j∈J c
+                 1     X
+     = −                 ±hτk1 · · · τkj +1 · · · τkn i0 Tr{αi , αj }α1 · · · α̂i · · · αˆj · · · αn
+              2(n − 2)
+                           i,j,k
+            1              X
+          −              ±hτk1 · · · τki +1 · · · τkn i0 Tr{αi , αj }α1 · · · α̂i · · · αˆj · · · αn
+         2(n − 2)
+                  i,j,k
+         X
+     = −     ± hτk1 · · · τki +1 · · · τkn i0 Tr{αi , αj }α1 · · · α̂i · · · αˆj · · · αn
+               i,j
+QUANTUM BCOV THEORY ON CALABI-YAU MANIFOLDS AND THE HIGHER GENUS B-MODEL
+                                                                       17
+
+
+where we have used the topological recursion relation
+                                             *           + *          +
+                                        X         Y             Y
+             hτk1 +1 τk2 · · · τkn i0 =        τ0    τki     τ0   τkj
+                                    1∈I,{2,3}⊂I c   i∈I     0    j∈I c
+
+The classical master equation now follows.                                             
+
+Remark: We will give another construction of the classical action functional (and an-
+other proof that the master equation holds) in section 6.
+
+
+                                   3. Quantization
+
+  In this section we will explain what it means to quantize the BCOV theory on a
+Calabi-Yau X.
+
+   We will use the formalism for renormalization of quantum field theories developed in
+[Cos11]. This involves the choice of an additional datum: a gauge fixing operator for the
+theory. However, as explained in [Cos11], the notion of quantization is independent, up
+to homotopy, of the gauge fixing operator chosen. More precisely, it is shown in [Cos11]
+that there is a simplicial set of quantization, which is a fibration over the simplicial
+set of gauge fixing conditions. Further, the simplicial set of gauge fixing conditions is
+normally contractible (and is contractible in the example under consideration). Since
+the simplicial set of quantizations fibres over that of gauge fixing conditions, any two
+fibres are homotopy equivalent, in a way canonical up to all higher homotopies.
+
+   In what follows, we will first discuss the notion of quantization with a fixed gauge
+fixing condition, arising from a Kähler metric on our Calabi-Yau X. Later we will
+explain how to relate quantizations for different gauge fixing conditions.
+
+
+3.1. Thus, let us choose a Kähler metric on X. As before, let PV(X) denote the
+polyvector fields on X. The choice of metric leads to an operator
+                              ∗
+                             ∂ : PVi,j (X) → PVi−1,j (X).
+
+Let
+                          Kt ∈ ⊕i,j PVi,j (X) ⊗ PVd−i,d−j (X)
+                                               ∗
+denote the heat kernel for the operator [∂, ∂ ].
+
+  As before, let
+                                  E (X) = PV(X)[[t]][2].
+18                                 KEVIN COSTELLO AND SI LI
+
+
+We will consider PV(X)[2] as the subspace t0 PV(X)[2] of E (X). In this way, the heat
+kernel Kt can be viewed as an element of E (X) ⊗ E (X).
+
+     We will let
+                                  ∆L : O(E (X)) → O(E (X))
+
+be the operator of contracting with
+
+                                             (∂ ⊗ 1)KL .
+
+Thus, ∆L is the unique continuous order 2 differential operator with the property that
+its restriction to
+                                   Sym2 (E (X)∗ ) ⊂ O(E (X))
+
+is given by pairing with (∂ ⊗ 1)KL . This operator is of cohomological degree 2d − 5.
+
+     If Φ, Ψ ∈ O(E ), let
+
+                      {Φ, Ψ}L = ∆L (ΦΨ) − ∆L (Φ)Ψ − (−1)|Φ| Φ∆L Ψ.
+
+This defines a Poisson bracket of cohomological degree 2d − 5.
+
+
+3.2. We will let
+                                         Z L          
+                                                 ∗
+                            P (ε, L) =          ∂ ∂ ⊗ 1 Ku du ∈ E ⊗ E .
+                                         ε
+
+If we set ε = 0 and L = ∞, then we find the propagator P (0, ∞) for the BCOV theory.
+
+     Let
+                                   Q : O(E (X)) → O(E (X))
+
+denote the differential which arises from the differential ∂ − t∂ on E (X).
+
+     Let
+                                 ∂P (ε,L) : O(E (X)) → O(E (X))
+
+be the operator corresponding to contracting with P (ε, L).
+
+     We have
+
+(†)                                  [Q, ∂P (ε,L) ] = ∆ε − ∆L
+
+Thus, ∂P (ε,L) is a homotopy between the operators ∆L and ∆ε .
+QUANTUM BCOV THEORY ON CALABI-YAU MANIFOLDS AND THE HIGHER GENUS B-MODEL
+                                                                       19
+
+
+3.3. Let
+                            O + (E (X))[[~]] ⊂ O(E (X))[[~]]
+be the subspace consisting of elements which are at least cubic. Φ ∈ O + (E (X))[[~]],
+Let
+                                               
+          W (P (ε, L), Φ) = ~ log exp ~∂P (ε,L) exp (Φ/~) ∈ O + (E (X))[[~]].
+Sending
+                                  Φ 7→ W (P (ε, L), Φ)
+is the renormalization group flow from scale ε to scale L. This is discussed in much
+greater detail in [Cos11].
+
+
+3.4. Now we have the notation necessary to give a definition of a quantization of the
+BCOV theory on a Calabi-Yau manifold X.
+
+3.4.1 Definition. A quantization of the BCOV theory on X is given by a Kähler
+metric g on X, and a collection of functionals
+                                 X
+                         F[L] =      ~g Fg [L] ∈ O(E (X))[[~]]
+
+for each L ∈ R>0 , with the following properties.
+
+   (1) The renormalization group flow equation. This says that
+
+                               F[L] = W (P (ε, L), F[ε])
+
+       for all L and ε.
+   (2) The quantum master equation. This says that
+                                         1
+                       QF[L] + ~∆L F[L] + {F[L], F[L]}L = 0,
+                                         2
+       or, equivalently,
+                             (Q + ~∆L ) exp(F[L]/~) = 0.
+       The homotopy property (†) implies that, if F[L] satisfies the renormalization
+       group equation, then the QME at scale L is equivalent to the QME at scale ε.
+   (3) The locality axiom, as in [Cos11]. This says that F[L] has a small L asymptotic
+       expansion in terms of local functionals.
+   (4) The L → 0 limit of F0 [L] is the BCOV interaction I ∈ Oloc (E (X)).
+   (5) The function Fg is of cohomological degree
+
+                                 (dim X − 3)(2g − 2).
+20                             KEVIN COSTELLO AND SI LI
+
+
+         (This condition corresponds to the fact that, in the A model, the moduli space
+         of maps M g,n (X) is of dimension (3 − dim X)(2g − 2) + 2n. The 2n term does
+         not appear in our expression because we shifted the grading of PV(X)).
+     (6) We will give E (X) = PV(X)[[t]][2] an additional grading, which we call Hodge
+         grading, by saying that something in
+
+                              tm Ω0,∗ (∧k T X) = PVk,∗ (X)
+
+         has Hodge weight k + m − 1. We will let HW (α) denote the Hodge weight of
+         an element α ∈ E .
+           Then, the functions Fg must be of Hodge weight
+
+                                  (dim X − 3)(g − 1).
+
+         (This condition matches up with the A model fact that the fundamental class of
+         M g,n (X) is of Hodge type
+
+                   ((3 − dim X)(g − 1) + n, (3 − dim X)(g − 1) + n).
+
+
+3.5. Note that one can consider families of quantizations over any differential graded
+base ring. Indeed, if A is a such a dg base ring, then we can consider our space of
+functionals to be O(E) ⊗ A[[~]], and we can modify our differential Q to be ∂ − t∂ + dA ,
+where dA is the differential on A.
+
+   The main theorems of [Cos11] apply when we work over a certain class of differential
+graded commutative Fréchet algebras. These Fréchet algebras are associated to data
+(Z, A, I, d) where Z is an auxiliary manifold with corners, A is a finite rank bundle
+of graded commutative on Z, I ⊂ A is a bundle of nilpotent maximal ideals whose
+quotient is the trivial bundle, and d : Γ(Z, A) → Γ(Z, A) is a derivation. This data
+yields a differential graded Fréchet algebra A = Γ(Z, A).
+
+   By considering suitable base rings, one defines a notion of homotopy of quantizations
+of the BCOV theory.
+
+3.5.1 Definition. Let {F[L], g}, {F′ [L], g} be two different quantizations defined using
+the same metric g. A homotopy between two quantizations {F[L], g}, {F′ [L], g} is a
+family of quantizations over the differential graded base ring Ω∗ ([0, 1]), satisfying the
+obvious analogues of the axioms listed above, and which restricts to {F[L]} at 0 and to
+{F′ [L]} at 1.
+QUANTUM BCOV THEORY ON CALABI-YAU MANIFOLDS AND THE HIGHER GENUS B-MODEL
+                                                                       21
+
+
+  More generally, one can consider families over Ω∗ (∆n ), where ∆n is the n-simplex.
+In this way we see that the set of quantizations of the BCOV theory has a natural
+enlargement to a simplicial set.
+
+
+3.6. So far we have been considering quantizations with a fixed Kähler metric g on X.
+We can also consider homotopies between quantizations which have different metric.
+
+   Thus, let g0 , g1 be Kähler metrics on X and let {F[L]0 , g0 }, {F[L]1 , g1 } be quanti-
+zations defined with respect to the metric g0 and g1 . Let gs for s ∈ [0, 1] be a smooth
+family of metrics connecting g0 to g1 . Then, as explained in [Cos11], Chapter 5, one
+can define, in this setting, a family of heat kernels and propagators in E ⊗E ⊗Ω∗ ([0, 1]),
+which use the family gs of metrics as a gauge fixing conditions. The heat kernel KL,s,ds
+                                                                                ∗
+for this family is defined to be the heat kernel for the operator [∂ + ddR , ∂ s ]. Here ddR
+is the de Rham differential on Ω∗ ([0, 1]), and
+                              ∗
+                            ∂ s : E (X) → E (X) ⊗ C ∞ ([0, 1]s )
+                              ∗
+is the family version of the ∂ operator for the family of metrics {gs | s ∈ [0, 1]}.
+
+  This allows one to define the notion of quantization for the family of gauge fixing
+             ∗
+conditions ∂ s . Such a quantization is given by a family of functions
+
+                            F[L] ∈ O(E (X)) ⊗ Ω∗ ([0, 1]s )[[~]],
+
+as before, which satisfy all of the axioms listed earlier, except using the family heat
+kernel KL,s,ds in place of the usual heat kernel KL .
+
+3.6.1 Definition. A homotopy between quantizations {F[L]0 , g0 } and {F[L]1 , g1 } is a
+smooth family gt of metrics connecting g0 and g1 , together with a quantization over
+Ω∗ ([0, 1]).
+
+
+   More generally, this construction allows one to define a simplicial set of quantizations,
+which we denote Quant. The 0-simplices are quantizations {F[L], g}) where g is a
+Kähler metric on X and {F[L]} is a quantization defined using this metric. The higher
+simplices are given by families of metrics parametrized by ∆n and a corresponding
+family of quantizations.
+
+  Let Met(X) denote the simplicial set whose n-simplices are smooth families of Kähler
+metrics on X. In [Cos11], Chapter 5, the following theorem is shown.
+
+3.6.2 Theorem. The map Quant → Met(X) is a fibration of simplicial sets.
+22                                            KEVIN COSTELLO AND SI LI
+
+
+   Since Met(X) is contractible, this theorem tells us that any two fibres of this map
+are canonically homotopy equivalent. Thus, we do not lose any generality if we fix
+any Kähler metric g on X and only consider quantizations using this metric. In what
+follows, we will normally do this.
+
+
+3.7. So far, we have defined the notion of quantization of the classical BCOV theory.
+The axioms we have listed are the fundamental axioms of the quantum field theory
+formalism of [Cos11] – namely, the renormalization group equation and the quantum
+master equation – as well as axioms corresponding to the dimension axioms of Gromov-
+Witten theory.
+
+   However, the Gromov-Witten invariants of an algebraic variety have several other
+important axioms which we would like to consider in the B-model. Two particularly im-
+portant axioms are the string axiom and the dilaton axiom. Let us recall the statement
+of these axioms.
+
+  Let Y be a projective algebraic variety, and let Mg,n,β (Y ) denote the Kontsevich
+moduli space of stable maps from curves of genus g to Y , whose fundamental class is
+β ∈ H2 (Y ). Let
+
+                        [Mg,n,β (Y )]vir ∈ H(1−g)(dim Y −3)+2n+R c1 (Y ) (Mg,n,β (Y ))
+                                                                               β
+
+denote the virtual fundamental class of this moduli space.
+
+     Then, the Gromov-Witten invariants of Y are defined by
+             D                     EGW   Z
+                k1             kn
+               t α1 , . . . , t αn     =          ψ1k1 ev∗1 α1 . . . ψnkn ev∗n αn
+                                              g,n,β        [Mg,n,β (Y )]vir
+
+where αi ∈ H ∗ (Y ), evi : Mg,n,β (Y ) → Y are the evaluation maps, and ψi ∈ H 2 (Mg,n,β (Y ))
+is the pull-back of the i’th ψ class on the usual Deligne-Mumford moduli space Mg,n
+of curves.
+
+     The dilaton axiom states that
+           D                                EGW                          D                        E
+             t · 1, tk1 α1 , . . . , tkn αn                = (2g − 2 + n) tk1 α1 , . . . , tkn αn
+                                                g,n+1,β                                                         g,n,β
+
+where 1 ∈ H 0 (Y ) is the identity in the cohomology ring of Y .
+
+     The string axiom states that
+            D                                EGW           XD
+                                                           n                                                    E
+                1, tk1 α1 , . . . , tkn αn             =          tk1 α1 , . . . , tki −1 αi , . . . , tkn αn
+                                             g,n+1,β                                                            g,n,β
+                                                           i=1
+QUANTUM BCOV THEORY ON CALABI-YAU MANIFOLDS AND THE HIGHER GENUS B-MODEL
+                                                                       23
+
+
+Thus, the string and dilaton axioms allow one to remove a single t · 1 or 1 from the
+correlators.
+
+
+3.8. We would like to state the string and dilaton axioms for the B-model. However, in
+the B-model, these axioms will only hold up to homotopy. We will start by describing
+the dilaton axiom, as the string axiom in the B-model is more difficult to describe. In
+order to state these axioms precisely, we need some lemmas.
+
+  Let 1 ∈ E (X) be the element corresponding to the function 1 in the ring PV0,0 (X) =
+C ∞ (X). Similarly, for any k, we have an element tk 1 ∈ E (X). Thus, we get differential
+operators
+                                    ∂
+                         ∂tk 1 =          : O(E (X)) → O(E (X)).
+                                 ∂ (tk 1)
+Note that ∂tk 1 is of cohomological degree 2k − 2.
+
+3.8.1 Lemma. For any k ≥ 0, the operator ∂tk 1 commutes with the operators Q =
+∂ − t∂, ∂P (ε,L) and ∆ε . Further all of these operators preserve the subspace Oloc (E ) of
+local functionals.
+
+
+Proof. Indeed, ∆ε , ∂P (ε,L) and ∂tk 1 are all constant-coefficient differential operators on
+O(E (X)), which of course automatically commute. Any element of E (X), when viewed
+as a derivation of O(E (X)), preserves the space of local functionals. Finally, any closed
+element of E (X), when viewed as a derivation, commutes with Q.                             
+
+
+  In order to discuss the dilaton axiom, we need to define additional derivations of
+O(E (X)). Any continuous linear map A : E (X) → E (X) defines a derivation ∂A of
+O(E (X)), characterized by the property that ∂A (α) = A∗ (α) for each α ∈ E (X)∨ .
+(Here A∗ indicates the adjoint of A).
+
+  Let
+                                Eu : O(E (X)) → O(E (X))
+be the Euler derivation, defined as the derivation associated to the identity map Id :
+E (X) → E (X). Note that Eu(α) = kα if α is homogeneous of degree k as a function
+on E (X).
+
+3.8.2 Lemma. The operator Eu commutes with Q and satisfies
+
+                                     [Eu, ∆ε ] = −2∆ε
+                                 [Eu, ∂P (ε,L) ] = −2∂P (ε,L) .
+24                                KEVIN COSTELLO AND SI LI
+
+
+Also, Eu preserves the subspace Oloc (E (X)) of O(E (X)) consisting of local functionals.
+
+
+Proof. This is a trivial calculation.                                                  
+
+
+     It follows that
+                                               ∂
+                                    Eu +2~        : O(E )[[~]]
+                                               ∂~
+commutes with Q, ~∂P (ε,L) and with ~∆ε .
+
+
+3.9. Now we have constructed derivations
+                                            ∂
+                          ∂tk ·1 , Eu +2~      : O(E )[[~]] → O(E )[[~]]
+                                            ∂~
+which commute with Q, ~∂P (ε,L) and ~∆ε .
+
+3.9.1 Lemma. Let
+                                  D : O(E )[[~]] → O(E )[[~]]
+
+be a derivation of cohomological degree k which commutes with Q, ~∂P (ε,L) and ~∆ε .
+Suppose also that D preserves the subspace of local functionals.
+
+  Let {F[L] ∈ O(E )[[~]] | L ∈ R>0 } be a collection of functionals which satisfy the
+renormalization group equation, the quantum master equation, and the locality axiom.
+Then, so does the collection of functionals
+
+                                     F[L] + δ~D~−1 F[L]
+
+where δ is a parameter of cohomological degree −k.
+
+
+Proof. The renormalization group flow operator
+                                                                      
+                       W (P (ε, L), F) = ~ log exp(~∂P (ε,L) ) exp(F/~
+
+is defined entirely in terms of the differential operator ~∂P (ε,L) . The quantum master
+equation can be written as
+
+                                (Q + ~∆L ) exp (F[L]/~) = 0.
+
+Thus, the QME is defined entirely in terms of Q and ~∆L .
+QUANTUM BCOV THEORY ON CALABI-YAU MANIFOLDS AND THE HIGHER GENUS B-MODEL
+                                                                       25
+
+
+   Now, suppose that {F[L] ∈ O(E (X))[[~]] | L ∈ R>0 } is a collection of functionals
+satisfying the renormalization group equation.
+                                                                               
+    exp ~−1 W P (ε, L), F[ε] + δ~D~−1 F[ε] = e~∂P (ε,L) exp ~−1 F[ε] + δD~−1 F[ε]
+                                             = e~∂P (ε,L) (1 + δD) exp (F[ε]/~))
+                                             = (1 + δD)e~∂P (ε,L) exp (F[ε]/~))
+                                             = (1 + δD) exp (F[L]/~) .
+
+Thus, F[L] + δ~D~−1 F[L] satisfies the renormalization group equation. The proof that
+it satisfies the quantum master equation is identical.                             
+
+
+3.10. Thus, the operators ∂tk ·1 and
+                                             ∂ −1
+                                   Eu +2~2      ~
+                                             ∂~
+all preserve the quantum master equation and the renormalization group equation.
+
+   The dilaton equation will say that a quantization F[L] is fixed by certain combina-
+tions of these operators. Let
+                                  ∂Dil = ∂t·1 − Eu .
+                     ∂ −1
+Note that ∂Dil − 2~2 ∂~ ~ preserves the renormalization group equation and the quan-
+tum master equation, and so acts on the space of theories.
+                                      ∂ −1
+3.10.1 Lemma. The operator ∂Dil − 2~2 ∂~ ~ fixes the classical BCOV action func-
+tional I ∈ Oloc (E (X)).
+
+
+Proof. The classical BCOV action was defined using integrals of ψ classes over M0,n .
+The fact that these integrals satisfy the dilaton equation immediately implies the
+lemma.                                                                            
+
+3.10.2 Corollary. Let {F[L]} be a quantization of the BCOV theory. Then
+                                                   
+                                            2 ∂ −1
+                       {F[L] + δ ∂Dil − 2~      ~     F[L]}
+                                             ∂~
+is a quantization of the BCOV theory over C[δ]/δ2 where δ is of cohomological degree
+0.
+
+                                                     ∂ −1
+                                                          
+Proof. We have already seen that F[L] + δ ∂Dil − 2~2 ∂~ ~   F[L] satisfies the renor-
+malization group equation, quantum master equation, and locality axiom. Because the
+26                              KEVIN COSTELLO AND SI LI
+
+
+classical interaction I satisfies the dilaton equation we see that, modulo ~,
+                                                       
+                                                 2 ∂ −1
+                       lim F0 [L] + δ ∂Dil − 2~      ~    F0 [L] = I.
+                      L→0                         ∂~
+The remaining (dimension) axioms we imposed on a quantization are immediate.             
+
+3.10.3 Definition. A quantization {F[L]} of BCOV theory satisfies the dilaton axiom
+                                                 ∂ −1
+                                                      
+if the family of quantizations F[L]+δ ∂Dil − 2~2 ∂~ ~   F[L] over C[δ]/δ2 is homotopic
+to the trivial family F[L].
+
+
+3.11. This definition is a little abstract. Let us make it more concrete. There are
+several (equivalent) ways of saying what it means to have a homotopy of the family
+                     ∂ −1
+                           
+{F[L]+δ ∂Dil − 2~2 ∂~  ~     F[L]} of quantizations with the trivial family. One is simply
+to have a family of quantizations over Ω∗ ([0, 1]) ⊗ C[δ]/δ2 , which modulo δ is a trivial
+                                                        ∂ −1
+                                                               
+family, and which specializes to {F[L] + δ ∂Dil − 2~2 ∂~  ~      F[L]} at t = 0, and to the
+trivial family {F[L]} at t = 1.
+
+   Because we are working modulo δ2 , we can use an alternative (and equivalent) def-
+inition of homotopy based on the familiar notion of cochain homotopy. With this
+definition, a homotopy is given by a collection G[L] ∈ ~O(E )[[~]] of functionals such
+that F[L] + εδG[L] satisfies the renormalization group equation and locality axiom
+(where ε is a parameter of cohomological degree 1), and
+                                                                   
+                                                           2 ∂ −1
+            QG[L] + ~∆L G[L] + {F [L], G[L]}L = ∂Dil − 2~       ~     F[L].
+                                                            ∂~
+
+3.12. Let us now discuss the string equation, which is similar (but more complicated)
+to the dilaton equation.
+
+     Let
+                              ∂t−1 ⋆ : O(E (X)) → O(E (X))
+be the derivation associated to the linear map sending φ ∈ E (X) = PV(X)[[t]][2] to
+t−1 φ, if φ ∈ tPV(X)[[t]], and to zero if φ ∈ PV(X).
+
+  Recall that the dilaton axiom stated that each Fg [L] satisfies a differential equation
+which is independent of L. The reason that the string axiom is a bit more delicate is
+that the equation satisfied by Fg [L] depends on L.
+
+     We let
+                                   ∂Str [0] = ∂1 − ∂t−1 ⋆
+QUANTUM BCOV THEORY ON CALABI-YAU MANIFOLDS AND THE HIGHER GENUS B-MODEL
+                                                                       27
+
+
+where ∂1 is the derivation associated to the element 1 ∈ PV0,0 (X) ⊂ PV(X)[[t]]. This
+is the scale 0 string operator.
+
+   Let us define a derivation Y [L] : O(E (X)) → O(E (X)) as the derivation associated
+to the linear map
+                                             Z L
+                                           ∗            ∗
+                              k
+                             t α 7→ ∂k=0 ∂ ∂     e−u[∂,∂ ] α.
+                                                  u=0
+Let
+                                   ∂Str [L] = ∂Str [0] + Y [L].
+This is the scale L string operator.
+
+  Suppose that {Fg [L]} is a quantization of the BCOV theory on X. Then, define a
+family of functionals
+                             (∂Str Fg )[L] ∈ O(E (X)) ⊗ C[δ]/δ2
+by
+                             
+                             (∂
+                                 Str F0 )[L]   = F0 [L]
+           (∂Str Fg )[L] =
+                             (∂Str Fg )[L] = Fg [L] + δ∂Str [L]Fg [L] if g > 0.
+
+(Here, δ is a parameter of cohomological degree 2 and square 0).
+
+3.12.1 Proposition. Suppose that {F[L]} is a quantization of the BCOV theory on
+X. Then, {(∂Str F)[L]} is a family of quantizations over C[δ]/δ2 .
+
+
+Proof. This is a reasonably straightfoward computation. (More details to come in a
+later version).                                                                 
+
+
+3.13. Now suppose that {F[L]} is a quantization of BCOV theory on X which satisfies
+the string and dilaton equations. Let
+                                                        ∗
+                               H (E (X)) = Ker[∂, ∂ ] ⊂ E (X)
+
+be the subspace of harmonic fields. Note that the Hodge lemma implies that the
+operator ∂ is zero on the subspace H (E (X)). Thus, there is an isomorphism of cochain
+complexes
+                             H (E (X)) = ⊕H ∗ (X, ∧∗ T X)[[t]][2].
+Note that, in addition, the BV operator ∆∞ is zero. Let
+
+                        FH = F[∞] |H(E (X)) ∈ O(H(E (X)))[[~]]
+28                                           KEVIN COSTELLO AND SI LI
+
+
+be the restriction of F[∞] to the space of harmonic fields. This object allows us to
+define the correlators for the quantization {F[L]} by
+       X D                       EF                                    
+            g   k1           kn              ∂              ∂
+           ~ t α1 , . . . , t αn      =              ···            F[∞] (0) ∈ C[[~]],
+                                  g,n     ∂(tk1 α1 )     ∂(tk1 α1 )
+for αi ∈ H ∗ (X, ∧∗ T X).
+
+     The following lemma will be proved in section 4.
+
+3.13.1 Lemma. The correlators h−iF    g,n do not change if we change the quantization
+({F[L]}, g) to a homotopic quantization ({F′ [L]}, g ′ ).
+
+    As we will see shortly, the correlators do depend on the choice of a complementary
+filtration to the Hodge filtration on X. The correlators as defined above correspond to
+the complex conjugate to the Hodge filtration.
+
+3.13.2 Lemma. If the quantization {F[L]} satisfy the string and dilaton equation in
+the homotopical sense described above, then the correlators satisfy the strict string and
+dilaton equation:
+        D                               EF               D                        E
+         t · 1, tk1 α1 , . . . , tkn αn    = (2g − 2 + n) tk1 α1 , . . . , tkn αn
+                                              g,n+1,β                                                g,n,β
+            D                                EF           n D
+                                                          X                                              E
+                1, tk1 α1 , . . . , tkn αn              =    tk1 α1 , . . . , tki −1 αi , . . . , tkn αn
+                                              g,n+1,β                                                        g,n,β
+                                                           i=1
+
+
+                       4. BCOV theory and the Givental formalism
+
+   In [Giv01, CG07, Giv04] Givental and Coates showed that the generating function
+for the Gromov-Witten of a variety X is most naturally viewed as a state in a Fock
+space constructed from the cohomology of X. In genus 0, Givental and Coates’ work
+on the A-model is paralleled in the B-model by the work of Barannikov [Bar00, Bar99].
+
+   In [Cos05] the first-named author showed that the partition function of any topo-
+logical (conformal) field theory is naturally a state in a certain Fock space associated
+to an infinite-dimensional symplectic vector space. For the categorical B-model, where
+the field theory is constructed from the dg category Per(X) of perfect complexes on a
+variety X, the symplectic vector space is the periodic cyclic homology of the category
+Per(X).
+
+   In this section, we will show that the partition function for the BCOV theory can be
+viewed as a state in a Fock space constructed from an infinite-dimensional symplectic
+QUANTUM BCOV THEORY ON CALABI-YAU MANIFOLDS AND THE HIGHER GENUS B-MODEL
+                                                                       29
+
+
+vector space. The symplectic vector space that appears is isomorphic to that coming
+from the categorical B-model, which allows one to compare the partition function of
+the categorical B-model with that of the BCOV theory.
+
+   We conjecture that the partition function for the BCOV theory on the elliptic curve
+coincides with that of the categorical B-model on the elliptic curve.
+
+
+4.1. Let us start by explaining the symplectic vector space which relates to the BCOV
+theory. Let X be a compact Calabi-Yau manifold of dimension d. As a cochain complex,
+this symplectic vector space is
+
+                                   S(X) = PV(X)((t))[2],
+
+with differential ∂ − t∂. The symplectic pairing on S(X) is
+
+                       ω(αf (t), βg(t)) = (Rest f (t)g(−t)dt) Tr(α ∧ β).
+
+Note that the symplectic pairing is of cohomological degree 6−2d. Further, the subspace
+
+                               S+ (X) = PV(X)[[t]][2] = E (X)
+
+is Lagrangian. Thus, the space of fields of the BCOV theory is a Lagrangian subspace
+of this symplectic vector space.
+
+
+4.2. We want to construct the Fock space for the differential graded symplectic vector
+space S(X). Let us start by recalling the construction of the Fock module for a finite
+dimensional symplectic vector space.
+
+4.2.1 Definition. Let V be a dg symplectic vector space with symplectic form ω. Let
+
+                                         ω −1 ∈ ∧2 V
+
+denote the inverse to the symplectic form. Then, the Weyl algebra W(V ) is the pro-free
+dg algebra generated by V ∨ , and a parameter ~, subject to the relation that
+
+                                      [a, b] = ~ω −1 (a, b)
+
+for all a, b ∈ V ∨ .
+
+4.2.2 Definition. Let L ⊂ V be a Lagrangian sub-cochain complex of a dg symplectic
+vector space V . The Fock module F(L) is defined to be the quotient of W(V ) by the left
+ideal generated by
+                                   Ann(L) ⊂ V ∨ ⊂ W(V ),
+where Ann(L) is the annihilator of L.
+30                                 KEVIN COSTELLO AND SI LI
+
+
+ Note that modulo ~, W(V ) is the completed symmetric algebra Sym    d ∗ V ∨ . Further,
+W(V ) is a flat C[[~]] module, so that there is a non-canonical isomorphism
+                                                  
+                                W(V ) ∼
+                                      = Symd ∗ V ∨ [[~]].
+
+
+   Let us choose a complementary Lagrangian L′ ⊂ V to L. We do not, however,
+assume that L′ is preserved by the differential. Thus, V = L ⊕ L′ , and the symplectic
+pairing induces an isomorphism L′ = L∨ .
+
+   Once we choose such an isomorphism, we get a splitting of the map V ∨ → L∨ , and
+so a map of algebras
+                                     d ∗ L∨ [[~]] → W(V ).
+                         O(L)[[~]] = Sym
+By composing this map with the quotient map W(V ) → F(L), we find an isomorphism
+of graded vector spaces
+                                O(L)[[~]] ∼
+                                          = F(L).
+This is not, however, an isomorphism of cochain complexes; for later purposes, it will
+be helpful to describe the differential on O(L)[[~]] corresponding to that on F(L).
+
+     Define a pairing P on L′ by
+
+                                     P (l1′ , l2′ ) = ω(l1 , dl2 ).
+
+Because the symplectic pairing identifies L′ with the dual of L, we can view P as an
+element of Sym2 L. Let ∂P : O(L) → O(L) be the differential operator corresponding
+to P .
+
+4.2.3 Lemma. Under the isomorphism of graded vector spaces O(L)[[~]] ∼
+                                                                     = F(L), the
+differential dF(L) on O(L)[[~]] is
+
+                                      dF(L) = dL + ~∂P .
+
+Here, dL is the derivation of O(L) induced from the differential on L.
+
+
+Proof. This is a simple calculation. Indeed, let |∅i ∈ F(L) be the vacuum vector, that
+is, the image of 1 ∈ W(V ) under the map W(V ) → F(L). Let α1 , . . . , αn ∈ L∗ = L′ .
+Then, the space F(L) is spanned by α1 . . . αn |∅i, where we view the αi as elements of
+W(V ).
+
+     Now,
+                                              X
+                       d(α1 . . . αn |∅i) =        ±α1 . . . (dαi ) . . . αn |∅i.
+QUANTUM BCOV THEORY ON CALABI-YAU MANIFOLDS AND THE HIGHER GENUS B-MODEL
+                                                                       31
+
+
+Recall that L∗ ⊂ V ∗ is not preserved by the differential (indeed, it is identified with
+L′ ⊂ V under the isomorphism V ∼     = V ∗ ). Let us decompose the differential d : L∗ →
+L∗ ⊕ (L′ )∗ into d = d1 ⊕ d2 , where d1 lands in L∗ and d2 lands in (L′ )∗ . Then, we find
+that
+                         X
+  d(α1 . . . αn |∅i) =       ±α1 . . . (d1 αi ) . . . αn |∅i
+                                                               X
+                                                      +             ±[dαi , αj ]α1 . . . αbi . . . α
+                                                                                                   cj . . . αn |∅i
+                                                          1≤i<j≤n
+
+were, as usual, αbi indicates that we omit αi , and ± indicates the usual Koszul sign.
+
+  Now,
+                                      [dαi , αj ] = ~ω −1 (dαi , αj ).
+
+Thus, in the expression for d(α1 . . . αn |∅i) presented above, the first line corresponds
+to the differential dL on O(L)[[~]], and the second term is ~∂P .                       
+
+
+4.3. We want to mimic these definitions using the infinite-dimensional symplectic vec-
+tor space S(X) and the Lagrangian subspace S+ (X) ⊂ S(X). We immediately run
+into a problem, however. Although the symplectic form ω on S(X) has no kernel, the
+inverse ω −1 does not exist.
+
+  Indeed, the symplectic form on S(X) is built using the trace pairing
+
+                                             hα, βi = Tr(αβ)
+
+on the space PV(X) of polyvector fields on X. The inverse to this trace pairing is a
+distributional polyvector field
+
+                                    h−, −i−1 ∈ PV(X) ⊗ PV(X).
+
+It follows that the inverse to the symplectic form on S(X) = PV(X)((t))[2] will also be
+of a distributional nature.
+
+  This is not a major problem, however, because we can instead use any element of
+PV(X) ⊗ PV(X) which is cohomologous to h−, −i−1 .
+
+  Let g be a Kähler metric on X, and let L ∈ R>0 . The heat kernel
+
+                                        KLg ∈ PV(X) ⊗ PV(X)
+32                                KEVIN COSTELLO AND SI LI
+
+
+is an inverse up to homotopy for the trace pairing. Indeed, the scale 0 heat kernel
+K0 ∈ PV(X)⊗2 is the actual inverse for the trace pairing, and the expression
+                           Z L
+                                 ∗
+                               (∂ ⊗ 1)Ktg dt ∈ PV(X)⊗2
+                                 0
+
+provides a cochain homotopy between K0 and KLg .
+
+      The inverse to the symplectic form ω on S(X) is
+                                  X
+                           ω −1 =    K0 (−1)k tk ⊗ t−1−k ∈ S(X)⊗2
+                                 k∈Z
+
+(where S(X) refers to the distributional completion PV(X)((t))[2] of S(X), and the ten-
+sor product is, as always, the completed projective tensor product). Thus, a homotopy
+inverse to ω is given by the formula
+                                X g
+                         −1
+                        ωg,L =     KL (−1)k tk ⊗ t−1−k ∈ S(X)⊗2
+                                 k∈Z
+
+
+4.4. We can define the Weyl algebra and the Fock module for S(X) using the homotopy
+inverse ωg,L as follows.
+
+4.4.1 Definition. The Weyl algebra W(S(X), g, L) associated to S(X), the metric g,
+and L ∈ R>0 , is the quotient of the tensor algebra
+                                                
+                                 Y           ⊗n
+                                      S(X)∨      ⊗ C[[~]]
+                                  n∈Z≥0
+
+by the topological closure of the two-sided ideal generated by
+                                                 −1
+                                       [a, b] = ωg,L (a, b)~
+
+for a, b ∈ S(X)∨ .
+
+
+  Here, since ωP−1 is of cohomological degree 2d−6, the parameter ~ is of cohomological
+degree 6 − 2d.
+
+      Note that we can use the symplectic pairing on S(X) to identify S(X)∨ with P V (X)((t))[2d−
+4].
+
+4.4.2 Definition. The Fock space F(S+ (X), g, L) is the quotient of W(S(X), g, L) by
+the left ideal generated topologically by the subspace
+
+                                 Ann(S+ (X), g, L) ⊂ S(X)∨ .
+QUANTUM BCOV THEORY ON CALABI-YAU MANIFOLDS AND THE HIGHER GENUS B-MODEL
+                                                                       33
+
+
+   The fact that S+ (X) is a subcomplex implies that this left ideal is preserved by the
+differential ∂ − t∂ on W(S(X), g, L).
+
+4.4.3 Lemma. The Weyl algebra W(S(X), g, L) and the Fock module F(S+ (X), g, L)
+are independent, up to homotopy, of the choice of g and L. is independent, up to
+homotopy, of the choice of P .
+
+
+Proof. Indeed, suppose we have a family of Kähler metrics gt parametrized by the k-
+simplex △k . We will show how to construct a family of dg algebras W(S(X), gt , dt, L, dL)
+over Ω∗ (△k × (0, ∞)L ) which specializes to W(S(X), gt , L) at (t, L) ∈ △k × (0, ∞).
+
+  To do this, we will construct a family of homotopy inverses
+
+                             ωg−1
+                                t ,dt,L,dL
+                                           ∈ S(X)⊗2 ⊗ Ω∗ (△k × (0, ∞))
+
+to the symplectic form ω on S(X). This will be constructed from a family of heat
+kernels.
+
+  Let
+                            Kgt ,dt,L ∈ PV(X)⊗2 ⊗ Ω∗ (△k × (0, ∞)L )
+be the heat kernel for the Ω∗ (△k × (0, ∞)L )-linear differential operator
+                                                           ∗
+                                             [∂ + ddR , ∂ gt ]
+
+where ddR is the de Rham differential on Ω∗ (△k × (0, ∞)L ). Here
+                                  ∗
+                                ∂ gt : PV(X) → PV(X) ⊗ C ∞ (△k )
+
+is the family of operators associated to the metric gt , for t ∈ △k .
+
+  Let
+                                              ∗
+           Kgt ,dt,L,dL = Kgt ,dt,L + dL∂ Kgt ,dt,L ∈ PV(X)⊗2 ⊗ Ω∗ (△k , (0, ∞)L ).
+
+This is a closed element, and provides a cochain homotopy between the various heat
+kernels.
+
+  Let
+                                       X
+        ωg−1
+           t ,dt,L,dL
+                      = Kgt ,dt,L,dL    (−1)k tk ⊗ t−1−k ∈ S(X)⊗2 ⊗ Ω∗ (△k × (0, ∞)L ).
+                                       k∈Z
+
+
+  We define the Weyl algebra
+
+                                         W(S(X), gt , dt, L, dL)
+34                              KEVIN COSTELLO AND SI LI
+
+
+to be the Ω∗ (△k × (0, ∞)L )-algebra which is a quotient of the tensor algebra
+                                                   Y          ⊗n
+                     Ω∗ (△k × (0, ∞)L ) ⊗ C[[~]] ⊗     S(X)∨
+                                                      n≥0
+
+by the two-sided ideal generated by the topological closure of the relations
+                                             −1
+                                  [a, b] = ~ωg,L,dL (a, b).
+
+As before, we can define the Fock module F(S(X), gt , dt, L, dL) as the quotient of
+W(S(X), g, L, dL) by the left ideal generated by Ann(S+ (X)).
+
+   Thus, W(S(X), gt , dt, L, dL) defines a differential graded algebra over Ω∗ (△k ×(0, ∞)L ),
+specializing to the Weyl algebra W(S(X), gt , L) at (t, L) ∈ △k × (0, ∞)L . Similarly,
+F(S(X), gt , dt, L, dL) defines a dg module over W(S(X), gt , dt, L, dL), flat over Ω∗ (△k ×
+(0, ∞)L ), which specializes to the Fock module F(S(X), gt , L) at (t, L).                 
+
+
+  It follows that the cohomology of W(S(X), g, L) is independent of g and L. Thus,
+we will refer to the cohomology of W(S(X), g, L) are simply H ∗ W(S(X)). Similarly, we
+will use the notation H ∗ F(S+ (X)) to refer to the cohomology of F(S(X), g, L).
+
+     Note that (by the degeneration of the Hodge to de Rham spectral sequence) the map
+
+                                  H ∗ S+ (X) → H ∗ S(X)
+
+is injective, and the image is Lagrangian. Thus, we can construct the Weyl algebra
+W(H ∗ (S(X)), and the Fock module F(H ∗ S+ (X)).
+
+4.4.4 Lemma. There are canonical isomorphisms
+
+                              W(H ∗ (S(X)) ∼
+                                           = H ∗ W(S(X))
+                              F(H ∗ S+ (X)) ∼
+                                            = H ∗ F(S+ (X)).
+These isomorphisms are compatible with the algebra and module structures present.
+
+Proof. Indeed, there’s a cochain map
+
+                                    S(X) → W(S(X)).
+
+Passing to cohomology yields a map H ∗ S(X) → H ∗ W(S(X)). The relations in the Weyl
+algebra W(H ∗ S(X)) imply that this map extends uniquely to an algebra homomorphism
+
+                              W(H ∗ (S(X)) → H ∗ W(S(X)).
+
+This homomorphism is an isomorphism. A similar argument proves the result about
+the Fock modules.                                                            
+QUANTUM BCOV THEORY ON CALABI-YAU MANIFOLDS AND THE HIGHER GENUS B-MODEL
+                                                                       35
+
+
+4.5. The relationship between the BCOV theory and the symplectic formalism devel-
+oped in this section is provided by the following proposition.
+
+4.5.1 Proposition. Let g be a Kähler metric on X, and let L ∈ R>0 . Then, there is
+an isomorphism of cochain complexes
+                                                              
+                 F(S+ (X), g, L) ∼
+                                 = O(S+ (X)[[~]], ∂ − t∂ + ~∆L .
+
+Proof. The proof is almost identical to that of lemma 4.2.3, which is the finite dimen-
+sional analog of this proposition.
+
+   In the course of this proof, we will omit the parameters g and L from the notation for
+the Weyl algebra and the Fock space. Thus, W(S(X)) will indicate the Weyl algebra
+associated to the metric g and L, and similarly F(S+ (X)) will refer to the Fock module
+for g and L.
+
+  The first step in the proof is to construct an isomorphism of graded vector spaces
+                              O(S+ (X))[[~]] ∼
+                                             = F(S+ (X)).
+Then we will verify that this isomorphism is compatible with the differentials.
+
+  Let
+                          S− (X) = t−1 PV(X)[t−1 ][2] ⊂ S(X).
+Note that we have a direct sum decomposition
+                               S(X) = S+ (X) ⊕ S− (X),
+and that both subspaces are Lagrangian. However, S− (X) is not preserved by the
+differential ∂ − t∂ on S(X).
+
+  The choice of complementary Lagrangian S− (X) gives a splitting of the inclusion
+S+ (X) ֒→ S(X), and so (dually) a splitting
+                                 Φ : S+ (X)∨ → S(X)∨
+of the projection S(X)∨ → S+ (X)∨ .
+
+  However, because S− (X) is not a subcomplex of S(X), the map Φ is not a cochain
+map, but simply a map of graded vector spaces.
+
+   Now, elements of S+ (X)∨ commute in the Weyl algebra generated by S(X)∨ . It
+follows that the map Φ extends to an algebra homomorphism
+                            Φ : O(S+ (X))[[~]] → W(S(X)).
+36                                   KEVIN COSTELLO AND SI LI
+
+
+However, this map is not compatible with differentials.
+
+     When we compose this algebra homomorphism Φ with the natural quotient map
+
+                                       W(S(X)) → F(S+ (X))
+
+we find the desired isomorphism of graded vector spaces
+
+                                    O(S+ (X))[[~]] ∼
+                                                   = F(S+ (X)).
+
+  It remains to verify that, under this isomorphism, the differential on F(S+ (X), g, L)
+corresponds to the differential
+                                            ∂ − t∂ + ~∆L
+on O(S+ (X))[[~]].
+
+  Let |∅i ∈ F(S+ (X)) denote the vacuum vector, that is, the image of 1 ∈ W(S(X))
+under the quotient map W(S(X)) → F(S+ (X)). Let dF denote the differential on
+F(S+ (X)), and dW that on W(S(X)). Let α1 , . . . , αn ∈ S+ (X)∨ . What we need to
+verify is that
+                                                                          
+               dF (Φ(α1 ) · · · Φ(αn )) |∅i = Φ (∂ − t∂ + ~∆L )α1 · · · αn |∅i.
+
+We can use the symplectic pairing on S(X) to identify
+
+                                 S(X)∨ = S(X) = PV(X)((t))
+                               S+ (X)∨ = S− (X) = t−1 PV(X)[t−1 ]
+                               S− (X)∨ = S+ (X) = PV(X)[[t]].
+
+Under these identifications, the map Φ is the natural map
+
+                                Φ : t−1 PV(X)[t−1 ] → PV(X)((t)).
+
+Now, it is clear that
+
+                                          Φ(∂α) = ∂Φ(α)
+                                          Φ(∂α) = ∂Φ(α),
+
+for all α ∈ S+ (X)∨ . However,
+                                           tΦ(α) 6= Φ(tα),
+because the subspace S+ (X)∨ ⊂ S(X)∨ is not preserved by the operator t.
+
+     To prove the result, we thus need to verify that
+               X
+                   ±Φ(α1 ) · · · ([t, Φ]∂αi ) · · · Φ(αn )|∅i = Φ(~∆L α1 · · · αn )|∅i.
+QUANTUM BCOV THEORY ON CALABI-YAU MANIFOLDS AND THE HIGHER GENUS B-MODEL
+                                                                       37
+
+
+The operator [t, Φ] maps S+ (X)∨ to S− (X)∨ . Further, the action of any element of
+S− (X)∨ on the vacuum vector |∅i ∈ F(S+ (X)) is zero. Thus,
+    X                                               X                         Y
+       ±Φ(α1 ) · · · ([t, Φ]∂αi ) · · · Φ(αn )|∅i =   ±[Φ(αi ), [t, Φ](∂αj )]   Φ(αk )|∅i.
+                                                                       k6=i,j
+
+From this formula, we see that to prove the result we need to verify that, for all
+α, β ∈ S+ (X)∨ ,
+                         [Φ(α), [t, Φ](∂β)] = ~∆L (αβ) ∈ C[[~]].
+
+In other words, we need to verify that
+                           −1
+                          ωg,L (Φ(α), t∂Φ(β)) = ∆L (αβ) ∈ C.
+                                                                    −1
+This is immediate, since ∆L is defined in terms of (∂ ⊗ 1)KL , and ωg,L is defined in
+terms of KL .                                                                      
+
+
+4.6. Now suppose that we have a quantization F = ({F[L]}, g)) of the BCOV theory
+on a Calabi-Yau X (where g is a Kähler metric on X). Let
+
+               ZF [L] = exp(F[L]/~) ∈ O(E (X))((~)) = O(S+ (X))((~)).
+
+Then, the quantum master equation for F[L] says that
+
+                               (∂ − t∂ + ~∆L )ZF [L] = 0.
+
+Since this differential is the same as the differential on the Fock module F(S+ (X)), we
+see that
+
+4.6.1 Corollary. ZF [L] defines a state in the Fock space F(S+ (X), g, L)[~−1 ].
+
+   Thus, the partition function for the BCOV theory is a state in the Fock space mod-
+elled on the infinite dimensional vector space S(X).
+
+  Recall that the cohomology of F(S+ (X), g, L) is independent of g and L, and can
+be identified with the Fock space F(H ∗ S+ (X)) for the cohomological symplectic vector
+space H ∗ S(X).
+
+4.6.2 Lemma. The cohomology class of ZF [L] in F(H ∗ S+ (X))[~−1 ] is independent of
+L. We will refer to this cohomology class as
+
+                               [ZF ] ∈ F(H ∗ S+ (X))[~−1 ].
+38                                  KEVIN COSTELLO AND SI LI
+
+
+Proof. We construct a family F(S+ (X), g, L, dL) of Fock modules over the base ring
+Ω∗ ((0, ∞)L ). As a graded vector space,
+
+                 F(S+ (X), g, L, dL) = O(S+ (X)) ⊗ Ω∗ ((0, ∞)L ) ⊗ C[[~]].
+
+The differential on this graded vector space is
+
+                                   ∂ − t∂ + ~∆L + ~∂(∂∂ ∗ ⊗1)KL .
+
+It is straightforward to check that the renormalization group equation for F[L] is equiv-
+alent to the statement that
+
+                        ZF [L] ∈ O(S+ (X)) ⊗ Ω∗ ((0, ∞)L ) ⊗ C((~))
+
+is closed for this differential.                                                        
+
+
+4.7. Now suppose that we have a family of metrics gt depending smoothly on t in the
+k-simplex. Suppose that we have a homotopically trivial family of quantizations for this
+family of metrics. Such a family of quantizations is given by a collection of functionals
+
+                     {F[L] ∈ O(PV(X)) ⊗ Ω∗ (∆k )[[~]] | L ∈ (0, ∞)},
+
+which satisfy a renormalization group equation, quantum master equation, and locality
+axiom. As we have seen in section 3, by considering such families of quantizations, one
+can translate a quantization for one metric into a quantization for another.
+
+     As before, we can define
+
+                    ZF [L] = exp(F[L]/~] ∈ O(PV(X)) ⊗ Ω∗ (∆k )((~)).
+
+Let F(S+ (X), gt , dt, L) denote the Fock module for the family gt of Kähler metrics.
+Recall that this is a dg module over Ω∗ (∆k ) which specializes to the Fock module
+F(S+ (X), gt , L) at specific values of t. There is an isomorphism of graded vector spaces
+
+                      F(S+ (X), gt , dt, L) = O(PV(X)) ⊗ Ω∗ (∆k )[[~]].
+
+4.7.1 Lemma. The partition function ZF [L], when viewed as an element of
+
+                                     F(S+ (X), gt , dt, L)[~−1 ],
+
+is closed for the natural differential on this space.
+
+
+Proof. This is the family version of Proposition 4.5.1. The proof is similar.           
+QUANTUM BCOV THEORY ON CALABI-YAU MANIFOLDS AND THE HIGHER GENUS B-MODEL
+                                                                       39
+
+
+   Recall that, in section 3, we described a simplicial set Quant(X) of quantizations
+of the BCOV theory on X. Zero simplices in this simplicial set are pairs ({F[L]}, g)
+where g is a Kähler metric on X, and {F[L]} is a quantization for this metric. Higher
+simplices are given by families of metrics, and homotopies of fields theories, as above.
+We will let Quant(X)[k] denote the set of k-simplices of Quant(X).
+
+4.7.2 Corollary. The map
+                          Quant(X)[0] → F(H ∗ S+ (X))[~−1 ]
+                            ({F[L]}, g) 7→ [ZF ]
+descends to a map
+                          π0 Quant(X) → F(H ∗ S+ (X))[~−1 ].
+
+
+  5. Correlation functions and complements to the Hodge filtration
+
+   In this section we will describe how to understand the correlation functions of the
+BCOV theory from the point of view of the Fock space. Although some aspects of
+the Fock space formalism work for non-compact X, throughout this section we need to
+assume that X is compact.
+
+  The correlation functions depend on an additional choice, which we now define.
+
+5.0.3 Definition. A polarization of H ∗ S(X) is a Lagrangian subspace
+
+                                    L ⊂ H ∗ (S(X))
+such that
+
+   (1)
+                              L ⊕ H ∗ S+ (X) = H ∗ S(X)
+       .
+   (2) The subspace L is preserved by the operator
+                               t−1 : H ∗ S(X) → H ∗ S(X).
+
+
+  Note that H ∗ S+ (X) is preserved by the operator t. Further, the subspace
+                                tk H ∗ S+ (X) ⊂ H ∗ S(X)
+(for k ∈ Z) define a filtration, whose associated graded can be identified as
+                                                      
+                           Gr H ∗ S(X) = H ∗ PV(X), ∂ ((t))[2].
+40                               KEVIN COSTELLO AND SI LI
+
+
+The choice of a polarization L gives a splitting of this filtration, and so an isomorphism
+
+                             H ∗ S(X) ∼
+                                      = H ∗ (PV(X), ∂)((t))[2].
+
+Explicitly, there’s a natural isomorphism
+
+                   tk H ∗ S+ (X)/tk+1 H ∗ S+ (X) ∼
+                                                 = tk H ∗ S+ (X) ∩ tk+1 L .
+
+Thus, we get an isomorphism
+
+                          tk H ∗ S+ (X) ∩ tk+1 L = tk H ∗ (PV(X)).
+
+
+     This isomorphism
+                               H ∗ S(X) ∼
+                                        = H ∗ (PV(X))((t))[2]
+
+is symplectic, where H ∗ (PV(X))((t))[2] is equipped with the symplectic form
+
+                           ω(αtk , βtl ) = Tr(αβ) Res(tk (−t)l dt).
+
+Further, the subspace H ∗ S+ (X) of H ∗ S(X) corresponds to the subspace
+
+                         H ∗ (PV(X))[[t]][2] ⊂ H ∗ (PV(X))((t))[2].
+
+The following lemma is an immediate corollary of these considerations.
+
+5.0.4 Lemma. Let L be a polarization of H ∗ S(X). Then there is a natural isomor-
+phism
+                     ΦL : F(H ∗ S+ (X)) ∼
+                                        = O(H ∗ (PV(X))[[t]][2])[[~]].
+
+Here, O(H ∗ (PV(X))[[t]][2]) denotes the algebra of formal power series on the graded
+vector space H ∗ (PV(X))[[t]][2].
+
+
+Proof. Indeed, O(H ∗ (PV(X))[[t]][2]) is the Fock space for H ∗ (PV(X))((t))[2] corre-
+sponding to the Lagrangian subsapce H ∗ (PV(X))[[t]][2].                            
+
+
+   Thus, once we choose a polarization L , we can consider the partition function ZF
+as an element
+                          ΦL (ZF ) ∈ O(H ∗ (PV(X))[[t]][2])((~)).
+
+It is not difficult to verify that
+
+                        ~ log ΦL (ZF ) ∈ O(H ∗ (PV(X))[[t]][2])[[~]].
+QUANTUM BCOV THEORY ON CALABI-YAU MANIFOLDS AND THE HIGHER GENUS B-MODEL
+                                                                       41
+
+
+5.0.5 Definition. Let F ∈ π0 (Quant(X)) be the (homotopy class) of a quantization
+of the BCOV theory on X. Let L be a polarization of H ∗ S(X). Let α1 , . . . , αn ∈
+H ∗ (PV(X)). Define the correlation functions associated to F and L by
+  X D                       EF,L                                            
+       g  k1            kn              ∂              ∂
+      ~ t α1 , . . . , t αn      =              ···            ~ log ΦL (ZF ) (0) ∈ C[[~]].
+                             g,n     ∂(tk1 α1 )     ∂(tk1 α1 )
+
+  These correlators depend, of course, on L , but in a controlled way. If we change
+polarization L to L ′ , then the isomorphism
+                    ΦL : F(H ∗ S+ (X)) ∼
+                                       = O(H ∗ (PV(X))[[t]][2])[[~]]
+changes by an isomorphism
+                            ΨL →L ′ : O(H ∗ (PV(X))[[t]][2])[[~]]
+of the type considered by Givental [Giv04]. In particular, the dependence of these
+correlators on L is of a polynomial nature.
+
+5.1. In section 3 we gave a different definition of correlators, defined by considering the
+scale infinity effective interaction F[∞] on the harmonic forms. These correlators are
+simply a special case of the correlators considered here, corresponding to a particular
+choice of polarization L .
+
+  Indeed, let g be a Kähler metric on X. Let
+                             HS(X) ⊂ S(X) = PV(X)((t))[2]
+be the subspace of harmonic elements, defined using this metric. The operators ∂ and
+∂ are zero on H(S(X)), so that one has natural isomorphisms
+            H ∗ S(X) ∼
+                     = HS(X) ∼
+                             = H(PV(X))((t))[2] ∼
+                                                = H ∗ (PV(X))((t))[2].
+Here, H(PV(X)) denotes the space of harmonic polyvector fields.
+
+  Let
+                                      Lg ⊂ H ∗ S(X)
+denote the subspace corresponding to
+                       t−1 H(PV(X))[t−1 ][2] ⊂ H(PV(X))((t))[2].
+
+5.1.1 Lemma. The correlation functions defined in section 3 are the correlation func-
+tions corresponding to this Lagrangian subspace Lg .
+
+Proof. This is immediate.                                                                
+42                              KEVIN COSTELLO AND SI LI
+
+
+5.2. It turns out that the polarization Lg of S(X) does not, in fact, depend on the
+metric g. However, it does not vary holomorphically with X. This leads to the famous
+“holomorphic anomaly” of [BCOV94].
+
+  In order to see this, let us reinterpret the symplectic vector space H ∗ S(X), and the
+polarization Lg , in terms of Hodge theory.
+
+5.2.1 Proposition. There is a natural isomorphism of symplectic vector spaces
+
+                                H ∗ S(X) ∼
+                                         = H ∗ (X)((t))[d]
+
+where the right hand side is equipped with the symplectic pairing
+                                    Z                            
+                  ω(αf (t), βg(t) =    α ∧ β Res t2−d f (t)g(−t)dt .
+                                      X
+
+This isomorphisms is C((t))-linear.
+
+     Further, under this isomorphism, the subspace
+
+                                  H ∗ S+ (X) ⊂ H ∗ S(X)
+
+corresponds to the subspace spanned by the subspaces
+
+                         F p H ∗ (X) ⊗ td−p−1 C[[t]] ⊂ H ∗ (X)((t))
+
+for each p ≥ 0. Here F p H ∗ (X) ⊂ H ∗ (X) is the pth piece of the Hodge filtration.
+
+  Thus, H ∗ (S+ (X)) is spanned by elements of the form tn α where α ∈ F p H ∗ (X) and
+n ≥ d − p − 1.
+
+
+Proof. Recall that S(X) is PV(X)((t))[2], with differential ∂ − t∂. The holomorphic
+volume form on X gives an isomorphism
+
+                                 PVi,j (X) → Ωd−i,j (X)
+
+by sending
+                                       α → α ∨ Ω,
+
+where Ω ∈ Ωd,0 (X) is the holomorphic volume form.
+
+  Under this isomorphism, the operators ∂ and ∂ on PVi,j (X) correspond to the stan-
+dard operators ∂ and ∂ on Ω∗,∗ (X).
+QUANTUM BCOV THEORY ON CALABI-YAU MANIFOLDS AND THE HIGHER GENUS B-MODEL
+                                                                       43
+
+
+  Let us define a map
+
+                            Γ : PVi,j (X) → Ωd−i,j (X)((t))
+                                     Γ(α) = (−t)i−1 (α ∨ Ω).
+
+We can extend Γ, by C((t))-linearity, to an isomorphism
+
+                           Γ : PV(X)((t))[2] → Ω(X)((t))[d].
+
+Note that
+
+                                      Γ(∂α) = ∂Γ(α)
+                                   Γ(−t∂α) = ∂Γ(α).
+
+Thus, Γ is a cochain isomorphism, and induces the desired isomorphism
+
+                               H ∗ S(X) ∼
+                                        = H ∗ (X)((t))[d].
+
+The remaining properties are straightforward to verify.                             
+
+5.2.2 Lemma. Polarizations of H ∗ S+ (X) are in bijection with splittings of the Hodge
+filtration on H ∗ (X).
+
+
+Proof. A splitting of the Hodge filtration is described by a filtration
+
+                              Fep H ∗ (X) ⊂ Fep+1 H ∗ (X) · · ·
+
+for p ≥ 0, such that
+                           Fep H ∗ (X) ⊕ F p H ∗ (X) = H ∗ (X).
+Given such a splitting, we define the corresponding Lagrangian subspace L ⊂ H ∗ (X)((t))
+to be the subspace spanned by the spaces
+
+                        Fep H ∗ (X) ⊗ td−p−1 C[t−1 ] ⊂ H ∗ (X)((t)),
+
+for p ≥ 0. Thus, if α ∈ H ∗ (X), tn α ∈ L if α ∈ Fe p H ∗ (X) and n ≤ d − p − 1.
+
+  We can transfer this subspace to subspace of H ∗ S(X) using the isomorphism H ∗ S(X) ∼
+                                                                                       =
+ ∗                                        ∗
+H (X)((t)), to obtain a polarization of H S(X).
+
+  Conversely, the subspace Fep H ∗ (X) is defined as follows. Let
+
+                               πk : H ∗ (X)((t)) → H ∗ (X)
+
+be the projection onto the coefficient of tk . Then, we let
+
+                            Fep H ∗ (X) = πd−p−1 L ⊂ H ∗ (X).
+44                                KEVIN COSTELLO AND SI LI
+
+
+The fact that L is closed under multiplication by t−1 implies that Fep H ∗ (X) is an
+increasing filtration. It is straightforward to verify that this filtration is complementary
+to the Hodge filtration.                                                                  
+
+5.2.3 Definition. The complex-conjugate splitting of the Hodge filtration is given by
+the subspaces
+                                                 n−p n
+                                 Fep H n (X) = F    H (X),
+          n−p
+where F         is the subspace complex conjugate to F n−p H n (X).
+
+     We will let
+                                       LX ⊂ H ∗ S(X)
+
+denote the polarization corresponding to the complex-conjugate splitting.
+
+5.2.4 Lemma. Let g be a Kähler metric on X, and let Lg ⊂ H ∗ S(X) be defined as in
+5.1.1. Then, Lg = LX .
+
+
+Proof. We defined Lg by using the metric g to identify
+
+                                 H ∗ S(X) = H(PV(X))((t))
+
+where H(PV(X)) is the space of harmonic polyvector fields. The subspace Lg was
+defined to be simply t−1 H(PV(X))[t−1 ].
+
+   Under the isomorphism between polyvector fields and the de Rham algebra of X,
+harmonic polyvector fields correspond to harmonic forms. It follows that the splitting
+of the Hodge filtration corresponding to Lg is the one where, when we identify the
+cohomology H ∗ (X) with the space H(X) of harmonic forms, we set
+
+                                Fe p H ∗ (X) = ⊕i≥p Hn−i,i (X).
+
+(Here Hp,q (X) denotes harmonic elements of Ωp,q (X)). It is standard that this is the
+complex-conjugate splitting.                                                        
+
+5.2.5 Corollary. The correlation functions defined in section 3 depend only on the
+homotopy class of the quantization ({F[L]}, g) ∈ Quant(X).
+
+
+Proof. By lemma 5.1.1, these correlation functions correspond to the choice LX of
+polarization. For a fixed polarization, the correlation functions only depend on the
+homotopy class of the quantization.                                               
+QUANTUM BCOV THEORY ON CALABI-YAU MANIFOLDS AND THE HIGHER GENUS B-MODEL
+                                                                       45
+
+
+5.3.
+
+5.3.1 Definition. Let X be a manifold of dimension d. For any complex structure J
+on X, let FJk H ∗ (X) denote the Hodge filtration on H ∗ (X) arising from J.
+
+  Two complex structures J, J ′ on X are complementary if
+
+                         FJp H n (X) ⊕ FJn−p
+                                          ′  H n (X) = H n (X).
+
+
+   Note that for any complex structure J on X, J and −J are complementary. Note
+also that the filtration FJk H ∗ (X) defined by J only depends on the class of J in the
+Teichmuller space of complex structures on X (defined to be the space of complex
+structures divided by the connected component of the identity in Diff(X)).
+
+   Now let X denote a Calabi-Yau manifold, and let Y be a complex manifold with
+a homotopy class of diffeomorphism φ : Y ∼    = X. Let us suppose that the complex
+structures on X and Y are complementary. Let F be a quantization of the BCOV
+theory on X. Then, we can define correlators depending on both X and Y by using
+the splitting of the Hodge filtration on X given by Y .
+
+
+
+         6. The classical action functional as a Lagrangian cone
+
+  We have seen how to translate between action functionals satisfying the classical
+master equation and Lagrangian cones on PV(X)((t)). It is natural to ask whether
+the Lagrangian cone associated to our classical BCOV action functional has a more
+geometric description. In this section we will show that this is indeed the case.
+
+
+6.1. Consider the dg symplectic vector space PV(X)((t)) with differential ∂ − t∂, as
+before. Let us define a formal graded submanifold L ⊂ PV(X)((t)), based at the origin
+0 ∈ PV(X)((t)), by saying that
+                              n                        o
+                          L = t 1 − eg/t | g ∈ PV(X)[[t]] .
+
+This presentation is a little informal. More precisely, we can define this formal sub-
+manifold via its functor of points. This is a functor from nilpotent Artinian graded
+algebras R (with maximal ideal m ⊂ R) to sets. If R is an Artinian graded algebra,
+then the R-points of PV(X)((t)) is the set of degree 0 elements of PV(X)((t)) ⊗ m.
+We define L(R) to be the set of those α ∈ PV(X)((t)) ⊗ R which are of degree 0, and
+46                            KEVIN COSTELLO AND SI LI
+
+
+which can be expressed (necessarily in a unique way) in the form
+                                                 
+                                   α = t 1 − eg/t
+
+for some g ∈ PV(X)[[t]] ⊗ m. This expression makes sense because the maximal ideal
+m ⊂ R is nilpotent.
+
+
+6.2. Let us now list some fundamental properties of L.
+
+6.2.1 Lemma. The submanifold L ⊂ PV(X)((t)) is a Lagrangian submanifold, pre-
+served by the differential on PV(X)((t)).
+
+Proof. First we will check that L is Lagrangian. As before, let (R, m) be an Artinian
+graded algebra, and let g ∈ PV(X)[[t]] ⊗ m be a degree 0 element. Let α = t(eg/t − 1).
+Note that the tangent space to L at α is
+
+                      Tα L = eg/t PV(X)[[t]] ⊂ PV(X)((t)) ⊗ m.
+Let us expand g as
+                                           X
+                                      g=       ti gi
+where gi ∈ PV(X)[[t]] ⊗ m. Note that
+                          eg/t PV(X)[[t]] = eg0 /t PV(X)[[t]].
+
+Finally, to verify that this is a Lagrangian subspace of PV(X)((t)), we need to check
+that multiplying by eg0 /t is a symplectomorphism. This amounts to verifying that
+multiplying by g0 /t is an infinitesimal symplectomorphism, which is immediate.
+
+   Next, let us check that L is preserved by the differential. We view the differential
+∂ − t∂ as a vector field on PV(X)((t)); we need to check that this vector field, when
+restricted to L, is tangent to L.
+
+     As before, let
+                                  α = t(1 − eg/t ) ∈ L
+for some g ∈ PV(X)[[t]] ⊗ m. We need to verify that
+                          (∂ − t∂)α ∈ Tα L = eg/t PV(X)[[t]].
+
+     Then,
+                           (∂ − t∂)α = −eg/t ∂g + t2 ∂(eg/t ).
+Recall that
+                          ∂(eg/t ) = eg/t (t−1 ∂g + t−2 {g, g}).
+QUANTUM BCOV THEORY ON CALABI-YAU MANIFOLDS AND THE HIGHER GENUS B-MODEL
+                                                                       47
+
+
+Thus, (∂ − t∂)α is in Tα L as desired.                                              
+
+
+6.3. Note that the projection
+                                    π : L → PV(X)[[t]]
+(defined using the polarization PV(X)((t)) = PV(X)[[t]] ⊕ t−1 PV(X)[t−1 ]) is an iso-
+morphism of formal graded manifolds.
+
+  It follows that there is a functional
+                                   FL ∈ O(PV(X)[[t]])
+such that
+                                     L = Graph(dFL ).
+More precisely, for all f ∈ PV(X)[[t]], and g ∈ PV(X)[[t]] ⊗ m, we have
+                                 ∂FL
+                                     (g) = Ω(f, π −1 (g)).
+                                  ∂f
+
+  Our main theorem in this section is the following.
+
+6.3.1 Theorem. FL is the classical BCOV action functional I.
+
+  Before we prove this theorem, it will be helpful to have a better understanding of
+the map π −1 .
+
+  Let us parametrize L as follows. If f ∈ PV(X), and g ∈ PV(X)[[t]], then let
+                            B(f, g) = t − tef /t (1 + g) ∈ L.
+Further, sending (f, g) to B(f, g) is an isomorpism from PV(X) ⊕ PV(X)[[t]] to L.
+
+   We will try to understand π −1 in these coordinates. Let h ∈ PV(X)[[t]]. To define
+π −1 (h), we need to find f ∈ PV(X) and g ∈ PV(X)[[t]] such that πB(f, g) = h.
+                      P                  P
+  Let us expand h = i≥0 hi ti , and g = i≥0 gi ti . Then the equation πB(f, g) = h
+amounts to the following system of equations:
+                        −h0 = f + f g0 + 12 f 2 g1 + 3!1 f 3 g2 + . . .
+                        −h1 = g0 + f g1 + 12 f 2 g2 + 3!1 f 3 g3 + . . .
+                        −h2 = g1 + f g2 + 12 f 2 g3 + 3!1 f 3 g4 + . . .
+(Recall that we are dealing with formal manifolds: these expressions will terminate if
+f and g are accompanied by auxiliary nilpotent parameters).
+48                                  KEVIN COSTELLO AND SI LI
+
+
+  It is clear from these formulae that given h, there is a unique (f, g) satsfying these
+equations. Indeed, to determine f and g, consider the algebra isomorphism
+
+                      Φ : C[[x0 , x1 , x2 , . . . ]] → C[[z, y0 , y1 , . . . ]]
+                                                             X zi
+                                         Φ(x0 ) = −z −                 yi−1
+                                                                   i!
+                                                                 i≥1
+                                                           X zi
+                                           Φ(xj ) = −                 yi+j−1 if j > 0
+                                                                 i!
+                                                           i≥0
+
+Note that our system of equations above says that
+
+                                     hi = Φ(xi )(f, g0 , g1 , . . . ).
+
+In other words, we determine hi by substituting f for z and gi for yi in the formal series
+Φ(xi ) ∈ C[[z, yj ]].
+
+     In a similar way, we can express f and g in terms of h by using the inverse
+
+                          Φ−1 : C[[z, y0 , y1 , . . . ]] → C[[x0 , x1 , . . . ]].
+
+Indeed,
+
+                                      Φ−1 (z)(h0 , h1 , . . . ) = f
+                                     Φ−1 (yj )(h0 , h1 , . . . ) = gj .
+
+Thus, we have proved the following lemma.
+
+6.3.2 Lemma. There exists a unique collection of formal series Γ, Λ0 , Λ1 , . . . in the
+algebra C[[x0 , x1 , . . . , ]] such that, for all h ∈ PV(X)[[t]],
+                                                         X                         
+                        π −1 (h) = B Γ(h0 , h1 , . . . ),   ti Λi (h0 , h1 , . . . ) .
+
+
+Proof. In the notation above, Γ = Φ−1 (z) and Λi = Φ−1 (yi ).                                 
+
+
+6.4. Let us consider again the generating function FL ∈ O(PV(X)[[t]]) for our La-
+grangian cone.
+
+6.4.1 Lemma. There exists a unique series of constants C(k1 , . . . , kn ) ∈ Q, for k1 , . . . , kn ∈
+Z≥0 and each n ≥ 3, such that, for each α1 , . . . , αk ∈ PV(X) and k1 , . . . , kn ∈ Z≥0 , we
+have
+                                                
+             ∂          ∂               ∂
+                                ...            FL (0) = Tr(α1 . . . αn )C(k1 , . . . , kn ).
+          ∂(tk1 α1 ) ∂(tk2 α2 )     ∂(tkn αn )
+QUANTUM BCOV THEORY ON CALABI-YAU MANIFOLDS AND THE HIGHER GENUS B-MODEL
+                                                                       49
+
+
+Proof. Consider the formal power series Γ, Λ0 , Λ1 . . . as in the previous lemma. By
+definition of FL , we must have, for each φ, ψ ∈ PV(X)[[t]],
+                                    
+                                ∂
+                                  FL (ψ) = Ω(φ, π −1 (ψ)).
+                               ∂φ
+Now, we have seen that we can write π −1 (ψ) as B(f, g) ∈ L, where f ∈ PV(X) and
+    P i                                                                  P i
+g=     gi t are built from products of the terms φi in the expansion φ =    t φi . Since
+the symplectic pairing on PV(X)((t))[2] is defined using the pairing Tr(αβ) on PV(X),
+the lemma follows immediately.                                                        
+
+
+  Recall that we normally consider our symplectic vector space to be PV(X)((t))[2].
+Let us view FL as an element of O(PV(X)[[t]][2]).
+
+6.4.2 Lemma. FL is of cohomological degree 6 − 2d, where d = dimC X.
+
+
+Proof. Let G be the C× action on PV(X)((t))[2] induced by the cohomological grading.
+Thus, G(λ)(α) = λk α if α is of cohomological degree k. Note that we can write G(λ)
+                                                       e
+as a product of E(λ), defined by E(λ)(α) = λ−2 α, and G(λ), which is the grading C×
+action on PV(X)((t)).
+
+   We will remove the [2] from the notation, and just write PV(X)((t)). The first thing
+to show is that
+
+                     L = {t(1 − ef /t ) | f ∈ PV(X)[[t]]} ⊂ PV(X)((t))
+
+is preserved by the action of G(λ).
+
+               e
+     Note that G(λ) is an algebra automorphism of PV(X)((t)). Now,
+                                                               
+                                               e
+                    G(λ) t(1 − ef /t ) = λ−2 G(λ)    t(1 − ef /t )
+                                                                    
+                                                            e
+                                        = t − t exp t−1 λ−2 G(λ)(f  ) .
+
+                                       e
+The second equality uses the fact that G(λ) is an algebra homomorphism and that
+e          2
+G(λ)(t) = λ t.
+
+                                           e
+     Now, if f ∈ PV(X)[[t]] then so is λ−2 G(λ)(f ), and so G(λ) preserves the submanifold
+L.
+
+  Note that the symplectic form Ω on PV(X)((t))[2] is of cohomological degree 6 − 2d.
+Thus, for L to be invariant under the action of G(λ), the generating function FL must
+be of cohomological degree 6 − 2d.                                                 
+50                                 KEVIN COSTELLO AND SI LI
+
+
+6.4.3 Lemma. FL satisfies the classical master equation, the dilaton equation, and the
+string equation.
+
+Proof. The classical master equation is equivalent to the statement that the subman-
+ifold L ⊂ PV(X)((t)) is preserved by the differential, and we have already seen that
+this is the case.
+
+   According to Givental [Giv01], the dilaton equation has the following geometric
+interpretation. Let
+                             L′ = L − t ⊂ PV(X)((t))
+be the formal submanifold L, translated so that it is defined near t. The dilaton
+equation is then the statement that L′ is a cone.
+
+     In our context, this is clear: after all,
+                                L′ = {−tef /t | f ∈ PV(X)[[t]]}.
+Clearly, this is conic: if λ ∈ C, then
+                                                               
+                               −eλ tef /t = −t exp t−1 (f + tλ) .
+
+   Givental has also provided a geometric interpretation of the string equation. The
+string equation is the statement that the cone L′ is preserved by the infinitesimal
+symplectomorphism of PV(X)((t)) given by multiplying by t−1 . Again, it is clear that
+L′ satisfies this property: if ε is a parameter of square 0, we have
+                                                               
+                       (1 + εt−1 ) −tef /t = −t exp t−1 (f + ε) .
+                                                                                    
+
+6.4.4 Lemma. For α, β, γ ∈ PV(X), we have
+                                     
+                            ∂ ∂ ∂
+                                    FL (0) = Tr(αβγ).
+                           ∂α ∂β ∂γ
+
+Proof. By definition, we have
+                                 ∂
+                                    FL (ψ) = Ω(α, π −1 ψ)
+                                ∂α
+for all α, ψ ∈ PV(X)[[t]]. Let us take α and ψ to be in PV(X). Then,
+                       π −1 (ψ) = t(1 − e−ψ/t ) = t(ψ/t − ψ 2 /2t2 + . . . ).
+Thus,
+                                    ∂
+                                      FL (ψ) = − 21 Ω(α, ψ 2 /t).
+                                   ∂α
+QUANTUM BCOV THEORY ON CALABI-YAU MANIFOLDS AND THE HIGHER GENUS B-MODEL
+                                                                       51
+
+
+Since the symplectic form is defined by
+
+                         Ω(αf (t), βg(t)) = Tr(αβ) Res(f (t)g(−t)dt)
+
+we see that
+                                 ∂
+                                   FL (ψ) = 21 Tr(αψ 2 ).
+                                ∂α
+Taking derivaties with respect to ψ completes the proof.                                      
+
+6.4.5 Corollary. The function FL is equal to the classical BCOV action functional.
+
+
+Proof. We have seen that FL satisfies
+                                                
+             ∂          ∂               ∂
+                                ...            FL (0) = Tr(α1 . . . αn )C(k1 , . . . , kn )
+          ∂(tk1 α1 ) ∂(tk2 α2 )     ∂(tkn αn )
+for some constants C(k1 , . . . , kn ) ∈ Q. The grading conditions on FL imply that
+                                P
+C(k1 , . . . , kn ) = 0 unless     ki = n − 3. The dilaton and string equation imply that
+C(k1 , . . . , kn ) are uniquely determined by C(0, 0, 0) which is 1. Since the classical BCOV
+action functional I satisfies all the same properties, it must coincide with FL .            
+
+
+                         7. Quantization on an elliptic curve
+
+  In this section we will prove the following theorem.
+
+7.0.6 Theorem. There exists a unique translation invariant quantization of the BCOV
+theory on an elliptic curve E which satisfies the dilaton equation.
+
+   Further, this quantization also satisfies the string equation, and the remaining Vira-
+soro constraints.
+
+  The existence part of this result relies on results of [CL12].
+
+  The Virasoro constraints are generalizations of the string and dilaton equation; how-
+ever, they are much harder to write down, and unlike the string and dilaton equation
+they depend on the dimension of the variety. The Virasoro constraints will be defined
+precisely later.
+
+
+7.1. Let us start by outlining the proof of this theorem. The first step is to analyze
+the obstruction-deformation complex controlling quantizations of BCOV theory on an
+elliptic curve E.
+52                             KEVIN COSTELLO AND SI LI
+
+
+   In [Cos11], an obstruction-deformation complex is constructed which controls quan-
+tizations of any perturbative quantum field theory. As explained in [Cos11], Chapter
+5, this obstruction-deformation complex is, as a graded vector space, the space Oloc (E )
+of local functionals on our space E = PV(E)[[t]] of fields. The differential on Oloc (E )
+is given by
+                                     Q + {I, −}
+where, as before, Q = ∂ − t∂ and I ∈ Oloc (E ) is the classical BCOV action functional.
+
+  Our grading convention is such that H 0 of this complex describes deformations of
+a quantization, H 1 contains obstructions to quantizations, and H −1 consists of auto-
+morphisms of a quantization. Thus, if one has a quantization defined modulo ~k+1 , the
+obstruction to quantizing to the next order in ~ is an element of H 1 of this complex;
+and the space of possible quantizations to the next order is a torsor for H 0 of this
+complex.
+
+   If one thinks of the space of possible quantizations as a simplicial set, then at each
+order in ~, if the obstruction vanishes, the simplicial set of lifts to the next order is
+a torsor for the simplicial abelain group constructed by the Dold-Kan correspondence
+from the cochain complex Oloc (E ). The i’th homotopy group of this simplicial set is
+H −i (Oloc (E )).
+
+7.2. We are interested in quantizations which satisfy the dilaton equation. The dilaton
+equation is defined by the operator
+                         ∂Dil = ∂t·1 − Eu : Oloc (E ) → Oloc (E ),
+which commutes with the differential Q + {I, −}.
+
+  The obstruction-deformation complex for quantizing to order g in ~ will be the
+homotopical version of the 2g − 2 eigenspace of the operator ∂Dil on Oloc (E (E)). More
+precisely, this obstruction-deformation complex is
+                      (Oloc (E )[ε], Q + {I, −} + ε(∂Dil + 2 − 2g)) .
+This obstruction-deformation complex further breaks up under Hodge weight: recall
+that the subspace
+                              tm Ω0,∗ (∧k T X) ⊂ E (X)
+has Hodge weight k + m − 1.
+
+7.2.1 Definition. If U ⊂ E is an open subset, let
+                   Obsa,b (U ) ⊂ (Oloc (E )[ε], Q + {I, −} + ε(∂Dil + a)
+QUANTUM BCOV THEORY ON CALABI-YAU MANIFOLDS AND THE HIGHER GENUS B-MODEL
+                                                                       53
+
+
+be the subcomplex of Hodge weight b. (The number a appearing here will be referred to
+as the dilaton weight).
+
+   As U varies, these complexes form a sheaf of cocahin complexes which we denote
+Obsa,b (U ). We will let Obsia,b denote the sheaf of sections of cohomological degree i,
+and we will let Hi (Obsa,b ) denote the cohomology sheaf of the sheaf of complexes Obsa,b .
+(Recall that the cohomology sheaf is defined by sheafifying the presheaf which sends U
+to H i (Obsa,b (U ))).
+
+
+  Because Fg [L] is required to be in cohomological degree 4 − 4g and Hodge weight
+2 − 2g, we see that the group controlling obstructions to quantizations to order g is
+H 5−4g (Obs2−2g,2−2g (E)).
+
+  The following theorem summarizes the main features of the sheaf of complexes Obsa,b .
+The proof of this theorem is presented in the Appendix.
+
+7.2.2 Theorem. The cohomology sheaves Hi (Obsa,b ) are constant sheaves. Further,
+                                     Hi+2b (Obsa,b ) = 0
+if a ≤ 0 and (i, b) ≤ (0, 0) in the lexicographical ordering on Z × Z.
+
+   This implies that if there is a quantization, it is unique (even unique up to a con-
+tractible choice). However, there may be an obstruction to quantization; at genus g
+the possible obstructions are sections of the sheaf H1+4−4g (Obs2−2g,2−2g ). The proof
+that all of these obstructions vanish is outsourced to [CL12].
+
+
+                 8. Correlation functions and the τ → ∞ limit
+
+   We are interested in the correlation functions for the BCOV theory on Eτ . Recall,
+as explained in section 4, that the corelation functions for the theory depend on the
+choice of a splitting of the Hodge filtration on Eτ .
+
+  We will view the space H as the Teichmüller space of complex structures on a fixed
+manifold S 1 × S 1 . We will identify
+                            H 1 (Eτ ) = H 1 (S 1 × S 1 ) = C{a, b},
+where a, b are Poincaré dual to cycles S 1 × 1, 1 × S 1 . For each τ ∈ H, we get a Hodge
+filtration Fτ1 H 1 (S 1 × S 1 ). In the basis given by a and b, the Hodge filtration is simply
+                                      Fτ1 = C(a + bτ ).
+54                               KEVIN COSTELLO AND SI LI
+
+
+                                                  1
+If σ ∈ H, then the complex conjugate space F σ to Fτ1 defines a splitting of the Hodge
+filtration on H 1 (Eτ ). Let
+                                Eτ ,σ
+                             h−ig,n   : H ∗ (PV(Eτ ))[[τ ]]⊗n → C
+
+denote the correlation functions for the BCOV theory on Eτ , defined using the splitting
+of the Hodge filtration given by σ.
+                                              Eτ ,σ
+8.0.3 Lemma. The correlation functions are h−ig,n   , viewed as functions of σ, are
+polynomials in 1/(τ − σ).
+
+
+Proof. Note that the correlation functions are constructed by an entirely algebraic
+procedure from the complementary filtration to the Hodge filtration. It follows that
+the correlators depend in an algebraic way on the complementary filtration; so that if
+we have an algebraically varying family of complementary filtrations, parameterized by
+some algebraic variety Z, then the correlators will be algebraic functions on Z.
+
+  Let us explain this more precisely. Let R be a finitely-generated commutative algebra.
+An R-family of splittings of the Hodge filtration on E is an isomorphism of R-modles
+
+                             H 1 (E) ⊗ R ∼
+                                         = R ⊕ F 1 H 1 (E) ⊗ R,
+which splits the inclusion of R-modules
+
+                               F 1 H ( E) ⊗ R ֒→ H 1 (E) ⊗ R.
+
+If we have such an R-family of splittings of the Hodge filtration, then we can consider
+the corresponding R-family of polarizations of the symplectic vector spaces H ∗ (S(E)),
+and the resulting isomorphism of W(H ∗ (S(E))) ⊗ R-modules
+
+                      F(H ∗ (S+ (E))) ⊗ R ∼
+                                          = O(H ∗ (S+ (E)))[[~]] ⊗ R.
+(One needs to be a little careful when defining the tensor product with R here: the Weyl
+algebra and Fock module are pro-vector spaces. Every element of the inverse system is
+tensored with R, so that the Weyl algebra and Fock module become pro-R-modules).
+
+     Because they are defined by differentiating the partition function
+
+                                Z ∈ O(H ∗ (S+ (E)))[[~]] ⊗ R
+
+with respect to elements of H ∗ (S+ (E)) and then evaluating at zero, it is clear that the
+correlators are elements of R.
+
+     It remains to verify that the splitting of the Hodge filtration on H 1 (E) defined by
+  1
+F σ depends in a polynomial way on (τ − σ)−1 .       Let α, β ∈ H 1 (E) denote the basis
+QUANTUM BCOV THEORY ON CALABI-YAU MANIFOLDS AND THE HIGHER GENUS B-MODEL
+                                                                       55
+
+
+Poincaré dual to the standard a- and b-cycles. Let
+
+                                      dz = α + τ β
+
+be the holomorphic one form for complex structure τ , which spans Fτ1 H 1 (E). Note β
+                                                         1
+and dz are linearly independent, and that the subspace F σ (H 1 (E)) is spanned by
+
+                                    (τ − σ)−1 dz + β.
+
+Clearly this is a family of complementary subspaces which depends in a polynomial
+way on (τ − σ)−1 .                                                             
+
+
+  Note that this lemma implies, in particular, that the σ → i∞ limit of the correlators
+exist. We will use the notation
+
+                  h−iE τ ,∞
+                     g,n    = lim h−iE τ ,σ ∗
+                                     g,n : H (PV(Eτ ))[[τ ]]
+                                                            ⊗n
+                                                               → C.
+                              σ→∞
+
+to denote the correlators correspondong to the limiting splitting of the Hodge filtration
+          1
+limσ→∞ F σ . Physicists often write formulae like
+
+                                      lim h−iE τ ,τ
+                                             g,n
+                                      τ →∞
+
+to denote these correlators. We will sometimes abuse notation in this way.
+Remark: Although we only discuss the example of elliptic curves, the τ̄ → ∞ actually
+makes sense on general Calabi-Yau moduli spaces. In that case we need to specify a
+large complex limit, and τ̄ → ∞ simply replaces the complex conjugate Hodge filtration
+by the limiting monodromy filtration. The mirror symmetry conjecture states that the
+higher genus B-model correlation functions is equivalent to the higher genus Gromov-
+Witten theory on the mirror under τ̄ → ∞ [BCOV94].
+
+
+
+            9. Holomorphic properties of correlation functions
+
+  In this section we will show the following.
+
+9.0.4 Theorem. Let α1 , . . . , αn be holomorphic sections of the bundle on H whose fibre
+at τ is H ∗ (PV(Eτ )). Then, the correlation functions
+                                D                        EEτ ,σ
+                                 α1 tk1 , . . . , αn tkn        ∈C
+                                                  g,n
+
+are holomorphic functions of τ .
+56                             KEVIN COSTELLO AND SI LI
+
+
+  Now, the correlation functions are constructed directly from the partition function
+Z(E) of the BCOV theory. Recall from section 4 that the partition function Z(E) of
+the BCOV theory is a class in the Fock space
+
+                                   F(H ∗ S+ (X))[~−1 ]
+
+where
+
+                                  S(E) = PV(E)((t))[2]
+                                S+ (E) = PV(E)[[t]][2]
+
+(both of these cochain complexes are equipped with the differential ∂−t∂). As explained
+in section 4, the notation F(H ∗ S+ (X)) indicates the Fock space for the symplectic
+vector space H ∗ S(X) based on the Lagrangian subspace H ∗ S+ (X).
+
+ The Fock space F(H ∗ S+ (E)) defines, as E varies, a holomorphic bundle on the
+moduli space of elliptic curves.
+
+   In order to verify that the correlation functions vary holomorphically with τ , it
+suffices to prove the following.
+
+9.0.5 Proposition. The partition function
+
+                               Z(E) ∈ F(H ∗ S+ (E))[~−1 ]
+
+is a holomorphic section of the holomorphic bundle F(H ∗ S+ (E))[~−1 ] on the moduli
+space of elliptic curves.
+
+
+Proof. It suffices to prove that Z(Eτ ) is a holomorphic section of this bundle on the
+upper half-plane H. The partition function Z(Eτ ) is defined in terms of the quantization
+{F[L]} we have constructed of the BCOV theory. Therefore, it suffices to verify that
+this quantization varies holomorphically with τ .
+
+   A general formalism for quantum field theories over a wide class of Fréchet base rings
+is formulated in [Cos11]. Saying that our quantization of the BCOV theory depends
+holomorphically on τ amounts to saying that we can quantize the theory when we work
+over the base ring Ω0,∗ (H).
+
+  Let π : E → H be the universal elliptic curve over H. Let PV(E, π) denote the
+Dolbeaut resolution of the sheaf of relative polyvector fields on E. That is, if T π
+denotes the relative tangent bundle,
+
+                        PV(E, π) = Ω0,∗ (E) ⊕ Ω0,∗ (E, T π)[−1].
+QUANTUM BCOV THEORY ON CALABI-YAU MANIFOLDS AND THE HIGHER GENUS B-MODEL
+                                                                       57
+
+
+The fields of the relative version of the BCOV theory on E are the Ω0,∗ (H)-module
+PV(E, π)[[t]][2], with differential ∂ − t∂. The action functional (valued in Ω0,∗ (H)) is
+defined exactly as before.
+
+  For each τ ∈ H, let Obsa,b (Eτ ) be the obstruction complex for quantizing the BCOV
+theory on Eτ , as defined in section 7. The general theory of [Cos11] implies that the
+obstruction group for quantizing the family version of the BCOV theory is defined by
+an Ω0,∗ (H) module which we denote Obsa,b (E). The fibres of this, at τ ∈ H, are the
+obstruction groups Obsa,b (Eτ ).
+
+  It follows that the cohomology H ∗ (Obsa,b (Eτ )) forms a holomorphic bundle on H,
+and that there is a spectral sequence
+
+                       H∂∗ (H, H ∗ (Obsa,b (Eτ )) ⇒ H ∗ (Obsa,b (E)).
+
+Now, each H k (Obsa,b (Eτ )) is a finite-rank holomorphic vector bundle on H, and there-
+fore trivial. It follows that
+
+                       H k (Obsa,b (E)) = Γ(H, H k (Obsa,b (Eτ ))),
+
+where Γ indicates the bundle of holomorphic sections.
+
+   The obstruction to quantizing the family BCOV theory over H, to genus g, is there-
+fore a holomorphic section of the bundle H 5−4g (Obs2−2g,2−2g (Eτ )) on H. Since the
+obstruction vanishes for each τ ∈ H, this holomorphic section vanishes.
+
+                                                                                       
+
+
+                              10. Modular properties
+
+  Let
+                                  ω(τ ) ∈ H 1 (Eτ , T Eτ )
+be the unique element with
+                                        Z
+                              Tr(ω) =           dz(ω ∨ dz) = 1.
+                                            E
+
+(Here dz denotes the holomorphic volume form on Eτ which pulls back to dz on C).
+
+  Note that, because the trace map
+
+                                 Tr : H 1 (Eτ , T Eτ ) → C
+58                                                KEVIN COSTELLO AND SI LI
+
+
+is a map of holomorphic line bundles on H, ω(τ ) defines a holomorphic section of the
+line bundle H 1 (Eτ , T Eτ ) on H. Futher, ω(τ ) is SL2 (Z)-equivariant.
+
+     In this section we will prove the following.
+
+10.0.6 Theorem. The correlators
+                  D                                                      EEτ ,σ
+                   1 · tk1 , . . . , 1 · tkm , ω · tl1 , . . . , ω · tln
+                                                                                       g,n+m
+
+are modular functions on H × H (using the diagonal SL2 (Z)-action) of weight (2g −
+2 + 2n, 0). In other words, if
+                                        !
+                                   a b
+                               A=          ∈ SL2 (Z),
+                                   c d
+
+then
+     D                                                           EEA(τ ) ,A(σ)
+         1 · tk1 , . . . , 1 · tkm , ω · tl1 , . . . , ω · tln
+                                                                  g,n+m
+                                                                    D                                      EEτ ,σ
+                                                      2g−2+2n             k1         km     l1          ln
+                                      = (cτ + d)                     1 · t ,...,1 · t ,ω · t ,...,ω · t           .
+                                                                                                                g,n+m
+
+
+
+
+   Note that these correlators h−iE  τ ,σ
+                                   g,n+m only depend on the elliptic curve E, the holo-
+morphic volume form Ω = dz on E, and the splitting of the Hodge filtration on H 1 (E)
+                1
+coming from F σ . The modular properties stated in the theorem say that these corre-
+lation functions are functions on the moduli space elliptic curves E, with holomorphic
+volume form Ω and a splitting of the Hodge filtration, which are homogeneous of degree
+2g − 2 + 2n under rescaling of Ω.
+                          E,Ω,F
+  More precisely, let h−ig,n+m   refer to the correlaton functions above associated to
+an elliptic curve E, volume form Ω and splitting of the Hodge filtration F . Then the
+theorem is equivalent to the statement that
+     D                                                           EE,λΩ,F
+         1 · tk1 , . . . , 1 · tkm , ω · tl1 , . . . , ω · tln
+                                                                  g,n+m
+                                                          D                                                      EE,Ω,F
+                                                = λ2−2g−2n 1 · tk1 , . . . , 1 · tkm , ω · tl1 , . . . , ω · tln        .
+                                                                                                                g,n+m
+
+
+  Note that if we change Ω to λΩ, then ω ∈ H 1 (E, T E) changes to λ−2 ω. The 2n
+which appears in the scaling factor λ2−2g−2n can be attributed to this.
+QUANTUM BCOV THEORY ON CALABI-YAU MANIFOLDS AND THE HIGHER GENUS B-MODEL
+                                                                       59
+
+
+   Thus, we need to show that the correlators associated to (E, Ω, F ), when viewed as
+linear maps
+                        h−iE,Ω,F
+                            g,n   : (H ∗ (PV(E))[[t]]) ⊗n → C
+change by λ2−2g when Ω is replaced by λΩ.
+
+
+10.1. Since these correlation functions are constructed directly from the quantization
+{F(E,Ω) [L]} of the BCOV theory on E with volume form Ω. Thus, it suffices to show
+a similar scaling property for the BCOV theory on (E, Ω), when Ω is replaced by λΩ.
+
+   Thus, let us consider the BCOV theory on a fixed elliptic curve with varying holo-
+morphic volume form Ω. We will fix a flat metric on E, independent of Ω, and always
+                                ∗
+use the gauge fixing operator ∂ for this metric. As explained in section 3, the simplicial
+set of quantizations is fibred over that of gauge fixing conditions, so we can freely turn
+a quantization for one gauge fixing condition into a quantization for any other.
+
+   Let FE,Ω = {FE,Ω [L]} denote the unique quantization of the BCOV theory on (E, Ω),
+using this fixed gauge fixing condition.
+
+10.1.1 Lemma. Define
+                                            X
+                          Rλ (FE,Ω )[L] =       ~g λ2g−2 FE,λΩ [L]
+
+for λ ∈ C× . Then, Rλ (FE,Ω ) is a quantization of the BCOV theory on (E, Ω).
+
+Proof. As we change Ω to λΩ, the heat kernel KL changes to λ−2 KL . Simiarly, the
+propagator P (ε, L) changes to λ−2 P (ε, L).
+
+  We want to check that Rλ (FE,Ω )[L] satisfies the renormalization group equation and
+quantum master equation. The renormalization group equation is the statement that
+               exp(~∂P (ε,L) ) exp(Rλ (FE,Ω )[ε]/~) = exp(Rλ (FE,Ω )[L]/~).
+Note that Rλ (FE,Ω )[L]/~ is obtained from FE,λΩ by replacing ~ by λ~. The renormal-
+ization group equation for FE,λΩ says that
+                 exp(~λ−2 ∂P (ε,L) ) exp(FE,λΩ [ε]/~) = exp(FE,λΩ [L]/~).
+By replacing ~ by λ2 ~, we find the renormalization group equation for Rλ (FE,Ω [L]).
+
+  A similar argument proves the quantum master equation. The locality axiom is
+automatic, as are the Hodge weight, cohomological degree and dilaton axioms. It
+remains to verify that
+                             (E,λΩ)           (E,Ω)
+                            F0      [L] = λ2 F0     [L]
+60                              KEVIN COSTELLO AND SI LI
+
+
+for all L. Now, by the RG equation, it suffices to verify this when L = 0. It is immediate
+from the definition of the classical BCOV action I that changing Ω to λΩ changes I to
+λ2 I.                                                                                   
+
+10.1.2 Corollary. For any splitting F of the Hodge filtration on H 1 (E), the correlators
+
+                           h−iE,Ω,F
+                              g,n   : (H ∗ (PV(E))[[t]]) ⊗n → C
+
+satisfy
+                               λ2g−2 h−iE,λΩ,F
+                                        g,n
+                                                    E,Ω,F
+                                               = h−ig,n   .
+
+
+Proof. Indeed, the correlators λ2g−2 h−iE,λΩ,F
+                                        g,n    are those for the quantization Rλ (FE,Ω )
+constructed in the previous lemma. Since any two quantizations of the BCOV theory
+on E are homotopic, and the correlators only depend on the homotopy class of the
+quantization, the result follows.                                                    
+
+
+     This corollary completes the proof of theorem 10.0.6.
+
+  Putting this result together with results of section 8 and section 9 we see that the
+correlators
+                      D                                                      EEτ ,σ
+                       1 · tk1 , . . . , 1 · tkm , ω · tl1 , . . . , ω · tln
+                                                              g,n+m
+
+are holomorphic in τ , polynomail in 1/(τ − σ), and modular of weight 2g − 2 + 2n.
+Functions of this nature, which admit a τ → i∞ limit, are called almost holomorphic
+modular forms.
+
+
+
+                              11. Virasoro constraints
+
+   In this section, we will prove that the 1-dimensional BCOV theory satisfies the
+Virasoro constraints. These are mirror to the Virasoro constraints of Gromov-Witten
+invariants on elliptic curves, first discovered by [EHX97b], and proved by [OP06c] in
+general. In our setting, the Virasoro constraints will hold only up to homotopy, just
+like the string and dilaton equations hold only up to homotopy (as explained in section
+3).
+
+     Consider the following operators for each m ≥ 0:
+                                       i,j
+                    Em : PVi,j                 k
+                           X [[t]] → PVX [[t]]t α → t
+                                                      m+k
+                                                          (k + i)m+1 α
+QUANTUM BCOV THEORY ON CALABI-YAU MANIFOLDS AND THE HIGHER GENUS B-MODEL
+                                                                       61
+
+
+where (n)m = n(n + 1) · · · (n + m − 1) is the Pochhammer symbol. Let us define E−1
+by
+                                          
+                                          tk−1 α if k > 0
+                             E−1 (tk α) =
+                                          0       if k = 0
+
+The operators Em naturally induce operators acting on O(E ), which we denote by the
+same symbol.
+
+   We will define Virasoro operators Lm [L] for m ≥ −1, which act on the space
+O(PV(E)[[t]]) of functionals on the space of fields. For m ≥ 0, these operators will
+not depend on the scale L, whereas the operator L−1 [L] does depend on L. The opera-
+tor L−1 [L] takes a little more work to define, so we will start by defining the operators
+Lm [L] for m ≥ 0.
+
+11.0.3 Definition. The operators Lm [L] are defined by
+                                                     ∂
+                         Lm [L] = −(m + 1)!                  + Em .
+                                                ∂(1 · tm+1 )
+
+  If m = −1, the operator L−1 [L] will depend on the scale L. This operator will be
+defined in terms of an auxiliary operator
+
+                            Y [L] : PV(E)[[t]] → PV(E)[[t]],
+
+defined by
+                               R
+                                L du∂ ∗ △e−u[∂,∂ ∗ ] α   α ∈ PV(E)
+                                  0
+                  Y [L](α) =
+                               0                         α ∈ tPV(E)[[t]].
+
+Recall that I3 ∈ O(PV(E)[[t]]) is the local functional given by the order three compo-
+nent of the classical BCOV action. This is defined by
+                      ∂      ∂      ∂
+                                          I3 = δk=0 δl=0 δm=0 Tr(αβγ).
+                    ∂α · t ∂β · t ∂γ · tm
+                          k      l
+
+11.0.4 Definition. The Virasosro operator L−1 [L] is defined by
+                                       ∂                   1 ∂
+                      L−1 [L] = −          + E−1 − Y [L] +        I3 .
+                                      ∂(1)                 ~ ∂(1)
+
+
+   Recall that our grading convention is that if α ∈ PVi,j (X), then tm α is of cohomo-
+logical degree 2m − 2 + i + j and Hodge weight m − 1 + i. It follows that the operator
+Lm [L] is of cohomological degree 2m and Hodge weight m.
+62                                  KEVIN COSTELLO AND SI LI
+
+
+11.0.5 Lemma. The operators {Lm [L] | m ≥ −1} satisfy the Virasoro relations
+                               [Lm [L], Ln [L]] = (m − n)Lm+n [L]
+for all m, n ≥ −1.
+
+Proof. First we observe that, if m, n ≥ 0,
+     [Em , En ] tk α = ((k + i)n+1 (k + i + n)m+1 − (k + i)m+1 (k + i + m)n+1 ) tk+m+n α
+                   = (n − m)(k + i)n+m+1 tk+m+n α
+                   = (n − m)En−m tk α
+Therefore as operators acting on O(E ), we have
+                                    [Em , En ] = (m − n)Em+n
+On the other hand,
+                                            
+                                ∂                                  ∂
+                                   m+1
+                                         , En = (m + 1)n+1         m+n+1
+                           ∂(1 · t     )                   ∂(1 · t       )
+from which we can easily deduce the first equation. The other two are proved similarly.
+The proof when one of m or n is −1 is similar.                                       
+
+11.0.6 Lemma. The operators {Lm [L] | m ≥ −1} are compatible with the renormal-
+ization group flow, quantum master equation and the dilaton operator in the following
+sense:
+                                                                  
+                       exp ~∂P (ε,L) Lm [ε] = Lm [L] exp ~∂P (ε,L)
+                             [Lm [L], Q + ~∆L ] = 0
+                                               
+                                             ∂
+                           Lm [L], ∂Dil − 2~      = 0.
+                                             ∂~
+
+     Recall that the dilaton operator ∂Dil is defined by
+                                              ∂
+                                   ∂Dil =           − Eu .
+                                           ∂(t · 1)
+
+Proof. This is a straightforward check.                                                    
+
+11.0.7 Lemma. Let I ∈ Oloc (E ) denote the the classical BCOV action. Then,
+                                        Lm [0]eI/~ = eI/~
+for all m ≥ −1.
+
+Proof. Again, this is a straightforward calculation,                                       
+QUANTUM BCOV THEORY ON CALABI-YAU MANIFOLDS AND THE HIGHER GENUS B-MODEL
+                                                                       63
+
+
+  Suppose that {F[L] | L ∈ R>0 } ∈ O(E )[[~]] is a quantization of the classical BCOV
+theory. Let us define a family of functinals (Lm F)[L] by the equation
+
+                F[L] + δ(Lm F)[L] = ~ log ((1 + δLm [L]) exp(F[L]/~), )
+
+where δ is a parameter of cohomological degree −2m, Hodge weight −m and square
+zero.
+
+  Note that, if m ≥ 0,
+                                (Lm F)[L] = Lm [L]F[L].
+
+However,
+                                                         
+                                              −1    ∂              ∂
+                 (L−1 F)[L] =       L−1 [L] − ~         I3 F[L] +      I3 .
+                                                   ∂(1)           ∂(1)
+11.0.8 Corollary. Suppose that {F[L] | L ∈ R>0 } ∈ O(E )[[~]] is a quantization of the
+classical BCOV theory (as defined in section 3).
+
+  Then, so is the family of functionals
+
+                                     F[L] + δ(Lm F)[L]
+
+where δ is a parameter of cohomological degree −2m, Hodge weight −m and square
+zero. Further, if F[L] satisfies the dilaton equation, then so does F[L] + δ(Lm F)[L].
+
+
+Proof. For m ≥ 0, this follows from Lemma 3.9.1 and Lemma 11.0.7. For m = −1, the
+operator L−1 [L] is non-local for L > 0, so one needs in addition to verify the locality
+axiom. This is an easy calculation using Feynman diagrams.                            
+
+11.0.9 Definition. Let {F[L]} be a quantization of the classical BCOV theory. Then
+we say {F[L]} satisfies the Virasoro constraint Lm if the deformation {F[L]+δ(Lm F)[L]}
+is homotopically trivial. (Here δ is given the appropriate cohomological degree and
+Hodge weight).
+
+  We say {F[L]} satisfies the Virasoro constraints if it satisfies the constraints Lm for
+each m ≥ −1.
+
+
+  Just as with our discussion of the dilaton equation, to say that these first-order
+deformations of {F[L]} are homotopically trivial means (for m ≥ 0) that there exists
+families of functionals Km [L] ∈ ~O(E )[[~]] and Pm [L] ∈ ~O(E )[[~]] such that
+
+                 (Lm F)[L] = QKm [L] + {F[L], Km [L]}L + ~∆L Km [L]
+64                              KEVIN COSTELLO AND SI LI
+
+
+The functionals {Km [L]} and {Pm [L]} are required to satisfy a renormalization group
+equation and locality axiom similar to that satisfied by Fg [L].
+
+
+
+11.1. One can analyze the obstruction to solving the Virasoro constraints order by
+order in ~. The obstruction-deformation complex for the BCOV theory on an elliptic
+curve is denoted by Obsa,b (E) (in dilaton weight a and Hodge weight b). If we have a
+quantization {F[L]} of BCOV theory on an elliptic curve E which satisfies all Virasoro
+constraints modulo ~g , then the obstruction to satisfying the constraint Lm , at genus
+g, is a class
+
+                      Og (Lm , E) ∈ H 4−4g+m (Obs2−2g,2−2g+m (E)).
+
+If all of these classes are zero, then the Virasoro constraints are satisfied.
+
+  The main theorem of this section is that these classes do indeed vanish, so that the
+Virasoro constraints hold. In fact we will see that hte obstruction group vanishes.
+
+11.1.1 Theorem. Let {F[L]} be our quantization of the BCOV theory on the elliptic
+curve E. Then {F[L]} satisfies the Virasoro constraints.
+
+
+Proof. The proof of this theorem is by obstruction theory, and is very similar to the
+proof of the existence and uniqueness of the BCOV theory on the elliptic curve.
+
+   Recall that the obstruction complex Obsa,b (E) on E is the global sections of a com-
+plex of fine sheaves Obsa,b on E. It follows that we have a spectral sequence
+
+                         H i (E, Hj (Obsa,b )) ։ H i+j (Obsa,b (E)),
+
+where Hj (Obsa,b ) refers to the cohomology sheaf.
+
+     Recall that the cohomology sheaves
+
+                           H4−4g+2m+k (Obs2−2g,2−2g+m ) = 0
+
+for all k ≤ 0 and g > 0 (this vanishing statement is part of Theorem 7.2.2). It follows
+that H 4−4g+2m (Obs2−2g,2−2g+m (E)) = 0, so that the Virasoro constraints hold.      
+
+
+
+11.2. Finally, we will analyze how the Virasoro constraints manifest themselves at the
+level of correlators.
+QUANTUM BCOV THEORY ON CALABI-YAU MANIFOLDS AND THE HIGHER GENUS B-MODEL
+                                                                       65
+
+
+11.2.1 Corollary. For any splitting F of the Hodge filtration on H 1 (E), and any
+αi ∈ H ∗ (PV(E))[[t]], the correlators satisfy the following equations.
+                                          n                                               EE,F
+      D                          EE,F     X   l + HW(α) D
+              l
+         1 · t , α1 , . . . , αn        =                 α1 , . . . , tl−1 αi , . . . , αn      .
+                                  g,n+1            l                                         g,n
+                                     i=1
+
+Here, HW(α) denotes the Hodge weight of α, defined by HW(α) = i + k − 1 if α ∈
+tk PVi,j (E). Also, the sign ± in the second equality is obtained by the usual Koszul rule,
+which contributes a (−1)|αj | each time we move dz past some αj .
+
+
+Proof. This is immediate from the fact that the correlators only depend on the homo-
+topy class of the quantization.                                                   
+
+
+          Appendix I : The obstruction group on an elliptic curve
+
+  In this Appendix we will prove the following.
+
+7.2.2 Theorem. The cohomology sheaves Hi (Obsa,b ) are constant sheaves. Further,
+
+                                      Hi+2b (Obsa,b ) = 0
+
+if a ≤ 0 and (i, b) ≤ (0, 0) in the lexicographical ordering on Z × Z.
+
+   In [Cos11], Chapter 5, it is shown that the obstruction complex for any quantum
+field theory on a manifold M can be written in terms of the Chevalley cochains of an
+L∞ algebra in the symmetric monoidal category of DM modules. Here, DM denotes
+the algebra of C ∞ differential operators. The category of sheaves on M of modules
+over DM is a symmetric monoidal category, where the tensor product is as modules
+over the sheaf CM∞ of smooth functions on M .
+
+
+   This DM L∞ -algebra has, as underlying differential graded DM -module, the sheaf
+of jets of fields (with a shift). In the case of BCOV theory on an elliptic curve E, the
+DM module of jets of fields is
+
+                                   e = J(CE∞ )[dz, ∂z ][[t]][1].
+                                   g
+
+Here J(CE∞ ) is the bundle of jets of smooth functions on E; and dz, ∂z are both situated
+in cohomological degree 1, and t has cohomological degree 2.
+
+                                                                    e are
+  If we choose coordinates on a domain U on E, then the sections of g
+
+                                C ∞ (U ) ⊗ C[[z, z, dz, ∂z , t]][1].
+66                             KEVIN COSTELLO AND SI LI
+
+
+If w and w indicate coordinates on U , then the flat connection on this jet bundle differs
+from the trivial connection for this trivialization by the one-form
+                                          ∂      ∂
+                                     dw      + dw .
+                                          ∂z     ∂z
+
+11.3. As explained in [Cos11], the DE -module g is equipped with the structure of L∞
+algebra (in the symmetric monoidal category of DE -modules) which arises from the
+classical action functional I, and from the differential Q on the space of fields. This
+L∞ algebra is constructed so that there is an isomorphism of cochain complexes
+                                                   ∗
+                     (Oloc (E (E)), Q + {I, −}) ≃ Cred  g) ⊗DE Ω2E .
+                                                       (e
+On the right hand side of this equation, Cred∗ (eg) refers to the reduced Chevalley-
+Eilenberg complex of g, taken in the symmetric monoidal category of DE modules
+equipped where tensor product is over CE∞ . Since, strictly speaking, g
+                                                                      e is a topological
+DE module, one must use continuous multilinear maps to define this reduced Chevalley-
+Eilenberg complex. The resulting DE -module Cred∗ (eg) is then tensored, over DE , with
+the right DE module of 2-forms on E to obtain the complex of local functionals.
+             ∗ (e
+  Further, Cred g ) is automatically flat as a DE -module. This means that there is a
+quasi-isomorphism
+                                                   ∗
+                     (Oloc (E (E)), Q + {I, −}) ≃ Cred  g) ⊗LDE Ω2E .
+                                                       (e
+where on the right hand side we are taking the derived tensor product.
+
+  Recall that, for any DE -module M , one can define the de Rham complex Ω∗ (E, M ),
+and one has
+                             Ω∗ (E, M )[2] ≃ M ⊗LDE Ω2E .
+Thus, we find a quasi-isomorphism
+                            Oloc (E (E)) ≃ Ω∗ (E, Cred
+                                                   ∗
+                                                       (e
+                                                        g))[2].
+This quasi-isomorphism allows us to produce a spectral sequence converging to the
+cohomology of Oloc (E (E)), as follows.
+      i (e
+ Let Hred g) denote the DE -module obtained as the cohomology of the complex of
+             ∗ (e
+DE modules Cred g). Then, there is a spectral sequence
+                                 j
+                         i
+                        HdR (E, Hred  g)) ⇒ H i+j−2 (Oloc (E (E)).
+                                     (e
+Use of this spectral sequence allows one to translate results about the vanishing of the
+cohomology of e g into results about the vanishing of the cohomology of Oloc (E (E)). This
+will be essential for our obstruction computations.
+QUANTUM BCOV THEORY ON CALABI-YAU MANIFOLDS AND THE HIGHER GENUS B-MODEL
+                                                                       67
+
+
+11.4. Let us now describe the L∞ algebra structure on g. This is the structure of an
+L∞ algebra in the category of DE modules. Thus, all of the structures are, in particular,
+linear over the sheaf CE∞ . This means we can describe the L∞ structure explicitly by
+describing it on the fibre.
+
+     The differential, acting on a fibre
+                                    e0 = C[[z, z, dz, ∂z , t]][1]
+                                    g
+is
+                                           ∂     ∂ ∂
+                                    Q = dz   −t            .
+                                          ∂z     ∂z ∂(∂z )
+The first term in Q is simply the jet of the ∂ operator, acting on the jets of the Dolbeaut
+forms. The second term in Q is the jet of the operator
+                               t∂ : Ωi (E, T E)[[t]] → Ωi (E)[[t]].
+
+  Because the classical action functional I for the BCOV theory does not involve any
+anti-holomorphic derivatives, the L∞ structure on e g is linear over C[[z, dz]]. Further,
+the L∞ structure will be such that the subcomplex g ⊂ ge0 defined by
+                           g = C[[z, t, ∂z ]][1] ⊂ C[[z, t, ∂z , z, dz]][1]
+is, in fact, a sub L∞ algebra. Since the inclusion g → g   e0 is clearly quasi-isomorphic to
+ge0 , it suffices to describe explicitly the L∞ structure on g.
+
+11.5. The L∞ structure maps
+                                           lk : g⊗k → g
+are defined as follows. Firstly, lk is zero unless there is precisely one ∂z among the
+inputs. Then,
+                                                       d Y          Z
+                   n1           n2                nk
+        lk (f1 (z)t ∂z , f2 (z)t , . . . , fk (z)t ) =         fi (z)          ψ1n1 . . . ψknk ,
+                                                       dz               M0,k+1
+                                                     P
+for fi ∈ C[[z]]. Note that this is zero unless          ni = k − 2.
+
+     In particular, l2 is defined by
+                                                      d
+                              l2 (f (z)∂z , g(z)) =      (f (z)g(z)) ,
+                                                      dz
+and l2 is zero on any other inputs.
+
+   These formulae simply arise by considering how Poisson bracket with the classical
+action functional {I, −} acts on the space of local functionals Oloc (E (E )), and then
+translating this into the language of jets.
+68                             KEVIN COSTELLO AND SI LI
+
+
+11.6. We are interested in quantizing the BCOV theory in a way compatible with the
+Hodge weight and dilaton axioms. We thus need to incorporate both of these into our
+L∞ algebra g.
+
+   Let us first consider Hodge weight. The vector space g is bigraded, by cohomology
+degree and by Hodge weight. A typical element of g is of the form tk z l ∂ m , where
+k, l ≥ 0 and m ∈ {0, 1}. The cohomological degree and Hodge weight of this are
+
+                             Hodge weight(tk z l ∂ m ) = k + m − 1
+                     Cohomological degree(tk z l ∂ m ) = 2k + m − 1.
+
+One can easily check that ln is of cohomological degree 2 − n and Hodge weight 0.
+Thus, g is a graded L∞ algebra, with grading by Hodge weight.
+
+
+11.7. Now let us consider the dilaton axiom. Let us define the dilaton operator, as
+before, by
+                                             ∗          ∗
+                         ∂Dil = ∂t·1 − Eu : Cred (g) → Cred (g).
+
+Here ∂t·1 is the operator of differentiating with respect to the element t ∈ g, and Eu is
+the Euler derivation, characterized by the property that for α ∈ g∨ ⊂ Cred ∗ (g),
+
+
+                                       Eu(α) = α.
+
+                                                   ∗ (g) under the action of the
+We are interested in the homotopy a-eigenspace of Cred
+derivation ∂Dil . This is described by the complex
+                               ∗
+                             (Cred (g)[ε], dg + ε (∂Dil − a)) .
+
+                                       ∗ (g), and ε is a parameter of cohomological
+Here dg refers to the differential on Cred
+degree 1 and square zero.
+
+     We will let
+                       i
+                      Ha,b (g) ⊂ H i (Cred
+                                       ∗
+                                           (g)[ε], dg + ε (∂Dil − a))
+
+be the part in Hodge weight b. This group is of crucial importance, because of the
+spectral sequence
+                                  j
+                         H i (E, Ha,b (g)) ⇒ H i+j−2 (Obsa,b (E))
+
+where Obsa,b (E), as before, is the part of obstruction-deformation complex controlling
+quantizations of BCOV in dilaton weight a and Hodge weight b.
+QUANTUM BCOV THEORY ON CALABI-YAU MANIFOLDS AND THE HIGHER GENUS B-MODEL
+                                                                       69
+
+
+11.8. The following is the our main vanishing result concerning g; this implies propo-
+sition .
+                     i+2b
+11.8.1 Proposition. Ha,b  (g) = 0 if a ≤ 0 and (i, b) ≤ (2, 0) in the lexicographical
+ordering on Z × Z.
+
+Proof. As a first step, we will construct an operator ∂eDil on Cred
+                                                                ∗ (g) which is homotopic
+
+to ∂Dil , and which will be more useful for calculation.
+
+  The operator ∂eDil is a derivation of Cred∗ (g). Thus, it is determined by its Taylor
+
+components
+                             ∂eDil (n) : Symn (g[1]) → g[1].
+These are defined by
+                       ∂eDil (1)(z k ) = kz k
+                 ∂eDil (1)(z k tl ∂zm ) = 0 unless l = m = 0
+             ∂eDil (n)(α1 , . . . , αn ) = ln+1 (α1 , . . . , αn , z∂z ) for αi ∈ g, n ≥ 2
+                            ∂eDil (0) = 0.
+
+11.8.2 Lemma. The operator ∂eDil on Cred
+                                     ∗ (g) is a cochain map, and is cochain homo-
+
+topic to ∂Dil .
+
+                                              ∂
+Proof. The cochain homotopy is the operator ∂(z∂z)
+                                                   . This is the derivation whose zeroth
+Taylor component is the element z∂z ∈ g, and whose remaining Taylor components
+vanish.                                                                               
+
+  Next, we will construct a smaller L∞ algebra g′ which is quasi-isomorphic to g, and
+on which the modified dilaton operator ∂eDil acts. Explicitly, we let
+                                   g′ = C[[z]] ⊕ C[[t]]∂z ⊂ g.
+As before, of course, z k is in cohomological degree −1, and tl ∂z is in cohomological
+degree 2l. It is clear that g′ is a sub L∞ algebra of g, and that the inclusion g′ → g is
+a quasi-isomorphism. Further, the modified dilaton operator ∂eDil acts on Cred∗ (g′ ) in a
+
+way compatible with the map Cred    ∗ (g) → C ∗ (g′ ).
+                                             red
+
+11.8.3 Definition. Let S : g′ → g′ be the scaling operator, defined by
+                                           S(z k ) = kz k
+                                         S(tl ∂z ) = −tl ∂z .
+70                               KEVIN COSTELLO AND SI LI
+
+
+          ∗ (g′ ) → C ∗ (g′ ) be the derivation associated to S.
+Let ∂S : Cred        red
+
+                                                                         eDil coin-
+                                  ∗ (g′ ), the modified dilaton operator ∂
+11.8.4 Lemma. When restricted to Cred
+cides with ∂S .
+
+
+Proof. The higher Taylor components of ∂eDil vanish on g′ , and the first Taylor compo-
+nent of ∂eDil is S.                                                                  
+
+
+   The L∞ algebra g′ is bigraded; one grading by Hodge weight, and the other by the
+eigenvalues of the scaling operator S. We will call the second grading the scaling weight.
+The two gradings are as follows:
+
+                       z k has Hodge weight − 1 and scaling weight k
+                     tk ∂z has Hodge weight k and scaling weight -1 .
+
+This bigrading induces a bigrading on the Chevalley-Eilenberg cohomology of g′ . We
+          k (g′ ) denote the reduced Chevalley-Eilenberg cohomology group in scaling
+will let Ha,b
+weight a and Hodge weight b.
+
+11.8.5 Lemma.
+                                      k
+                                     Ha,b (g′ ) = Ha,b
+                                                   k
+                                                       (g)
+       k (g) refers, as before, to the reduced cohomology groups of g in dilaton weight
+where Ha,b
+a and Hodge weight b.
+
+
+Proof. We have seen that g′ ≃ g, so that H k (g′ ) = H k (g). Further, the scaling weight
+operator on H k (g′ ) coincides with the dilaton operator on H k (g).                  
+
+
+11.9. Thus it remains to show the following.
+
+11.9.1 Proposition.
+                                        i+2b ′
+                                       Ha,b (g ) = 0
+if a ≤ 0 and (i, b) ≤ (2, 0) in the lexicographical ordering on Z × Z.
+
+     The rest of this section will be concerned with the proof of this proposition.
+
+   We will compute the (appropriately completed) Lie algebra homology of g′ (because
+the notation here is more transparent). Because cohomology is defined using the space
+of continuous multilinear maps, the cohomology is simply the dual of the homology.
+Although we are using homology, our conventions are such that the differential is of
+QUANTUM BCOV THEORY ON CALABI-YAU MANIFOLDS AND THE HIGHER GENUS B-MODEL
+                                                                       71
+
+
+degree +1. If Hka,b (g′ ) refers to the homology in degree k, scaling weight a and Hodge
+weight b, we have
+                                       Hka,b (g′ )∨ = H−a,−b
+                                                       −k
+                                                             (g′ ).
+
+
+11.10. Let us change notation, and set ek = z k , and δk = tk ∂z . The Lie algebra chain
+complex of g can be identified with the algebra of power series in the variables δk , el ,
+where k, l ≥ 0:
+                                            A = C[[δk , el ]].
+
+   Here, el has cohomological degree −2, and each δk has cohomological degree 2k − 1.
+Also, el has Hodge weight −1 and scaling weight l, whereas δk has Hodge weight k and
+scaling weight −1.
+
+   It will be convenient to arrange these three degrees into a integer vector which we
+call the tridegree; an element has tridegree (i, a, b) if it has cohomological degree i,
+scaling weight a and Hodge weight b.
+
+
+11.11. The differential on A will be defined in terms of a sequence of auxiliary differ-
+ential operators Φn on A. We define Φn by the formula
+                          X                               d        d
+                   Φn =       (k1 + · · · + kn )eP ki −1      ···      .
+                                                         dek1     dekn
+                          k1 ,...,kn
+
+The differential on A is defined by the formula
+                                       X d
+                                   d=          Φk+1 .
+                                           dδk
+
+                             a,b
+  Our aim is to show that Hi+2b  (A, d) = 0 if a ≥ 0 and (i, b) ≥ (−2, 0) in the lexico-
+graphical ordering on Z × Z.
+
+   In other words, we aim to show that A has no cohomology in tridegree (i + 2a, b, a)
+if a ≥ 0 and either i > −2, or i = −2 and b ≥ 0.
+
+
+11.12. There is a spectral sequence converging to the cohomology of A, whose first
+term is given by the cohomology of A with the differential
+                              d        d X                d
+                        d0 =     Φ1 =        (k + 1)ek
+                             dδ0      dδ0              dek+1
+                                                     k≥0
+
+Thus, the first step is to calculate the cohomology of A with respect to d0 .
+72                               KEVIN COSTELLO AND SI LI
+
+
+11.13. d0 cohomology. To compute the d0 cohomology, we need an auxiliary spectral
+sequence. If k > 0, we will let F k A be the subspace of A spanned by elements divisible
+by el , for some l ≥ k. Let F 0 A = A. Let
+
+                                   Grk A = F k A/F k+1 A.
+
+Thus,
+                       Grk A = ek C[[e0 , e1 , . . . , ek , δ0 , δ1 , . . . , ]],
+if k > 0. Whereas,
+                                 Gr0 A = C[[e0 , δ0 , δ1 , . . .]].
+Note that the map Φ1 sends F k A → F k−1 A. Thus, it descends to a map
+
+                                Grk Φ1 : Grk A → Grk−1 A.
+
+11.13.1 Lemma. If k > 0 then Grk Φ1 is surjective. The kernel of Grk Φ1 is canoni-
+cally isomorphic to the graded vector space
+
+                                e2k C[[e0 , . . . , ek , δ0 , δ1 , . . .]].
+
+     We will let
+                           Ak = Ker(Grk d0 )/ Im(Grk+1 d0 ),
+if k ≥ 0. This lemma implies that, if k > 0,
+
+                           Ak = δ0 e2k C[[e0 , . . . , ek , δ1 , δ2 , . . .]].
+
+Further,
+                                  A0 = δ0 C[[e0 , δ1 , δ2 , . . .]].
+This lemma implies that the cohomology of the operator
+                                    d
+                      Gr∗ d0 =         Grk Φ1 : ⊕ Grk A → ⊕ Grk A
+                                   dδ0
+is canonically isomorphic to the graded vector space
+
+                                              ⊕k≥0 Ak .
+
+
+11.14. Cohomology with respect to d1 . The next term in our spectral sequence
+is given by the operator
+                                          d
+                                  d1 =       Φ2 .
+                                         dδ1
+Recall that
+                              X                      d    d
+                         Φ2 =  (k1 + k2 )ek1 +k2 −1           .
+                                                    dek1 dek2
+QUANTUM BCOV THEORY ON CALABI-YAU MANIFOLDS AND THE HIGHER GENUS B-MODEL
+                                                                       73
+
+
+  If Ak is the k’th graded piece of the cohomology of d0 , as defined above, the differ-
+ential d1 maps Ak to itself. Thus, we will investigate the d1 cohomology of Ak .
+
+   The operator d1 on A0 is zero. If k > 0, let us define a filtration on Ak by saying
+that F l Ak is the subspace spanned by those f which are divisible by el1 . Note that the
+differential d1 maps F l Ak to F l−1 Ak . Thus, we can consider the operator
+                                   Grl d1 : Grl Ak → Grl−1 Ak .
+
+  Let
+                                            k
+                                            X           d
+                                   W =            en       : Ak → Ak .
+                                            n=0
+                                                       den
+Note that W is diagonal on the natural basis of each Ak ; and (as k > 0), the eigenvalues
+of W are all non-zero.
+
+  It is easy to see that
+                                   d d
+                         Grl d1 =         W : Grl Ak → Grl−1 Ak .
+                                  dδ1 de1
+This implies that, if k > 1, the cohomology of Ak with respect to d1 is isomorphic to
+                        Bk = δ1 δ0 e2k C[[δ2 , δ3 , . . . , e0 , e2 , e3 , . . . , ek ]].
+If k = 1, the cohomology of A1 with respect to d1 is
+                                  B1 = δ1 δ0 e21 C[[e0 , δ2 , δ3 , . . .]].
+
+  If k = 0, the operator d1 is zero on A0 . Thus, we set
+                                   B0 = A0 = δ0 C[[e0 , δ1 , . . .]].
+
+
+11.15. Completion of proof. Recall that δk is in tridegree (2k − 1, −1, k), and el
+is in tridegree (−2, l, −1). Recall further that we are interested in showing that there
+are no classes in tridegree (i + 2b, a, b) when (i, b) ≥ (−2, 0) and a ≥ 0. Note that this
+amounts to the following: either i = −2, a ≥ 0 and b ≥ 0 or when i > −2, a ≥ 0 and
+b ∈ Z.
+
+  If k = 0, then B0 is concentrated in tridegrees (i + 2b, i, b) when i ≤ −1. Thus, B0
+contains no relevant classes.
+
+  If k > 1, then Bk is concentrated in tridegrees (i + 2b, a, b) with i ≤ −2. Further,
+the subspace of Bk of tridegree (−2 + 2b, a, b) consists of elements of the form δ1 δ0 e2k f ,
+where f is in C[[e0 , e2 , . . . , ek ]]. An element of this form is in tridegree (−2 + 2b, a, b)
+74                                  KEVIN COSTELLO AND SI LI
+
+
+where a > 0 and b < 0. Such an element can not contribute to the cohomology groups
+of interest.
+
+  The final case is when k = 1. The subspace of B1 of tridegree (−2 + 2a, b, a) is
+spanned by the elements δ1 δ0 e21 em
+                                   0 . This element is in tridegree (−2m − 4, 0, −m − 1),
+and so can not contribute to the cohomology groups of interest.
+
+     This completes the proof.                                                                      
+
+
+
+
+                                           References
+
+[Bar99]    S. Barannikov, Generalized periods and mirror symmetry in dimensions n>3, (1999),
+           math.AG/9903124.
+[Bar00]    S. Barannikov, Quantum periods I. Semi-infinite variations of Hodge structures, (2000),
+           math.AG/0006193.
+[BCOV94] M. Bershadsky, S. Cecotti, H. Ooguri and C. Vafa, Kodaira-Spencer theory of gravity
+           and exact results for quantum string amplitudes, Comm. Math. Phys. 165(2), 311–427
+           (1994).
+[CdlOGP91] P. Candelas, X. C. de la Ossa, P. S. Green and L. Parkes, A pair of Calabi-Yau manifolds
+           as an exactly soluble superconformal theory, Nuclear Phys. B 359(1), 21–74 (1991).
+[CG07]     T. Coates and A. Givental, Quantum Riemann - Roch, Lefschetz and Serre, Ann. of
+           Math. (2) 165(1), 15–53 (2007), math.AG/0110142.
+[CL12]     K. Costello and S. Li, The open-closed BCOV theory on Calabi-Yau manifolds, (2012).
+[Cos05]    K. Costello,      The Gromov-Witten potential associated to a TCFT, (2005),
+           math.QA/0509264.
+[Cos07]    K. Costello, Topological conformal field theories and Calabi-Yau categories, Adv. Math.
+           210(1), 165–214 (2007).
+[Cos11]    K. Costello, Renormalization and effective field theory, Surveys and monographs, Amer-
+           ican Mathematical Society, 2011.
+[Cos12]    K. Costello, Chiral rings of supersymmetric gauge theories (in progress), (2012).
+[DM99]     P. Deligne and J. W. Morgan, Notes on supersymmetry (following Joseph Bernstein),
+           in Quantum fields and strings: a course for mathematicians, Vol. 1, 2 (Princeton, NJ,
+           1996/1997), pages 41–97, Amer. Math. Soc., Providence, RI, 1999.
+[EHX97a]   T. Eguchi, K. Hori and C.-S. Xiong, Quantum cohomology and Virasoro algebra, Phys.
+           Lett. B 402(1-2), 71–80 (1997).
+[EHX97b]   T. Eguchi, K. Hori and C.-S. Xiong, Quantum cohomology and Virasoro algebra, Phys.
+           Lett. B 402(1-2), 71–80 (1997).
+[Get94]    E. Getzler, Batalin-Vilkovisky algebras and two-dimensional topological field theories,
+           Comm. Math. Phys. 159(2), 265–285 (1994).
+[Giv98]    A. Givental, A mirror theorem for toric complete intersections, in Topological field theory,
+           primitive forms and related topics (Kyoto, 1996), volume 160 of Progr. Math., pages 141–
+           175, Birkhäuser Boston, Boston, MA, 1998.
+QUANTUM BCOV THEORY ON CALABI-YAU MANIFOLDS AND THE HIGHER GENUS B-MODEL
+                                                                       75
+
+
+[Giv01]   A. B. Givental, Gromov-Witten invariants and quantization of quadratic Hamiltonians,
+          Mosc. Math. J. 1(4), 551–568, 645 (2001), Dedicated to the memory of I. G. Petrovskii
+          on the occasion of his 100th anniversary.
+[Giv04]   A. B. Givental, Symplectic geometry of Frobenius structures, in Frobenius manifolds,
+          Aspects Math., E36, pages 91–112, Vieweg, Wiesbaden, 2004.
+[GP90]    B. R. Greene and M. R. Plesser, Duality in Calabi-Yau moduli space, Nuclear Phys. B
+          338(1), 15–37 (1990).
+[Kon92]   M. Kontsevich, Intersection theory on the moduli space of curves and the matrix Airy
+          function, Comm. Math. Phys. 147(1), 1–23 (1992).
+[KS06]    M. Kontsevich and Y. Soibelman, Notes on A-infinity algebras, A-infinity categories and
+          non-commutative geometry, I, (2006).
+[Li11]    S. Li, BCOV theory on the elliptic curve and higher genus mirror symmetry (Harvard
+          thesis), (2011).
+[LLY97]   B. H. Lian, K. Liu and S.-T. Yau, Mirror principle. I, Asian J. Math. 1(4), 729–763
+          (1997).
+[OP06a]   A. Okounkov and R. Pandharipande, Gromov-Witten theory, Hurwitz theory, and com-
+          pleted cycles, Ann. of Math. (2) 163(2), 517–560 (2006).
+[OP06b]   A. Okounkov and R. Pandharipande, Virasoro constraints for target curves, Invent. Math.
+          163(1), 47–108 (2006).
+[OP06c]   A. Okounkov and R. Pandharipande, Virasoro constraints for target curves, Invent. Math.
+          163(1), 47–108 (2006).
+

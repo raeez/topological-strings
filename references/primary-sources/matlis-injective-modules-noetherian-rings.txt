@@ -1,0 +1,928 @@
+Pacific Journal of
+Mathematics
+
+
+      INJECTIVE MODULES OVER NOETHERIAN RINGS
+
+                     E BEN M ATLIS
+
+
+
+
+Vol. 8, No. 3                             May 1958
+      INJECTIVE MODULES OVER NOETHERIAN RINGS
+                                   EBEN MATLIS
+
+
+     Introduction In this discussion every module over a ring R will be
+understood to be a left i2-module. R will always have a unit, and every
+module will be unitary. The aim of this paper is to study the structure
+and properties of injective modules, particularly over Noetherian rings.
+B. Eckmann and A. Schopf have shown that if M is a module over any
+ring, then there exists a unique, minimal, injective module E(M) con-
+taining it. The module E(M) will be a major tool in our investigations,
+and we shall systematically exploit its properties.
+     In § 1 we show that if a module M has a maximal, injective sub-
+module C (as is the case for left-Noetherian rings), then C contains a
+carbon-copy of every injective submodule of M, and MjC has no injective
+submodules different from 0. Although C is unique up to an automor-
+phism of My C does not in general contain every injective submodule
+of M, In fact, the sum of two injective submodules of a module is
+always injective if and only if the ring is left-hereditary.
+     In § 2 we show that for any ring R a module E is an indecom-
+posable, injective module if and only if E = E(R\J)y where J is an ir-
+reducible, left ideal of R. We prove that if R is a left-Noetherian ring,
+then every injective Jϋ-module has a decomposition as a direct sum of
+indecomposable, injective submodules. Strong uniqueness assertions can
+be made concerning such decompositions over any ring.
+      In § 3 we take R to be a commutative, Noetherian ring, and P to
+be a prime ideal of R. We prove there is a one-to-one correspondence
+between the prime ideals of R and the indecomposable, injective R-
+modules given by P**E(RjP). We examine the structure of the module
+E = E{RjP)y and show that if At is the annihilator in E of P\ then
+E = U At and -4ί+1/At is a finite dimensional vector space over the
+quotient field of R/P. The ring of iϋ-endomorphisms of E is isomorphic
+in a natural way to Rp, the completion of the ring of quotients of R
+ with respect to R-P. As an ^-module E is an injective envelope of
+RpjP, where P is the maximal ideal of Rp.          If P is a maximal ideal
+ of Ry then E is a countably generated β-module. Every indecomposable,
+ injective i2-module is finitely generated if and only if R has the minimum
+ condition on ideals.
+      In § 4 we take R to be a commutative, Noetherian, complete, local ring,
+ P the maximal ideal of R and E = E{RjP). Then the eontravariant,
+    Received April 10, 1958. In revised form June 9, 1958.
+
+                                          511
+512                          EBEN MATLIS
+
+exact functor Ή.omE(A, E) establishes a one-to-one correspondence be-
+tween the category of modules with ACC and the category of modules
+with DCC such that Homi2(Homβ(A, E),E) = A, for A in either category.
+In particular, there is a lattice anti-isomorphism of the ideals of R and
+the submodules of E given by annihilation.
+    This paper is essentially the first half of a doctoral dissertation
+submitted to the University of Chicago. The author would like to ex-
+press his deep appreciation for the assistance and inspiration given to
+to him by Professor I. Kaplansky.
+
+      1. Maximal Injective Submodules*
+     DEFINITION Let R be a ring and S an .β-module. Then an iϋ-module
+M is said to be an essential extension of S, if S c M, and if the only
+submodule T of M such that S Π T = 0 is the submodule T = 0.
+     B. Eckmann and A. Schopf have shown [4] that if R is a ring and
+M an ΛJ-module, then there exists an injective ^-module E(M) which is
+an essential extension of M, If C is any other injective extension of
+My then there exists in C a maximal, essential extension A of M, and
+there is an isomorphism of E(M) onto A which is the identity on M.
+We shall call E(M) the injective envelope of M. A. Rosenberg and D.
+Zelinsky have called this module the injective hull of M [9].
+
+      LEMMA 1.1. Let R be a ring, S and T R-modules, and D an inject-
+ive submodule of Sξ£)T. Let E be an injective envelope o/DpiS in D,
+and let F be a complementary summand of E in D. Thus D = EQ)F;
+and E and F project monomorphically into S and T, respectively.
+
+     Proof. It is clear that F projects monomorphically into T. Let / be
+the projection of E into S. Since Ker / c Γ , Ker / Π φ Π S ) = 0.
+However, E is an essential extension of D Π S, and so Ker / = 0.
+     The following proposition is well known [3, Ch. 1, Ex. 8], but we
+state it for the sake of reference.
+
+      PROPOSITION 1.2. Let R be a left-Noetherian ring. Then:
+     (1) A direct limit of injective R-modules is injective.
+     (2) A direct sum of R-modules is injective if and only if each
+summand is injective.
+     It is an immediate consequence of Proposition 1.2 that if R is a
+left-Noetherian ring and M an iϋ-module, then M possesses a maximal,
+injective submodule C. Concerning this situation we have the following :
+
+      THEOREM 1.3. Let R be any ring and M an R-module such that M
+has a maximal, injective submodule C. Then:
+              INJECTIVE MODULES OVER NOETHERIAN RINGS               513
+
+
+     ( 1 ) If N is a complementary summand of C in M, then M — C φ N,
+and MjC = N has no injective submodules different from 0.
+     (2 ) If E is any injective submodule of M, then the projection of E
+into C maps E isomorphically onto an injective envelope ofEΓ\C in C.
+     ( 3 ) If D is any other maximal, injective submodule of M, then
+there is an automorphism of M which carries C onto D and is the identi-
+ty on N.
+
+      Proof. (1) is obvious, and (2) follows immediately from (1) and
+Lemma 1.1. We will prove (3). Let / be the projection of D into C.
+ By (2) f(D) is an injective envelope of D Π C in C and thus C =
+f(D) φ Cl9 where Cλ is an injective submodule of C. However, since
+( D ί l Q c f(D), D Π CΊ = 0; and thus by the maximality of D, CΊ = 0.
+ Therefore, since / is one-to-one by (2), / is an isomorphism of D onto
+ C, and so D Π N = 0. Thus M = D φ iV, and this completes the proof
+ of the theorem.
+      If the sum of the injective submodules of a module M is always
+ injective, then M has a unique, maximal, injective submodule which
+ contains every injective submodule of M. However, in general, this is
+ not the case. In fact, we have the following.
+
+    THEOREM 1.4. Let R be any ring.  The sum of tiυo injective sub-
+modules of an R-module is always injective if and only if R is left-
+hereditary.
+
+     Proof. If R is left-hereditary and Nlf N.z are injective submodules
+of an i2-module N, then NL + N2 is a homomorphic image of the inject-
+ive i2-module Λ^φΛ^, and hence is injective.
+     Conversely, assume that the sum of two injective submodules of
+any i2-module is injective. Let M be any injective iϋ-module and H a
+submodule of M. We will show that MjH is injective, and this will
+prove that R is left-hereditary.
+     Let Mv, M2 be two copies of M, N = Mλ@M^-and D the submodule
+of N consisting of the elements (A, h), where h e H. The canonical
+homomorphism : N -> N/D maps M19 M2 isomorphically onto submodules
+Mlf M2 of N/D, respectively. Since NjD = ML + M2, N/D is injective
+and, therefore, (NΊD)ίMι is injective. The composite mapping: Λf->
+M2 -> M2 -> (NID)!M1 defines a homomorphism of M onto (N/D)IM1 with
+kernel H. Therefore, MjH is injective and the proof is complete.
+    It follows easily from Proposition 1.2 and Theorem 1.4 that if M is
+any module over a left-Noetherian, left-hereditary ring, then M has a
+unique, maximal, injective submodule C which contains every injective
+submodule of M.
+514                            EBEN MATLIS
+
+      2.   Indecomposable Injective Modules.
+
+      PROPOSITION 2.1.  Let R be a ring and {Mt} a finite family of R-
+modules. Then the natural imbedding of Σ ® M * into Σ ® W ) can
+be extended to an isomorphism of £ ( Σ θ ^ ί ) cmd Σ Φ W ) If R is
+left-Noetherian, the finiteness restriction can be omitted.
+
+     Proof. We identify Σ φ M 4 with its image in Σ Θ W I f the
+family is finite, or if R is left-Noetherian, the latter module is injective.
+Hence it suffices to show that Σ®2?(Λf4) is an essential extension of
+Σφikf έ , regardless of whether the family is finite or not. Let
+χ
+  =£ 0 e Σ Φ E(Mt); then since x has only a finite number of non-zero
+coordinates, we can by working successively on each coordinate find an
+element r e R such that rx Φ 0 and π e Σ Θ ^ . This proves the as-
+sertion.
+
+    DEFINITION. Let A be a module over a ring R. We say that A is
+indecomposable, if its only direct summands are 0 and A.
+    The following proposition follows readily from the definitions :
+
+     PROPOSITION 2.2. Let M be a module over a ring R. Then the fol-
+lowing statements are equivalent:
+     (1) E(M) is an injective envelope of every one of its non-zero sub-
+modules.
+     ( 2 ) M contains no non-zero submodules S and T such that S Π T = 0.
+     ( 3 ) E(M) is indecomposable.
+     In general it is not true that if M is indecomposable, then E(M) is
+also indecomposable. For let M be an indecomposable, torsion-free
+module of rank two over an integral domain R. Let Q be the quotient
+field of R. Then E(M) ~Q^)Q [5, Th. 19].
+
+    DEFINITION. Let ί be a ring and / a left ideal of R such that
+/ = Jλ Π     Π Jn, where Ji is a left ideal of R. We call this a decom-
+position of I, and we say the decomposition is irredundant, if no J%
+contains the intersection of the others.
+
+    THEOREM 2.3. Let R be a ring and I — Jτ Π            Π Jn &n irredun-
+dant decomposition of the left ideal I by left ideals Ji. Assume that each
+E{RlJi) is indecomposable. Then the natural imbedding of R\l into C —
+E(RIJτ) φ     φ E(R/Jn) can be extended to an isomorphism of E(R/I)
+onto C.
+
+    Proof. We identify R/I with the submodule of C consisting of all
+elements of the form (r + Jlf   , r + J n ), where r e R. Since C is
+                INJECTIVE MODULES OVER NOETHERIAN RINGS                      515
+
+injective, it is sufficient to show that it is an essential extension of Rjl. We
+first show that Rjl (Ί R\Jι φ 0 for all i for simplicity we will prove only
+the case i — 1. By the irredundancy of the decomposition of / we can
+find r e R such that r e J 2 Π           Π Jnf but r $ Jx. Then (r + J19 r +
+</2,    , r + Jw) = (r + Λ, 0,       , 0) is a non-zero element of RII Π R\Jλ.
+      By Proposition 2.2 EiR/J^ is an injective envelope of Rjl Π RfJi
+Let x φ 0 6 C. By working successively in each component we can find
+s e R such that sx φ 0, and the ith component of sx is in R\l Π RjJt.
+Thus s# is a sum of elements of Rjl, and hence sx e R/L Thus C is an
+essential extension of RII,
+
+     DEFINITION. Let J be a left ideal of a ring .B. We say that J is
+irreducible, if there do not exist left ideals K and L of R, properly
+containing J, such that K Π L — J.
+
+     NOTATION. Let M be a module over a ring i?, and let S be a sub-
+set of M. Then we define O(S) = {r e i2 | rS = 0}. Clearly O(S) is a
+left ideal of R.
+
+     THEOREM 2.4. ^4 module E over α ring R is an indecomposable, in-
+jective module if and only if E = E(R/J), where J is an irreducible left
+ideal of R. In this case, for every x φ 0 e E, O(x) is an irreducible left
+ideal and E = E{RIO{x)).
+
+    Proof. Let J be an irreducible left ideal of R, and K, L left ideals
+of R such that KIJ Π L/J = 0. Then K Π L = J, and thus either K= J
+or L = J. Hence E(R/J) is indecomposable by Proposition 2.2.
+     Conversely, let Z? be an indecomposable, injective module, # =£ 0 6 #,
+and J = O(x). By Proposition 2.2 E = E(Rx); and since ifa; ^ u?/J, we
+have # = E(R/J). Suppose that J = if Π L is an irredundant decomposi-
+tion of J by the left ideals K, L. We imbed R\J in C = E(R\K)<§)E(R\L),
+and let D be an injective envelope of R\J in C. Due to the irredund-
+ancy of the decomposition of J, R\J Π R\K Φ 0. Therefore, by Lemma
+1.1 and the indecomposability of D, D projects monomorphically into
+E{RjK). The image of D is an injective module containing R\K, and
+hence is equal to E(R/K). Thus E(RIK) is indecomposable similarly,
+E(R/L) is indecomposable. Thus by Theorem 2.3 E{RIJ)^E{RIK)®E{RIL).
+This contradicts the indecomposability of E(RjJ), and thus Jis irreducible.
+
+    REMARKS.
+    (1) Every ring R possesses indecomposable, injective modules.
+For if J is a maximal, left ideal of R (such exist by Zorn's lemma and
+the fact that R has an identity element), then J is an irreducible ideal,
+516                           EBEN MATLIS
+
+and so E(RjJ) is indecomposable by Theorem 2.4.
+    (2) It can be shown that every injective module over a ring R
+has an indecomposable, direct summand if and only if every left ideal
+of R has an irredundant decomposition by left ideals, at least one of
+which is irreducible.
+
+    THEOREM 2.5. Let R be a left-Noetherian ring. Then every injective
+R-module has a decomposition as a direct sum of indecomposable, injective
+submodules.
+
+     Proof. Let M be an injective J?-module. Then by Zorn's lemma
+we can find a submodule C of M which is maximal with respect to the
+property of being a direct sum of indecomposable, injective submodules.
+Suppose that C Φ M. By Proposition 1.2 C is injective, and hence there
+is a non-zero submodule D of M such that M = C φ D. Let x Φ 0 e D;
+since R is left-Noetherian, O(x) is an intersection of a finite number of
+irreducible, left ideals [8, Lemma 1.8.2]. Therefore, by Theorems 2.3
+and 2.4, E(R\O(x)) is a direct sum of a finite number of indecomposable,
+injective iί-modules. Now Rx = RjO(x)9 and so we can consider that
+E(R/O(x)) is imbedded in D. But then C®E(RIO(x)) contradicts the
+maximality of C, and thus C = M. This concludes the proof of the
+theorem.
+    Theorem 2.5 is a generalization of a theorem of Y. Kawada, K.
+Morita, and H. Tachikawa [6, Th. 3.2] who considered the case of a
+ring with the minimum condition on left ideals. Their theorem, in turn,
+is a generalization of a theorem of H. Nagao and T. Nakayama [7]
+concerning finite dimensional algebras over a field.
+
+     DEFINITION. Following the most general definition [3, p. 147] we
+will call a ring H a local ring if the set of non-units of H forms a two-
+sided ideal.
+
+    PROPOSITION 2.6. Let E be an injective module over a ring R and
+H = Ή.omR(E, E). Then H is a local ring if and only if E is indecom-
+posable. In this case f e H is a unit if and only if Ker / = 0.
+
+     Proof. If E is not indecomposable, then H has a non-zero idempo-
+tent different from the identity, which can't happen in a local ring.
+Conversely, assume that E is indecomposable. If / e H is a unit, then
+of course Ker / = 0 while if Ker / = 0, then f(E) is injective, f(E)=Ef
+and so / is a unit of H. Let g, h be non-units of H. Then Ker g Φ 0,
+Ker h Φ 0, and by Proposition 2.2 Ker g Π Ker h Φ 0. Since Ker
+g Π Ker h c Ker (g + h), it follows that g + h is a non-unit. It is well-
+               INJECTIVE MODULES OVER NOETHERIAN RINGS                  517
+
+
+known that if the sum of two non-units of a ring is always a non-unit,
+then the ring is a local ring.
+     The preceding proposition shows that G. Azumaya's generalization
+of the Krull-Remak-Schmidt theorem [1, Th. 1] applies to direct sums
+of indecomposable, injective modules. We state this theorem without
+proof in the form in which it applies to our considerations.
+
+    PROPOSITION 2.7.    Let R be a ring and M = Σ φ £ α (a e A) an R-
+module which is a direct sum of indecomposable, injective submodules Ea.
+Then:
+     ( 1 ) Given a second decomposition of M into indecomposable sub-
+modules Fb (b 6 B): M = Σ φ Fb, then there exists a one-to-one mapping
+a -» b(a) of A onto B such that Ea is isomorphic to Fb(a ), for each a e A.
+In other words the decomposition of M into indecomposable submodules is
+unique up to an automorphism of M.
+      ( 2 ) For any non-zero idempotent element f in Hom^M, M) there
+exists at least one Ea such that f is an isomorphism on Ea. In particular
+every indecomposable, direct summand of M is isomorphic to one of the
+Ea's.
+     It is an open question whether every direct summand of M is also
+a direct sum of indecomposable, injective modules. Of course if R is
+left-Noetherian, then Theorem 2.5 provides an affirmative answer.
+     The following proposition will be needed in § 3.
+
+      PROPOSITION 2.8. Let R be a ring, B an R-module, and C an in-
+jective R-module   let y e C and xlf      , xn e B. Then Π 0{xi)(Z O(y) if
+and only if there exist f19  ,/w e HomB(B, C) such that y—f1x1+
+
+     Proof. If y = fxτ + - . . + fnχnt      then clearly Π O(xt) c O(y). Now
+assume that Π O(#4) c O(y). Rj Π Ofe) is a cyclic i2-module generated by
+an element z with O(z) = Π O(#4). There exists an TMiomomorphism :
+Rz ~> Ry such that z-> y and there exists a natural imbedding of Rz
+into Σ θ ^ ( such that z -» (xl9       , xn). This yields the diagram :
+
+
+                                I
+                                Ry
+                                I
+                                c
+Since C is injective, there is an i2-homomorphism / : Σ Φ - β ^ -* C such
+that f(x19    , xn) = y. Now / = Σ / t , where f : Rxh ~> C is the restric-
+tion of / to Rxt. We have the diagram :
+518                            EBEN MATLIS
+
+                               0 -> Rxt ^ B
+                                 Ai
+                                  c
+Therefore, we have iMiomomorphisms fi'.B-^C        such that ft   extends
+A for each i.    Thus fλxλ H    + fnxn   = A%i +    /
+
+       3.   Injective Modules over a Commutative, Noetherian Ring.
+
+     Throughout this section R will be a fixed commutative, Noetherian
+ring.
+
+     PROPOSITION 3.1. There is a one-to-one correspondence between the
+prime ideals of R and the indecomposable, injective R-modules given by
+P <-> E{R\P), for P a prime ideal of R. If Q is an irreducible P-primary
+ideal, then E(R/Q) =
+
+     Proof. It is obvious that a prime ideal is irreducible and thus
+E(RIP) is an indecomposable, injective module by Theorem 2.4. Let
+Pτ,Pz be two prime ideals of R such that E(RIPΎ) = E(RIPZ). We con-
+sider that RjPΎ and RjP2 are imbedded in E(R\PΎ). Hence by Proposition
+2.2, R/Pι Π RIP* Φ 0. However, every nonzero element of R/Pt (resp.
+RlPi) has order ideal P1 (resp. P 2 ). Thus PΎ — P 2 , and the mapping
+P ~> E{R(P) is one-to-one.
+     Let E be any indecomposable, injective iϋ-module. Then by Theorem
+2.4 there is an irreducible ideal Q of R such that E ~ E{RjQ). Now
+Q is a primary ideal with a unique associated prime ideal P [8, Lemma
+1.8.3]. If Q — P, we are finished     hence assume that Q Φ P. Then
+there is a smallest integer n > 1 such that Pn c Q. Take b e Pn~λ such
+that b $ Q, and denote the image of b in R/Q by δ. Clearly 0(5) D P
+on the other hand if a e 0(5), then ab e Q, and so a e P, showing that
+0(5) = p . Therefore, there is an element of E(RjQ) with order ideal
+P, and thus E{RjQ) ^ #(i?/P) by Theorem 2.4. This completes the proof
+of the proposition.
+
+      LEMMA  3.2. Let P be a prime ideal of R and E — Έ(R\P). Then :
+    ( 1 ) Q is an irreducible, P-primary ideal if and only if there is an
+x Φ 0 e E such that 0(x) = Q.
+    ( 2 ) Ifre    R-P, then 0{rx) = 0(x) for all x e E, and the homo-
+morphism : E -» E defined by x -* rx is an automorphism of E.
+
+     Proof.
+     ( 1 ) This is an immediate consequence of Theorem 2.4 and Pro-
+position 3.1.
+                     INJECTIVE MODULES OVER NOETHERIAN RINGS             519
+
+    ( 2 ) Let r e R — P the map : E -» E defined by x -* rx, for x e E,
+has kernel O by (1); therefore, it is an automorphism by Proposition
+2.6. It follows that O(x) = O(rx) for every x e E.
+
+      DEFINITION.       Let M be an injective i?-module, and P a prime ideal
+of R.       Define
+
+                             Mp = {x e MI P c Rad O(α)}
+and
+                            iVp = {a? e Jlί, I P ^ Rad O(α)} .
+Let M — 2 Φ ^α (a e A) be a direct decomposition of Λf by indecom-
+posable, injective submodules Ea. By Proposition 3.1 there is associated
+with each Ea a prime ideal which we shall designate by Pa. Define Hp
+to be the direct sum of those Ea'& such that Pa = P. We shall call Hp
+the P-component of the decomposition of M and we define the P-index
+of M to be the cardinal number of summands Ea in the decomposition
+of    Hp.
+
+
+      THEOREM        3.3.
+     ( 1 ) Mp is the direct sum of those Ea's such that Pa Z) P, and Np
+is the direct sum of those Eays such that Pa $ P. Thus Mp and Np are
+submodules of M; and, in fact, are direct summands of M. In addition,
+the direct sums of Ea's just defined are independent of the decomposition
+of M.
+    ( 2 ) M is a direct sum of the Pa-components Hp . We have Hp =
+Mp/Np , and Hp is unique up to an automorphism of M. In other words
+M is determined up to isomorphism by a collection of cardinal numbers,
+namely its P-indices.
+    If P is a maximal ideal of R, then Hp — Mp, and thus Hp is in-
+dependent of the decomposition.
+
+     Proof.
+     ( 1 ) Let x Φ 0 e M; then x = xx +       + xn, where x% Φ 0 e Ea..
+Thus O(x) = Π Ofa); and by Lemma 3.2 (1) 0{xt) is P α .-primary. From
+this it follows that Rad O(x) = Π P α .. Hence it is clear that x e Mp if
+and only if x is an element of the direct sum of those Ea'& such that
+Pa z) P. It also follows that x e Np if and only if x is an element of
+those Ea'8 such that Pa J P.
+     ( 2 ) This follows immediately from (1) and Proposition 2.7.
+     We now proceed to examine the structure of a typical indecom-
+posable, injective i2-module.
+520                                EBEN MATLIS
+
+    THEOREM 3.4. Let P be a prime ideal of R, E = E(RIP), and At =
+{xe E\I*x = 0}.     Then:
+    ( 1 ) At is a submodule of E, At c Ai+l9 and E — U A%.
+                     (ί)         (ΐ)
+    (2)    Π 0(x) = P , w/^rβ P is the ith symbolic prime power of P.
+          xeA
+    ( 3 ) T%# non-zero elements of Aί+ιIAi form the set of elements of
+E\A% having order ideal P.
+    ( 4 ) Let K be the quotient field of RjP. Then Ai+ΊIAi is a vector
+space over K, and Aλ ~ K.
+
+     Proof.
+     ( 1 ) Clearly At is a submodule of E, and A ( c 4 i + 1 . Let x Φ 0 e E;
+then by Lemma 3.2 (1) O(x) is a P-primary ideal. Thus there exists a
+positive integer i such that P c O ( 4 and so x e At.              Therefore,
+E = U A,.
+     ( 2 ) By Lemma 3.2 (1) Π O(#) is the intersection of all irreducible,
+                               €
+P-primary ideals containing F\ It is easily seen that this intersection
+is equal to P ( i ) .
+     ( 3 ) Since PAi+ιcz Aif it follows from Lemma 3.2 (2) that every
+non-zero element of A ί + I /A has order ideal P. Conversely, if x e E is
+an element such that Pxc:Aίf     then x e Aί+Ί.  Therefore, every element
+of ElAi having order ideal P is an element of Ai+1IAi.
+     ( 4 ) If r e R, denote its image in RjP by r. Similarly, if x 6 Ai+1,
+denote its image in Ai+1/Ai by x. If s e R — P, then by Lemma 3.2 (2)
+there exists a unique y e Aί+1 such that x = sy. Define an operation of
+K on Aί+llIAi by (r/s) x = ry. It is easily verified that with this defi-
+nition Ai+1jAi becomes a vector space over K.
+     Take x Φ 0 e Aτ. Since Ao = 0, Ax is a vector space over K and
+so we can define a iί-monomorphism g : K-> Aτ by #(r/s) = (r/s) a?, for
+                                 1
+r/s e JL Let z Φ 0 e Ai. Since E is an essential extension of A19 there
+exist tyweR   — P such that to = wz. Thus <7(£/w) = z9 and # is an
+isomorphism.
+
+      REMARKS.
+                                                           1
+     ( 1 ) Let 7 c P be an ideal of R, and A(l) = {# e E 1 /^ = 0}. Then
+it follows from [2, Th. 17] that A(/), considered as an i2//-module, is
+an injective envelope of (JB/I)/(P//). Therefore, A(I) is an indecom-
+posable, injective Rj/-module.      We obtain from [8, Lemma 1] that
+HomΛ(B/I, E) ~ A(/); and if J is an ideal of R containing 7, then
+Hom Λ (J/I, # ) ^ A(I)!A(J).
+     ( 2 ) If P — 0, R is an integral domain, and E — Ax ~ K, which is
+then the quotient field of 72. If P Φ 0, the module E is the natural
+generalization of the typical divisible, torsion, Abelian group Zp . We
+                  INJECTIVE MODULES OVER NOETHERIAN RINGS                               521
+
+
+will show in a later theorem that Ai+1!Ah is a finite dimensional vector
+space over K, although in general it is not one dimensional as is the
+case for ZPoo. The ring of endomorphisms of Zp^ is the p-adic integers.
+This will generalize to the theorem that the ring of iϋ-endomorphisms
+of E is Rp, the completion of the generalized ring of quotients of R
+with respect to R — P.
+
+    DEFINITION. Let P be b prime ideal of R, S = R — P, and N the
+^-component of the 0-ideal of R; i.e. N= {a e R | there exists an ele-
+ment ce S with ca = 0}. Let R* = RjN, P* = P/JV, and let S* be the
+image of S in F . No element of S* is a zero divisor in 22*, and thus
+we can form the ordinary ring of quotients of R* with respect to S*.
+We denote this ring by i? p ; it is a commutative, Noetherian, local ring
+with maximal ideal P = 22PP. We will denote the completion of Rv by
+Rp, and its maximal ideal by P.              Further details of the construction
+may be found in [8, Ch. 2].
+
+    LEMMA 3.5. Let K be the quotient field of RIP. Then K and RP\P
+are isomorphic as fields and P1^1^ (x) R/PK and Pn/pfi+1 are isomorphic
+as vector spaces over K.
+
+    Proof. Let reR, seR — P and denote the images of r, s in RjN
+by r*, s*, and their images in R\P by r, s. It is easily verified that
+the mapping: K -> RpjPr defined by rjs ~> (r*/s*) + P r is a field isomor-
+phism. We make every .KJP'-module into a iΓ-module by means of this
+isomorphism.
+     Let q e Pι and denote its image in RIN by g*. We define a map-
+ping : pηp^ <g)Λ / F If -* P's/P'*-1 by [g + P ί + 1 ] (g) r/s -> (r/β)[?* + P / ί + 1 ]. We
+                                                                      +1       ί+1
+define a mapping in the reverse direction by g*/s*+P'* -»[g+P ](x)r/s.
+These mappings are if-homomorphisms, and their product in either order
+is the identity mapping. Thus PijPi+l (g) RjPK is isomorphic as a vector
+space over K to pηp*+\
+     It is easily seen that if Q is a P-primary ideal, then NaQ. Hence
+by Lemma 3.2 (1) E(RjP) is an i?*-module. We will henceforth assume
+(without loss of generality) that N = 0. The simplification amounts to
+this : Rp is an ordinary ring of quotients of R.
+
+     THEOREM 3.6.        With the notation as already given let E = E{RIP).
+Then E is in a natural way an Rp-module, and as such it is an injective
+envelope of RP\P.      The R-submodules At—         {x e E \ Pιx — 0} ofE        are equal
+to the corresponding submodules defined for             Rp,
+522                            EBEN MATLIS
+
+    Proof. We define on operation of Rp on E as follows : let x e E,
+r e R, and s e R — P then by Lemma 3.2 (2) there exists a unique
+y e E such that x — sy. Define (rjs)x = r?/. It is easily verified that
+with this definition E becomes an iϋ^-module. If G is an i?p-module
+containing E, then E is an iϋ-direct summand of G. But then E is an
+indirect summand of G also, and thus E is iϋp-injective. Since E is
+indecomposable as an β-module, it is a fortiori indecomposable as an
+
+     If x e E has order ideal O(x) in R, then a straightforward calculation
+shows that the order ideal of x in Rp is RpO(x). From this it follows
+                 ι                      ri
+readily that P x = 0 if and only if P x — 0. These remarks show that
+we may assume that R is a local ring with maximal ideal P. We denote
+its completion by R, and the maximal ideal of R by P = RP.
+     Let a e R; then there exists a Cauchy sequence {αw} in R such
+that αw -* a. Let x e E then x e At for some i. There exists an in-
+teger iV such that an — am e P* whenever n > m^ N. Thus αw# = αm#,
+and if we define ax = α ^ , it is easily verified that this definition makes
+E into an ΐ?-module.
+     Let E be the iϋ-injectίve envelope of E. Since Aτ = iϋ/P = JB/P
+over -ff, it follows from Proposition 2.2 that E is the ϋϊ-injective envelope
+                                                                       ι
+of R/P. Therefore, by Theorem 3.4 E = U A4, where A, = {x e E \ P x =0}.
+As an i2-module E splits into a direct sum of E and an ϋJ-module
+C. If x e C, then x e A% for some i and iΐ r e R, there exists r 6 R
+such that r = r (mod P*). Hence rx = rx e C, and thus C is an R-
+module. However, E is indecomposable as an iu-module and thus C = 0
+and E = E. A simple calculation shows that if x e E has order ideal
+O(x) in iϋ, then it has order ideal RO(x) in R From this it follows readily
+that At = At.
+
+      THEOREM 3.7.  With the notation of Theorem 3.6 let H = RomR(E, E).
+Then H is R-isomorphic to Rp; more precisely, every R-homomorphism of
+E into itself can be realized by multiplication by exactly one element of Rp.
+
+     Proof. It is easily seen that H = Hom^ (E, E). Therefore, by
+Theorem 3.6 we can assume without loss of generality that R is a com-
+                                                      ι
+plete, local ring with maximal ideal P. Since Π P — 0, if r Φ 0 e R,
+there exists an integer i such that r $ Pι. Hence rA% Φ 0 by Theorem
+3.4 (2); and E is a faithful iϋ-module. Consequently, we can identify
+R with the subring of H consisting of multiplications by elements of R.
+     Define iϊ 4 = {he H\ h{A%) = 0}. Then Π H, = 0, and since g(At) c At
+                INJECTIVE MODULES OVER NOETHERIAN RINGS                          523
+
+for every g e H, Hi is a two-sided ideal of H. We will prove by induc-
+tion on i that if / e H, then for each integer i there exists an element
+pte R such that / = pt (mod Ht). Since Aλ = R/P, there exists y e A±
+such that Aλ — Ry. Let f e H; then there exists pτ e R such that
+fy — PiV- Thus f= pτ (mod HJ. We assume the assertion has been
+ proved for i ^ 1.
+      Let Pί+1 — Q1f)        ΓiQn be an irredundant decomposition of Pί+ι by
+ irreducible, P-primary ideals Qj. By Lemma 3.2 (1) we can find ele-
+ ments Xj e Ai+ι such that O(xj) = Qj for j> — i,      , n. By the irredun-
+ dancy of the decomposition we can find q5 e Q : Π       ΓΊ Qj Π  Qn (where
+ Qj means Qj is left out) such that q5 e Qjy Thus qjxj Φ 0 and q5xh — 0
+ for j Φ k.
+      By induction there exists pt e R such that g = / — pL e H^ Since
+ Pxj c Ai9 P(gXj) — g(Pxj) = 0 and thus gxj e Aτ. Therefore, by
+ Proposition 2.2 there exists r3 e R such that r^qpcj) = flra?Je Let
+ <7 = rλqL +      + rnqn. Then ^ ^ = qxό for i = 1,       , n.
+                                      +1
+      Let OJ 6 A j+1 ; then O(x) z) P* = 0{xλ) Π   Π Ofe). Hence by Propo-
+ sition 2.8 there exist fu ••• 9fne H such that x — f1xί +             + fnxn.
+ By the induction hypothesis fό — sό + hj9 where Sj e R and h3 e Ht.
+ Since
+                       Pxj c Au P(hjXj) = hj(Pxj) = 0
+
+hence    hjXj e AL a n d g{h3xό) — 0.   Since   g ^ e Aif     q(hJXJ) — hό{qxό) — 0.
+Thus
+
+        g(x) = SxtoαO +     + sn (gxn) = s^qxj +            + sn(qxn) = g(a ).
+
+Therefore, g — q e Hi+1. We let pi+1 = pt + q then / = pi+ι(mod       Hί+ι),
+and we have verified the induction.
+     Thus we have associated with / a sequence {pt} of elements of R.
+If n^m, then pn - pm = (p w - / ) + ( / - p m ) e Hn + Hm = Hn. Therefore,
+(p» - Pm)Aw = 0, and so by Theorem 3.4 (2) pn - pm e P \ Thus {p4} is
+a Cauchy sequence in it! and since R is complete, Pι-> p e R. Since
+P 1 c Hif pi-* p in fί. But pt-*f       in i ί , and so / = p e R. Thus
+H — R and the theorem is proved.
+
+     COROLLARY 3.8.
+     (1)    Let y, xl9     , xn e E. Then Π O(xό) c O(i/) i / α^d only if there
+exist r19     , rn e Rp such that y — rxxx +    + rnxn.
+     (2)    Every R-homomorphism from one submodule of E into another
+can be realized by multiplication by an element of Rp.
+
+     Proof.
+     ( 1 ) This is an immediate consequence of Proposition 2.8, Theorem
+524                                EBEN MATLIS
+
+
+3.7, and the definition of the operation of Rp on E.
+     ( 2 ) Since E is injective, every ϋJ-homomorphism from one sub-
+module of E to another can be extended to an endomorphism of E.
+
+      DEFINITION.  Let P be a prime ideal of R, and let P ( ί ) =
+Qι Π     Π Qt Π Qt+i (Ί Qn be an irredundant decomposition of the
+                            (ί)                                              έ  υ
+symbolic prime power P          by irreducible ideals Qm such that Qm φ p( ~
+for m — 1,     , t and Qm ID P^-^ for m = ί + 1,            , n. We say that
+                                          (i)           (i)
+this is a minimal decomposition of P and that P             belongs to t, if £ is
+the smallest integer for which we can obtain such a decomposition.
+Clearly for i > 0 P ( ί ) has a minimal decomposition and t > 0 if and
+only if P^ Φ P*'- 1 ).
+
+      THEOREM 3.9.   Let P be a prime ideal of R, E = E(RIP), and assume
+        i+1
+that P( > belongs to t. Then the dimension of Ai+1jAi as a vector space
+over the quotient field of RjP is equal to t.
+
+     Proof. We can assume without loss of generality that R is a local
+ring with maximal ideal P. Then P ( ί ) = Pι for every i. Let Pί+1 —
+Qι Π        Π Qt Π Qt+ι Π         c Qw be a minimal decomposition of P ί + \ where
+          ι
+Qm φ P for m = 1,             , t and Qm z) P* for m = £ + 1,       , n. By Lemma
+3.2 (1) we can find xm e Ai+1 such that O(xm) = Qm for m = 1,                     , n.
+Let xm = ίrm + At; we will show that xlf              , ^ t form a basis for At+i/Ai
+over RIP.
+     ( 1 ) δlf       , xt are linearly independent over R/P. Suppose that
+rxxλ +        + rsxs — 0. where s S t and r5 — r5 + P for some r5 e i2. We
+can assume that rt Φ 0 for i = 1,             , s. Now rxxx +       + rsxs — y e A%\
+and so rλxx = — r2α;2 — . . . — rsα;s + y. Applying Lemma 3.2 (2) we have
+0{xx) ID 0{x2) n         Π O(xs) n O(ι/). Hence Pi+1 = O(α,) n         Π O(^s) n O(?/).
+We can refine this irreducible decomposition of Pi+ι to an irredundant
+one but since O(y) D P\ we will then have t — 1, or fewer, components
+not containing P \ This contradicts the minimal nature of t and there-
+fore, xly <- ,xt are linearly independent over R/P.
+     ( 2 ) xu        ,xt span Aί+i/A4 over .K/P. For let a ; 6 i w ; then
+             +1
+O(x) ID P* = n O(xm).             Therefore, by Corollary 3.7 (1) there exist
+n,      , rn 6 R such that x = r ^ +                + rnα;M.    Since Qm ID P 4 for
+m = t +1,        , n, it follows that xm e At for m = έ + 1,        , n. Thus x + A*
+is a linear combination of xlf            , x% with coefficients in i2/P.
+     The main part of the following theorem was communicated to me
+by A. Rosenberg and D. Zelinsky.
+
+     THEOREM 3.10.    With the notation of Theorem 3.9 let K be the
+quotient field of R/P. Then Ai+1IAi is isomorphic as a vector space over
+K to the dual space of PijPi^1 (g) Λjp K.
+              INJECTIVE MODULES OVER NOETHER1AN RINGS                  525
+
+     Proof. By Lemma 3.5 and Theorem 3.6 we can assume that R is
+a local ring with maximal ideal P ; and then we must prove that Ai+ιjA.
+is isomorphic as a vector space over R\P to the dual space of PilPi+1.
+By [9, Lemma 1] we know that Ai+1IAt         is isomorphic over R/P to
+Hom^PVP^ 1 , E). It is clear that any i2-homomorphism of pηpi+1 into
+E has its range in Aτ (which is isomorphic to RjP), and is actually an
+                                                             +1
+22/P-homomorphism.         Thus we can identify HomΛ(P*/P* , E) with
+Hom^pίP^P^ 1 , RjP). Since the latter is the dual space of pηpί+1 as a
+vector space over R/P, this concludes the proof.
+     Theorem 3.10 provides a second proof that Ai+1IAi is a finite dimen-
+sional vector space over K; and in addition shows that this dimension
+is equal to the dimension over K of F^P1*1 ® RIP K- Combining this
+result with Theorem 3.9 we see that P<ΐ+J) belongs to t if and only if
+piipi+i g) Rip jζ k a s dimension t over K.
+
+    THEOREM 3.11.
+    ( 1 ) If P is a maximal ideal of R, then A% c E(R\P) is a finitely
+generated R-module for every integer i and thus E(R/P) is a countably
+generated R-module.
+    ( 2 ) R has the minimum condition on ideals if and only if every
+indecomposable, injective R-module is finitely generated.
+
+     Proof.
+     ( 1 ) The proof is by induction on i. Since the case i — 0 is trivial,
+assume that A4-χ is finitely generated. By Theorem 3.9 we can find
+xu      , xn e Ai such that if x 6 Ai9 then there exists b e R — P such
+that bx is in the module generated by xlf * ,xn and A^.        Since P is
+maximal and Px c At-l9 x is in the module generated by At-τ and xlf   , xn.
+Thus Ai is finitely generated.
+     ( 2 ) Suppose that R has the minimum condition on ideals. Let P
+be a prime ideal of R then P is a maximal ideal, and there exists an
+integer i such that P* - Pί+ι - P*+2 =       . Therefore, E(RIP) = At
+and by (1) E{RjP) is finitely generated over R. Since E(RjP) is typical,
+all indecomposable, injective ^-modules are finitely generated.
+     Conversely, assume that every indecomposable, injective i2-module
+is finitely generated. Let P be a prime ideal of R. Then Aι c E(RjP)
+is finitely generated over R/P. But Aι is isomorphic to the quotient
+field of RjP, and hence R/P is a field. Thus prime ideals of R are
+maximal and since R is a Noetherian ring, this implies that R has the
+minimum condition on ideals.
+
+    4   Duality
+
+    DEFINITION.   Let R be any ring and M a n i?-module. Then we say
+526                             EBEN MATLIS
+
+that M has ACC {Ascending Chain Condition) if every ascending chain
+of submodules of M terminates, and we say that M has DCC {Descend-
+ing Chain Condition) if every descending chain of submodules of M
+terminates.
+
+      PROPOSITION 4.1.  Let R be a left-Noetherian ring, and M an R-
+module having DCC. Then E{M) is a direct sum of a finite number of
+indecomposable injective R-modules.
+
+     Proof. By Theorem 2.5 E(M) = Σ φ £ α ( α e A), where the Ea'$ are
+indecomposable, injective i2-modules. Assume that the index set A is
+infinite.  Then A has a properly descending chain of subsets:
+i D A p i p      . Define the submodule Ct of E(M) by C, = Σ®Eb{be At).
+Then M ZD ( d Π M) =) (C2 Π M) z>     is a descending chain of submodules
+of M. Since M Π Ea Φ 0 for all a e A, the chain is properly descending.
+This contradiction shows that A is finite.
+
+     DEFINITION. Let R be any ring and M an iϋ-module. For any
+positive integer n let Mn denote a direct sum of n copies of M. If
+x = (#!,    , χn) e Λf\ where x1 e M, we will denote x by fe). For a
+fixed pair i?*, Λfw we make the following definitions : let S be a subset
+of Rn and B a subset of Mn; then define S' = {(»<) e Λfw | Σ ^ Λ = 0 for
+all (rt) e S} and Br = {(rf) e iϊ w | Σ ^ Λ = 0 for all (a?4) e £ } . If i? is
+commutative, then S r is a submodule of Mn and β r is a submodule of iϋ\
+
+     THEOREM 4.2. Lei R be a commutative, Noetherian, complete, local
+ring, P its maximal ideal, and E — E{R[P). Take a fixed pair Rn, En
+let S be a submodule of Rn and B a submodule of En. Then :
+     ( 1 ) S' = RomR{RnIS, E), and En/Sr ~ RomR(S, E), and S" = S.
+     ( 2 ) Bf = H o m ^ ^ / 5 , E), and Rn\Br ^ Hom Λ (5, E), and B" = S.
+                                                                n     n
+            i / A is α submodule or factor module of either R or Έ , then
+           m^A, E), E) = A. The operation ' is a lattice anti-isomorphism
+of the submodules of Rn and En. Therefore, En has DCC.
+
+      Proof.
+      {1) Rn/S is generated by elements ui9 i = 1,            , n, such that
+(r i )6 5φφΣ^w* = 0 LetfeΉomR(Rn/S,E)       and define φ: ΉomE(Bn/S,E)->S'
+by Φ{f) = (fUi).     Clearly φ is a well-defined ϋMiomomorphism. If
+Φ(f) = 0, then /%Λ = 0 for all i, and so / = 0. Thus φ is one-to-one.
+If (xt) e S', define / : Rn/S^E  by /%< = α?4; and then φ(f) = (xt). Thus
+φ is onto, and so RomR{RnIS, E) = iS'.
+    From the exact sequence :
+                  INJECTIVE MODULES OVER NOETHERIAN RINGS                     527
+
+
+we derive the commutative diagram :
+                                             n
+           0 -> Hom Λ (i?7S, E) -* RomR(R , E) -> HomΛ(S, E)-* 0
+                       I                 I
+                                             w
+           0 -»        S'       ->       #           ->   JS*/S'   -> 0 .
+
+Since E1 is injective, the top row is exact. Of course the bottom row is
+exact, and the vertical maps are isomorphisms. Thus Homjβ(*S, E) ~
+
+     Clearly S c S ^ c Rn. Suppose that (s4) e S", but (s{) $ S. Then
+V = Σ Si%« ^ O e iϊ w /S. Now 0(2/) c P, and so by Proposition 2.8 there
+exists an ίί-homomorphism g : RnjS-> E such that g(y) Φ 0. However,
+S((y) = Σ si9(ud — 0, since (gUi) e Sr. This is a contradiction, and so
+
+      ( 2 ) Let (r4) 6 B ; and (j/') e £ l w . Define Φ \ B -* RomB(EnIB, E) by
+^(^*)[(2/0 + -δ] — Σ riVi- Then (P is a well defined β-homomorphism. If
+φ(r%) = 0, then Σ ^Vt = 0 for all (&) 6 ^ w . Thus rtE = 0 for all i.
+Since iί1 is a faithful i2-module by Theorem 3.7. rt = 0 for all i. Thus
+Φ is one-to-one. Let f e HomR(EnIB, E), and for each i — 1, -, w let
+^ be the ίth component of En. Then the composite mapping : E -> ^ ->
+£"w -» En(Bf -> £" induces an iϋ-endomorphism of £*, and so by Theorem
+3.7 can be realized by multiplication by an element rt e R. Thus if
+(Vi) e En, fl(yt) + B] = Σ rtyt. If fe) e S, then Σ W =/[(a?,) + B] - 0
+and thus (r4) e ί', Clearly φ(rt) = f, and thus 0 is onto. Therefore,
+B - HomΛ(E"IB, E).
+    From the exact sequence :
+                                     n           n
+                            0^B->E -> E IB -* 0
+we derive the commutative diagram :
+
+
+
+         0 -> Hom β (ΐ; w /S, E) -+ KomR(En, E) -» Hom /e (5, E) ~> 0
+
+The top row is exact, the vertical maps are isomorphisms and since E
+is injective, the bottom row is exact. Thus Rn\B' = Hom β (5, E).
+    Clearly B c B" c En. Suppose that (zt) e B'\ but (zt) <£ B. Since
+O((Zi) + B) c P, we can find by Proposition 2.8 an i2-homomorphism
+/ : EnIB~+E       such that f((z) + B) Φ 0. However, f=Φ(ri),               where
+(n) e B'\ and thus f((zt) + B)= Φir^z) + B) = Σ Λ^i = 0, since (s4) 6 S r / .
+This contradiction shows that B — B",
+
+    REMARKS.
+   ( 1 ) It follows easily from Proposition 2.8 that if R is any ring,
+C an injective .β-module which contains a copy of every simple
+528                                EBEN MATLIS
+
+i2-module, and M any R-moάvλe, then M is imbedded in a natural way in
+Hom^Hom^M, C), C). G. Azumaya has also obtained this result [2,
+Prop. 6]. However, his other duality statements concern non-commuta-
+tive rings with minimum conditions on both left and right ideals.
+     ( 2 ) It is easily seen that if R is a commutative, Noetherian ring,
+and C an injective iϋ-module such HoiϊiΛ(HomΛ(A, C), C) = A for every
+cyclic JS-module A, then R is a finite direct sum of complete, local rings
+Rt. And if C4 is the ^-component of C, and P* the maximal ideal of
+Bi9 then C4 = E(BljPi).
+       COROLLARY  4.3. Lβί R be a commutative, Noetherian, complete, local
+ring    P its maximal ideal and E = E(RjP). Then :
+     ( 1 ) Aw R-module M has ACC i / αrcd owίi/ i / it is a homomorphic
+image of Rn for some n.
+     ( 2 ) An R-module M has DCC if and only if it is a submodule of
+En for some n.
+     ( 3 ) If X, Y are the categories of R-modules with ACC and DCC,
+respectively, then the contravariant, exact functor Hom^ , E) establishes
+a one-to-one correspondence Xt-> Y. In particular, Hom i2 (Hom jR (lί,£'), E=M
+for M in either category.
+
+    Proof.
+    ( 1 ) This is true for any left-Noetherian ring.
+    ( 2 ) By Theorem 4.2 every submodule of En has DCC. On the
+other hand let M be a module with DCC. By Proposition 4.1 E(M) =
+Ciφ       φ C n , where the C/s are indecomposable, injective iϋ-modules.
+Let x Φ 0 6 M. Then there exists an integer j such that P3x = PJ+1x,
+and so Pj c O(x) + Pj+\     This implies that Pj c O(x) [8, Prop. 4.2.1]
+and thus O(x) is a P-primary ideal. It follows from Lemma 3.2 (1) that
+Ci~E     for i = 1, ••, n.
+    ( 3 ) This follows immediately from (1), (2), and Theorem 4.2.
+
+                                   REFERENCES
+1. G. Azumaya, Corrections and supplementaries to my paper concerning Krull-Remak-
+Schmidfs theorem, Nagoya Math. 1 (1950), 117-124.
+2.          , Λ duality theory for injective modules, (forthcoming).
+3. H. Cartan and S. Eilenberg, Homological algebra, Princeton University Press, 1956.
+4. B. Eckmann and A. Schopf, Uber injective Moduln, Arch. Math., 4 (1953), 75-78.
+5. I. Kaplansky, Infinite Abelian groups, University of Michigan Press, 1954.
+6. Y. Kawada, K. Morita, and H. Tachikawa, On injective modules, Math. Z. 68, (1957),
+216-226.
+7. H. Nagao and T. Nakayama, On the structure of (MQ) and (Mu) modules, Math. Z.
+59 (1953), 164-170.
+8. D. Northcott, Ideal theory, Cambridge University Press, 1953.
+9. A. Rosenberg and D. Zelinsky, Finiteness of the injective hull, (forthcoming).
+UNIVERSITY OF CHICAGO
+                  PACIFIC JOURNAL OF MATHEMATICS
+                                          EDITORS
+DAVID GILBARG                                             A.   L.   WHITEMAN
+Stanford University                                      University of Southern California
+Stanford, California                                     Los Angeles 7, California
+
+R. A.   BEAUMONT                                         E. G.      STRAUS
+University of Washington                                 University of California
+Seattle 5, Washington                                    Los Angeles 24, California
+
+
+                                  ASSOCIATE EDITORS
+E. F. BECKENBACH           A. HORN                        L. NACHBIN            M. M. SCHIFFER
+C. E. BURGESS              V. GANAPATHY IYER              I. NIVEN              G. SZEKERES
+M. HALL                    R. D. JAMES                    T. G. OSTROM          F. WOLF
+E. HEWITT                  M. S. KNEBELMAN                H. L. ROYDEN          K. YOSIDA
+
+
+                             SUPPORTING INSTITUTIONS
+UNIVERSITY OF BRITISH COLUMBIA                     STANFORD UNIVERSITY
+CALIFORNIA INSTITUTE OF TECHNOLOGY                 UNIVERSITY OF UTAH
+UNIVERSITY OF CALIFORNIA                           WASHINGTON STATE COLLEGE
+MONTANA STATE UNIVERSITY                           UNIVERSITY OF WASHINGTON
+UNIVERSITY OF NEVADA                                    *      *     *
+OREGON STATE COLLEGE                               AMERICAN MATHEMATICAL SOCIETY
+UNIVERSITY OF OREGON                               CALIFORNIA RESEARCH CORPORATION
+UNIVERSITY OF SOUTHERN CALIFORNIA                  HUGHES AIRCRAFT COMPANY
+                                                   THE RAMO-WOOLDRIDGE CORPORATION
+
+    Mathematical papers intended for publication in the Pacific Journal of Mathematics should
+be typewritten (double spaced), and the author should keep a complete copy. Manuscripts may
+be sent to any of the editors. All other communications to the editors should be addressed to
+the managing editor, E. G. Straus at the University of California, Los Angeles 24, California.
+    50 reprints per author of each article are furnished free of charge; additional copies may be
+obtained at cost in multiples of 50.
+
+    The Pacific Journal of Mathematics is published quarterly, in March, June, September, and
+December. The price per volume (4 numbers) is $12.00; single issues, $3.50. Back numbers
+are available. Special price to individual faculty members of supporting institutions and to
+individual members of the American Mathematical Society: $4.00 per volume; single issues,
+$1.25.
+    Subscriptions, orders for back numbers, and changes of address should be sent to Pacific
+Journal of Mathematics, 2120 Oxford Street, Berkeley 4, California.
+    Printed at Kokusai Bunken Insatsusha (International Academic Printing Co., Ltd.), No. 6,
+2-chome, Fujimi-cho, Chiyoda-ku, Tokyo, Japan.
+
+  PUBLISHED BY PACIFIC JOURNAL OF MATHEMATICS, A NON-PROFIT CORPORATION
+    The Supporting Institutions listed above contribute to the cost of publication of this Journal,
+but they are not owners or publishers and have no responsibility for its content or policies.
+                                Pacific Journal of Mathematics
+                                Vol. 8, No. 3                                        May, 1958
+
+Michael Israel Aissen, A set function defined for convex plane domaines . . . .                                                    383
+Robert Ellis, Distal transformation groups . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                             401
+Ciprian Foias, On a commutative extension of a commutative Banach
+     algebra . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     407
+Jerry William Gaddum, Linear inequalities and quadratic forms . . . . . . . . . . .                                                411
+Allen A. Goldstein and Elliott Ward Cheney, Jr., A finite algorithm for the
+     solution of consistent linear equations and inequalities and for the
+     Tchebycheff approximation of inconsistent linear equations . . . . . . . . . . .                                              415
+William L. Hart and T. S. Motzkin, Proof of the fundamental theorem on
+     implicit functions by use of composite gradient corrections . . . . . . . . . . .                                             429
+Henry Berge Helson, Conjugate series and a theorem of Paley . . . . . . . . . . . .                                                437
+Wu-Chung Hsiang, Abelian groups characterized by their independent
+     subsets . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   447
+John W. Lamperti, On the isometries of certain function-spaces . . . . . . . . . . .                                               459
+Karel DeLeeuw and Walter Rudin, Extreme points and extremum problems
+     in H1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   467
+Eugene Lukacs, Some extensions of a theorem of Marcinkiewicz . . . . . . . . . . .                                                 487
+George W. Mackey, Multiplicity free representations of finite groups . . . . . . .                                                 503
+Eben Matlis, Injective modules over Noetherian rings . . . . . . . . . . . . . . . . . . . .                                       511
+John William Neuberger, Continuous products and nonlinear integral
+     equations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     529
+Lawrence Edward Payne and Hans F. Weinberger, New bounds for solutions
+     of second order elliptic partial differential equations . . . . . . . . . . . . . . . . .                                     551
+William T. Reid, A Prüfer transformation for differential systems . . . . . . . . . .                                              575
+Howard L. Rolf, The free lattice generated by a set of chains . . . . . . . . . . . . . .                                          585
+K. M. Saksena, Inversion and representation theorems for a generalized
+     Laplace integral . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .          597
+Daniel Shanks, Two theorems of Gauss . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                           609
+Paul Slepian, On the Lebesgue area of a doubled map . . . . . . . . . . . . . . . . . . . .                                        613
+Otto Szász and Nelson Paul Yeardley, Jr., The representation of an analytic
+     function by general Laguerre series . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                           621
+Alan C. Woods, On two-dimensional convex bodies . . . . . . . . . . . . . . . . . . . . . .                                        635
+

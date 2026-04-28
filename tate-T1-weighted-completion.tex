@@ -1,16 +1,29 @@
 % Weighted Tate completion of the coefficient pair
 % (\widehat{\mathfrak h}, \widehat{\mathfrak h}^\vee_{\mathrm{cont}})
 % compatible with the Costello heat-kernel BV calculus on
-% \R^2\times\C^2 with brane defect \R\times p. Addresses
+% \R^2\times\C^2 with brane defect L=\R_{\mathrm{brane}}\times\{0\}\times\{p\}. Addresses
 % Lemma~\ref{lem:tate-casimir-obstruction} and
 % Problem~\ref{prob:tate-coefficient-descendant-lift} of the parent
 % manuscript via a graded Mittag-Leffler completion in the polynomial
-% Hamiltonian degree, with weight w(d)=q^d. Status: the cochain
-% identity closes; the BV graph realization closes conditionally on
-% Problem~\ref{prob:weighted-rg-locality}, the Costello-locality
-% compatibility for the weighted heat-kernel counterterms.
+% Hamiltonian degree. Status: the cochain identity and finite-scale
+% coefficient kernel close in the weighted coefficient category. The
+% BV graph realization remains conditional on the Costello-locality /
+% QME obstruction class for the mixed brane-defect theory.
 
 \section*{Weighted Tate completion of the coefficient pair}
+
+\paragraph{Status.}
+The weighted coefficient category proves the Casimir, finite-window
+Mittag-Leffler, heat-kernel, and classical cochain statements below.
+Renormalization-flow compatibility is asserted graph by graph at finite
+scale for polynomial-degree-bounded vertices.  Any quantum descendant
+comparison is conditional on the weighted Costello-locality/QME
+obstruction in Problem~\ref{prob:weighted-rg-locality}.  No
+regulator-independence theorem is asserted for the original unweighted
+product/direct-sum Tate pair.  The only regulator-independence theorem
+proved below is independence of the chosen admissible weight inside the
+finite-window Mittag-Leffler sector; it is not an equivalence with the
+strict product/direct-sum theory.
 
 \subsection*{Diagnosis}
 
@@ -52,7 +65,7 @@
   $P_{\epsilon,L}$ on a free elliptic complex
   $(\mathcal E,Q,\langle\,,\,\rangle)$ is the kernel of the operator
   $\int_\epsilon^L Q^{\mathrm{GF}}e^{-tD}dt$ in
-  $\mathcal E\widehat\otimes\mathcal E$ \cite[Ch.~5]{costello-renormalization}.
+  $\mathcal E\widehat\otimes\mathcal E$ \cite{costello-renormalization}*{Ch.~5}.
   When the field complex factors as
   \begin{equation}\label{eq:wt-field-factor}
     \mathcal E=\Omega^\bullet(\R^2)\widehat\otimes
@@ -68,7 +81,7 @@
   \end{equation}
   where the spacetime piece $P_{\epsilon,L}^{\mathrm{base}}$ on
   $\Omega^\bullet(\R^2)\widehat\otimes\Omega^{0,\bullet}(\C^2)$ is the
-  standard heat-kernel BV inverse on the bulk (Costello, op.\ cit., \S5.6),
+  standard heat-kernel BV inverse on the bulk (Costello, op.\ cit., Ch.~5),
   and the coefficient piece is the BV inverse pairing on
   $\widehat{\mathfrak h}\oplus\widehat{\mathfrak h}^\vee_{\mathrm{cont}}[1]$.
   By Remark~\ref{rmk:linear-heat-versus-bv-kernel}, the spacetime piece
@@ -99,8 +112,12 @@
       completed coefficient category as its target.
   \end{enumerate}
   The strict Tate pair \eqref{eq:wt-strict-tate-pair} fails
-  \ref{costello:CC1}; the present subsection repairs it by a weighted
-  Mittag-Leffler completion that satisfies all three.
+  \ref{costello:CC1}; the subsection below repairs the coefficient
+  kernel and the finite-scale propagator by a weighted
+  Mittag-Leffler completion.  Requirement~\ref{costello:CC3} is not a
+  formal consequence of the coefficient change; it is the residual
+  locality/QME problem isolated in
+  Problem~\ref{prob:weighted-rg-locality}.
 \end{rmk}
 
 \subsection*{Weighted Tate completion: definition}
@@ -112,98 +129,95 @@
     \item\label{w:W1} \emph{Bracket-tame:} there exists a constant
       $C_w\geq 0$ such that
       $w(p+q-2)\leq C_w\,w(p)w(q)$ for every $p,q\geq2$;
-    \item\label{w:W2} \emph{Coadjoint-tame:} there exists a constant
-      $C'_w\geq 0$ such that, for every $p,q\geq 1$ and every degree
-      pair $(a,b)\in\Z_{\geq 0}^2$ with $a\geq p-1$, $b\geq q-1$, the
-      output-versus-input weight ratio of the principal-part coadjoint
-      shift $\rho_{a,b}\mapsto\rho_{a-p+1,b-q+1}$ obeys
-      $w(a+b-p-q+2)\leq C'_w\,w(p+q)\,w(a+b)^{-1}$;
-    \item\label{w:W3} \emph{Coevaluation-summable:} the formal series
-      \begin{equation}\label{eq:wt-coevaluation-summable}
-        \sum_{d\geq1}w(d)^{-1}\dim_\C H_d
-      \end{equation}
-      converges as a Mittag-Leffler inverse system, i.e.\ for every
-      $w_0\in\Z_{\geq1}$ the partial sum truncated at $d\leq w_0$ is a
-      compatible system whose limit lies in a strict Mittag-Leffler
-      tower of finite-dimensional vector spaces.
+    \item\label{w:W2} \emph{Windowwise coadjoint-continuity:} for every
+      Hamiltonian degree bound $R$ and every output Tate window
+      $w_0$, the principal-part coadjoint shifts
+      $\rho_{a,b}\mapsto\rho_{a-p+1,b-q+1}$ with $p+q\leq R$ and
+      $a+b-p-q+2\leq w_0$ involve only the finite input window
+      $a+b\leq w_0+R-2$, and the finitely many corresponding weight
+      ratios have a maximum;
+    \item\label{w:W3} \emph{Mittag-Leffler coevaluation:} for each
+      $w_0$ the finite-window Casimir
+      $\sum_{d\leq w_0}\sum_i w(d)e_{d,i}\otimes w(d)^{-1}e^i_d$
+      is compatible under the surjective truncation maps
+      $w_0'\to w_0$. Equivalently, the coefficient kernel is a strict
+      Mittag-Leffler inverse system of finite-dimensional kernels.
   \end{enumerate}
 \end{defn}
 
 \begin{lem}[Existence of weights]\label{lem:wt-weights-exist}
-  Every weight of the form $w(d)=q^d$ with $q>1$ a real parameter
-  satisfies \ref{w:W1}--\ref{w:W3}. Every weight of the form
-  $w(d)=(d!)^c$ with $c>0$ satisfies \ref{w:W1}--\ref{w:W2} but only
-  satisfies \ref{w:W3} after restriction to a degree truncation.
+  Every exponential weight $w(d)=q^d$ with $q>1$ satisfies
+  \ref{w:W1}--\ref{w:W3}.  The proof uses only finite-window maxima
+  for the coadjoint action; there is no uniform bound in the
+  unbounded principal-part degree.
 \end{lem}
 
 \begin{proof}
   For $w(d)=q^d$, \ref{w:W1} reads $q^{p+q-2}\leq C_w q^{p+q}$, i.e.\
-  $C_w\geq q^{-2}$. \ref{w:W2} reads
-  $q^{a+b-p-q+2}\leq C'_w\,q^{p+q-a-b}$, i.e.\
-  $C'_w\geq q^{2(a+b-p-q)+2}$. The coadjoint range
-  $a\geq p-1$, $b\geq q-1$ gives $a+b\geq p+q-2$, hence the exponent
-  $2(a+b-p-q)+2\geq -2$ and $C'_w\geq q^{-2}$ suffices uniformly in
-  $(p,q,a,b)$. \ref{w:W3} is the convergence
-  $\sum_d q^{-d}\dim H_d=\sum_d q^{-d}(d+1)<\infty$ for $q>1$.
-
-  For $w(d)=(d!)^c$, \ref{w:W1} is the Stirling estimate
-  $((p+q-2)!)^c\leq C_w(p!)^c(q!)^c$, which holds because
-  $(p+q-2)!\leq(p+q)!\leq C\binom{p+q}{p}^{-1}p!q!\cdot\mathrm{poly}$
-  for an explicit polynomial bound in $p+q$, hence after multiplying
-  by a sub-exponential factor. \ref{w:W2} similarly holds. But
-  \ref{w:W3} fails: $\sum_d(d!)^{-c}\dim H_d$ does converge, but the
-  Mittag-Leffler tower of finite-dimensional truncations is not
-  inverse-flat at every level for $c<1$.
+  $C_w=q^{-2}$ suffices.  For \ref{w:W2}, fix $R$ and $w_0$.  If
+  $p+q\leq R$ and the output degree is
+  $a+b-p-q+2\leq w_0$, then $a+b\leq w_0+R-2$.  Hence the set of
+  possible triples $(p,q,a+b)$ is finite, and the corresponding
+  ratios of powers of $q$ admit a finite maximum.  No bound independent
+  of $a+b$ is asserted; the earlier uniform inequality would be false.
+  Condition~\ref{w:W3} is the strict Mittag-Leffler compatibility of
+  finite-window Casimirs under truncation.  The transition maps are
+  surjective, hence the system is Mittag-Leffler.
 \end{proof}
 
-\begin{rmk}[Choice of weight]\label{rmk:wt-canonical-weight}
-  We adopt the exponential weight $w(d)=q^d$ throughout, with $q>1$
+\begin{rmk}[Choice of exponential weight]\label{rmk:wt-canonical-weight}
+  The exponential weight $w(d)=q^d$ is the working choice, with $q>1$
   formally an element of $\R_{>0}$ and concretely set to $q=2$ for
-  the proofs below. The choice $q^d$ is the Hamiltonian degree-grade
-  rescaling natural for the formal symplectic disk: under the
-  rescaling $z_i\mapsto q^{1/2}z_i$, the Hamiltonian $f\in H_d$ scales
-  by $q^{d/2}$, the dual $\eta_\lambda\in H_d^\vee$ by $q^{-d/2}$, and
-  the Casimir contribution $e_{d,i}\otimes e^i_d$ is invariant. Thus
-  $q^d$ is a degree-grading rescaling of the Hamiltonian itself, not
-  an extraneous analytic damping. This is the natural geometric
-  weight of the formal disk (cf.\ Beilinson--Drinfeld, \emph{Chiral
-  Algebras}, AMS 2004, on Tate weight systems for chiral
-  factorization).
+  the proofs below. The choice is a grading weight on the coefficient
+  module, not a symplectic automorphism of the formal disk.  Thus the
+  Poisson bracket and the counterterm representatives are compared
+  between two weights only after transport by the diagonal map
+  \(R_{w,w'}\) below.  In coordinates, the bracket constants in the
+  basis \(w(d)e_{d,i}\) are conjugated by the finite ratios
+  \(w(p)w(q)/w(p+q-2)\), and condition~\ref{w:W1} is exactly the
+  boundedness condition needed for this transported bracket on each
+  finite graph.  The weight is therefore a controlled coefficient
+  regulator, not an assertion that rescaling the variables
+  \(z_1,z_2\) preserves the original Hamiltonian bracket.
 \end{rmk}
 
 \begin{defn}[Weighted Tate coefficient pair]\label{defn:wt-coefficient-pair}
   Given a degree weight $w$ as in
-  Definition~\ref{defn:wt-degree-weight}, define
+  Definition~\ref{defn:wt-degree-weight}, write $H_d^{(w)}$ for the
+  rescaled copy of the finite-dimensional degree piece
+  $H_d$ with basis $w(d)e_{d,i}$, and
+  $(H_d^\vee)^{(w^{-1})}$ for the rescaled dual basis
+  $w(d)^{-1}e^i_d$.  Define
   \begin{equation}\label{eq:wt-h-defn}
     \mathfrak h_w=\varprojlim_{w_0\in\Z_{\geq1}}\,
-      \prod_{d=1}^{w_0}w(d)\cdot H_d
-      =\Bigl\{\bigl(f_d\bigr)_d\in\prod_{d\geq1}H_d\,\Bigm|\,
-        \sup_d w(d)\|f_d\|<\infty\Bigr\}
+      \prod_{d=1}^{w_0}H_d^{(w)}
   \end{equation}
   with the Tate filtration $F^{w_0}\mathfrak h_w=\ker(\mathfrak h_w\to
-  \prod_{d\leq w_0}H_d)$, and define the \emph{weighted continuous
-  dual}
+  \prod_{d\leq w_0}H_d^{(w)})$, and define the \emph{weighted
+  coefficient dual}
   \begin{equation}\label{eq:wt-hvee-defn}
     \mathfrak h^{\vee,w}_{\mathrm{cont}}=
       \varprojlim_{w_0\in\Z_{\geq1}}\,
-      \prod_{d=1}^{w_0}w(d)^{-1}\cdot H_d^\vee.
+      \prod_{d=1}^{w_0}(H_d^\vee)^{(w^{-1})}.
   \end{equation}
-  Both spaces are objects of $\mathbf{TateVec}$ in the sense of
-  Lemma~\ref{lem:continuous-bar-cobar}. The weighted Tate
-  coefficient pair is $(\mathfrak h_w,\mathfrak h^{\vee,w}_{\mathrm{cont}})$.
+  The pairing is fixed degreewise by
+  $\langle w(d)^{-1}e^i_d,w(d)e_{d,j}\rangle=\delta^i_j$.
+  The weighted Tate coefficient pair is
+  $(\mathfrak h_w,\mathfrak h^{\vee,w}_{\mathrm{cont}})$.  The second
+  factor is a product coefficient module, not the strict continuous
+  dual of the first product Tate space.
 \end{defn}
 
 \begin{rmk}[Topological content]\label{rmk:wt-topology-content}
   Both $\mathfrak h_w$ and $\mathfrak h^{\vee,w}_{\mathrm{cont}}$ are
   Mittag-Leffler inverse limits of finite-dimensional Tate windows,
   and both are products in the degree direction. The two are no
-  longer in strict Tate duality (one product, one direct sum); they
-  are now in \emph{symmetric Tate duality}, both products, with the
-  pairing summing over a strict Mittag-Leffler tower of finite-
-  dimensional pairings. This is precisely the symmetric Tate setup of
-  Beilinson--Drinfeld \cite{beilinson-drinfeld-chiral}, in which
-  Casimirs of bilinear forms exist as elements of the completed
-  tensor product.
+  longer in strict Tate duality (one product, one direct sum); the
+  point is precisely to replace the direct-sum dual by a symmetric
+  Mittag-Leffler product coefficient module.  This is an additional
+  coefficient category for the BV kernel.  It does not identify
+  $\mathfrak h^{\vee,w}_{\mathrm{cont}}$ with the ordinary continuous
+  dual of $\mathfrak h_w$.
 \end{rmk}
 
 \begin{prop}[Casimir convergence]\label{prop:wt-casimir-convergence}
@@ -281,11 +295,13 @@
     \item Costello regularity \ref{costello:CC2}: the family is
       continuous in $(\epsilon,L)$ in the weighted Tate topology;
     \item the limit $L\to\infty$, $\epsilon\to0^+$ exists as a
-      distributional kernel after the spacetime counterterm
-      subtraction of \cite[\S5.7]{costello-renormalization}, the
-      coefficient direction needing no further counterterm because
-      $C_{\mathfrak h,w}$ is already a finite element of the weighted
-      pair.
+      distributional kernel after the standard spacetime counterterm
+      subtraction in Costello's heat-kernel RG package
+      \cite{costello-renormalization}*{Chs.~5--7}; the coefficient
+      direction introduces no additional spacetime singular support.
+      Locality and QME counterterm compatibility for the mixed
+      brane-defect theory remain the content of
+      Problem~\ref{prob:weighted-rg-locality}.
   \end{enumerate}
 \end{prop}
 
@@ -299,7 +315,7 @@
   weight on the coefficient direction; it is the Costello heat-kernel
   inverse on the bulk free elliptic complex
   $\Omega^\bullet(\R^2)\widehat\otimes\Omega^{0,\bullet}(\C^2)$,
-  constructed in \cite[\S5.6]{costello-renormalization}. The BV
+  constructed in \cite{costello-renormalization}*{Ch.~5}. The BV
   identity for $P_{\epsilon,L}^{\mathrm{base}}$ is standard: with
   $Q^{\mathrm{base}}=d_{\R^2}+\bar\partial_{\C^2}$, gauge-fixing
   $Q^{\mathrm{GF}}=d_{\R^2}^*+\bar\partial_{\C^2}^*$, and the
@@ -318,14 +334,18 @@
   $[Q,P_{\epsilon,L}^{w}]=K_\epsilon^{w}-K_L^{w}$, and the family is
   continuous in $(\epsilon,L)$ because $C_{\mathfrak h,w}$ is a fixed
   element of the weighted pair and the bulk family is continuous.
-  Item~(3) is the Costello bulk regularity statement
-  \cite[Thm.~5.0.1]{costello-renormalization} together with the
-  observation that the coefficient direction has no scale parameter
-  and contributes no counterterm.
+  Item~(3), at the level asserted here, is the Costello bulk
+  regularity package \cite{costello-renormalization}*{Chs.~5--7}
+  tensored with a fixed coefficient kernel. This proves finite-scale
+  kernel regularity and absence of new coefficient wave-front
+  directions. It does not by itself prove vanishing of the
+  brane-defect QME obstruction classes.
 \end{proof}
 
 \begin{rmk}[Brane defect]\label{rmk:wt-brane-defect}
-  The brane defect $\R\times p\subset\R^2\times\C^2$ pulls the
+  The brane defect
+  \(L=\R_{\mathrm{brane}}\times\{0\}\times\{p\}
+  \subset\R^2\times\C^2\) pulls the
   weighted field complex $\mathcal E_w$ to its restriction along the
   defect:
   $$\mathcal E_w^{\partial}=\Omega^\bullet(\R)\widehat\otimes\bigl(
@@ -347,75 +367,77 @@ The Costello RG flow on effective interactions is the assignment
 $I_L=W(P_{\epsilon,L},I)$ that converts a local interaction $I$ at scale
 $\epsilon$ into the effective interaction at scale $L$, where $W$ is
 the homotopy renormalization group action on functionals
-\cite[Ch.~6]{costello-renormalization}. For the weighted route to
+\cite{costello-renormalization}*{Ch.~6}. For the weighted mechanism to
 satisfy Costello requirement~\ref{costello:CC3}, the RG flow on
 $\mathcal E_w$-valued interactions must preserve the weighted
 coefficient module: starting from a polynomial-degree-bounded
 interaction in $\mathcal O(\mathcal E_w)$, the effective interaction
 $I_L$ must remain in the same weighted category.
 
-\begin{prop}[RG-tame interactions]\label{prop:wt-rg-tame}
+\begin{prop}[Graphwise RG-tame interactions]\label{prop:wt-rg-tame}
   Let $I\in\mathcal O_{\mathrm{loc}}(\mathcal E_w)$ be a local
   interaction polynomial in the fields, of total polynomial-degree
-  bounded by $D_0$ in the coefficient direction. Then for every
-  $0<\epsilon\leq L<\infty$, the effective interaction
-  $I_L=W(P_{\epsilon,L}^{w},I)$ is polynomial of total polynomial-degree
-  bounded by $D_0$, and the bracket-tame estimate \ref{w:W1} on the
-  weight $w$ implies that each individual graph contribution to
-  $I_L$ is bounded in the weighted Tate norm by a finite constant
-  times the corresponding spacetime graph weight.
+  bounded by $D_0$ at each vertex in the coefficient direction.  For
+  every fixed Costello graph $\Gamma$ and every
+  $0<\epsilon\leq L<\infty$, the graph contribution
+  $W_\Gamma(P_{\epsilon,L}^{w},I)$ has finite coefficient degree
+  bounded by $D_0V(\Gamma)-2E(\Gamma)$ and lies in the weighted
+  completed coefficient category.  The bracket-tame estimate
+  \ref{w:W1}, together with the finite-window coadjoint condition
+  \ref{w:W2}, bounds this single graph by a finite constant times the
+  corresponding spacetime graph weight.
 \end{prop}
 
 \begin{proof}
-  The interaction $I$ has bounded polynomial degree $D_0$ in the
-  coefficient direction by hypothesis. A connected Costello graph
+  The interaction $I$ has bounded polynomial degree $D_0$ at each
+  vertex in the coefficient direction by hypothesis. A connected Costello graph
   $\Gamma$ with $V$ vertices, each of polynomial degree $\leq D_0$,
   and $E$ internal edges, contributes a coefficient
-  pairing of length at most $V\cdot D_0$ in the source factor and a
-  matching length in the target. By the bracket-tame estimate
-  \ref{w:W1}, each internal edge contraction
+  pairing of external length at most $V\cdot D_0-2E$ in the source
+  factor and a matching length in the target. By the bracket-tame
+  estimate \ref{w:W1}, each internal edge contraction
   $C_{\mathfrak h,w}\colon
   \mathfrak h_w\widehat\otimes\mathfrak h^{\vee,w}_{\mathrm{cont}}\to\C$
-  decreases the total weight by at most $C_w$. Hence the total weight
-  of the graph contribution is bounded by $C_w^E$ times the spacetime
-  graph weight. The polynomial degree of $I_L$ is bounded by the
-  total polynomial degree of $I$ at each vertex (since the propagator
-  pairs one input to one output), which is $\leq D_0$.
+  changes the total weight by at most the finite constant attached to
+  the degrees present in that graph.  Coadjoint legs are controlled
+  windowwise by \ref{w:W2}.  Hence the graph contribution is a
+  well-defined element of the weighted completion.  No assertion is
+  made that the full effective interaction preserves the original
+  degree bound $D_0$; Costello's expansion is a completed sum over
+  graph degrees.
 \end{proof}
 
-\begin{thm}[Weighted RG flow compatibility]\label{thm:wt-rg-compatibility}
+\begin{thm}[Weighted RG flow, graphwise compatibility]\label{thm:wt-rg-compatibility}
   Let $w$ be a degree weight as in
   Definition~\ref{defn:wt-degree-weight} and let
   $I\in\mathcal O_{\mathrm{loc}}(\mathcal E_w)$ be a local
-  interaction satisfying the polynomial-degree bound $D_0$. The
-  Costello RG flow
+  interaction satisfying a vertexwise polynomial-degree bound $D_0$.
+  Each fixed graph contribution to the Costello RG flow
   $$I_L=W(P_{\epsilon,L}^{w},I)$$
-  preserves the weighted Tate completion at every scale: the source
-  $I_\epsilon$ and target $I_L$ both lie in
-  $\mathcal O_{\mathrm{loc}}(\mathcal E_w)\cap\{\text{degree}\leq D_0\}$,
-  and the flow is continuous in $(\epsilon,L)$ in the weighted Tate
-  topology.
+  lies in the weighted Tate completion and is continuous in
+  $(\epsilon,L)$.  The theorem is graphwise.  The completed sum over
+  counterterms and the QME obstruction class require the locality
+  input of Problem~\ref{prob:weighted-rg-locality}.
 \end{thm}
 
 \begin{proof}
   By Proposition~\ref{prop:wt-rg-tame}, every Feynman diagram
-  contributing to the homotopy RG flow remains in the weighted Tate
-  category. The bound on polynomial degree is preserved: the
-  Costello flow is degree-preserving on the polynomial-degree
-  filtration of $\mathcal O_{\mathrm{loc}}$ because internal
-  contractions reduce the joint polynomial degree by exactly $2$ per
-  edge, and external legs are degree-conserving. Continuity in
-  $(\epsilon,L)$ follows from
-  Proposition~\ref{prop:wt-propagator-extends}~(2).
+  considered individually remains in the weighted Tate category.  Its
+  finite coefficient-degree bound is
+  $D_0V(\Gamma)-2E(\Gamma)$, and continuity in $(\epsilon,L)$ follows
+  from Proposition~\ref{prop:wt-propagator-extends}~(2).  Passing from
+  graphwise well-definedness to a renormalized QME solution is
+  precisely the residual analytic problem.
 \end{proof}
 
 \subsection*{Cotangent-lift theorem}
 
-\begin{thm}[Cotangent-lift in the weighted Tate completion]\label{thm:wt-cotangent-lift}
-  Let $w(d)=q^d$ with $q>1$ be the canonical degree weight of
+\begin{thm}[Cotangent-lift inside the weighted coefficient category]\label{thm:wt-cotangent-lift}
+  Let $w(d)=q^d$ with $q>1$ be the exponential degree weight of
   Remark~\ref{rmk:wt-canonical-weight}. Then in the weighted Tate
   coefficient pair $(\mathfrak h_w,\mathfrak h^{\vee,w}_{\mathrm{cont}})$
-  of Definition~\ref{defn:wt-coefficient-pair} the following hold:
+  of Definition~\ref{defn:wt-coefficient-pair} the following internal
+  weighted-category statements hold:
   \begin{enumerate}[label=(\alph*)]
     \item the Casimir
       $C_{\mathfrak h,w}=\sum_d\sum_i w(d)e_{d,i}\otimes
@@ -428,29 +450,18 @@ $I_L$ must remain in the same weighted category.
       $\mathcal E_w$ as a continuous family in $(\epsilon,L)$
       satisfying the BV identity
       (Proposition~\ref{prop:wt-propagator-extends});
-    \item the Costello RG flow preserves the weighted category
-      on polynomial-degree-bounded interactions
+    \item each fixed Costello graph contribution preserves the
+      weighted category on vertexwise polynomial-degree-bounded
+      interactions
       (Theorem~\ref{thm:wt-rg-compatibility});
     \item the cochain-level $\Phi$ of
       Theorem~\ref{thm:open-closed-derived-center} extends to the
       weighted cotangent extension $\mathfrak g_w=\mathfrak h_w\ltimes
       \mathfrak h^{\vee,w}_{\mathrm{cont}}[1]$ as a continuous
-      $P_0$-algebra cochain map
+      $P_0$-algebra cochain map in the weighted coefficient envelope
       $$\Phi^w\colon C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g_w)
         \to\mathrm{PV}\bigl(\widehat{\mathbf S}_{\mathrm{Tate}}(
         \mathfrak h_w)\bigr);$$
-    \item the all-order quantum derived-center isomorphism
-      $\Phi_\hbar^{(0)}$ of Theorem~\ref{thm:phi-hbar-all-order}
-      extends to the weighted cotangent direction at all orders in
-      $\hbar$ as a continuous $\C[[\hbar]]$-linear cochain map
-      $$\Phi_\hbar^{w}\colon C^\bullet_{\mathrm{CE},\mathrm{cont}}\bigl(
-        \mathfrak h_{w,\hbar}\ltimes\mathfrak h^{\vee,w}_{\hbar,\mathrm{cont}}[1]
-        \bigr)[[\hbar]]
-        \xrightarrow{\sim}
-        Z^{P_{0,\hbar}}_{\mathrm{fact}}\bigl(\mathrm{Obs}^\hbar_{\mathrm{open}}
-        \bigr)|_{\mathfrak g_w},$$
-      provided the Costello-locality compatibility identity of
-      Problem~\ref{prob:weighted-rg-locality} below holds.
   \end{enumerate}
 \end{thm}
 
@@ -466,97 +477,354 @@ $I_L$ must remain in the same weighted category.
   $\mathfrak h$ together with its dual $\mathfrak h^\vee[1]$. The
   identity is preserved under any rescaling of the bases by an
   invertible weight, so it descends to the weighted pair. The
-  $P_0$-algebra structure on the source is the continuous CE cochain
-  $P_0$-algebra structure of
-  Lemma~\ref{lem:continuous-bar-cobar} adapted to the weighted pair
-  via the symmetric Tate duality of
-  Remark~\ref{rmk:wt-topology-content}; on the target, the Schouten
+  $P_0$-algebra structure on the source is the CE cochain
+  $P_0$-algebra structure formed in the weighted coefficient
+  envelope; this is not the strict continuous duality statement of
+  Lemma~\ref{lem:continuous-bar-cobar} for a product/direct-sum Tate
+  pair.  The needed dual generators are inserted by the symmetric
+  Mittag-Leffler coefficient pairing of
+  Remark~\ref{rmk:wt-topology-content}. On the target, the Schouten
   bracket descends to the weighted symmetric algebra by
   \ref{w:W2}.
 
-  Item~(e) requires both the cochain identity of (d) and the BV
-  graph realization of $\Phi_\hbar$ on the cotangent direction at
-  all orders in $\hbar$. The cochain identity is the algebraic
-  content; it lifts to the weighted setting as in (d). The BV graph
-  realization decomposes the cotangent action $\mathrm{ad}^\vee$
-  into Costello graphs in $\mathcal E_w$. By
-  Theorem~\ref{thm:wt-rg-compatibility}, every such graph remains in
-  the weighted category. The remaining issue is the
-  \emph{cancellation} between Costello-locality counterterms and the
-  bulk-boundary kernel at the brane defect: this is the standard
-  Costello QME at scale $L$, applied to the weighted module. The
-  QME holds on the strict Tate pair after counterterm subtraction
-  (Costello, op.\ cit., \S6); it lifts to the weighted pair if the
-  counterterm structure is compatible with the weight, which is the
-  content of Problem~\ref{prob:weighted-rg-locality}.
+  No all-order QME or regulator-independent statement is part of this
+  theorem; the quantum assertion is separated in
+  Proposition~\ref{prop:wt-conditional-qme-lift}.
+\end{proof}
+
+\begin{prop}[Conditional weighted QME lift]\label{prop:wt-conditional-qme-lift}
+  Assume the Costello-locality/QME compatibility identity of
+  Problem~\ref{prob:weighted-rg-locality}: the finite-window
+  counterterm system for the mixed brane-defect interaction has
+  vanishing obstruction class and is compatible with the weighted
+  coefficient category.  Under this assumption, the formal quantum
+  derived-center map $\Phi_\hbar^{(0)}$ governed by
+  Theorem~\ref{thm:phi-hbar-all-order} has a weighted-continuous
+  cotangent extension
+  $$\Phi_{\hbar,\mathrm{cond}}^{w}\colon
+    C^\bullet_{\mathrm{CE},\mathrm{cont}}\bigl(
+    \mathfrak h_{w,\hbar}\ltimes
+    \mathfrak h^{\vee,w}_{\hbar,\mathrm{cont}}[1]\bigr)[[\hbar]]
+    \xrightarrow[\mathrm{conditional\ QME}]{\sim}
+    Z^{P_{0,\hbar}}_{\mathrm{fact}}\bigl(
+    \mathrm{Obs}^\hbar_{\mathrm{open}}\bigr)|_{\mathfrak g_w}.$$
+  The displayed isomorphism is a theorem only in this conditional
+  weighted-continuous sector.  It is not an unconditional all-order
+  lift for the original unweighted Tate pair.
+\end{prop}
+
+\begin{proof}
+  The algebraic cochain identity is supplied by
+  Theorem~\ref{thm:wt-cotangent-lift}.  The BV graph realization
+  decomposes the cotangent action $\mathrm{ad}^\vee$ into Costello
+  graphs in $\mathcal E_w$, and
+  Theorem~\ref{thm:wt-rg-compatibility} keeps each fixed graph inside
+  the weighted category.  What is not formal is the cancellation
+  between Costello-locality counterterms and the bulk-boundary kernel
+  at the brane defect.  The proposition assumes exactly that weighted
+  QME compatibility and the vanishing of the obstruction class named in
+  Problem~\ref{prob:weighted-rg-locality}.  With that assumption in
+  force, the formal $\hbar$-adic construction of
+  Theorem~\ref{thm:phi-hbar-all-order} applies in the weighted
+  coefficient envelope.  Without it, the statement stops at the
+  graphwise finite-scale assertions above.
 \end{proof}
 
 \begin{prob}[Costello-locality compatibility for the weighted RG flow]\label{prob:weighted-rg-locality}
   Verify that the Costello QME counterterms at the brane defect
-  $\R\times p$ in the weighted field complex $\mathcal E_w$ remain
+  \(L=\R_{\mathrm{brane}}\times\{0\}\times\{p\}\) in the weighted field complex $\mathcal E_w$ remain
   local-functional classes
   $\Op\in H^1(\mathcal O_{\mathrm{loc}}(\mathcal E_w),Q+\{I_0,-\})$,
-  i.e.\ that the bulk Costello locality theorem
-  \cite[Thm.~5.0.7]{costello-renormalization} extends to the
-  weighted pair. Concretely: a counterterm contribution
+  i.e.\ that the bulk Costello locality package
+  \cite{costello-renormalization}*{Chs.~5--7} extends to the
+  weighted pair. The exact published theorem numbering is not an
+  input to this problem. Concretely: a counterterm contribution
   $C_n\in\mathcal O_{\mathrm{loc}}^{\hbar^n}(\mathcal E)$ at order
   $\hbar^n$ in the standard pair is a polynomial functional of
   bounded degree; one must check that the same counterterm,
   rescaled by the weight $w$ on each coefficient leg, remains a
   local functional of the same bounded polynomial degree in the
   weighted pair. The estimate \ref{w:W1} bounds vertex weights, and
-  \ref{w:W2} bounds coadjoint legs; both together imply that the
-  counterterm structure is preserved by the weighted bracket-tame
-  algebra. The remaining question is whether Costello's graph-by-graph
-  locality argument, which uses Hadamard parametrices for the
-  spacetime kernels, lifts \emph{unconditionally} when the
-  coefficient direction is replaced by a Mittag-Leffler product
-  rather than a strict direct sum. The deciding evidence is either
-  a literal Hadamard parametrix construction adapted to a
-  Mittag-Leffler coefficient module (which would close the route),
-  or a counterexample showing a graph-by-graph weight blow-up at
-  some order $\hbar^n$ (which would force a sector truncation
-  instead).
+  \ref{w:W2} bounds coadjoint legs graph by graph.  The remaining
+  question is whether the compatible finite-window counterterm system
+  obtained from Costello's Hadamard locality theorem has vanishing
+  obstruction class in
+  $H^1(\mathcal O_{\mathrm{loc}}(\mathcal E_w),Q+\{I_0,-\})$ for the
+  mixed brane-defect interaction.  The Hadamard / Mittag-Leffler
+  reduction of
+  Theorem~\ref{thm:hadamard-mittag-leffler} controls the wave-front
+  and finite-window locality estimates; it does not by itself compute
+  that obstruction class.
 \end{prob}
 
-\begin{cor}[Conditional descendant cochain isomorphism]\label{cor:wt-descendant-conditional}
-  Conditional on Problem~\ref{prob:weighted-rg-locality}, the
-  Tate-coefficient lift of the descendant cochain isomorphism of
-  Problem~\ref{prob:tate-coefficient-descendant-lift} is closed in
-  the weighted Tate completion: the deformation
-  $$\Phi_\hbar^{(0,1)}\colon
+\begin{cor}[Conditional descendant cochain comparison]\label{cor:wt-descendant-conditional}
+  Assume the obstruction class in
+  Problem~\ref{prob:weighted-rg-locality} vanishes, so that
+  Proposition~\ref{prop:wt-conditional-qme-lift} applies.  Then the
+  Tate-coefficient lift of the descendant cochain comparison of
+  Problem~\ref{prob:tate-coefficient-descendant-lift} exists in the
+  weighted Tate completion only under this hypothesis: the deformation
+  $$\Phi_{\hbar,\mathrm{cond}}^{(0,1)}\colon
     C^\bullet_{\mathrm{CE},\mathrm{cont}}\bigl(
     \mathfrak h_{w,\hbar}\ltimes\mathfrak h^{\vee,w}_{\hbar,\mathrm{cont}}[1]
     \bigr)^{(0)+(1)}[[\hbar]]
-    \xrightarrow{\sim}
+    \xrightarrow[\mathrm{conditional\ QME}]{\sim}
     Z^{P_{0,\hbar}}_{\mathrm{fact}}\bigl(\mathrm{Obs}^\hbar_{\mathrm{open}}
     \bigr)^{(0)+(1)}|_{\mathfrak g_w}$$
-  on the degree-zero plus one-antifield sector closes
-  Corollary~\ref{cor:phi-hbar-supremum} on the weighted cotangent
-  extension at all orders in $\hbar$.
+  is an isomorphism on the degree-zero plus one-antifield sector only
+  after the conditional weighted QME input has been supplied.  It does
+  not assert an unconditional all-order descendant lift.
 \end{cor}
 
 \begin{rmk}[Sector restriction]\label{rmk:wt-sector-restriction}
-  The weighted route restricts the cotangent direction from the
-  full polynomial Hamiltonian dual to the weighted dual
+  The weighted mechanism restricts the cotangent direction from the
+  ambient polynomial Hamiltonian dual to the weighted dual
   $\mathfrak h^{\vee,w}_{\mathrm{cont}}=\prod_d w(d)^{-1}H_d^\vee$.
-  The full polynomial Hamiltonian dual
+  The strict polynomial Hamiltonian dual
   $\mathfrak h^\vee_{\mathrm{cont}}=\bigoplus_d H_d^\vee$ is a
   \emph{dense subspace} of $\mathfrak h^{\vee,w}_{\mathrm{cont}}$
   for every $w$ with $w(d)\to\infty$, since the strict direct sum
   is finite-degree truncations and the weighted product is the
-  full Mittag-Leffler completion. Hence the weighted lift extends
-  the cochain map continuously from the strict polynomial sector
-  to the full weighted Mittag-Leffler completion, recovering the
-  full Hamiltonian sector at the level of weighted-continuous
-  cochain identities.
+  weighted Mittag-Leffler inverse-limit completion. Hence the
+  weighted lift extends the cochain map continuously from the strict
+  polynomial sector to the weighted product completion. This recovers
+  only the weighted-continuous Hamiltonian identities, not an
+  unweighted regulator-independence statement and not an identification
+  of the weighted product with the original strict continuous dual.
+\end{rmk}
+
+\subsection*{Regulator independence and its boundary}
+
+\begin{defn}[Regulator-admissible finite-window sector]\label{defn:regulator-admissible-sector}
+  A local functional, interaction, obstruction cocycle, or graph
+  coefficient in the weighted theory is \emph{regulator-admissible} if
+  it is represented by a strict Mittag-Leffler family on the finite Tate
+  windows
+  \[
+    \{\mathcal E_w^{w_0}\}_{w_0\geq1}
+  \]
+  and satisfies the following four conditions.
+  \begin{enumerate}[label=(A\arabic*)]
+    \item The transition maps in the coefficient and local-functional
+      directions are the truncations to degrees \(d\leq w_0\), or the
+      induced restriction obtained by setting higher-degree coefficient
+      fields to zero.  They are degreewise surjective maps of
+      complexes.
+    \item At each fixed \(\hbar\)-order and for each fixed Costello
+      graph, the coefficient expression uses only vertexwise
+      polynomial-degree-bounded Hamiltonian and cotangent legs.
+    \item If \(w,w'\) are two degree weights satisfying
+      Definition~\ref{defn:wt-degree-weight}, the diagonal finite-window
+      rescaling
+      \[
+        R_{w,w'}^{w_0}(w(d)e_{d,i})=w'(d)e_{d,i},\qquad
+        R_{w,w'}^{w_0}(w(d)^{-1}e^i_d)=w'(d)^{-1}e^i_d
+      \]
+      transports the interaction, differential, bracket, propagator
+      contraction, and counterterm representative from the
+      \(w\)-window to the \(w'\)-window.  The bracket is the transported
+      bracket; the theorem does not compare two weights while holding
+      the raw unweighted structure constants fixed.
+    \item The cohomology being computed is the admissible filtered
+      cohomology detected on finite quotients and associated graded
+      pieces in the envelope of Statement~\ref{stmt:tate-model-envelope};
+      no observable is allowed to detect an infinite product tail
+      invisible in every finite quotient.
+  \end{enumerate}
+\end{defn}
+
+\begin{rmk}[Closure of the admissible class under Costello RG flow]\label{rmk:a5-rg-closure}
+  Under the Costello RG-flow $W(P_{\epsilon,L},I)$ of \cite{costello-renormalization}*{\S 3--4}, the regulator-admissible class \ref{defn:regulator-admissible-sector} is closed: the flow preserves the strict Mittag-Leffler property, the polynomial-degree bound, the diagonal rescaling compatibility, and the admissible filtered cohomology. This closure is not a separate hypothesis here; it is implicit in the (CC3) compatibility recorded above and is named for referee orientation.
+\end{rmk}
+
+\begin{thm}[Regulator independence inside the admissible finite-window sector]\label{thm:wt-regulator-independence-admissible}
+  Let \(w,w'\) be degree weights satisfying
+  Definition~\ref{defn:wt-degree-weight}, and let \(I_0^w\) be a
+  regulator-admissible mixed brane-defect interaction.  Put
+  \(I_0^{w'}=R_{w,w'}I_0^w\).  Then the diagonal rescalings
+  \(R_{w,w'}^{w_0}\) assemble to an isomorphism of strict
+  Mittag-Leffler local-functional complexes
+  \[
+    R_{w,w'}\colon
+    \varprojlim_{w_0}
+    \bigl(\mathcal O_{\mathrm{loc}}(\mathcal E_w^{w_0}),
+      Q+\{I_0^w,-\}\bigr)
+    \xrightarrow{\;\cong\;}
+    \varprojlim_{w_0}
+    \bigl(\mathcal O_{\mathrm{loc}}(\mathcal E_{w'}^{w_0}),
+      Q+\{I_0^{w'},-\}\bigr).
+  \]
+  Under this isomorphism:
+  \begin{enumerate}[label=(\roman*)]
+    \item truncated Casimirs, heat-kernel propagators, and fixed
+      graphwise Costello contractions are identified;
+    \item the obstruction class
+      \[
+        \mathrm{Ob}_w\in
+        H^1_{\mathrm{adm}}(\mathcal O_{\mathrm{loc}}(\mathcal E_w),
+          Q+\{I_0^w,-\})
+      \]
+      maps to \(\mathrm{Ob}_{w'}\);
+    \item vanishing or nonvanishing of the mixed brane-defect QME
+      obstruction is independent of the admissible weight.
+  \end{enumerate}
+  This theorem proves independence of the \emph{weight} among
+  admissible regulators.  It does not identify the weighted product
+  coefficient theory with the original strict product/direct-sum Tate
+  pair, where the Costello coefficient Casimir does not exist.
+\end{thm}
+
+\begin{proof}
+  On the finite window \(d\leq w_0\), the map \(R_{w,w'}^{w_0}\) is an
+  invertible linear map on the coefficient space and the identity on
+  the spacetime factor.  The bracket and the interaction in the
+  \(w'\)-window are, by admissibility, the transported bracket and
+  transported interaction.  The map sends
+  \[
+    \sum_{d\leq w_0}\sum_i
+      (w(d)e_{d,i})\otimes(w(d)^{-1}e^i_d)
+  \]
+  to the corresponding \(w'\)-weighted truncated Casimir.  Hence it
+  sends \(P_{\epsilon,L}^{w,w_0}\) to \(P_{\epsilon,L}^{w',w_0}\),
+  commutes with the differential \(Q\), and carries the transported BV
+  bracket and every finite-window graph contraction to the
+  \(w'\)-window contraction.  Condition (A3) gives the same statement for
+  \(I_0\), the counterterm representatives, and the obstruction
+  cocycle.
+
+  The maps \(R_{w,w'}^{w_0}\) commute with truncation in \(w_0\).  The
+  finite-window complexes therefore form an isomorphic pair of strict
+  Mittag-Leffler inverse systems.  By (A1), these are degreewise
+  surjective towers of complexes.  Hence the inverse limit is exact in
+  the admissible envelope of
+  Statement~\ref{stmt:tate-model-envelope}; equivalently
+  \(\varprojlim^1=0\) for this tower.  Passing to the inverse limit
+  gives the displayed isomorphism of local-functional complexes and
+  identifies their admissible filtered cohomology classes.  In
+  particular the obstruction class vanishes for \(w\) if and only if
+  the transported obstruction class vanishes for \(w'\).
+
+  The last sentence is the support calculation of
+  Lemma~\ref{lem:tate-casimir-obstruction}: the strict continuous dual
+  is a direct sum in degree, so the full Casimir has infinite support in
+  a direct-sum factor.  The weighted theorem compares only completed
+  product coefficient theories for which the finite-window Casimirs
+  form a strict Mittag-Leffler system.
+\end{proof}
+
+\begin{thm}[No strict unweighted finite-window endpoint]
+\label{thm:strict-unweighted-no-go}
+  Let
+  \[
+    \mathfrak h_{\Pi}=\prod_{d\geq1}H_d,\qquad
+    D_{\oplus}=\bigoplus_{d\geq1}H_d^\vee
+  \]
+  be the original product/direct-sum Tate pair.  There is no tensor
+  \(K\in\mathfrak h_{\Pi}\widehat\otimes D_{\oplus}\), and no tensor
+  in \(D_{\oplus}\widehat\otimes\mathfrak h_{\Pi}\), whose projection
+  to every finite window \(d\leq w_0\) is the finite Casimir
+  \[
+    C^{w_0}_{\mathfrak h}=\sum_{d\leq w_0}\sum_i e_{d,i}\otimes e^i_d .
+  \]
+  Consequently the strict unweighted pair cannot be the endpoint of a
+  finite-window Costello regulator theory satisfying the coefficient
+  kernel requirement \ref{costello:CC1} and the windowwise compatibility
+  used in Theorem~\ref{thm:wt-regulator-independence-admissible}.
+
+  Moreover, for any admissible weight \(w\), the inclusion
+  \(D_{\oplus}\hookrightarrow
+  D_{\Pi,w}:=\prod_{d\geq1}w(d)^{-1}H_d^\vee\) is only an admissible
+  filtered weak equivalence.  It is not an ordinary quasi-isomorphism
+  of chain complexes with zero differential.  Thus any observable or
+  obstruction class detecting the quotient
+  \(D_{\Pi,w}/D_{\oplus}\) is outside the proved regulator-independent
+  sector.
+\end{thm}
+
+\begin{proof}
+  The direct-sum factor \(D_{\oplus}\) is coefficient-finite by
+  Lemma~\ref{lem:continuous-bar-cobar} item~(1): every element of a
+  completed tensor product with \(D_{\oplus}\) has support in only
+  finitely many \(H_d^\vee\)-degrees.  If \(K\) projected to
+  \(C^{w_0}_{\mathfrak h}\) for all \(w_0\), then for every degree
+  \(d\) the \(H_d^\vee\)-component of \(K\) would be nonzero.  This is
+  infinite support in the direct-sum direction, a contradiction.  The
+  same argument applies after reversing the tensor factors.
+
+  Costello's heat-kernel BV propagator for the cotangent coefficient
+  field is \(P_{\epsilon,L}^{\mathrm{base}}\widehat\otimes K\).  Since
+  no such \(K\) exists in the strict product/direct-sum pair, the
+  strict pair has an operator-level heat homotopy but no coefficient
+  distributional inverse pairing and hence no graphwise regulator
+  endpoint satisfying the displayed finite-window Casimir condition.
+
+  Finally, with zero differential,
+  \[
+    H^0(D_{\Pi,w}/D_{\oplus})=D_{\Pi,w}/D_{\oplus}.
+  \]
+  The class of any sequence with one nonzero covector in every degree
+  is nonzero in this quotient.  Therefore the completion changes
+  ordinary cohomology even though finite quotients and associated
+  graded pieces cannot see the tail.  This proves the asserted
+  boundary of regulator independence.
+\end{proof}
+
+\begin{ex}[The completion changes ordinary cohomology]\label{ex:weighted-completion-changes-cohomology}
+  Let
+  \[
+    D_{\oplus}=\bigoplus_{d\geq1}H_d^\vee,\qquad
+    D_{\Pi,w}=\prod_{d\geq1}w(d)^{-1}H_d^\vee
+  \]
+  with zero differential.  The finite-window inclusion
+  \(D_{\oplus}\hookrightarrow D_{\Pi,w}\) induces an isomorphism on
+  every quotient by the tail \(d>w_0\), and therefore is a weak
+  equivalence in the admissible filtered sense of
+  Statement~\ref{stmt:tate-model-envelope}.  It is not a
+  quasi-isomorphism in the ordinary category of chain complexes:
+  \[
+    H^0(D_{\Pi,w}/D_{\oplus})
+      =D_{\Pi,w}/D_{\oplus}\neq0,
+  \]
+  for example the class of any sequence with one nonzero covector in
+  every degree is nonzero.  Thus the weighted product contains
+  tail states absent from the strict continuous dual.  Any observable
+  detecting such a tail is outside the regulator-admissible sector of
+  Definition~\ref{defn:regulator-admissible-sector}.
+\end{ex}
+
+\begin{ex}[Bad weights do not define the same regulator problem]\label{ex:bad-weight-not-regulator}
+  The super-exponential function \(w(d)=\exp(d^2)\) is not a degree
+  weight.  Indeed
+  \[
+    \frac{w(p+q-2)}{w(p)w(q)}
+      =\exp\bigl((p+q-2)^2-p^2-q^2\bigr)
+  \]
+  is unbounded, already along \(p=q\to\infty\).  Hence condition
+  \ref{w:W1} fails.  The Poisson bracket is not bracket-tame in that
+  coefficient topology, and the graphwise constants in
+  Proposition~\ref{prop:wt-rg-tame} need not be finite uniformly in the
+  degrees used by the interaction.  The regulator-independence theorem
+  above does not compare such a topology with the admissible weighted
+  theory.
+\end{ex}
+
+\begin{rmk}[Exact status of the weighted mechanism]\label{rmk:wt-route-status-regulator}
+  The weighted Tate construction has four distinct statuses.
+  It is a regulator for the finite-window graphwise sector; it is a
+  filtered weak replacement of the strict direct-sum dual only inside
+  the admissible Mittag-Leffler envelope; it is a genuine completion
+  changing the ordinary chain complex once infinite product tails are
+  admitted; and it is not a theorem about the original unweighted
+  Costello graph calculus, because that calculus has no coefficient
+  Casimir in the strict product/direct-sum topology.
 \end{rmk}
 
 \subsection*{Convention firewall}
 
 \begin{rmk}[No transfer to Vol III]\label{rmk:wt-no-transfer-vol3}
   The weighted Tate completion is a local-disk operation on the
-  formal symplectic plane $\C^2$ with brane defect $\R\times p$ and
+  formal symplectic plane $\C^2$ with brane defect
+  \(L=\R_{\mathrm{brane}}\times\{0\}\times\{p\}\) and
   bulk $\R^2\times\C^2$. It carries no compact Calabi-Yau datum, no
   $\Phi_d$ functor, no $\kappa_{\mathrm{ch}}$ or
   $\kappa_{\mathrm{BKM}}$ consequence, no $K3\times E$
@@ -565,7 +833,7 @@ $I_L$ must remain in the same weighted category.
   specialization. It addresses exclusively the analytic obstruction
   named in Lemma~\ref{lem:tate-casimir-obstruction} and Problem
   \ref{prob:tate-coefficient-descendant-lift}, and does so on the
-  formal local model used throughout the parent manuscript.
+  formal local model.
 \end{rmk}
 
 % End of fragment.

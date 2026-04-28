@@ -1,0 +1,1609 @@
+A NNALES DE L’ INSTITUT F OURIER
+
+T HIERRY L EVASSEUR
+J. T OBY S TAFFORD
+Invariant differential operators on the tangent
+space of some symmetric spaces
+Annales de l’institut Fourier, tome 49, no 6 (1999), p. 1711-1741
+<http://www.numdam.org/item?id=AIF_1999__49_6_1711_0>
+
+© Annales de l’institut Fourier, 1999, tous droits réservés.
+L’accès aux archives de la revue « Annales de l’institut Fourier »
+(http://annalif.ujf-grenoble.fr/) implique l’accord avec les conditions générales d’utilisation (http://www.numdam.org/conditions). Toute utilisation commerciale ou impression systématique est constitutive d’une infraction pénale. Toute copie ou impression de ce fichier doit contenir la présente mention de copyright.
+
+Article numérisé dans le cadre du programme
+Numérisation de documents anciens mathématiques
+http://www.numdam.org/
+
+Ann. Inst. Fourier, Grenoble
+49, 6 (1999), 1711-1741
+
+INVARIANT DIFFERENTIAL OPERATORS
+ON THE TANGENT SPACE
+OF SOME SYMMETRIC SPACES
+by T. LEVASSEUR & J.T. STAFFORD^*)
+
+1. Introduction.
+To begin with, assume that G is a connected, complex reductive
+algebraic group with Lie algebra Q and fix a Cartan subalgebra () of Q
+with Weyl group W. Thus, G acts on Q via the adjoint action and this
+induces an action of G on the ring of regular functions, 0(Q) ^ 'S'(g*), and
+hence on P(0), the ring of differential operators with coefficients in 0(o).
+Let r : Q -^ Der0(s) C P(g) denote the differential of the adjoint action of
+G on Q. In [8] Harish-Chandra defines a ring homomorphism 6 : V(Q)0 —^
+P(())^, with kernel Z(s) = [d G V^)0 : d(f) = 0 for all / € 0^)°} . The
+main results of [17], [18], show that 6 is surjective, with kernel
+(1-1)
+
+^-Wr^nV^)0.
+
+One significance of these results is that they easily imply two fundamental
+theorems of Harish-Chandra: Let Qo be a real form of g, with adjoint group
+Go and write QQ for the regular semisimple elements of QQ. Then
+(1.2)
+
+If T is Go-invariant distribution on QQ^ then T(o) ' T = 0
+
+(1.3) The only Go-invariant eigendistribution supported on 0o\0o is T=0.
+^*) The research of both authors was supported in part by an NSF grant.
+Keywords: Symmetric spaces - Reductive Lie algebras - Invariant differential operators - Invariant eigendistributions.
+Math. classification: 14L30 - 16S32 - 17B20 - 22E46.
+
+1712
+
+T. LEVASSEUR & J.T. STAFFORD
+
+In [33], Sekiguchi generalized (1.3) to a class of "nice" symmetric
+spaces and it is therefore natural to ask whether the results from [17], [18]
+can also be generalized to these spaces. Despite the fact that there is no
+analogue of Harish-Chandra's map 6, these generalizations do exist, and the
+purpose of this paper is to describe them. Before we can state the results
+formally, we need some notation.
+Fix a non-degenerate, G-invariant symmetric bilinear form ^ on the
+reductive Lie algebra Q such that ^ is the Killing form on the semisimple
+Lie algebra [s,s]- Fix an involutive automorphism ^ of Q preserving K,
+and set C = Ker(^ - J), p = Ker(^ + I ) . Then, Q = C © p and the
+pair (s,t), or (fl,^), is called a symmetric pair. Recall that ^ and p are
+orthogonal with respect to K and that Ms a reductive Lie subalgebra of Q.
+Denote by K the connected reductive subgroup of G with Lie algebra t.
+The group K acts on p via the adjoint action and the differential of this
+action induces a Lie algebra homomorphism r : ^ —^ Der5'(p*) defined by
+(r(a).f)(v) = d
+
+/(e-^.t;), for a € C, / G 5(p*) and v € p.
+
+UL [^==0
+
+Let P(p) denote the algebra of differential operators on p with
+coefficients in (9(p) = 5(p*). Notice that K has an induced action on 5'(p),
+(9(p) and P(p). Set
+/C(p) = {d € P(p) : d(f) = 0 for all / € ^(p)^}
+and Z(p) = /C(p) H ^(p)^. Clearly, /C(p) is a J^-stable left ideal of P(p)
+containing P(p)T(^).
+Consider the special case when one is in the diagonal case where
+G = GI x GI with ^{x^y) = (y,x) for some reductive group Gi; thus
+(S^) = (fli ® Si?0i)- Then J^ = G\ with its adjoint action on p = gi,
+and a slightly stronger version of (1.1), see [18], Theorem 1.1, asserts that
+the equality /C(p) = P(p)r(e) holds in this case. The first main aim of this
+paper is to generalize this result to a class of symmetric pairs introduced
+by J. Sekiguchi [33]. If Q is semisimple, these are defined as follows: Let I;
+be the restricted root system associated to a Cartan subspace a C p. Then,
+(S,^) is nice if dim ^ + dim^ 20 ^ 2 for all a € S. If Q is reductive, then
+(5, C) is nice provided that ([5,0], CH [fl, g]) is nice. The reader is referred to
+Section 2 and [33] for further details and for a classification of nice pairs.
+Observe that the diagonal case is obviously nice.
+THEOREM A (see Theorem 4.2). — Let (5, t) a nice symmetric pair.
+Then /C(p) = P(p)r^) and, therefore, Z(p) = (P(p)r(^))^.
+
+INVARIANT DIFFERENTIAL OPERATORS
+
+1713
+
+The key step in the proof of Theorem A is Theorem 3.8, which forms a
+mild generalization of [18], Theorem 5.2. This, in turn, is an interpretation
+in terms of P-modules of the theorem of Harish-Chandra that asserts
+that non-zero Go-invariant eigendistributions on QQ cannot have nilpotent
+support. We take this opportunity to provide a complete algebraic proof of
+our generalization of this result (rather than modifying Harish-Chandra's
+analytic proof) for two reasons: First, it applies to all modules rather
+than just distributions and secondly this different approach may prove
+useful in other, similar problems. The reason for restricting ourselves to
+nice symmetric pairs in Theorem A is that Theorem 3.8 does not hold in
+general; indeed in §6 we show that it fails when (g,^) has rank one and
+dimp = 2r ^ 4.
+As an immediate corollary of Theorem A one obtains a generalization
+of a fundamental result of Harish-Chandra (see [9], Theorem 4 or (1.2))
+from the diagonal case to nice symmetric pairs:
+COROLLARY B (see Corollary 4.3). — Assume that the symmetric
+pair (g, {?) is nice and is the complexification of a real symmetric pair (QQ , ^o) •
+Write KQ for the connected Lie group satisfying L'ie(Ko) = ^o. Let U C po
+be a KQ-stable open subset and T be a Ko-invariant distribution on U.
+Then Z(p) . T = 0.
+With a little extra work we are able to generalize a second result of
+Harish-Chandra (see [8], Theorem 3 or (1.3)) to nice symmetric pairs:
+COROLLARY C (see Corollary 5.8). — Assume that the pair (g, ^) is
+nice and is the complexification of a real symmetric pair (go, ^o)- Let U be
+an open subset ofpo and write U ' for the set of regular semisimple elements
+in U. Let T be a locally invariant eigendistribution on U such that T is
+supported onU\Uf. Then T == 0.
+Actually, this result was proved by Sekiguchi in [33] where he was
+even able to prove it for invariant eigenhyperfunctions T. Our (algebraic)
+proof of Corollary C does not permit us to prove this stronger result, but
+it is conjectured [33], Conjecture 7.1 that such a hyperfunction is already
+a distribution.
+The proof that (1.1) implies (1.3) in [18] uses the fact that HarishChandra's map 6 is surjective. Since there is no analogue of that map
+for general symmetric pairs, more work is needed to deduce Corollary C
+from Theorem A. The required extra facts are provided by the following
+
+1714
+
+T. LEVASSEUR & J.T. STAFFORD
+
+result, in which the Gelfand-Kirillov dimension of a module M is denoted
+by GKdimM. One should note that, in the diagonal case, 1m 6 = P^)^
+is a fixed ring of the Weyl algebra by a finite group and so the conclusion
+of this theorem is well-known.
+THEOREM D (see Theorems 5.5 and 5.6). — Let (g,^) be a nice
+symmetric pair and set R(p) = ^(p^/Z^p). Let a be a Cartan subspace
+of p. Then
+(1) R(p) is a simple ring with GKdimJ?(p) == 2 dim a;
+(2) GKdimM ^ dim a for every non-zero finitely generated R(f)module M.
+The importance of the algebra J?(p) also lies in the fact that it identifies with the algebra of radial components of J^-invariant differential operators on p. Indeed, let W = A^:(a)/Zj<(a) be the Weyl group associated to a.
+By composing the restriction to J^-invariant functions with the Chevalley
+isomorphism one gets a homomorphism, the radial component map,
+rad : P(p)^ —> i)(f//K)^V(a/W)
+such that Kerrad = Z(p). Thus J?(p) ^ Imrad although, except in some
+trivial cases, this does not equal V(a/W). Once again, Theorem D does not
+hold for general symmetric pairs; indeed, in Section 6, we give an example
+where R(p) has non-zero finite dimensional modules.
+The examples mentioned above are consequences of a detailed study
+of invariant differential operators of rank one symmetric pairs given in
+Section 6. One further consequence of this study is that there are some
+feasible ways in which one may be able to generalize the results of this
+paper to arbitrary symmetric pairs, and to more general representations of
+K. The precise conjectures are given in Section 7.
+
+2. Orbit theory.
+We continue with the notation of §1. We collect here various definitions and results needed in the subsequent sections.
+If x, y e Q and g e G, set 8id(x).y = [x, y] and g.x = Ad(g).x. If x € fl
+and V C 0, let y^ denote the subset of elements of V which commute with
+x. Recall that x is called semisimple if ad (a;) is semisimple and is called
+nilpotent if re € [5, g] and ad (a;) is nilpotent. Following [33], 1.11, a nilpotent
+
+INVARIANT DIFFERENTIAL OPERATORS
+
+1715
+
+element 0 7^ x G p is called p- distinguished, or simply distinguished, if p^
+does not contain any non-zero semisimple element.
+Let X be an affine algebraic K- variety with structural sheaf Ox • The
+algebraic quotient Spec O^X^ is denoted by X / / K and wx '• X -» X // K is
+the associated surjective morphism. Recall that the algebraic variety X / / K
+identifies with the set of closed orbits in X. When X = p, and if there is
+no possible ambiguity, we will write Wp = w. Define the nilpotent cone of p
+by N(p) = ^'^(^(O)); recall that N(p) is the set of nilpotent elements in
+p and is a finite union of J^-orbits [15], Propositions 10 & 11, Theorem 2.
+Recall [15], [37], the following properties of the action (K : p). It
+is stable (there exists a dense open subset of closed orbits) and visible
+(each fibre of w is a finite union of K-orbits). Let £ be the rank of the
+symmetric pair (g, {?); that is, £ = dim a where a C p is a Cartan subspace. If
+W = A^(a)/Zj<(a) is the associated Weyl group, the Chevalley restriction
+theorem gives an isomorphism ^(p*^ ^^(a*)^ and these algebras are
+polynomial rings in £ indeterminates. Define the commuting variety of p by
+C ( p ) = { ( ^ ) e p x p : [x,y] =0}.
+One has dimC(p) == £ + dimp, see [27], Proof of (3.7).
+Let b G p be semisimple. Then [15], 1.6, the decomposition Qb = ^©p 5
+defines a symmetric pair (of the same rank); furthermore, N(p 6 ) = N(p)np 6
+and a 6 p6 is semisimple in Q6 if and only if a is semisimple in g. Suppose
+that Q is semisimple and set g7 = [fl^.fl 6 ], p' = p H ^ / , V = ^ H ^ . Then
+(g', V) is a symmetric pair with Q' semisimple. Such a pair is called a subsymmetric pair of (g, (?) [33].
+PROPOSITION 2.1. — There exists an isomorphism p / / K ^ (C(p) D
+(p x ~ N ( p ) ) ) / / K , induced by the map a i—^ (a, 0) from p to C(p). Under this
+isomorphism, (C(p) H (N(p) x N(p)))/^ identifies with {^(0)}.
+Proof. — Let (x,y) <E C(p) and x = Xs + Xn, y = Vs + Vn be the
+Jordan decompositions of x and y . Then it is standard that ( x s ^ V s ) lies
+in the closure of K.(x,y), see, for example, [29], Theorem 5.2. Therefore,
+if K.(x,y) G (C(p) H (p x N(p)))/^ is a closed orbit with y <E N(p),
+then y is also semisimple and so y = 0. Hence, the map z : p / / K —>
+(C(p)n(p x N(p)))//J^, defined by K.x ^ K.(x, 0), is a bijection. It is easily
+seen that its inverse is induced by the restriction C(p) -» p of the projection
+771 : p x p —^ p onto the first component. Thus i is an isomorphism. The
+identification of (C(p) D (N(p) x N(p)))^ with {w(0)} follows easily. D
+
+1716
+
+T. LEVASSEUR & J.T. STAFFORD
+
+LEMMA 2.2. — Let F and T be two closed K-stable subsets o f p
+such that F is a finite union of K-orbits. Let X C C(p) D (F x T) be closed,
+irreducible and K-stable. Then
+(i) dimX < dim p.
+(ii) Let 771 : p x p -» p be the projection onto the first component.
+Assume that T C N(p) and that r]^{X) = ~KM, where u e r]^{X) is
+nilpotent but not distinguished. Then, dimX < dim p.
+Proof. — (i) Set Y = 771 (X) and consider 77 = r]^ : X -^ Y. Let U
+be a dense open subset of Y such that
+V-y C U,
+
+dimX - dimY = dim^" 1 ^).
+
+Since rj is K-eqmvariant, Y is a J^-stable closed irreducible subset of
+F. Therefore, Y = K.u for some u € U. Let v G U D J^.n. Identify
+the variety C(p) H ^f^v) with p" through the second projection; then,
+r]'1^) = X F\ r]^1^) is a closed subset of yv. Recall [15], Proposition 5,
+that dimp^ — dim^ = dimp — dimt. Hence,
+(^)
+
+dimX = dimX.v+dim^" 1 ^) < dim^- dimF +dimp v = dimp.
+
+(ii) By hypothesis, the element v in the proof of (i) is not distinguished
+and so there exists a non-zero semisimple element s G p^. Since T C N(p),
+one has (v,s) C (C(p) H^f 1 ^)) ^"^('L'). Thus dimr]-1^) < dimp" and
+hence, as in (^), it follows that dimX < dimp.
+D
+Let 0 -^ x C N(p). Then [15] there exist y e p, z C t such that
+[x, y\ = z, [z, x] = 2x, [z, y} = -2y. The triple (z, x, y) is called a normal Striple containing x. Set s = Cx^Cy^Cz; thus s ^5[(2,C). The 5-module
+s
+
+0 then decomposes as Q = ® E(\j), where E{\j) is a simple 5-module of
+j=i
+m
+highest weight \j e N. We can set p17 = (D C^ with ad(2;).^ = —A^, and
+1=1
+
+we have :
+
+(2.1)
+
+p^Mep^
+
+It is well known ([32], Lemma 1.21, [34], III.5.1, III.7.4) that x 4- p^
+is a transversal slice, in p, to the orbit K.x. Let ^ : K x ^y —^ p be the
+X-equivariant morphism given by ^((g,v)) = g.{x + v). Thus '0 is smooth
+on K x p^ (and therefore is an open morphism).
+The following result is well known in the analytic case, see [36],
+Chapter 5, Lemma 22, and we leave it to the reader to check that that
+argument can be easily modified to work in the algebraic setting.
+
+INVARIANT DIFFERENTIAL OPERATORS
+
+1717
+
+PROPOSITION 2.3. — There exists an affine open neighborhood U
+ofO in p^ such that
+(1) ^ is smooth on Y = K x U, and ^ = ^(Y) = K.(x + U) is a
+K-stable open subset ofp;
+(2) ^ H ~K^x = K.x and K.x H {x + U} = {x}.
+
+D
+
+Assume that g is semisimple. Let ( z , x , y ) be a normal S-triple
+containing x 6 N(p). With the previous notation, we set
+m
+
+(2.2)
+
+Ap(^)=^(A,+2)-dimp.
+j=i
+
+Remark 2.4. — The integer Ap(a;) is denoted by 6y(x) in [33], 6.1.
+Let us illustrate this number in the special case when £ = 1 and x €
+N(p) is a regular nilpotent element; that is, dim K.x = dim? — 1. Then
+x is distinguished [33], (1.9). However as dimK.x = dimp — 1, [15],
+Proposition 5 implies that m = 1 and, since Ai = 2, Ap(a;) = 4 — dimp.
+Thus Ap(a;) > 0 if, and only if, dimp < 4.
+We will be interested in symmetric pairs (g, t) such that, for all subsymmetric pairs (^ / , ^ / ) of (5, ^), one has Ap/ {x) > 0 for each p'-distinguished
+nilpotent element x C p'. The following theorem, proved in [33], §6, provides
+examples of such symmetric pairs.
+THEOREM 2.5 (J. Sekiguchi). — Assume that Q is semisimple and
+let (^, t) be a symmetric pair. Let S be the restricted root system associated
+to a Cartan subspace a C p. Consider the following condition :
+(f)
+
+dim ^a + dim ^2a < 2
+
+for all a C S.
+
+(1) The pair (5,^) satisfies (f) if and only if each of its irreducible
+factors is isomorphic to one of the following pairs:
+(0) ( 0 i © 0 i , f l i ) , 0 i simple Lie algebra (the diagonal case)
+(I) (5[(m,C),5o(m,C))
+(II) (5((2m, C), 5l(m, C) C sl(m, C) C C)
+(III) (5p(m,C),5((m,C)eC)
+(IV) (5o(2m+A;,C),5o(m+fc,C)©5o(m,C)), f c = 0 , l , 2
+(V) (e6,5p(4,C))
+
+1718
+
+T. LEVASSEUR & J.T. STAFFORD
+
+(VI) (06,51(6, C)C5[(2,C))
+(VII) (e7^l(8,C))
+(VIII) (eg, so(16, C))
+(IX) (f4,sp(3,C)©5[(2,C))
+(X)
+
+(fl2,5[(2,C)©5((2,C)).
+
+(2) Assume that (5,^) satisfies (f) and iet ({i^') be a sub-symmetric
+pair of (s,^). Then, (g',^') satisfies (f) and Ap/(^) > 0 for each p'distinguished nilpotent element x € p'.
+D
+DEFINITION 2.6. — The symmetric pair (s? ^) ^ said to be nice if
+the semisimple, sub-symmetric pair ([fl,fl],^n [5,0]) satisfies condition (f)
+of Theorem 2.5.
+
+Remark 2.7. — Let (5,^) be a symmetric pair with Q semisimple.
+Then, (0,^) is of maximal rank (that is, £ = rkg) if and only if, in the
+notation of Theorem 2.5, each irreducible factor of (5, ^) is of type
+(I), (III), (IV)(^ = 0,1),, (V), (VII), (VIII), (IX) or (X).
+
+3. Equivariant D-modules with nilpotent support.
+Let X be a smooth algebraic variety with structural sheaf Ox and
+cotangent bundle T*X. Denote by Ox the Ox -module of vector fields
+and by "Dx the sheaf of differential operators on X. The notation related
+to algebraic -D-modules will be as in [3] or [12]. In particular, if M is a
+P^-module we denote its characteristic variety by ChM c T*X and its
+support by SuppM C X.
+Assume that a reductive algebraic group K acts regularly on X and
+denote by TX : ^ —^ ©x the differential of the K- action on X. One can
+develop a theory of JC-equivariant P^-modules; for these notions, and
+related definitions, we will refer to [3] and [35], §6. We simply recall here
+the definition of a JC-equi variant coherent Vx -module in the case where X
+is affine: If M is a finitely generated 'P(X)-module, then M is said to be a
+K-equivariant V^x-module if it satisfies the following conditions:
+(i) M is endowed with a compatible action of K', that is, K acts
+rationally on M and g.(dv) = (g.d)(g.v) for all g G K^ d C T>(X) and
+v G M'
+
+INVARIANT DIFFERENTIAL OPERATORS
+
+1719
+
+(ii) —
+(exp(ta).v) = r(a)v for all a e t, v G M.
+at |^=o
+Let Q be a reductive Lie algebra and (g, ^) be a symmetric pair. Recall
+that the J^-invariant form K, is non-degenerate on p. Let n = dimp > 0
+and fix a /^-orthonormal basis of p. Let {xz G p*,(9a^ € €)(p)}is^n be the
+associated coordinate system. Let e e ^(p*)^ be defined by e(x) = /^(.r, x)
+and write 9(e) G ^(p)^ for the corresponding differential operator with
+n
+
+n
+
+constant coefficients. Thus, in coordinates, e = ^ x^ and <9(e) = ^ <9^.
+1=1
+i=i
+n
+
+Let E = ^ a^<9^ be the Euler vector field and set
+1=1
+/=-^(e),
+
+h=E+^.
+
+Then u = Ce 0 C/ C C/i is a Lie algebra isomorphic to -$((2,C). By
+construction, u C ^(p)^.
+Let ( z , x , y ) be a normal S-triple containing the nilpotent element
+771
+
+0 -^ x G N(p) and adopt the notation of §2. If p^ = C Cvi with ad(/z).^ =
+1=1
+—\Vi^ let {^ = ^,9</,}i<^m denote the associated coordinate system.
+Let U be the affine open neighborhood of 0 in p^ found in Proposition 2.3
+and ip^ : Op —> OY be the comorphism of the dominant JC-equivariant
+morphism ^ : Y = K x U — ^ f . Since ^ is smooth, we have a surjective
+map of OY -modules
+(3.1)
+
+6y -^ OY 0 6p -> 0.
+Op
+
+Let 0 e 6(p) and identify 0 with 1 0 0 e ^(V) 0 9(p). Then,
+O(P)
+by (3.1), there exists a lift ^(0) € Q(Y) of 6>; such a lift satisfies
+V^((9).^(/) = ^{O.f) for all / e (9(p). It is easily checked that K acts on
+each term of (3.1), and that (3.1) is an exact sequence of K-equivariant Oymodules. It follows that we have a surjective morphism 9^ -» (Oy (g) Op)1^'
+Op
+
+In particular, if 0 e 6(p)^ there exists a lift ^((9) € Q(Y)K.
+Write Ra for the left invariant vector field on K defined by a e <?;
+thus, for all / 6 (9(X) and ^ e K one has (Ra-f)(g) = -r.
+
+/(^^ a ).
+
+UL |<:=:0
+
+The enveloping algebra U(V) then identifies with C(Ra; a E 6). Thus,
+since A" and [/ are affine, we obtain that: V(K) = 0(K) 0U(^Y V(U) =
+
+c
+
+C(0(U); 9y., 1 ^ i ^ m), and P(V) = P(^) ^ P((7). The group K acts
+
+1720
+
+T. LEVASSEUR & J.T. STAFFORD
+
+on V(Y) via left translation on 'D(K), and so
+Z)(y)^ = ^{K^ ^ P(£7) - U(t) ^ V(U) = (C ^ P(£/)) e (?7+ (€) ^ P([/))
+where £/+(€) = W(^. Therefore, if (9 € 0(p)^, we can write
+(3.2)
+
+^((9) = 1 ^ A((9) + ^ ^a, ^ <^j
+
+for some a^ € ^ and ^ C e)([/). We call A((9) e 6(£7) a radial component
+of (9.
+m
+/1
+\
+1
+LEMMA 3.1. — The vector field ^ (-A^ + ^VjQyJ + -^ is an
+j=i '<2
+/
+2
+m
+/1
+\
+invariant lift of the Euler vector field E, and A(E) = ^ ( -Aj + ^)yj9y. is
+
+j=i —
+
+/
+
+a radial component ofE.
+
+Proof. — See [7], Lemma 30 or [36], Lemma 24, p. 93.
+
+D
+
+If M is a coherent Pp-module, denote by
+M = Py_p
+
+0 ^M
+^-^p
+
+its inverse image in the D-module sense; thus M = ^M[dimY - dimp]
+(see, for example, [3], VI.4.2). Since ^ is smooth the Py-module M
+is, as an Oy-module, the usual inverse image ^*M = Oy (g) M [121,
+Op
+
+Proposition 11.4.2(i).
+LEMMA 3.2. — Assume that M is a K-equivariant coherent Vpmodule such that SuppM = K.x, for some 0 7^ x € N(p). Then
+(1) The group K acts on M. by g.(b(S>v) = g.b 0 g.v, M. is a Ko,
+
+Op
+
+equivariant Py -module, and the canonical map M —» M, v \—> 1 (g) v, is
+Op
+
+K-equivariant.
+
+(2) Suppose that M = Vy.v. Then, M = Py. fl 0 v} and M ^ 0.
+
+^ Oy /
+
+(3) There exists k e N such that A^ ^ (OK ^ H^Ou)}^.
+(4) A^ ^ C ^ ^(0^)°^ as a ((7(e) ^ Pc/)-moduie.
+TH
+
+(5) 1 J
+H^(0u} = ® C9«, where 9° = FI ^••
+aeN"*
+
+,^1 '"
+
+INVARIANT DIFFERENTIAL OPERATORS
+
+1721
+
+Proof. — The proofs of parts (1) and (2) are standard and are left
+to the reader. We first compute SuppA^. Since M = Oy 0 M as Oyo,
+modules, Supp.M C ^^(SuppM). Let a = (g,u) € SuppA^; then,
+Proposition 2.3(2) implies that ^(a) = g.(x + u) e SuppM D ^(V) ==
+J^.a; D f2 == JCa;. Thus x -\- u ^ K.x, forcing u = 0 by Proposition 2.3(2),
+again. Therefore 0 7^ SuppA^ C ^ = ^ x {0}. Since M is 1^-equivariant
+it follows that SuppA^ == <I>.
+Now consider the JC-equivariant closed embedding j : <1> c—^ Y. Since
+SuppA^ = ^, Kashiwara's equivalence [3], VI.7.11, yields M = j+jA^.
+Since the P^-module j'M is ^C-equivariant and ^ ^ K, j'M. is a finite
+direct sum of copies of 0$ [3], Proof of VII.12.11. Setting j-M = (0$)®^
+we obtain
+M = O+Oc,)^ = H^OY)^ = {OK ^ H^Ou))^
+by [3], VI §7 or [12], I §4.2. Observe that K acts on M via left translation
+on O K ' Thus M1^ = C ^ H^Ou)^' To finish the proof, recall that
+/ m
+
+\
+
+HWu)
+^ /D{U)/( ^ V{U}yiY
+see, for example, [12], Corollary 1.5.2. D
+L J
+/
+^=1
+
+LEMMA 3.3. — Let M be as in Lemma 3.2. Let 0 G ©(p)^ and
+v C MK. Then 1 (g) v e MK. If^ is defined by (3.2), then
+^((9).(1 0 v) = 1 (g) 0.v = (1 ^ A((9)).(l (g) v).
+Proof. — The claim follows from the definition of ^{6) and Lemma 3.2(4).
+D
+LEMMA 3.4. — Let M be as in Lemma 3.2. Assume that M =
+P(p).s with s € M1^ such that E.s = u.s, for some ^ G C. Then, there
+m
+
+exists a 6 N771 such that p. = -|,(Ap(a;) + dimp) - ^ S (A^ + 2)a,.
+1=1
+Proof. — Let ( z , x , y ) be a normal S-triple containing a: and adopt
+the notation of Lemma 3.2. Set H = H^Ou}' If v € M^ we write
+k
+
+v* = 1 (g) v = llElp(v) with /?('y) = © Pi(^) ^ ^ efc . Recall from Lemma 3.2
+Op
+1=1
+that M = Py.5* = (OK ^ ^^)eA;; this implies in particular that pi(s) ^ 0
+for all i.
+The element 5* = 1 0 s is a non-zero element of A^. Therefore,
+by Lemma 3.3, 1 0 E.5 = /^?* = (1 Kl A(E)).5* and so /^(E).p(s) = w(s).
+
+1722
+
+T. LEVASSEUR & J.T. STAFFORD
+
+Thus each pi(s) € H is an eigenvector of A(E) with eigenvalue /^. Now, by
+Lemma 3.1 and Lemma 3.2,
+A(E).^=-(]^(JA,+I)(A+I))^
+i
+
+for all 9^ = ["[ <9^ c JJ. Therefore the eigenvalues of A(E) on H are of the
+form
+m
+
+1
+
+^
+
+-. m
+
+- E (2^ + ^ + ^ = -2^) + ") - 2 ^(Ai+ 2)/?l»==!
+
+The existence of a = (01)1 follows.
+
+1=1
+
+D
+
+Remarks. — (1) In the notation of Lemma 3.4, assume that [L =
+—j(Ap(a;) + dimp). Then it is not difficult to prove that
+(i) M^OK^H^(OU^
+(ii) if v (E MK is an eigenvector of E for /^ SuppP(p).(i; - cs) C;
+Supp M for some c € C.
+(2) Suppose that we are in the diagonal case (g,^) = (^i ® 0i,0i),
+where ^i is the Lie algebra of a semisimple group Gi. Then, p ^ 0i and
+a module M satisfying the hypotheses of Lemma 3.2 can be considered
+as a Gi-equi variant coherent P^ -module for which SuppM = G-^.x, and
+0 = G\.x C 0i is a nilpotent orbit. As in [13], §7, set
+Ao = ,dim0 - dimgi = - _ ( d i m 5 i +dim^).
+^
+z
+It is easily seen that \(x) = dimgf and Lemma 3.4 implies that, if s is
+a Gi-invariant generator of M and E.s = fis, then ^ ^ \o- Moreover,
+if fi = Ao the previous remark yields that the eigenspace for Ao has
+dimension one. See [38], Lemma 6.2 for a variant of this result.
+In the sequel we will identify the cotangent bundle T*p == p x p* with
+p x p through the isomorphism p ^ p* induced by the form K. We endow
+P(p) with the filtration {^(p)}^ by order of differential operators, and
+use the induced filtration on its subalgebras and factors. The associated
+graded algebra gr(P(p)) of P(p) identifies with 0(r*p). We denote by
+a(a) € (9(T*p) the principal symbol of the vector field r(a), a ^ t Thus,
+a(a)(6,c) = /^(a, [c,&]) for all (6,c) C p x p. Let a be the ideal of 0(T*p)
+generated by {0(0), a e ^}, write q for the radical ideal defining C(p) and set
+b = gr(P(p)T(C)). Write Af = P(p)/P(p)r(C). One obviously has a C b,
+with y^a = q, and so ChAf C C(p). Similarly, gr(P(p)^) identifies with
+
+INVARIANT DIFFERENTIAL OPERATORS
+
+1723
+
+e)(T*p)^ = 0 ( ( T " p ) / / K ) and for any finitely generated ^(p^-module Q
+one sets ChQ = V(anngr(Q)), which is the variety of zeroes, in ( T * p ) / / K ,
+of the annihilator of the module gr(Q).
+LEMMA 3.5. — Let M = ^ ( p ) / L be such that L D V(p)F +
+P(p)r(D where F is a power of5+(p*)^. Then, ChM C C(p) H (N(p) x p)
+and any subquotient ofM is a K-equivariant holonomic Pp -module.
+Proof. — Since F C L and r(^) C L, we see that ChM C (N(p) x
+p) D C(p) and it follows from Lemma 2.2 that M is holonomic. Since
+L D V(p)r(t), [35], Lemma 6.2.6(4) yields the equivariance of M. If Q
+is a subquotient of M, then it follows immediately that Q is holonomic
+while the J^-equivariance of Q follows from [35], Theorem 6.2.4 (see also
+[19], Lemma 6.1).
+D
+Remark 3.6. — Let M be as in Lemma 3.5 and set A(M) ==
+min{Ap(a;) : x € SuppM}. Then it can be easily deduced from Lemma 3.4
+that any eigenvalue of E on MK is less or equal to —j(A(M) + dimp). In
+the diagonal case, this result can be compared with [2], Corollary 3.9.
+We now consider modules of the following form:
+(3.3)
+
+M = P(p)/L such that L D P(p)F + ^(pMD + ^(p)^
+
+where F ' C ^'(p)^ is an ideal of finite codimension and -F is a power of
+
+^(P*)^.
+
+Note that, since ^(p)^ contains the Lie algebra u== C e + C / + C / i ,
+both M and MK do have a natural u-module structure.
+LEMMA 3.7. — Let M = V ( p ) / L be denned by (3.3). Then
+(1) ChM C C(p) H (N(p) x N(p));
+(2) the action ofuonM is locally finite.
+Proof. — (1) Observe that, since F ' C ^(p)^ has finite codimension,
+gr^') contains a power of the augmentation ideal 64. (p)^; thus ChM C
+p x N(p). The claim then follows from Lemma 3.5.
+(2) If v G ^(p), write v G M for its class modulo L. By hypothesis,
+there exist I e N and a non-zero polynomial a G C [T] such that e1.! =
+a(f).l = 0. Recall that the elements of 6'(p*) and <?(?) act ad-nilpotently
+on P(p). Therefore, for all d <E P(p), there exists £ C N and 0 7^ b e C [T]
+
+1724
+
+T. LEVASSEUR & J.T. STAFFORD
+
+such that e^d = b(f).d = 0. It is then a classical result that U(u).d is a
+finite dimensional u-module (see [14], Corollary 2.4.11, Remark 2.5.2, for a
+more general result).
+D
+We can now prove the main result of this section.
+THEOREM 3.8. — Let Q be a semisimple Lie algebra and (g,^) be
+a symmetric pair (such that n = dimp > 0). Assume that \^(x) > 0 for
+all distinguished nilpotent elements x e p. If M is denned by (3.3) then
+M =0.
+Proof. — Suppose that M -^ 0. By taking a simple quotient we may
+assume that M is simple; note that 0 7^ I € MK. Then SuppM c N(p)
+is irreducible, closed and J^-stable. Hence SuppM = K.x is the closure
+of a single nilpotent orbit. As already observed, gr(L) contains a power of
+^(p)^; it follows that ChM C C(p) H (K^x x N(p)).
+Suppose that x is not distinguished (this includes the possibility that
+x = 0). Since SuppM contains a*, there exists an irreducible component X
+of Ch M such that (x, ^) e X for some ^ € p. Since X is JC-stable, it follows,
+in the notation of Lemma 2.2, that 771 (X) = K.x. Thus dimX < n = dimp
+by Lemma 2.2(ii). But, by Lemma 3.5, M is a non-zero holonomic Ppmodule, and so each irreducible component of Ch M has dimension n (see
+[6], for example). Hence a contradiction.
+Thus, x is distinguished. By Lemma 3.7, the action ofuis locally finite
+on the non-zero module M^. Therefore, we can pick 0 7^ s e M^ which is
+a highest weight vector for u. Let v € N be the weight of s; thus h.s = i/s,
+or, equivalently, E.s = (y — n/2)s. By Lemma 3.5, M is a K-eqmvariant,
+coherent Pp-module and so we may apply Lemma 3.4 to conclude that
+1
+1 m
+=-^W-^^(\i+2)ai
+
+l/
+
+i=l
+
+for some a C N771. The hypothesis on \p(x) gives v < 0 and a contradiction.
+D
+Remarks. — (1) The proof of Theorem 3.8 can be applied in a few
+further cases. For example, assume that £ = 1 and that either n = 2
+or n = 2r + 1 is odd; this forces (g,6) = (so(3,C),so(2,C)) respectively
+(5o(2r+2,C),so(2r+l,C)). Then the proof of the theorem can be used to
+show that any P(p)-module M that satisfies (3.3) is actually zero. Indeed,
+in the notation of the proof, m == 1 and Ai = 2 and the final displayed
+
+INVARIANT DIFFERENTIAL OPERATORS
+
+1725
+
+equation then forces n = 2y + 4(a + 1) for some a G N, giving the required
+contradiction.
+(2) The theorem is, however, false without some restriction. For
+example, consider the real symmetric pair (flo^o) == (^o(l,g+ l),5o(l,g))
+where q ^ 3 is odd. Then the complexified pair (so(^+2, C),so(g4-l, C)) is
+not nice and there exists a non-zero P(p)-module M = P(p)/L satisfying
+the hypotheses (3.3). Specifically, if u is the hyperfunction denned in [33],
+(6.2), then M = T)(f).u ^ 0 has the required properties (see also [I], §4).
+We will examine this phenomenon in greater detail in §6.
+Return, now, to the case of a general, reductive, symmetric pair (g, ^).
+Set
+(3.4)
+
+A(p) = P(p)^/(P(p)r(e))^
+
+Notice that gr(A(p)) = (gr(P(p))/b)^ is a factor of (gr(Z)(p))/a)^ =
+((^(T*?)/^)^ and so we can identify ChA(p) = Specgr(A(p)) with the
+closed subvariety ChAf//K ofC(p)//K = ^(a^). Set ^ = [5,0], Ci = CHgi,
+and pi = p H ^ i . Let K\ be the semisimple (connected) subgroup of K such
+that Lie(T^i) = ^i and write 3 for the centre of Q. Then, p = pi © (p D 3),
+^ = ^ ^ (^ H ^) and (^i, ^i) is a symmetric pair. We retain this notation in
+the next corollary.
+COROLLARY 3.9. — Let (g, t) be a symmetric pair such that pi ^ 0.
+Assume that Api(^) > 0 for all ^^-distinguished nilpotent elements x € pi.
+(1) Let M = P(p)/(P(p)Fi + ^(p)r(C) + ^(p)^i'), where Fi is a
+power of ^-(-(p^)^1 and F[ C ^(pi)^ is an ideal of finite codimension.
+Then, M = 0.
+(2) Let F be a (P(p),A(p))-bimoduJe such that ^r has finite length
+as a Jeff P(p)-modu2e. Then ^ = 0.
+
+Proof. — (1) Set po = 3 H p. Observe that P(p) == P(po)0P(pi)
+
+c
+
+and r(e) = r^i). Thus, M ^ P(po) 0Mi, where Mi = P(pi)/(P(pi)Fi +
+c
+
+P(pi)r(^i) + P(pi)F^). The hypotheses ensure that we can apply Theorem 3.8 to the P(pi)-module Mi. Hence Mi = 0 and, therefore, M = 0.
+(2) Recall that the Euler vector field E € ^(p)^ defines a grading
+P(p) = e ^(p), where P(pL = {D <E P(p) : [E,D] = ^'D}. Since the
+j'ez
+
+action of K on p is linear, the rings ^(p)^, 5'(p*)^ and ^(p)^ are all
+graded subalgebras of P(p). Moreover, the induced grading on S^p*)^, or
+
+1726
+
+T. LEVASSEUR & J.T. STAFFORD
+
+^(p)^, is the natural one given by the degree of polynomials. Notice also
+that any ideal of ^(p)^ is graded (see [35], Lemma 2.3).
+Set k = Endp(p)(.F) and let I be the annihilator of the right ^(p)^module T'. Note that, since T has finite length as a left P(p)-module,
+Dixmier's Lemma implies that k is a finite dimensional C -algebra. As F is
+a right A(p)-module, I contains (^(p)?-^))^ and P(p)^/7 is a subalgebra
+of k via right multiplication on T'. Thus I has finite codimension in Z^p)^,
+which implies that F = I n 6'(p*)^ and F1 = I n 5'(p)^ are ideals of
+^(p*)^, respectively ^(p)^, of finite codimension. From the last paragraph
+we know that J, F and F ' are graded, hence F contains a power of
+^(p*)^ and F ' contains a power of ^(p)^. Now consider the P(p)module M = P(p)/(P(p)F + ^(p)^) + ^(p)^). Since K is reductive we
+have MK = A(p)/(A(p)F+A(p)F / ); therefore, by construction, ^(p^/J is
+a factor of the ^(p^-module MK. However, part (1) implies that M = 0;
+hence MK = 0, I = ^(p)^ and T = 0.
+D
+
+4. Proof of Theorem A.
+The idea of the proof of Theorem A is similar to that of [18],
+Theorem 5.5; the main step is to show that the module C = /C(p)/P(p)r(^)
+is supported on the nilpotent cone N(p), after which the result follows easily
+from Corollary 3.9. In order to fix the notation, and for the convenience of
+the reader, we first recall a few facts from [18], §4.
+We begin with the relevant notation. For simplicity we will assume
+that smooth varieties are irreducible. Assume that G is an arbitrary
+reductive algebraic group and that X is an affine G-variety. Set Q = Lie(G)
+and let TX ' Q —)> ^(X) be, as usual, the Lie algebra homomorphism induced
+by the G-action. Set
+
+JCcW = {d e v(X): v/ e OW0^ d(f) = o}.
+Notice that P(X)rx(fl) C JCcW and that /Cx(p) is the ideal /C(p) of
+the introduction. Given a reductive subgroup M C G and an affine Mvariety V, define G x M Y = (G x V)//M, under the M-action m.(g,y) =
+(gm~1, m.y). If 0 C 0{X\ write X^ for the principal open subset {x C X :
+(p{x) ^ 0}. If F is a P(X)-module, we denote by ^ the localization of F
+at the Ore set {^ : k € N}. Note that V(X^) = V(X)^.
+Part (1) of the next lemma is a standard application of Luna's slice
+theorem. We give the proof, since it illustrates the technique that will be
+
+INVARIANT DIFFERENTIAL OPERATORS
+
+1727
+
+used several times in the paper. For basic facts about the Slice Theorem
+and excellent morphisms the reader is referred to [28], §6 or [31].
+LEMMA 4.1. — Let X be a finite dimensional rational G-module.
+(1) Assume that X° = {0} and that /CM (TV) = Z)(TV)r^(m) for all
+slice representations (TV, M) at non-zero closed orbits in X. Write N(X) =
+W^(wxW} for the null-cone in X and let C(X) = ]CG(X)/V(X)TX(Q).
+Then Supp C(X) C N(X).
+(2) Let X = E © F be a G-stable decomposition of X such that
+E C X°. Then, K,G(X) = V(X)JCc(F).
+Proof. — (1) Observe that C(X) is a rational G-module; thus
+Supp/^(X) is a closed G-stable subset of X. Suppose that there exists
+x G S\ippjC(X) with x ^ N(X). Then, by definition of the null-cone, the
+unique closed orbit contained in G.x C S\ippC(X) is of the form G.b for
+some b ^ 0. Set M = Gb and let (TV, M) be the slice representation at the
+point b. By [18], Proposition 4.4 there exists (f) <E (^(X)0 such that (j)(V) -^ 0
+and C(X)^ = 0. Thus b ^ Supp£(X), giving the required contradiction.
+(2) This is routine.
+
+D
+
+We are now ready to prove Theorem A from the introduction. Thus,
+in the notation given there, we want to prove the following result.
+THEOREM 4.2. — Let Q be a reductive Lie algebra and (fl,^) be a
+nice symmetric pair. Then /C(p) == Z)(p)r(^).
+Proof. — By Lemma 4.1 we may assume that Q is semisimple. We
+argue by induction on dimfl, with the case dimg == 0 being obvious. (The
+theorem is also immediate if p = 0; that is, if ^ = I.)
+Recall that C = /C(p)/P(p)r(e). If 0 ^ b G p is semisimple, then
+p = p^ (f) [^ b] and (p^, K^ is the slice representation at the point b. Thus,
+by Lemma 4.1(1) and induction, Supp^C C N(p). Since C is a submodule of
+N = P(p)/P(p)r(e), we have Ch£ C C(p); hence ChC C C(p) H (N(p) x p)
+and C is holonomic by Lemma 2.2. As C is clearly a (P(p), A(p))-bimodule,
+Corollary 3.9 yields C = 0.
+D
+As an immediate corollary of Theorem 4.2 one obtains the following
+generalization of a fundamental result of Harish-Chandra (see [9], Theorem 4 or (1.2)) from the diagonal case to nice symmetric pairs:
+
+1728
+
+T. LEVASSEUR & J,T. STAFFORD
+
+COROLLARY 4.3. — Assume that the symmetric pair (5,^) is nice
+and is the complex! fication of a real symmetric pair (flo^o)- Write KQ
+for the connected Lie group satisfying Lie(Jfo) = ^Q. Let U C po be a
+KQ-stable open subset and T be a Ko-invariant distribution on U. Then
+
+^(P) • T = o.
+
+n
+
+As observed in Remark 2.7, many of the nice irreducible symmetric
+pairs are of maximal rank. We give in Proposition 4.6 another sufficient
+condition to ensure that /C(p) = P(p)r(T). This result will be used in the
+proof of Theorem 6.4 and it also gives a simpler proof of Theorem 4.2 when
+(g, t) has maximal rank.
+Let x € p. If m^ C (9(p) is the maximal ideal corresponding to x,
+we denote by My, the localization of an 0(p)-module M with respect to
+0(p) \ m^' This applies to any P(p)-module and, when M = P(p), ^>(p)a.
+is the algebra of differential operators on the local ring 0(p)a;.
+The Gelfand-Kirillov dimension of a module M, over some C-algebra,
+is denoted by GKdim M; see [22] for details. Recall, see [23] for example,
+that if M is a finitely generated module over P(p) or ^(p)^, then GKdim M
+is the dimension of the characteristic variety ChM C p x p, or ChM C
+(p x p ) / / K . The following lemma will be used several times. It is implicit
+in [4] and proved in [21], Theorem I. (3.2).
+LEMMA 4.4. — Let 2 be a multiplicatively closed set of commuting,
+regular, locally ad-nilpotent elements of an algebra D. Then, 5 is an Ore
+set in D and GKdim MS"1 ^ GKdim M, for any right D-module M. IfM
+has no 'E-torsion, then GKdim MS"1 = GKdim M.
+D
+We remark that, whenever we apply this lemma, D will be (close to
+being) a ring of differential operators T)(V) with S C 0(V), in which case
+the elements of 2 will automatically be locally ad-nilpotent and commuting.
+We define the set of generic elements by p' = {x € p : x regular and
+semisimple}. Recall [II], Proposition III.4.9, that there exists < C (^(p)^,
+called the discriminant of (5, ^), such that p' = p^ = {x G p : C,(x) -^ 0}.
+LEMMA 4.5. — The module AT = P(p)/P(p)r(C) satisfies GKdimA/'
+
+=dimC(p) =n^L
+Proof. — Recall that ChAf C C(p) and hence that GKdim^V ^
+dimC(p). Let v <E p'. It is easily seen that there exists a basis { < 9 i , . . . , 9n}
+
+INVARIANT DIFFERENTIAL OPERATORS
+
+1729
+n
+
+of the 0(p)^-module 9(p)^ such that ^(p^T^) = /C(p)^ = ^ ^(p)^
+z=^+l
+
+(similar results are proved in [19], Lemma 6.7). Hence, Afv = ^(p)v/
+n
+
+^ V(p)v9i, which implies that GKdimA/^ = 2n - (n - £) = n + £ =
+i=W
+
+dimC(p). However, Lemma 4.4 implies that GKdimA/v ^ GKdimA/'. Thus
+GKdimA/'=dimC(p).
+D
+PROPOSITION 4.6. — Assume that C(p) is irreducible and q = a, in
+the notation of Section 3. Then, /C(p) = P(p)T(€).
+Proof. — The hypothesis ensures that 0(T*p)/a is a domain of
+dimension n + £ = dimC(p). Since (9(T*p)/b is a factor of 0(T*p)/a,
+Lemma 4.5 shows that b = a. This implies in particular that GKdimA^ ==
+GKdim(0(r*p)/b)^ = dimC(p). Set N = P(p)/X(p). Then, A/e = N^
+and therefore GKdimJV ^ GKdimA^ = dimC(p). Now, suppose that
+^(p)r(p) £ /C(p). Then gr(/:) + 0 while gr{N) = gr(A/')/gr(/:). Since
+gr(A/") = C?(r*p)/b is a domain, this forces GKdimTV = GKdimgr(A^) <
+dimC(p), hence a contradiction.
+D
+COROLLARY 4.7 ([31], Theorem 9.9). — Assume that (g,^) has
+maximal rank. Then, /C(p) = P(p)r(t).
+Proof. — Recall that (5, t) is of maximal rank if and only if the action
+(K : p) is locally free; that is, if and only if max{diml^..r : x € p} = dim^.
+By [27], Theorem 3.2, the hypotheses of Proposition 3.2 are therefore
+satisfied.
+D
+Remark. — It is not difficult to reduce the proof of Theorem 4.2
+to the case where the symmetric pair is irreducible. The significance of
+this is that Corollary 4.7 therefore provides another proof of Theorem 4.2
+whenever (5, ^) is nice and has no irreducible factors of type (0), (II), (IV)
+(k = 2) or (VI) (see Remark 2.7). The details are left to the interested
+reader.
+
+5. Applications.
+The main aim of this section is to prove Theorem D from the
+
+1730
+
+T. LEVASSEUR & J.T. STAFFORD
+
+introduction and the basic inductive technique is provided by the Luna
+Slice Theorem, see [31], Theorem 1.14.
+We begin with some technical lemmas which will enable us to apply
+the Slice Theorem in proving Theorem D. The notation is as in the
+beginning of §4. Furthermore, if X is an irreducible affine G-variety (G
+reductive) we set
+TGW=1CGWG
+
+Ro(X) =V(X)0/IG(X).
+
+and
+
+Observe that RoW is a C-algebra and 0{X)° c RcW. The next lemma
+is then easy to prove.
+LEMMA 5.1. — Let X be a smooth afHne G-variety.
+(1) Let (/) € 0{X)°. Then, ICcW^ = /CG^). If JC^X) =
+V(X)rx(Q), then JCcW = V{X^rx{o).
+(2) Let U C X be a wx -saturated open affine subset and let b G U
+such that G.b is closed. There exists (f) e O^X)0 such that b e X^ = U^.
+One has !CG(U) = {d e V(U) : d^O^X)0) = 0}.
+D
+LEMMA 5.2. — Let (p : Z —^ U be an excellent surjective Gmorphism of smooth affine G-varieties.
+(1) O^Z)0
+
+0
+
+0(?7)G'
+
+RG(U) identifies with RG(Z).
+
+(2) RG(U) is simple if and only if Rc(Z) is simple.
+(3) Let T be a finitely generated RG(U)-module and set Q =
+Rc(Z) 0 J=-. Then GKdim^ = GKdim^. Conversely ifQ is a finitely
+Rc{U)
+generated RG{Z)-module, there exists a finitely generated RG(U)-module
+T such that Q = Rc(Z) 0 T.
+RG(U)
+Proof. — (1) is immediate from the proof of [31], Corollary 4.4.
+For simplicity we drop the subscript G in the rest of this proof. Set
+A = 0(U) and B = 0(Z). Notice that by the faithful flatness of B°
+over A°, R(U) ^ R(Z) via Q ^ 1 (g)G Q. By the definition ofZ(Z), R(Z)
+A
+
+embeds in V ( Z / / G ) = P^^). It follows that we may endow R(Z) with
+the filtration by ord, the order of differential operators in V ( Z / / G ) .
+(2) Suppose that J is a proper, non-zero ideal of R{Z) and pick
+0 ^ Q e J . If Q ^ B0, there exists b e B° such that [b,Q] ^ 0 and
+
+INVARIANT DIFFERENTIAL OPERATORS
+
+1731
+
+ord [6, Q] < ord Q. Thus, by induction, we deduce that J D B° -^ 0. Since
+^G _^ pG ^ etale, it follows, for example from [24], Corollary 3.16, that
+J D A° -^ 0. Therefore J n ^(^7) is a proper non-zero ideal of R(U).
+Conversely, assume that R{Z) is simple and let I C R{U) be
+a non-zero ideal. As in the previous paragraph, I D A° -^ 0. Thus
+0 ^ R{U){I n AG)R(U) C I and we may as well assume that I -=
+R^^HA^R^U). Now, we claim that IR(Z) is an ideal ofR(Z). Indeed,
+we have R(U)IR(Z) C IR(Z) and
+BGIR(Z) = B^^R^I n A°)R{Z) = R^B0^ H A°)R{Z)
+= R{U)(I n AG)BGR(Z) = IR(Z).
+Since R(Z) = J?((7)BG', this proves the claim.
+As R(Z) is simple, this forces IR(Z) = R(Z) = 7^([/) (g)0 ^G'. But,
+A
+
+JJ?(Z) = I(R(U) (g)0 B0) = I 00 B° and, therefore, I = R(U) by faithful
+A
+
+A
+
+flatness.
+
+(3) Recall [31], Proof of Corollary 4.4, that P^Z)0 =B° 00 P7^)6',
+A
+
+since (^ is excellent. Thus, when we endow R(U) and J?(Z) with the
+filtrations induced by {^(l/)6'}^, respectively {V171^)0}^, we obtain
+grWZ^^^grGR^)).
+A0
+
+7
+
+Let ^ be a finitely generated R (U) -module. Choose a good filtration {^k^}k on F\ that is, a filtration such that the associated graded
+module gr^(^') is finitely generated over the affine commutative algebra
+gr(R(U)) ^ gr(P(£/) G ')/gr(Z(^)). Then, it is not difficult to see that
+^>^Q = B° 00 ^kf defines a good filtration on the J?(Z)-module Q such
+A
+
+that gr^(^) = B° (g)0 gr^(JT), as a gr(J?(Z))-module. Since A° -^ B°
+A
+
+is etale, so is gr(R(U)) -^ gv(R(Z)) = B0 (g) gi(R(U)) (base change
+A°
+for etale morphisms). Recall [23] that GKdim.F = Kdimgr^(.F) and
+GKdim^ = Kdimgr^(^). Now, gr^(^) -= B° ^ gr^(^). Since A^ ^ B°
+A°
+
+is etale, Kdim^G B0 (g) gr^(^7) = Kdim^c gr^^) (see, for example, [24],
+Corollary 3.16). Thus, CKdimJ* = GKdim^.
+Conversely, if Q is a finitely generated R(Z) -module, write G =
+Y, R(Z)vi and set F= ^ R(U)vi. It is then clear that ^ = J?(Z) (g) ^. D
+1=1
+i=i
+R{U}
+The following lemma can be deduced, by standard methods, from
+[18], Proof of Lemma 4.3 and [31], Corollary 4.5(i).
+
+1732
+
+T. LEVASSEUR & J.T. STAFFORD
+
+LEMMA 5.3. — Let M be a reductive subgroup of G, fix a smooth
+affine M-variety Y and set Z = G x^ Y. Then, RM^Y) ^ Rc(Z).
+D
+The three next results will give a proof of Theorem D from the
+introduction. Recall that R(f) = RpW = ^(p)^//^?)^.
+LEMMA 5.4. — Let (5,^) be any symmetric pair. Then,
+GKdim^(p) = 2£.
+
+Proof. — Observe that, since (^(p)^ C -R(p), we can localize R(p)
+with respect to any ore set 2 C (^(p)^ and that, by Lemma 4.4,
+GKdimR(f)E~1 = GKdimjR(p). Notice also that, when p is contained in
+the centre of {(, K acts trivially on p = a and -R(p) = P(p). The claim then
+follows, by induction on dimg, from the Slice Theorem [31], Theorem 1.14
+and Lemmas 5.2 and 5.3.
+D
+THEOREM 5.5. — Let (0,^) be a nice symmetric pair. Then, R{p)
+is a simple ring.
+Proof. — Set 0i = [g, g], pi = p Dgi and let 3 denote the centre of Q.
+Then Lemma 4.1(2) implies that R(p) = P(p Ha) 0c -R(pi). It follows that
+we may restrict to the case when Q is semisimple. We argue by induction
+on dim 5, with the case dimQ •== 0 being obvious.
+Let 0 T^ b € p be semisimple; thus (p^T^) is the slice representation
+of the JC-action on p at the point b. Then, by the Slice Theorem, Lemma 5.1
+and induction, there exists (f) € (^(p)^ such that (/)(b) •=/=- 0 and -Rj<(p)<^ is
+simple. Let J = J/Z(p) be a non-zero ideal of -R(p), for some J C ^(p)^.
+Then, since J^> 7^ 0 (0 is a non-zero divisor in -R(p)), we obtain that
+J^ = RK^P)^- I11 other words, there exists s e N such that 0s 6 J .
+Now, consider the P(p)-module T = P(p)/(^(p)J+P(p)r(C)). Then
+T is a compatible K -module and, by the previous paragraph, Supp^' is a
+closed JC-stable subset of p which does not contain any non-zero semisimple
+element. This forces Supp^ C N(p) and therefore ChJF C C(p)n(N(p) xp).
+Thus, by Lemma 2.2, T is holonomic, and therefore of finite length as a
+left P(p)-module. By Theorem 4.2, /C(p) = P(p)r(^), and so J?(p) = A(p),
+in the notation of (3.4). Moreover, as J C ^(p)^, T is a CP(p), A(p))bimodule. Thus, by Corollary 3.9, ^=0 and hence R{p)/J= ^=0.
+D
+
+INVARIANT DIFFERENTIAL OPERATORS
+
+1733
+
+THEOREM 5.6. — Let (g,^) be a nice symmetric pair and let Q be
+a non-zero finitely generated R(p)-module. Then GKdim Q ^ £.
+Proof. — As before, write pi = pn[fl,0]. If pi = 0, then p is contained
+in the centre 3 of g. Thus, J?(p) = P(p), i = dimp, and the result is
+nothing but the Bernstein inequality. We may therefore assume that pi 7^ 0.
+We prove the theorem by induction on dimg and we adopt the notation
+developed prior to Corollary 3.9.
+Observe that p / / K = P I / / K ] _ x 3 and that the points Wp(&), where
+b € p \ 5 is semisimple can be identified with the points (zz7p^(a),c) €
+Pi/^i x 3 such that w^ (a) 7^ w^ (0). Suppose that Q is a non-zero finitely
+generated J?(p)-module with GKdim Q < £. Then, using the Slice Theorem,
+Lemmas 4.4, 5.2 and 5.3, one can prove that the support of the 0 ( p / / K ) module Q is contained in {^pi(O)} x 3.
+Since {^pi(O)} x^ is the variety of zeroes of-S^p^)^, we obtain that,
+for all v € Q, there exists a power of ^(p^)^, say Fi, such that F^.v = 0.
+Now, recall that the restriction of the form ^ to p induces a Kequi variant isomorphism K, : p ^4p* such that ^(pi) = p^. It is well known
+that one can extend K, to a K-equi variant automorphism x : ^(p) ^ ^(p)
+(the Fourier transform, see [19], §7) which satisfies: x(r(a)) == r(a) for a G
+C, ^(p)^) = ^(p*)^ and x(5(pi)^) = S(^. Since P(p)T% = ^(p)
+by Theorem 4.2, we have ;<(Z(p)) = ^~(p) and -%: induces an automorphism
+of -R(p). Return to the module Q and define the 7?(p)-module Q^ to be
+the abelian group Q with action a * v = x{a).v^ for a 6 -R(p), v ^z Q. One
+clearly has GKdim Q^ = GKdim Q < £. Hence each element of Q^ is killed
+by a power of 54-(p^)^. In other words, each v 6 Q is killed by a power,
+sayFi',of5+(pi)^.
+Thus, by the last two paragraphs, R(y).v is a factor of M\ =
+^(p)/(J?(p)Fi+^(p)FO.Set
+M = P(p)/(P(p)Fi + ^(p)r(C) + ^(p)^).
+By Corollary 3.9, M = 0. On the other hand, M1^ = Mi, whence v = 0
+and Q = 0, as desired.
+D
+COROLLARY 5.7. — Let (0, ^) be a nice symmetric pair, n C ^(p)^
+be a maximal ideal and 0 ^ 0 6 0(p)^. Then, P(p) = P(p)0 + P(p)r(^) +
+P(p)n.
+
+1734
+
+T. LEVASSEUR & J.T. STAFFORD
+
+Proof. — Set M = P(p)/(P(p)^ + ^(p)r(^ + P(p)n). It suffices
+to prove that M1^ = R(p)/(R{p)(f) + .R(p)n) = 0, or, by Theorem 5.6,
+that GKdimM^ < £. Recall from §3 that the filtration {^(p)}^ on P(p)
+induces a filtration on A(p) = R(p) such that Specgr(.R(p)) = ChJ\f//K C
+C ( f ) / / K . Now, since gr(n) = ^(p)^, we have
+ChM C X = C(p) n (p x N(p)) H ({0 = 0} x p).
+It follows from Proposition 2.1 that X / / ' K identifies with the subvariety
+{0 = 0} of p / / K . Since p / / K is an irreducible variety of dimension £, this
+implies that GKdim M^ = dim Ch M / / K ^ dim ^ / / K <t
+D
+We now prove Corollary C from the introduction. Let QQ be a real
+reductive Lie algebra and (go^o) be a symmetric pair with associated
+decomposition 0o = ^o^Po- Let i9 be the extension of ^o to 0 = C 0 go; then
+R
+
+(0, ^9) is a symmetric pair and Q = ^©p, where t = C (g) ^o and p = C (g) po. If
+R
+
+R
+
+?7 is a subset of po we denote by U ' the set of regular semisimple elements
+in U\ thus U ' = U H p' = [u G U : C(n) ^ 0}. Recall that a distribution
+T on the open subset U C po is locally invariant if r(^).r = 0, and is
+an eigendistribution if there exists a maximal ideal n C ^(p)^ such that
+n.T = 0.
+COROLLARY 5.8. — Assume that (0, t) is a nice symmetric pair. Let
+T be a locally invariant eigendistribution on the open subset U C po such
+that SuppT C U \ U ' . Then T = 0.
+Proof. — (We mimic the proof given in [38], p. 798 in the diagonal
+case.) Let n C ^(p)^ be a maximal ideal such that n.T = 0. Recall [7],
+Lemma 21 that, for all u e U, there exists s C N and an open subset
+u C V C U such that ^.T^y = 0. Let L be the annihilator in P(p) of T\y.
+Since T\y is locally invariant, we see that L contains r(^), n and ( s . Thus
+L = P(p) by Corollary 5.7 and therefore T\y = 0. Hence T = 0.
+D
+Remark. — Let 0 ^ 0 e ^(p)^ and set U^ = [u e U : (j)(u) 7^ 0}.
+Replacing C, by (/) in the previous proof shows that there exists no non-zero
+locally invariant eigendistribution supported on U \ U^. However, the case
+0 = (^ readily implies the more general result, since any locally invariant
+eigendistribution is a real analytic function on [/', see [33], Theorem 5.3.
+Now suppose that X C, p is an algebraic JC-subvariety defined by an
+ideal 0 7^ I C 0(f). Since the generic JC-orbit in p is closed, one easily
+
+INVARIANT DIFFERENTIAL OPERATORS
+
+1735
+
+sees that I1^ ^ 0. We can therefore also conclude that there is no non-zero
+locally invariant eigendistribution supported on U H X.
+
+6. The rank one case.
+In the case when (g, t) has rank one it is easy to calculate /C(p) and
+,R(p) = r^p^y/C^p)^ We do so in this section, since it shows that the
+main results of this paper can fail for symmetric pairs that are not nice.
+Curiously, these computations also show how one may be able to modify
+those theorems so that they hold for all symmetric pairs.
+Thus, throughout this section, we will assume that Q is semisimple
+and that (5, C) is a symmetric pair of rank one, unless we explicitly say
+otherwise (the one exception will be in Theorem 6.3 and the comments
+immediately preceding it).
+n
+
+n
+
+m
+
+Recall from §3 that the .?f-invariant elements ^ 9^.,
+^ x2 and E+ 2—
+1=1 l 1=1
+generate a Lie algebra u =^ 5l(2,C) inside 'P(p). In order to work with
+highest weight modules, we slightly change our notation and set
+f=-c\lYx^
+/ ^
+Z >
+
+e =9l/y^ ^Xi^,
+
+J
+
+i=l
+
+h^-E-^.
+c\
+
+i=l
+
+(These elements still satisfy [e, /] == h, [h, e] = 2e, [/i, /] = —2/.)
+Recall the definition of the radial component map: The Chevalley isomorphism S(^)K^S(a*)w induces an isomorphism V ( y / / K )
+^V(a/W)', by composing this isomorphism with the natural restriction
+map ^(p)^ —> V ( f / / K ) ^ we obtain the radial component map rad :
+P(p)^ —^ V(a/W). Note that Kerrad = Z(p) and R{p) is isomorphic
+to R = Imrad. Set
+e = rad(e),
+
+/ = rad(/),
+
+h = rad(/i).
+
+Choose the coordinate system {xi,9x^}i of P(p) such that t = x\ is
+the coordinate function on a, and 0*2,. • • , Xn are coordinate functions on a
+/^-orthogonal complement of a in p. Then the Weyl group W = {±1} acts
+on 6'(a*) = C[t] by t ^ -t and S(a:')w = C [z], where z = t2. Furthermore,
+rad ( Y, x2} = z, rad ( Y, 92,} = 4.z92, + 2n9^ and rad(E) = 2z9^. Hence,
+^i=l
+
+(6.1)
+
+/
+
+^i=l
+
+e=2z9^+n9^
+
+/
+
+7=-|^
+
+h = -W - j.
+
+1736
+
+T. LEVASSEUR & J.T. STAFFORD
+
+LEMMA 6.1. — (1) Set U = C(e, /, h). Then, R = U ^ [/(sl(2, C))/
+(cj - ^n(n - 4)), where uj = h2 + 2h + 4/e is the Casimir element of the
+enveloping algebra U(9i(2, C)).
+(2) Assume that n = 2r ^ 4. Then, V = C [^z^/C [^] is a miite
+dimensional simple R-module. Indeed, V ^ R/ (Jy"1 + J?(/i - r + 2) + I?e).
+Proof. — Since U is a factor of [/(s[(2,C)), the isomorphism in
+part (1) follows by computing the character of the [/-module C[z}. By
+construction, U C R. The equality U = R then follows easily from the fact
+that, by (6.1), U[f-1} = R[f-1] and, dually, U[e-1} = R[e-1}. This proves
+(1), while part (2) follows by the obvious computation.
+D
+Recall that, when n ^ 4, the rank one symmetric pair is not nice (see
+Remark 2.4). The following result shows that Theorem 3.8 fails for such a
+pair and, consequently, that the proof of Theorem 4.2 will also not work in
+this situation. See, however, the first remark following Theorem 3.8. This
+result is related to the computation of the "minimal extension" /^(N(p),p),
+see [25], pp. 220-221.
+PROPOSITION 6.2. — Assume that n = 2r ^ 4 and set
+L=VWfr-l+VWrW^V(p)e.
+Then, M = P(p)/L is a non-zero module that satisfies (3.3).
+Proof. — Here, N(p) is the variety of zeroes, in p, of the polynomial
+/ and ^(p)^ = C[e\. Thus M does have the form of (3.3). Consider the
+.R-module V of Lemma 6.1(2) as an A(p)-module. By the final assertion
+of that lemma, V is a factor of V = A(p)/(A(p)/ 7 '- 1 + A(p)e). Recall
+that A/" = P(p)/P(p)r(e). Thus M = AT ^) V = P(p)/L and, since
+A(p)
+
+M^ = V ^ 0, we have M ^ 0.
+
+D
+
+In order to describe the left ideal /C(p) in the rank one case, we
+need to introduce a Lie subalgebra of Endc(p). Since the definition can
+be made in the general case, we return to the situation where (g,^) is a
+symmetric pair of arbitrary rank. Recall that any a € Endc(p) defines a
+vector field f(a) € Q(p) by the formula (r(a).(p)(v) = —
+^(v - ta.v),
+dt \t=o
+for all (p (E 0(p), v G p. Since r(a) = f(ad(a)) for all a G 6 we may, without
+confusion, write r(a) = f(a) for a G Endc(p). Following [16], §4, we define
+a Lie subalgebra of Endc(p) by
+(6.2)
+I = {a € Endc(p) : r(a).^ = 0 for all ^ G 0(p)^}.
+
+INVARIANT DIFFERENTIAL OPERATORS
+
+1737
+
+We want to study the inclusions ad(^) C i and P(p)r(^) C P(p)r(J) C /C(p).
+Obviously, we only need to work in the case where Q is semisimple, which we
+now assume. In the rank one case, (^(p)^ = C[/], where / is the quadratic
+form ^x], and the Lie algebra ^ is isomorphic to so (n). (We drop the
+i
+
+base field C in the sequel.) We have the the following general result, which
+depends upon a case by case analysis.
+THEOREM 6.3 ([20]). — Assume that Q is a semisimple Lie algebra
+and let (0, ^) be a symmetric pair (of any rank). Then, ad(^) = J if and only
+if each irreducible, rank one factor of (g, V) is of type (sa(n + 1),so(n)). D
+This implies that, if (5,^) is irreducible of rank bigger than one,
+then J = ad(^). Conversely, if £ = 1, then ad(^) -^ J except when
+(^)=(5o(n+l),5o(n)).
+
+We now look to the inclusion P(p)r(^) C P(p)r(J) when (g, f) is of
+rank one. In the notation of [10], Chap. X, Table V, there are four possible
+cases:
+(BDI) (so(n + l),5o(n)), n ^ 2
+(AIII) (5[(m+l),^(m)), m ^ 2
+(CII) (5p(m+l),5p(m)e5p(l)), m^ 1
+(FII) (f4^o(9)).
+For the first three cases, the relationship between P(p)r(^) and
+P(p)r(J) has been determined by H. Ochiai [26]: if (s,^) = (5[(3),g[(2)),
+then Z)(p)r(e) $ P(p)r(J), but otherwise P(p)r(e) = P(p)r(J). In contrast,
+there is no exceptional case in the description of /C(p):
+THEOREM 6.4. — Let (0,^) be any symmetric pair of rank one
+with Q semisimple. Then, /C(p) = P(p)T(J) and, consequently, Z(p) =
+(P(p)r(J))^.
+Proof. — Suppose, first, that (g,^) = {so(n + l),so(n)). Then I =
+ad(^) ^ 5o(n) and p = C71 with the standard S0(n)-action. In the
+coordinate system {^,<9^}i the Lie algebra r(^) has basis {r(e^) : 1 ^
+i < j ^ n} where T(e^) = a;,9^. - ^-^. Let % = cr(^.) e 0(T*p) be
+the principal symbol of <9^.. Then, (!)(r*p) = C [^,2/z; 1 ^ z ^ n] and the
+ideal generated by the cr(a), a 6 ^, is a = (rc^ — ^^; 1 ^ z < j ^ n).
+It is easy to see that C(p) = ^(^)- Moreover, it is well known that a is a
+
+1738
+
+T. LEVASSEUR & J.T. STAFFORD
+
+prime ideal (for instance, by classical invariant theory [39], C[^,^-]/a ^
+C [ n i , z A 2 ; ^ , l ^ i ^ nf'\ where C* acts by X.Uz = \ui, X.Vi = A~ 1 ^). It
+then follows from Proposition 4.6 that /C(p) = P(p)r(^).
+Now consider the general case. Notice that the J-module p identifies
+with the standard 5o(n)-module C 72 . Consider the symmetric pair 0,1) =
+(so(n 4- l),5o(n)) where p = C" with standard action of K = S0(n).
+We may identify the J-modules p and p and we have (^(p)^ = 0(p)^ =
+0^ = C [/]. Therefore, since P(p) = P(p),
+
+/Cx(p)={deP(p):d(0(p)x)=o}
+= ^^(P) = ^(PM^) (^ the ^st case)
+=P(p)r(J).
+Hence the result.
+
+D
+
+COROLLARY 6.5. — Suppose that (g,^) = (s[(3),g[(2)). Then,
+P(p)r(^) is strictly contained in /C(p) = P(p)r(J). Jn contrast, Z(p) =
+x
+
+(^(p)^))^ = (P(p)T(e)) .
+
+Proof. — The first assertion follows from Theorem 6.4 and OchiaFs
+result [26]. The final claim can be proved using [26], Theorem 2.
+D
+
+7. Questions.
+Theorem 4.2 and Theorem 6.4 provide the only known cases where
+the ideal /C(p) has been described. We have seen that in these cases
+/C(p) = P(p)r(J). Recall from §3 and Lemma 4.5 that ChAf C C(p) with
+dimCh./V = dimC(p). Set At = P(p)/P(p)r(J). We then have ChAf C
+ChAf C C(p) and dimCh./V = dimC(p). In view of these observations, and
+Corollary 6.5, we make the following conjectures.
+Conjectures. — Let (fl, t) be a symmetric pair (with g reductive) and
+let J be the Lie algebra defined in (6.2). Then
+(C.I) /C(p) = ^(p)r(J)
+(C.2) Z(p) = (^(pM^
+(C.3) ChA/" =K = K.(a x a); thus ChA/" is an irreducible component
+ofC(p).
+
+INVARIANT DIFFERENTIAL OPERATORS
+
+1739
+
+Let A e a* and denote by n\ C 5'(p)^ the maximal ideal (<7-g(A); q €
+^(p)^). Set A/A = P(p)/(P(p)T(C) +P(p)nA).
+Conjectures. — Assume that the pair (g, t) is nice. Then
+(C.4) A/A is a semisimple P(p)-module
+(C.5) A/A has no ^-torsion.
+By [19], Conjectures (C.4) and (C.5) are true in the diagonal case.
+One significance of (C.5) is that, if true, it ought to provide a method for
+proving [33], Conjecture 7.2.
+The question of describing /C(p) is a particular case of the more
+general problem of determining the left ideals KK(V) (cf. §4) where (K : V)
+is any finite dimensional representation of a reductive group K^ see [30],
+[31]. In this general setting one can still define, as in (6.2), a Lie subalgebra
+J = [a € Endc(V) : a.^p = 0 for all ^ G 0(V)^}
+and one again has P(y)Ty(^) C P(y)Tv(J) C /Cj<(V). The representations
+(K : p) are particular cases of the so-called 0-groups [37] or, more generally,
+of orthogonal polar representations, see [5] and [28], 8.6 (in these cases one
+still has a Cartan subspace). One may generalize the previous conjectures
+to this wider class of representations and the following questions arise:
+Questions. — Suppose that (K : V) is a ^-group, or an orthogonal
+polar representation.
+(Q.I) ls!CK(V)=V(V)rvW7
+
+(Q.2) Is IK(V) = (p^TvW^
+
+(Q.3) Do we have ChP(y)/Z)(V)Tv(D = K.(c x c), where c C V is a
+Cartan subspace?
+Acknowledgment. — This research was partially conducted while the
+first author was visiting the University of Michigan and supported by the
+NSF. He would like to thank both institutions.
+
+BIBLIOGRAPHY
+[1]
+
+M.F. ATIYAH, Characters of semi-simple Lie groups, (Lectures given in Oxford),
+Mathematical Institute, Oxford, 1976.
+
+[2]
+
+D. BARBASCH and D.A. VOGAN, The Local Structure of Characters, J. Funct.
+Anal., 37 (1980), 27-55.
+
+1740
+
+T. LEVASSEUR & J.T. STAFFORD
+
+[3]
+
+A. BOREL et al., Algebraic D- modules, Academic Press, Boston, 1987.
+
+[4]
+
+W. BORHO and H. KRAFT, Uber die Gelfand-Kirillov Dimension, Math. Annalen,
+220 (1976), 1-24.
+
+[5]
+
+J. DADOK, Polar coordinates induced by actions of compact Lie groups, Trans.
+Amer. Math. Soc., 288 (1985), 125-137.
+
+[6]
+
+0. GABBER, The integrability of the characteristic variety, Amer. J. Math, 103
+(1981), 445-468.
+
+[7]
+
+HARISH-CHANDRA, Invariant distributions on Lie algebras, Amer. J. Math., 86
+(1964), 271-309.
+
+[8]
+
+HARISH-CHANDRA, Invariant differential operators and distributions on a semisimple Lie algebra, Amer. J. Math., 86 (1964), 534-564.
+
+[9]
+
+HARISH-CHANDRA, Invariant eigendistributions on a semisimple Lie algebra, Inst.
+Hautes Etudes Sci. Publ. Math., 27 (1965), 5-54.
+
+[10]
+
+S. HELGASON, Differential Geometry, Lie Groups and Symmetric Spaces, Academic
+Press, 1978.
+
+[11]
+
+S. HELGASON, Groups and Geometric Analysis, Academic Press, 1984.
+
+[12]
+
+R. HOTTA, Introduction to P-modules, (Lectures at the Inst. Math. Sci., Madras),
+Math. Institute, Tohoku University, Sendai, 1986.
+
+[13]
+
+R. HOTTA and M. KASHIWARA, The invariant holonomic system on a semisimple
+Lie algebra, Invent. Math., 75 (1984), 327-358.
+
+[14]
+
+A. JOSEPH, Quantum groups and their primitive ideals, Springer-Verlag, BerlinNew York, 1995.
+
+[15]
+
+B. KOSTANT and S. RALLIS, Orbits and representations associated with symmetric
+spaces, Amer. J. Math., 93 (1971), 753-809.
+
+[16]
+
+A. KOWATA, Spherical hyperfunctions on the tangent space of symmetric spaces,
+Hiroshima Math. J., 21 (1991), 401-418.
+
+[17]
+
+T. LEVASSEUR and J.T. STAFFORD, Invariant differential operators and an homomorphism of Harish-Chandra, J. Amer. Math. Soc., 8 (1995), 365-372.
+
+[18]
+
+T. LEVASSEUR and J.T. STAFFORD, The kernel of an homomorphism of HarishChandra, Ann. Scient. EC. Norm. Sup., 29 (1996), 385-397.
+
+[19]
+
+T. LEVASSEUR and J.T. STAFFORD, Semi-simplicity of invariant holonomic systems
+on a reductive Lie algebra, Amer. J. Math., 119 (1997), 1095-1117.
+
+[20]
+
+T. LEVASSEUR and R. USHIROBIRA, Adjoint vector fields on the tangent space of
+semisimple symmetric spaces, J. of Lie Theory, to appear.
+
+[21]
+
+M. LORENZ, Gelfand-Kirillov dimension and Poincare series, Cuadernos de Algebra
+7, Universidad de Granada, 1988.
+
+[22]
+
+J.C. McCONNELL and J.C. ROBSON, Noncommutative Noetherian Rings, John
+Wiley, Chichester, 1987.
+
+[23]
+
+J.C. MCCONNELL and J.T. STAFFORD, Gelfand-Kirillov dimension and associated
+graded modules, J. Algebra, 125 (1989), 197-214.
+
+[24]
+
+J.S. MILNE, Etale Cohomology, Princeton University Press, 1980.
+
+[25]
+
+M. NOUMI, Regular Holonomic Systems and their Minimal Extensions I, in "Group
+Representations and Systems of Differential Equations", Advanced Studies in
+Pure Mathematics, 4 (1984), 209-221.
+
+INVARIANT DIFFERENTIAL OPERATORS
+
+1741
+
+[26]
+
+H. OCHIAI, Invariant functions on the tangent space of a rank one semisimple
+symmetric space, J. Fac. Sci. Univ. Tokyo, 39 (1992), 17-31.
+
+[27]
+
+D.I. PANYUSHEV, The Jacobian modules of a representation of a Lie algebra and
+geometry of commuting varieties, Compositio Math., 94 (1994), 181—199.
+
+[28]
+
+V.L. POPOV and E.B. VINBERG, Invariant Theory, in "Algebraic Geometry IV",
+(Eds: A.N. Parshin and I.R. Shafarevich), Springer-Verlag, Berlin, Heidelberg,
+New York, 1991.
+
+[29]
+
+R.W. RICHARDSON, Conjugacy classes of n-tuples in Lie algebras and algebraic
+groups, Duke J. Math., 57 (1988), 1-35.
+
+[30]
+
+G.W. SCHWARZ, Differential operators on quotients of simple groups, J. Algebra,
+169 (1994), 248-273.
+
+[31]
+
+G.W. SCHWARZ, Lifting differential operators from orbit spaces, Ann. Sci. Ecole
+Norm. Sup., 28 (1995), 253-306.
+
+[32]
+
+J. SEKIGUCHI, The Nilpotent Subvariety of the Vector Space Associated to a
+Symmetric Pair, Publ. RIMS, Kyoto Univ., 20 (1984), 155-212.
+
+[33]
+
+J. SEKIGUCHI, Invariant Spherical Hyperfunctions on the Tangent Space of a
+Symmetric Space, in "Algebraic Groups and Related Topics", Advanced Studies
+in Pure Mathematics, 6 (1985), 83-126.
+
+[34]
+
+P. SLODOWY, Simple singularities and Simple Algebraic Groups, Lecture Notes in
+Mathematics 815, Springer-Verlag, Berlin-New York, 1980.
+
+[35]
+
+M. VAN den BERGH, Some rings of differential operators for Sl2-invariants are
+simple, J. Pure and Applied Algebra, 107 (1996), 309-335.
+
+[36]
+
+V.S. VARADARAJAN, Harmonic Analysis on Real Reductive Groups, Part I,
+Lecture Notes in Mathematics 576, Springer-Verlag, Berlin-New York, 1977.
+
+[37]
+
+E.B. VINBERG, The Weyl group of a graded Lie algebra, Math. USSR Izvestija, 10
+(1976), 463-495.
+
+[38]
+
+N. WALLACH, Invariant differential operators on a reductive Lie algebra and Weyl
+group representations, J. Amer. Math. Soc., 6 (1993), 779—816.
+
+[39]
+
+H. WEYL, The Classical Groups, Princeton University Press, Princeton, 1939.
+
+Manuscrit recu Ie 9 mars 1999,
+accepte Ie 7 juin 1999.
+T. LEVASSEUR,
+Universite de Poitiers
+Departement de Mathematiques
+86022 Poitiers (France).
+Current address :
+Universite de Brest
+Departement de Mathematiques
+29285 Brest (France).
+thierry. levasseur@univ-brest. fr
+J.T. STAFFORD,
+University of Michigan
+Department of Mathematics
+Ann Arbor, MI 48109 (USA).
+jts@math.lsa.umich.edu
+
+

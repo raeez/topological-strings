@@ -1,0 +1,1469 @@
+transactions of the
+american mathematical society
+Volume 313, Number 2, June 1989
+
+
+
+
+                 REMARKS ON CLASSICALINVARIANTTHEORY
+
+                                          ROGER HOWE
+
+
+           Abstract.    A uniform formulation, applying to all classical groups simultane-
+           ously, of the First Fundamental Theory of Classical Invariant Theory is given
+           in terms of the Weyl algebra. The formulation also allows skew-symmetric as
+           well as symmetric variables. Examples illustrate the scope of this formulation.
+
+
+
+
+                                       0. Introduction
+   (N.B. This introductory discussion is somewhat breezy. We will be more
+careful beginning in §1.)
+   In Hermann Weyl's wonderful and terrible book, The classical groups [W],
+one may discern two main themes: first, the study of the polynomial invariants
+for an arbitrary number of (contravariant or covariant) variables for a standard
+classical group action; second, the isotypic decomposition of the full tensor
+algebra for such an action. It may be observed that the two questions are more
+or less equivalent. (Indeed, Weyl exploits one direction of this equivalence.)
+Further, it is not hard to see that both questions are equivalent to an apparently
+simpler one, namely the description of the invariants in the full (mixed) tensor
+algebra of such an action. (These equivalences are not a priori clear. It is
+the cleanness of the answers that allow one to make the connections.) Thus if
+Weyl had first established the result on tensor invariants, then proceeded to the
+other two topics, his presentation would have been considerably streamlined
+and presumably          more acceptable    to modern     taste.   A plausible    explanation       for
+his failure to proceed along that route is that he saw no way of establishing the
+result on tensor invariants except through the result on polynomial invariants.
+To produce the latter, he had the machinery of 19th century invariant theory
+available, in particular "the mysterious Capelli identity" (see [ABP, p. 324).
+This, together with the fact that polynomials can be thought of as functions,
+    Received by the editors March 8, 1989.
+    1980 Mathematics Subject Classification (1985 Revision). Primary 15A72, 20G05; Secondary
+20C35, 20G45, 22E45, 22E70, 81C40.
+    Key words and phrases. Invariant theory, Weyl algebra, spherical harmonics.
+    Editor's note. This paper was written in 1976 and has been widely circulated as a preprint.
+There have been many developments related to the work since that time. However, because of its
+influence and historical value, the paper is being published here in the original form.
+     1 Most people who know the book feel the material in it is wonderful. Many also feel the
+presentation is terrible. (The au;hor is not among these latter.)
+
+                                                                     ©1989 American Mathematical Society
+                                                                       0002-9947/89 $1.00+ $.25 per page
+
+                                                 539
+540                                ROGER HOWE
+
+
+hence are more tangible than general tensors, perhaps led Weyl to choose the
+path he did.
+   There was one case, however, namely for Gln, in which the theorem on
+tensor invariants was directly available, by a beautiful argument (due to Schur)
+using the double commutant theorem. Weyl did not neglect to present this; in
+fact, it was a favorite of his. In itself, however, it would not serve as a basis
+for the general case, so could only be presented for its intrinsic merits, and led
+to greater heterogeneity in the book instead of unity. Recently, however, it was
+shown in [ABP] how the result on tensor invariants for orthogonal groups On
+could be reduced by a fairly quick argument to the result for Gln . A similar
+argument goes through for the symplectic groups Sp2/). Thus the description
+of tensor invariants for a standard classical action may now be considered to
+be available from first principles, and may be used to provide an efficient and
+unified treatment of a large portion of the material in [W].
+   The main purpose of the present discussion is to point out that this unified
+viewpoint is in fact capable of considerable extension. We note the following
+specifics.
+   (a) The argument used to pass from tensor invariants to polynomial (e.g.,
+symmetric tensor) invariants in many variables applies equally well to the de-
+scription of mixed algebras of partially symmetric, partially antisymmetric ten-
+sors.
+   (b) By means of a process of "doubling the variables", the result in (a) yields
+a description of the endomorphisms (of a certain reasonable type) commuting
+with a classical action on such an algebra.
+   (c) The result of (b) may be viewed as a "duality theorem" for commuting
+subalgebras of a certain naturally occurring graded Lie algebra.
+   (d) Particular cases of the above general scheme yield many classical compu-
+tations in multilinear algebra, often with additional structure and insight. We
+will give as examples the following:
+        (i) the full isotypic decomposition of the polynomials in k variables for
+a classical action (after the archetypal case, this may be referred to as the theory
+of spherical harmonics);
+        (ii) the exactness of the polynomial de Rham and Dolbeault complexes,
+and the homotopy between the identity and projection onto the constants (used
+as in [J] to prove the Hubert Syzygy Theorem);
+        (iii) the algebra behind the structure of the cohomology of Kahler mani-
+folds (sometimes called Hodge Theory) as a special case of the analogue of (i)
+for exterior algebras (see [Wi]);
+        (iv) the cohomology of the unitary group;
+        (v) the invariants of the adjoint action of the classical groups;
+        (vi) elucidation of the Capelli identity.
+    These computations are not usually mentioned in the same breath and cer-
+tainly are not all considered as part of classical invariant theory (though dis-
+cerning eyes have perhaps noticed connections). Thus it seems fair to say that
+                      REMARKSON CLASSICALINVARIANTTHEORY                          541
+
+
+the result on tensor invariants forms the basis for a unified development of a
+considerable tract of algebra. Perhaps not least important, the results on duality
+make precise in a strong way the striking analogy, remarked on by a number
+of authors, between the Clifford algebra and the spin representation on the one
+hand and the Weyl algebra and the oscillator or (Segal-Shale) Weil or metaplec-
+tic or... representation on the other (or as physicists would say, the canonical
+anticommutation relations and canonical commutation relations).
+   This matter should emerge clearly in the body of the paper.
+
+                                  1. Invariants
+   We will always work over C, the complex numbers. Let F be a complex
+vector space, and let ( , ) be a bilinear form on V . We call the pair (V, (, ))
+a formed space. Sometimes we may speak of the formed space V, with ( , )
+being implicit. The group of isometries of (V, ( , )) will be generally denoted
+by G(V, ( , )). There are three main cases we wish to consider and each has
+its particular symbol.
+    (a) If ( , ) is trivial, then G(V, ( , )) = GL(F) is the general linear group
+of V, consisting of all invertible linear transformations of V.
+    (b) If ( , ) is nondegenerate and symmetric, then G(V,( , )) is called an
+orthogonal group and denoted O = 0(V, (, )).
+    (c) If ( , ) is nondegenerate and skew symmetric, then G(V, ( , )) is called
+a symplectic group and denoted Sp = Sp(F, (, )).
+   The isomorphism classes of these groups depend only on n = dim V, so
+we will sometimes write GL(F) = GLn. Similarly 0(V,( , )) = On. For
+Sp(F, ( , )) to exist, we must have n even: n = 2m . Thus we usually write
+Sp(F, ( , )) = Sp2w . The groups GL„ , On , and Sp2m are referred to collec-
+tively as the classical groups (over C ). The action of a classical G(V,(, )) on
+V is called a standard classical action, and V is the standard or basic module
+for G.
+   The first thing to do is to describe the tensor invariants of a standard classical
+action. The case of GLn differs slightly from those of On and Sp2m , and we
+deal with it first.
+   Let V* be the vector space dual of V. We let GL(F) act on V* in the
+usual contragredient manner, so as to preserve the natural pairing between V
+and V*. Thus if g G GL(F), v G V, and v* G V*, then we define g(v*) by
+the formula
+                           g(v*)(v) = v*(g~x(v)).
+
+   Consider a tensor product Vkl= (0 V) ® (0 V*) made from zc copies of
+V and / copies of V*. We let GL(V) act on this by the linear extension of
+the obvious formula
+            g(vx ®v2®---®vk®v*x®---®v*)
+                  = g(vx) ® g(v2) ® ■■■® g(vk) ® g(v*x) ® ■■■® g(vj).
+542                                ROGER HOWE
+
+
+It is clear that there can be no invariants for this action unless k = I since if
+g = al y , where 1v is the identity on V and a G C, then g(t) = ak~'t for any
+t G Vkl. Thus assume k = I. Consider the canonical identification ix : Vxx ~
+End(F), where End(I/) is the algebra of linear transformations on V. This
+gives rise to an identification ik: Vkk~ 0 End(F) of zc-fold tensor products.
+Let Ad be the action of GL(K) on End(F) by conjugation: Adg(T) = gTg~x
+for gGGL(V) and TGEnd(V). Then i, identifies the action of GL(K) on
+Vx, with Ad. That is
+                       ix(g(t)) = Ad g(ix(t))   fortGVxx.
+Thus ixx(lv) is an invariant for GL(K) acting on Kn,and 0 (ixl(lv)), its
+zc-fold tensor power, is an invariant for GL(F) acting on ^ . Denote it by
+
+   Observe that we may permute among themselves the factors of Vkk isomor-
+phic to V. Similarly we may permute the factors of Vkk isomorphic to V*.
+Thus if Sk is the symmetric group on k letters we have an action of Sk x Sk
+on Vkk, and this action commutes with the action of GL(K) on Vkk. Thus
+the GL(F)-invariants form a module for Sk x Sk . We see that 6k is invariant
+under the diagonal subgroup of Sk x Sk .
+Theorem 1A. Translates of 6k by Sk x Sk span the GL(V)-invariants in Vkk.
+   This is in Weyl [W]. Notice that Vkk~ End(Kfe0) and the action of GL(F)
+on Vkk is just the conjugation action coming from its action on Vk0. Thus the
+GL(K) invariants in Vkk are just the endomorphisms of VkQcommuting with
+GL(K). Further Sk acts on Vk0, so Sk C End(Fi:0) and the above action of
+SkxSk on Vkk corresponds to pre-and post-multiplication by Sk in End(I^0).
+Also 6k corresponds to the identity operator on Vk0. Therefore Theorem 1A
+says that permutations of the factors of Vk0 yield all operators commuting with
+GL( V). This is the form of the result of Weyl.
+   Now pass to consideration of On and Sp2m. Denote one of these by G
+and let V be the standard module for G, with form ( , ). We have the
+isomorphism ß : V —»V given by
+                              ß(v2)(vx) = (vx,v2).
+The map ß commutes with the natural actions of G on V and on V*, so these
+spaces define isomorphic (7-modules. Thus here it is unnecessary to explicitly
+consider mixed tensors, a slight simplification compared with GLn . Therefore,
+consider Vk = 0 V. Note that ( , ) forms an invariant for G in V2*which
+we may identify with K,. Call this invariant 82. If k is even, say k = 2j,
+then we may choose an isomorphism
+
+                            ik:Vk^(V2)i = Q¡V2.
+Specifying ik amounts to pairing off the factors of Vk. In (V2). we have the
+invariant 0J 92. Thus in Vk we have the invariant 8k = ik (0; 82). On Vk
+                     REMARKS ON CLASSICALINVARIANT THEORY                        543
+
+
+we again have the action of Sk permuting the factors. We see 8k is invariant
+up to sign by the subgroup of Sk which preserves the pairing used to define ik .
+Theorem IB. If k is odd, there are no G-invariants in Vk. If k is even, the
+translates of 8k by Sk span the G-invariants in Vk.
+  This may also be dug out of Weyl. As mentioned in the introduction, a fairly
+quick proof, using 1A, is given in [ABP] for On . One may argue similarly for
+
+   We wish to transfer the above results to the context of certain other algebras.
+We would like to remark that the basic objects to be defined here and in §2 have
+also been defined independently and more elegantly by Tilgner [T] as Z2-graded
+objects. The reader with a refined taste is referred to his article for comparison.
+   Let U and W be two complex vector spaces. Let sf(U,W)                be the asso-
+ciative algebra with 1 generated by U and V subject to the conditions that (i)
+elements of U commute with everything and (ii) elements of W anticommute
+among themselves. It is not hard to see that
+                          s/(U,W)~S(U)®A(W),
+where S indicates the symmetric algebra and A the exterior algebra. We may
+give sf a grading by using the sum of the gradings on S(U) and A(W), so
+sf is a graded algebra.
+   Next, consider a classical group G acting on its basic module V. Choose
+positive integers k¡,i¡, i = 1,2, and put U = (®fc| V) © (®7' V*) and W =
+(&2 V) © (®/: V). (For G = On or Sp2m, the explicit inclusion of V* in U
+and W is unnecessary.) Both U and W may be regarded as (7-modules in
+the obvious way. Therefore we have on s/(U ,V) a natural C7-action by alge-
+bra automorphisms. The invariants of this action therefore form a subalgebra
+containing the identity. In the algebra of invariants, the elements of total order
+two are easy to describe. They are simply the span of the canonical pairings
+between the various copies of V and V*. The extension of the First Funda-
+mental Theorem of Classical Invariant Theory to the present context may be
+stated as follows.
+Theorem 2. Let G be a classical group, and let U and W be G-modules formed
+by taking direct sums of the basic module for G (and, if G = Gln, of the
+contragradient module). Consider the resulting action on sf(U,W).   Then the
+algebra of G-invariants is generated by the invariants of degree 2.
+Proof. If U = Vk] © V*1' and W = Vkl-© V*'2 as indicated above, then
+s/(U, V) is isomorphic as a (/-module to the tensor product
+
+       ((g)*1
+           s(n) e (eg)'1
+                      srro) • (eg)"2
+                                  A(v))®((g)/2
+                                            a(o) .
+Each factor, S(V), A(V), etc., has on it a natural grading, and the degree on
+s/(U ,V) is formed by taking the sum of all these partial gradings. Thus if
+544                                ROGER HOWE
+
+
+s/(U,V)     is the space of degree m in sf(U,V),          we see sf(U,V)m       is a
+direct sum of the spaces of the form
+(*)      S(V)'" ®S(V)"2®---®S(V)ak> ®S(V*f             ®---®A(V*)S'i,
+where S(V)a' is the space of degree ax in S(V), and so forth, and ¿~7,cx¡ +
+J2ßj + J2 Vi + S à>■
+                   = m • The decomposition of sf(U ,V) into these subspaces
+is clearly a decomposition into submodules for G. Therefore the (/-invariants
+will be the direct sum of the invariants contained in the spaces (*). We therefore
+look at such a space.
+   A space of the form (*) is a subspace of (0P V) ® (0" V*), where p =
+J2 a, + J2 yi and q —J2ßi + J2Sr Hence we may apply Theorems 1A and 1B.
+To ease the discussion, let us assume G ~ On or Sp2m . The case of G ~ Gln
+is similar. Thus we take ßi = ô = 0. From Theorem 1B we know that a
+(7-invariant on 0P F is a sum of those obtained by pairing the factors in some
+way and taking the tensor product of the degree 2 invariants in the various
+(V® V) 's thus formed. We are only interested in the restriction of these invari-
+ants to the subspace (*). This means that, after selecting a pairing, we then sym-
+metrize with respect to the appropriate blocks of a; factors and antisymmetrize
+with respect to the various blocks of y. factors. Since the symmetrization and
+antisymmetrization operations correspond to one-dimensional representations
+of the symmetric groups of the blocks, two pairings which are transformed into
+one another by the action of the symmetric groups of the blocks defining (*)
+give the same restriction (up to sign) to (*). Further, there are some taboos
+to observe with regard to matching within given blocks. That is, if G ~ On ,
+then the invariant corresponding to a pairing is symmetric in each pair in the
+pairing so if both members of a given pair belong to a block which gets anti-
+symmetrized, then the invariant dies on restriction to (*). Upon inspecting the
+invariants that are left after taking these restrictions into account, we find that
+they are indeed accounted for by products of the invariants of degree two. This
+concludes our proof.
+
+                             2. Quantum      algebra
+   Take two vector spaces U,W, and form s/(U,W).                Since s/(U,W)     is
+an algebra it acts on itself by (left) multiplication, so there is a natural embed-
+ding of sf in End(sf). In particular, for every x in U or W we have the
+multiplication operator
+(1)                               Mx:y^xy.
+There is also an action of U* and W* on sf(U, V). This is not completely
+simple to describe and our treatment will be rather homely. Again see Tilgner
+[T] for greater elegance.
+   Consider u* G U* first. Write ker u = U0 and let L be a line complemen-
+tary to U0 in U. We have an isomorphism sf(U, W) ~ S(L) ®sf(U0,W).
+                      REMARKS ON CLASSICALINVARIANT THEORY                            545
+
+
+If x G L is nonzero, then sf(U,W)    is the span of elements xny with
+y gs/(Uq,W). We define an operator Du, on sé(U, W) by the formula
+(2)                          Du.(x"y) = nu*(x)x"~xy.
+It is easy to check that Du. is well defined and that it is a derivation, that is
+(3)        Du.(yz) = Du.(y)z + yDu.(z)              for any y,z gs/(U,   W).
+If sf(U, W) is regarded as the A(W7)-valued polynomials on U*, then Du.
+is just the directional derivative in the direction of u*. A direct computation
+shows the Du. commute among themselves. Moreover, if [AB] = AB - BA is
+the commutator of A and B, we have the commutator relation
+                   [Du.,MJ = u*(u) 1 for u* G U* and ugU.
+We may reformulate (3) as follows. Put Ü = U © U* and let ( , )~ be the
+antisymmetric extension to Ü of the pairing between U and U*. Explicitly,
+(4)                   (ux + u\, u2 + u2)~ = u*(u2) - u*2(ux).
+The direct sum of the maps u —>Mu and u —►
+                                         Du. defines an embedding
+(5)                             i:U^End(sf(U,W)).
+With these conventions we have the formula
+(6)                   [i(x),i(y)] = (x,yri            for x, ye ¿7.
+Thus if we set %7 = i(Ü) © C, where C is identified to multiples of 1 in
+End(sf(U, W)), we see %? is a two-step nilpotent Lie algebra, with C as
+center.
+   We can perform a similar construction using W, but the result is a Jordan
+algebra rather than a Lie algebra. If w* g W*, we may construct Dw. in
+exactly the same manner as we used for u* in U*, even to the extent of using
+formula (2), providing we remember n is restricted to zero and 1 in this case.
+This endomorphism     D . is usually called inner multiplication, at least in the
+case where U = {0}, so sf reduces to an exterior algebra. It is not quite a
+derivation. Rather, it satisfies a law like
+(7)   Dw.(xyz)    = x(Dw.(y)z      + (-l)qyDw.(z)
+                                         forxGS(U),         yGAq(W),     zgs/(U,W).
+Such a law is said to define an antiderivation or graded derivation. The law
+(7) makes it congenial to consider anticommutators rather than commutators.
+Define {A,B} = AB + BA . Then it is easy to check that there is an anticom-
+mutation relation
+(8)              {Dw.,Mw) = w*(w)l          for w g W and w* G W*.
+Put W = W®W* and let ( , )~ (note the round parentheses) be the symmetric
+extension to W of the pairing between W and W*. That is,
+(9)                 (tiz, +w*,w2     + w*2)~ =w*x(w2) + w*2(wx).
+546                                       ROGER HOWE
+
+
+Again, let
+(10)                              i:W ->End(sf(U ,W))
+be the direct sum of the D and M maps. Then, taking into account the
+anticommutativity of the Dw. 's among themselves, and of the Mw 's, we see
+(11)                     {i(x),i(y)} = (x,yri            forx,yGW.
+Thus if we put ET = i(W) © C, we see that ST is a two-step nilpotent Jordan
+algebra, with C as center.
+   Thus, using the maps M and D, we have built in End(sf(U,W))         a Lie
+algebra %7 and Jordan algebra 7T. It is easy to see that %* and 77~ commute
+with each other. Denote by End°(s?(U, W)) the subalgebra of End(sf(U,W))
+generated byTand^.2          Clearly s/(U,W) is embedded in End°(s/(U, W))
+via the left multiplication. Let /: s/{U ,W) -> End°(s/(U, W)) denote this
+embedding. Also let /*: s/(U*, W*) - End0(s/(U, W)) be the homomor-
+phism extending the above defined embedding of U* © W*. The following is
+a straightforward inductive computation using formulas (4) and (8), or (6) and
+(11), above.
+Theorem 3. The map m: sí' (U ,V) ® s?' (U*, V*) -» End°(s/(U ,V)) defined
+by m(x ® y) = l(x)l*(y) is a linear isomorphism. Further End° is isomorphic
+to the free algebra generated by i(Ü)@ i( W) subject to the relations (6) and (11)
+(plus commutativity between i(Ü) and i(tV)).
+Remark. From the universal description of End° given in Theorem 3, it is clear
+that Sp(£/,(, )~) xO(ÍV,( , )~) acts as a group of automorphisms on End°
+and preserves the generating subspace i(U) © i(W). It will be important for us
+to know that this action is essentially inner, and to compute it. These are our
+immediate goals.
+   We observe next that End° has a natural filtered structure. Indeed, we put
+End°(0) = C, and Endo(1) = & + 7T, and inductively write
+       End°(n+1)= End°(n)• End°(1)= fcxy:                 x G End0'"' ,y G End°(1)}.
+Then in general Endo(m)-End°(n) = End°("+m). Consider End°(2)/Endo(1). This
+is isomorphic to S2(i(Ü)) © (Ü ® W) © A2(z'(l^)).
+Theorem 4. The subspace S2(i(Ù)) © A2(z(I^)) = q of End°(2)/Endo(1) has
+a structure of Lie algebra. Precisely, the commutator relation [g,End       ] ç
+End"'"' holds.    The Lie algebra structure is the obvious one arising from this
+    2 A proper appelation for End° is problematical. Tilgner [T] calls it a graded Weyl algebra. It
+might as well be called a graded Clifford algebra. Or more symmetrically, Clifford-Weyl algebra or
+Weyl-Cliffbrd algebra. These abbreviate to CW and WC respectively, each with its own drawbacks.
+Perhaps, after the manner of its generation, it could be termed the Ho-Jo algebra. The label I favor
+is quantum algebra. It has a certain aura, and it is consistent with other terminology inspired by
+physics. But I am not insisting yet.
+    3 Here is one point where a thorough-going graded formulation would help a lot. We could
+assert [End^^End0'"']     Ç End0(n+m"2) , where [, ] would signify the graded commutator.
+                            REMARKS ON CLASSICALINVARIANT THEORY                                           547
+
+
+(e.g., put n = 2). Further the resulting action of g on End '/End     z¿ Ü® W
+identifies S (i(U)) with the Lie algebra of the isometry group of ( , ) , and
+identifies A (i(W)) with the Lie algebra of the isometry group of ( , ) .
+Proof. All these facts are straightforward from formulas (4) and (8) or (6) and
+(11). In fact, if we verify the action on End    is as it should be, the rest will
+follow. For example, take a,b ,c in i(W). Then [a,b] = ab-ba                                   G A (i(W)),
+and we compute
+           [[a,b],c] = [b,[c,a]] + [a,[b,c]]
+                     = bca - bac - cab + acb + abc - acb - bca + cba
+                     = {b, c}a - b{a, c) - {a, c)b + a{b, c)
+                     = 2a(b,c)~ -2b(a,c)~.
+To check this transformation              is an infinitesimal isometry of ( , )~ we compute
+       (2a(b,c)~ - 2b(a,c)~,d)~ = 2((a,d)~(b,cf                               - (b,d)~(a,cf).
+The right-hand side of this is antisymmetric in c and d, as it should be. The
+argument for Ü is similar.
+   On the basis of the above theorem, we will denote S2(i(Ü)) by sp(Ü) = sp,
+and denote A (i(W)) by o(W) = o. It is implicit in the computation given
+above, that if we take sp to be the span of the anticommutators of elements of
+i(Ü), and take o to be the span of commutators of elements of i( W), then
+
+                                   [Q,i(Ü) + i(W)] = i(Ü) + i(W),
+where now q = sp © o . Thus g exists not merely inside Endo( '/End0            but
+as an actual Lie subalgebra of End° . Because taking commutators with g pre-
+serves the filtration on End° , we can exponentiate the resulting derivations. We
+state these facts formally.
+Theorem 5. The Lie algebra a = sp © o may be embedded as a Lie subalgebra of
+End°, and so acts as a Lie algebra of derivations of End°, preserving the subspace
+i(Ü)®i(W) and the filtration {End°( '}. Thus g may be exponentiated to obtain
+an action by automorphisms of Sp(U,( , )~)xSO(W/,(          , )~) on End0.
+  Now let us compute this action explicitly. From the filtration on End° we
+may form the associated graded algebra
+                                                  oo
+                                   GrEnd° = 0End°(,!)/Endo("-1).
+
+The multiplication on Gr End° is formed by taking the direct sum of the maps
+  —   ir   j°(")   ir   j°("_')\        ít-   j°(m)    ir   /(m-IK       r-    .o(n+m)   lr,   ,o(n+m-l)
+  m: (End          /End             ) x (End           /End          ) -+ End            /End
+where m is the map induced by multiplication in End0. The next result is
+again an obvious consequence of formulas (4), (8), (6) and (11).
+548                                ROGER HOWE
+
+
+Theorem 6. The map i: U © W ~ End°           /Endo(    extends to an isomorphism
+of algebras
+                       GrEnd°(sf(U,W))~s/(Ü,W).
+Moreover, the action of Sp(t/) x 0(W) on Gr End0 induced from the action by
+automorphisms on End° is identified to the natural action of Sp(Ü) x O(W) on
+S/((J,W).
+Remark. It was convenient for our purposes to begin with sf(U,W)         and con-
+struct the endomorphism algebra End°(s/(U, W)). However, we could if we
+wished regard End° as a primary object, an algebra attached to a pair Ü, W of
+spaces, the first carrying a symplectic structure, the second an orthogonal struc-
+ture. From such a point of view, how do we recapture U and W ? The answer
+is that sf(U,W)      provides an irreducible module for End° of a particular type.
+Suppose (UX,U2) is a pair of subspaces of Ü such that Ü = Ux© U2 and each
+U¡ is isotropic for ( , )~ , i.e., the restriction of ( , )~ to Uj is identically
+zero. Let (Wx, W2) be a similar pair of subspaces of W. Then it is not hard
+to check that the subalgebra (with 1) Bi of End0 generated by t/ © Wi is a
+copy of sf(Uj, Wt) and that End° ~ Bx ® B2 via multiplication. Thus, if L2
+is the left ideal generated by U2®W2, we see End°/L2 ~ Bx, so the natural left
+action of End° on End°/L2 can be interpreted as an action on Bx , with Bx
+acting on itself by multiplication. Clearly the procedure we have gone through
+is precisely opposite to this.
+    Note further that by the above we have in particlar an action of q = sp © o
+on Bx . Since the action of o takes place essentially on the finite-dimensional
+space s/(Wx) ~ A(WX), this action will exponentiate to a group action. As is
+well known, the resulting group is not SO(W), but its simply connected 2-fold
+cover Spin{W). This is the standard construction of Spin(W). The associated
+representation is called the Spin representation.
+   It turns out that the action of sp will not exponentiate to a group action
+on B{ . However, the space Bx may be embedded in a larger space, with a
+natural realization as a space of smooth (form-valued) functions (a seemingly
+intrinsically transcendental object), and the action of sp may be suitably ex-
+tended so that it does exponentiate to a group action. Over C, where we are
+now, the resulting group is Sp(C7), as it must be since Sp(Ü) is simply con-
+nected. However, a parallel construction may be carried out for any local field,
+and over all fields except C, the result is a group which is a 2-fold cover of
+the usual symplectic group over the field. This construction was discovered by
+Segal, Shale and Weil [Sh, Wi2] and many terms are now used to describe it,
+e.g., Weil representation, Shale-Weil representation, metaplectic representation,
+harmonic. I would like to propose yet another term which seems to me more
+satisfactory than the above choices. I would refer to this representation as the
+oscillator representation, and the associated group as the oscillator group. Usu-
+ally it is not necessary to justify terminology at length, it being arbitrary, etc.,
+                      REMARKS ON CLASSICAL INVARIANT THEORY                       549
+
+
+but because there is such a current welter of names, I note the following points
+in favor of this new one.
+   (a) The spin and oscillator representations are clearly intimately related, and
+in fact appear as two aspects of the same phenomenon.
+   (b) The term spin is colorful and is inspired by a physical phenomenon,
+namely the "spin" of the elementary particles, which the spin representation
+describes mathematically.
+   (c) The algebra associated with the oscillator representation also describes an
+important physical system, namely the (quantum mechanical) harmonic oscil-
+lator. (Indeed, the fact that the exponentiated representation (over R) requres
+a 2-fold cover of Sp is physically interpreted as the existence of "zero-point
+energy", a basic phenomenon, and one that causes the first need to "renormal-
+ize" in quantum field theory.)
+   (d) The terms "spin" and "oscillator" are clearly consonant.
+
+                                    3. Duality
+  To return to business, let us recall that, with g ~ sp © o, we have
+
+                         End°(2)/End°(1)~ g © (Ü ® W).
+We know we can realize g as an actual subspace of End           . Then End
+is a module for g and we can find a subspace isomorphic to Ü ® W. Thus
+the whole space g © (¿7 ® W) = gr may be regarded as a subspace of End°,
+where g is a Lie subalgebra under the induced bracket operation, and Ù ® W
+is g-invariant. It turns out gr has further structure. Namely, if you take the
+anticommutator of two elements of Ü ® W, the result belongs to g. This may
+again be easily checked using formulas (4), (8), (6), and (11). We cannot resist
+recording the relevant identity:
+              {a ® c, b ® d} = {([a, b] ® [c,d] + {a, b} <g>
+                                                           {c,d}).
+The resulting structure on gr is called a graded Lie algebra structure. (We note
+End       is also a graded Lie algebra in a trivial sort of way.) Some physicists are
+quite interested in graded Lie algebras these days. Simple graded Lie algebras
+have been classified by Kac [K] and gt is on his list. Again, we note that
+this realization of gr has also been noticed by Tilgner [T] and described more
+elegantly.
+   Write gr0 = g and gt, = Ü ® W. By a subalgebra of gr we will mean a
+linear subspace T of gr such that
+                       r = (rngr0)©(rngt,)        = r0©r1,
+             [r0,r0]gr0, [r0,r,]çr,,             and {r,',r,}crQ.
+If r and r7 are two subalgebras, then we say T and r7 commute if all pos-
+sible brackets with one element from T and one from T1 are zero. If T is a
+subalgebra, let V* be the set of all elements commuting with T. We call T" the
+550                               ROGER HOWE
+
+
+centralizer of T in gr. It may be checked that V1 is a subalgebra of gr. (Ac-
+tually, there are some identities involved here, called graded Jacobi identities.
+These are
+                       [a,[b,c]] = [c,[b,a]] + [b,[a,c]],
+                      [a,{b,c}] = {b,[a,c]} + {c,[a,b]}
+                                 = [{a,c},b] + [{b,a},c].
+   We already know that gr0 = g acts on i(Ü)®i(W) by the usual commutator
+action. We can also define an action of gr, on i(Ü) © i(W) by defining
+          y(u®w) = {y,w)®[y,u]        for y e gr,, uGi(U),    w G i(W).
+It may be checked, again using the graded Jacobi identities, that the actions of
+grQ and gr, fit together to form a representation of gt, in the sense that all the
+relevant commutator and anticommutator relations are satisfied. If Y ç gt is a
+subalgebra, we will say T is reductive if T acts reductively on i((l) ® i(W).
+   Let (r,r/) be a pair of subalgebras. We say T and T1 are in duality or
+form a dual pair if V" is the centralizer of T and vice versa. We say (T, r') is
+a reductive dual pair if (r,r/) is a dual pair and each of r,r' is reductive.
+   We will give three examples of reductive dual pairs, corresponding to the
+three classical groups. It seems most likely that these are essentially the only
+examples of reductive dual pairs in gt, but this result is not crucial to our
+development and would take us too far afield into graded Lie algebras. (It is
+fairly easy to show these exhaust irreducible pairs (T.r') such that F ç gtQ.)
+   First, observe that GL(U) x GL(W) = GL acts on End°(sf(U, W)) by
+automorphisms. For GL acts on sf(U ,W) by automorphisms, and if x G
+End0(sf(U, IV)) and g G GL, then gxg~x, the conjugate of x by g, is
+again in End° . Indeed, it is clear that conjugation by g preserves the space
+i(Ü) x i(W).   More particularly, one has relations like
+
+                       gMxg~X = Mg{u) gDyg~X = Dg{y)
+for x G U © W and y G U* ® W*, where g(x) and g(y) are the standard
+actions of g G GL on U © W and U* ® W*. Thus we have an embed-
+ding GL —>Sp x 0 given by conjugation as above. There is a corresponding
+infinitesimal embedding gl(c/) x $l(W) —►
+                                        sp x o = gt0. In fact, this embed-
+ding already arises from an embedding of g[ = al(C7) x gl(W) in End°(2).
+Indeed, if we differentiate the action of GL on s/(U ,V), the endomorphisms
+of sf(U,V)    describing the resulting action of gt are easily seen to belong to
+End°(2), and conjugation by GL on End° is the inner action arising from expo-
+nentiating the bracket action by this image of gI. As a complement, note that
+sp^52(C7) ~52(f7)©(c/(8)C/*)©5,2(c/*).        Of course U ® U* at gl({7) as Lie
+algebras, and indeed U ®U* is precisely the image of the above embedding of
+0i(£/).
+  Now consider a classical group G with standard module V. Put U =
+(©*' V) © (©'' V) = Vk>© V*1', and put W = Vkl © V*'2. Let G act on
+                     REMARKS ON CLASSICALINVARIANT THEORY                        551
+
+
+U ® W by the direct sum action. This gives an embedding G -+ GL. If F
+is the Lie algebra of G, then according to the preceding discussion, we have a
+corresponding inclusion F «-*gt0 . Let F1 be the centralizer of T in gt. Then
+we claim (r,r/) forms a reductive dual pair. We will show this by giving a
+more complete discussion which will yield an explicit description of F1.
+   We consider the groups one at a time. First take G = QL( V). Then we may
+write U ~ ( V ® Dx ) © ( V* ® Ex ), where D, and Ex are auxiliary spaces of the
+appropriate dimensions. Similarly, we have W ~ (V ® D2) © (V* ® E2). Then
+         Ù = U © U* = (V ® Dx)© (V* ® Ex) © (V* ® D\) © (V ® E\)
+             = V®(DX® E\) © V* ® (Dx © E*)* = U'® U'*.
+It is immediate from the definition of the form (, )~ that GL(DX®E*) is inside
+Sp(Ü). In fact, if x G GL(¿/) commutes with GL(F), it preserves U' and
+U1*, and x,v, must belong to GL(Z), ®E*). For x to preserve (, )~ , we must
+also require that x,v„ be the inverse transpose of x,v,. Thus GL(Z), ®E*) is
+the full centralizer of GL(F) in Sp(£/). Since the situation is symmetric in V
+and DX®E*, we see that GL(F) is the centralizer of GL(Z>,©is*) in Sp((7).
+Thus we could say that GL(F) and GL(D, ®E*) form a reductive dual pair
+in Sp(t/). Indeed, if W = {0}, then gt reduces to sp(C7) and we are just
+discussing the infinitesimal version of this pair. That is, ßi(V) and gl(Dx ®E*)
+are mutual centralizers in sp.
+    Next considering W ~ (V ® D2) © (V* ® E2), we find in a similar manner
+that gl(V) and g[(D2 © E*2) are in duality in o = o(W). Thus if F = q\(V) ,
+we have F1 = F>0© F'x and we have determined that FIQ~ gl(D, © E*)®
+q\(D2®E¡).
+    We turn to the computation of r', . We have g, = Ü ® W ~ Hom(f7, W) ~
+Wom(W, Ü). The action of SpxO on gt, is the tensor product of the standard
+actions, and the bracket operation of gt0 ~ sp©o on gt, is just the infinitesimal
+version of this action. Thus if we write gt, as Hom(C7, W), then clearly F"x
+may be thought of as the GL( F )-intertwining operators between Ü and V. In
+terms of the above discussion, this would be
+           r', -Hom(Z),   ® E* ,D2® E*2)®Hom(D\ ® Ex ,D*2® E2).
+   Finally, we can see that F = qI(V) is the full centralizer of r'. It is evident
+that the centralizer of 1^, in sp © o is gl(V)®Ql(V).       Inside this algebra only
+the diagonal can also centralize any nonzero element of F'x . Thus r = g 1( V) =
+(F1)^ . Since F'x is the direct sum of two algebras, one acting trivially on W and
+without fixed points on Ü, and vice versa for the other, we see (r')', = {0} .
+Thus indeed F is the centralizer of F1, and (T,!^) are a reductive dual pair
+in gt.
+   We now consider G = Sp(K). Then again we may write U = V ®DX where
+Z), is an auxiliary space. (We can leave V* out of it.) Then
+            Ü = U®U* = (V®DX)®(V* ®D*X)~ V®(DX®D*).
+552                                 ROGER HOWE
+
+Furthermore, the symplectic form ( , )~ on Ü can be written as the tensor
+product of ( , ), the given form on V , with the natural symmetric form ( , ),
+on Dx ®D*. From this factorization of Ü it is easy to see that the centralizer of
+Sp(F) in Sp(#) is 0(£>, ®D\,(       , ),) and that Sp(K) and 0(Dx®D*x) form
+a reductive dual pair in Sp(t/). This construction may be refined somewhat.
+Instead of taking U = V ® Z), , we may write directly Ü ~ V ® D\, where
+D'x is a space with a symmetric bilinear form on it. Here too it is easy to see
+that Sp(K) and 0(D'X) are mutual centralizers in Sp(/7). This procedure is
+equivalent to the old one if D\ is isomorphic to Z), © D* for some D, . Since
+we are working over C, this will be the case if dim Z), is even, but if dim D'x
+is odd, it will not be so.
+   Next write W = V ®D2, so that W ~ V ® (D2 © D*2). If we put on D2®D*2
+the natural symplectic structure ( , )2, then we have ( , )~ = (, ) ® ( , )2.
+Thus now we see Sp(F) and Sp(D2®D2) are a reductive dual pair in O(W).
+   Taking the infinitesimal analogs, we find that if F ç gtQ is the Lie algebra of
+Sp(F) embedded in the manner indicated above, then
+
+                           ró~o(Z)',)©sp(Z)2©D2).
+
+Again F'x is the space of Sp( V) intertwining maps from Ü to W, and is
+isomorphic to £>, ® (D2 ®D*2); and again (F,F1) form a reductive dual pair.
+   Finally, we sketch the situation for an orthogonal group. Again write U =¿
+V®DX and W ~ V®D2;then Ü sa V®(DX®D*) and W ~ V®(D2®D*2).
+Now ( , )~ on Ü may be regarded as the tensor product of the symmetric
+form   ( , ) on V and the natural   antisymmetric   form on Z>, ®D*,   and O(V)
+and Sp(Z), ® D*) form a dual pair in Sp(f7). Similarly, ( , )~ on W is the
+tensor product of ( , ) on V and the natural symmetric form on D2® D*2,
+and then O(K) and 0(D2®D*2) are in duality in 0(W). Again we may note a
+refinement. If dim F is even, then 0(D2®D*2) may be replaced by any 0(Z>2),
+where D2 is a space with symmetric form, of odd or even dimension. Then
+if o(V) ~ T ç gt0, we see FtQ~ sp(Z), © D*) ® o(D2). Again F1 is the space
+of O(K) operators from Ü to W, essentially isomorphic to (Z), ®D*) ®D2.
+Again T and r' are in duality.
+    In sum then, we have constructed a set of reductive dual pairs (r,r/) at-
+tached to classical groups. We will refer to them as the classical dual pairs. Note
+that in the general case, with neither U nor W trivial, there is a certain amount
+of asymmetry in the pairs as constructed. Indeed, in all the pairs F ç gt0, and
+T0 = T is a simple Lie algebra (if we ignore the center of GL) while F'x is
+nontrivial, and F"0 is the sum of two simple factors. However, if U or W is
+trivial, then the relation between F and F1 is essentially symmetric.
+    Having constructed the classical reductive dual pairs, we should now state a
+theorem about them.
+                     REMARKSON CLASSICALINVARIANTTHEORY                          553
+
+
+Theorem 7. Let (F ,F>) be a classical reductive dual pair, with F ç gt0 ~ sp©o.
+Let G ç Sp x O be the classical group corresponding to F. (That is, G is the
+subgroup of Sp x O leaving F1 pointwise fixed.) Then the associative subalgebra
+of End° generated by F1 is the full algebra of G invariants in End°.
+Proof. Consider the isomorphism GrEnd° ~ s/(Ü, W) given by Theorem 6.
+This isomorphism is (Sp x 0)-equivariant. From the description of reductive
+dual pairs given above, it is evident that the action of G induced on Gr End° ,
+when transferred to a(Ü ,W), becomes the action of G attached to the direct
+sum of copies of the standard module for G or its contragredient. Thus by
+Theorem 2, the (7-invariants in GrEnd° are generated by the degree 2 invari-
+ants. But under the identification gr ¡a End     /End0   , the degree 2 invariants
+are just F1. Now the result follows by a straightforward induction. Suppose
+F1 generates all the (7-invariants inside End        . Take a (7-invariant x in
+End + ; then the image x of x in End + /End                  can be written
+
+                                  x=J2y?i>
+where the y¡ are in F1 and the z( are (7-invariants in End°( _l)/End0( ~ '.
+We can lift the 1i to (7-invariants z; in End°(      . Then clearly x - Yáyizi
+belongs to End     and so by induction belongs to the algebra generated by F1,
+as do the zi. Hence so does x, and we are done.
+
+    If G is connected (i.e., if G is not an orthogonal group), then the G-
+invariants in End° are the same as the algebra commuting with F. In any
+case, the algebras generated by F and F1 commute with each other, and are
+close to being mutual commutants. In such a situation, one expects a dual re-
+lationship between the actions of the two algebras—a matching up of isotypic
+components, joint irreducible actions, and so forth. This is indeed true here.
+    Recall that for a given representation of a group on a vector space, an isotypic
+component is the sum of all subrepresentations isomorphic with some given
+irreducible representation of the group.
+
+Theorem 8. Let G be a classical group with standard module V. Let U and
+W be direct sums of copies of V and V* , and consider the resulting action of
+G on s/(U,W).      Let
+                                               oo
+                               s/(U,W)     = @Ij
+                                              j=o
+be the decomposition of sf (U, W) into isotypic components for G. Let F ç gt
+be the image of the Lie algebra of G corresponding to this action, and let F1 be
+the centralizer of F in gt. Then the joint action of G and F1 on any I is
+irreducible, and Z has the form
+
+                                   I. s a. ® t),
+554                               ROGER HOWE
+
+
+where o. is a finite-dimensional representation of G and t is an irreducible
+module for F1. Moreover, a. and t determine each other, so the correspon-
+dence er,
+       j
+          *-*t¡j is bijective.
+                     J
+
+Proof. If End0(s/(U, W)) were the full endomorphism ring of sf(U,W),
+this would be immediate from Theorem 7. Instead we need the following easy
+technical lemmas.
+Lemma 1. If X Çsf(U, W) is a finite-dimensional subspace, then the restriction
+map r: End°(sf (U, W) -> Uom(X,sf(U,     W)) is surjective.
+Lemma 2. Let J^(G) ç End°(sf (U, W)) be the operators commuting with G.
+Then there is a linear projection operator T -» T of End° onto ^f(G) with
+the following properties :
+      (i) (ST*)* = S*T*.
+      (ii) if X ç sf(U,W)    is a G-invariant subspace and T g End0 leaves X
+           invariant and commutes with G on X, then T,x = Tx.
+
+  The proof of Lemma 1 is straightforward. The proof of Lemma 2 is by the
+well-known "unitarian trick" of averaging over the maximal compact subgroup
+of (7.
+   The theorem now follows directly from these facts. For let X C I be
+a finite-dimensional G-invariant subspace. Then the joint action of G and
+the commutant of G in End(X) is irreducible on X by the usual double
+commutant theorem. But the above lemmas imply that J^(G) restricted to
+X includes the commutant of G in End(X). Since X was arbitrarily large,
+this means the joint action of J^(G) and G on Z; is irreducible. Similarly, if
+I ^ Ik and X ç I and Y ç Ik are finite dimensional and G-invariant, then
+again by the lemmas there is an element of S(G) which is the identity on X
+and zero on Y. Hence the representations of J^(G), and thus of F1 on Z
+and Ik , are distinct. This concludes the proof of the theorem.
+   It turns out that the r'-modules occurring in s/(U, W) have a characteristic
+structure which we will now describe. Recall the isomorphisms gt0 ~ 5" ( U) ©
+A2(!*Ó and gt, ~ Ù ® W. Furthermore, Ù ~ U © U* and W ~ W ® W*, so
+that
+      gt0 ~ {S2(U) ®(U® U*) © S2(U*)} © {A2(W) © (W ® W*) © A2(*0}
+and gt, ~ (U ® W) ® (U ® W* © U ® W) ® (U* ® W*). We define
+             gt(2,0) ~ S2(U) © A2(C7)®(U®W),
+             gt(1'X)~(U®U*)®(W®W*)®(U®W*               ®U* ®W),
+             gt(0,2) ~ S2(U*) © A2(U*) © (U* ® W*).
+It may be checked that gt(2 0) etc. are subalgebras of gt. Moreover gt( ' } and
+gt ' are abelian, in the sense that all brackets are zero. Also gr ' and gr '
+                     REMARKS ON CLASSICALINVARIANT THEORY                        555
+
+
+are normalized by gr" 'l) in the sense that they are invariant under bracketing
+with gt'1'1'. In terms of the action on gt on sf(U,W),          the elements of
+gt(2'0' raise degree in sf (U, W) by 2. Elements of g(0'2' lower degree by 2,
+and elements of g        preserve degree.
+   If (r,r/) is a classical reductive dual pair in gt such that F arises from a
+sum of actions on U © W, then F1 = r''2'0' © F*1 '" © r'(0'2', where F,{2'0)=
+F1 n gt(2 °', etc. Further, observe that r7 ' is essentially the space of degree
+2 invariants for G in sf (U, W), whereas ry(0'2) might be thought of as the
+G-invariant "constant coefficient differential operators" of degree 2. (This is
+true in the traditional sense if W = {0}.) In any case, we will define
+
+              7? = {xgs/(U       ,W); T(x) = 0 for all T g r'(0,2'}.
+We will refer to %f as the harmonics, or the F1-harmonics.
+Theorem 9. Let G act on sf(U ,W) as in Theorem 8. Let
+                                          oo         oo
+                        st(V,W) ztQlj            ^©er.<8>T;
+                                         7=0         7=0
+
+be the decomposition of sf (U ,W) into irreducible joint (G, Fl)-modules. Let
+I0 be the G-invariants, and TV the F'-harmonics. Then
+    (i) The map 1^®^       —>sf(U ,W) given by multiplication is surjective.
+   (ii) If Mr}= Xr\I       then ZT = 0°!o^             and ^ ¿ {0} for any j. Also
+        L = IQ7f.. %*. consists of the elements in Z of lowest degree.
+   (iii) Each 7?. is invariant under 1^ ' , and forms an irreducible module
+        for the joint action of G and F1^ ' '. The resulting correspondence be-
+         tween G-modules and F1^ -modules is again bijective. Furthermore,
+        ^ forms a cyclic subspace for Ij under the action of F>( ' '. ( Thus
+         these are modules for F1 with "highest weights'".)
+Proof. Since every element of sf(U, W) is eventually killed by successive ap-
+plications of elements from r^0'2', and since each Z is r/(0'2'-invariant, we
+see %7.^ {0} . Indeed, the elements of Z of lowest possible degree must be in
+%7.. Also, since J^ ' ' commutes with G, we know ^ will be G-invariant.
+This proves the first statement of (ii).
+  Let Jr(2'°', Jr(1'1' and J^0'2' be algebras in End°(sf (U, W)) generated
+by F1 ' ', rv(1'1) and F"~ ' ' respectively. By virtue of the bracket relations in
+gt, we may write
+                          J-(G)^^(2'°'^(1'"^(0'2'.
+
+(This is the easy half of PB W.) Since TJ{1'1)normalizes I^0'2' it is clear that ^
+is invariant under T* ' , hence under J7"' ' . Thus the above decomposition
+of J^(G) implies Ij = Jr{2ff)^7.. This proves the third statement of (iii). Since
+556                               ROGER HOWE
+
+
+as we have noted J^ ' ~ Z0, this also proves (i) and the second statement of
+(ii). Now suppose X CßV. is a homogeneous subspace invariant under G and
+under F       . Then by the irreducibility of the joint (G,r/)-action, we have
+Ij = S(G) ■X = J^2'0' • X. But Jr(2'0) • X = X ®Y, where Y consists
+of elements of degree greater than the degree of X, since multiplication by
+elements of r'       raises degree. Thus X must consist of all elements of Z
+of minimum degree. The rest of the theorem follows, except for bijectivity of
+G-modules and F11,1''-modules defined by the %?m. But it is easy to see that
+F/{ ' ' generates the subalgebra of End(^f) commuting with G and coming
+from End°. So we are done.
+                                  4. Examples
+(a) Classical theory of spherical harmonics. Let G = On (C) be the isometries of
+the inner product J2"=o z, on C" . This may be regarded as the complexification
+of the action of the compact group On (R) on R" . Consider the induced action
+on the polynomials on C" . This is just sf(U,W)      when U = C" and W =
+{0}. The function r = ]C"=Uzt x%°y definition an invariant polynomial.
+According to Theorem 2, it generates the algebra of On invariants. Thus
+
+                      7o(°«) - {P(rl) > P a Polynomial}.
+
+  The Laplacian   A = J2"=\d /^z,      is an On-invariant differential operator.
+The commutator
+
+
+                        i=\   V    '     '   '     1=1      '
+
+Here E/«i z¡d/dzj = E is Euler's degree operator. Thus A,r and 4E + 2n
+together span a Lie algebra isomorphic to sl2, which is the appropriate r' for
+this action. We see r/(2'0) is spanned by r2, r^0,2* by A, and r/(1'1' by
+4Zs-(-2« . In particular r/(1 ''' is abelian.
+   Now put %? = kerA. Thus %" are the classical "spherical harmonics".
+Let ßH'mbe the spherical harmonics of degree m. Then 4E + 2n acts on
+7? as the scalar operator 4m + 2« . Thus each %7 must be irreducible for
+On by Theorem 9(iii). Further, an easy computation shows that (z, + iz2)m
+is harmonic for all n, so %7m¿ {0}. Specializing the rest of Theorem 9 to
+this case we have the following basic facts of the classical theory of spherical
+harmonics.
+   (i) The spherical harmonics %'m of each degree n form an irreducible On-
+module. The ß?m are mutually distinct.
+   (ii) Every irreducible On submodule of polynomials is isomorphic to some
+ m
+   (iii) Every polynomial may be written as a sum J2P¡(r )n¡ > where the ZJJ
+are polynomials in one variable and the A- are harmonic. (In this case, the
+                       REMARKSON CLASSICALINVARIANTTHEORY                    557
+
+
+expression is easily seen to be unique.) More precisely, if 7Pm is the space of
+polynomials of degree m, then
+
+                              *m*     0      r2k^m-2k
+                                    0<2k<m
+
+is the decomposition    of 3Pm into irreducible 0„ -modules.
+
+(b) The Hodge decomposition theory. Let V = VR be a real vector space of
+dimension 2n . Let J be a complex structure on V ; that is, J is an operator
+on V such that / = -1. An inner product ( , ) on V is said to define a
+compatible Hermitian structure for J if
+
+                               (Jx,y) = -(x,Jy).
+Such inner products exist. Choose one and denote it by ( , ). The form
+y(x ,y) = (Jx ,y) is called the Kahler form attached to J and to ( , ). It is a
+symplectic form on V.
+   Now consider Vc ~ V ®R C. We see that Vc = V+ ® V~ where V± is the
+±v^-T eigenspace for J . Extend ( , ) to a symmetric, complex bilinear form
+on Vc . Then for x, y G V+ , we compute
+        i(x,y) = (ix,y) = (Jx,y) = -(x,Jy)          = -(x,iy)   = -i(x,y).
+Hence V+ is isotropic for ( , ). Similarly V~ is isotropic for ( , ). So V+
+and V~ are in duality via ( , ). Thus the subgroup of the isometry group of
+( , ) preserving V+ and V~ is isomorphic by restriction to GL(F+) (orto
+GUV")).
+   We are interested in the relation between the Kahler form y and the action
+of GL(F+) on the exterior algebra A(VC). We note the decomposition
+
+            A(Fc)~A(F+)®A(JO~                0      AP(V+)®A9(V~).
+                                          0<p,q<n
+
+Write AP(V+) ® Aq(V~) = Ap'Q. Evidently the Ap'q are invariant under
+GL(F+). In fact the partial degree operators deg+ and deg" , which multiply
+Ap'q by p and q respectively, obviously commute with the action of GL(I/+).
+We can get two other operators commuting with GL(F+) from the Kahler form
+y. We note that y G A ( V*). However, by means of ( , ) we can identify Vc
+and V¿ , so that we may also consider that y G A (1^,). In fact, since V± are
+isotropic for y, we will have y G A ' . Since y is clearly GL(F+)-invariant
+we can get two more operators commuting with GL(F+). Namely, let A be
+the operation of multiplication by y when we consider y G A1'1 . Let L be
+the operation of inner multiplication, or contraction, with y, when we consider
+y G A (Vç). It is not hard to compute that
+
+                             [L, A] = deg+ + deg - n
+558                                ROGER HOWE
+
+
+so that L,A, deg+ + deg~ —n , and deg+ -deg~ together form a Lie algebra,
+isomorphic to gl2, with deg+ - deg~ the central operator, and the other three
+forming an sl2.
+   Referring back to Theorem 7, we recognize that we are here in the situation of
+G = GL(F+), U = {0} and W ~ V+ ® V+*. We know therefore that the gl2
+constructed above generates the full commuting algebra of GL(F+). Taking
+into account the known structure of gl2-modules [Se], and the particular form
+of [L, A], we make the following assertions.
+    (i) Let °Ap'q = (kerL) n Ap'q . Then Ak: °Ap'q - Ap+k'q+k is an isomor-
+phism for p + q + k < n , and zero for p + q + k > n .
+    (ii) Put kA"'q = Ak(°Ap-k'q-k). Then Ap'q = @kkAp'q and these kAp'q
+are irreducible mutually inequivalent modules for G1(F+).
+    (iii) In particular, each irreducible GL(F+) submodule of A(VC) is isomor-
+phic to °AP'q for unique p and q.
+    The above facts, with GL(V+) suppressed, are usually referred to as the
+Hodge decomposition for forms. Chern [Ch] noticed that the Hodge decompo-
+sition was representation theoretic in character, and Serre [Se] pointed out that
+the operators A and L generated an s 12. However, I do not know if the full
+duality has been recognized before.
+    Actually GL(F+) is not usually considered in this context. Rather, by virtue
+of the real structure underlying Vc, one has on Kc a complex conjugation
+operator, which interchanges V+ and V~ . The subgroup GL(F+) commuting
+with complex conjugation is U, the unitary group. The group U will also leave
+VR invariant, and on VR we may identify U to the group leaving ( , ) fixed
+and commuting with J. Since the representation of GL(F+) on A(VC) is
+holomorphic, the irreducible constituents will still be irreducible on restriction
+to the real form U. So the Hodge decomposition may also be regarded as a
+decomposition according to U-modules. In any case, the analogy with spherical
+harmonics is clear. The °Ap'q , analogs of harmonic polynomials, are generally
+referred to as primitive forms.
+
+(c) The de Rham complex. For a vector space V, the algebra sf(V*,V*) ~
+S(V*)®A(V*) is the algebra of polynomial-valued exterior forms on V , so we
+may term it the polynomial de Rham complex. We have the obvious action of
+GL(F*) on it. In terms of §3, this is the case G = GL(V*), U = W = V*.
+Here F1 is four dimensional.    It contains the exterior derivation operator d,
+given by
+                                 d = Jldxiir-
+                                     ¿-" ' dx¡
+in coordinates, and the co-differentiation
+                               d*=J2xii(dxi),
+                     REMARKS ON CLASSICALINVARIANT THEORY                       559
+
+
+where i(dx¡) indicates a contraction or inner multiplication        operator.   A
+straightforward computation shows that d = d* =0, and
+
+                            2{d,d*} = degp+ dege,
+where deg is the polynomial degree, or Euler operator, and dege is the exterior
+degree operator. Thus on S (V*) ®A (V*), degp is multiplication by k and
+degf is multiplication by /. Thus on the space ©¿+/=w £ (V*)®A (V*), the
+space of forms of total degree m , we see degp + deg^ acts as the scalar m.
+Thus the operator
+                              ' dd* +d*d
+                                                  1
+                               degp + dege
+where 1 is the identity and P is projection onto the constants, which are
+S° ® A° . In other words, we have an explicit construction of a chain homotopy
+between 1 and P. The existence of such a homotopy is useful for homological
+algebra. For example, it is used in [J] as a basic step in the proof of the Hubert
+Syzygy Theorem.
+   The explicit module structure of sf(V*, V*) is fairly pretty. It is not hard
+to show that except for S° ®A° all the irreducible submodules of sf for the r'
+spanned by d ,d*, deg and deg^ are 2 dimensional. From this, one concludes
+each GL(F*)-module occurs twice, once in S ®A as the space of closed forms
+and once in 5"+ ® A      as the space of co-closed forms. The Poincaré lemma
+follows. Using Young's diagrams, another product of Theorem 1A, as explained
+in [W], we may be very concrete about these modules. The Young's diagram
+for Sl is
+
+
+                                                      (/ cells)
+
+
+while the Young's diagram for A      is
+
+
+
+
+                                          (zccells)
+
+
+
+
+In forming the tensor product S ® A        these diagrams may be abutted in two
+560                                     ROGER HOWE
+
+ways. Diagrammatically,     we may write
+                                                 / + 1 cells       / cells
+
+
+                            (k cells)
+
+       (/ cells)                                     k - 1 cells
+                                                                   k cells
+
+
+
+
+The third and fourth diagrams represent the closed and co-closed forms respec-
+tively. The Dolbeault complex may be handled in a parallel manner.
+ (d) Cohomology of the unitary group. In the cases G = GL(K) and the algebras
+      k          k
+S(V ) or A(V )—that is, when only covariant tensors of a given symmetry
+type occur—the situation is particularly simple. In this case, we may write
+ V ~ V ® D, where D is an auxiliary vector space of dimension k . Thus
+GL(Z>) acts in an obvious way on S(V ® D) or A(V ® D), and Theorem 8
+just says that gl(V) and gl(ZJ) generate each other's commutant inside the
+appropriate Weyl or Clifford algebra. Thus S(V ® D) breaks up into a sum
+of irreducible GL(F) x GL(D) modules, each occurring once, and there is
+established thereby a bijection between certain representations of GL(F) and
+certain representations of GL(D). The correspondence may be conveniently
+described in terms of Young's diagrams. Although the computations which
+justify this description are not difficult, we will leave them out.
+    The representations of GL(F) occurring in the full tensor algebra over V
+may be described by Young's diagrams with at most dim V rows. Similarly,
+representations    of GL(D) are described by diagrams with at most dim D rows.
+In the joint action on S(V ® D) it may be seen that precisely those rep-
+resentations of GL(F) or GL(D) occur which have diagrams with at most
+min(dimF, dimD) rows. The only plausible possibility for matching is to
+match those representations of GL(F) and GL(D) which have the same
+Young's diagram, and this is indeed what happens.
+   The case of A(V ® D) is more interesting. Here representations of GL(F)
+occur whose Young's diagrams have at most dimD columns. Similarly, rep-
+resentations of GL(D) occur whose Young's diagrams have at most dim V
+columns. A representation of GL(F) and a representation of GL(D) are
+matched if their Young's diagrams are obtained from each other by flipping
+them over the diagonal. Thus for example, representations with diagrams
+
+
+                                           and
+
+
+
+correspond.
+                     REMARKS ON CLASSICALINVARIANT THEORY                     561
+
+
+   This circumstance may be used to compute the cohomology of the unitary
+group. As is well known [W] the cohomology of a compact Lie group is the
+algebra of invariants for the adjoint action in the exterior algebra of the Lie
+algebra of the group. For the unitary group, we may complexify and consider
+the action by conjugation of GL(F) on A(V ® V*). The action of GL(F)
+by conjugation results from the diagonal embedding of GL(F) into GL(F) x
+GL^)    acting by left and right translations. The action of GL(F) x GL(F)
+decomposes into a direct sum of irreducible representations p®o , where p is
+a representation of the first factor and a a representation of the second factor.
+The fixed points for the diagonal group will arise when p = a. There will
+be one fixed vector for each such coincidence. From the above discussion, we
+know the pairs {p, a) which can possibly occur. There will be one coincidence
+p = a for each Young's diagram, of at most n rows and n columns, which
+is symmetric across the diagonal. Among such diagrams there is an obvious
+collection from which the others can be generated. These are best described by
+writing down the first several:
+
+
+
+       D                                                              etc,
+
+
+
+
+This description allows us immediately to write down the Poincaré polynomial
+of Un . A closer look would reveal that this description also yields the multi-
+plicative structure of the cohomology, the above diagrams corresponding to the
+so-called "primitive generators".
+   One can give a similar description of the cohomology of the orthogonal and
+symplectic groups. That is somewhat trickier, but follows from considerations
+like those in topic (e) below. One can also calculate cohomology of Grassmann
+varieties in this manner.
+
+(e) Symmetric invariants for classical Lie algebras. We can compute the invari-
+ant polynomials for the adjoint action of the classical groups. For GL(F),
+considerations as for cohomology yield the result easily. For O and Sp a certain
+amount of exercising with Young's diagrams is necessary, and this derivation
+is probably more difficult than better known ones. It does seem to have some
+interest, however, so we give it. We will use Sp as our example.
+   First, let us note that in principle Theorems 1A and IB would permit com-
+putation of the invariants for any action of a classical group. Indeed, let the
+classical G act on V by an action. Then V may be broken up into irreducible
+components and its symmetric algebra (for example) may be expressed as a sum
+of tensor products of the symmetric powers of the irreducible summands. Each
+562                               ROGER HOWE
+
+
+of these summands may then be embedded somewhere in the mixed tensor al-
+gebra of the standard module. Given such an embedding, Theorems 1A and
+ IB allow computation of the invariants in such a summand. Transferring this
+information back to S(V) and putting it all together, you get a description of
+the polynomial invariants on V . Of course this principle is a very abstract one,
+for the individual steps in the above process can be very difficult. In particu-
+lar, embedding the symmetric powers of even one irreducible module into the
+tensor algebra in an explicit way will be very difficult. However, precisely the
+above scheme yielded our basic Theorem 2, and it may also be applied in the
+case at hand.
+   Let the vector space V be given a symplectic form and let Sp be the isometry
+group of this form. The adjoint action of Sp on its Lie algebra is isomorphic
+                    2                                2
+to the action on S (V). The Young's diagram of S is just DD. We want to
+compute S"(S (V)) as a subspace of the tensor algebra of V.
+
+
+Proposition 1. As a GL(V)-module, S"(S (V)) breaks up into a sum of one
+copy each of representations corresponding to Young's diagrams of 2n cells and
+an even number of cells in each row.
+
+Proof. Let S2n be the symmetric group on the numbers {1,2, ... ,2n) . Par-
+tition these numbers into n pairs {2/ - 1, 2z'} for 1 < i < n. Let Bn be the
+subgroup of S2n which preserves this partition. According to the calculus of
+Young's diagrams, the GL(F)-modules in S"(S (V)) have the same Young's
+diagrams as the S^-modules occurring in the permutation representation of
+S2n on S2n/Bn . The intertwining algebra for this representation is the Hecke
+algebra ^(S2n//Bn)  of Bn double cosets in S2n , with convolution for multi-
+plication.
+   Let us compute the Bn double cosets in S2n . Take any g g S2n . Then g
+will take the pairs {2/ — 1,2/} to some other collection of pairs. Let {a, ,a2}
+be a pair of the first partition. Then in the second partition, there will be a
+pair {û2,û3}. Possibly a3 = ax but likely not. Thus in the first partition
+there will be a pair {a3 ,a4}. We can continue in this fashion linking pairs by
+alternating between partitions until a, finally reappears in a pair of the second
+partition. This will complete the chain and we will have to start over again. By
+operating front and back with Bn we see we can change the individual numbers
+in a given chain at will. What we cannot change is the lengths of the chains.
+These lengths form a partition of the number n . Thus the double coset space
+B \S2JBn is in natural correspondence with the partitions of n . The partitions
+of n also parametrize the conjugacy classes in Sn . In fact, if we embed Sn
+into S2n by letting Sn permute all the even numbers, then we see we have a
+direct correspondence between Bn double cosets and conjugacy classes in Sn .
+Since each conjugacy class in Sn is self-inverse, each Bn double coset in S2n is
+                        REMARKSON CLASSICALINVARIANTTHEORY                                  563
+
+
+also self-inverse. Therefore the Hecke algebra ^(S2n/ /Bn) is commutative.
+Thus the representation of S2n acting on L (S2n/Bn) decomposes simply, each
+irreducible component occurring only once. Since the representations we claim
+occur are also clearly parametrized by partitions of n , to complete the proof it
+remains only to show that the desired representations actually do occur.
+    To demonstrate occurrence, it is simplest to return to the algebra S(S (V))
+and exhibit highest weight vectors corresponding to the desired GL( V )-modules.
+(To produce these highest weight vectors is also of interest in its own right.) This
+is most easily done by introducing coordinates on V, which will give rise to
+coordinates {x( = x,¡: 1 < i,j < dim V} on S (V). Given these coordinates,
+it is easy to check that the determinants
+                                                            xxx   xX2 x,3
+                                xxx    xX2
+       Sx = xx,,     a2 = det                    ¿3 = det x,2     x22 x2i          etc.
+                                xx2    x22
+                                                            X,3   X2i    X}2
+
+are highest weight vectors for GL(F), and that monomials in the Sj provide
+highest weights of all the desired kinds. This concludes the proof of Proposition
+1.
+   Next, we consider the Sp invariants. According to Theorem IB, the Sp
+invariants on 02" V are all obtained by applying permutations on the factors
+to the particular invariant 82n . Let s again denote the signum character of S2n .
+We observe that 82n is actually an eigenvector for Bn , with eigencharacter the
+restriction of s to Bn. Thus under S2n , we see 82n generates (a quotient of)
+the induced representation
+
+                      indjf s~s® (ind*" 1) ~ s® L2(S2JBn).
+Since tensor product with s has the effect of flipping a Young's diagram over
+its diagonal, we see that the Young's diagrams which contribute to the S2n
+module generated by 82n are diagrams with an even number of elements in
+each column, at most one each.
+   On the other hand, we know that 82n G S"(A (V)). Since 82 generates a
+(Zariski) open and dense GL(K) orbit in A , we see that the GL( V )-module
+generated by 82n must span Sn(A (V)).                Combining     Proposition     1 and the
+preceding paragraph, we may assert:
+Proposition 2. As a GL(V)-module, Sn(A (V)) breaks up into a sum of one
+copy each of representations corresponding to Young's diagrams of 2« cells with
+an even number of cells in each column.
+    Since 82n generates S"(A (V)), we see every possible Young's diagram con-
+tributes to the S2n-module it generates. Therefore, we may conclude that each
+irreducible GL(K) submodule of 0 " V of 0 " V given by a Young's diagram
+    4 This fact was told to me a long time ago by N. Iwahori, and this analysis was prompted by
+questions he raised.
+564                                 ROGER HOWE
+
+
+with columns of even length contains precisely one Sp invariant. In particular
+there is one Sp invariant for each Young's diagram consisting of two columns
+of even length. These of course give the well-known "basic invariants" which
+are easy to write down. Since they are obviously algebraically independent, a
+counting argument shows they generate all invariants.
+
+(f) The Capelli identities. For our last application of the results of §3, we will try
+to provide insight into the mechanics of Weyl's treatment of classical invariant
+theory. The crux of his proofs is the Capelli identity, which is a fairly compli-
+cated object in itself. As we will see, this identity essentially describes the action
+of the center of the universal enveloping algebra of GL(K) on sf(V ,{0}).
+Therefore we begin the discussion with some general remarks about how the
+center of the universal enveloping algebras behave under duality.
+    Consider sf ( U, W), where either U or W is trivial, so that actually sf =
+S(U) or sf = A(W). In this case gt = gt0 = g is either sp({7 ® U) or
+o(W ® W). Further, a classical dual pair in g consists of a pair (r,r/) of
+classical Lie algebras. We will give notation for various objects associated to F ;
+notation for F1 will be parallel. Let A(F) be the subalgebra of End° generated
+by r. Let G be the classical group whose Lie algebra is F. We may think of G
+as acting by automorphisms on End" . Then A(F/) is the algebra of invariants
+for G.
+    Let %?(F) be the universal enveloping algebra of F considered as an abstract
+Lie algebra. The inclusion of F in End° as a Lie subalgebra defines a homo-
+morphism a: %f(F) —>■     A(F). Let 2~(F) be the invariants in %7(F) under the
+adjoint action of G. (If G = GLn ,Sp2n, or 02n+, , then 727(F) is just the
+center of 1/7(F), but if G = 02n , it is properly inside the center.)   Since G acts
+reductively on $7(F), the image of 727(F) under a is precisely the space of G
+invariants in A(F), that is
+
+                             a:27(F)-^A(F)^A(F')
+is surjective. Similarly a is surjective from -2*(r/) to A(F) n A(FJ). Thus
+a(27(F)) = a (27(1^)) = A(F) n A(FI). This equality enforces a certain corre-
+spondence between characters of 27(F) and of 27(FI) arising from submodules
+of sf(U, W). This correspondence must clearly be compatible with the corre-
+spondence of Theorem 8. In fact, each determines the other.
+   Now consider the Capelli identity. We will first state it in its simplest form.
+Consider a matrix {A¡¡: 1 < i,j < n) of noncommuting variables. By the
+determinant of this matrix, we mean the sum
+
+                           ZJ S(8)Ag(\)lAg(2)2---Ag{n)n-
+                          g€S„
+
+Thus we take one element from each column, multiply together keeping the
+order indicated by the columns, and sum with appropriate signs. Thus for
+                      REMARKSON CLASSICALINVARIANTTHEORY                                     565
+
+
+example
+
+                                l2A2l = AxAl~AiAx
+                              \A2A2J-
+Now consider the nxm       matrices            Mn m(C). Let GLn act on Mn m by mul-
+tiplication on the left. The "polarization" operators itkl, 1 < zc, / < m, are
+defined by
+                                                n        a
+                                   I       _   ^-\       O
+                                7tkl-2^Xikgx--
+                                               1=1           <<
+These operators commute with GLn, and in fact they form the dual algebra
+r' for it, which in this case is simply the (Lie algebra of) GLm acting by right
+multiplication. The basic Capelli identity says
+
+(C)           det^,   + 8kl(m -*))-£det(x/oJdet                             '
+                                                                                dxi>aJbi .
+where the sum is over all pairs of m-tuples 1 < z, < i2 < ■■■< im < n . Thus
+in particular, if m > n the left-hand side is zero, and if n = m it is equal to
+
+                           n = det(xiJ)det(7£-)                        .
+
+This is known as the Cayley Q-process [W].
+   In any case, the right-hand side of (C) is visibly invariant under conjugation
+by GLm , while the left-hand side, being formed from polarizations, commutes
+with GLn . In terms of the general discussion above, we see that the Capelli
+identity gives us an explicit construction of elements of A(F) n A(F/) for this
+particular pair. It is interesting that from knowledge of these elements, it is
+possible to recover the complete invariant theory.
+   To prove equation (C), we take our cue from the interpretation just given, and
+commence by showing the left-hand side, considered as an element of %7(glm),
+is central. For this we need only the commutation relations in glm , not the
+specific form of the operators.
+   First note some formal properties of det{^4. } for arbitrary A... From the
+definition, it is clear that det{A{.A is antisymmetric in its rows, just as normal
+determinants are. Thus, the usual column expansion is good for the first column.
+Also various expansions relating to partitioning of the columns are valid, so long
+as the columns are kept in their proper order. In particular, take the z'th column,
+and partition the columns into the set preceding i, the set following z + 1, and
+the pair {/, i + 1} . Then we have
+
+
+                           i<m \       a             ^   mi       ^m       Í+I /       /
+
+where a runs over all (/' - 1) tuples of rows not containing the Ith or rath,
+and B is the determinant of the matrix defined by these rows and the first
+i - 1 columns, and C is the determinant of the matrix determined by the
+566                                 ROGER HOWE
+
+
+remaining n - i - I rows and columns. This formula allows us to study the
+effect of reversing two columns. We note the pleasant identity
+
+
+
+Thus we may say: the sum of the determinants of {A-} and the matrix obtained
+by interchanging two adjacent columns is equal to the sum of the determinants
+of the two matrices obtained from {Ajk} by putting both columns equal to one
+of them.
+   The commutator relations of the n'tj are
+
+
+Denote the matrix whose determinant is the left-hand side of (C) by n. From
+these commutator relations one sees that all the 2x2 matrices formable from
+two copies of column i of n have zero determinant except the matrices
+              Jn'^n-i           ¿tt+ »-i\
+                V *ji               *„      )
+which have determinants it... Thus the matrix obtained from n by replacing
+column i + 1 with a second copy of column i has the same determinant as the
+matrix obtained from n by replacing column i+ I by a column which is zero
+except for 1 in the z'th row.
+   Consider now the effect on detn of the adjoint action of the permutation
+matrix o¡ which transposes i and i + 1. Because the diagonal entries of n
+are n'u + n - i and not simply n'u the action of ai is not simply to transpose
+the zth row and column of n. A computation which is easier to perform than
+to describe succinctly shows that the actual effect of a. on n is just right to
+cancel out the noncommutativity of columns i and i + 1 as described in the
+preceding paragraph. Thus n is actually invariant under oi, hence under the
+whole permutation group.
+   To finish the proof that detn is central in %(glm), it suffices to show that
+it commutes with any given n'¡¡, with i ± j. We select 7t'n_Xn. Another
+formal property of our determinant is that [B, det{A¡..}] is the sum of the
+determinants of the matrices obtained from {A¡j} by selecting some column
+and replacing each element in the column by its commutator with B . For each
+column except the (n - l)th, taking commutators with it'n_Xn kills everything
+but the bottom entry ri-, which gets replaced with n'n_l ¡. In the (n - l)th
+column it':n_x is replaced with -«'■„, except for n'nn_x which gets replaced
+with   n'n_Xn_x - it'nn, and   it'n_Xn_x + 1, which gets replaced   with   -n'n_Xn.
+Using linearity in the (n - l)th column, then in the «th row, we see that these
+n determinants can be combined to form three determinants, one of a matrix
+gotten from n by replacing the nth row with a copy of the (n - l)th row, one
+gotten by replacing the (n -1 ) th column by the negative of the «th column, and
+the third gotten by replacing the (n-l)th column by zeros except for -1 in the
+                       REMARKSON CLASSICALINVARIANTTHEORY                        567
+
+
+zith row. The determinant with the repeated row vanishes trivially. According
+to our remarks above, the remaining two determinants cancel each other, so the
+net result is zero. Thus detn is indeed central in %7(glm).
+   We can now prove (C). In fact, we will give an explicit description of A(gln)r\
+AWJ-
+Proposition 3. Let
+                           n      a                         m     Q
+
+                     7tjk= 22xijß7-
+                           _   udx.k
+                                         and nA
+                                              jk
+                                                 = l^xJi
+                                                   £, jtdXk.
+
+be the standard basis elements for F1 = glm and F = gln respectively. Then
+A(F) n A(F/) is a polynomial algebra on the generators
+
+          y, = E **{*ajak+ «,*(' - m = E **{*'Pjßt+ ôjk(i- j)}
+                a                                       ß
+
+
+
+             = Y* det(x « ) det |-                | .
+               a,ß                \    ajßk   /
+
+
+Here a runs over all l-tuples from the numbers 1 through n and ß runs through
+I-tuples of the numbers 1 through m. The operator y¡ is zero if I > min(ra, n).
+Proof. We have shown that the first expression for y¡ is in the center of A(F),
+hence in A(F) n A(F>). Similarly for the second expression. The third is easily
+shown to be in A(F)nA(F') by an argument like that given in §4(d), and in this
+form the y¡ are obviously the classically known free generators for A(F)nA(F').
+To finish, we need to show that, say, the first expression equals the third.
+   To do this, the most direct method seems to be to write down all the joint
+highest weight vectors for the action of Gln x GLm on Mn m and verify that
+the two operators do the same to each. This is actually not too hard to do. Let
+                          6k = det{x(7} for I <i,j          <k.
+Then the highest weight vectors for GLn x GLm have the form [Z] A(p(.) =
+ôP]ôPl ■■■ôPq for arbitrary nonnegative integers pi. This assertion is fairly easy
+to verify. One simply computes to show they are joint highest weight vectors,
+then observes that the modules they represent exhaust all possible isotypes.
+   It remains to show that the actions of the various expressions for y¡ agree
+on the A(p7). By an inductive argument, the main point to verify is that all
+expressions for y¡ kill A(p7) if p¡ = 0 for i > I. For the third expression for
+the y¡ this is clear. For the first two expressions, the crucial observation is that
+since the A(p¡) are highest weight vectors, i.e., itjk(A(p7)) = 0 = 7r'.¿(A(/?(.))if
+j < k , we have the equation
+
+
+         det{najak+Sjk(l-j)}(A(pi))=
+                               lfl{*ajaj+ 1- j)\ (A(P¡)).
+568                                ROGER HOWE
+
+
+  The last factor in Fí'; A71     A I - j) is it     . Since a, > I, this will kill
+any expression which involves only x¡¡ with i ,j < I, as is the case with A(p¡)
+if pi = 0 for i > I. This concludes Proposition 3.
+
+   There is an analogue of Proposition 3 for the pair (sp, o). We leave its details
+as an exercise for the reader.
+
+                           5. Concluding     remarks
+
+    (a) The theory of reductive dual pairs also makes sense in a transcendental
+context, that of the oscillator representation of symplectic groups over local
+fields. In that context, one considers a pair (G,G') of reductive subgroups
+which are mutual centralizers in Sp. When the field is R, and one of G or G1
+is compact, the theory presented here may be applied directly to obtain a duality
+between certain unitary representations of G and of G'. If G is compact and
+G' is not, then G' will always have a Hermitian symmetric structure, and the
+representations of G1 will be of holomorphic type, i.e., will have highest weights.
+Essentially this line of attack has been followed by several authors [Ge, G-K,
+K-V, Sa] to obtain examples in various cases of holomorphic representations.
+    When neither G nor G' is compact, essentially the same duality phenome-
+non occurs, but the situation is technically more complicated, and the algebraic
+results given here do not apply directly. However, it should be noted that the
+homomorphism of §4(f) between centers of enveloping algebras of F and F1
+still exists and controls the infinitesimal characters of corresponding representa-
+tions. This information on infinitesimal characters, along with some qualitative
+features, should essentially determine the duality correspondence.
+   (b) In his book, Weyl discusses two Main Theorems of Classical Invariant
+Theory. In this paper we have been exclusively concerned with the First Main
+Theorem, a list of generators for the ring of invariants. The Second Main Theo-
+rem describes the relations between these invariants. In a recent discussion with
+Michéle Vergne, a use for the Second Main Theorem was proposed. Consider a
+reductive dual pair (G,G') in Sp2n(R),with G compact and G' noncompact.
+By means of Theorem 9, one can embed the representations of G' occurring in
+the restriction of the oscillator representation in certain spaces of holomorphic
+functions on the symmetric space of G'. These embeddings are not in general
+surjective, so there is a problem to describe their range. Using the Second Main
+Theorem, one can write down some additional differential equations (i.e., ad-
+ditional to the Cauchy-Riemann equations) satisfied by functions in the range
+of such an embedding. These systems should be fairly interesting examples for
+P.D.E. fans.
+   Conversely, the representation-theoretic point of view provides insight into
+the varieties defined by the Second Main Theorem. In the notation of Theorem
+9, these varieties must just be the orbits of G'(1''' acting on F>i ' '.
+                         REMARKS ON CLASSICALINVARIANT THEORY                                    569
+
+
+   The results in this paper have been several years in formation. I am indebted
+to many people for helpful conversations or other stimulation. I would like to
+mention in particular Steve Gelbart and Howard Garland.
+
+                                          Postscript
+   When writing this paper, the author hoped that the viewpoint it took, and
+the general Theorems 7, 8, 9 were new. On the other hand, the examples (a)
+through (f) of §4 were understood to be individually well known, and the point
+was to discuss them from the uniform viewpoint provided by §3. In the years
+since the paper was written, the author has learned much more precisely how its
+contents connect with specific parts of the literature. We summarize here some
+of these connections. The book [L] has many formal identities, some of which
+can be seen to be equivalent to various of the decompositions of the algebras
+sf (U,V) described in Theorems 8 and 9. In particular, the decomposition
+of the polynomials on the nxn matrices under the action of GLn x GLW is
+equivalent to "Cauchy's Lemma", a 19th century identity. Weyl [W, pp. 202-
+207] makes use of this identity without seeming to be conscious of its geometric
+import. The book of Zhelobenko [Z] treats the action of GLn x GLm on the
+n x m matrices in a similar spirit to this paper, and gives formulas for the highest
+weight vectors, from which our formulas in §4(f) derive. Seshadri [Sh] espouses
+a point of view toward the Capelli identities similar to ours. The "polynomial
+de Rham complex" is widely known as the Koszul complex. Several papers of
+Kostant treat several of the examples of §4, and also some of the machinery of
+§§1, 2, sometimes from a similar point of view [Ksl, Ks2, Ks3]. In particular,
+the descriptions of S"(S2(V)) and S"(A2(V)) of §4(e) are examples of his
+result about actions of Levi components on enveloping algebras of nilradicals.
+They also are examples of Helgason's theorem on representations with Affixed
+vectors [He]. An early reference for S"(S (V)) is [Th]. Finally, several special
+cases of Theorems 7, 8, 9 have appeared in the physics literature, some before
+and some after this paper was written. See [Ho 1] for some references.
+
+                                          References
+[ABP] M. Atiyah, R. Bott and V. Patodi, On the heat equation and the Index Theorem, Invent.
+      Math. 19(1973), 279-330.
+[Ch] S. S. Chern, On a generalization of Kahler geometry, Algebraic Geometry and Topology, A
+     Symposium in Honor of S. Lefschetz, Princeton Univ. Press, Princeton, N.J., 1975.
+[Ge] S. Gelbart, Holomorphic discrete series for the real symplectic group, Invent. Math. 19 (1973),
+      49-58.
+[G-K] K. Gross and R. Kunze, Bessel functions and representation theory. I, II, J. Funct. Anal. 25
+      (1977), 1-49.
+[He] S. Helgason, A duality for symmetric spaces with applications to group representations, Adv. in
+      Math. 5(1970), 1-54.
+[Hol] R. Howe, Dual pairs in physics : Harmonic oscillators, photons, electrons, and singletons,
+      Lectures in Appl. Math., vol. 21, Amer. Math. Soc, Providence, R.I., 1985, pp. 179-206.
+[J]   N. Jacobson, Basic algebra. II, Freeman, New York, 1980.
+570                                         ROGER HOWE
+
+
+[K] V. Kac, Simple irreducible graded Lie algebras of finite growth, Izv. Akad. Nauk SSSR 32
+    (1968), 1323-1367; Englishtransi., Math. USSR-Izv.2 (1968), 1271-1311.
+[K-V] N. Kashiwara and M. Vergne, On the Segal-Shale-Weil representations and harmonic polyno-
+      mials, Invent. Math. 44 (1978), 1-47.
+[Ksl] B. Kostant, Graded manifolds, graded Lie theory, and prequantization, Differential Geometri-
+     cal Methods in Mathematical Physics (Proc. Sympos. Univ. Bonn, Bonn, 1975), Lecture Notes
+       in Math., vol. 570, Springer-Verlag,Berlin, 1977, pp. 177-306.
+[Ks2]_,      Lie algebra cohomology and the generalized Borel-Weil Theorem, Ann. of Math. (2) 74
+       (1961), 324-387.
+[Ks3]_,      A theorem of Frobenius, a theorem of Amitsur-Levitski and cohomology theory, J. Math.
+       Mech. 7(1958), 237-264.
+[L]    D. Littlewood, The theory of group characters and matrix representations of groups, Oxford
+     Univ. Press, Oxford, 1940.
+[Sa] M. Saito, Représentations unitaires des groupes symplectiques, J. Math. Soc. Japan 24 (1972),
+       232-251.
+[Se] J.-P. Serre, Algebres de Lie semi-simples complexes, Benjamin, Reading, Mass., 1966.
+[Sh] C. Seshadri, Letter to M. F. Atiyah.
+[Sh] D. Shale, Linear symmetries offree bosonfields, Trans. Amer. Math. Soc. 103 (1962), 149-167.
+[Th] R. Thrall, On symmetrized Kronecker powers and the structure of the free Lie ring, Amer. J.
+       Math. 64(1942), 371-388.
+[H] T. Tilgner, (a) Graded generalizations of Weyl and Clifford algebras, J. Pure Appl. Algebra 10
+       (1977), 163-168.
+       (b) A graded generalization of Lie triples, J. Algebra 47 (1977), 190-196.
+[Wi] A. Weil, Introduction a l'étude des variétés Kähleriennes, Hermann, Paris, 1958.
+[Wi2]_,    Sur certains groupes d'opérateurs unitaires, Acta Math. 11 (1964), 143-211.
+[W] H. Weyl, The classical groups, Princeton Univ. Press, Princeton, N.J., 1946.
+[Z.] D. Zhelobenko, Compact Lie groups and their representations, Transi. Math. Mono., no. 40,
+     Amer. Math. Soc, Providence, R.I., 1973.
+
+      Department   of Mathematics,     Yale University,   New Haven, Connecticut        06520
+

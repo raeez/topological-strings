@@ -1,0 +1,228 @@
+\section{Three principles}\label{sec:three-principles}
+
+After the symplectic primitive, scalar quotient, and residue
+normalization are fixed, the local model is organized by three source
+principles.  Each is physical in origin, but each is used here only
+after translation into an algebraic hypothesis or target.  Together they
+specify the hypotheses and algebraic targets for the open brane theory,
+the closed Hamiltonian BF theory, the closed-open comparison, and the
+cotangent coefficient module proved below.
+
+\subsection{Dirac: a brane stack is a constrained probe}
+
+Fix the formal holomorphic symplectic disk
+\[
+  \widehat{\C^2}_0=\operatorname{Spf}\C[[z_1,z_2]],
+  \qquad \omega=dz_1\wedge dz_2.
+\]
+A stack of \(N\) branes supported on the topological line probes this
+disk by replacing the normal coordinates by matrices
+\[
+  z_1\rightsquigarrow\phi_1,\qquad
+  z_2\rightsquigarrow\phi_2,\qquad
+  \phi_i\in\mathfrak{gl}_N .
+\]
+The pulled-back symplectic form is
+\[
+  \Omega_N=\operatorname{Tr}(d\phi_1\wedge d\phi_2),
+\]
+with primitive \(\operatorname{Tr}(\phi_1\,d\phi_2)\). Change of basis
+in the probe stack is gauge. Its moment map is
+\[
+  \mu(\epsilon)=-\operatorname{Tr}(\epsilon[\phi_1,\phi_2]),
+  \qquad \epsilon\in\mathfrak{gl}_N .
+\]
+Dirac reduction therefore imposes the first-class constraint
+\[
+  [\phi_1,\phi_2]=0.
+\]
+After the primitive \(\operatorname{Tr}(\phi_1\,d\phi_2)\) and moment
+map convention have been fixed, the corresponding first-order
+world-line action is
+\[
+  S_\partial
+  =\int_\R\operatorname{Tr}
+    \bigl(\phi_1\,d\phi_2+A[\phi_1,\phi_2]\bigr).
+\]
+In BV form the constraint is the Koszul differential
+\[
+  Q\psi=[\phi_1,\phi_2],\qquad Q\phi_1=Q\phi_2=0,
+\]
+where \(\psi=A^*\). Thus the open algebra is not postulated as a
+trace algebra. It is the algebra of gauge-invariant functions on the
+derived commuting-pair locus. Lemma~\ref{lem:dirac-probe-reduction}
+and Proposition~\ref{prop:open-bv-truncation} give the formal proof.
+
+\subsection{Witten convention: closed fields target central operations}
+
+Witten's open string field theory supplies the cyclic open-field-theory
+source convention, not a theorem imported into this local model.  The
+closed-open expectation is that a closed insertion approaching a brane
+does not merely evaluate to a boundary function; it should give an
+operation on compatible boundary observables.  In a topological
+direction the algebraic target for such an operation is centrality up to
+derived Poisson homotopies.  The target tested in this paper is therefore
+\[
+  Z^{P_0}_{\mathrm{red,Ham}}(\mathrm{Obs}_{\mathrm{open}}),
+\]
+not \(\mathrm{Obs}_{\mathrm{open}}\) itself.  The centrality statement
+proved below is the reduced CE/PV calculation in this formal Hamiltonian
+sector; no global open string field theory or physical centrality theorem
+is imported from Witten.
+
+For the formal symplectic disk the infinitesimal closed symmetries are
+Hamiltonian vector fields. Constants generate the zero vector field,
+so the Hamiltonian Lie algebra is
+\[
+  \mathfrak h=\C[[z_1,z_2]]/\C\cdot1,
+  \qquad
+  \{f,g\}
+  =\partial_{z_1}f\,\partial_{z_2}g
+   -\partial_{z_2}f\,\partial_{z_1}g .
+\]
+In the local model the closed BV algebra of canonical transformations is
+the shifted cotangent theory
+\[
+  \mathfrak g
+  =\mathfrak h\ltimes\mathfrak h^\vee_{\mathrm{cont}}[1].
+\]
+The local theorem to be proved is the cochain identity
+\[
+  C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g)
+  \cong
+  \mathrm{PV}\bigl(\widehat{\mathbf S}_{\mathrm{Tate}}(\mathfrak h)\bigr)
+  \simeq
+  Z^{P_0}_{\mathrm{red,Ham}}
+  \bigl(\widehat{\mathbf S}_{\mathrm{Tate}}(\mathfrak h)\bigr),
+\]
+with generator dictionary
+\[
+  c^I\mapsto\theta^I,\qquad u_I\mapsto O_I .
+\]
+The boundary Hamiltonian observable is the image of the shifted
+cotangent coordinate \(u_I\). It is not the image of the Hamiltonian
+ghost coordinate \(c^I\). This distinction is the type check behind
+the factorization-current theorem.
+
+The same type check blocks the unreduced lift.  A theorem at the
+unreduced BV level would have to produce actual boundary representatives
+for the shifted cotangent generators and homotopies making them central
+against arbitrary open observables before primitive trace projection.
+The reduced theorem below does not do this: it identifies the CE/PV
+target and the reduced \(P_0\) current target, while the unreduced
+centrality and QME compatibility remain separate obligations.
+
+There is a sharper obstruction than a wrong label map. In the
+polynomial unreduced BV/Koszul category the linear Hamiltonians act by
+constant translations of \(\phi_2\) and \(\phi_1\), hence locally
+nilpotently on every finite polynomial observable and on its
+\(Q\)-cohomology. The principal-part cotangent module has the opposite
+behavior:
+\[
+  z_1^r\cdot\rho_{a,b}
+  =(-1)^r(b+1)\cdots(b+r)\rho_{a,b+r}\neq0,
+  \qquad r\geq1,
+\]
+and similarly for \(z_2\). Thus a same-action unreduced lift cannot be
+hidden inside polynomial one-\(\psi\) representatives. A corrected
+boundary target must contain genuinely distributional principal-part
+fields and must construct new centrality homotopies there.
+
+The QME obstruction has an independent scalar component. With the
+Capelli/Weyl convention used below,
+\[
+  \operatorname{Tr}(A\,XY)-\operatorname{Tr}(A\,YX)
+  =\hbar N\,\operatorname{Tr}(A)
+  \quad\bmod\ \mathcal W_N\widehat\mu(\lie{gl}_N).
+\]
+After inserting the central boundary ghost
+\(\gamma_{\mathbf 1}\), \(|\gamma_{\mathbf 1}|=1\), the scalar contact
+contributes
+\[
+  \operatorname{Ob}_{\mathrm{sc}}
+  =
+  \hbar N\,\omega(f,g)
+  \int_\R a(t)b(t)\gamma_{\mathbf 1}(t)\,dt .
+\]
+Its associated graded class is \(\hbar N[\bar c]\). The reduced
+Hamiltonian source has no constant Hamiltonian line on which the
+primitive \(\eta(f)=-[f]_0\) could live. Known candidate mechanisms for
+an ordinary \(\lie{gl}_N\) mixed brane-defect QME proof include a
+closed-exchange term with associated graded \(-\hbar N[\bar c]\), a
+supertrace or central-character normalization, or an unreduced scalar
+primitive. The present manuscript records the class; it does not prove
+that this list is exhaustive or that such a cancellation has been
+constructed.
+
+\subsection{Grothendieck: cotangent modes are residue currents}
+
+The continuous dual of functions on a formal disk is not another copy
+of polynomial functions. It is the local-cohomology module of residue
+currents. For
+\[
+  R=\C[[z_1,z_2]],\qquad \mathfrak m=(z_1,z_2),
+\]
+the Matlis dualizing module is
+\[
+  H^2_{\mathfrak m}(R)\,dz_1dz_2
+  =
+  \bigoplus_{a,b\geq0}
+  \C\,z_1^{-a-1}z_2^{-b-1}\,dz_1dz_2 .
+\]
+After removing the scalar Hamiltonian, the cotangent module is
+\[
+  \mathcal P
+  =
+  \operatorname{Ann}_{\mathrm{res}}(\C\cdot1)
+  =
+  \bigoplus_{a+b>0}\C\,\rho_{a,b},
+  \qquad
+  \rho_{a,b}=z_1^{-a-1}z_2^{-b-1}\,dz_1dz_2 .
+\]
+The residue pairing
+\[
+  \langle\rho_{a,b},z_1^m z_2^n\rangle
+  =
+  \operatorname{Res}_{0}
+  z_1^{m-a-1}z_2^{n-b-1}\,dz_1dz_2
+  =
+  \delta_{a,m}\delta_{b,n}
+\]
+identifies \(\mathfrak h^\vee_{\mathrm{cont}}\) with \(\mathcal P\).
+The coadjoint action is the lowering formula
+\[
+  z_1^p z_2^q\cdot\rho_{a,b}
+  =
+  -(pb-qa+p-q)\rho_{a-p+1,b-q+1}.
+\]
+This is the cotangent sector used by the closed theory. The
+one-\(\psi\) open classes \(\Psi_{a,b}\) carry the same labels but a
+different \(\mathfrak h\)-module structure. They form a PBW
+special-fibre shadow; they do not realize the principal-part module.
+The no-go theorem
+\ref{thm:no-polynomial-realization-categorical} records the formal
+obstruction.
+
+\subsection{Deduction of the local package}
+
+The three principles have disjoint jobs.
+
+\begin{enumerate}
+  \item Dirac determines the open BV complex and the stable trace
+  observables.
+  \item Witten's source convention motivates the closed-open target as a
+  derived \(P_0\)-centre; the local CE/PV theorem supplies the proof in
+  the reduced Hamiltonian sector.
+  \item Grothendieck determines the continuous cotangent coefficients
+  and separates principal parts from polynomial descendants.
+\end{enumerate}
+
+The rest of the paper proves the resulting package in independent
+lanes: the Dirac probe theorem; the stable trace and one-\(\psi\)
+calculation; the CE/PV derived-centre theorem; the Matlis
+principal-part theorem; the brane-line factorization-current theorem;
+the reduced principal-part defect-current theorem; the degree-zero
+Moyal/Weyl quantum theorem; and the scalar \(U(1)\) anomaly theorem.
+Open analytic obligations are named separately: the unreduced
+cotangent factorization-centre morphism, the one-antifield quantum
+lift, and the Costello brane-defect QME realization.

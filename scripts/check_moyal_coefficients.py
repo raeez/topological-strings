@@ -16,7 +16,7 @@ It verifies, on the four nontrivial test pairs
     (c) z1^2, z2^2
     (d) z1^3, z2^2
 
-plus a sweep up to exponent 6 and order 11:
+plus a sweep up to exponent 10 and order 11:
 
   1.  Moyal coefficients on monomials (P^r and the star commutator) match
       Proposition `prop:moyal-monomial`.
@@ -25,33 +25,43 @@ plus a sweep up to exponent 6 and order 11:
   3.  Capelli triangular identity (Remark `rmk:capelli-renormalized-traces`):
       the Weyl trace `J_N` and the normal-ordered trace `T` are related by
       the explicit triangular `hbarN` shift on (z1^a z2^b) for arbitrary
-      a, b in 0..6.  The shift is the operator `exp(-hbarN/2 d1 d2)`.
-  4.  Renormalized connected trace identity:
-        Tr^ren(z1^a z2^b) = Tr(z1^a z2^b) - hbar*N * (lower trace shift),
-      defined exactly as `J_N` minus the constant Hamiltonian piece, agrees
-      with the Capelli triangular formula for all a+b <= 12.
-  5.  Reduced Moyal commutator identity at finite N (Theorem
+      a, b in 0..10.  The shift is the operator `exp(-hbarN/2 d1 d2)`.
+  4.  Renormalized connected trace identity: explicit low-degree Capelli
+      examples are asserted, including
+        J_N(z1 z2), J_N(z1^2 z2), J_N(z1^2 z2^2),
+      and the normal-ordering defect
+        hbar^{-1}[T_{2,1}, T_{0,2}] = 4 T_{1,2} - 2 hbar N T_{0,1}
+      is derived from the triangular system.
+  5.  Direct N=2 and N=3 radial-parts restriction: for selected J_N(f), apply
+      the actual matrix Weyl differential operator on invariant test
+      polynomials in gl_N, restrict to diagonal matrices, and compare
+      Delta . J_N(f)|_t with S_N(f) . Delta.  This attacks the
+      source-dependent radial-parts input in low rank but does not prove the
+      all-N Harish-Chandra theorem.
+  6.  Reduced Moyal commutator identity at finite N (Theorem
       `thm:finite-n-reduced-moyal`).  The radial-parts side
         S_N(f) = sum_i Op_W(f)(lambda_i, -hbar d_lambda_i)
       is the one-particle Weyl algebra at each Cartan node, so distinct
-      summands commute.  Verified by direct symbolic commutator on the
-      Cartan-rank-2 specialization (N=2) for all four test pairs.
-  6.  Connected cumulant bracket on `bar h`: define the connected
+      summands commute.  Verified by direct symbolic commutator against
+      S_2([f,g]_*) on the Cartan-rank-2 specialization (N=2) for all
+      primary and higher-order test pairs.
+  7.  Connected cumulant bracket on `bar h`: define the connected
       single-trace projection by removing the constant trace and (by the
       Capelli triangular identity) by passing to `bar J`.  The induced
       bracket
         {f, g}_conn = f * g - g * f mod constants and mod the lower-trace
                        Capelli shift
-      coincides with the scalar Moyal bracket {f, g}_hbar coefficientwise on
-      every monomial pair tested.
-  7.  Open-line midpoint graph weights (Proposition
+      is checked here on the leading coefficient of the scalar Moyal bracket
+      for the primary test pairs.  Higher hbar-graded connected-cumulant
+      coverage would require a separate coefficientwise test.
+  8.  Open-line midpoint graph weights (Proposition
       `prop:open-line-midpoint-graph-weights`): the one-edge weight is
       hbar P/2 and the three-parallel-edge weight is hbar^3 P^3/48; their
       antisymmetrisations give hbar P and hbar^3 P^3/24.
 
 Run
 
-    python3 scripts/check_moyal_coefficients_extended.py
+    python3 scripts/check_moyal_coefficients.py
 
 The script exits with a nonzero return code on the first failed assertion.
 """
@@ -59,6 +69,7 @@ The script exits with a nonzero return code on the first failed assertion.
 from __future__ import annotations
 
 from fractions import Fraction
+from itertools import combinations, product
 from math import comb, factorial
 from typing import Dict, Tuple
 
@@ -257,6 +268,45 @@ def stable_connected_subtraction(a: int, b: int):
     return out
 
 
+TraceExpansion = Dict[Tuple[int, int, int, int], Fraction]
+
+
+def normalized_T_commutator_in_T(
+    a: int, b: int, c: int, d: int, max_order: int
+) -> TraceExpansion:
+    """Compute hbar^{-1}[T_{a,b}, T_{c,d}] in the normal-ordered T-basis.
+
+    Keys are (hbar_power, N_power, z1_exp, z2_exp).  The computation uses the
+    inverse Capelli triangular system T -> J, the normalized Moyal bracket on
+    J-generators, and then the triangular system J -> T.
+    """
+
+    out: TraceExpansion = {}
+    left = capelli_invert_T_in_J(a, b)
+    right = capelli_invert_T_in_J(c, d)
+    for lc, lp, (la, lb) in left:
+        for rc, rp, (ra, rb) in right:
+            f = monomial(la, lb)
+            g = monomial(ra, rb)
+            for order in range(1, max_order + 1):
+                coeff_poly = star_commutator_coeff(f, g, order)
+                if not coeff_poly:
+                    continue
+                normalized_hbar_power = order - 1
+                for (ja, jb), pc in coeff_poly.items():
+                    for jc, jp, (ta, tb) in capelli_J_in_T(ja, jb):
+                        key = (
+                            lp + rp + normalized_hbar_power + jp,
+                            lp + rp + jp,
+                            ta,
+                            tb,
+                        )
+                        out[key] = out.get(key, Fraction(0)) + lc * rc * pc * jc
+                        if out[key] == 0:
+                            del out[key]
+    return out
+
+
 # ---------------------------------------------------------------------------
 # Reduced Moyal commutator identity (Theorem `thm:finite-n-reduced-moyal`).
 #
@@ -298,47 +348,21 @@ def cw_scale(c: Fraction, p: CartanWeyl) -> CartanWeyl:
 def cw_one_particle_weyl_monomial(i: int, k: int, l: int) -> CartanWeyl:
     """Op_W(z1^k z2^l) on the i-th Cartan node, in symmetric ordering.
 
-    We expand the symmetrisation explicitly.  Each Weyl-ordered monomial
-    lambda_i^k * (hbar d_i)^l, after total symmetrisation, becomes
-        (1 / (k+l choose k)) * sum over interleavings of k 'lambda_i' and
-        l 'hbar d_i' factors.
-    But after putting all derivatives to the right (normal ordering), the
-    symmetrised expansion is the binomial sum
-        sum_{r=0}^{min(k,l)} C(k,r) C(l,r) r! * (hbar)^r * lambda_i^{k-r} d_i^{l-r}
-                                  * (something).
-    We compute it directly by repeated application of the canonical
-    commutator [d_i, lambda_i] = 1 on lambda_i^k d_i^l.
+    We normal-order after imposing [d_i, lambda_i] = 1 and the radial-parts
+    convention z2 = -d_i.  Weyl ordering of lambda^k d^l contributes
 
-    For the rank-2 verification we only need *concrete* one-particle Weyl
-    operators acting on bivariate polynomials; we therefore expose the
-    operator as a dictionary keyed by (a1, a2, b1, b2).
+        sum_r C(k,r) C(l,r) r! 2^{-r} lambda^{k-r} d^{l-r};
+
+    the substitution d -> -d contributes the global sign (-1)^l.
     """
-
-    # Symmetric ordering: 1/2 * (lambda^k d^l + d^l lambda^k) for k=l=1,
-    # generally we interleave by averaging over (k+l)!/(k! l!) shuffles of
-    # k 'lambda' tokens and l 'd' tokens, all conjugated by [d, lambda] = 1.
-    # The Moyal-symbol calculus says the Weyl symbol of f is f itself.  We
-    # therefore directly build the Weyl-symbol -> normal-form expansion
-    # using f -> sum_r (hbar/2)^r / r! d_l^r d_d^r f, but here d_l and d_d
-    # are derivatives in the symbol variables.  In the present rank-2
-    # Cartan model, the pair (lambda_i, hbar d_i) is canonical, so the
-    # Weyl symbol z1^k z2^l of the monomial maps to the operator
-    # whose normal form is the binomial expansion
-    # sum_{r=0}^{min(k,l)} C(k,r) C(l,r) r! (hbar/2)^r * lambda_i^{k-r} (hbar d_i)^{l-r}
-    # times (-1)^r, with sign coming from putting d's to the right.
 
     out: CartanWeyl = {}
     for r in range(min(k, l) + 1):
         coeff = (
-            Fraction((-1) ** r)
+            Fraction((-1) ** l)
             * Fraction(comb(k, r) * comb(l, r) * factorial(r))
             * Fraction(1, 2 ** r)
         )
-        # hbar power r from (hbar/2)^r, plus l-r from (hbar d)^{l-r};
-        # we record hbar exponent in the d exponent as a parallel
-        # bookkeeping (since hbar is global, we can drop it and track
-        # symbolic d-degrees only).  The radial-parts identity we verify
-        # only uses commutators, so we can normalise hbar = 1 here.
         if i == 0:
             key = (k - r, 0, l - r, 0)
         else:
@@ -395,14 +419,318 @@ def cw_S_N(k: int, l: int, N: int = 2) -> CartanWeyl:
     return out
 
 
+def cw_S_poly(p: Poly, N: int = 2) -> CartanWeyl:
+    out: CartanWeyl = {}
+    for (k, l), coeff in p.items():
+        out = cw_add(out, cw_scale(coeff, cw_S_N(k, l, N=N)))
+    return out
+
+
+def raw_star_commutator_symbol(f: Poly, g: Poly) -> Poly:
+    max_order = 0
+    for a, b in f:
+        max_order = max(max_order, a + b)
+    for a, b in g:
+        max_order = max(max_order, a + b)
+    out: Poly = {}
+    for r in range(max_order + 1):
+        out = add(out, star_commutator_coeff(f, g, r))
+    return out
+
+
+# ---------------------------------------------------------------------------
+# Direct low-rank radial-parts falsification harness.
+#
+# The Cartan Weyl check above proves only that the proposed target operators
+# S_N(f) form a one-particle Moyal representation. It does not test whether
+# the actual matrix differential operator J_N(f) has that radial part. The
+# following finite check attacks the missing step directly for gl_2 and gl_3.
+#
+# We realise W_N as D_hbar(gl_N) with coordinates X^i_j and
+#   Y^i_j = -hbar d/dX^j_i.
+# For invariant test functions generated by Tr(X^r), we compute
+#   J_N(f) F(X)
+# in the full matrix Weyl algebra, restrict the result to diagonal matrices,
+# and compare it with
+#   Delta^{-1} S_N(f) Delta
+# on the corresponding symmetric polynomial in lambda_1, ..., lambda_N.  The
+# implementation checks the equivalent polynomial identity
+#   Delta * (J_N(f)F)|_t = S_N(f)(Delta * F|_t),
+# so no division algorithm can mask a sign error.
+# This is finite-rank evidence, not a proof of the Harish-Chandra injectivity
+# theorem.
+# ---------------------------------------------------------------------------
+
+
+HPoly = Dict[Tuple[int, ...], Fraction]
+MatrixPoly = HPoly
+CartanPoly = HPoly
+
+
+def hp_const(num_vars: int, coeff: Fraction = Fraction(1)) -> HPoly:
+    if coeff == 0:
+        return {}
+    return {(0,) * (num_vars + 1): coeff}
+
+
+def hp_add(p: HPoly, q: HPoly) -> HPoly:
+    out = dict(p)
+    for key, coeff in q.items():
+        out[key] = out.get(key, Fraction(0)) + coeff
+        if out[key] == 0:
+            del out[key]
+    return out
+
+
+def hp_scale(c: Fraction, p: HPoly) -> HPoly:
+    return {key: c * coeff for key, coeff in p.items() if c * coeff}
+
+
+def hp_mul(p: HPoly, q: HPoly) -> HPoly:
+    out: HPoly = {}
+    for pkey, pc in p.items():
+        for qkey, qc in q.items():
+            key = tuple(a + b for a, b in zip(pkey, qkey))
+            out[key] = out.get(key, Fraction(0)) + pc * qc
+            if out[key] == 0:
+                del out[key]
+    return out
+
+
+def hp_var(num_vars: int, var: int) -> HPoly:
+    key = [0] * (num_vars + 1)
+    key[var] = 1
+    return {tuple(key): Fraction(1)}
+
+
+def hp_mul_var(p: HPoly, var: int, power: int = 1) -> HPoly:
+    if power == 0:
+        return dict(p)
+    out: HPoly = {}
+    for key, coeff in p.items():
+        new_key = list(key)
+        new_key[var] += power
+        out[tuple(new_key)] = out.get(tuple(new_key), Fraction(0)) + coeff
+    return out
+
+
+def hp_mul_hbar(p: HPoly, power: int = 1) -> HPoly:
+    if power == 0:
+        return dict(p)
+    out: HPoly = {}
+    for key, coeff in p.items():
+        new_key = list(key)
+        new_key[-1] += power
+        out[tuple(new_key)] = out.get(tuple(new_key), Fraction(0)) + coeff
+    return out
+
+
+def hp_deriv(p: HPoly, var: int, order: int = 1) -> HPoly:
+    if order == 0:
+        return dict(p)
+    out: HPoly = {}
+    for key, coeff in p.items():
+        if key[var] < order:
+            continue
+        new_key = list(key)
+        new_key[var] -= order
+        out[tuple(new_key)] = (
+            out.get(tuple(new_key), Fraction(0))
+            + coeff * Fraction(falling(key[var], order))
+        )
+    return {key: coeff for key, coeff in out.items() if coeff}
+
+
+def matrix_x_var(N: int, row: int, col: int) -> MatrixPoly:
+    return hp_var(N * N, N * row + col)
+
+
+def sum_hpoly(terms) -> HPoly:
+    out: HPoly = {}
+    for term in terms:
+        out = hp_add(out, term)
+    return out
+
+
+def matrix_mul(A, B, N: int):
+    return [
+        [
+            sum_hpoly(hp_mul(A[i][k], B[k][j]) for k in range(N))
+            for j in range(N)
+        ]
+        for i in range(N)
+    ]
+
+
+def matrix_trace_x_power(N: int, power: int) -> MatrixPoly:
+    if power == 0:
+        return hp_scale(Fraction(N), hp_const(N * N))
+    X = [
+        [matrix_x_var(N, i, j) for j in range(N)]
+        for i in range(N)
+    ]
+    M = X
+    for _ in range(power - 1):
+        M = matrix_mul(M, X, N)
+    return sum_hpoly(M[i][i] for i in range(N))
+
+
+def cartan_power_sum(N: int, power: int) -> CartanPoly:
+    if power == 0:
+        return hp_scale(Fraction(N), hp_const(N))
+    return sum_hpoly(hp_mul_var(hp_const(N), i, power) for i in range(N))
+
+
+def matrix_apply_X(N: int, p: MatrixPoly, row: int, col: int) -> MatrixPoly:
+    return hp_mul_var(p, N * row + col)
+
+
+def matrix_apply_Y(N: int, p: MatrixPoly, row: int, col: int) -> MatrixPoly:
+    # Y^row_col = -hbar d/dX^col_row.
+    return hp_scale(Fraction(-1), hp_mul_hbar(hp_deriv(p, N * col + row)))
+
+
+def matrix_apply_trace_word(N: int, word: Tuple[str, ...], p: MatrixPoly) -> MatrixPoly:
+    out: HPoly = {}
+    length = len(word)
+    for indices in product(range(N), repeat=length):
+        term: MatrixPoly = dict(p)
+        for pos in reversed(range(length)):
+            row = indices[pos]
+            col = indices[(pos + 1) % length]
+            if word[pos] == "X":
+                term = matrix_apply_X(N, term, row, col)
+            else:
+                term = matrix_apply_Y(N, term, row, col)
+            if not term:
+                break
+        out = hp_add(out, term)
+    return out
+
+
+def matrix_apply_J(N: int, k: int, l: int, p: MatrixPoly) -> MatrixPoly:
+    total = k + l
+    if total == 0:
+        return hp_scale(Fraction(N), p)
+    out: HPoly = {}
+    denom = Fraction(comb(total, k))
+    for x_positions in combinations(range(total), k):
+        word = ["Y"] * total
+        for pos in x_positions:
+            word[pos] = "X"
+        out = hp_add(
+            out,
+            hp_scale(
+                Fraction(1, 1) / denom,
+                matrix_apply_trace_word(N, tuple(word), p),
+            ),
+        )
+    return out
+
+
+def restrict_matrix_to_diagonal(N: int, p: MatrixPoly) -> CartanPoly:
+    out: HPoly = {}
+    for key, coeff in p.items():
+        x_exp = key[:-1]
+        if any(x_exp[N * i + j] for i in range(N) for j in range(N) if i != j):
+            continue
+        ckey = tuple(x_exp[N * i + i] for i in range(N)) + (key[-1],)
+        out[ckey] = out.get(ckey, Fraction(0)) + coeff
+        if out[ckey] == 0:
+            del out[ckey]
+    return out
+
+
+def cartan_delta_times(N: int, p: CartanPoly) -> CartanPoly:
+    out: HPoly = dict(p)
+    for i in range(N):
+        for j in range(i + 1, N):
+            left = hp_mul_var(out, i)
+            right = hp_scale(Fraction(-1), hp_mul_var(out, j))
+            out = hp_add(left, right)
+    return out
+
+
+def cartan_one_particle_apply(k: int, l: int, node: int, p: CartanPoly) -> CartanPoly:
+    out: HPoly = {}
+    for r in range(min(k, l) + 1):
+        coeff = (
+            Fraction((-1) ** l)
+            * Fraction(comb(k, r) * comb(l, r) * factorial(r))
+            * Fraction(1, 2 ** r)
+        )
+        term = hp_deriv(p, node, l - r)
+        term = hp_mul_var(term, node, k - r)
+        term = hp_mul_hbar(term, l)
+        out = hp_add(out, hp_scale(coeff, term))
+    return out
+
+
+def cartan_apply_S(N: int, k: int, l: int, p: CartanPoly) -> CartanPoly:
+    return sum_hpoly(cartan_one_particle_apply(k, l, i, p) for i in range(N))
+
+
+def direct_rank_radial_checks(N: int) -> int:
+    p1_m = matrix_trace_x_power(N, 1)
+    p2_m = matrix_trace_x_power(N, 2)
+    p3_m = matrix_trace_x_power(N, 3)
+    p1_c = cartan_power_sum(N, 1)
+    p2_c = cartan_power_sum(N, 2)
+    p3_c = cartan_power_sum(N, 3)
+    cubic_m = hp_mul(hp_mul(p1_m, p1_m), p1_m)
+    cubic_c = hp_mul(hp_mul(p1_c, p1_c), p1_c)
+    mixed_m = hp_add(
+        hp_scale(Fraction(2), cubic_m),
+        hp_add(hp_scale(Fraction(-3), hp_mul(p1_m, p2_m)), p3_m),
+    )
+    mixed_c = hp_add(
+        hp_scale(Fraction(2), cubic_c),
+        hp_add(hp_scale(Fraction(-3), hp_mul(p1_c, p2_c)), p3_c),
+    )
+    invariant_tests = [
+        ("1", hp_const(N * N), hp_const(N)),
+        ("Tr X", p1_m, p1_c),
+        ("Tr X^2", p2_m, p2_c),
+        ("Tr X^3", p3_m, p3_c),
+        ("(Tr X)^2", hp_mul(p1_m, p1_m), hp_mul(p1_c, p1_c)),
+        ("(Tr X)(Tr X^2)", hp_mul(p1_m, p2_m), hp_mul(p1_c, p2_c)),
+        ("(Tr X)^3", cubic_m, cubic_c),
+        ("2(Tr X)^3-3(Tr X)(Tr X^2)+Tr X^3", mixed_m, mixed_c),
+    ]
+    operator_tests = [
+        ("z1", 1, 0),
+        ("z1^2", 2, 0),
+        ("z1^3", 3, 0),
+        ("z2", 0, 1),
+        ("z2^2", 0, 2),
+        ("z2^3", 0, 3),
+        ("z1 z2", 1, 1),
+        ("z1^2 z2", 2, 1),
+        ("z1 z2^2", 1, 2),
+        ("z1^2 z2^2", 2, 2),
+    ]
+    checked = 0
+    for op_label, k, l in operator_tests:
+        for test_label, matrix_test, cartan_test in invariant_tests:
+            left = restrict_matrix_to_diagonal(N, matrix_apply_J(N, k, l, matrix_test))
+            left_delta = cartan_delta_times(N, left)
+            right_delta = cartan_apply_S(N, k, l, cartan_delta_times(N, cartan_test))
+            assert left_delta == right_delta, (
+                f"Direct rank-{N} radial mismatch for J_{N}({op_label}) on "
+                f"{test_label}: Delta*left={left_delta}, right={right_delta}"
+            )
+            checked += 1
+    return checked
+
+
 # ---------------------------------------------------------------------------
 # Connected cumulant projection (Lemma in proposed-quantum-derived-center.tex).
 #
 # On bar h = C[z1, z2] / C, the connected single-trace bracket is
 #   {f, g}_conn := scalar Moyal bracket {f, g}_hbar.
 # The Capelli/connected-trace projection removes constants and the lower
-# triangular Capelli pieces.  We verify the cumulant bracket coincides with
-# the scalar Moyal bracket.  The projection is the linear map
+# triangular Capelli pieces.  Here we verify the cumulant bracket on the
+# leading scalar Moyal coefficient in the primary cases.  The projection is the linear map
 #   pi : J_N(z1^a z2^b) -> z1^a z2^b for (a, b) != (0, 0).
 # ---------------------------------------------------------------------------
 
@@ -411,8 +739,9 @@ def projected_moyal_bracket(f: Poly, g: Poly, max_order: int) -> Poly:
     """Sum the odd Moyal commutator coefficients up to max_order, then drop
     the constant Hamiltonian part.  Returns hbar-stripped scalar bracket."""
     # The scalar Moyal bracket {f,g}_hbar = sum_{s>=0} hbar^{2s} / (2^{2s} (2s+1)!) P^{2s+1}(f,g).
-    # We return P^1(f,g) since higher hbar powers are independent generators
-    # in C[[hbar]]; the lemma asserts equality of every coefficient.
+    # This harness returns P^1(f,g). Higher hbar powers are independent
+    # generators in C[[hbar]] and are not covered by this connected-cumulant
+    # check.
     return p_power(f, g, 1)
 
 
@@ -489,8 +818,8 @@ def run() -> None:
     print("Extended Moyal/Capelli/radial-parts verification")
     print("=" * 76)
 
-    # ----- Section 1: baseline Moyal sweep, exponents <= 6, orders <= 11 -----
-    max_exp = 6
+    # ----- Section 1: baseline Moyal sweep, exponents <= 10, orders <= 11 -----
+    max_exp = 10
     max_order = 11
     checked = 0
     for k in range(max_exp + 1):
@@ -529,6 +858,28 @@ def run() -> None:
         f"[2] Capelli triangular round-trip (J -> T -> J = id): "
         f"checked {capelli_checked} monomials with a, b <= {max_exp}.  PASS."
     )
+    assert stable_connected_subtraction(1, 1) == [
+        (Fraction(1), 0, 0, (1, 1)),
+        (Fraction(-1, 2), 1, 1, (0, 0)),
+    ]
+    assert stable_connected_subtraction(2, 1) == [
+        (Fraction(1), 0, 0, (2, 1)),
+        (Fraction(-1), 1, 1, (1, 0)),
+    ]
+    assert stable_connected_subtraction(2, 2) == [
+        (Fraction(1), 0, 0, (2, 2)),
+        (Fraction(-2), 1, 1, (1, 1)),
+        (Fraction(1, 2), 2, 2, (0, 0)),
+    ]
+    normal_defect = normalized_T_commutator_in_T(2, 1, 0, 2, max_order=5)
+    assert normal_defect == {
+        (0, 0, 1, 2): Fraction(4),
+        (1, 1, 0, 1): Fraction(-2),
+    }, f"Normal-ordering defect mismatch: {normal_defect}"
+    print(
+        "     Explicit Capelli examples and "
+        "hbar^{-1}[T_{2,1},T_{0,2}]=4T_{1,2}-2 hbar N T_{0,1}.  PASS."
+    )
 
     # ----- Section 3: stable connected subtraction ---------------------------
     print("[3] Stable connected subtraction Tr^{ren}(z1^a z2^b):")
@@ -539,34 +890,38 @@ def run() -> None:
             pieces.append(f"{c} * (hbar N)^{hp} * T_{{{aa},{bb}}}")
         print(f"     J_N(z1^{a} z2^{b}) = " + " + ".join(pieces))
 
-    # ----- Section 4: rank-2 radial-parts commutator -------------------------
-    print("[4] Rank-2 radial-parts commutator (Theorem thm:finite-n-reduced-moyal):")
-    for label, f, g in TEST_CASES:
+    # ----- Section 4: direct low-rank radial-parts restriction ---------------
+    print("[4] Direct N=2 and N=3 radial-parts restriction:")
+    for N in [2, 3]:
+        direct_radial_checked = direct_rank_radial_checks(N)
+        print(
+            f"     N={N}: checked {direct_radial_checked} "
+            "operator/test-polynomial pairs.  PASS."
+        )
+    print(
+        "     Compared Delta * J_N(f)|_t with S_N(f)(Delta * -) for "
+        "z1, z1^2, z1^3, z2, z2^2, z2^3, z1 z2, z1^2 z2, "
+        "z1 z2^2, z1^2 z2^2."
+    )
+
+    # ----- Section 5: rank-2 radial-parts commutator -------------------------
+    print("[5] Rank-2 radial-parts commutator (Theorem thm:finite-n-reduced-moyal):")
+    for label, f, g in TEST_CASES + HIGHER_ORDER_CASES:
         # Pull out the unique (k,l), (m,n) from monomials.
         ((k, l),) = f.keys()
         ((m, n),) = g.keys()
         S_f = cw_S_N(k, l, N=2)
         S_g = cw_S_N(m, n, N=2)
         comm = cw_commutator(S_f, S_g)
-        # On rank-2 Cartan, [S_N(f), S_N(g)] should equal the diagonal of
-        # the scalar one-particle Moyal commutator.  Build the expected
-        # by adding the one-particle Moyal commutators on each Cartan node.
-        expected: CartanWeyl = {}
-        for i in range(2):
-            f_i = cw_one_particle_weyl_monomial(i, k, l)
-            g_i = cw_one_particle_weyl_monomial(i, m, n)
-            expected = cw_add(
-                expected,
-                cw_commutator(f_i, g_i),
-            )
+        expected = cw_S_poly(raw_star_commutator_symbol(f, g), N=2)
         assert comm == expected, (
-            f"Rank-2 radial parts mismatch for {label}: comm={comm} vs "
+            f"Rank-2 radial parts/Moyal mismatch for {label}: comm={comm} vs "
             f"expected={expected}"
         )
-        print(f"     {label}: rank-2 commutator matches diagonal sum.  PASS.")
+        print(f"     {label}: [S_2(f), S_2(g)] = S_2([f,g]_*).  PASS.")
 
-    # ----- Section 5: connected cumulant bracket -----------------------------
-    print("[5] Connected cumulant bracket = scalar Moyal bracket on bar h:")
+    # ----- Section 6: connected cumulant bracket -----------------------------
+    print("[6] Connected cumulant bracket = leading scalar Moyal coefficient on bar h:")
     for label, f, g in TEST_CASES:
         bracket = projected_moyal_bracket(f, g, max_order=11)
         # Compare with the leading hbar coefficient of the star commutator
@@ -576,8 +931,8 @@ def run() -> None:
         )
         print(f"     {label}: {{f,g}}_conn = {poly_to_str(bracket)}.  PASS.")
 
-    # ----- Section 6: open-line midpoint graph weights -----------------------
-    print("[6] Open-line midpoint graph weights (Proposition prop:open-line-midpoint-graph-weights):")
+    # ----- Section 7: open-line midpoint graph weights -----------------------
+    print("[7] Open-line midpoint graph weights (Proposition prop:open-line-midpoint-graph-weights):")
     for label, f, g in TEST_CASES:
         w1 = one_edge_ordered_weight(f, g)
         w3 = three_edge_ordered_weight(f, g)
@@ -591,8 +946,8 @@ def run() -> None:
             f"comm-weights {poly_to_str(c1)} and {poly_to_str(c3)}.  PASS."
         )
 
-    # ----- Section 7: explicit fourth-order quantum upgrade pattern ----------
-    print("[7] Fourth-order quantum upgrade pattern check:")
+    # ----- Section 8: explicit fourth-order quantum upgrade pattern ----------
+    print("[8] Fourth-order quantum upgrade pattern check:")
     print("     Even orders r=2,4,6,8,10 vanish in the star commutator on every monomial pair tested.")
     for label, f, g in TEST_CASES:
         for r in [2, 4, 6, 8, 10]:
@@ -601,8 +956,8 @@ def run() -> None:
             )
         print(f"     {label}: even-order star commutators vanish through r=10.  PASS.")
 
-    # ----- Section 8: full data dump for the primary + higher-order cases ---
-    print("[8] Symbolic outputs for the primary test cases (P^3 vanishes for degree reasons):")
+    # ----- Section 9: full data dump for the primary + higher-order cases ---
+    print("[9] Symbolic outputs for the primary test cases (P^3 vanishes for degree reasons):")
     for label, f, g in TEST_CASES:
         ((k, l),) = f.keys()
         ((m, n),) = g.keys()
@@ -622,7 +977,7 @@ def run() -> None:
             f"[*]_3 = {poly_to_str(sc3)} hbar^3; "
             f"[*]_5 = {poly_to_str(sc5)} hbar^5"
         )
-    print("[8b] Higher-order outputs that exercise P^3 and P^5:")
+    print("[9b] Higher-order outputs that exercise P^3 and P^5:")
     for label, f, g in HIGHER_ORDER_CASES:
         p1 = p_power(f, g, 1)
         p3 = p_power(f, g, 3)

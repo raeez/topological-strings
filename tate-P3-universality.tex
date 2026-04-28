@@ -1,397 +1,212 @@
 % =============================================================================
-% Twisted M-theory universality of the local model.
+% Protected twisted-M motivation and admissible local reduction.
 %
-% Twisted M-theory universality of the local model on the protected
-% Hamiltonian sector. The proof combines the universal cochain $\Phi$,
-% the interval-wise factorization equivalence, the all-order quantum
-% $\Phi_\hbar$ on the degree-zero Hamiltonian sector, the weighted Tate
-% completion of the coefficient pair, the $\infty$-categorical Quillen
-% equivalence, the chain-level primitive projection on the unreduced
-% cotangent sector, and the Hadamard parametrix on a Mittag-Leffler
-% coefficient module. Macros follow main.tex.
-%
-% Conditionality: the universality theorem is unconditional on the
-% degree-zero Hamiltonian sector at all orders in hbar, and conditional
-% on `prob:weighted-rg-locality` on the descendant (one-antifield)
-% cotangent sector at all orders in hbar. P1's Hadamard parametrix
-% closes that residual; once merged, the theorem is fully unconditional.
+% This fragment is an outlook firewall.  It records the conditional use
+% of Costello's twisted-M-theory motivation only after an ambient
+% background has supplied a protected Hamiltonian sector satisfying the
+% local hypotheses below.  The local theorem remains a theorem of the
+% formal Hamiltonian disk and its Dirac brane probe.
 % =============================================================================
 
-\subsection{Twisted-M-theory universality of the local model}\label{ssec:twistedM-universality}
+\subsection{Protected twisted-M motivation and local reduction}\label{ssec:twistedM-universality}
 
-The protected sector of perturbative twisted M-theory in the sense of
-Costello~\cite{costello-twistedM} consists of those operators on
-$\R\times X$ (with $X$ a holomorphic-symplectic surface and a stack of
-$N$ topological branes on $\R\times p$) whose $Q$-cohomology
-descends to the Hamiltonian sector at the formal symplectic disk
-$\widehat X_p$. Formally: pass to the cohomology of the
-Omega-background BRST charge that selects translation-invariant
-operators along the topological direction and depends holomorphically
-on the symplectic surface.
+Perturbative twisted M-theory in the sense of
+Costello~\cite{costello-twistedM} is used here as physical motivation
+for a protected sector near a brane point.  It is not used as a global
+realization theorem.  The mathematical assertion in this subsection is
+only the following reduction: if an ambient twisted-M background
+supplies the protected Hamiltonian data specified below, then the
+formal local theorem of \S\ref{ssec:local-theorem} applies to that
+restricted sector.
 
-\begin{defn}[Protected Hamiltonian sector at a brane point]\label{def:protected-hamiltonian-sector}
+\begin{defn}[Protected Hamiltonian sector at a brane point]
   Let $(X,\omega)$ be a connected holomorphic-symplectic surface, let
   $p\in X$, and let
-  $\mc T_{\mathrm{tw}M}\bigl(\R\times X;\R\times p\bigr)$ be the
-  perturbative twisted M-theory data on $\R\times X$ in the presence
+  $\mc T_{\mathrm{tw}M}\bigl(\R\times X;\R\times p\bigr)$ denote
+  perturbative twisted-M-theory data on $\R\times X$ in the presence
   of a stack of $N$ one-dimensional topological branes supported on
-  $\R\times p$, in the sense of~\cite{costello-twistedM}. The
-  \emph{protected Hamiltonian sector at $\widehat p$} is the
-  restriction
-  $$\mc T_{\mathrm{tw}M}\bigl(\R\times X;\R\times p\bigr)
+  $\R\times p$.  A \emph{protected Hamiltonian sector at $\widehat p$}
+  is a restricted datum
+  $$
+  \mc T_{\mathrm{tw}M}\bigl(\R\times X;\R\times p\bigr)
     \big|_{\mathrm{Ham},\widehat p}
-    :=\bigl(
-      \mc E_{\mathrm{open},\mathrm{prot}},\,
-      \mc E_{\mathrm{cl},\mathrm{prot}},\,
+    =
+    \bigl(
+      \mc E_{\mathrm{open},\mathrm{prot}},
+      \mc E_{\mathrm{cl},\mathrm{prot}},
       \partial_{\mathrm{bb}}^{\mathrm{prot}}
-    \bigr)$$
-  consisting of:
-  \begin{itemize}
-    \item the protected open BV theory $\mc E_{\mathrm{open},\mathrm{prot}}$
-      on the brane line $\R$, obtained from the bulk twisted M-theory
-      open observables by passing to the BRST cohomology selecting
-      the topological-translation-invariant operators along $\R^2$ and
-      the formal-jet operators in the holomorphic normal direction;
-    \item the protected closed BV theory $\mc E_{\mathrm{cl},\mathrm{prot}}$,
-      the Hamiltonian-sector restriction of the closed Kodaira--Spencer
-      sector at the formal symplectic disk $\widehat X_p$;
-    \item the protected bulk-to-boundary evaluation
-      $\partial_{\mathrm{bb}}^{\mathrm{prot}}$ giving the open trace
-      data in the Hamiltonian-sector restriction.
-  \end{itemize}
-  This is the natural restriction at which the local model of
-  Theorem~\ref{thm:main-local} can be expected to apply.
+    \bigr)
+  $$
+  consisting of the protected open BV theory on the brane line, the
+  protected closed BV theory coming from formal Hamiltonian operators
+  at the symplectic disk $\widehat X_p$, and the protected
+  bulk-to-boundary evaluation on the brane algebra.
+
+  This is a name for a restricted object.  It does not assert that
+  every ambient twisted-M-theory background admits such an object.
 \end{defn}
 
-\begin{rmk}[Scope: protected sector versus full twisted M-theory]\label{rmk:protected-scope}
-  The universality statement below is on the protected sector of
-  Definition~\ref{def:protected-hamiltonian-sector}. Twisted M-theory
-  backgrounds with active dependence on the non-protected directions
-  (e.g., backgrounds where the topological-direction operators carry
-  additional $\R^2$ holonomy data not captured by the formal jet, or
-  where the brane stack carries Wilson-line gauge data along
-  $\R\times p$) are out of scope. This is the same scope at which
-  Costello's universality principle for protected operators applies in
-  \cite{costello-twistedM}.
-\end{rmk}
-
-\begin{thm}[Twisted-M-theory universality of the local model]\label{thm:twisted-m-theory-universal}
-  Let $(X,\omega)$ be a connected holomorphic-symplectic surface and
-  $p\in X$ a point. Let
-  $\mc T_{\mathrm{tw}M}\bigl(\R\times X;\R\times p\bigr)$ denote the
-  perturbative twisted M-theory data on $\R\times X$ with $N$
-  one-dimensional topological branes supported on
-  $\R\times p$~\cite{costello-twistedM}. Then the protected
-  Hamiltonian sector of
-  Definition~\ref{def:protected-hamiltonian-sector},
-  $$\mc T_{\mathrm{tw}M}\bigl(\R\times X;\R\times p\bigr)
-    \big|_{\mathrm{Ham},\widehat p},$$
-  is canonically equivalent, as a pair (open BV theory; closed
-  Hamiltonian BF theory together with open trace data), to the formal
-  local model of Theorem~\ref{thm:main-local}: the open side
-  $\bigl(\Omega^*(\R)\otimes\Lambda(\varepsilon_1,\varepsilon_2)
-  \otimes\lie{gl}_N[1],\,S(\alpha)\bigr)$, the closed side
-  $C^\bullet_{\mathrm{CE,cont}}(\mathfrak g)$ with
-  $\mathfrak g=\widehat{\mathfrak h}\ltimes
-  \widehat{\mathfrak h}^{\vee}_{\mathrm{cont}}[1]$ and
-  $\widehat{\mathfrak h}=\C[[z_1,z_2]]/\C\cdot 1$, and the bulk-to-boundary
-  evaluation
-  $$f\longmapsto\overline{\mathrm{Tr}\,f(\phi_1,\phi_2)}.$$
-  In particular every such twisted M-theory restriction satisfies
-  Theorem~\ref{thm:main-local}, parts~(a)--(f), with the same
-  conditionality classification:
-  \begin{itemize}
-    \item parts (a), (b), (c), (e)-degree-zero, (f) hold
-      unconditionally;
-    \item part~(d) at the reduced post-contraction level holds
-      unconditionally; the unreduced factorization-algebra extension
-      holds conditionally on Problem~\ref{prob:weighted-rg-locality};
-    \item part~(e) on the degree-zero Hamiltonian sector at all
-      orders in $\hbar$ holds unconditionally; the descendant
-      (one-antifield) extension holds conditionally on the same
-      Problem~\ref{prob:weighted-rg-locality}.
-  \end{itemize}
-\end{thm}
-
-\begin{proof}
-  The proof proceeds by reducing each of the three structural inputs
-  ((H1) BV-cohomology vanishing, (H2) Costello locality, (H3)
-  Hamiltonian reduction regularity) to constituent results already
-  established or supplied by the apparatus assembled above, and then
-  combining them with the umbrella Theorem~\ref{thm:main-local} to
-  identify the protected restriction with the formal local model.
-
-  \medskip\noindent\emph{(H3) Hamiltonian reduction regularity.}
-  By Proposition~\ref{prop:formal-local-global-restriction}, the
-  formal holomorphic Darboux theorem identifies the completed local
-  symplectic algebra at $p$ with $\C[[z_1,z_2]]$ equipped with
-  $dz_1\wedge dz_2$. Under this identification, Hamiltonians modulo
-  constants become $\widehat{\mathfrak h}=\C[[z_1,z_2]]/\C$, and the
-  point-brane Ext algebra is the coordinate-free exterior algebra
-  $\Ext_X^*(\mc O_p,\mc O_p)\cong\Lambda^*T_pX$ with cyclic trace
-  fixed by $\omega_p$. Different Darboux coordinate systems differ
-  by a formal symplectomorphism, which acts on the substitution map
-  $z_i\mapsto\phi_i$ equivariantly. The Lie-algebra restriction
-  $H^0(X,\mc H_X)\to\widehat{\mathfrak h}_{X,p}$ is canonical.
-
-  This is the formal Darboux theorem at a smooth point of a
-  holomorphic-symplectic surface; there is no hypothesis to verify.
-  It produces a canonical isomorphism of the protected closed sector
-  with the formal local model of Theorem~\ref{thm:main-local}, modulo
-  the natural action of the formal symplectomorphism group, and is
-  uniformly available across the relevant family of
-  holomorphic-symplectic surfaces.
-
-  \medskip\noindent\emph{(H2) Costello locality / restriction.}
-  By Costello \cite[Thm 5.0.7]{costello-renormalization}, the
-  counterterm-subtracted effective interactions on a free elliptic
-  complex form a local-functional cohomology class
-  $H^1\bigl(\mc O_{\mathrm{loc}}(\mc E),Q+\{I_0,-\}\bigr)$ modulo
-  BV-exact pieces. In the present setting, the field complex
-  factorises along the spacetime/coefficient split as
-  $\mc E_w=\Omega^\bullet(\R^2)\widehat\otimes
-  \Omega^{0,\bullet}(\C^2)\widehat\otimes
-  (\mathfrak h_w[1]\oplus\mathfrak h^{\vee,w}_{\mathrm{cont}}[2])$
-  in the weighted Tate completion of T1
-  (Definition~\ref{defn:wt-coefficient-pair}), and the BV propagator
-  factors correspondingly,
-  $P_{\epsilon,L}^w=P_{\epsilon,L}^{\mathrm{base}}\widehat\otimes
-  C_{\mathfrak h,w}$, by Proposition~\ref{prop:wt-propagator-extends}.
-
-  Restriction to the brane defect $\R\times p\subset\R^2\times\C^2$
-  pulls $\mc E_w$ to $\mc E_w^\partial=\Omega^\bullet(\R)\widehat
-  \otimes(\mathfrak h_w[1]\oplus\mathfrak h^{\vee,w}_{\mathrm{cont}}[2])$;
-  the boundary propagator
-  $P^{w,\partial}_{\epsilon,L}\in\mc E_w^\partial\widehat\otimes
-  \mc E_w^\partial$ is the bulk-to-boundary restriction followed by
-  the zero-mode-removed midpoint propagator
-  $G(t,s)=\tfrac12\,\mathrm{sgn}(t-s)$ of
-  Proposition~\ref{prop:conditional-boundary-product-normalization}
-  (cf.\ Remark~\ref{rmk:wt-brane-defect}). The weight $w$ does not
-  interact with the coordinate $t$, so the brane-defect propagator
-  is a continuous family in $(\epsilon,L)$ in the weighted Tate
-  topology.
-
-  The factorization-algebraic content of the Costello restriction
-  theorem is the interval-wise quasi-isomorphism
-  $$\Phi^{\mathrm{Ham}}_{\mathrm{fact}}\colon
-    \mathrm{Obs}^{\mathrm{cl}}_{\mathrm{closed},H,\mathrm{Ham}}\big|_{\R\times p}
-    \xrightarrow{\sim}
-    Z^{P_0}_{\mathrm{fact}}\bigl(A^{\mathrm{Ham}}_\partial\bigr)$$
-  of Theorem~\ref{thm:open-closed-derived-center-factorization}
-  (gamma's interval-wise factorization equivalence), with stalkwise
-  central operation $f\mapsto L_{B_f}$ recovered at the point limit
-  $I\to\{t_0\}$. Compatibility with disjoint-interval factorization
-  products and with extension by zero is the cosheaf compatibility
-  of Theorem~\ref{thm:chain-level-primitive-projection-factorization}
-  (T5), with homotopy identically zero. Thus the brane-defect
-  Costello locality theorem holds on the weighted Tate field complex
-  with the Hadamard parametrix, and the resulting restriction map is
-  canonical on the Hamiltonian-sector observables.
-
-  At the level of the all-order quantum BV graph realisation on the
-  cotangent direction, the relevant counterterm-locality compatibility
-  is the content of Problem~\ref{prob:weighted-rg-locality}; this is
-  closed by the windowwise Hadamard parametrix construction supplied
-  by P1 (sibling worktree, Theorem~\ref{thm:hadamard-mittag-leffler}
-  in the conditional sense recorded below).
-
-  \medskip\noindent\emph{(H1) BV-cohomology vanishing.}
-  Costello--Li~\cite{costello-li-quantum-bcov,
-  costello-li-open-closed-bcov} prove BV-cohomology vanishing on
-  compact Calabi--Yau manifolds with pure BCOV/HCS kinematics; as
-  recorded in Section~\ref{ssec:tate-residual-resolution}
-  (the T4 fragment, Proposition~\ref{prop:costello-li-2012-fail-local}),
-  the bare Costello--Li result does not transfer to
-  $\R^2\times\C^2$ with brane $\R\times p$ and gauge data
-  $\mathfrak{gl}_N$, for five independent reasons (F1)--(F5):
-  non-compactness, topological-holomorphic mixing, brane defect,
-  $\mathfrak{gl}_N$ versus $\mathfrak{gl}(N\mid N)$, and Tate
-  direction along the coefficient system rather than the worldsheet
-  parameter $t$.
-
-  The required vanishing on the protected Hamiltonian sector is
-  supplied by the apparatus assembled above, in three layers:
-  \begin{enumerate}[label=(\alph*)]
-    \item \emph{Cochain-level vanishing.} On the
-      Hamiltonian sector the cochain identity
-      $\Phi\circ d_{\mathrm{CE}}=d_\pi\circ\Phi$ of
-      Theorem~\ref{thm:open-closed-derived-center} (alpha's universal
-      Phi at supremum generality) holds for any pro-finite-dimensional
-      Lie algebra in $\Cat{TateVec}$ with conilpotency, including
-      $\widehat{\mathfrak h}=(z_1,z_2)\C[[z_1,z_2]]$. T3's
-      $\infty$-categorical promotion
-      (Theorem~\ref{thm:open-closed-derived-center-derived}) lifts
-      this strict cochain map to an equivalence of presentable
-      $\infty$-categories of completed dg $P_0$-algebras, which
-      provides the BV-cohomology-level identification of the closed
-      sector with the open sector at the cochain level.
-    \item \emph{Cotangent-level vanishing on the reduced
-      post-contraction model.} Theorem~\ref{thm:wt-cotangent-lift}
-      parts (a)--(d) (T1's weighted Tate completion) constructs the
-      Casimir $C_{\mathfrak h,w}$ as a convergent element of the
-      weighted Tate pair, the Costello heat-kernel propagator
-      $P^w_{\epsilon,L}$ as a continuous family on the weighted field
-      complex, and the cochain-level $\Phi^w$ on the weighted
-      cotangent extension. Cosheaf and $P_0$-bracket compatibility
-      on the unreduced cotangent sector at the chain level are
-      supplied by Theorem~\ref{thm:chain-level-primitive-projection}
-      (T5), with all homotopies identically zero on every stratum of
-      the trace-count filtration (Procesi--Razmyslov merging-of-cycles).
-    \item \emph{All-order quantum vanishing on the degree-zero
-      Hamiltonian sector.}
-      Theorem~\ref{thm:phi-hbar-all-order} (epsilon's all-order
-      $\Phi_\hbar$) deforms the cochain identity to all orders in
-      $\hbar$ on the degree-zero Hamiltonian sector, with the formal
-      Weyl/Moyal product in the unique unconditional normalization,
-      Capelli renormalization absorbing the $\hbar N$ contact term,
-      and matching with Costello's first and third graph normalizations.
+\begin{defn}[Admissible protected Hamiltonian restriction]\label{defn:admissible-protected-hamiltonian-restriction}
+  A protected Hamiltonian sector is \emph{admissible for the local
+  theorem} if it comes with the following data.
+  \begin{enumerate}[label=(\roman*)]
+    \item \emph{Formal Darboux Hamiltonian reduction.}  The completed
+      closed Hamiltonian algebra at $p$ is identified, up to formal
+      symplectomorphism, with
+      $\widehat{\mathfrak h}=\C[[z_1,z_2]]/\C\cdot 1$, and the point
+      brane Ext algebra is identified with
+      $\Ext_X^*(\mc O_p,\mc O_p)\cong\Lambda^*T_pX$, with cyclic trace
+      induced by $\omega_p$.
+    \item \emph{Brane-defect locality.}  The protected operator
+      restriction to $\R\times p$ factors through the weighted Tate
+      field complex and is compatible with the interval-wise
+      factorization map
+      $\Phi^{\mathrm{Ham}}_{\mathrm{fact}}$, the chain-level
+      primitive projection, and the weighted Hadamard parametrix used
+      in the local theorem.
+    \item \emph{Scalar anomaly compatibility.}  The centre-of-mass
+      scalar anomaly of the protected brane stack maps to the class
+      $[\bar c]\in H^2_{\mathrm{Lie}}(\bar A,\C)$ used in the local
+      scalar-anomaly comparison.
   \end{enumerate}
+\end{defn}
 
-  These three layers replace the role of Costello--Li 2012 on the
-  protected Hamiltonian sector. The descendant (one-antifield)
-  extension of (c) at all orders in $\hbar$ requires, in addition,
-  the brane-defect Costello-locality compatibility for the Hadamard
-  parametrix on the Mittag-Leffler coefficient module of T1; this is
-  the content of Problem~\ref{prob:weighted-rg-locality}, closed by
-  P1's Theorem~\ref{thm:hadamard-mittag-leffler}.
-
-  \medskip\noindent\emph{Synthesis.}
-  By (H3), the closed Hamiltonian-sector data of the protected
-  twisted M-theory restriction at $\widehat p$ is canonically
-  isomorphic to the formal local model with
-  $\widehat{\mathfrak h}=\C[[z_1,z_2]]/\C\cdot 1$ and
-  $\mathfrak g=\widehat{\mathfrak h}\ltimes
-  \widehat{\mathfrak h}^{\vee}_{\mathrm{cont}}[1]$, and the open
-  point-brane data is canonically isomorphic to
-  $\Omega^*(\R)\otimes\Lambda(\varepsilon_1,\varepsilon_2)
-  \otimes\mathfrak{gl}_N[1]$ via the formal Darboux coordinates and
-  the Yoneda algebra of the skyscraper at $p$
-  (Proposition~\ref{prop:skyscraper-ext}).
-
-  By (H2), the Costello restriction map from the bulk Hamiltonian-sector
-  observables to the brane-defect observables is canonical, factors
-  through the brane-line Hamiltonian factorization algebra
-  $A^{\mathrm{Ham}}_\partial$ on the weighted Tate completion, and is
-  compatible with the Hadamard parametrix construction. The interval-wise
-  factorization equivalence of
-  Theorem~\ref{thm:open-closed-derived-center-factorization} identifies
-  the closed-side observables with the derived $P_0$-center of the open
-  Hamiltonian factorization algebra; the chain-level primitive
-  projection of Theorem~\ref{thm:chain-level-primitive-projection}
-  pulls this identification back to the unreduced cotangent sector.
-
-  By (H1), the cochain identity of
-  Theorem~\ref{thm:open-closed-derived-center} (alpha's $\Phi$),
-  promoted to the $\infty$-categorical level by T3 and to the
-  weighted cotangent direction by T1, holds on the protected
-  Hamiltonian sector. Epsilon's $\Phi_\hbar$ deforms the cochain
-  identity to all orders in $\hbar$ on the degree-zero sector;
-  P1's Hadamard parametrix lifts the descendant (one-antifield)
-  sector to the same unconditional level.
-
-  Combining: the protected Hamiltonian-sector restriction
-  $\mc T_{\mathrm{tw}M}|_{\mathrm{Ham},\widehat p}$ is canonically
-  equivalent to the formal local model, and Theorem~\ref{thm:main-local}
-  applies verbatim. The conditionality classification of the universality
-  theorem matches that of the umbrella: unconditional on parts (a),
-  (b), (c), (e) (degree-zero), (f); unconditional on (d) at the reduced
-  post-contraction level; conditional on
-  Problem~\ref{prob:weighted-rg-locality} for the unreduced
-  factorization-algebra extension of (d) and the descendant extension
-  of (e). With P1's Hadamard parametrix
-  (Theorem~\ref{thm:hadamard-mittag-leffler}, sibling worktree
-  \texttt{ah-platonic-P1}) absorbed into the master, the universality
-  theorem is fully unconditional on the protected sector.
-\end{proof}
-
-\begin{rmk}[Replacement for the BCOV analogy]\label{rmk:replacement-bcov-analogy}
-  Theorem~\ref{thm:twisted-m-theory-universal} replaces the BCOV
-  analogy as the primary physical motivation. The original BCOV
-  analysis~\cite{bcov} is written for Calabi--Yau threefolds, where
-  the target dimension is $d=3$; the local model here is a
-  holomorphic-symplectic surface ($d=2$) and is therefore not a
-  reduction of BCOV in any direct sense. The Hamiltonian BF
-  formulation is the correct primary physical name. The deciding
-  evidence for the universality theorem is the apparatus assembled
-  above: the universal cochain $\Phi$, the interval-wise
-  factorization equivalence, the all-order $\Phi_\hbar$ on the
-  degree-zero Hamiltonian sector, the weighted Tate completion of the
-  cotangent direction, the $\infty$-categorical Quillen equivalence,
-  the chain-level primitive projection, and the Hadamard parametrix
-  on a Mittag-Leffler coefficient module, assembled around the formal
-  Darboux theorem at $p$ and the brane-defect Costello locality
-  theorem.
+\begin{rmk}[Protected sector, not ambient theory]
+  The admissibility condition is an external input.  It is not proved
+  here from the full field content of twisted M-theory on
+  $\R\times X$.  Dependence on non-protected directions, holonomy
+  along the topological direction, or gauge data not detected by the
+  formal Hamiltonian jet at $p$ lies outside the local theorem.
 \end{rmk}
 
-\begin{rmk}[Universal generality]\label{rmk:universal-generality}
-  The universality theorem is uniformly available for any connected
-  holomorphic-symplectic surface $X$ and any point $p\in X$.
-  Different surfaces produce the same formal local model at $\widehat p$,
-  by the formal Darboux theorem. The Hamiltonian-sector restriction
-  thus unifies an entire family of twisted M-theory backgrounds: the
-  formal local data are independent of the choice of $X$ and $p$,
-  and the identification with the model of
-  Theorem~\ref{thm:main-local} is canonical up to formal
-  symplectomorphism.
+\begin{prop}[Admissible protected-sector reduction]
+  Let $(X,\omega)$ be a connected holomorphic-symplectic surface and
+  let $p\in X$.  Suppose that a perturbative twisted-M background with
+  branes on $\R\times p$ supplies an admissible protected Hamiltonian
+  sector at $\widehat p$.  Then, after the Darboux coordinate and
+  scalar-anomaly normalizations included in the admissibility data, that
+  restricted sector is identified with the formal local open--closed model
+  of \S\ref{ssec:local-theorem}.
 
-  Statements~(a) of Theorem~\ref{thm:main-local}, recorded in
-  Remark~\ref{rmk:dirac-thesis} and the universality block, hold for
-  any pro-finite-dimensional Lie algebra $\mathfrak h$ in
-  $\Cat{TateVec}$ with conilpotency. The formal symplectic disk in
-  dimension two is one corollary of this universal cochain identity;
-  the universality theorem here lifts that observation to a precise
-  statement about the protected Hamiltonian sector of every twisted
-  M-theory background of the indicated type.
-\end{rmk}
-
-\begin{rmk}[Convention firewall]\label{rmk:universality-firewall}
-  Theorem~\ref{thm:twisted-m-theory-universal} is a local-disk
-  statement on the formal symplectic plane $\C^2$ at the brane point
-  $p$. It carries no compact Calabi--Yau datum, no $\Phi_d$ functor,
-  no $\kappa_{\mathrm{ch}}$ or $\kappa_{\mathrm{BKM}}$ consequence, no
-  $K3\times E$ specialisation, no Igusa cusp form, no Borcherds input
-  form, no BKM denominator identity, and no Stage-1 or Stage-2
-  $\Phi_d$ specialisation. It is the precise mathematical realisation
-  of Costello's universality principle for protected operators of
-  twisted M-theory on the local data at a brane point of a
-  holomorphic-symplectic surface, and as such is independent of the
-  Vol III CY-to-chiral frontier and the Igusa $\Delta_5$ / Borcherds
-  / BKM frontier.
-\end{rmk}
-
-\begin{cor}[Twisted M-theory realisation of the Dirac thesis]\label{cor:dirac-thesis-twistedM}
-  Combining Theorem~\ref{thm:twisted-m-theory-universal} with
-  Remark~\ref{rmk:dirac-thesis}, the Dirac thesis sentence
-  organising the manuscript is now a corollary on the protected
-  sector of every twisted M-theory background of the indicated type:
-  a stack of branes is a system of probes for the formal symplectic
-  normal disk at the brane point; Dirac reduction of the probe phase
-  space gives the open trace algebra; the closed Hamiltonian BF
-  theory is the shifted-cotangent theory of canonical
-  transformations of the formal disk; the closed observables are
-  precisely the derived Poisson central operations on the stable
-  open Hamiltonian brane algebra. This holds at the classical level
-  on parts (a)--(d) of Theorem~\ref{thm:main-local} (with (d)
-  unconditional on the reduced post-contraction level and conditional
-  on Problem~\ref{prob:weighted-rg-locality} on the unreduced
-  factorization-algebra extension), and at the all-order quantum
-  level on the degree-zero Hamiltonian sector via part (e), with the
-  same conditionality on the descendant extension. The U(1) center
-  anomaly of part (f) is realised on the brane as the U(1) centre of
-  $\mathfrak{gl}_N$, identified by the same class
-  $[\bar c]$ on closed and open sides
-  (Theorem~\ref{thm:quantum-classical-anomaly}).
-\end{cor}
+  The open side is
+  $$
+  \Omega^*(\R)\otimes
+  \Lambda(\varepsilon_1,\varepsilon_2)\otimes\lie{gl}_N[1],
+  $$
+  the closed side is
+  $$
+  C^\bullet_{\mathrm{CE,cont}}(\mathfrak g),
+  \qquad
+  \mathfrak g=
+  \widehat{\mathfrak h}\ltimes
+  \widehat{\mathfrak h}^{\vee}_{\mathrm{cont}}[1],
+  \qquad
+  \widehat{\mathfrak h}=\C[[z_1,z_2]]/\C\cdot 1,
+  $$
+  and the bulk-to-boundary evaluation is
+  $$
+  f\longmapsto
+  \overline{\mathrm{Tr}\,f(\phi_1,\phi_2)}.
+  $$
+  Hence the proved Hamiltonian, factorization, and scalar-anomaly
+  statements of the local theorem apply to the protected sector.  The
+  all-order one-antifield quantum extension is still conditional on
+  vanishing of the mixed brane-defect QME obstruction of
+  Problem~\ref{prob:weighted-rg-locality} for that sector.
+\end{prop}
 
 \begin{proof}
-  Apply Theorem~\ref{thm:twisted-m-theory-universal} to identify the
-  protected Hamiltonian sector of any twisted M-theory background of
-  the indicated type with the formal local model of
-  Theorem~\ref{thm:main-local}. The Dirac-thesis statements of
-  Remark~\ref{rmk:dirac-thesis} are then precisely the corresponding
-  statements of Theorem~\ref{thm:main-local} read in the protected
-  sector.
+  The formal Darboux part of admissibility identifies the completed
+  Hamiltonian algebra at the brane point with
+  $\C[[z_1,z_2]]/\C\cdot 1$, after choosing formal Darboux
+  coordinates.  The point-brane Ext algebra and its cyclic trace give
+  the open coefficient data of the Dirac probe model.
+
+  Brane-defect locality supplies the factorization-algebraic
+  restriction to the brane line and matches it with the local
+  factorization map, primitive projection, and weighted Hadamard
+  reduction already used in the local theorem.  These
+  hypotheses put the protected sector in the same algebraic category
+  as the local model.  They do not prove QME-flatness for the
+  one-antifield quantum extension.
+
+  Scalar anomaly compatibility identifies the brane centre-of-mass
+  anomaly with the class $[\bar c]$ appearing in the local anomaly
+  comparison.  The three admissibility inputs therefore supply exactly
+  the data on which the local theorem acts.  Applying that theorem
+  gives the asserted protected-sector reduction.
 \end{proof}
+
+\begin{lem}[Admissibility is not globalization]\label{lem:admissibility-not-globalization}
+  An admissible protected Hamiltonian restriction is neither a
+  globalization functor nor a comparison map from twisted-M backgrounds,
+  compact Calabi--Yau threefolds, Vol III CY-to-chiral data, or
+  Igusa/BKM data to the local theorem.
+  It selects only the formal Hamiltonian disk, the Dirac brane Ext
+  algebra, the brane-line factorization restriction, and the scalar
+  anomaly class \( [\bar c] \).
+\end{lem}
+
+\begin{proof}
+  The three admissibility clauses record Darboux Hamiltonians at
+  \(\widehat X_p\), the point-brane Ext algebra, brane-defect locality on
+  \(\R\times p\), and scalar anomaly compatibility.  They contain no
+  compact Calabi--Yau threefold, no negative-cyclic Calabi--Yau class,
+  no Vol III specialization datum
+  \(\Phi_d=\mathrm{Sp}_{\Sigma_{d-1},C}\circ\Phi^{\mathrm{FA}}_d\), no
+  compact worldsheet or \(S^3\) framing, no BCOV propagator or
+  holomorphic anomaly equation, no Borcherds input Jacobi form, no Weyl
+  chamber, and no compact Hall orientation.  Two ambient theories can
+  have the same admissible formal restriction and different choices of
+  all those global data.  There is therefore no functorial operation from
+  the local restriction to any of those external structures.  The
+  admissible restriction cannot determine any compact CY\(_3\), global
+  BCOV, Vol III, Igusa, Borcherds, or BKM theorem.
+\end{proof}
+
+\begin{rmk}[BCOV comparison]
+  The original BCOV theory~\cite{bcov} is a theory on
+  Calabi--Yau threefolds.  The model in this paper is a formal
+  holomorphic-symplectic surface model at $d=2$, with closed fields
+  $\bar A\oplus\bar A^\vee[1]$ and branes on the line $\R$.  No
+  compact CY$_3$ BCOV theorem, anomaly cancellation theorem, or global
+  Kodaira-Spencer theorem is imported by the protected-sector reduction
+  above.
+\end{rmk}
+
+\begin{rmk}[Uniformity after admissibility]
+  Once admissibility has been supplied, the reduction is uniform over
+  connected holomorphic-symplectic surfaces and brane points.  This is
+  only the formal Darboux uniformity of the completed symplectic disk.
+  It is not a statement about arbitrary ambient twisted-M backgrounds.
+\end{rmk}
+
+\begin{rmk}[Dirac language inside the protected sector]
+  For an admissible protected Hamiltonian sector, the Dirac-thesis
+  language of Remark~\ref{rmk:dirac-thesis} is a reading of the
+  already identified formal local model.  The brane stack probes the
+  formal symplectic normal disk; Dirac reduction gives the open trace
+  algebra; the closed Hamiltonian BF theory is the shifted cotangent
+  theory of canonical transformations of that disk; and the closed
+  observables identify with derived Poisson-central operations on the
+  stable open Hamiltonian brane algebra only in the reduced local sense
+  proved by Theorem~\ref{thm:main-local}.  The scalar anomaly is the
+  same class $[\bar c]$ on the closed and open sides.  This is not an
+  ambient twisted-M or BCOV centrality theorem.
+\end{rmk}
+
+\begin{rmk}[Cross-volume firewall]
+  The protected-sector reduction is local at the formal symplectic
+  disk.  It carries no compact Calabi--Yau datum, no $\Phi_d$ functor,
+  no $\kappa_{\mathrm{ch}}$ or $\kappa_{\mathrm{BKM}}$ consequence, no
+  $K3\times E$ specialization, no Igusa cusp form, no Borcherds input
+  form, no BKM denominator identity, no global BCOV amplitude, no
+  compact-CY$_3$ chiral-homology computation, and no Stage-1 or Stage-2
+  $\Phi_d$ specialization.  Any global CY-to-chiral, compact BCOV, or
+  Igusa/BKM comparison requires a separate matched-conventions theorem
+  internal to the sibling volume making that claim.  This subsection can
+  enter such a theorem only as a $d=2$ formal-disk normalization after
+  the external global data have already been supplied there.
+\end{rmk}
 
 % --- End of fragment.

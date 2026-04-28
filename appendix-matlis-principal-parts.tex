@@ -1,0 +1,455 @@
+\section{Matlis Principal Parts and the Continuous Cotangent Module}
+\label{sec:app-matlis-principal-parts}
+
+This appendix centralizes the reduced Matlis calculation used in
+Theorem~\ref{thm:lane-principal-parts}.  Its stable core is the
+following: the \(m\)-adic continuous dual of the reduced Hamiltonian
+Lie algebra is the reduced scalar-annihilator inside the top
+local-cohomology module; the residue pairing gives the coadjoint
+action; and no ordinary polynomial descendant module realizes this
+coadjoint representation.  The Fourier--Rees comparison constructed
+below is only a Weyl-module and associated-graded label comparison.
+Over \(\C[[\hbar]]\) its target is the Fourier delta Rees lattice
+inside local cohomology, not the full standard Cech lattice; the full
+principal-part lattice appears only after tensoring with
+\(\C((\hbar))\).  It does not identify \(\Psi_{a,b}\) with
+\(\rho_{a,b}\) as \(\mathfrak h\)-modules.  The source conventions are
+Matlis duality
+\cite{matlis-injective}, Grothendieck--Hartshorne local cohomology
+\cite{hartshorne-local-cohomology}, and the power-series residue model
+of Kunz--Cox--Dickenstein, Chapter~5
+\cite{kunz-residues-duality}.
+
+\begin{defn}[Topology and reduced Hamiltonians]
+\label{def:app-matlis-topology}
+  Put
+  \[
+    R=\C[[z_1,z_2]],\qquad \mathfrak m=(z_1,z_2),\qquad
+    \mathfrak h=R/\C\cdot1 .
+  \]
+  The topology on \(R\) is the \(\mathfrak m\)-adic topology.  The
+  topology on \(\mathfrak h\) is the quotient topology, equivalently
+  the topology transported through the zero-constant section
+  \[
+    \mathfrak h\simeq \mathfrak m,\qquad
+    \overline f\longmapsto f-f(0).
+  \]
+  A fundamental system of neighbourhoods of zero is
+  \[
+    F^N\mathfrak h=\mathfrak m^N,\qquad N\geq1,
+  \]
+  under this section.  The Lie bracket is the Poisson bracket
+  \[
+    \{f,g\}=\partial_{z_1}f\,\partial_{z_2}g
+      -\partial_{z_2}f\,\partial_{z_1}g
+  \]
+  followed by projection modulo constants.
+\end{defn}
+
+\begin{lem}[Continuous dual]
+\label{lem:app-matlis-continuous-dual}
+  The continuous dual of \(\mathfrak h\), with \(\C\) discrete, is
+  \[
+    \mathfrak h^\vee_{\mathrm{cont}}
+      =\bigcup_{N\geq1}\bigl(\mathfrak h/F^N\mathfrak h\bigr)^\vee
+      =\bigoplus_{\substack{a,b\geq0\\a+b>0}}\C\,\delta_{a,b},
+  \]
+  where
+  \[
+    \delta_{a,b}(z_1^m z_2^n)=\delta_{a,m}\delta_{b,n}.
+  \]
+\end{lem}
+
+\begin{proof}
+  A linear functional on the \(\mathfrak m\)-adic vector space
+  \(\mathfrak h\simeq\mathfrak m\) is continuous exactly when its
+  kernel contains \(F^N\mathfrak h=\mathfrak m^N\) for some \(N\).
+  Such a functional factors through the finite-dimensional quotient
+  \(\mathfrak m/\mathfrak m^N\), hence is a finite linear combination
+  of Taylor coefficient functionals.  Conversely every finite linear
+  combination of the displayed \(\delta_{a,b}\) kills all sufficiently
+  high powers of \(\mathfrak m\), hence is continuous.
+\end{proof}
+
+\begin{defn}[Reduced Matlis principal parts]
+\label{def:app-matlis-principal-parts}
+  The top local cohomology module of \(R\) is written in Cech
+  Laurent form as
+  \[
+    H^2_{\mathfrak m}(R)\,dz_1dz_2
+      =\bigoplus_{a,b\geq0}
+        \C\,z_1^{-a-1}z_2^{-b-1}\,dz_1dz_2 .
+  \]
+  Equivalently this is the Cech quotient
+  \[
+    R[z_1^{-1},z_2^{-1}]/(R[z_1^{-1}]+R[z_2^{-1}])
+  \]
+  after multiplication by \(dz_1dz_2\); the displayed direct sum is
+  the standard representative basis in which both exponents are
+  strictly negative.
+  The reduced principal-part module is the \(\C\)-linear residue annihilator
+  of constants,
+  \[
+    \mc P=\operatorname{Ann}_{\mathrm{res}}(\C\cdot1)
+      =\bigoplus_{\substack{a,b\geq0\\a+b>0}}\C\,\rho_{a,b},
+      \qquad
+    \rho_{a,b}=z_1^{-a-1}z_2^{-b-1}\,dz_1dz_2 .
+  \]
+  The residue pairing is
+  \[
+    \langle \rho_{a,b},z_1^m z_2^n\rangle
+      =\operatorname{Res}_{z_1=z_2=0}
+        z_1^{m-a-1}z_2^{n-b-1}\,dz_1dz_2
+      =\delta_{a,m}\delta_{b,n}.
+  \]
+\end{defn}
+
+\begin{prop}[Matlis realization of the continuous dual]
+\label{prop:app-matlis-realization}
+  The residue pairing induces a continuous vector-space isomorphism
+  \[
+    \mc P\xrightarrow{\sim}\mathfrak h^\vee_{\mathrm{cont}},
+    \qquad
+    \rho_{a,b}\longmapsto\delta_{a,b}.
+  \]
+  It is the scalar-reduced restriction of the Matlis evaluation
+  pairing for the complete regular local ring \(R\): after the
+  trivialization \(\omega_R=R\,dz_1dz_2\),
+  \(H^2_{\mathfrak m}(R)\,dz_1dz_2\cong E_R(\C)\).  The subspace
+  \(\mc P=\operatorname{Ann}_{\mathrm{res}}(\C\cdot1)\) is not asserted to be an
+  \(R\)-submodule, and \(R/\C\cdot1\) is not an \(R\)-module quotient;
+  it is the \(\C\)-linear scalar-annihilator dual to
+  \(\mathfrak h=R/\C\cdot1\) and is stable for the Hamiltonian
+  coadjoint action below.
+\end{prop}
+
+\begin{proof}
+  The displayed residue formula identifies each basis vector
+  \(\rho_{a,b}\), \(a+b>0\), with the continuous Taylor coefficient
+  functional \(\delta_{a,b}\).  Lemma~\ref{lem:app-matlis-continuous-dual}
+  shows that these coefficient functionals form the whole continuous
+  dual.  The exclusion of \(\rho_{0,0}\) is exactly the condition that
+  the functional vanish on the constant Hamiltonian \(1\), which has
+  been removed from \(\mathfrak h\).
+\end{proof}
+
+\begin{prop}[Residue coadjoint action]
+\label{prop:app-matlis-coadjoint-action}
+  Under the isomorphism of
+  Proposition~\ref{prop:app-matlis-realization}, the coadjoint action
+  of \(f\in\mathfrak h\) is the principal-part residue action
+  \[
+    f\cdot\rho=\pi_{\mathrm{pp}}\{f,\rho\},
+  \]
+  where \(\pi_{\mathrm{pp}}\) projects Laurent two-forms to the span
+  of the principal parts.  On monomials,
+  \[
+    z_1^p z_2^q\cdot\rho_{a,b}
+      =-(pb-qa+p-q)\rho_{a-p+1,b-q+1},
+  \]
+  with the convention that any term with a negative index is zero.
+\end{prop}
+
+\begin{proof}
+  Hamiltonian vector fields preserve the volume form \(dz_1dz_2\).
+  Hence the residue pairing satisfies integration by parts,
+  \[
+    \langle \{f,\rho\},g\rangle
+      =-\langle \rho,\{f,g\}\rangle ,
+  \]
+  which is exactly the coadjoint sign convention
+  \((\operatorname{ad}^{\vee}_f\lambda)(g)=-\lambda(\{f,g\})\).
+
+  For \(f=z_1^p z_2^q\) and
+  \(\rho_{a,b}=z_1^{-a-1}z_2^{-b-1}\,dz_1dz_2\),
+  \[
+  \begin{aligned}
+    \{f,z_1^{-a-1}z_2^{-b-1}\}
+      &=
+      pz_1^{p-1}z_2^q\,(-(b+1))z_1^{-a-1}z_2^{-b-2}  \\
+      &\quad
+      -qz_1^p z_2^{q-1}\,(-(a+1))z_1^{-a-2}z_2^{-b-1} \\
+      &=-(pb-qa+p-q)z_1^{p-a-2}z_2^{q-b-2}.
+  \end{aligned}
+  \]
+  Multiplication by \(dz_1dz_2\) gives
+  \(\rho_{a-p+1,b-q+1}\) precisely when the two new indices are
+  nonnegative; otherwise the principal-part projection gives zero.
+\end{proof}
+
+\begin{thm}[Residue pairing rigidity]
+\label{thm:app-matlis-residue-rigidity}
+  Up to multiplication by one scalar in \(\C^\times\), the residue
+  pairing is the unique nondegenerate continuous pairing
+  \[
+    \mc P\times\mathfrak h\longrightarrow\C
+  \]
+  of total degree zero which is equivariant for the coadjoint action
+  above.
+\end{thm}
+
+\begin{proof}
+  Let \(\beta\) be another such pairing and write
+  \(\beta_{a,b;m,n}=\beta(\rho_{a,b},z_1^m z_2^n)\).  Total-degree
+  zero gives \(\beta_{a,b;m,n}=0\) unless \(a+b=m+n\).
+  Equivariance for \(z_1z_2\) gives the second constraint
+  \(a-b=m-n\).  Together these force \((a,b)=(m,n)\), so
+  \[
+    \beta_{a,b;m,n}=c_{a,b}\delta_{a,m}\delta_{b,n}.
+  \]
+  Equivariance for \(z_1\) gives
+  \(c_{a,b+1}=c_{a,b}\), because
+  \(z_1\cdot\rho_{a,b}=-(b+1)\rho_{a,b+1}\) and
+  \(\{z_1,z_1^m z_2^n\}=n z_1^m z_2^{n-1}\).  Equivariance for
+  \(z_2\) gives \(c_{a+1,b}=c_{a,b}\).  All coefficients with
+  \(a+b>0\) are therefore a single scalar \(c\), and
+  nondegeneracy forces \(c\neq0\).
+\end{proof}
+
+\begin{thm}[No polynomial descendant realization]
+\label{thm:app-matlis-no-polynomial-realization}
+  Let \(M\) be a polynomial boundary descendant module on which the
+  linear Hamiltonians \(z_1,z_2\) act locally nilpotently.  Then
+  \(\mc P\) is not isomorphic to any nonzero submodule of \(M\) as an
+  \(\mathfrak h\)-module.  In particular the polynomial classes
+  \(\Psi_{a,b}\) cannot be identified with the principal parts
+  \(\rho_{a,b}\) by an ordinary \(\mathfrak h\)-module isomorphism.
+\end{thm}
+
+\begin{proof}
+  In any ordinary polynomial boundary model, the linear Hamiltonians
+  act as constant coefficient Hamiltonian vector fields; iterating
+  either \(z_1\) or \(z_2\) eventually exhausts the polynomial degree.
+  Thus these actions are locally nilpotent.
+
+  On \(\mc P\), Proposition~\ref{prop:app-matlis-coadjoint-action}
+  gives
+  \[
+    z_1\cdot\rho_{a,b}=-(b+1)\rho_{a,b+1},\qquad
+    z_2\cdot\rho_{a,b}=(a+1)\rho_{a+1,b}.
+  \]
+  Hence
+  \[
+    z_1^N\cdot\rho_{a,b}
+      =(-1)^N(b+1)(b+2)\cdots(b+N)\rho_{a,b+N}\neq0
+  \]
+  for every \(N\), and similarly for \(z_2\).  Local nilpotence is
+  preserved by module isomorphism and by restriction to submodules.
+  Therefore no polynomial descendant module with locally nilpotent
+  linear Hamiltonians realizes \(\mc P\).
+\end{proof}
+
+\begin{thm}[Fourier--Rees bridge, and the obstruction it does not remove]
+\label{thm:app-matlis-rees-fourier-bridge}
+  Let
+  \[
+    \mathcal D_\hbar
+    =
+    \C[[\hbar]]
+      \langle z_1,z_2,\partial_1,\partial_2\rangle
+      \big/
+      \bigl([\partial_i,z_j]=\hbar\delta_{ij},
+      [z_i,z_j]=[\partial_i,\partial_j]=0\bigr)
+  \]
+  be the Rees Weyl algebra.  Let
+  \[
+    \mathcal O_\hbar=\C[z_1,z_2][[\hbar]]
+      \cong\mathcal D_\hbar/(\partial_1,\partial_2)
+  \]
+  be the polynomial Rees module, and let
+  \[
+    \Delta^{\mathsf F}_\hbar=
+      \mathcal D_\hbar/(z_1,z_2)
+  \]
+  be the Fourier delta Rees module, generated by a vector \(e_0\)
+  killed by \(z_1,z_2\).  The Cech local-cohomology lattice
+  \[
+    \Delta^{\mathrm{std}}_\hbar=
+    H^2_{\mathfrak m}(\C[[z_1,z_2]])\,dz_1dz_2[[\hbar]]
+  \]
+  carries the standard action in which \(z_i\) multiplies and
+  \(\partial_i=\hbar\partial_{z_i}\).  Sending
+  \(e_0\mapsto\rho_{0,0}=z_1^{-1}z_2^{-1}dz_1dz_2\) realizes
+  \(\Delta^{\mathsf F}_\hbar\) as the Rees sublattice
+  \[
+    \iota_{\mathsf F}(\Delta^{\mathsf F}_\hbar)
+    =
+    \bigoplus_{a,b\geq0}
+      \C[[\hbar]]\,
+      (-1)^{a+b}\hbar^{a+b}a!b!\,\rho_{a,b}
+    \subset
+    \Delta^{\mathrm{std}}_\hbar .
+  \]
+  This inclusion becomes an isomorphism after tensoring with
+  \(\C((\hbar))\), but it is not an isomorphism of the two
+  \(\C[[\hbar]]\)-lattices.  The Rees Fourier
+  automorphism
+  \[
+    \mathsf F(z_i)=\partial_i,\qquad
+    \mathsf F(\partial_i)=-z_i
+  \]
+  identifies the Fourier twist \(\mathsf F(\mathcal O_\hbar)\) with
+  \(\Delta^{\mathsf F}_\hbar\).  On basis labels in the Cech
+  realization,
+  \[
+    z_1^az_2^b
+    \longmapsto
+    \partial_1^a\partial_2^b e_0
+    \overset{\iota_{\mathsf F}}{\longmapsto}
+    \partial_1^a\partial_2^b\rho_{0,0}
+    =
+    (-1)^{a+b}\hbar^{a+b}a!b!\,\rho_{a,b}.
+  \]
+  After inverting \(\hbar\), this gives a filtered Fourier--Rees label
+  bridge between nonconstant polynomial labels and the reduced
+  principal parts \(\rho_{a,b}\), \(a+b>0\).  Over the Rees lattice
+  before inverting \(\hbar\), the bridge records the degree-\(a+b\)
+  shift by the explicit factor \(\hbar^{a+b}\).  The special fibre of
+  the abstract Rees module keeps the labels
+  \(\partial_1^a\partial_2^be_0\); the Cech inclusion into
+  \(\Delta^{\mathrm{std}}_\hbar\) sends the positive-degree labels into
+  \(\hbar\Delta^{\mathrm{std}}_\hbar\).  Thus the comparison is an
+  associated-graded label match, not an isomorphism of ordinary
+  local-cohomology lattices.
+
+  This bridge is not an \(\mathfrak h\)-module bridge.  The
+  Hamiltonian action on polynomial descendants is by vector fields
+  \(X_f=\{f,-\}\) on \(\mathcal O_\hbar((\hbar))\).  In the Rees Weyl
+  algebra the normalized linear operators are
+  \(\hbar X_{z_1}=\partial_2\) and
+  \(\hbar X_{z_2}=-\partial_1\).  Their Fourier transforms are
+  \(\mathsf F(\hbar X_f)\), whereas the Matlis cotangent action on
+  \(\mc P((\hbar))\) is still \(\hbar X_f\), acting on Laurent
+  principal parts and projected to the reduced principal-part span.
+  Already for the linear Hamiltonians,
+  \[
+    \hbar X_{z_1}=\partial_2,\qquad
+    \hbar X_{z_2}=-\partial_1,
+  \]
+  but
+  \[
+    \mathsf F(\hbar X_{z_1})=-z_2,\qquad
+    \mathsf F(\hbar X_{z_2})=z_1 .
+  \]
+  The transformed linear operators are locally nilpotent on
+  \(\Delta^{\mathsf F}_\hbar\); the Rees-normalized coadjoint operators
+  \[
+    \hbar X_{z_1}\rho_{a,b}=-(b+1)\hbar\rho_{a,b+1},\qquad
+    \hbar X_{z_2}\rho_{a,b}=(a+1)\hbar\rho_{a+1,b}
+  \]
+  are not locally nilpotent on any nonzero reduced principal part after
+  inverting \(\hbar\).  Dividing by \(\hbar\) gives the same conclusion
+  for the unnormalized Hamiltonian vector fields.  Hence the
+  Fourier--Rees label bridge cannot identify the polynomial descendant
+  module with \(\mc P\) as a module over the same reduced Hamiltonian
+  Lie algebra.
+\end{thm}
+
+\begin{proof}
+  The displayed formulas for \(\mathsf F\) preserve the Rees Weyl
+  relations, since
+  \[
+    [\mathsf F(\partial_i),\mathsf F(z_j)]
+      =[-z_i,\partial_j]=\hbar\delta_{ij}.
+  \]
+  The polynomial module \(\mathcal O_\hbar\) is cyclic with generator
+  \(1\) annihilated by \(\partial_1,\partial_2\).  After Fourier twist
+  the cyclic generator is annihilated by \(z_1,z_2\), so the twisted
+  module is \(\mathcal D_\hbar/(z_1,z_2)=\Delta^{\mathsf F}_\hbar\).
+  In the Cech model, \(z_i\rho_{0,0}=0\), and applying
+  \(\partial_i=\hbar\partial_{z_i}\) to \(\rho_{0,0}\) generates the
+  Rees lattice displayed in the theorem.  It generates the full
+  standard local-cohomology lattice only after \(\hbar\) is inverted.
+  Therefore
+  \(\mathsf F(\mathcal O_\hbar)\cong\Delta^{\mathsf F}_\hbar\), with the
+  Cech realization \(\iota_{\mathsf F}\).
+
+  Since \(\partial_i\) acts as \(\hbar\partial_{z_i}\) on Laurent
+  representatives,
+  \[
+    \partial_1^a\partial_2^b\rho_{0,0}
+    =
+    \hbar^{a+b}
+    \partial_{z_1}^a\partial_{z_2}^b
+      (z_1^{-1}z_2^{-1}dz_1dz_2)
+    =
+    (-1)^{a+b}\hbar^{a+b}a!b!\rho_{a,b}.
+  \]
+  Removing the scalar label \(a=b=0\) gives the reduced label bridge
+  after the stated Rees normalization.  Since the factors \(a!b!\) and
+  \((-1)^{a+b}\) are units over \(\C\), the only genuine Rees-lattice
+  shift is the power \(\hbar^{a+b}\).
+
+  For the obstruction, compare the two linear actions.  On polynomial
+  descendants the Rees-normalized operators
+  \(\hbar X_{z_1}=\partial_2\) and
+  \(\hbar X_{z_2}=-\partial_1\) are locally nilpotent; after inverting
+  \(\hbar\), the same is true for \(X_{z_1}\) and \(X_{z_2}\).  Fourier
+  sends the Rees-normalized operators to multiplication by \(-z_2\) and
+  \(z_1\) on \(\Delta^{\mathsf F}_\hbar\); multiplication by \(z_i\)
+  lowers pole order and is again locally nilpotent.  The coadjoint
+  Matlis action is not the Fourier-transformed action.  It keeps the
+  same vector fields, now acting on Laurent principal parts:
+  \[
+    \hbar X_{z_1}\rho_{a,b}
+      =\hbar\partial_{z_2}\rho_{a,b}
+      =-(b+1)\hbar\rho_{a,b+1},\qquad
+    \hbar X_{z_2}\rho_{a,b}
+      =-\hbar\partial_{z_1}\rho_{a,b}
+      =(a+1)\hbar\rho_{a+1,b}.
+  \]
+  After tensoring with \(\C((\hbar))\), no nonzero vector in
+  \(\mc P((\hbar))\) is killed by a high power of either linear
+  Hamiltonian: for a finite nonzero linear combination, every power of
+  \(X_{z_1}\) shifts each nonzero basis summand to a distinct
+  \(\rho_{a,b+N}\), with nonzero rising-factorial coefficient, and the
+  same argument applies to \(X_{z_2}\).  Local nilpotence is invariant
+  under module isomorphism.
+  Thus any Fourier--Rees comparison that preserves the original
+  Hamiltonian action is impossible; the actual Fourier comparison
+  changes the polarization and supplies only the label-level bridge
+  stated above.
+\end{proof}
+
+\begin{cor}[No flat same-action interpolation]
+\label{cor:app-matlis-no-flat-same-action-interpolation}
+  Let \(M_\hbar\) be a \(\C[[\hbar]]\)-flat family whose generic fibre
+  carries the polynomial descendant action of the linear Hamiltonians
+  \(z_1,z_2\), so that \(X_{z_1}\) and \(X_{z_2}\) act locally
+  nilpotently after tensoring with \(\C((\hbar))\).  Then
+  \(M_\hbar((\hbar))\) is not isomorphic, as a module for the same
+  Hamiltonian Lie algebra, to \(\mc P((\hbar))\) with the Matlis
+  coadjoint action.  The same statement holds for the Rees-normalized
+  operators \(\hbar X_{z_i}\), since \(\hbar\) is invertible on the
+  generic fibre.  Any honest bridge must therefore either change the
+  Hamiltonian action by a Fourier twist, enlarge the boundary target to
+  a distributional principal-part sector, or state a different
+  deformation problem.
+\end{cor}
+
+\begin{proof}
+  This is the local-nilpotence obstruction of
+  Theorem~\ref{thm:app-matlis-no-polynomial-realization} after extension
+  of scalars to \(\C((\hbar))\).  The two linear Hamiltonians remain
+  locally nilpotent on the polynomial descendant generic fibre and
+  remain non-locally-nilpotent on every nonzero element of
+  \(\mc P((\hbar))\).  Multiplication by the invertible scalar
+  \(\hbar\) cannot change local nilpotence.
+\end{proof}
+
+\begin{rmk}[What the bridge proves]
+\label{rmk:app-matlis-rees-bridge-status}
+  The bridge above justifies the shared labels
+  \(\Psi_{a,b}\leftrightarrow\rho_{a,b}\) as Fourier--Rees
+  associated-graded bookkeeping, with the factorial and
+  \(\hbar^{a+b}\) normalization displayed explicitly.  It also records
+  the lattice convention: the Fourier twist gives
+  \(\mathcal D_\hbar/(z_1,z_2)\), whose Cech realization is the Rees
+  sublattice \(\bigoplus\hbar^{a+b}\C[[\hbar]]\rho_{a,b}\), not the full
+  \(\bigoplus\C[[\hbar]]\rho_{a,b}\) before \(\hbar\) is inverted.  It
+  does not weaken the no-polynomial theorem.  The theorem says
+  precisely where the apparent bridge breaks: Fourier sends the
+  Hamiltonian vector fields to Fourier-transformed operators, while the
+  Matlis cotangent module uses the original coadjoint vector fields on
+  principal parts.
+\end{rmk}

@@ -1,0 +1,210 @@
+\section*{Local dictionary}
+\addcontentsline{toc}{section}{Local dictionary}
+
+\begingroup
+\small
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.15}
+
+\paragraph{Common local rings and quotients.}
+\begin{center}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.25\textwidth}
+  >{\raggedright\arraybackslash}p{0.67\textwidth}@{}}
+\hline
+\textbf{Symbol} & \textbf{Meaning}\\
+\hline
+\(R=\C[[z_1,z_2]]\) &
+Complete local ring of the formal symplectic disk.\\
+\hline
+\(\mathfrak m=(z_1,z_2)\) &
+Maximal ideal of functions vanishing at the brane point.\\
+\hline
+\(\mathfrak h=R/\C\cdot1\) &
+Reduced Hamiltonian Lie algebra of the formal disk. Constants are
+removed because they generate the zero Hamiltonian vector field.\\
+\hline
+\(\bar A=\C[z_1,z_2]/\C\cdot1\) &
+Polynomial Hamiltonian sector used in explicit trace and Moyal
+calculations.\\
+\hline
+\(\bar A_{\mathrm{desc}}\) &
+Abstract polynomial label space for PBW one-\(\psi\) descendants. It
+is not the Matlis principal-part module.\\
+\hline
+\([\bar c]\) &
+Distinguished scalar \(U(1)\) anomaly class in
+\(H^2_{\mathrm{Lie}}(\bar A,\C)\), realized by the constant term of the
+Poisson bracket and by the Capelli shift.\\
+\hline
+\end{tabular}
+\end{center}
+
+\paragraph{Separation rule.}
+The next three blocks are disjoint.  PBW special-fibre labels
+\(H_{a,b},O_{a,b},\Psi_{a,b}\), CE/PV labels \(c^I,u_I,\theta^I,O_I\),
+and Matlis labels \(\rho_{a,b}\) live in different modules unless a
+specific theorem supplies a comparison.  The only Fourier--Rees
+comparison asserted here is
+Theorem~\ref{thm:app-matlis-rees-fourier-bridge}: it matches
+associated-graded labels after Fourier normalization through the
+Fourier delta Rees lattice
+\(\mathcal D_\hbar/(z_1,z_2)\), not through an
+\(\mathfrak h\)-module identification and not through the full Cech
+principal-part lattice before \(\hbar\) is inverted.
+
+\paragraph{PBW special-fibre open trace labels.}
+\begin{center}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.25\textwidth}
+  >{\raggedright\arraybackslash}p{0.67\textwidth}@{}}
+\hline
+\textbf{Symbol} & \textbf{Meaning}\\
+\hline
+\(H_{a,b}=z_1^az_2^b\) &
+Polynomial Hamiltonian label in \(\bar A\), with \(a+b>0\). In the
+PBW special fibre it labels the scalar-reduced trace observable
+\(O_{a,b}\).\\
+\hline
+\(O_{a,b}\) &
+Open ghost-zero trace class
+\(\overline{\operatorname{Tr}(\phi_1^a\phi_2^b)}\).\\
+\hline
+\(\Psi_{a,b}\) &
+Primitive one-\(\psi\) stable open class, represented by the
+symmetrised trace with one \(\psi\), \(a\) copies of \(\phi_1\), and
+\(b\) copies of \(\phi_2\). It lies in the PBW special-fibre open
+shadow and carries the corresponding polynomial action.\\
+\hline
+\(\mathsf F_{\mathrm{Rees}}\) &
+Fourier--Rees label bridge of
+Theorem~\ref{thm:app-matlis-rees-fourier-bridge}. It sends the
+polynomial label \(z_1^az_2^b\) to the Fourier-delta label
+\(\partial_1^a\partial_2^be_0\), whose Cech realization is
+\((-1)^{a+b}\hbar^{a+b}a!b!\rho_{a,b}\).  After inverting
+\(\hbar\) one may divide by this Rees factor and read the
+principal-part label \(\rho_{a,b}\).  It changes polarization and is
+not an \(\mathfrak h\)-module identification between \(\Psi_{a,b}\)
+and \(\rho_{a,b}\).\\
+\hline
+\end{tabular}
+\end{center}
+
+The shared indices on \(H_{a,b}\), \(\Psi_{a,b}\), and
+\(\rho_{a,b}\) are labels, not an \(\mathfrak h\)-module
+identification. The span of the \(\Psi_{a,b}\) is not
+\(\mathfrak h^\vee_{\mathrm{cont}}\), not \(\mathcal P\), and not a
+principal-part current module.
+
+\paragraph{Closed CE/PV labels.}
+\begin{center}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.25\textwidth}
+  >{\raggedright\arraybackslash}p{0.67\textwidth}@{}}
+\hline
+\textbf{Symbol} & \textbf{Meaning}\\
+\hline
+\(\mathfrak g=\mathfrak h\ltimes
+\mathfrak h^\vee_{\mathrm{cont}}[1]\) &
+Shifted cotangent Lie algebra of Hamiltonian canonical transformations.\\
+\hline
+\(H_I\) &
+Hamiltonian generator in \(\mathfrak h\).\\
+\hline
+\(c^I\) &
+Chevalley--Eilenberg coordinate dual to a Hamiltonian generator
+\(H_I\in\mathfrak h\). Under \(\Phi\), \(c^I\mapsto\theta^I\).\\
+\hline
+\(u_I\) &
+Chevalley--Eilenberg coordinate dual to the shifted cotangent generator.
+Under \(\Phi\), \(u_I\mapsto O_I\). Boundary Hamiltonian observables
+come from \(u_I\), not from \(c^I\).\\
+\hline
+\(\theta^I\) &
+Polyvector coordinate corresponding to \(c^I\) under the CE/PV
+derived-centre isomorphism.\\
+\hline
+\(O_I\) &
+Hamiltonian observable coordinate corresponding to \(u_I\) under the
+CE/PV derived-centre isomorphism.\\
+\hline
+\(\Phi\) &
+Cochain-level CE/PV map determined on generators by
+\(c^I\mapsto\theta^I\) and \(u_I\mapsto O_I\).\\
+\hline
+\end{tabular}
+\end{center}
+
+\paragraph{Matlis principal-part labels.}
+\begin{center}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.25\textwidth}
+  >{\raggedright\arraybackslash}p{0.67\textwidth}@{}}
+\hline
+\textbf{Symbol} & \textbf{Meaning}\\
+\hline
+\(\mathcal P\) &
+Reduced principal-part module
+\(\operatorname{Ann}_{\mathrm{res}}(\C\cdot1)\subset
+H^2_{\mathfrak m}(R)\,dz_1dz_2\), identified with
+\(\mathfrak h^\vee_{\mathrm{cont}}\).\\
+\hline
+\(\rho_{a,b}\) &
+Principal-part residue current
+\(z_1^{-a-1}z_2^{-b-1}dz_1dz_2\), \(a+b>0\), with the Matlis
+coadjoint action.\\
+\hline
+\(z_1^p z_2^q\cdot\rho_{a,b}\) &
+Coadjoint action
+\(-(pb-qa+p-q)\rho_{a-p+1,b-q+1}\). This is the Matlis
+principal-part action, not the PBW action on \(\Psi_{a,b}\).\\
+\hline
+\(\mathcal P_I\) &
+\(\mathcal P_I=\mathcal D'_c(I)\widehat\otimes\mathcal P\), the
+compactly supported distributional principal-part currents on an interval
+\(I\).\\
+\hline
+\end{tabular}
+\end{center}
+
+Thus \(\Psi_{a,b}\) and \(\rho_{a,b}\) live in different modules:
+\[
+  \Psi_{a,b}\in\text{PBW special-fibre open homology},\qquad
+  \rho_{a,b}\in
+  \mathcal P\cong\mathfrak h^\vee_{\mathrm{cont}}.
+\]
+No ordinary \(\mathfrak h\)-module isomorphism between these two spans
+is used or asserted.
+
+\paragraph{Interval-current and boundary labels.}
+\begin{center}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.25\textwidth}
+  >{\raggedright\arraybackslash}p{0.67\textwidth}@{}}
+\hline
+\textbf{Symbol} & \textbf{Meaning}\\
+\hline
+\(\mathfrak h_I\) &
+\(\mathfrak h_I=\Omega^\bullet_c(I)\widehat\otimes\mathfrak h\), the
+compactly supported de Rham Hamiltonian currents on an interval
+\(I\subset\R\). Degree-zero test functions appear only after taking the
+explicit measurement notation.\\
+\hline
+\(\mathfrak g_I\) &
+\(\mathfrak g_I=\mathfrak h_I\ltimes\mathcal P_I[1]\), the shifted
+cotangent current algebra on \(I\), with principal-part currents in the
+shifted cotangent direction.\\
+\hline
+\(B_f(a)\) &
+Smeared boundary Hamiltonian observable
+\(\int_I a(t)\overline{\operatorname{Tr}f(\phi_1(t),\phi_2(t))}\,dt\).
+Its CE source is \(u_{a(t)dt\otimes f}\).\\
+\hline
+\(A^{\mathrm{Ham}}_\partial(I)\) &
+Reduced Hamiltonian brane-line \(P_0\) factorization algebra
+\(\widehat{\mathbf S}(\mathfrak h_I)\).\\
+\hline
+\(A^{\mathrm{pp}}_\partial(I)\) &
+Reduced principal-part defect-current model after de Rham-current contraction
+\(\widehat{\mathbf S}(\mathfrak h_I)\widehat\otimes
+\widehat{\mathbf S}(\mathcal P_I[1])\).\\
+\hline
+\end{tabular}
+\end{center}
+\endgroup

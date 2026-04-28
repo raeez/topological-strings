@@ -1,6 +1,6 @@
-% Closure of prob:weighted-rg-locality.
+% Hadamard / Mittag-Leffler reduction for prob:weighted-rg-locality.
 %
-% This fragment proposes thm:hadamard-mittag-leffler, which closes the
+% This fragment proves the analytic part of the
 % Costello-locality compatibility for the Hadamard parametrix on the
 % Mittag-Leffler coefficient module of T1. The proof exploits the
 % factorization (eq:wt-propagator-factor) of the BV propagator into a
@@ -12,27 +12,28 @@
 % bulk-spacetime locality argument, and locality of each windowwise
 % truncation passes to the limit.
 %
-% Status: closes prob:weighted-rg-locality unconditionally; upgrades
-% thm:wt-cotangent-lift part (e) and cor:wt-descendant-conditional to
-% unconditional. Inserted after Problem~\ref{prob:weighted-rg-locality}
-% in tate-T1-weighted-completion.tex.
+% Status: reduces prob:weighted-rg-locality to the remaining
+% brane-defect QME obstruction class. It does not prove vanishing of
+% that obstruction class.
 
 \subsection*{Hadamard parametrix on the Mittag-Leffler coefficient module}
 
 \begin{rmk}[Spacetime/coefficient factorization of the Hadamard parametrix]\label{rmk:hadamard-factorization}
   In Costello's heat-kernel BV calculus
-  \cite[Ch.~5]{costello-renormalization}, the Hadamard parametrix
+  \cite{costello-renormalization}*{Ch.~5}, the Hadamard parametrix
   enters as the asymptotic expansion of the heat kernel
   $K_t^{\mathrm{base}}$ on the bulk free elliptic complex
   $\Omega^\bullet(\R^2)\widehat\otimes\Omega^{0,\bullet}(\C^2)$,
-  combined with Hörmander wave-front-set bookkeeping
-  \cite[Ch.~7]{hormander-vol1} to control the singular support of the
+  combined with Hörmander wave-front-set tracking
+  \cite{hormander-vol1}*{Ch.~7} to control the singular support of the
   propagator $P_{\epsilon,L}^{\mathrm{base}}$ along the diagonal.
-  Costello's locality theorem
-  \cite[Thm.~5.0.7]{costello-renormalization} states that every local
-  functional in a free elliptic complex admits a Hadamard parametrix
-  expansion which produces only counterterms in the local-functional
-  class $\mathcal O_{\mathrm{loc}}$.
+  Costello's locality package
+  \cite{costello-renormalization}*{Chs.~5--7} is used here only as the
+  heat-kernel/RG vocabulary for free elliptic complexes: local
+  functionals admit Hadamard-parametrix expansions whose counterterms
+  stay in the local-functional class $\mathcal O_{\mathrm{loc}}$ under
+  the hypotheses of that formalism.  The exact published theorem number
+  is not used as a local input.
 
   In the weighted setting of \ref{eq:wt-propagator-factor}, the
   propagator factors as
@@ -64,7 +65,7 @@
     \item For each $w_0$, $\mathcal E_w^{w_0}$ is a free elliptic
       complex with finite-rank coefficient bundle, and Costello's
       Hadamard parametrix construction
-      \cite[\S5.6]{costello-renormalization} applies verbatim to
+      \cite{costello-renormalization}*{Ch.~5} applies verbatim to
       $P_{\epsilon,L}^{w,w_0}$.
     \item The truncations $\{P_{\epsilon,L}^{w,w_0}\}_{w_0\geq1}$
       form a strict Mittag-Leffler inverse system in the coefficient
@@ -88,7 +89,7 @@
   \bigl(\prod_{d\leq w_0}w(d)^{-1}H_d^\vee\bigr)[2]$ is a finite-rank
   $\Z$-graded vector space (finite product of finite-dimensional
   $H_d$'s). Costello's Hadamard parametrix construction
-  \cite[\S5.6]{costello-renormalization} applies verbatim to any free
+  \cite{costello-renormalization}*{Ch.~5} applies verbatim to any free
   elliptic complex with finite-rank coefficient bundle, so it applies
   to $\mathcal E_w^{w_0}$. The bulk propagator
   $P_{\epsilon,L}^{\mathrm{base}}$ is unchanged; the coefficient
@@ -98,18 +99,19 @@
   $\prod_{d\leq w_0'}w(d)H_d\twoheadrightarrow\prod_{d\leq w_0}w(d)H_d$
   on the coefficient direction; the bulk factor is unchanged. An
   inverse system with surjective transition maps satisfies the
-  Mittag-Leffler condition trivially, so the inverse limit is exact
-  in the inverse-limit category and $\varprojlim^1=0$. Compatibility
-  with $P_{\epsilon,L}^{w,w_0'}\mapsto P_{\epsilon,L}^{w,w_0}$
-  follows from the tensor factorization and the truncation of the
-  Casimir.
+  Mittag-Leffler condition trivially, so the inverse limit is exact in
+  the admissible Mittag-Leffler envelope of
+  Statement~\ref{stmt:tate-model-envelope} and $\varprojlim^1=0$ for
+  this tower. Compatibility with
+  $P_{\epsilon,L}^{w,w_0'}\mapsto P_{\epsilon,L}^{w,w_0}$ follows from
+  the tensor factorization and the truncation of the Casimir.
 
   (3) The Hörmander wave-front set of a tensor product distribution
   $T_1\otimes T_2$ on $X_1\times X_2$ satisfies
   $\mathrm{WF}(T_1\otimes T_2)\subseteq\bigl(\mathrm{WF}(T_1)\times
   \{(x_2,0):x_2\in X_2\}\bigr)\cup\bigl(\{(x_1,0):x_1\in X_1\}\times
   \mathrm{WF}(T_2)\bigr)\cup\bigl(\mathrm{WF}(T_1)\times
-  \mathrm{WF}(T_2)\bigr)$ (\cite[Thm.~8.2.9]{hormander-vol1}). Here
+  \mathrm{WF}(T_2)\bigr)$ (\cite{hormander-vol1}*{Thm.~8.2.9}). Here
   $T_1=P_{\epsilon,L}^{\mathrm{base}}$ has wave-front set in the
   conormal of the diagonal of $\R^2\times\C^2$, and
   $T_2=C_{\mathfrak h,w}^{w_0}$ is a finite-rank algebraic tensor
@@ -121,16 +123,17 @@
   spacetime, independent of $w_0$.
 \end{proof}
 
-\begin{thm}[Hadamard parametrix on the Mittag-Leffler coefficient module]\label{thm:hadamard-mittag-leffler}
-  Let $w(d)=q^d$ with $q>1$ be the canonical degree weight of
+\begin{thm}[Graphwise Hadamard control on the Mittag-Leffler coefficient module]\label{thm:hadamard-mittag-leffler}
+  Let $w(d)=q^d$ with $q>1$ be the exponential degree weight of
   Remark~\ref{rmk:wt-canonical-weight}, and let $\mathcal E_w$ be the
   weighted field complex \eqref{eq:wt-field-complex}. The Hadamard
   parametrix construction
-  \cite[\S5.6]{costello-renormalization} extends from each
+  \cite{costello-renormalization}*{Ch.~5} extends from each
   finite-window restriction $\mathcal E_w^{w_0}$
   (Lemma~\ref{lem:windowwise-parametrix}) to the Mittag-Leffler
   limit $\mathcal E_w=\varprojlim_{w_0}\mathcal E_w^{w_0}$,
-  preserving locality at every order. Specifically:
+  preserving the Hadamard wave-front and finite-window locality
+  estimates graph by graph. Specifically:
   \begin{enumerate}[label=(\roman*)]
     \item The propagator $P_{\epsilon,L}^{w}$ admits a Hadamard
       parametrix expansion as the inverse limit
@@ -138,26 +141,31 @@
       with bulk wave-front set independent of $w_0$.
     \item For every local interaction
       $I\in\mathcal O_{\mathrm{loc}}(\mathcal E_w)$ of bounded
-      polynomial-degree $D_0$ in the coefficient direction, every
-      Costello graph $\Gamma$ of order $\hbar^n$ contributes a
-      counterterm $C_n[\Gamma]\in\mathcal O_{\mathrm{loc}}(\mathcal E_w)$
-      whose weighted Tate norm is bounded by
-      $C_w^{E(\Gamma)}\cdot|C_n^{\mathrm{base}}[\Gamma]|$, where
-      $C_w$ is the bracket-tame constant of \ref{w:W1} and
+      polynomial-degree $D_0$ at each vertex in the coefficient
+      direction, every fixed Costello graph $\Gamma$ of order
+      $\hbar^n$ contributes a compatible finite-window counterterm
+      system whose weighted coefficient size is bounded, on every
+      finite output window, by a finite graph-dependent constant times
+      $|C_n^{\mathrm{base}}[\Gamma]|$, where
       $|C_n^{\mathrm{base}}[\Gamma]|$ is the bulk spacetime
       counterterm of Costello.
-    \item The bulk Costello locality theorem
-      \cite[Thm.~5.0.7]{costello-renormalization} extends to
-      $\mathcal E_w$: every counterterm in the Hadamard expansion
+    \item For every fixed graph whose finite-window counterterms are
+      degreewise surjective and compatible under the Mittag-Leffler
+      transition maps, the corresponding inverse-limit representative
       lies in the local-functional class
-      $\mathcal O_{\mathrm{loc}}(\mathcal E_w)$, with cohomology
-      class in $H^1(\mathcal O_{\mathrm{loc}}(\mathcal E_w),
-      Q+\{I_0,-\})$ given by the inverse limit of the bulk
-      cohomology classes.
+      \(\mathcal O_{\mathrm{loc}}(\mathcal E_w)\). This is graphwise
+      finite-window Hadamard control, not a full Costello locality/RG
+      theorem for the inverse-limit field theory.  The remaining
+      obstruction is the class in
+      $H^1(\mathcal O_{\mathrm{loc}}(\mathcal E_w),Q+\{I_0,-\})$
+      for the mixed brane-defect interaction.
   \end{enumerate}
-  Therefore Costello's Quantum Master Equation and locality theorems
-  extend to the weighted setting, closing
-  Problem~\ref{prob:weighted-rg-locality}.
+  Thus the Hadamard and wave-front part of
+  Problem~\ref{prob:weighted-rg-locality} is reduced, graph by graph,
+  to finite-window locality plus Mittag-Leffler compatibility. The theorem
+  does not prove summability over graph topologies, a full Costello
+  locality theorem for the inverse-limit field theory, or the vanishing
+  of the mixed brane-defect QME obstruction class.
 \end{thm}
 
 \begin{proof}
@@ -184,35 +192,29 @@
   (hypothesis on $I$). Each internal edge contracts one source leg
   with one target leg via the Casimir $C_{\mathfrak h,w}$. By
   \ref{w:W1}, each such contraction multiplies the weight by a factor
-  $\leq C_w$. The total weight after $E(\Gamma)$ contractions is
-  bounded by $C_w^{E(\Gamma)}$ times the bulk counterterm norm. The
+  $\leq C_w$ on Hamiltonian legs, and the cotangent legs are bounded
+  on the finite windows appearing in the graph by
+  \ref{w:W2}. The total coefficient size after $E(\Gamma)$
+  contractions is bounded by a finite graph-dependent constant times
+  the bulk counterterm norm. The
   bulk counterterm norm $|C_n^{\mathrm{base}}[\Gamma]|$ is finite by
   Costello's bulk locality theorem
-  \cite[Thm.~5.0.7]{costello-renormalization}.
+  \cite{costello-renormalization}*{Chs.~5--7}.
 
-  $C_w^{E(\Gamma)}$ is finite at every fixed graph order
-  $\hbar^n$. The Costello grading
-  \cite[\S2.4]{costello-renormalization} assigns to each connected
-  Feynman graph $\Gamma$ the order
-  $n(\Gamma)=b_1(\Gamma)+\sum_{v\in V(\Gamma)}g_v$, where $b_1$ is
-  the first Betti number and $g_v$ is the genus label at vertex $v$.
-  At fixed $n$, the set of stable connected graph topologies
-  contributing to the homotopy RG flow on
-  $I\in\mathcal O_{\mathrm{loc}}(\mathcal E_w)$ of bounded
-  polynomial-degree $D_0$ is finite: the polynomial-degree bound
-  $D_0$ caps each vertex valence by $D_0$, so the relations
-  $2E(\Gamma)=\sum_v\mathrm{val}(v)\leq D_0\,V(\Gamma)$ and
-  $V(\Gamma)\leq 2n$ for stable graphs with $\mathrm{val}(v)\geq 3$
-  (cf.\ \cite[Lem.~6.4.1]{costello-renormalization}) give
-  $E(\Gamma)\leq D_0\,n$. Hence
-  $C_w^{E(\Gamma)}\leq C_w^{D_0 n}$, finite at each fixed $n$ and
-  bounded uniformly across the finite set of contributing graph
-  topologies. The bound $C_w^{D_0 n}$ depends on $n$ but is
-  independent of $w_0$, which is the uniformity-in-$w_0$ statement
-  that allows the Mittag-Leffler limit.
+  This graph-dependent constant is finite for the fixed graph
+  \(\Gamma\) and the fixed finite output window under consideration.
+  No summability over all graph topologies at a fixed \(\hbar\)-order
+  is asserted here.  Such a summability statement belongs to the
+  renormalized QME problem, together with the usual stability,
+  counterterm, and locality hypotheses of Costello's graph expansion.
+  The present theorem needs only the graphwise bound: for a fixed
+  graph, the coefficient degrees and the corresponding weight ratios
+  lie in a finite set, so the compatible finite-window counterterm
+  system has a Mittag-Leffler limit when the windowwise representatives
+  are themselves compatible.
 
   (iii) The bulk Costello locality theorem at fixed window $w_0$
-  asserts that the windowwise counterterm
+  is used only as a finite-window input: the windowwise counterterm
   $C_n[\Gamma]^{w_0}\in\mathcal O_{\mathrm{loc}}(\mathcal E_w^{w_0})$
   is a local functional with kernel supported on the diagonal of
   $\R^2\times\C^2$. By the wave-front bound of
@@ -221,27 +223,26 @@
   $\mathcal O_{\mathrm{loc}}(\mathcal E_w^{w_0'})\to
   \mathcal O_{\mathrm{loc}}(\mathcal E_w^{w_0})$ for $w_0'\geq w_0$
   is the restriction of polynomial functionals to truncated
-  coefficient indices; this preserves locality (the support of the
+  coefficient indices, equivalently setting higher coefficient fields
+  to zero; in the regulator-admissible sector these maps are
+  degreewise surjective.  This preserves locality (the support of the
   truncated kernel is the same diagonal). The inverse limit
   $\mathcal O_{\mathrm{loc}}(\mathcal E_w)=
   \varprojlim_{w_0}\mathcal O_{\mathrm{loc}}(\mathcal E_w^{w_0})$
-  exists in the weighted Tate category and is the local-functional
-  class on $\mathcal E_w$. The windowwise counterterms
+  exists in the weighted Tate category and is the candidate
+  local-functional class on $\mathcal E_w$. The windowwise counterterms
   $\{C_n[\Gamma]^{w_0}\}_{w_0}$ form a compatible inverse system,
   and their inverse limit
   $C_n[\Gamma]=\varprojlim_{w_0}C_n[\Gamma]^{w_0}$ lies in
   $\mathcal O_{\mathrm{loc}}(\mathcal E_w)$ with bound (ii).
 
-  The cohomology class
+  The possible obstruction class
   $[C_n[\Gamma]]\in H^1(\mathcal O_{\mathrm{loc}}(\mathcal E_w),
-  Q+\{I_0,-\})$ is the inverse limit of the windowwise cohomology
-  classes $[C_n[\Gamma]^{w_0}]\in H^1(\mathcal O_{\mathrm{loc}}(
-  \mathcal E_w^{w_0}),Q+\{I_0,-\})$. By Costello's bulk locality
-  theorem, each windowwise class is the bulk class tensored with
-  the windowwise Casimir; the inverse system is again surjective,
-  and the inverse limit is the bulk class tensored with the
-  weighted Casimir. This closes Costello requirement
-  \ref{costello:CC3} (RG flow compatibility) and the QME locality.
+  Q+\{I_0,-\})$ is represented by the inverse limit of the compatible
+  windowwise classes when that compatibility holds.  The theorem
+  identifies its analytic support and coefficient topology; it does
+  not assert that the resulting class vanishes for the mixed
+  brane-defect interaction.
 \end{proof}
 
 \begin{rmk}[Why the Hörmander commutation works]\label{rmk:hormander-commutation}
@@ -265,42 +266,58 @@
   Consequently, the wave-front bound of
   Lemma~\ref{lem:windowwise-parametrix}~(3) is exact and
   $w_0$-uniform; passing to the Mittag-Leffler limit preserves the
-  local-functional class graph-by-graph at every order $\hbar^n$.
+  local-functional class graph-by-graph at every order $\hbar^n$,
+  conditional only on compatibility of the windowwise counterterm
+  system.
 \end{rmk}
 
-\begin{cor}[Unconditional cotangent-lift, all orders in $\hbar$]\label{cor:wt-cotangent-lift-unconditional}
-  Theorem~\ref{thm:wt-cotangent-lift} part (e) holds unconditionally:
-  the all-order quantum derived-center isomorphism
+\begin{cor}[Hadamard reduction of the conditional weighted QME lift]\label{cor:wt-cotangent-lift-conditional-hadamard}
+  Proposition~\ref{prop:wt-conditional-qme-lift} is reduced to the
+  remaining mixed brane-defect QME obstruction class.  The candidate
+  all-order quantum derived-center comparison
   $$\Phi_\hbar^{w}\colon C^\bullet_{\mathrm{CE},\mathrm{cont}}\bigl(
     \mathfrak h_{w,\hbar}\ltimes\mathfrak h^{\vee,w}_{\hbar,\mathrm{cont}}[1]
     \bigr)[[\hbar]]
-    \xrightarrow{\sim}
+    \longrightarrow
     Z^{P_{0,\hbar}}_{\mathrm{fact}}\bigl(\mathrm{Obs}^\hbar_{\mathrm{open}}
     \bigr)\big|_{\mathfrak g_w}$$
-  extends to the weighted cotangent direction at all orders in
-  $\hbar$ as a continuous $\C[[\hbar]]$-linear cochain map.
-  Equivalently, Corollary~\ref{cor:wt-descendant-conditional}
-  holds unconditionally on the descendant (one-antifield) sector at
-  all orders in $\hbar$.
+  is not asserted unconditionally as an isomorphism. It extends to the
+  weighted cotangent direction at all orders in $\hbar$ as a continuous
+  $\C[[\hbar]]$-linear cochain map provided the obstruction class in
+  $H^1(\mathcal O_{\mathrm{loc}}(\mathcal E_w),Q+\{I_0,-\})$
+  vanishes.  Equivalently,
+  Corollary~\ref{cor:wt-descendant-conditional} remains conditional
+  on that obstruction-vanishing statement.
 \end{cor}
 
 \begin{proof}
-  Theorem~\ref{thm:wt-cotangent-lift} (e) is conditional only on the
-  Costello-locality compatibility identity of
+  Proposition~\ref{prop:wt-conditional-qme-lift} is conditional on the
+  Costello-locality/QME compatibility identity of
   Problem~\ref{prob:weighted-rg-locality}. By
-  Theorem~\ref{thm:hadamard-mittag-leffler}, this identity holds.
-  All other inputs to the proof of
-  Theorem~\ref{thm:wt-cotangent-lift} (e) are unconditional.
+  Theorem~\ref{thm:hadamard-mittag-leffler}, the Hadamard
+  wave-front-set and Mittag-Leffler coefficient-topology pieces of
+  that identity are controlled.  The remaining datum is the vanishing
+  of the mixed brane-defect QME obstruction class.
 \end{proof}
 
-\begin{rmk}[Status of Problem~\ref{prob:weighted-rg-locality}]\label{rmk:weighted-rg-locality-closed}
-  Problem~\ref{prob:weighted-rg-locality} is closed unconditionally
-  by Theorem~\ref{thm:hadamard-mittag-leffler}. The deciding
-  technical input is the spacetime/coefficient factorization of the
-  Costello propagator together with the trivial
-  Hörmander wave-front set of the algebraic Casimir factor: these
-  reduce the Mittag-Leffler limit on the coefficient side to a
-  passive tensor operation, leaving Costello's bulk locality theorem
-  to do all the analytic work. No additional smoothing kernel
-  (R3) or alternative parametrix scheme (R4) is required.
+\begin{rmk}[Status of Problem~\ref{prob:weighted-rg-locality}]\label{rmk:weighted-rg-locality-reduced}
+  Problem~\ref{prob:weighted-rg-locality} is reduced, not closed, by
+  Theorem~\ref{thm:hadamard-mittag-leffler}. The deciding technical
+  input proved here is the spacetime/coefficient factorization of the
+  Costello propagator together with the trivial Hörmander wave-front
+  set of the algebraic Casimir factor. These reduce the
+  Mittag-Leffler limit on the coefficient side to a passive tensor
+  operation for Hadamard locality.  They do not compute the
+  brane-defect QME obstruction class.
+\end{rmk}
+
+\begin{rmk}[Relation to regulator independence]\label{rmk:hadamard-regulator-independence}
+  Theorem~\ref{thm:wt-regulator-independence-admissible} proves that,
+  after the finite-window Mittag-Leffler hypotheses of
+  Definition~\ref{defn:regulator-admissible-sector} are imposed, the
+  Hadamard reduction is independent of the admissible exponential
+  weight.  This is only weight-independence among regulated coefficient
+  products.  The unweighted product/direct-sum pair is not a further
+  endpoint of this corollary, because Lemma~\ref{lem:tate-casimir-obstruction}
+  says that the required coefficient Casimir is absent there.
 \end{rmk}

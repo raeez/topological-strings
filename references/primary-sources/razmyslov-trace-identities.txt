@@ -1,0 +1,1656 @@
+Izv. Akad. Nauk SSSR                                                    Math. USSR Izvestija
+Ser. Mat. Tom 38 (1974), No. 4                                               Vol. 8 (1974), No. 4
+
+
+
+
+                TRACE IDENTITIES OF FULL MATRIX ALGEBRAS
+                     OVER A FIELD OF CHARACTERISTIC ZERO
+UDC 519.4
+                                     JU. P. RAZMYSLOV
+
+
+
+         Abstract. In this paper we consider the trace identities satisfied in a full matrix
+    algebra of order n. For the case of a field of characteristic zero we prove that all
+    trace identities are consequences of one obtained from the Hamilton-Cayley theorem.
+
+      This paper should be regarded as an attempt to find an approach to the problem of
+determining the identities of a full matrix algebra of order n. As shown by the author
+in [ l ] and [2], determining the identities of a matrix algebra of order two i s closely
+related to determining the Lie identities of the Lie algebra sl(2, K); and determining
+those specific identities connected with the existence of Kaplansky polynomials, i.e.
+polynomials whose values on a matrix algebra of order n яге scalar matrices, not all
+of which are zero, i s related to the existence of polynomials which are not identities and
+vanish on sl(n, K). Starting from this, it appears likely that solving the identity prob-
+lem for the Lie algebra sl(n, K) and determining the polynomials which vanish on
+sl(n, K) should help in determining the identities of the full matrix algebra. On the
+other hand, even a cursory comparison of our § 4 with the solution of the problem of
+determining the irreducible representations of the full linear group GL(V) of an
+                                                             m
+я-dimensional linear space V in the tensor product ® V [3] suggests that here also
+there is some mysterious connection with the identities of the matrix algebra.
+     The author hopes that an elucidation of this connection will bring closer the solu-
+tion of the identity problem for the matrix algebra of order n.
+     In this paper we determine all trace identities for a matrix algebra over a field of
+characteristic zero. It is intuitively clear what i s meant by a trace identity: for ex-
+ample, for the matrix algebra of order one the expression у — tr(y) vanishes upon
+substituting any matrix for y; the same i s true if in the expression
+
+                        У*~У tr (у) + \        (tr (y)? - -|- tr
+
+
+    AMS (MOS) subject classifications (1970). Primary 15A24, 16A38, 16A42; Secondary 17B30.
+                                                                Copyright С 1975. American Mathematical Society
+
+                                             727
+ 728                                JU. P. RAZMYSLOV
+
+ we substitute any matrix of order two for y. The precise definition of a trace identity
+ and also the definitions of a generalized polynomial and verbal ideal will be given in
+§2.
+     The material discussed in this paper is arranged as follows.
+     In § 1 we construct a Kaplansky polynomial and show that tr(y) can be expressed
+as the quotient of two Kaplansky polynomials. This allows us to obtain from each
+trace identity an ordinary identity of the matrix algebra. In addition, we construct in
+this section a trace identity corresponding to the Hamilton-Cayley theorem and show
+how it implies Amitsur's theorem on the minimal identity of a matrix algebra.
+       Our main result (a precise formulation is given in §2) is a proof of the fact that
+ there are essentially no trace identities other than the one just mentioned. The proof
+ is given in § § 3 - 5 .
+       In § 3 we construct an auxiliary algebra, by means of which we introduce an oper-
+ ation on the set of multilinear generalized polynomials of degree / in the variables
+ x y, • • •, х^ converting this set into the group algebra of the symmetric group on / + 1
+ letters. In addition, we construct for this set of multilinear generalized polynomials
+ a symmetric bilinear form which is associative with respect to the new operation. If
+ the characteristic of the ground field is zero, the annihilator of this form consists ex-
+ actly of all multilinear trace identities of degree /.
+       Hence in the set of all multilinear generalized polynomials of degree / in x . , . . . ,
+х ; (/ = 1, 2, • • •) the trace identities form two-sided ideals with respect to the new
+operation. It turns out that the verbal ideals such that for any natural number / the
+ set of multilinear generalized polynomials of degree / in Xj, • • •, x^ of this verbal
+ideal also forms a two-sided ideal with respect to the new operation admits an ex-
+plicit description in terms of Young tables [4]. This description is given in § 4 , where,
+in particular, we prove that any ascending chain of these verbal ideals terminates.
+      In § 5 , using the results of § 4 , we prove that all trace identies of the full matrix
+algebra of order я over a field of characteristic zero are consequences of one corres-
+ponding to the Hamilton-Cayley theorem. In Corollaries 1 and 2 we give a new equiv-
+alent formulation of the problem of determining all identities of the matrix algebra
+of order n, showing, in essence, that for its solution it is necessary to overcome
+purely technical difficulties. At the end of this section, using § 4 , we give a simple
+proof of the fact that the (p — l)th Engel identity does not imply the nilpotency iden-
+tity [x j , • • •, x^] (k = 1, 2, • - • ) if the field has characteristic p > 3. This proof also
+shows that the multilinear trace identities of a matrix algebra over a field of charac-
+teristic p > 0 cannot be described by the annihilator of the bilinear form mentioned
+above.
+      We will employ the following notation: Mn is the full matrix algebra of order n
+over a field K, and S. is the group of all permutations on a set of / letters. If s €
+St and /(x j , . • . , x j) is a multilinear polynomial of degree /, we denote the polynomial
+                            TRACE IDENTITIES OF FULL MATRIX ALGEBRAS                                                                               729
+
+                            Ь       s     a n d        !1па11         w e   d e       o t e                                  t h e
+# * s ( l ) ' " " ' * * ( / ) ) У ^'              '             У>                «            by f\Xi=av...tX-a[                    expres-
+sion obtained by substituting the elements flj, • • •, a{ for the variables x j , • • •, x{
+in the polynomial / ( * j , • • • , *j).
+     The author is sincerely grateful to A. L. Smel'kin for his interest in this research.
+
+               § 1 . Kaplansky polynomials. The Hamilton-Cayley polynomial
+        The aim of this section is to convince the reader, by means of several examples,
+of the usefulness of studying the trace identities of the matrix algebra Мд. A precise
+definition of a trace identity will be given in § 2 . As far as this section is concerned,
+it will be quite sufficient for the reader to think of a trace identity as an expression
+containing a formal trace function tr and certain variables which vanishes upon re-
+placing the variables by arbitrary matrices in Mn.
+        We begin our exposition with a simple lemma, but one which plays an important
+role in this paper.
+
+        Lemma 1. Suppose                e ,,•••, e , is an arbitrary basis                                   of the full matrix          algebra
+M       over an arbitrary field, and e ,,••-, e , the dual basis with respect                                                 to the        bilinear
+form (x, y) a tr(xy) defined                by the trace.                   Then for any element                     a 6 M n we have         the
+equality
+
+
+                                                                  *, = tr (a)-1,                                         •                         (D
+
+
+where 1 denotes the identity                      matrix.
+
+        Proof. The reader can immediately verify that (1) is true in the special case where
+e.,...,     e , is taken to be the basis consisting of the matrix units e .. (f, / = 1, • • •,
+я). Hence it suffices to show that the left-hand side of (1) does not depend on the
+choice of the basis e , , • • • , e ,. If e                                  ...              e „ i s another basis, where e. =
+    2                           L
+                                                  n*             I'               ~n                                                 '
+2 " ,c..e., then it is well known that e. = Xn_,c..e. . Using these two equalities, we
+obtain
+                    г
+                   п    f
+                                        n» n'                               n»                / n2         \        n*
+                                                       c e ae                         ea             c e
+                  2 e'tae? = 2 2 /' / <* = 2 ' 2 i' '' = 2
+
+which shows that the left-hand side of (1) is independent of the choice of basis. The
+lemma is proved.
+      As the first application of this lemma we will construct for the matrix algebra
+Mn over the field К a Kaplansky polynomial, i.e. a polynomial which is not an iden-
+tity of Mn and assumes scalar matrix values on Mn.
+     In accordance with the notation used in [2], we denote by A. a linear transforma-
+tion acting on the subspace of the linear space of all noncommutative polynomials
+which is generated by the monomials of degree 1 with respect to each variable occur-
+ 730                                  JU. P. RAZMYSLOV
+
+ ring in the monomial; by definition, AJ(axb) = Ьхл for each such monomial.
+
+       Theorem 1. Suppose
+                                      E()
+                     d = 2 (— l)
+                                                                                 2
+ where the sum extends over all permutations s on the set (1, • • •, я ), and
+ equal to 0 or 1, depending on the parity of s. Then the polynomial
+
+                                                     ^   1
+
+
+
+ is a Kaplansky polynomial of the algebra M .
+
+       Proof. Let e j , . •., e 2 be a basis of Mn, and J the quotient field of the ring of
+polynomials in the commutative variables x^-p and yy\ j = 1, • • •, n , i = 0, 1, 2, • • •,
+over the field K. To prove the theorem it suffices to show that if in the polynomial с
+we put
+
+
+
+
+then the resulting expression will be equal to a nonzero scalar matrix. We will prove
+more, namely that under such a change of variables we have in ? ® ^ M the equality
+
+                                  C=tr      (yj.tr   (d)-l.                                    (2)
+
+     To prove this equality we must first learn how to compute the trace. If и = ax b
+is a word of degree 1 with respect to each variable occuring in it, then, in view of the
+well-known property tt(AB) = tt(BA) of the trace, we have
+
+                                     tr (ax{b) — tr (xiba),
+
+or, by the above definition of the operator A.,
+
+
+
+                                                                                     2
+       Consider the elements x ^ • • •, x 2 a n c J (Ad)\x    = 1   (i = 1, • • •, n ). It is obvious
+that Xj, • • •, x 2 form a basis of the matrix algebra *^ ®/<Mn over the field 3; also,
+in accordance with (3),
+
+
+
+But the polynomial d is such that it vanishes if in place of x{ we substitute x. for
+any / = 1, • • • , i - 1, ; + 1, • • •, я . Hence the elements (Л^Л)^ _ j (i = 1, — , я 2 )
+form, to within the factor tr(d), the basis dual to the x. (i = 1, • • •, я ) with respect
+to the bilinear form defined by the trace, and (2) is a direct consequence of Lemma 1.
+It remains to show that the right-hand side of (2) is not equal to zero. It is clear that
+                      TRACE IDENTITIES OF FULL MATRIX ALGEBRAS                                       731
+
+tr(y 0 ) 4 0. We must show that tt(d) ^ 0. Since the elements x{ = S T ^ x ^ e . and y. =
+2" = 1 y|. ; ) e. are of "general form" for the algebra M^, it suffices to show that tnV) ф. О
+under some substitution of the matrix units es{ in place of x;. and y^. Put
+
+              Xt+nu-i) = eq       (l, / = 1, . . . , /l), # x = <?ц,           l/n'+i = вщ,
+
+and for t — 2, • • • , n2 put уt = ekl if x(_ j = e ^ and xt = e ^ . Under such a substi-
+tution only the monomial y . x . y . x 7 . . - y   7
+                                                       x ,y ,        = e i i in the polynomial a? does
+not vanish; hence tr(fi?) = 1. The theorem i s proved.
+      We will henceforth assume that the ground field К over which the matrix algebra
+Mn i s considered has characteristic zero, even though this i s not essential for some
+of our subsequent results.
+      In the course of proving Theorem 1 we obtained the equality (2). Substituting
+y Q = 1 into both sides of this equality and taking into account that tr(l) = n in M ,
+we obtain
+                                       c
+                                           L = i = n " (d) • 1;
+
+hence we can rewrite (2) as follows:
+
+                                              ^    1     >       .                                   (4)
+
+      In this equality с and c\ _ , are Kaplansky polynomials, and the equality holds
+upon substituting any matrices in M^ in place of the variables. This equality i s not
+an identity in the usual sense, since it contains the trace. But it demonstrates the
+possibility of obtaining an ordinary identity of Mn from expressions of the form
+
+                                                                tr
+                                                                 fa)=                                    (*)
+where aQ, — , at are words in the variables Xj, x2, • - -. To do this we multiply (*)
+by a sufficiently high power of the. polynomial c\y _l . and apply (4) to get rid of the
+                                                   0~
+traces.
+      We now turn to the construction of a trace identity for which it will be proved in
+§§3—5 that all other trace identities of M are consequences of it.
+      An important example. The Hamilton-Cayley theorem asserts that the character-
+istic polynomial of a matrix у vanishes upon substituting у into it, i.e.
+
+                                    {Deta-!-i/)} |x-,=0.
+But
+
+
+
+                    Dot (X • 1 - y) = 2 ( - 1)4- (K                          А,,,) Я,""1,
+                                             1=0
+
+
+where Aj, • • •, An are the characteristic roots of y, and the a. are the elementary
+symmetric functions. It i s well known that in the case of a field of characteristic zero
+ 732                                            JU. P. RAZMYSLOV
+
+ each fft.(Aj, • • •, A^) can be expressed in terms of polynomials in A* + • • • + A* = tr(y*),
+ where k = 1, • • •, n. Consequently
+
+                              °t(K              K) = gi(tr       {y), ...,    tr (y*))                       (5)
+
+ and the Hamilton-Cayley theorem yields the trace identity
+                             n
+                                                                       n
+                            2 ( - i ) W ( r / ) , ••• , « (y ))y-' = o.
+                            1=0
+
+
+
+       We call the left-hand side of this equality the Hamilton-Cayley polynomial and
+denote it by fn(y)-       It i s possible to obtain a recurrence formula for the calculation of
+the Hamilton-Cayley polynomial of the matrix algebra^ Mn:
+
+
+                       fi-y—f           (У)>       fn = fn-i • У              tr (/„_, - y).
+                                                                        n
+       We will not need these formulas, and for our purposes it suffices to know that the
+Hamilton-Cayley polynomial has the form
+
+
+
+
+for certain rational coefficients depending only on n, as can be seen by comparing die degrees
+of both sides of (5).
+       We conclude this section with a proof of a theorem of Amitsur, which states that
+IAn satisfies the standard identity of degree 2я:
+
+
+                                  Ргп — Zi (                )
+
+
+       We will first show how the identity P2n                  can be obtained from the identity     yn.
+                                                                                               x
+The complete linearization of the identity y" yields the identity ^ s e S sti\'                     •' x s i n y
+                                                                         n
+which we denote by g(x j , . • • , xn). Substitution into this identity of the commutators
+                                                 trl
+JC(. = [*2J_ Г X2i^' l' ~ ^' * " • ' " ' wlt^          e subsequent skew-symmetrization of the result-
+ing expression yields the equality
+
+
+
+
+and it can be verified that / 3 ^ 0 . This shows that P2                     i s a consequence of y". Ex-
+actly the same argument can be used to obtain P2n                     from the Hamilton-Cayley identity
+fn if we observe that
+                    TRACE IDENTITIES OF FULL MATRIX ALGEBRAS                              733
+
+                           s)
+                     ( - lf s {(a0 tr :<«,) . . . tr ( a ^ U ^          } = 0,
+
+
+ where aQ, — , a( are words in Xj,..., x^, and where the word aQa j • • • « r has degree
+ 1 with respect to each variable x. (? = 1, • • •, n). Indeed, if the length of the word ai
+ is equal to ri (i = 1, • • •, t), then the sum on the left-hand side of the equality can be
+ split into summands which are equal, to within a change of variables, to
+
+
+ But since tr(AB) = tr(BA) for any matrices А, В € Mn, it follows that tr(P 2m ) = 0 for
+ any natural number m. Hence as a result of the indicated process for obtaining P 2 n
+ from / the nonzero terms are obtained only from y". In view of what has been said
+ above, this proves Amitsur's theorem.
+
+             § 2 . The algebra of generalized polynomials. Basic concepts
+     In this section we will be concerned with formalizing the trace identity problem
+of the matrix algebra M and we will state precisely the main result of this paper.
+For this purpose we will construct the algebra of generalized polynomials, which will
+play the same role for trace identities as the algebra of noncommutative polynomials
+plays for ordinary identities.
+     In order to construct this algebra we need variables Xy x^, • • • and a formal trace
+function tr( ). We will first construct an auxiliary algebra, which we will denote by
+GQ. We define the elements of GQ inductively:
+      1) Any nonempty word of finite length in the variables x ^ J C 2 , - . . is an element
+of Go.
+     2) If A and В яте elements of GQ, then AB is an element of GQ.
+     3) If a is a nonempty word and A and В are elements of Go, then tr(AaB),
+triaB) and tr(^a) are elements of Go.
+     Item 2) of this definition defines multiplication in Go as the operation which at-
+taches the element В to the element A, and this converts GQ into a semigroup. The
+reader should look carefully at item 3) and observe that expressions of the form
+tr(tr(-.O) are not elements of GQ.
+    Let G be the semigroup obtained as the factor semigroup of GQ by the following
+congruence:
+                                     tr (A)B = В tt (A),                                   (6)
+
+                                     tr (AB) = tr (BA),                                    (7)
+
+                                tr (Л5р(В)) = tr (A)tr (B)                                 (8)
+
+for any А, В 6 G. such that all expressions occurring in (6)—(8) are defined. In view
+of the relations (6)—(8), it is clear that G, as a semigroup, is generated by the elements
+ 734                                               JU. P. RAZMYSLOV
+
+of the forms a and tr(&), where a and b are arbitrary nonempty words. Hence any
+element of G has the form
+
+                                              a0 и (а,) ...       tr (a,),                                        (9)
+
+where the ai are words and a^,. •., a( are nonempty. The representation of elements
+of G is obviously not unique; but it is easy to get around this nonuniqueness if as a
+representative of a class of congruent elements of the form (9) we take the element such
+that the word a^a^ • • • a{ is maximal in the sense of the lexicographic ordering.
+     By the algebra of generalized polynomials over a field К we mean the semigroup
+algebra over К of the semigroup G, the elements of G being the generalized monomials
+and the elements of the algebra the generalized polynomials. We will denote this al-
+gebra by the letter %. We can define in a natural way the degree of each generalized
+monomial with respect to a variable xi as the number of times that xi occurs in the
+representation of the monomial. Thus to each generalized monomial in * j , • • •, x ; we
+can assign a set of numbers (r j , •. •, r^, where ri is the degree of this monomial with
+respect to x\. We call this set of numbers the type of the generalized monomial, and a
+generalized polynomial which is a linear combination of generalized monomials of the
+same type (r j , • •. , r^) is called a homogeneous generalized polynomial of type
+(rv- • •, Tj); for example,
+
+                                     *i*2 + X2 tr (*,) -f -L t r {x^)
+                                                           z
+is a homogeneous generalized polynomial of type (1.1), but the polynomial x.+x.                                  is
+not homogeneous. A homogeneous generalized polynomial f(xl, — , * p of type
+(1, •• •, 1) (/ ones) is called a multilinear generalized polynomial of degree /.
+      We define
+
+                                tr ( 2 < 4 . * .      a tr
+                                                    fl/ o     (a,) . . . tr (a,))
+
+                                      aa e                   tr    a            tr
+                              = 2 " - t" (°J                      ( i) • • • (<*')>
+whenever the right-hand side is defined. It is easy to see that the right-hand side of
+(10) is defined if and only if each aQ is nonempty.
+     For any generalized polynomial g(x j , • • •, x^) e § and any matrices S , , . . . , В ,
+€ M we can construct the expression g(B , , . • • , В j), in which tr(B) is interpreted as
+
+the scalar matrix on whose main diagonal appears the element of the field К equal to
+the trace of B. Under such an interpretation the equalities (6)—(8) and (10) express
+well-known properties of the function tr.
+        Definition 1. A generalized polynomial g(x j , • • •, x^) € \-f is called a trace iden-
+t i t y of t h e m a t r i x a l g e b r a M i f g(B .,•••, В j) = 0 f o r a n y m a t r i c e s В .,•••, В . £ M .
+        Note that the concept of an identity of the algebra Mn is compatible in a natural
+way with Definition 1, since the subalgebra generated by Xj, * 2 , . . • in the algebra
+§ of generalized polynomials is a free associative algebra.
+                     TRACE IDENTITIES OF FULL MATRIX ALGEBRAS                                   735
+
+       It is clear that the set of trace identities for Mn forms a two-sided ideal of § .
+Moreover, if g(x., — , χ ρ is a trace identity for M^ and the generalized polynomials
+h v · · ·, hl have the same form as the expression under the trace symbol in the left-
+hand side of (10), where each aQ is nonempty, then g(h 1 ? · · · , h j) is also a trace
+identity for Mn·
+       Definition 2. A two-sided ideal / of the algebra § of generalized polynomials is
+called a verbal ideal if for any generalized polynomials h j , · · · , hj e § having the
+form
+                                   α               tr    a
+                               2 ".·°. «A               ( i) · · · a (a/)·
+
+where each β. is nonempty (the words a .,···,                  a are nonempty by definition of y),
+the fact that g(x j , · · · , xp e / implies that g(h ρ • · • , h j) € / for any generalized
+polynomial g.
+       In view of this definition and the preceding remark, the set of trace identities forms
+a verbal ideal of § .
+       Definition 3. A generalized polynomial g is called a consequence of the general-
+ized polynomials g j , . . . , | ( if the verbal ideal generated by g^t· ·· •> gi (i.e. the
+smallest verbal ideal containing g ^ · · · J g j) also contains g. Two sets of general-
+ized polynomials are called equivalent if the verbal ideals generated by each set
+coincide.
+       Exactly as for the ordinary identities of Μ , we can consider the problem of de-
+termining all trace identities of Μ , and, in particular, the question of the existence
+of a finite set of trace identities of Mn such that all others are consequences of
+these. The answer to these questions is given by the following theorem:
+
+       Theorem 2. All trace identities of the full matrix algebra Μ over a field of
+characteristic zero are consequences              of the Hamilton-Cayley identity f .
+
+       This theorem means that any trace identity of Mn lies in the verbal ideal gen-
+erated by / .
+       It is evident from the relations (6)—(8) that any verbal ideal is generated by its
+multilinear generalized polynomials; hence to prove Theorem 2 it suffices to show
+that all multilinear trace identities follow from / .
+     Let Τ j denote the set of multilinear generalized polynomials in the variables
+χ v · · · , xl of type (1, · · · , 1) (/ ones).
+
+     Lemma 2. The dimension of the linear space Τ j is (/ + 1)!.
+
+     Proof. In view of the definition of the algebra of generalized polynomials, it suf-
+fices to prove that the semigroup G contains (/ + l)! multilinear generalized monomials
+in χ j , · · · , χ j. As noted above, each element of G Γ\Τ. can be uniquely represented in
+the form
+                                       a 0 tr (a t ) . . . tr (ai),                            (Π)
+736                                        JV. P. RAZMVSLOV
+where aj, · · · , a{ are nonempty words, and where the multilinear word aQa. .. .a >
+bQb j · · · b( in the sense of the lexicographic ordering if bQti(b j) · · · tr(6 ) i s congruent
+to agtriaj) · · . ίΐ(α() with respect to (6)-(8). If aQ i s nonempty, then the number of
+generalized monomials of the form XJZQ tr(aj)... ti(at) (xi fixed) is equal, by induction,
+to /!; hence the total number of generalized monomials of the form (11), where e Q i s
+nonempty, is equal to /(/!). If aQ is empty, then a^ = x ^ j and the number of such
+generalized monomials agrees with the number of generalized monomials
+
+                                       a\ tr ( a 2 ) . . . tr (a,),
+which is equal, by induction, to /!. Therefore the total number of elements of the form
+(11) is (/+1)!.
+      The lemma is proved.
+
+                       § 3 . An auxiliary algebra and bilinear form
+     In this section we will reduce the problem of determining the multilinear trace
+identities of degree / to the problem of classfying the two-sided ideals of the group
+algebra K[S.+ .] of the symmetric group 5. + ,.
+    I. The algebra § Λ · Suppose M^ is the full matrix algebra of order η over the
+complex field C, σ the anti-isomorphism of Mn which is the composition of matrix
+transposition and complex conjugation, e .,···,   e 2 a n orthonormal basis of Μ with
+respect to the bilinear form (x, y) = ti(xy) such that a(e;) = ei (as the first η vectors
+we can take the matrix units e.., and for the others we can take, for example,
+
+                              1 .                     ,,/37
+                            -ζτ=· (c*/ L+ ew> I / -r— (flu — eik),
+                             \2               γ    2
+k > I). Let J be the commutative algebra over C with generators xy\ j = 1, •                         «
+i = 1, 2, · · ·, and defining relations
+
+                                                                = =
+                           X[ Χι Χΐ        = U,       Xi Xi           0// \Xi ) *
+
+
+      Let Μ denote the matrix algebra over the ring J, i.e. Μ = j ® _ Μ . and con-
+                                       v                         w
+           n                                                                           τι   t-   π
+sider the subalgebra § n generated by all elements of the form
+                                n»
+                             ·* —     y    y!' */>,    fr (Υt Yt               V» I
+                            J\,t —·   f \ ΛI   **/>         \ ·1 'ΐ    · · •   "(b/*
+
+
+
+Here, and from now on, tr(B) denotes the scalar matrix on whose diagonal appears the'
+element equal to the trace.
+     Let us mention some properties of the algebra § .
+     1°. Consider the element χ ax ., where a is an arbitrary element of Μ . In view
+of Lemma 1 and the relations (12), we obtain
+
+
+
+                                                      Ρ*ι       i ^ t r
+                                                /-ι
+                             TRACE IDENTITIES OF FULL MATRIX ALGEBRAS                                        737
+
+         If a = 1, then
+
+
+
+
+ and consequently
+
+                                                         1?              --            Ρ
+                                                  = — tr (a),             xt~xi = n·       —
+                                                         η                                 η
+
+ for any element a € § . From (13) we see that
+
+                             [**, Xj\= 0,           [JfCWi, jc/] = 0,
+
+         A direct calculation shows that
+
+
+                            η                        η                                         η    η   η
+
+
+ From these equalities we obtain
+
+                                                                               fi = — —- a.
+                                                                                       η       η
+
+
+         On the other hand, it follows from (13) that
+
+
+                                                              = — tr
+
+A comparison of the last two equalities, taking into account that χ .In is a nonzero
+scalar matrix, shows that for any a β y
+
+                                                         tr (χμ) Xj ~       -La.                            (14)
+                                                                           η
+
+         In view of the above, it is obvious that
+
+                           [ΧΪ, *,] = 0,            tr(x?a)=?/ "(a),                tr(x2i) = nxl           (15)
+
+
+    Finally, the first of the defining relations (12) implies that a generalized monomial
+w in the 5". satisfies the equality
+
+                                                              w = 0,                                        (16)
+
+if its degree with respect to some x\ is strictly greater than 2. The equality (16)
+shows that any homogeneous generalized polynomial in the x~. of degree at least 3
+with respect to some x~; is equal to zero. It follows from (13)—(15) that for any homo-
+geneous generalized polynomial f(x• ,···, χ. t χ. , · . -, χ. ) of degree 2 with respect
+                                             l
+                                    Ί          s' Ί         't
+t o xi    , · · · , x(   a n d d e g r e e 1 w i t h r e s p e c t to   χ . , · · · , χ • we have
+ 738                                               JU. P . RAZMYSLOV
+
+
+
+                                                                     fit-
+
+where g(x. , · · · , * . ) is a generalized polynomial.
+       2°. The special case of (17) where / = 0 is particularly interesting. In this case
+
+                                                       Ϊ?                   *?
+                                                /»«</)-ίι            ...    -i,                            (18)
+                                                            η                η
+
+where α(/) e C is the number, uniquely detennined by the generalized polynomial /,
+such that
+
+                            tr (f(xlt,        . . · , */,)) = πα φ (*£>)· ... (Xfy*.                      (19)
+
+     Suppose u(x j , · · · , * p is a multilinear polynomial. If ΰ denotes the matrix
+w(x"j, — , F p e § π , then the element appearing at the intersection of the z'th row and
+the /th column has the form
+
+                                       a<i= 2 tt „#·»... *f'.
+where /S^; . . . T f C. A direct calculation of the trace of the matrix / = ζΓσ(ζΓ), taking
+into account the equality (which follows from (12))
+
+                     xat)         x(,'l)xltl)         xl'l) - ό' 1          '·'(xMV             hAl)V
+                     Xl     . . . XI     Χι      . . . Xl   — O/t           j { (Χι   )   . . . (Χι ) ,
+
+where δ.              i s the Kronecker symbol, yields
+         Ι1,···,}1
+
+
+
+                                                                           ΊΙ*>0
+                                                                                                          (20)
+                                                                'ί
+and tr(/) = 0 if and only if Έ = 0. On the other hand, it is easy to see, by the choice
+of basis e^ . • •, e 2 of Mn, that the algebra § n is invariant under the anti-isomor-
+phism σ.
+     Indeed,
+
+
+
+
+and
+
+
+
+                σ ( λ α 0 tr ( α , ) . . . tr (α,)) = λ σ ( f l o ) „ ( σ ( c j ) . . . tr ( σ (α,)),     (21)
+
+where aQ,...,      β^ are words in the x ~ Consequently (AM) £ § n , and the generalized
+                      TRACE IDENTITIES OF FULL MATRIX ALGEBRAS                                              739
+
+polynomial /(*" j , · · · , x~ j) = Haiti) is homogeneous of type (2, · · · , 2) and formula (18)
+holds. Because of (19), the inequality (20) can be restated as follows:
+
+                                               na (ΰσ (ΰ)) > 0                                             (22)
+for any multilinear generalized polynomial u, and equality is attained if and only if
+ΰ = 0. But when does ΰ vanish? In view of the defining relations (12) we have
+
+
+                                                                          X       l                 e
+                     U (*!         Xl) = 2               ^        • • ·       l       " (*IV · · · > rt)
+                                           Ί         Π
+
+and ΰ = 0 if and only if each u{e              , · · · , e ) = 0. But since u is a multilinear gen-
+                                       r                     T
+                                           \                  l
+eralized polynomial, these equalities mean that u is a trace identity of Mn.
+     Thus (22) provides a criterion for testing whether κ is a trace identity. Note that
+in making use of this criterion the algebras Mn and Mn are not really needed, since
+the anti-isomorphism σ can be defined formally by the equalities (21) and to compute
+the function α only the relations (13)—(15) are needed.
+     We now turn to the construction of an auxiliary algebra which will permit us to
+completely ignore the algebra Μ and operate only with generalized polynomials.
+     II. The algebra § . Suppose Κ is a field^ and Κ(γ) the quotient field of the poly-
+nomial ring Κ[γ] in the one variable y. Let § denote the factor algebra of the algebra
+§(y) of generalized polynomials over the field Κ(γ) with the following defining rela-
+tions, where i, j = 1, 2, · · ·:
+
+
+                                                         — tr (a),                                         (23)
+                                                          Τ
+
+                                                ()                ^-at                                     (24)
+                                                                   τ
+                    \xl X{\ = 0,      tr (xU) = x\ tr (a),                            tr (xf), = yxl        (25)
+                                                     w = 0;                                                (26)
+here w is any generalized monomial of degree greater than two with respect to some
+variable occurring in it, and a is^ny word.
+     The structure of the algebra a i s descrived by the following lemma.
+
+     Lemma 3. a) The algebra \$ as a linear space is generated by the generalized
+monomials of degree less than 3 with respect to each variable χ..
+^    b) As linear spaces the sets of multilinear polynomials of the algebras §(y) and
+§ are isomorphic.
+     c) Any homogeneous polynomial f(x • , · · •, χ . , χ . , · . · , χ . ) of degree 2 with
+
+respect to χ. , · · · , χ.   and degree 1 with respect to χ. , · · · , χ . can be represented
+
+in the form
+  740                                     JU. Ρ,, RAZMYSLOV
+
+
+                                                                                                   (27)
+                                      τ      •
+
+
+
+
+ where g is a multilinear generalized polynomial.
+        d) The representation (27) is unique in the sense that if
+
+
+
+
+ is another such representation, then g = g. in §(y).
+
+       Proof. The first statement is true because of (26), the second because the de-
+ fining relations (23)—(26) are of degree at least 2 with respect to some variable. It is
+ obvious that (23)—(25) together with (6)—(8) yield a representation (27). The unique-
+ ness of (27) could be proved directly, it being sufficient to verify that the reduction
+ to the form (27) does not depend on which variable xf (k = 1, · · · , s) one starts with,
+ by proving this for the case where / is a generalized monomial and 5 = 2. We will
+ take another approach.
+        It is clear that it suffices to prove uniqueness in the case where Κ = C.
+        Suppose / = n^_j(x? /y)gj is another representation, where g ji gj in §(y).
+Since the coefficients in the generalized polynomial g ~ g l are rational functions of
+γ, there exist infinitely many natural numbers η for which the expression g - gj makes
+sense and is unequal to zero when γ = η. Let / , g~ and g~l denote the elements of
+§ n obtained from /, g and gj by the replacement γ -> η, x{ -»x\ (z = 1, 2, ·· ·). Then
+since the relations (13)—(15) for computing a. ate obtained by precisely the same re-
+placement in the defining relations (23)—(25), we have
+
+
+
+                     — ft)) = <* ί Π - 1( 6 ~ ^ σ fe - ft) =α ((7-7) σ fc-ft)) = 0.
+
+But then the criterion (22) shows that g~ — g~ l is a nontrivial multilinear trace identity
+of Mn, even when « is greater than the degree / of the generalized polynomial g" - g"j.
+In order to arrive at a contradiction, it remains to prove that if h(xj, · · · , Xj) i s a mul-
+tilinear trace identity of Λ1/+1, then h = 0. It suffices to find for each multilinear gen-
+eralized monomial in χ j , · · · , x / a set of matrix units in M / + 1 such that only this
+monomial does not vanish on it. Suppose this monomial has the form
+
+                                   w = a0 tr (aj . . . tr (a,),
+
+where aQa j · · · a r = Xj-fj * * " x / a n < ^ ϋ ^ε length of the word ai i s r^. Put the first rQ
+variables equal to e . ,, e , , , · · -, e . ., v and put the variables corresponding to the
+                         w
+                               "                 oK 0 '
+a. 0 = 1 , . . . , t) equal successively to e s + l s + 2- es+2 s+3 ' ' * ' ' es+r.-l s+r.· es+r.s+l
+where 5 = 1 + £ l . ~ Q r.. It can be c h e c k e d directly that, to within the congruence
+                         TRACE IDENTITIES OF FULL MATRIX ALGEBRAS                                            741
+
+(6)-(8), only the monomial w i s unequal to zero for the indicated set of matrix units.
+Hence w occurs with zero coefficient in the trace identity h. Since w is no different
+from the other generalized monomials occurring in b, it follows that h = 0. The lemma
+is proved.                                                  ^
+      We now take^note of one equality in § which will often be used in what follows.
+If a, h, b j , h2 £ § . then from (23) and (6) we obtain
+
+                               χφχι   = — tr (ah) = — tr (ha) = xthaxi,
+                                             τ                  τ
+and from (22), (6) and (7) we have
+                                                    x
+                                                        i
+      tr (h^flh^      xt = tr (XiahthJ xt = — ah^ = a tr {xth%h^ χι = tr (hyXih^ axt.
+
+
+From these equalities we obtain that for any multilinear generalized polynomials /
+and g in J t j , · · · , * ,
+
+
+                                           ' Ix^xfi ' 8 — I ' 8
+Moreover,
+
+/(xxalf .«Α, . . . . xfli)g(xx                   χι) =f(xv          ...,   χι)g{α^χν   α^χ2, ...,   atxi),   (28)
+
+and in exactly the same way it can be shown that
+                                      ft                                                                     (29)
+
+
+
+     III. The bilinear form. The algebra §(y) contains as a subring, in a natural way,
+the algebra § of generalized polynomials over the field K. Let Τj(y) and Τ{ denote
+the spaces of multilinear polynomials in X j , · · · , x ; in §(y) and § , respectively. By
+Lemma 3 b), these linear spaces can be identified with the linear spans over the fields
+£(y) and K, respectively, of the multilinear generalized polynomials in χ., · · · , χ, in
+h(. Parts c) and d) of the same lemma show that to any homogeneous generalized
+polynomial f(xv · · ·, χj) e g(y) of type (2, · · · , 2) we can uniquely assign a(f) β Κ(γ)
+in accordance with the rule
+
+
+
+
+     If / ^ §. then it follows from (23)—(25) that <x(/) is a polynomial in the variable
+y. By means of the function α we can define on the space of multilinear generalized
+polynomials Τ^ C y a bilinear form b, which assumes values in the polynomial ring
+   ], by putting, for any u, ν £ Τ j,
+
+                                                                    ().                                      (30)
+
+      As an easy exercise in the use of (23)-(25), we invite the reader to verify that
+    742                                  JU. P. RAZMYSLOV
+
+
+                           l· (a0 tr (aj . . . tr (at), Π tr (*,)) = γ*+>,                 (31)
+
+    where aQ, · · ·, a{ are words and aQtr(a j) · · · tr(ap e ΤΓ
+
+          Lemma 4. If γ = η in the definition of the bilinear form (30), then Ann 6 in the
+    linear space Τl coincides with the set of all multilinear trace identities of degree I
+    of the algebra Mn over a field of characteristic     zero.
+
+       Proof. First suppose that Κ is the field of complex numbers. Let φ denote the
+ homomorphism of the algebra g into the algebra §n for which φ[(χ j , · · · , Xj) =
+/(3F j , • · · , χ p , and σ the anti-isomorphism of 9 defined by the formulas (21) with x~.
+ replaced by x(.. Sirice when γ = η the formulas (23)—(25) and (13)—(15) for computing
+the function α in a and y agree, we have
+
+                                                                 )                     (32)
+
+    for any u, ν £ Τj. Therefore, in view of (22),
+
+
+
+
+and equality is attained if and only if u is a multilinear trace identity of Mn. This
+proves the lemma when Κ = C.
+     If Κ is an arbitrary field of characteristic zero, then in the representation of any
+specific trace identity of Mn or element of Ann 6 there appear only finitely many
+ elements of K. Since the field generated by these elements can be embedded in the
+field of complex numbers, the lemma is true for any field Κ of characteristic zero. The
+lemma is proved.
+          Equalities (32) and (19) show that for any natural number «
+
+
+
+and since U.u, v) and U.v, u) ate polynomials for fixed u, ν e Τ{, we always have
+b(u, v) = b(v, u), i.e. 6 is a symmetric bilinear form.
+     Let Ε(γ) denote some polynomial in Κ[γ], and \Ε(γ)\ the ideal of Κ[γ] generated
+by it. To solve the trace identity problem it is necessary that the bilinear form 6 as-
+sume values not in the ring Κ[γ], but in the factor ring Κ[γ]/\Ε{γ)\. We denote the bi-
+linear form defined by (30) and assuming values in Κ[γ]/{Ε(γ)\ by i>£. Thus, for ex-
+ample, if E(y) = γ — n, the bilinear form defined in Lemma 4 should be denoted by
+b
+ 7-n
+          Lemma 5. Let Ε(γ) be α fixed polynomial and
+
+                      knnT,ί£=(/εΓ/|lE(f.          Τι) = 0inKM/{E(y)}}
+// V denotes the verbal ideal of the algebra § generated by Ann T h£ for all        1=1,
+2, · • · , then V C\Tk = A n n r 6^.                               '
+                       TRACE IDENTITIES OF FULL MATRIX ALGEBRAS                                              743
+
+    Proof. We must prove, essentially, that if / e ΑηΠγ. b £ , j f T ^ (k > /) and g is
+a consequence of the generalized polynomial /, then g e AnnT i>E. Let V(f) denote
+the verbal ideal of § generated by the multilinear generalized polynomial f(x χ, · · ·, x{).
+It follows from Definition 2 and equalities (10), (6) and (8) that V(f) as a two-sided
+ideal is generated by the generalized polynomials /(«j, · · ·, «p where flj,; · · · , a^ are
+arbitrary nonempty words; and from the equality
+                                                               ι
+           bf(av    ...,    a,) = f ( a l t ...,   at)b + Σ f (av • • · > 16> α <1· · · · » α ' ) >
+                                                              i=l
+which holds in § for any word b, it is evident that V(f) is generated as a right ideal
+by the indicated generalized polynomials. Consequently g € V(/) (ΊΤ^ can be repre-
+sented as a linear combination of generalized polynomials of the form
+                                           f(au    . . . . a,)h<=T,,
+and hence it suffices to prove that g £ AnnT H>£ for the case g = /(xjO^ · · · ,
+Applying (28), we obtain for any ν e Tk
+
+                   hE (g, σ) = γα (/ | χ ; _ χ Λ to) = Y a (/
+
+
+
+
+where ι/χ is a multilinear generalized polynomial with coefficients in Κ[γ] satisfy-
+ing, by Lemma 3 c), the equality
+
+
+                                     »-l             - π f^W
+Therefore g e Ann^ i)g. The lemma is proved.
+     As indicated in §2, any verbal ideal is generated by the set of its multilinear
+generalized polynomials. Lemma 5 shows that for certain verbal ideals these multi-
+linear generalized polynomials can be distinguished by the bilinear form bg for some
+polynomial E(y). Lemma 4 asserts that to such verbal ideals there correspond trace
+identities of the matrix algebra.
+     We now turn to the question of which verbal ideals are defined by the bilinear form
+
+    IV. Definition of a group algebra structure on the set Τj. Suppose / and g are the
+same as in (27); define ττ(/) = g.
+     Lemma 6. Suppose an operation ° is defined on the set Τt by means of the rule
+
+f ο h = π {f (Xl           x,)-h \x%mWJ      \ttmmXi = n (/ | X t = X i V j · h (xlt ..., */)) \temti   ,   (33)
+744                                  JU. P . RAZMYSLOV
+
+where f, h e T^, and, for convenience, y j , · · · , y{ denote variables xi such that χ.,
+• · *» xi' y i» · ' * > >*/ a r e distinct. Then this operation is well defined, the set of gen-
+eralized monomials G ΠΤl forms a group with respect to this operation, and the linear
+space Tj becomes the group algebra of the group G Π Τf           The elements
+                                        I
+                                                     / = 1
+                             £>,= *, Π "(*/) (                0.
+are generators of this group, and the generalized monomial e = Il^jtrix.) is its iden-
+tity element.
+
+      Proof. Let us first observe that the second equality in (33) is true by (28) and
+Lemma 3 d). Parts c) and d) of the same lemma guarantee the correctness of the def-
+inition (33) in Τ^γ). Let us show that the operation ° defined by Τ^γ) i s associative,
+i.e. that for any /, g, h e 7"/y)
+
+                                    (f°g)°h = f°(g°h).                                    (34)
+
+By (33) and (28), the left-hand side of this equality is equal to
+
+
+
+
+                         =«{/ · g U = i / l ·h I*,-*,™,)
+
+                                  =yt ·h U=*
+                                                  *ι~*ιχι
+By (33) the last expression is equal to the right-hand side of (34). Thus (34) is proved.
+      Successive application of (24) yields
+
+
+           Π «to)• / = π (ΐί trto^)· /) U * = (fI,,-,, ) L=,, =
+
+and therefore e - II. = jtr(x.) is a left identity element; in exactly the same way it can
+be shown that e is a right identity element of the algebra T/y). Similarly, we obtain
+
+                                                                                           (35)
+
+
+If / = α.Π'_ jtr(a.) is a generalized monomial, then consideration of the two cases
+aQ = a^x^ and ak = χ.α^ , using (23) and (24), respectively, yields
+                   TRACE IDENTITIES OF FULL MATRIX ALGEBRAS                                                745
+                                                                         t
+                                                        ao tr                  tr (a 7 ),
+                       f     T4         )                               /-I                               (36)
+
+                                                                   tr
+
+
+
+
+from •which it follows that G ΠΤj is invariant under multiplication by D» It follows
+immediately from (36) that
+
+
+                                                  Di ο D, = e,
+
+
+        I g (*i. · . . » Xk) ]\     tr (xt) 1 ο D* +J = g (jq                 xt) x t + 1   J J tr (x;)
+
+                                                                                                          (37)
+                                            tr
+                 g (Xlt . . . , Xk) Π            (*/
+
+
+                           = gfa,    ... , Xk) tr (Xk+i . •. Χ*+ί) Π                 " (*/)·
+
+
+
+where g is a multilinear monomial in χ j , — , x^. The last two equalities show that e
+can be transformed into any generalized monomial by successive multiplications by
+elements D . Consequently each generalized monomial in G ΠΤ^ can be represented as
+a product of elements D. of the second order with respect to the operation ο . This
+shows that G C\T. is a group and the elements D. are generators. It is now obvious
+that Τ ι is the group algebra of this group and the operation ο is well defined on Tj.
+The lemma is proved.
+   We will now explain how the operation ο and the symmetric bilinear form ί>£ of
+Lemma 5 are related.
+
+    Lemma 7. For any elements {, g, h e Τι we have
+
+
+
+
+    Proof. To prove the lemma it suffices to assume that h = D „ Using (35), we have
+
+                       h   g) = γα (π (jyiXi) ^ g ) = γα (π (fyiXl) g | ^ . )
+
+                                                 ) - Τα (/n (ylXig \
+                                        Xfmy
+
+
+                            - γα (/π fay,g) \y^x) = hE (f, Dt ο g).
+
+    The lemma is proved. This lemma has the following corollary.
+ 746                                         JU. P. RAZMYSLOV
+
+        Corollary. Ann T hg is a two-sided ideal of the group algebra Τ^ (k = 1, 2, · •.).
+
+        Let S[+l    be the group of all permutations, acting on the right, of the s e t jx , x , ,
+ • · · , Xj|. Each permutation decomposes uniquely into a product of independent c y c l e s .
+ \Pe denote the cycle x. -» x. •* χ.-*···-*      χ. -* χ. by ( χ . χ . χ . . - . χ . ) · In addition.
+                                                 l                  !
+                             Ί     '2  '3          k  Ί         Ί 2 '3          '*
+ if α = χ . χ . . . . χ . , then we denote the cycle (χ. χ. · · · χ. ) by (a).
+          Ί '2          Ά                               Ί '2       '*
+      Lemma 8. T i e group G l~\Tj is isomorphic to the group S[+ j ο/ α// permutations,
+ acting on the right, of a set of I + 1 letters.            The isomorphism is realized by the map- '
+ ping
+
+                           φ {aotr ( f l j ) . . . tr (a,)} = (xoao) (flx) . . . («,).
+
+
+        Proof. The mapping 0 i s well defined, since independent cycles commute and
+(x. χ. . . . χ . ) and (x. · · · x. ) represent the same cycle. By Lemma 2, <£ is one-to-
+  Ί J2        '<        l
+                          2       Ί
+one. To prove the lemma it suffices to show that for any g € G Γ\Τι
+
+
+                                      φ (s) • φ Φ ) = φ (g»A).
+
+ But
+
+
+
+                                                              ... (ak-i) (α* + 1 )... (αί), if   ak = xflk,
+
+and (38) now follows by comparing this with (36). The lemma is proved.
+        This lemma implies that the inverse of g € G Π Τ{ with respect to the operation
+ο is a(g).
+       From now on, we will not make any distinction between the group algebras K[S .+ l\
+and T»
+       Let us now summarize the results of this section.
+
+        Proposition 1. On the linear space Tj of multilinear generalized polynomials of
+the algebra § it is possible        to define in accordance with (33) an operation ο with re-
+spect to which the set G ΠΤ, becomes a group isomorphic to 5",+,, and Τ. becomes
+the group algebra of this group. In addition, for any polynomial E(y) the formula (30)
+defines a symmetric bilinear form b£ which is associative                     with respect to the opera-
+tion ο and assumes values in the algebra Κ{,γ\/\Ε(γ)\; to each such bilinear form there
+corresponds a verbal ideal V C § such that for all / = 1, 2, · • · we have V Π Τ, =
+Αηη τ £>£ and this set is a two-sided ideal of the algebra T{. If Ε(γ) = γ - η, then the verbal
+ideal V is exactly the set of trace identities of the algebra Μ .
+
+                   ^ 4 . Classification of bilinear forms and verbal ideals V
+                         for which V C\T( is a two-sided ideal of Τt
+       Throughout this section we will assume that the characteristic of the field Κ is
+equal to zero. Before reading this section the reader should familiarize himself with
+                                                                                            7 4 7
+                    TRACE IDENTITIES OF FULL MATRIX ALGEBRAS
+§ 28 of Chapter IV of the book [4] by Curtis and Reiner, in which are described the
+simple ideals of the group algebra K[S / + 1 ] over a field of characteristic zero. We men-
+tion here without proofs those results of the section indicated which we will need.
+     By a Young table D of type (n v · · · , n fc ) we mean the table in which the number of
+spaces in the tth row i s « f , and where « j > « 2 > · · ·> n^. A Young table D which is
+arbitrarily filled by the integers from 1 to « 1 + · · · + η ^ = / + 1 is called a Young dia-
+gram. Let R(D) be the subgroup of S j + 1 consisting of all elements ρ which rearrange
+the numbers in each row of the diagram D, and C(D) the subgroup consisting of the
+elements q which rearrange the numbers in each column of D.
+
+     Proposition 2. There is a one-to-one correspondence between the set of Young
+tables D of type ( H J , . . . , η, ), where η ι + · ·'+n^= I + I, and the set of simple two-
+sided ideals of the group algebra K[Si+ j]. The ideal corresponding to a Young table
+D is generated as a two-sided ideal by the element
+
+
+
+
+where Ψ = Σ ύ ε χ,τ)·Ρ <*nd Q = Σ €C(D)^·^     ^ e Sums extend over all elements of
+R(D) and C(D), and e{q) = + 1, depending on the parity of q) for some diagram obtained
+from D. A permutation s e S. + . can be represented in the form s =p oq, where p €.
+R(D) and q £ C{D), if and only if elements belonging to the same row of the diagram D
+lie in different columns of the diagram Ds-t and this representation is unique. For any
+χ € K[S.+ 1 ] we have 9oXoQ     = v?oQ, where ν is a number depending on x.
+
+     We now have at our disposal everything that is necessary to describe all verbal
+ideals V of the algebra § such that, for any natural number /, V Π Τ^ is a two-sided
+ideal of Τ^ with respect to the .operation o.
+     It is clear that the set V ΠΤ j is a direct sum of simple ideals, each of which is
+defined by some Young table, but it is not clear
+   a) whether for a verbal ideal V generated by a set of multilinear generalized poly-
+nomials forming a two-sided ideal of Τ{ it is true that V Π Τl+k is a two sided-ideal of
+Τ
+     b) which Young tables Dj and £>2 are such that VD           2 Vρ > where VD       is a ver-
+bal ideal generated by a set of multilinear generalized identities forming a simple two-
+sided ideal of Τ{ , corresponding to the Young table Dr, and
+     c) whether ascending chains of verbal ideals of the form under investigation term-
+inate.
+     In this section we will answer all of these questions.
+     The following lemma provides an answer to the first question.
+
+     Lemma 9. Suppose a verbal ideal V is generated by a set of multilinear general-
+ized polynomials of degree I forming a two-sided ideal of Τ^ with respect to the oper-
+ation o. Suppose f e Τ l generates the two-sided ideal VΠΤj. Then V f l T ( 4 is a
+two-sided ideal of Τ[+k for any k > 0, and
+ 748                                              JU. P. RAZMYSLOV
+
+
+                                           / ( « p . . . , Xi) U           tr (xM)
+
+generates this two-sided ideal.
+
+     Proof. We first establish that V Π Τ[+^ is a two-sided ideal. It suffices to verify
+that V ftTl+/i is stable under multiplication by the generators D.. In the proof of
+Lemma 5 it was shown that the linear space V Π 7",+ , is generated by the elements
+
+
+                                    gi = g (fli                   a,) at+1 J ] tr (bj),
+                                                                             /-I
+where { ( x ,          x , ) e V n Τ,, and a. and bj are words. Using (35), (28), (29) and (36),
+we obtain
+
+                       gi - A = η (g (a1( . . . , at) a i + J Π " Φι) 0/*J) \nm
+                                                                       i=i
+                                                  r
+                g (cj, . . . , ai) ai+1xib's J J tr φ,),              if      i>s = xib's,
+
+
+
+                g(av   . . . , a;) ai+, tr (χιθί+1) J J tr (fty),                  if   a / + 1 = a'i+1Xiai+1,
+                                                           /-I
+
+
+                       , . . . , χ/) ο £>s) \x.=aj(iits)         · a's J J tr (pi), if           s < /, as = aUfil,
+
+
+which implies that V (Ί 7 " ^ -is a right ideal. Similarly, it can be shown that V η Τ.+ ,
+is a left ideal.
+     Let us prove the second part of the lemma. Taking into account (37) and what has
+been said above, it suffices to show that
+                                                                     k-r+i
+                                                           .. ,ai) J | tr
+
+where g(x,, · · · , x,) € V C\T, lies in the two-sided ideal generated by
+                                                                       k
+
+
+
+
+It i s well known that if 8 = (yj j — ^ ι , - Χ ^ ΐ ' * '^2s^ "" '^m 1 ^m? 1S t ' l e decomposi-
+tion of δ €. Sn into independent cycles, then for any permutation 8χ e Sn
+
+        φ Ρ δ δ ! == (δ, (yn) ...d1       (ylr)) (6t (y21)...         ό χ (y!S))...        (0, ( ^ m l ) . . . δ χ
+
+       Hence by a suitable conjugation the element gj can be transformed into the ele-
+ment
+
+                                                      1           α'ιΧι) Π tr
+                     TRACE IDENTITIES OF FULL MATRIX ALGEBRAS                                                   749
+
+It is obvious that
+
+                                 ga = g (*l· · · · ' **) Π a
+                                                               /-i
+
+lies in the two-sided ideal generated by / j . If we put
+                                                              l+r
+                                  s = x1a[...       χώ γ[ tr (
+
+then, using (24), (28) and (29), we obtain
+                                                         ft
+                                                                               +/) s) 1 ^ ^
+
+                                                                         l+r
+               = π {g (xx        χι) y^&                                        t   r
+
+
+
+
+                                                                                               •*/
+
+
+
+
+                                          J+r
+               = π(g(a[x v ..., α'ιχί) J[ tr (x,)                                          =         g2»i,
+
+
+where / = Xj · · · Χ ; Ι Γ ( Χ ; + 1 ) · · · tr(Xj+fe). Thus g 2 oi lies in the two-sided ideal generated
+by fv     and hence the elements g 2 = (g 2 of) ot~                  and gj lie in the same ideal. The
+lemma is proved.
+
+     Lemma 10. Suppose the Young table D j of type ( » [ , · · · , n^) is a subtable of the
+Young table D^ of type (nj , — »«.'), i.e. ni < n! for all i, and let l^ = Σ * η ; and
+l2 = Σ ^ ' . Let VD (i = 1, 2) denote a verbal ideal of the algebra § generated by a
+set of multilinear polynomials of degree I. forming a simple two-sided ideal of Τ. ,
+corresponding to the Young table D.. Then VD                         D VD .
+
+        Proof. Fill in the table D2 with the integers from 1 to l2 in such a way that the
+integers from 1 to /j lie in the table Dy            If e(D{) = 5\ oQj (i = 1, 2) as in Proposi-
+tion 2, then e(D.) generates the two-sided ideal VD                      C\T^ . We may view the permuta-
+tion group Sl + 1 , acting on \xQ, · · · , χ[ I, as being embedded in a natural way in the
+group 5 ; + 1 , acting on \xQ, · · · , x{ I, by identifying S^ + j with the subgroup of
+~* I +1 w ^ich fixes the elements x ;      +1
+                                                » · · · > * / ; and then R ( D 2 ) D R ( D j ) and C(D 2 ) D
+C(Dj). Carrying this over to the group rings, we may view Τ ;                           as embedded in Tj .
+In the sense of this embedding, the element e(D j), by Lemma 9, generates VD                                 Π Τ{
+as a two-sided ideal. On the other hand,
+
+
+
+where | j j | is the order of the group R(D j), and | 2 j | the order of C(D J. Consequent-
+ly the generator e(D2) of the ideal VD            Π Tj        lies in the ideal V D            C\T} , and there-
+ 750                                       JU. P. RAZMYSLOV
+ fore VD     nTj       D VD    Π Τ{ . It now follows from the definition of VD                 and VD    that
+ V0     D Vp • The lemma is proved.
+     We now turn to the bilinear form i>£ of § 3 , which is defined on Τt = K[S / + 1 ] and
+ assumes the values in the ring KE = Κ[γ]/\Ε(γ)\.
+       Let r( denote the sum of those permutations of S / + 1 which decompose into exactly
+ t independent cycles, and let d = ^-seS                    &£•(•*, l)-s, where the sum extends over permu-
+                                                S
+                                                    1
+ tations 5 e Sl+y       In view of (31), d = Σ(^ 1γ'τ(          is an element of the center of the algebra
+                                                                                                ι
+ Τ [(γ). If g =2.ieS          βξδ, then let a(g) denote the element Sg e S ·               β$δ~ .   By the
+ associativity of the bilinear form i>E we obtain
+
+                                                              ^ S Σ β«**Μ~ν
+                                                                  6 r=s6
+
+                                                        )=         Σ        *B(s,a(g))s,
+                                            6           j        seS /+ ,
+
+from which it follows that g £ AnnT i>£ if and only if d oa(g) = 0 in K^[S•+,]. But
+since 0 = aid oa(g)) = g ad = d og, we have proved
+
+       Lemma 11. Λ generalized polynomial g belongs to Αηπγ hp                         if and only if
+d og = 0 in KE[Sl + l}.
+
+       If lp is the identity element of the simple ideal corresponding to the Young table
+D, then from the fact that d is an element of the center of the algebra Τ{{γ) we obtain
+
+
+moreover, for any element a of this ideal
+
+                                                                =D(-()a,                                (39)
+
+where D(y) is a polynomial depending only on the Young table D. If we denote by γ β
+the character of the irreducible representation of the group ^i+j corresponding to D,
+and by m^ the dimension of this representation, then
+
+                                                                                                        (40)
+                                       O(T) = 2 ^ ~ ·
+
+      Lemma 12. Let Ε(γ) be a polynomial, bP the bilinear form of § 3 , and V the
+verbal ideal corresponding to this bilinear form. As in Lemma 10, let VD be a verbal
+ideal of the algebra § generated by a set of multilinear polynomials of degree I forming
+a two-sided ideal of Τt, corresponding to the Young table D. Then V D VD if and only
+if Ε (γ) divides D(y).
+
+       Proof. If a is an arbitrary element of VD nTj, then, by Lemma 11, a e Ann^. i>E
+if and only if d ο a = 0 in the ring K e [ S / + j ] . It follows from (39) that this is equivalent
+to the fact that E(y)|D(y). The lemma is proved.
+                         TRACE IDENTITIES OF FULL MATRIX ALGEBRAS                                                   751
+
+     Corollary. // VD             and VD            are as in Lemma 10, and D j(y) and D 2 (y) are the
+
+polynomials defined by (40), then
+
+
+
+
+    Proof. Put Ε(γ) = D j(y), and let V be the verbal ideal of the algebra § corres-
+ponding to the bilinear form i> £ . Then, by Lemma 12, V Γ> V D , and by Lemma 10,
+V      V     S i n c e   V    V          ic       oll       ws   f r o m
+ D   2 D ·                   2 D     '        f         °                  Lemma 12 that £(y) = D ^ D   2
+                                                                                                         (γ): The
+corollary is proved.
+     Lemma 12 and its corollary demonstrate the necessity of finding an explicit for-
+mula for the polynomial D{y), more precisely, the decomposition of D(y) into prime
+factors.
+
+     Lemma 13. Let D be a rectangular Young table, the length of whose rows is I and
+the length of whose columns is k. Then the sum of the roots of the polynomial ϋ(γ)                                   is
+equal to
+
+
+
+
+    Proof. The coefficient of the leading term of D{y) in (40) is equal to Xp(l)/"2 D =
+1. Hence the sum of the roots of D{y), taken with a minus sign, is equal to
+
+
+
+
+It is obvious that r ^        j is the sum of all transpositions i ; . e S^, and ν can be com-
+puted from the formula
+                                    ve (D) = tik-t (D) = & ° xik-x ο Q,
+
+where e(D), !P and 2 are as in Proposition 2 for some Young diagram corresponding to
+the table D. We first compute 9 o / ; . oQ, where ti- is the transposition of the indices
+i and /. Proposition 2 implies that this element is equal to nJ oQ. It is clear that η
+is equal to the coefficient of 1 in the expression J ot{. oQ; hence η = "S.e(s"), where
+the sum extends over all pairs (s', s"), where s' e R(D) and s" e C(D), such that
+s' oij. · ο s" = 1, i.e. ti- = (s')~ o ( s " ) . Then, by Proposition 2, the elements of a row
+of the diagram D lie in different columns of the diagram D/.- But this is possible if
+and only if the indices i and ; lie either in one row or in one column of D. In the first
+case J oZ f . = J; in the second t{. oQ = - Q. In view of the uniqueness of the repre-
+sentation i ; . = (s')~ o(s")~l     we have
+
+
+
+
+                                         I
+                                                    &°Q,                   if    tij^Rip),
+                                                  ~^oQ,                    if   / i/e C(D),
+                                                             0 ,           if     tij&R(D)\JC{D).
+ 752                                   JU. P. RAZMYSLOV
+
+ Hence v= ν γ — v2, where v^ i s the number of transpositions in R(D), and u2 the
+                                                           l
+ number of transpositions in C(D). Obviously νχ = k( 2) and v2 = /(*), from which the
+ required formula follows. The lemma i s proved.
+      Fill in the Young table D of type (nv • · · , nk) with integers by placing i - j in
+ the ;th space of the z'th row ( ! < / < » . ) . For example,
+
+                             0 — 1 — 2 — 3 — 4 — 5
+                              1        I           — 2 — 3 — 4
+                             2     1       0
+                             3     2
+                                               .
+The polynomial
+
+                                                                                           (41)
+
+where the product extends over all spaces of the table D, is well known and is called
+the graph of D.
+
+     Lemma 14. The polynomial D(y) defined by (40) is equal to the graph of the Young
+table D.
+
+        Proof. We first observe that the coefficient of the leading term of D(y) is equal to
+XD(1)/"!£J = 1. We will prove the lemma by induction on the number of spaces in the
+Young table D. The basis for the induction is a table with one space, in which case
+(40) and (41) agree. Suppose the lemma has been proved for tables with less than η
+spaces. Let D be a table of type («j, · · · , n^). If D i s not rectangular, we can ob-
+tain from it two distinct Young tables D' and D" by removing the spaces (k, nk) and
+(r, « r ), respectively, where 1 < r < k. Let DQ denote the Young table obtained by re-
+moving from D these two spaces simultaneously. By the induction assumption, we may
+assume that D (γ), D {γ) and ^ ( y ) agree with the graphs of the corresponding Young
+tables. From the corollary of Lemma 12 we obtain
+          D'(y)=D0(y) (y-(r-nT)),              D"(y)=D0(y) (v~(*-«*))
+                                 D'(y)\D(y)r D''(y)\D(y),
+Since r < k and nk < « r , it follows that nf - r > nk - k and these roots are distinct;
+hence
+                       D (γ) = D 0 (V) ( V - (r-nr))    (V-   (k-nh)),
+and the lemma is proved for a nonrectangular table D,
+     If D is a rectangular table with row length / and column length k, we obtain only
+the equality D(y) = £>'(y)(y - ζ), where D' is the Young table obtained from D by re-
+moving the space (k, 1) and ζ i s some integer. By the induction assumption, D (γ)
+and the graph of D$ agree; hence they have the same root sum, which we denote by.Σ .
+Then Σ' + ξ is the sum of the roots of D(y) and, by Lemma 13, Σ' + ξ = /(.,) -
+                    TRACE IDENTITIES OF FULL MATRIX ALGEBRAS                                      753
+
+It can be shown directly that the sum of the roots of the graph of D is also equal to
+/(*) - &(2), which implies that ζ = k - I. The lemma is proved.
+
+        Corollary. // E(y) = Ό{γ) and i>£, V and Vp are as in Lemma 12, then V = Vp.
+Moreover, if VD         is a verbal ideal of the algebra § such that VD           ΠΤ;    is a simple
+two-sided ideal of T{ corresponding to the Young table D y and Vp as a verbal
+ideal is generated by the set Vβ Π Τ{ , then Vp 2 VD if and only if D is a sub-
+                                                      X
+table of Dv                      '   *
+
+        Proof. By Lemma 12 we have V D V'D, and V 2 Vp                 if and only if E(y) =
+£>(y)|D j(y). It is evident from (41) that D(y)|D x (y) if and only if D i s a subtable of
+D y But by Lemma 10, if D is a subtable of D j , then V D D Vp · Consequently
+V 3 VD       if and only if VD D VD . Both statements of the corollary now follow from
+the corollary to Lemma 7 of § 3 , which implies that V is generated by all verbal ideals
+of the form VD      contained in V. The corollary is proved.
+        This corollary answers the second question raised at the beginning of this sec-
+tion.
+        The following theorem summarizes the results of Lemmas 9—14.
+
+     Theorem 3. To each Young table D of type ( « j , · · · , n^) with I + 1 = ^i n ,· spaces,
+whose graph D(y) is given by (41), it is possible to assign a bilinear form iD and a
+verbal ideal V _ corresponding to t)p such that for any natural number k we have
+VD ΠΤ, = Ann^- t>D, and this set forms a two-sided ideal of T f e with respect to the
+operation o; VD as a verbal ideal of the algebra § is generated by the multilinear
+generalized polynomials Vρ Π Τ, forming a simple two-sided ideal of the group algebra
+Tj= K[Sl+l\, corresponding to the Young table D. The correspondence between the
+Young tables D and the verbal ideals Vρ of § is one-to-one, and Vp 2 V'D if and
+only if D j is α subtable of D^.
+     If Ε(γ) is a polynomial and t>E the bilinear form of § 3 , then the verbal ideal V
+corresponding to this bilinear form contains the verbal ideal VD corresponding to the
+Young table D if and only if E(y)|D(y); in particular, V is nonzero if and only if all
+of the roots of £(y) are integers.
+     Finally, if V is a verbal ideal of the algebra § such that Ι Ό 7 , is a two-sided
+ideal of the algebra Τk with respect to the operation ο for any natural number k,
+then there exist a finite number of Young tables D j , — , Dn such that the verbal ideal
+generated by \Vρ ,···,        Vρ \ is equal to V.
+                    1               η
+     All parts of this theorem have already been proved except for the last, which is
+equivalent to the following theorem.
+     Theorem 4. Any ascending             chain of verbal   ideals   VJCV^CVJC···        of the
+algebra    § such that    V. Γ\Τ,       is a two-sided   ideal of the algebra   T, with respect   to
+ 754                                   JU. P. RAZMYSLOV
+
+ the operation ο for any natural numbers i and k terminates, i.e. for some Ν we have
+
+
+
+         Proof. As indicated in the proof of the corollary to Lemma 14, each verbal ideal
+ Vi is generated by all verbal ideals VD, corresponding to Young tables D, which are
+ contained in V~ Hence it suffices to prove the theorem in the case where V. i s
+ generated by verbal ideals \VD , · · · , VD | corresponding to Young tables D1 ? . . . ,
+ Df     Suppose that the chain V ^ C V2 C· · · does not terminate. Then we may assume
+ that V^ φ. Vk+       for any natural numbers k and p. By Theorem 3, this means that in
+ the sequence of Young tables D j , D2,...        we have that Dk is not a subtable of
+ D, +     for any natural numbers k and p. We must show that this leads to a contradic-
+ tion.
+        Consider the topological abelian group Η whose elements are all functions de-
+ fined on the set of integers Ζ and taking values in Ζ and whose neighborhoods of
+ zero have the form Un = {/ 6 H\f(m) = 0, m = 0, ± 1, · · · , ± n\. To each table Dj. we
+ can assign the function g{ e Η for which g{(m) i s equal to the multiplicity of the
+root m of the polynomial D .(γ). From the definition of a Young table and the explicit
+form (41) of D;(y) it is clear that
+
+              Si (m) >gi(tn-\- 1) when m > 0,    gt (m — 1) < gt (m) when m < 0;             (42)
+
+moreover, for a sufficiently large number Ν. = N{D .) and \m\ > Ν. we have g .(m) = 0.
+The condition that Dk i s not a subtable of D^+          for any natural numbers k and p
+can be restated as follows: for any natural numbers k and p there exists j € Ζ such
+that
+                                                                                             (43)
+
+        Let r = max(», /), where η is the length of the first row and / the length of the
+first column of D ,. Then g/,(0) <r, or else D. would be a subtable of D,.
+        Consequently, by (42), the set of functions {g^i = 1, 2, · · · j is bounded by the
+number r, i.e. g (m) < r for any i and m. We leave it to the reader to verify that the
+set A = \f £ H\f(m) <r, m = 0, ± 1, · · · ! is compact, and hence the sequence of func-
+tions ig.J has a limit point g. Since congruence in the sense of the given topology
+implies the pointwise convergence of functions, we obtain from (42) for the limit
+function that g(0) < r, g(m) > g{m + l) > 0 when m > 0, and 0 < g(m - 1) < g{m) when
+m < 0. But then there exists a natural number Μ such that when \m\ > Μ we have
+g(m) = mQ = const > 0. Since g is the limit point of \g{\, there exists a function g{   for which
+          €
+S ~ 8j        Um· Choose a natural number M1> Μ such that when \m\ > Mi we have g^m) = 0,
+and choose g{        such that J'J > iQ and g - g{   €. UM . Then
+
+
+
+
+                                          0,
+                         TRACE IDENTITIES OF FULL MATRIX ALGEBRAS                           755
+
+
+
+
+                                  8d (m) =
+                                                 .0,    Ai x <|m|,
+which implies that g{ {m) < gi (rri) for all m Ε Ζ, contradicting (43). The theorem is
+proved.
+
+                 §5.   Proof of Theorem 2 and other consequences of Theorem 3
+    As in §4, we identify the algebra Τ( under the operation ο with the group alge-
+bra K[SJ+J] by means of the isomorphism φ of Lemma 8.
+      Proof of Theorem 2. If £(y) = γ - η, then by Lemma 4 the set of all trace iden-
+tities of the algebra Λ1 over a field of characteristic zero forms a verbal ideal V
+corresponding to the bilinear form i>£. By Proposition 1, the set of multilinear trace
+identities V n T f e = Anny ΐ>Ε forms a two-sided ideal of Τ^ with respect to the oper-
+ation ο for any natural number k; hence, by Theorem 3, V as a verbal ideal is gener-
+ated by all verbal ideals VD contained in it, where D is a Young table. The same
+theorem implies that V D Vρ if and only if Ε{γ) = y — η divides D(y). It is evident
+from the formula (41) for the graph D(y) of the Young table D that y - n|D(y) if and
+only if the length of the first column of this table is at least n+ 1, i.e. D contains a
+Young subtable D*-"^ of type (1, · · · l)(w + 1 ones) with an (n + l)th space. Thus the
+set of all trace identities of ΛΙ is equal to the verbal ideal Vntn\, which by Theorem
+3 is generated by the multilinear polynomials V , , C\Tn forming a simple two-sided
+ideal of Ίn corresponding to the Young table £τη\ It is well known that the two-
+sided ideal of Τ = K[S n + j] corresponding to the Young table of type (1, · · · , 1) (n +
+1 ones) is one-dimensional. By Proposition 2, it is generated by the element / =
+Σ   eS          e(s)s, where the sum extends over all permutations s, and f(s) = ± 1 depend-
+         n* 1
+ing on the parity of s.
+    Hence the multilinear generalized polynomial in x 1 ? · ·« , %n
+
+                        / = φ" 1 (f) = ( - i ) " S C- D'a 0 « («ι) · · · t r
+                                                                                      (44
+                                                                               to).         >
+where the sum extends over all generalized monomials in Τn, generates the verbal
+ideal V . . . It remains to show that this verbal ideal is generated by the Hamilton-
+Cayley identity / . This follows immediately from the fact that the degree of / is
+η and its complete linearization is a nontrivial multilinear generalized polynomial in
+X j , · · · , * n , and, since V . . ΓιΤη is one-dimensional, this polynomial must agree
+with (44) to within a factor. Theorem 2 is proved.
+        We now indicate some corollaries of Theorem 2 concerning the ordinary identi-
+ties of the algebra M n ·
+        Let WJ+J denote the linear space of full cycles, i.e. the linear space generated
+in K[5 / + j] by those permutations -s which are cycles of length / + 1.
+
+    Corollary 1. Let /(/) be the two-sided ideal of the group algebra K[5 / + 1 ] = T{
+generated by the element
+ 756                                    JU. P. RAZMYSLOV
+
+                                                         e s
+                                        / = Σ ( )s.
+                                              s(xt)—x{
+                                                t>n
+
+where the sum extends over all permutations               in Sl+ j fixing the elements          χ + , , · · ·,
+X[ (rearranging the elements       x^,...,     xn), and ds) = ± 1 depending on the parity of s.
+Then the set of multilinear identities         of degree       I is equal to /(/) Π Ψ . + , .
+
+       Proof. As we noted in § 2 , the algebra § of generalized polynomials contains in
+a natural way the algebra F of noncommutative polynomials in the variables χ χ, χ-,
+• · · . It is obvious that a polynomial g € F is an identity of Mn if it is a trace iden-
+tity, i.e. if g e V , . . Consequently, to determine the multilinear identities in
+                                                         ( 1
+Xj, · · . , *j we must determine all g e ^Dtn\            ~ ^'/ having the form
+
+
+                           g(xv     . . . , χι) = ^ β'.        ΊΧΊ • · · Χι?                                <45>
+
+       From the definition of the isomorphism φ of Lemma 8 it is clear that <fr(g) be-
+longs to the space W/+j of full cycles. Since we have identified Τ^ and K[S.+ A,
+the elements of the form (45) comprise the whole space W^+1 of full cycles. The
+lemma now follows from the fact that V . . η 7"η, as we have seen in the proof of
+Theorem 2, is generated by the element Σ eS                    e(s)s, and from Lemma 9, which im-
+
+plies that V . . Π Τt = /(/). The corollary is proved.
+       The result of Corollary 1 can be sharpened. Let D*-"' be as in the proof of
+Theorem 2. Let φ1 denote the automorphism of the algebra § of generalized poly-
+nomials such that
+
+                 φ χ {a0 tr (a,) . . . tr (a,)} = (— l)'a 0 . tr (αχ) . . . tr (a,).
+
+
+It is easy to verify that φ^ carries verbal ideals into verbal ideals and that φ. in-
+duces an automorphism in the group ring Τt = K[S[+]]                  for which <^j(s) = e(s)s. In
+view of Proposition 2, the simple ideal of Τ^ corresponding to the Young table D
+maps into the simple ideal corresponding to the Young table D* obtained by trans-
+posing D. Hence the verbal ideal VD             corresponding to the Young table D maps into
+the verbal ideal VD*.      The automorphism φ1 acts on the space W[+i of full cycles as
+± 1, depending on the parity of the cycles. Therefore
+
+
+
+
+and by Corollary 1 the multilinear identities of Mn (hence all identities of Mn) lie
+in the verbal ideal V = V . . Π V(£»(n))· and are equal to V Π Η' ί + 1 ·
+       The verbal ideal V possesses the property that V Π Τk is a two-sided ideal of
+T, with respect to the operation ο for all natural numbers k. By Theorem 3, V is
+generated by all verbal ideals Vρ contained in it for some Young table D. But V D
+VD     if and only if D contains D^          and (£>("')* as subtables, and hence also the
+Young table 1
+                    TRACE IDENTITIES OF FULL MATRIX ALGEBRAS                                         757
+
+
+                                       — 1 —2          ...   —η
+
+
+
+
+                                   η
+
+with a (2« + l)th space. Consequently V = Vg n , and the multilinear identities of de-
+gree / of the algebra Mn are exactly V j n Π Wj+1· In the case where / = 2«, it follows
+from Amitsur's theorem that Vj n ^ + 1 is one-dimensional and is generated by the
+standard identity Ρ 2n(x j , · · · , * 2 > Λ ^ n c ^ e ° * e r hand, f*2n e ^ a n n ^ 2 n ' ^ e s i m p l e
+two-sided ideal corresponding to the Young table 21^, and hence Ρin generates
+ V B n Π Τ 2 η as a two-sided ideal of the algebra T 2 n . In view of Lemma 9, we obtain
+
+     Corollary 2. // / ( P , ) is the two-sided ideal of the group algebra K[Sy+1] = Τ^
+generated by the element φ{Ρ2nx2n+l'"        " X P e ^ / + l ' ' ^ e n ' * e 5 e i °^ a " multilinear
+identities of degree I is exactly W.+ l n / ( P 2 n ) .
+
+     Proof. Lemma 9 implies that the two-sided ideal V j n Γ\Τι is generated by the
+element
+
+
+
+                                              /=2n+i
+
+the fact that this element generates the ideal ' ( P j n ) follows from (37). The corollary
+is proved.
+      This corollary shows that in some generalized sense all identities of the matrix
+algebra Μ follow from the standard identity of degree 2n.
+     We must observe, however, that in spite of the fact that we have a description of
+the ideals /(/) and / ( P 2 ) in terms of Young tables, Corollaries 1 and 2 do not give
+explicit formulas for the identities of matrix algebras, but give essentially another
+formulation of the problem of finding the identities of the full matrix algebra Mn over
+a field of characteristic zero.
+     The following result was obtained in [2].
+
+     Corollary 3· If A . is the linear transformation of § 1, defined on the set of multi-
+linear polynomials, then the set of multilinear identities of the matrix algebra Μ                   is
+invariant under A ..
+
+         Proof. Corollary 1 implies that the set of multilinear identities of degree / of
+                                                              anc
+the algebra Mn is V , . η W;+ j C Τr Since vD(n)nTi               * ^/+ι are invariant un-
+der a linear transformation defined by conjugation by an element D. of the group
+5 ; + 1 = G r\Tr it follows that / e V       ^Wl+1 if and only if D. o / o D . 6 v D M n
+W i + 1 . Formula (36) shows that in this case D . of o D ; = A{(f). The corollary is
+proved.
+ 758                                          JU. P. RAZMVSLOV
+
+     If the characteristic of the field Κ is not equal to zero, then neither Lemma 4
+nor Theorem 3 is true. However, the construction of Lemma 5 makes it possible to
+construct an interesting example pertaining to identities of Lie algebras.
+       Theorem 5. Suppose the field Κ has characteristic                   p > 3 and £(y) = Il?~g(y - ι).
+Suppose also, as in Lemma 5, that bF is the bilinear form corresponding to Ε(γ) and
+that V is the verbal ideal corresponding to this bilinear form. Then
+                                          [x, y,            ...,y]eV
+                                                   P-l. times
+
+and for any natural number k we have [χ } , · · · , χk] £ V, i.e. the (p - l)th Engel iden-
+tity does not imply the nilpotency of a Lie algebra.
+
+    Proof. Since [*j, · · · , x^] is a multilinear polynomial, it suffices to show, in
+view of the equality Ann γ. ί>£ = V Π Τk, that
+
+
+
+
+Fronrthe definition of 6 £ and also (23) and (7), we have
+
+                hE ([xv   ...,   Xk], Xk . . . *i) = Τ α (ί*ι> ...,        Xk]Xk •·• Χι)
+
+            I                     4              •          \
+       = ϊα|[*ι            Xk-i) —    fXk-i              * ι J = fa([xi,   · • · . Xk-UXk-ι   ••• Χι)
+
+
+
+and since E(y) does not divide this polynomial when ρ > 3, it follows that
+[xv...,xh\tV.
+       The identity [x, y, · · · , y] is equivalent to the multilinear identity
+
+
+
+
+where the sum extends over all permutations s of the set {1, · · · , p\. In view of Lem-
+ma 8, which identifies Τ under the operation ο with K[S +]] by means of the iso-
+morphism φ, this multilinear polynomial is equal to Tj, the sum of all permutations
+which are cycles of length p + 1. By Lemma 11, which is also true for a field of
+characteristic p > 0, in order to prove that Tj £ V Ο Τ = Αηη-ρ ί>£ it suffices to ver-
+ify that d ofj = 0 in the group ring Kg[S + 1 L where Κβ = Κ[γ]/\Ε(γ)\.
+    Let us first show to what the element d ofj is equal when the characteristic of
+Κ is zero. In this case
+
+
+                                                     D      '     D
+
+where the sum extends over all Young tables D with graph D(y), and
+                      TRACE IDENTITIES OF FULL MATRIX ALGEBRAS                                             759
+
+But it is clear from (40) that XDif^>/mD                   is the coefficient of the first power of the
+variable γ in the polynomial D{y), and from the explicit formula (41) for the graph
+it follows trivially that XphJ/mp                 = 0 if in the second row of the Young table D
+there is more than one space. Therefore,
+
+
+
+
+where the sum extends over tables D of the form
+
+                                      0           - 1 -2[...                -ft|
+                                        1
+                                        2                                                                  (46)
+
+
+                                    p-k
+
+For such tables, XDis)         = (- l)p          , where s is a cycle of length p + 1 (see, for ex-
+ample, [5]). Therefore X p ^ j ) = (- l)p~kpl.                     On the other hand, the explicit formula
+for 1 D [5] shows that
+
+
+
+                                             mr
+                                                           -        Σ Ρ*
+where the βχ      are integral coefficients. Consequently
+
+                                  χ ο (τΧ)           (   _. if-k        y
+                                                               :
+                                             Ιβ =                 £J psS
+                                   mD                     p + 1 s-Sp^
+for any D, and this element h a s meaning in t h e c a s e of c h a r a c t e r i s t i c p > 0, i . e .
+
+                                        XD
+                                            mr
+
+It remains to observe that the polynomials D{y), where the D have the form (46), are
+divisible by Ε{γ) = Υϊ^~^(γ — i) in the case of a field of characteristic ρ > 0. Conse-
+quently d ofj = 0 in KE[S               ]. The theorem is proved.
+     In conclusion, we propose that the reader independently try to lower the estimate
+given by Higman [6] for the nilpotency class of algebras satisfying the identity y" =
+0: in any algebra over a field of characteristic zero satisfying the identity y" = 0 we
+have the identity χ ^... χ 2 = 0. Hint: in the algebra of generalized polynomials con-
+sider the verbal ideal V , . + V , . · and apply Theorem 3.
+                                                Γ
+                         D(n)     (Din))          * '
+                                                                                   Received 22/MAY/73
+760                                JU. P . RAZMYSLOV
+
+                                      BIBLIOGRAPHY
+
+      1. Ju. P . Razmyslov, Finite basing of the identities of a matrix algebra of second order
+ over a field of characteristic zero, Algebra i Logika 12 (1973)i 83—113 = Algebra and Logic
+ 12 (1973), 47-63·
+     2. Ju. P . Razmyslov, On a problem of Kaplansky, Izv. Akad. Nauk SSSR Ser. Mat. 37 (1973),
+483-501 = Math. USSR Izv. 7 (1973), 479-496.
+     3· F. D. Murnaghan, The theory of group representations, Johns Hopkins Press, Baltimore,
+Md., 1938; reprint, Dover, New York, 1963. MR 31 #258.
+     4. C. W. Curtis and 1. Reiner, Representation theory of finite groups and associative al-
+gebras, Pure and Appl. Math., vol. 11, Interscience, Ne-w York, 1962. MR 26 #2519.
+     5. Gilbert de B. Robinson, Representation theory of the symmetric group, Math. Exposi-
+tions, no. 12, Univ. of Toronto Press, Toronto, 1961. MR 23 #A3182.
+     6. Graham Higman, On a conjecture of Nagata, Proc. Cambridge Philos. Soc. 52 (1956),
+1-4. MR 17, 453-
+
+                                                Translated by G. A. KANDALL
+

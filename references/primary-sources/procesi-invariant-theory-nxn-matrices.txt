@@ -1,0 +1,3163 @@
+  ADVANCES                IN MATHEMATICS            19, 306-381           (1976)
+
+
+
+
+                              The Invariant                  Theory             of n x n Matrices
+                                                                   C. PROCESI
+                                   Istituto       di Matematica,           Uniwrsitd        di Piss,       Pisa, Italy
+
+
+
+                                                                 INTRODUCTION
+
+     This paper has arisen out of a set of problems that I will now describe.
+  Most of these problems arose out of a beautiful paper by Artin [I],
+ they are all related to the same root: Describe the invariant theory of
+ n-tuples of matrices.
+     The first problem was a conjecture made by Artin on the nature of
+ the invariants      of m n >i n matrices Xi ,..., X,,, under simultaneous
+ conjugation in characteristic        0. He conjectured that any such invariant
+ is a polynomial       in the elements Tr(Xi, , Xi0 ... X,,). This fact was
+ classical for n = 2 [5], and proved by Spencer and Rivlin [13-151 for
+ orthogonal invariants of symmetric 3 ‘x 3 matrices. The theory developed
+ by them also contains a finiteness statement and some discussion of the
+ relations among such invariants.             They were also interested in various
+kinds of concomitats         always for n = 3 and the orthogonal                     groups.
+A complete account of their theory can be found in [12]. In this paper,
+we first solve Artin’s        conjecture       (Theorem 1.3). Next, we take the
+problem of deducing a finite set of generators. This is accomplished                          in
+Section 3, where we give a general finiteness theorem for graded algebras
+from which we deduce that one may restrict                           to elements of type,
+Tr(Xil     ... Xi,), where K < 2” - 1 (Theorem 3.4a).
+    In view of the results of Spencer and Rivlin, we consider the problem
+of finding the matrix valued concomitants.                    This is a noncommutative
+algebra, which we also describe, that is generated over the ring of
+invariants     T by the “coordinates”          Xi . Here too, we have a finiteness
+statement.      The monomials in the -Xi’s of degree < 2” - 2 span this
+algebra over T. Both estimates are sharp (possibly both estimates should
+give 2” - 2, cf., [12], f or 72 = 3) at least in the sense that they are
+equivalent, 4.7, to the known estimates for the theorem of Nagata-
+Higman on nil algebras (cf. [6 p. 274]).l
+   ’ Note odded in proof. In a recent   paper,   this estimate    is sharpened: J. Rasm~slev,
+Trace        identities        of full   matrix       algebras     over      a field   of characteristic          zero, Ix.   Akad.   Nauk
+USSR           (1974),        No. 4.
+                                                                           306
+Copyright         0 1976 by Academic    Press, Inc.
+All rights      of reproduction  in any form reserved.
+                     INVARIANT          THEORY       OF   n   X   n   MATRICES                307
+
+   The theorem just cited may be said to be the “first fundamental
+theorem”       for invariants  and matrix concomitants     of m matrices (in
+characteristic     0). In the spitit of Weyl’s book [16], we then take the
+problem of describing the relations among such invariants           and con-
+comitants. The result is quite striking in that it basically says that any
+relation among invariants and matrix concomitants        is a consequence of
+the theorem of Hamilton-Cayley         (Theorem 4.6).’
+   As a consequence, we tie the theory thus far obtained to the theory of
+polynomial identities of algebras. We have two results that seem quite
+interesting:
+      (1) If an algebra over a field of characteristic   0 satisfies the identity
+P = 0, then it satisfies all the identities of n x n matrices (Corollary
+4.8).
+      (2) The space of multilinear       identities    of degree nz of 11 x n
+matrices can be described     completely      in terms of Young diagrams
+(Theorem 6.1).
+
+   The technique of the proofs is quite simple. It is based on the remark
+that in theorems on invariants,       we may analyze only the multilinear
+ones. If p is a multilinear invariant depending on m matrices X1 ,..., X,,, ,
+we may think of p as the linear invariant map
+
+                          p: (A-), !3 (K), @ “. ia (AT), - AT,
+((K)n the ring of matrices). Now, if I’ = K”, the basic vector space,
+identify (K), with I’ @ V*, and p: V’zJ1lL@ I/*@& + K is an invariant
+map. Next, identify ( V@jrl @ V*gm)*        with End( Vsjnb): h E End( Vorn)
+induces the form u @ q + <v, h(u)). Thus, p corresponds       to an element
+p of End(V@“)      commuting with GZ(V). At this point, one invokes the
+classical theory that implies p = C LY,U, 0 in the symmetric     group of m
+letters. Finally, we have to interpret a permutation     u as an invariant.
+The computation       is easy (Theorem 1.2) if u = (ii .*. ~,J(j, ...i/,) ***
+(t1 *.a t3) is the decomposition   in cycles, the invariant   associated is:
+
+                 Tr(Sj,Xj~       ... Xi,) Tr(-‘I;,   ... Sjn) ... Tr(Stl         ... 5,e).3
+
+   ’ Note added in proof. This computation       appears already    in B. Kostant,    a theorem
+of Frebenius,      a theorem of Amitsur Levitski and cohomology      theory, J. Math.    Mech. 7
+(1958),   237-264.
+   3 Note added in proof. This result has been obtained      independently     b?; Rasmyslev    in
+the paper cited in footnote     1.
+308                                    C.   PROCESI
+
+
+     With this dictionary now in hand, it is just a question of translating
+ the usual theorems of invariants into this language of matrices.
+     Sections 7 through 10 of Part I are dedicated to invariants over the
+ other classical groups. The first fundamental                 theorem for O(n) and
+ Sp(n) is an easy generalisation         of Artin’s conjecture. In both cases, we
+ get that the invariants         are generated by the elements Tr( Ui, *.. Uik),
+ where Ui = Xi or Xit for O(n), Ui = Xi or Xi*, the symplectic trans-
+ pose, for Sp(n). One has similar results for matrix concomitants                     with
+ all the necessary finiteness theorems. The second fundamental                   theorem
+ also can be proved, but it is somewhat more mysterious than for GZ(n, K),
+ in that strange new identities            appear, whose natures are not fully
+ clarified. In Section 11, we describe the unitary invariants with complete
+ results. In Section 12, we study mixed invariants and concomitants                     for
+ Gl(n, K) (for simplicity).
+    This finishes what might be called the quantitative part of invariant
+ theory, i.e., the explicit description          of invariants     and their relations.
+    In Part II, we develop the qualitative results, basically, the theory of
+the quotient varieties associated to the invariant problems considered
+in Part I.
+    In this part, we basically develop and adopt to the other classical
+ groups the ideas and techniques given by Artin in [I]. The results are
+ in all cases parallel to the theory for GZ(n, K). The ring of orthogonal
+invariants of m II x n matrices is the coordinate ring of a variety whose
+points are the equivalence classes under O(n) of orthogonal representa-
+tions of the free *-algebra in m-variables (Theorem 15.3). The irreducible
+representations      are simple points of the quotient variety (Theorem 20.2),
+and on this set, the quotient map is a principal fibration (Theorem                 19.4).
+Some of these results are proved in a characteristic               free approach. The
+possibility    of a full generalization to characteristic        p f 0 is still subject
+to unsolved obstacles, although many new developments                  in this direction
+have occurred.        Hopefully,     the state of affairs of invariant theory in
+char p > 0, in the next five years will change completely.                    At present
+Doubilet,      Rota, and Stein have proved the first fundamental                theorem
+for GZ(n, I\;‘) in char p > 0 (and even over 2) [2]. The Mumford conjecture
+has been solved by Haboush (and by the author jointly with Formanek
+for GZ(n, k)). (Th’ is implies that, except for the explicit computation
+of the invariant rings, the qualitative theory of Part II is valid in every
+characteristic     (f 2 for the moment).
+    We thus formulate          a conjecture       analogous to Artin’s        conjecture
+for char p > 0.
+                      INVARIANT       THEORY      OF   ?Z ;<   ?l   MATRICES   309
+
+   The   invariants of m n :./ n matrices are generated by the elements
+“&(X1   9’.‘, JL)), where p is a noncommutative          polynomial    in the
+Xi’s, and u’i is a coefficient of the characteristic polynomial.    It can be
+proved that:
+      (1) The ring A generated by such elements is finitely generated [8].
+      (2) The variety associated to ,4 classifies equivalence classes of
+semisimple representations  of the free algebra K{X; ,..., X,,>. [8].
+      (3) The ring of invariants    B is integral over 14 and the map
+Spec B--f Spec d is a homcomorphism.       (This follows from Mumford’s
+conjecture).
+   We may add that, especially in Fart II, some more or less known
+theorems have been developed anew to put them in a suitable form for
+our purposes. Moreover, many well-known     special theorems on orthogo-
+nal and unitary equivalence of matrices are consequences of the theory
+develqped, but we do not go into this for reasons of space.
+   Finally, I would like to express my admiration     to &I. Artin for his
+discovery   of the deeper relations between the theory of polynomial
+identities  and invariant  theory.  The ties between      noncommutative
+algebra on one hand, and algebraic geometry and arithmetic         on the
+other should be made stronger by these ideas. They have already yielded
+many interesting results and promise to give more.
+
+
+                                          CONTENTS
+
+
+Part I. Algebraic Invariants
+   1. Invariants   of n Y 11matrices. 2. n/Iatris concomitants.   3. Finiteness
+theorems for graded algebras. 4. Trace identities. 5. Trace 0 matrices.
+6. Relations with polynomial identities and central polynomials.           7. Or-
+thogonal invariants.     8. Orthogonal     trace identities. 9. Explicit com-
+putations     of orthogonal    trace identities.   10. Symplectic    invariants.
+11. Unitary invariants.     12. Mixed invariants and concomitants.
+
+Part II. Representations          of *-Algebras
+   13. *-algebras     and representations.    14. Semisimple     *-algebras.
+15. Equivalence of representations      under O(n) and Sp(n). 16. Positive
+involutions   and real points. 17. Azumaya algebras. 18. Universal     maps.
+19. Irreducible    representations.    20. Qualitative results for rational
+concomitants.
+310                                    C. PROCESI
+
+                            I. ALGEBRAIC       INVARIANTS
+
+1. Invariants of n x n Matrices
+   Let us fix the following notations: K denotes a field of characteristic 0,
+ V ‘V K” is an n-dimensional vector space, (K)n N End(V) is the full
+ring of n x n matrices, V* is the dual space of V, and G = Gl(n, K) is
+the group of invertible matrices. We wish to study the following problem;
+consider the space IV = (KY; of i-tuples of n ); n matrices. The group G
+acts rationally on W according to the formula:
+         If     il E G, Bj E (Q    ,
+         then .4 - (B, , B, ,..., BJ = (AB,F,         AB,II-* ,..., AB+F).
+    We want to describe the ring Ti,n. of polynomial functions on W,
+invariant under the action of G. According to the general theory, we
+will split the description into two steps. The so called “first fundamental
+theorem,” i.e., a list of generators for Ti,, , and then the “second
+fundamental theorem,” i.e., a list of relations among the previously
+found generators. Of course, it would be very interesting to continue
+the process by giving the “ith fundamental theorem,” i.e., the full
+theory of syzigies; unfortunately, this seems to be still out of the scope
+of the theory as presented in this paper.
+    To obtain the first fundamental theorem, we recall a part of the
+classical theory of invariants (cf. [16]).
+    First, we have the identification of the ith tensor power (K); ’ of (K)n ,
+with End( Pi).      The group G = GZ(n, K) is embedded in End( Pi)
+using the diagonal action A * (F~ @ v2 @ **. @ ai) = AC, @ Av, @
+ ..- @ Avi ; finally, the centralizer of G in End(VBi), i.e., the algebra
+of G-linear transformations of Ii!Li, is spanned, as a vector space, by the
+endomorphisms h, , 0 an element of the symmetric group q on i letters,
+defined by the formula:
+              X,(v, @ zJ2@ .‘. @ Vi) = vo-l(l) @ vo~1(2)@ ... @ vu-,(i) .
+
+  We have, furthermore,           a canonical identification
+
+                          2-r:(p-;*oi @ Pi)*    ‘v End(V@<),
+where n is obtained from the nondegenerate pairing End(Pi)                   x
+Y*@ @ Pi + K given by the formula:
+      (a) ~~,~~O~~O~~~O~iO~lO~~O~~~O~~~
+              =(~lo~~~~p?j,x(x,~3c~~‘~~~x~)).
+                  INVARIANT      THEORY   OF   ?‘Z X   ?l    MATRICES             311
+
+where, yj E V*, xj E V, j = l,..., i, and the right side of (a) is the
+evaluation of the form v, @ ... @ yi E Y*C3,i CY (Pi)*        on the vector
+h(x, @ x2 @ ... @ Xi). It is easily verified that 7~is an isomorphism  of G
+spaces with their canonical G structures.       Hence, the space of G in-
+variant vectors of ( Y*Qi @ Vi)*,       which is the space of linear maps
+ 17*Oi @ Pi + K invariant under G is identified under rr to the
+space of G linear endomorphisms       of I”+{. We already know that this
+last space is spanned by the elements A, , CJE Yi . Thus we want to find
+an explicit expression  for the linear invariant p0 corresponding     to A,
+under r.
+    One easily computes
+
+
+
+
+   THEOREM    1.1. Any multilineav        iwariant          y: V*C3i @ VOi ---f K is a
+linear combination of the invariants
+
+            PA?-%0 *. * @, Ipi (g A-1 ‘2) ... @I Xi) = n (lpg(j) ) Xi).
+
+   The nest step now should be to determine the exact relations among
+the h,‘s (or the p,‘s). Rahter than doing this now, we want to interpret
+the pL,‘s in a different form.
+   We recall the canonical isomorphism    between End(V) and I’* @ V
+given by the formula:
+                              (cp fg V)(U) = ‘y, u)v.
+This is a G-isomorphism    and we will use it in systematically identifying
+the two spaces. For instance, we will refer to a decomposable          endo-
+morphism as one corresponding    to a decomposable tensor y @ v, notice
+that an endomorphism    is decomposable if and only if it is of rank < 1.
+   We recall, for completeness,   how multiplication    of endomorphisms
+and the trace map are obtained using the previous identification.
+    (b)   p@v~~@u=g,@(~,v,u
+    (c)   tr(g, 0 v) = <v, vi.
+312                                     C. PROCESI
+
+  We can use the previous isomorphism to obtain an isomorphism of
+G-spaces:
+
+
+   The description of the linear invariants of V*eii @ V”” obtained
+in 1.1 yields, therefore, a description for the linear invariants of (K): ‘.
+Choose, therefore, a u E spi , and consider the linear invariant p0 :
+(rqy -+ K. We are going to give a new explicit formula for p., in terms
+of the “matrix”    variables. Decompose u in disjoint cycles, including
+the ones of length 1,
+                     u = ( .llZZ
+                               . ... i,J(j,j,   ...j.) .” (t,t, ‘.. te).
+
+  THEOREM     1.2.    Given A, , A, ,..., Ai E (IL)%, we have:
+         p,(A1 @ A, @ ... @ Ai)
+              = tr(AiIAiz ... ‘4J tr(A&,            ... A,,) ... tr(.JCltPtg... At,)
+
+  Proof. Since the two sides of the equality are multilinear maps, it is
+sufficient to prove it when A, ,..., Ai are decomposable, i.e., Aj = 9)j @ Xi.
+  Thus,
+
+
+
+
+  Consider, for instance, the product
+
+
+
+  One verifies immediately from the formulas (b), (c) that
+
+            FJi,0 &, . vi, 0 xi, ,..-3%, 0 Xik
+                 = <Vi, , &J(%,          , &*> *.. <Fik ?%-,> vi, c3 4, *
+
+   Therefore, M = tr(Ai,AiZ .a* Aik), and the theorem follows.
+   We are now in a position to state and prove the first fundamental
+theorem for invariants of n x n matrices.
+                 INVARIANT   THEORY OF n X n MATRICES                    313
+
+   THEOREM    1.3. Any polynomial invariant of i n x n matrices AI,..., Ai
+is a polynomial in the invariants tr(AiIAIZ *** A,,); Ai,Ai~ a.0Ai, running
+over all possible(noncommutative) monomaals.
+   Proof.  The theorem has already been proved for multilinear inva-
+riants. We claim that the general case follows immediately. In fact,
+one can fully polarize an invariant to obtain a multilinear one, and then
+recover the original invariant by identifying the variables. Now clearly,
+this last restitution process carries the invariant tr(AilAii   a.* A,,) in
+invariants of the same type, and so the theorem is proved.
+
+2. Matrix    Concomitants
+    We recall that, given a group G and two G-spaces k’, IV, a polynomial
+concomitant is a polynomial map $: V -+ H’that is compatible with the
+ G-structures, i.e., +(gv) = g+(v), Vg E G, v E F’.
+    We want to describe the concomitants in the case that V = (K):, and
+ W = (K)% , G = Gl(n, K), with the usual action. We will refer to these
+as matrix valued concomitants and denote such a set by S,,, .
+    The first remark is that Si,, is a noncommutative ring under pointwise
+sum and multiplication, in fact, Si,lL is the subring of the ring Pi,,,, of
+polynomial maps from (K),i to (K), formed by those elements left
+fixed by the group G = Gl(n, K), acting on Pi,n as follows
+
+              LEG,   $EPisn 7       then (&X4       = <r . (vW’4).
+On the other hand, P,,, is easily identified as a ring isomorphic to
+the full ring of 12x n matrices over the ring of polynomial functions
+on (KY;, , i.e., a ring of polynomials in i - n’ variables. If one identifies
+the scalars .K with the center of (K), , one sees that the ring Ti,n. of
+invariants of (Kg is a subring of the center of Si,, , which is, therefore,
+a Ti,% algebra. It is easy to show (cf. [9, p. 941) that Ti,, is exactly the
+center of S,,, as soon as i > 1 and n > I, otherwise, Si,, is commutative.
+   To complete these preliminary remarks, we notice that, among the
+matrix concomitants, we can consider the j-coordinate maps, indicated
+by Xj and given by:
+                         xj: (A, ) A, )..., Ai) -   A, .
+The first fundamental theorem for matrix concomitants now can be
+formulated.
+
+   THEOREM   2.1.    The ring Si,, is generated, as an atgebra over Ti,, , by
+the elementsXj .
+
+6071’913-4
+314                                     C.   PROCESI
+
+
+   Proof. Given a concomitant f: (K)k                  + (K)% , we build         an invariant
+J: (K)?’ + (K),L defined as follows
+
+                fV1    9 4 ,..., &,I>    = tr(f(4      , 4 >...>Ai) . 4+1).
+
+We claim that, if f, g: (Kg -+ (K), are two concomitants                and f = g,
+then f =g. In fact, if tr( f (A,, A, ,..., Ai) - LI,+~) = tr(g(A,, A, ,..., A,)Ai+,)
+for all A,, A, ,..., Ai+i, we have, by the nondegeneracy              of the form
+tr(xy), that f (A, , A, ,..., AJ -= g(A, , A, ,..., Ai), as claimed.
+    According    to the classification    theorem, 1.3, for the invariants,        we
+have that, if f is a matrix concomitant, f is a polynomial in the elements
+frM&        .** Ail), which is linear in Ai+r . Therefore,
+
+                         f’ = 1 llil...i, tr(Ai1Ai2 “’ Ai/&+i),
+
+with hi,...ij E Ti,n , and ii , i, ,..., ii # i + 1. (If Ai+r appears in the
+middle of a monomial, we can shift it to the end by a cyclic permutation.)
+We have, thus,
+
+                f(A 1 ,..., A,+1) == tr f C Ail...i,AilAiO ... ili, . Ai+i 1 ,
+
+therefore,   f = C hi;..ijXi,Xi,        *emXi, , as announced.
+
+3. Finiteness   Theorems for Graded Algebras
+      The theorems proved in the previous sections still lack some necessary
+features for explicit computations.             One is the lack of the necessary
+finiteness statements.         We are going to provide them now. First, we
+make some general remarks on TX,, and Si,, .
+      Given f E Si,, , we can consider its characteristic       polynomial Q(X) =
+X” + x;zl oi( f )X-l.          H ere, oi( f) is an invariant, for instance, al(f) =
+ -tr(f),     the others can be described using the expression of the coeffi-
+cients of the characteristic          polynomial of a matrix A in term of the
+invariants      tr(Ai),  (these formulas      are the expressions    of the Newton
+functions in terms of the elementary symmetric polynomials).               We clearly
+have the Hamilton-Cayley            theorem xr(f) = 0.
+     Furthermore,       both S,,, and Ti,n are graded algebras, the degree
+being the usual one of polynomial maps, if f E Si,, is homogeneous
+of degree h, then oi(f) is homogeneous               of degree h * i. Finally, both
+S,,, and Ti,, are connected, i.e., (S&,            = (Ti,JO = K.
+     Based on the previous remarks and having in mind Theorems                    1.3
+and 2.1, we develop here a general approach to finiteness theorems
+                 INVARIANT   THEORY   OF   12 >: l’l   MATRICES         315
+
+that will apply for the algebras T(,,, and Si,ls as well as for the other
+algebras that we will encounter in the study of the other classical groups.
+   Let us fix the following    notation, A = @yzo Ai will be a connected
+commutative    graded algebra over a field K = A,, . We will set A+ =
+~~=, Ai and recall the following well-known  and easy lemma (Nakayama’s
+lemma for graded module).
+
+   LEMMA   3.1. Let h4 = @Lo Mi be a graded A module and let N be a
+graded submodule. If M = N + AfM, then h4 = N.
+    Let us consider now an associative,    not necessarily    commutative,
+graded algebra R over A and a subset X of R-f- such that: (i) R, = A,, = K
+(ii) R is generated as an A algebra by I and X.
+
+  THEOREM    3.2.    If every element r E R+ satisJies a manic polynomial
+of degreen (depending on Y) xrL + x’r=, CX$-~ with ‘Y~E A+ and char K = 0
+OYchar K > n, then R is spannedover A by the monomialsin the elements
+of A’ of degree < 2” - 2.
+
+   Proof. Consider the algebra U = RI-/A+R. By 3.1, it is enough
+to show that the monomials of degree < 2” - 2 (and 3 1) in the
+elements of X (image of X in U), span U as a vector space over K.
+Now, the hypothesis implies that U is generated, as a K algebra, by X,
+and so it is sufficient to show that U is nilpotent of degree < 2’” - 1.
+If r E Ii+, we have in +- C olirrk-i = 0 with 01~E A-b, therefore, every
+element T of U satisfies the equation P = 0. We are, therefore, in the
+position to apply the theorem of Nagata-Higman [6, p. 2741 to conclude
+the proof.
+   Assume now that the algebra R is equipped with an A linear map
+t: R -+ A preserving degrees. Furthermore, assume that, if T denotes
+the K algebra generated by X, the elements t(TI) generate A+ as an
+ideal.
+
+   THEOREM   3.3. In the previous hypotheses, A is generated as a K
+algebra by the elemerztst(r), where Y is a monomial in the elementsof ,Y
+of degree < 2’” - I.
+    Proof. By 3.2, R is spanned, as an A module, by the monomials
+in the elements of X of degree < 2n - 2, let us call this set of monomials
+S. Let B denote the K subalgebra of A generated by the elements
+t(r), where r runs on the set S’ of monomials in the elements of 9 of
+degree < 2” - 1. We must show that B = A, since B is a graded
+ 316                               C. PROCESI
+
+algebra and A is a graded B module, it is sufficient to show, by 3.1,
+that B + B+A = A. Now, A+ is generated by t(T+) as an ideal,
+R = AS, and T+ C T * X therefore t(T+) Z A . t(SX) C ABf (since
+SX is the set of monomials of positive degree < 2% - 1 in the elements
+of X). Hence, A +=A*t(T+)LAB+,andsoA=B+B+A.
+   We can apply these theorems in the case in which A is already known
+to be generated, as a K-algebra, by the elements t(r), YE T.
+   In particular, we can apply the previous theorems to obtain the
+finiteness theorems for the rings of invariants.
+
+   THEOREM     3.4. (a) The ring Ti,n is generated over K by the elements
+tr(AilAip ..+ A$ with j < 2” - 1.
+      (b) Si.ta is spanned, as a Ti,n module, by the elementsX,lLYi, 2 .** Xi ,
+with j < 2” - 2.
+   Proof. This is just a special case, in light of the remarks at the
+beginning of the section, of the previous theorems. We use for t the
+trace map, and for X the set Xr , X2 ,..., -Xi .
+
+4. Trace Identities
+   We consider now the problem of finding, in a systematic way, all
+relations among the elements tr(M) and M, iVl varying on the mo-
+nomials in the n Jo n matrix variables Xi , X, ,..., Xi ,..., i = l,..., co.
+   We construct, for this purpose, the formal polynomial ring T generated
+by the symbols Tr(XilXi,, *.* Xi,), with the convention that Tr(M) =
+Tr(N) if and only if N is obtained from M by a cyclic permuation.
+   We will call an element f E T a commutative trace polynomial in the
+variables Xi and write itf(X,   , Xs ,..., Xi ,...). Furthermore, we consider
+the free algebra S = T {X&r,...,,,       over T in the variables Xi .
+   We will refer to the elements of S as noncommutative trace polynomials
+   S and T are equipped with some extra structure:
+       (a)   A T-linear map Tr: S + T defined by the formula
+
+
+
+
+     (b) For all choices g, , g, ,..., gi , ,...; i = 1,..., CO of elements
+gi E S, a formal substitution f+f(g,     , g, ,..., gi ,... ), which is the uni-
+quely determined endomorphism of the ring S mapping Xi into gi and
+compatible with the map Tr.
+                       INVARIANT      THEORY     OF    ?Z :-: % MATRICES             317
+
+   The substitution      is easily defined on the generators:        it sends a
+monomial X,1X, ... -Xi intogi,gi, .*e gi.? and an element tr(Xi,Xi,       ... Xi,)
+into Tr(gil e.1gi$r), one Verifies eaiily that this is well defined and unique.
+   Having these structures      in S, we can define the notion of a T-ideal.
+
+  DEFIMTION   4.1. (a) AA T-ideal I of S is an ideal that is closed under
+Tr and under all substitutions,
+      (b)       ,I T-ideal   J of 7‘ ‘.1s an ideal closed under substitutions.
+    One easily verifies that, given any set A C S (resp. B C T, there is a
+ minimal T-ideal of S containing A and it is the ideal generated by the
+ elements obtained from 9 by making all possible substitutions                       and
+ taking the Tr values, similarly for B C T. We will refer to this T-ideal
+ as to the T-ideal generated by A in S, (resp. by B in T).
+    The meaning of the previous definitions              is made more explicit by
+ associating,   to the formal trace polynomials,             actual functions.       One
+ chooses an integer n and considers                 the space (K):       of sequences
+ (A, , A, ,..., A, ,...) 0 f n .: n matrices almost all zero.
+    Given an elementf(S,        ,..., -Xi ,...) E T, one associate to it a polynomial
+ map, in fact an invariant, f: (K): ---f K by the obvious formula,                      if
+f = Tr(Sil *.. X,,), we setf(A, , A, ,..., Ai ,...) := tr(Ai,AiV ... Ai,) and
+ then estend the definition on all T. Furthermore,            if g(Xr ,...; Xi ,...) E S,
+ one associates to it a polynomial map, in fact, a matrix concomitant
+S: (K); ---f (K),, by the obvious formulas, on T, it is the already defined
+ evaluation and to the monomials Xi1 ... LYi,C, one associates the map
+(Ai ,..., Ai ,...) + Ai< ... Aii .
+   If we indicate by T, ,L, S,,, the rings of invariants       and concomitants
+of infinitely      many matrices,     we have, thus, two onto maps:
+                              T: T -+ T.,,,L ,        T:S’ST.R.
+   If we consider T C S and T c*‘,n L S,,,n, we remark that n is the
+restriction  of T to T. We are now able to state the problem of finding
+the relations among invariants and concomitants,     it consists of describing
+the Kernels of the two maps ~7 and 7.
+   An important remark, before continuing, is that we have the compati-
+bylity of 7, n with the extra trace operators, i.e., the diagram:
+318                                C. PROCESI
+
+is commutative, where Tr is the formal trace in S, and tr is the
+usual trace.
+   Finally, 7~is compatible with the substitution, which becomes in S,,,,
+composition of map; i.e., m(f(g, ,..., gi ,... )) = ($)(+g,) ,..., n(gJ ,... ).
+   Having made these remarks, the next proposition follows immediately:
+
+  PROPOSITION    4.2.    The ideals ker r, ker r are T-ideals.
+    We will refer to the elements of ker n as commutative trace identities
+of n >! n matrices and to the elements of ker T as noncommutative
+trace identities of n x n matrices. We remark that we have already
+established, in the proof of 2.1, a strict relationship between the two
+concepts.
+    We come now to the basic theorem from which all our results will
+follow.
+    Establish the following notation, given a permutation u E yn, , we
+define an element $+,E T as follows. Decompose 4 in disjoint cycles,
+including the ones of length 1:
+
+                        u = (il a**i&   ...j.) ***(tl **atJ
+
+and set Qpn(XI ,..., X,)        = Tr(Xi,Xi,    ... X,,)  Tr(Xj, *a* X,,) ***
+Tr(Xtl *** X, ). & is a multilinear trace monomial of degree m. With the
+notations of 1”.1and 1.2 we have, if A, ,..., A,, E (IQ, , that
+
+             4Ar) = G%           4n) = PL,(4 0 4 0 *** 0 4.
+                             >***7
+  From the theory of Young diagrams we obtain immediately.
+
+   THEOREM 4.3. (a) An element x,,y;,       q,@, is a trace identity fop
+n x n matrices if and only if the element C OI,(Tbelongsto the ideal of the
+group algebra of 9& spannedby the Young symmetrixers relative to diagrams
+with at least n + 1 rows.
+     (b) In particular     we have the fundamental trace identity
+F(X, ,..., -%,.I) = C&     E(U)@, (E(U) the signature of a), corresponding
+to the Young diagram wi% one column and n + 1 YOWS.
+   Proof. Clearly, C a,@, is a trace identity if and only if the corre-
+sponding element C OI,~,,is zero. This is zero if and only if the endo-
+morphism C a~,,&,on VCm induced by C 01~0is zero. Hence, (a) and (b)
+follow from the theory of Young diagrams and the representation of
+ 9& on V@‘m(cf. [16]).
+                    INVARIANT         THEORY             OF 72 :: ?l MATRICES                                  319
+
+   Since F(X, ,..., X%+,) is multilinear in all variables we can apply to it
+the same process used in the proof of 2.1 to write it formally as
+
+                    WG ,..., -L+,) = Tr(WY,                             ,..., XJ &+A
+where G(X, ,..., Xn) E S.
+  The explicit form of G(IY, ,..., -Y,J is the following
+
+     G(Xl   ,..., X,)   = i      (-l)k+l                 1           SjlSi2    .** lyik       C     c(u)@u 9
+                          7<=0                iI’&,“..        .fig                        oo.P,-k
+
+                          on {l,..., m} -(ii                 ,..*,    ”
+                                                                     Ik)*
+
+  In different notations, let us write, for a set 5’ = (si ,..., sIC)
+
+
+
+
+  Then, we have, setting M = 1, 2,..., n and 1S 1 the cardinality of 5’
+                   G(X; ,..., x,)          = C (-I)I”-Sl+l                    Fs * P,,         .
+                                             SCM
+  An easy consequence of 4.3 is the following.
+
+  COROLLARY     4.4. (a) A multilineal commutative trace identity of
+degree n + 1 in n + 1 variables is a scalar multiple of F(X, ,..., X,,,).
+     (b) A multilinear noncommutative trace identity of degree n in n
+variables is a scalar multiple of G(XI ,..., X,,).
+     Cc> WG ,..., X,) is obtained by fullpolarization of the “characteristic
+polynomial” of X, times (- I)“-‘-‘.
+   Proof. (a) This is a consequence of 4.3(a), since the ideal described
+there, for m = n + 1, is just the scalar multiples of zOEYn+ E(U)U.
+     (b) This is a consequence of (a) and the relation established in
+the proof of 2.1, that f (Xi ,..., X,) E Ker T if and only if
+                          Tr(f(Xr           ,..., XJ S,,,) E Ker r.
+     (c) First, one has to explain the meaning of characteristic poly-
+nomial of an element of S. We know that if A is an n x n matrix, its
+characteristic polynomial xA(X) is a polynomial whose coefficients can
+be expressed in a formal way via the elements tr(Ai). We use the same
+formulas to construct a formal characteristic polynomial of an element
+of S, using Tr instead of the usual trace. Now, if X is a variable, we
+320                                  C. PROCESI
+
+consider xx(X), it is an element of S homogeneous of degree n. By the
+Hamilton-Cayley      theorem, xx(X) E Ker T, hence, if we fully polarize
+xx(X), we have a multilinear trace identity of degree n.
+   By (b), it is a scalar multiple of G(X, ,..., X,). On the other hand,
+its leading term (the one without coefficients in 7’) is Co.y, Xc(i) ***X,,cn) ,
+therefore, (c) follows by inspection.
+   We are now ready to prove the second fundamental theorem.
+
+  THEOREM     4.5. (a) The ideal K er z- is generated by the elements
+F(M,,..., M,+l). The Mi’s running over all possiblemonomials.
+   (b) The ideal Ker T is generated by the elementsF(MI ,..., Mn+l),
+GW, ,..., NJ.
+ The Mi’s and Nj’s running over all possible monomials.
+   Proof. (a) First, we want to reduce ourselves to the analysis of
+multilinear identities. This is possible by the processes of polarization
+and restitution. In fact, if f E Ker n, and we fully polarize it, the resultf’
+is still in Ker m. If we show that f’ is in the ideal described by (a), the
+same will follow for f, since the restitution maps this ideal into itself.
+   Therefore, letf E Ker 7~be multilinear and of degree m. A priorif may
+depend on more than m variables, but we can separate f as a sum of
+polynomials fi each depending on m variables, such that fi and fj do
+not depend on the same variables if i # j. One easily sees, by setting
+some of the variables equal to zero, that each fi is a trace identity.
+Therefore, we may assume that f is multilinear of degree m and depends
+on the variables
+                  -q , x2 ,..., ;ri, ,   then     f = C LX,+,.
+                                                      oeYm
+   We know, by 4.3, that C 01,u is in the ideal relative to the Young
+diagrams with at least n + 1 rows. This ideal is generated by the
+                        E(U)(T) under the embedding of ym+, in q,:,, .
+antisymmetrizer C ‘TESP,+l
+   Therefore,
+                    c a,u = 5, z9 %TTi(J    ++J) 7;.
+                             1’3 nl      f&+1
+   Let us analyze, therefore, the form of the trace identity        associated
+to the element
+                    T (oE,c .bb)         5;       T’ 5 E %.
+                          “+I
+  We make a series of remarks.
+                   INVARIANT        THEORY         OF   ?Z X   n   MATRICES                  321
+
+   Remark 1. CUE+n+l C(U), thought of as an element                                 of the group
+algebra over q,L correspond to the identity:
+
+                 F&q )...) 1Yn-,)     . Tr(S,+,)        Tr(XnA3)     ... Tr(-Y,,J
+
+   Remark 2. If &EYm a,,h corresponds to a trace polynomial
+cH(X, ,..., X,,), and T E q,, , then ~(1 ~(,h)~-i corresponds to the trace
+ polynomial H(Xdl) , XCA ,--, &,d).
+    Remark 3. T(C l (u)u)t; = T(E l (O)O)<7 . 7-l hence, to prove that
+the trace polynomial associated to T(C E(u)D)~ is obtained from
+F(Xl >***>xn+1>, substituting for the Xi’s some monomials (and changing
+sign if necessary) it is sufficient, it light of Remark 2, to do it for
+Ix -~,+I E(U)U. 57. Let us call lr = 7.
+  Remark 4. CoeyP,+ll (U)CJ. 7 = & Coey4P,+l    c(u), . y, where y is a
+permutation of q,, containing, in each cycle, at most one of the elements
+1, 2,..., n + 1.
+   Proof. It is sufficient to show that we can write r) = h . y, with y of
+the desired type, and h E Yrl+r , since in this case C C(U)ah = C(X) *
+C E(U),. The possibility of writing 77= Ay is obtained by a simple
+induction of which we explain the first step. Assume that 7 contains
+in a cycle two elements of 1, 2,..., n + 1, say, 1 and 2: 17= (I z’iiz ... i,; 2
+ . -*-it) --A ( ).
+31
+   We have (12) * 7 = (1 ii ~0.ik) (2 . ..j.) ... ( ).
+
+   Remark 5. If u E 9%+i and y is as in 4, the cycle decomposition of u
+is obtained by formally substituting; in each cycle of u, in place of the
+elements 1, 2,..., n + 1, the strings 1 & ,..., ie , 2j, ,..., j, ,..., n + 1 t, A**tt,
+appearing in the cycle decomposition of 7 and finally adjoining the
+cycles of q in which the elements 1, 2,..., n + 1 do not appear.
+   We are now in a position to finish, it is clear, by 5, that if
+y = (iii --- ik)(2jl --*j,) *-- (n + It, *** &)(A, *+. hr)(pL1..* pC) .** (pr *a*p,),
+the trace polynomial corresponding to C C(U) * u . y is
+                                             0
+
+
+
+
+   Therefore, from the various reductions operated, the theorem follows,
+     (b)    Let H(X,      ,..., X,) E Ker T be a noncommutative                       trace iden-
+322                               C. PROCESI
+
+tity of n X n matrices. We know then that the trace polynomial
+Tr(H(X, ,..., X,) . X,rl+1) is in Kerr.
+    By (a), we know that such an element has the form:
+
+
+
+and it is linear in X,n+, . Therefore, we may assume that Xnl+r appears in
+each term of the sum, and for each term it appears linearly. Let us
+consider one such term X *F(M, ,..., M,+r), X,fi+, will either appear in h
+or in one of the monomials Mi’s. If X,,L+l appears in h, we can write
+h = Tr(X * Xm+& otherwise, permuting the monomials if necessary,
+we may assume that M,+, = A * Xnlfl * B; A, B two monomials. Then,
+hF(M, ,..., M,,,)    = Tr(h * BG(M, ,..., Mm) * A * Xrntl).
+  Finally, we see that
+
+
+
+
+    Now, one should note that, in the formal ring S, if H(X, ,..., X,),
+K(Xl ,*..7 -L) are two polynomials such that Tr(H(X,        ,..., X,) X,,,)    =
+ Tr(K(Xl,...,X,)X,,+l),   one has necessarily H(X, ,..., XJ   =   K(X, ,..., XJ,
+therefore, (b) is also proved.
+    We may express the previous theorem in a more suggestive form by
+using the nonhomogeneous analogs of F and G.
+ We already know that G is obtained up to sign from the characteristic
+ polynomial by means of full polarization. As for F, we have a similar
+result. The analog of the characteristic polynomial is the expression of
+ Tr(An+i) in terms of the elements Tr(P), i < n. This, of course, can be
+realized by the equation tr(xA(X) . X) = 0. Let us call the formal
+.expressions associated to xx(X) and to tr(xx(X) * X), G(X) and F(X).
+Thus, G(X) is the “characteristic polynomial of X” and F(X) is the
+ “expression” of Tr(Xm+r) in terms of Tr(Xi), i < n. (Of course, this
+expression holds only if we evaluate X in (K)n .)
+    We then have
+
+  THEOREM     4.6.   (a)   Ker r is the T-ideal of T generated by F(X).
+     (b) Ker 7 is the T-ideal of         S generated by the characteristic
+polynomial G(X).
+
+  Proof.    (a) and (b) will follow from 4.5 and the definition of T-ideals
+                 INVARIANT    THEORY OF 12 >; II MATRICES                  323
+
+for T and S once we prove that the fully polarized forms of F(X) and
+G(X) lie in the T-ideal that they generate. Now this is true since we may
+replace the process of polarization with the process of multilinearization.
+whose first step is to replace, for instance, G(X), by G(X + Y) -
+G(X) - G(Y). Th e fi na1 result of multilinearization is the same as of
+full polarization and so the claim follows, since clearly, multilinearizing
+a polynomial in a T-ideal, we remain in the same ideal.
+   We can deduce now a rather intriguing corollary that ties completely
+theorem 3.4(b) with the NagataaHigman theorem.
+
+
+  COROLLARY     4.7.  The ring S~,/T&Si,n       is isomorphic to the free
+algebra without 1, {Xi ,..., Xi} in n-variables module the T-ideal dejined
+by the polynomial identity 2’” = 0.
+
+   Proof. We know that S~,/T~,S,,,        satisfies the identity Zn = 0 and
+it is generated by the classesof the elements Xj, j = l,..., i over K.
+Therefore, the canonical map {Xi ,..., Xi} -+ S&JT&Si,,        factors through
+the T-ideal J defined by the polynomial identity Zn = 0. We have to
+show that the induced map $: (X1 ,..., X,)/J + S~n/T~llLSi.n is an
+isomorphism.
+   Now, $ is onto by construction, and we have to show that the only
+relations among the classes of the elements Xj in Stn/T<nSi,,,              are
+deducible from the polynomial identity Z” = 0.
+   We have a presentation of S,ii-, and I’:-, given by the Theorems 4.5 or
+4.6. To have a presentation for StlT~,Si,,,        , we have to add to the
+relations given in 4.5, 4.6 the relation Tr(M) = 0 for all monomials M
+of positive degree. If we start from these relations, i.e., we construct
+S/T’S,    we just get the free algebra without 1 over K, since TIT+ = K.
+   Now, if we read in this algebra the relations given, for instance,
+by 4.6, we see that the characteristic polynomial G(X) becomes X”, the
+trace map now is 0 (as well as F(X)), and so the T-ideal generated by
+G(X) becomes modulo T+, exactly the T-ideal generated by the identity
+X”, = 0 as announced.
+   There is another way of formulating the preceding corollary, which
+we state for completeness.
+
+
+   COROLLARY 4.8. If R is an associative algebra over a field of charac-
+teristic 0, and R satisjes the polynomial identity X” = 0, then R sati$es
+all the polynomial identities of n x n matrices.
+ 324                                                   C. PROCESI
+
+
+ 5. Trace 0 Matrices
+   It may be useful to recall that the representation    of Gl(n, k’) on (K),, ,
+which we have been considering all along, is not irreducible.         In fact, it
+decomposes as (K), = K * 1 + (K)yL where (K): stands for the subspace
+of matrices with trace 0, and K * 1 is the center of(K),, .
+    This decomposition    corresponds  to the possibility    of giving to each
+invariant  a double degree in the scalar variables and in the trace 0
+variables. In fact, if we write, for a matrix A, A = (tr(A)/n)        . I + A, ,
+where Tr(A,)    = 0, we have, for a given monomial AtlA,, =.. Ai,; , that
+                                                                  2
+  tr(.&,Ai,,   ... ,a,,) : =           C          rt     tr(Jhl) tr(Ah,) .‘. tr(il,J      tr(ilqAUz ..I =1?$);
+                               h,~~~h,:j,~..i,
+
+
+ where h, .*a h, j, ..* js is a shuffle of the indices i,i, ... ik .
+    It is easy to see that, if we denote by TiSn the ring of invariants of the
+ space ((K)i)i    of i-tuples of trace 0 matrices, we have that Ti,, is the
+ polynomial ring over TiSn in the variables tr(A,),            tr(AJ,..., tr(AJ. In
+ particular,   the ring T:,,, is obtained from Ti,, setting tr(Ai) = 0,
+j = l,..., i.
+
+6. Relations with Polynomial                     Identities     and Central       Polynomials
+    We sketch here some consequences of the previous theorems, which
+ should be expanded more. If we consider the free algebra K{X, ,..., Si ,...}
+ over K and embed it in the free algebra S over T, we see immediately
+that Ker T n K(X$ ,..., Xi ,... > is the i d ea1 o f polynomial       identities of
+n x n matrices. As for central polynomials,           an element f~ K{X,)        is a
+ central polynomial for n x n matrices if and only if there is a g E T such
+that f - g E Ker T.
+   We know that Ker T is generated as a T-ideal from the characteristic
+polynomial G(X), or its linearized form G(X, ,..., X,); therefore, every
+polynomial identity or central polynomial is deducible from G(X, , . . ., X,,)
+in an explicit way. On the other hand, the task of describing all poly-
+nomial identities is still quite far away. In a separate paper, Formanek [314
+shows    how to deduce very simply the Amitsur-Levitzki                     identity
+&&(X1 ,**-,   X,,)   from  the polynomial     G(X, ,..., X,), a similar   approach
+to central polynomials also should be possible. Nevertheless,          we can give
+a description      of polynomial    identities in terms of Young diagrams
+according to 4.3(a). Let I be the ideal of the group algebra of ym+,
+
+   4 Note added in proof. This description                 has been   found   independently     by Rasmyslev
+in the paper cited in footnote 1.
+                      INVARIANT   THEORY    OF   i’z! :..: 72 MATRICES           325
+
+generated by the antisymmetrizer    on 11+ 1 letters (we assume m > n).
+We know that I can be identified to the space of multilinear trace
+identities of ?zY II matrices in m + 1 variables. Let P be the subspace
+of the group algebra of xTlmtl spanned by the m + 1 cycles, we have
+
+   THEOREM        6. I. The space of multilinear   polynomial    identities of n ;< 11
+matrices     of degree m in m variables can be identi$ed   to the space I n P.
+
+   Proof.   We fix a variable, say, S,,,_, , then writing a commutative
+trace identity in the form Tr(g . -X,,,+i), we establish a l-1 correspond-
+ante between the spaceI and the spaceof noncommutative trace identities.
+ NOM-, a noncommutative trace identity is a polynomial identity if and
+only if it does not contain coefficients Tr(M). This is easily seen to be
+equivalent to the fact that the element of I considered is a sum of m -t 1
+cycles.
+   The situation for central polynomials is slightly more complicated.
+We take again an element x a,~ of the group algebra over cC$+l that is
+a trace identity, i.e., it is in I, and we associate to it the element g as
+before. The g will be, in general, a sum of monomials in the Xj’s, times
+products of trace monomials tr(M). We can recover from g a central
+polynomial exactly when g splits as the sum of pure monomials (without
+factors of type tr(M)) and scalars, i.e., products of factors tr(M) only.
+   This, of course, can be read in the group algebra, it means that the
+permutations (5 appearing in x a,,ff are only of two types: ~2 + 1 cycles,
+and permutations that fix m + 1. In this case, the corresponding non-
+commutative trace polynomial is of the form
+
+
+
+where the left sum comes from the nz + 1 cycles, and the right
+sum comes from the permutations fixing nz + 1. In this case, the
+left sum is a central polynomial, and the opposite of the right sum is the
+scalar value taken by the central polynomial.
+   Again, we can use these remarks to characterize multilinear central
+polynomials in terms of Young diagrams.
+
+7. Orthogonal      Invariants
+   We consider now the same type of questions that we have treated in
+the previous sections for the other classical groups. We study now the
+orthogonal group. The set up is the following: Consider the algebra (K),
+of n x n matrices equipped with the standard involution given by
+    326                                         C. PROCESI
+
+transposition. This involution is associated to the canonical bilinear from
+on V = Kn given by zF=, xi yi .
+   The relation between the form and the involution is, of course, the
+usual: (AU, w) = (‘u, A’w) if ZJ,w E V’, A E (K), .
+   The scalar product allows us to identify canonically V with its dual I/*
+and hence, End(V) c: V* @ V with I; @ V.
+   If we want to translate the multiplication, the trace map, and the
+involution of (K), in terms of its identification with V @ V, we obtain
+the following formulas:
+
+           (a)         u @ w * u @ t = u @ (u, w)t,
+          (b)          tr(z. @ w) = (u, w),
+           (c)         (v @ w)” = w @ v.
+
+    As for the groups involved, the orthogonal group O(n, k) is, by
+ definition, the group of automorphisms of V with its structure of scalar
+product. As for (K)n with its involution, assume that #: (K)n + (K),
+is an automorphism of algebras with involution. We must have #(B) =
+A * .&4-l for some A E GZ(n, K). On the other hand, the hypothesis
+implies that #(Bt) = #(B)t, h ence, A * Bt * A-l = (ABA-1)1, for all
+B E wn *
+   This implies easily A t*A~K.l,letA~*A         = ol~K.
+   If 01= /3” setting A’ = A//3 we see that A’ E O(n, K), and A’ defines
+the same inner automorphism as A. Hence, if we take K algebraically
+closed, we see that the automorphism group of (K)n. with its transpose
+involution is O(n, K){ 1, - 1).
+   We recall now the theorems on invariants of 2i vectors under the
+orthogonal group (cf. [16, p. 53, 751).
+
+
+     FIRST FUNDAMENTAL                 THEOREM.       Any multilinear orthogonal invariant
+of 2i vectors:
+
+
+
+is a linear combination of ‘LcontYaction maps” i.e., maps of type:
+
+
+
+
+0    =    (jl    ,j2    ,..., j2i) a permutation of 1, 2 ,..., 2i.
+                           INVARIANT                   THEORY                  OF           ?Z X ?Z MATRICES                                             327
+
+   SECOND        FUNDAMENTAL        THEOREM.       Any relation among the scalar
+products      (ui , vj) is a consequence of relations of the following kind:
+
+                           Ul   , z'l)                (Ul       74                 ."             (%        1 %+1)
+
+                        i4       , z'l)            (%        > Q)               ."                (% 3 z',+1)
+                       . .      . . .         .   . .       . . .          .   . .          .     . . . . .               .       z-O
+
+                       .    .   .    .    .   .   .     .   .    .    .    .   .        .   .     .     .   .     .   .   .
+
+                      (%+1          ! 4           (%.+1          34             ."              (%I+1           T %-1)
+
+
+We are now going to extract, from these theorems,                                                                                the analogous          ones
+for matrix invariants and concomitants.
+
+    THEOREM   7.1. Every orthogonal invariant of i matrices (A, ,..., Ai)
+is a polynomial in the elements tr( Ui, Ui9 ... iZiik), where Vi = Aj , or
+ uj = A,‘.
+   Proof.    We can reduce ourselves,                                          as in the proof of 1.3, to the multi-
+linear case.
+    Consider, therefore, a multilinear                                             orthogonal                         invariant
+
+                            $!k (K).,             @ (Iqn                  @ ... @ (K),, --+ K.
+
+ We identify (K)n with V @ V, and this is compatible with the O(n, K)
+ structure,  then, 1+4is a linear combination of the maps IJ~ previously
+ described. Let us consider decomposable matrix variables Aj = ui @ vj ,
+j = l,..., i. Then,
+
+  $h&il, @,IA, @I ... @ Ai)
+           -~~(ul~vl~u~~v~~~‘~~u~~vi)
+
+           = (wi, 9wi,)(wi2 t z”i3) “. (wik 7wil) . Cwj, 9z3j,)(wj,                                                           ) wj,)    “. (wj, 1 wj,) ‘..
+
+where      we use the following                         convention:
+wj stands for uj or vj , and by definition,                                                     ZZ~= uj , Bj = uj .
+  It is now easy to verify that:
+
+     (*)      $,(A, @A,             @ ... @ Ai) = tr(UilUi?                                           ... Ui,) tr(Uj,                   ... O;,J ...,
+
+where Uj = Aj , or Uj = Ajl, according to the following rule:
+Let us say that ui , uk are of the same type, as well as vj , vk , while uj ,
+vk are of different type. Let us say, furthermore,  that Aj , A, are of the
+same type as well as Ajt, Alzt, while Aj and Ak2 are of different type.
+328                                    C. PROCESI
+
+  Then, we define inductively:
+
+      (a)   -Vi1 = Ai1 , if wi, = vi, ; Uit = A,“, , if wi, = ui, .
+    (b) Set ui,,, of the same type as Ui, if and only if wi, , wit,1
+have the same type.
+
+   The equality (*) has been proved for decomposable Aj’s, but it is
+multilinear on both sides, hence, it holds for any choice of the Aj’s.
+   Having classified the orthogonal invariants, we pass now to the matrix
+valued concomitants. Let us fix some notations, let us indicate TOi,, the
+ring of orthogonal invariants of i n x n matrices and SO,,?&the matrix
+valued concomitants. We see immediately that SOi,, is not a necessarily
+commutative algebra over TO{,,; furthermore, SOi,, is equipped with
+an involution, that we will still call transposition: f t(A, ,..., AJ =
+Cf(4 ye-.>
+         AX.
+  We have, as in 2. I, the basic concomitants
+
+                            Xj: (A, , A, ,..., Aj) --f Aj ,
+and also
+                            xjt:   (A, ) A 2 >..., Aj) ---f .4jt.
+
+  THEOREM      7.2.   SOi,, is generated, as a TOi,,, algebra, by the elements
+Xj ) Xjt.
+
+    Proof. We follow the lines of 2.1. We introduce an extra variable
+X,+r and associate, to any g E SOi,, the orthogonal invariant f =
+tr(g * Xi+& By 7.1, f is a polynomial in the elements tr( Uji *.- U,,) with
+ lJj = Xj or Xjt. Since f is linear in X,+r , it is a sum of monomials, in
+each of which, it appears either X,+r or Xi+, , and only once. Since
+tr(M) = tr(&P), we can rewrite the monomials, if necessary, to contain
+always Xi+r , and not Xj+r . At this point, we can writef = tr(h . Xi+l),
+where h is a polynomial in Xj, Xit, j = l,..., i, with coefficients in
+ TOi,,,L . Clearly, h = g, and so the proof is complete.
+    Clearly, if g E SOi,, , we can compute its characteristic polynomial,
+which has coefficients in TOi,, , and g satisfies x,(X). Therefore, we can
+apply the results of Section 3 to obtain the necessary finiteness statements
+for TOi,, and SOillL . We reproduce the statements for completeness.
+
+   THEOREM     7.3.   (a)    The ring TOi,% is generated, as a K algebra, by the
+                     INVARIANT      THEORY      OF   ?Z :<   I1 MATRICES                   329
+
+elements tr(M),      where M is a monomial in Xj,                ~~jt,i    = l,..., i of degree
+< 2” - 1.
+      (b) SOi,, is spanned, as a TOi.,L module, by the monomials irz -Yj ,
+xjt, j = I,..., i of degree < 2jL - 2.
+
+8. Orthogonal      Tsace Identities
+    We pass now to the second fundamental                      theorem. As usual, we will
+fix our attention mainly on multilinear identities. To make the formalism
+complete, we must introduce, as in Section 4, the formal algebras T* and
+S*. I’* is the commutative                  algebra in the variables Tr(M),            ;?I is a
+monomial in Xj ,          -‘ij',   j = I,..., CO, with the obvious identifications
+and S* is the free algebra over T* in the variables -Yj , -“;i*. S* is
+equipped with the trace map Tr: S* + T*, and also with an involution.
+linear over T*, mapping .Yj into Xjf. In this case also, we have the opera-
+tion of substitution         of the variables. Of course, if we substitute -Yj with
+gi , we must substitute           Xj” with gj I. Thus, we can introduce the notion
+of T-ideals as in Section 4, recalling that now we have also the structure
+of algebra with involution, under which the T-ideal must be closed. We
+will refer to the elements of T* as commutative trace polynomials,                          and
+to the ones of S* as noncommutative                  trace poiynomial. Finally, we have,
+as in Section 4, the two maps no: T* ----f TO,,,, , T,,: S* ---f SO,,,, , which
+are compatible with all the operations defined. The involution on SO,,,,
+being transposition.
+    Theorems        7.1 and 7.2 state that 7~,, and 7” are onto, for every IL
+The determination            of their Kernels is the object of the second funda-
+mental theorem. To make the theory reasonably smooth, we must find
+an analog of the interpretation,                given in Section 3, of elements of the
+group algebra as multilinear                 trace polynomials.         We proceed now as
+follows:      We introduce two infinite sequences of symbols w1 ,..., IL,,, ,. . , ;
+z'l 7"') u,,, ,'.',  and construct,        from these symbols, the symbols (LQ , uj),
+(vi , ztj) i f i, and (ui , vi) any i and i. Consider next the polynomial
+ring P in the “variables”            (ui , uj), (ni , Zlj), (LQ , vi), (vi , z.L~).We make the
+conventional        identifications:      (ZQ , uj) = (uj , zli), (zi , elj) = (z)~ , ~0,
+(pi ) ~j) = (Uj ) ZL~). F or every nz, we consider now the subspace I,,, of
+this polynomial ring spanned by the monomials of degree nz in which
+appear all the symbols u1 , zig ,..., u,,,; zl , z2 ,..., v,,, .
+    Reasoning as in the proof of 7.1, we see that we can associate to each
+such monomial, a formal monomial in the elements Tr( UilUjz ... UiJ,
+where Ui = Xf or -‘r-‘,l. If one follows closely the proof of 7.1, one sees
+
+607/‘9/3-5
+330                                 C. PROCESI
+
+that this monomial is uniqueIy determined up to: (1) cyclic permutation
+of the factors of a monomial Ui, **a Ui , , (2) replacing Ui, *h* Ui, , with
+ UI:, *-. Uf, .
+   The formal association becomes an actual functional relation once we
+substitute:
+      (1)   For the symbols ui , vi , vectors.
+     (2)    For the symbols (ui, z,j) et c., the scalar products among such
+vectors.
+      (3)   For the matrix variables -Y{, the actual matrices ui @ vui.
+  We can sum up the results in a proposition.
+
+   PROPOSITION   8.1. (a) The spaceI,,, is isomorphic to the subspaceof T*
+formed of multilinear trace polynomials in the variables XI ,..., X,, (even-
+ tually transposed).
+    (b) Given vectors uj , vj , j = l,..., and the matrices A, = uj @ vi ,
+we have the compatibility of the evaluations:
+
+
+
+
+where o consists in evaluating the invariants in Ai , and p the symbols
+(Ui 3uj) etc. in the scalar products.
+
+   From this proposition and the multilinearity of the trace polynomials
+in the image of I,, , we deduce that the trace identities of degree m,
+multilinear in X, ,..., X,,, , correspond to the subspace of I,,, of multi-
+linear relations among the scalar products.
+   We are now in a position to apply the second fundamental theorem
+for the scalar products. We introduce a notation for convenience.
+   If WI ) wg )..., w,; zr ) as ,..., xx: , are vectors, we indicate by (wr ,..., wk j
+zi ,..., zk) the determinant:
+
+                        (WI ,%I    (WI 3 3)   ‘.. (WI 9 %)
+                         . . . . . . . . . . . . . . . . .
+                        (Wk 7 4    (WI< 9 4    ...   (Wk 3 ZJ
+
+  We know that, if we are working on the vector space lP, we have the
+                                     INVARIANT           THEORY             OF    ?l   X    72 MATRICES                                      331
+
+fundamental       relations: (wi ,..., w,+i 1z1 ,..., xn+i) = 0 for any choice
+of vectors wj , zi .
+   Let us look at the occurrence of this relation in the space In,+1 . We
+obtain one such relation if we divide the vectors ui , u2 ,..., u,+i , z’l ,
+% ,'.', u,+1  in two subsets of n + 1 elements each.
+   In particular,     consider the following  ones (which we will show to be
+the relevant ones): Given k < (n + 1)/2 setting n + 1 = 2k + s, we
+form
+
+          (u1    , u2 ,...,     U7c+s , z1 , p'2 ,...,    z',   I ui;+sil        > uh-s-?     ,...,   u,-l   , z'7:,l   ,...,   Z'nll;   .
+
+
+   To this element of I,,, corresponds,      by the general theory, a trace
+polynomial that we will denote FI;,,,+i(X1 ,..., X,-+,). This polynomial is
+clearly a trace identity for n Y ~z matrices.
+   Let us show now that these polynomials        are, in a certain sense, the
+only multilinear   polynomials of degree n + 1 to be considered.
+
+     PROPOSITION                     8.2.
+                             Let w1 , w2 ,..., w,,+~ , z1 ,..., zntl be a permutation
+of   Ul         >%   ,**'>    f&+1      , 01
+                               > z'2 ,**., z',+1        * Tlze trace polynomial  corresponding
+to <Wl    , w2 Ye.', w,,+1 I Xl > s2      T-.*7   %l-l/  ‘\ can  be obtained, up to sign, from
+exactly one of the F,C,,,,(X,                ,..., Xn+l) by permuting the aariables and
+substituting to some of the Xi’s tizeir transposes -Yj’.
+
+    Proof.    This is one of those statements that are hard only to write in
+detail, so we sketch the steps. To change Xi with Xjt means in I,,, to
+exchange uj with vj , to permute the variables corresponds            to permuting
+simultaneously     the uj’s and the z?j’s in the same fashion. Finally, by the
+properties of determinants we can rearrange in (wl ,..., w,+i / zi ,..., zn+r)
+either the wj’s or the .zj’s, and we only change eventually the sign. Now,
+the proof of the proposition      is immediate. First, one exchanges the uj’s
+and the vj’s (i.e., substitutes     Xj with Xjt) to obtain that the symbols
+Wl 7 WP >'.', %+1    consist of a certain number k + s of U’S, and k of v’s
+having the same indices of some of the u’s listed. Then, one permutes the
+variables to make sure that one has on the left side, the symbols zll -.. u,,+,
+v -*- zL in some order, then, one rearranges the left and the right side
+t,’ obtain the desired expression. One can be easily convinced that the
+number k is uniquely determined as the number of indices appearing
+twice (once in a u and once in a ZJ) in the left side of wi ,..., w,+r z1 ,..., zrLfl.
+    The following properties     of the polynomials Fk,,+l(Xl        ,..., ,kr,+,) are
+easily verified by the same ideas developed in proving 8.2.
+332                                      C. PROCESI
+
+
+
+
+   If u is a permutation         of the following     type:  (i) ~((1, z,..., k}) =
+(1,2 ,..., k), o(jk + I,..., k + s)) = {k + I,..., k + s} and u = ((K + s + I,...,
+n + I}) = (lz + s + l,..., n + l}.
+      cc> F,c,,,+l(-i;t,    Tt,...,   -G+1,   = F,;,.+l(X,:.+,< !.I ,..*, X,&l   , Xk,+l ,“‘,
+X&     , x1 ) . . .) Xk).
+   Parts (a) and (b) are easily proved from the determinant                  expression     of
+Fk,n+1 f Part (c) is also easy, we have
+
+
+
+
+   Property (b) suggests to extract two noncommutative           trace polynomials
+out of each Fk,n+l when s and k are nonzero, by taking out of the trace
+a variable in the set X1 ,..., X,; , XJC,.s+l , X,C+n+2 ,..., X,,, , or in the set
+x,+1 Y..‘, x,.+.3 .
+   Since we want to have the two polynomials          depending on X, ,..., Xn
+for convenience, we define them as follows, implicitely:
+
+
+
+
+  When s = 0, only G is defined, while when k = 0, only H is defined.
+  From the properties (a)-(c) of F,c,,+l , we can deduce properties of G
+and H. In particular, we will need the computation:
+
+        (cl’  WG,A&         ,..., X2 * X,+d = Tr(Gk,,(Xl       ,..-, XJ           XA,,) =
+F/c,n,-1(X1 >..-p -K , X,,)      = F~,n+dXk+n+l ,..., -Gt, -&+I > XL               se..> -Gt,
+xlt,..., X,.l).
+                                     INVARIANT              THEORY            OF '?Z X ?'Z MATRICES                                 333
+
+        The meaning of these definitions is made clear by the following:
+
+   PROPOSITION       8.3. (a) The polynomials                                            FI,.,,,+l are commutative               ortho-
+gonal trace identities for n /: n matrices.
+          (b) The polynomials                             G,:,,, , H,;,,           are noncommutative                 trace identities
+for      n .p~~n matrices.
+        (c) Any     commutative (resp. noncommutatire),                                                           ol,thogonal     trace
+identity   has degree 3 n + 1 (resp. 3 n).
+        (d) Any     multilineav commutative      (resp. noncommutative)      trace
+identity   of degree n + 1 (resp. n) is a linear combination     of polynomials
+deduced from the F,;,,,,, (Yesp. the GkB, and Hk,J by substitution         of the
+variables (and eventual transposition     of the jinal result).
+
+    Proof.  First we remark that substituting the variables means to
+substitute for X, ,..., X,L+I variables Wi, ,..., Win+, , where Wj = Xj ,
+or -1Tjt. The proof now is a consequence of 8.1, 8.2, and the second
+fundamental theorem, plus the usual remark that noncommutative trace
+identities in the variables X I ,..., Xi correspond bijectively to commuta-
+tive trace identities in S, ,..., -Xi , Xi+r; linear in LYi.rl , via the map
+
+
+
+In this case, one might have to transpose and use (c)’ if Xi+r appears
+among the first k variables.
+   Having described the minimal identities, we proceed now to prove
+the second fundamental theorem for matrix invariants and concomitants:
+
+    ~'HEOREM 8.4. (a)                                 Ker no is the                T-ideal         of T*         generated      b>v the
+polynomials F,.,,+, .
+         (b)     Ker T” is the T-ideal                            of S* genevated                  by the polynomials           G,;,. ,
+ff,..,, .
+   Proof.      (a) We proceed as in 4.5 to reduce ourselves to analyze
+multilinear identities only, of degree 111and depending on the variables
+-Y, ,..., -Y,,, . We can apply now Proposition 8.1 and the second funda-
+mental theorem to reduce ourselves to analyze a trace identity corre-
+sponding to an element
+
+                  f    =        <A       1.‘.1   Pll--1   / 91 ,‘..I   Qn-l‘wl-2         9 qn12)      “’   (Pm     > 4A
+
+
+where       p1 ,...,       A,        ,   Q1,..., 4,,1 is a permutation                        of u1 ,..., zl,,L, z’r ,..., v,,, .
+334                                                            C.      PROCESI
+
+
+   We are clearly allowed to permute the variables if necessary and to
+exchange Xj with Xjt, i.e., to permute simultaneously             the u~‘s, ZJ(‘s,
+and exchange uj with vj . Finally, changing possibly the sign, we can
+rearrange separately the elements p, ,..., ~,~+r and pi ,..., qn+l .
+   If we operate this way, it is easy to convince oneself that we may
+assume that p, ,..., P,~+~ is the sequence u1 , u2 ,..., u,~+~, z’i ,..., vk for
+some K such that n + 1 = 2% + S. Furthermore,            q1 ,..., qll+l may be
+taken           as        the     sequence        u~++~         ,     ukfSfa     ,...,     u~~+~+,,~     ,   v~+~   ,...,   vl..Ll   ,   vj,        ,
+
+vj,     )a..)   vj,       I Z'lc+s+1    P %+s+z    Y”‘)   Vn+1          ! with    1 < s, k + s + m < n + I and
+the indices jr , j, ,..., j, > n + 1.
+    Consider now uj, , it appears as one of the elements pi or qi with
+i > n + I in a scalar product         (uj, , wh,) outside the determinant,
+w/s, = unl on wh = v,~, .
+    Let us separate some cases, introducing      new formal symbols:
+
+                 (a)             If WI!, = VI,, 9 set @hl = ("jl , Vhl) vj, y %I = Uh, .
+                                                                            -
+                (b)             If  WI&, = uh,   and h, > n + 1, set v,~ = (ujl, uh,) vjl and
+%tl = %, -
+
+-       Cc) If W/l, = Uhl and hi < n + 1 set uhl = (uj, , uh,) * vi, , and
+V/J, = UhI.
+   Furthermore,     we can take the scalar product (yjl, vh,) inside                                                                      the
+determinant,    and using the symbols introduced, rewrite f as:
+
+                      f     =    @l    Y,Ll       I 41 9.'.,        P,+mn+2              > !%b+d   ...   mf-1)      (Tm-A
+
+where j?r ,..., j ,,,- i , 9; ,..., ?j,+r is a permutation                                         of
+
+
+
+
+(where ” means omitted).
+   We apply now induction and assume that f, as a trace polynomial                                                                             in
+the variables Xi , X2 ,..., ,k-;l, ,..., Xj, ,..., X,,, , is of the form
+
+
+
+Now, we see immediately       that we can substitute  to the variable LTTt,,
+respectively: In case (a), Xhl = Xh,Xi, , in case (b) Xh, = X~,Xjl , and
+in case (c) Xfi, = Xj”,X& using the formal multiplication      rule for the
+symbols p @ q given by p @ q . r @ s = p @ (Y, q)s, and thinking
+Xh, = ii& @ qt 1 .
+                    INVARIANT     THEORY    OF   ?Z X   ?Z MATRICES                335
+
+   All these formal operations      are compatible      and give
+
+
+
+where the Mj’s and P’ are obtained from the Mj’s and P substituting                 for
+X1?, the corresponding expression. This completes case (a).
+    (b) This part is easy having developed (a). Let k’(Xi,...,    X,) E Ker T,,,
+add a new variable X,,, , and consider Tr(K(X;     ,..., -‘it) X1+,) E Ker r,, .
+  By part (a) we have
+
+
+
+
+ and we may assume that -Y,,, appears linearly in each term of the sum.
+ Take a term PFk,,4.1(Ml ,..., M,,,,). We have, then, two cases, either
+X,+-i appears in P, or -Y,+, app ears in one of the monomials Mj’s. Further,
+x t+1 may appear transposed.
+   If X,,, appears in P (transposed or not) we can write P = Tr(P’X,+,),
+if X1+, appears in one of the n/r,‘s, then, using property (b) and (c) of the
+polynomial F,;, nT-l , we may permute the variables and assume that X1+,
+appears in MIL+r or in MI,+,? . Since both cases are similar (one gives rise
+to the appearence of G,;,, the other of H,,,), we treat the first. We might
+have ‘Vn+i = A,,.,-Y, :.,B,, L1 , or M,, i = AntlXf+lB,L     L~1.
+   In the first case,
+
+
+
+In the second case, we have
+
+
+
+
+   From these computations,            it follows that Ker T,, is generated by the
+elements     Gd~l        ,..., M,),       Gjc,,(Ml ,..., LQ’rL)‘, Hk,,,(Jfl ,..., n/r),
+F,c.,,+,(Jfl >...> Mn+1), HkJ,(~l        >...> 4LY.
+   When we look, therefore, at the T-ideal generated by the polynomials
+G lc,n and fh,,       we obtain, closing the ideal under substitutions,             the
+polynomials     G,,,,(M, ,..., M,), H,,,(M,         ,..., MJ and, closing under the
+operator Tr and under the involution, the polynomials Fk,n+,(Ml,...,Mn+,)
+G,,,(~~, ,..., Mn)‘, H,.,,(M,       ,.,., MJf, as desired.
+336                                      C. PROCESI
+9. Explicit    Computations      of Orthogonal        Trace Identities
+    We want to make now a few explicit computations                of the polynomials
+introduced in Section 8.
+    The first remark is that the polynomial F,,,+r(X1            ,..., XT1+i) is exactly
+the trace polynomial F(X, ,..., Xnll) introduced in 4.3 and obtained by
+full polarization     of the expression         of Tr(Xn+l)    in terms of Tr(Xi),
+i < n.
+    Similarly, H&X1         ,..., .X1,) is G(Xr ,,,., X7*) of Section 4. A\s for the
+other polynomials,      they are not fully symmetric         in all variables, hence,
+cannot be obtained by full polarization of a polynomial in one variable.
+Rather, we could see F,,, ,.,.I , n + 1 = 2K + s as obtained from full
+polarization of a polynomial in 3 variables if K, s # 0, in two variables if
+s = 0, by identifying           the variables X, ,..., X,,     or X,,, *** Xk+,        or
+xk’a-+l >‘*a, -u,,+, > with      respect   to which   the polynomial      is fully sym-
+metric.
+    Furthermore,     from the remark (a) on the properties               of such poly-
+nomials we have:
+
+       Fk,,,l(& >‘..9X,+1)
+            = -(F7<,.+,(lk;
+                         ,..., xi )...)AT,.:,)- F~,n+&Y;)...,x;.t)...,s,, 1))
+              = Fk.,&Y*      ,..., (Xi - X:)/2 ,..., Sn+l),
+
+when i < K or i > K + s. Setting (Xi - Xi1)/2 = X,-, we have that
+Xi- is the antisymmetric      part of the variable Xi , and so Fk,,+i depends
+on 2k antisymmetric      variables Xi-, i < K, i > K + s, plus the other s
+variables Xj , k < j < k + s,
+
+
+
+              = F,,,+,(X1-     , A-- ,..,, xk-,   A-,,, ,..., Sk&$ ) s,,,.,   )...) X,,).
+
+   We have similar results for the polynomials G,,, and H,,,, . In partic-
+ular, we have that for n = 2K - 1, the polynomials       Fk,2k and G,,,,+,
+depend only on skew symmetric arguments. For n = 2K. the polynomial
+H,,.,2k depends only on skew symmetric variables, while Fk,Bk-cl depends
+on 2K skew symmetric     variables plus the variable X,,, .
+   Let us compute explicitely Fk,2k. Its formal expression in IsI; (4.8.1)
+is given by
+
+      (Y) (u1u2.‘. UkVIVZ
+                        ‘.. VkI uk+l..’ uzgl,;+l.” t&>.
+                     INVARIANT        THEORY      OF   72 2:   ?Z MATRICES         337
+
+    Let us analyze the monomials      appearing in the expression    of (*).
+Let us call a monomial A!! pure if, in the scalar products, each u is paired
+with a zi and conversely. Such a pure monomial can be written
+
+
+
+
+where the indices i, s,..., z runs from 1 through K, and the indices
+j, t,..., w, from k + 1 to 2k.
+    This monomial corresponds to a permutation u E 5$ , which in
+cycle form is
+
+              (i,j,i,j,   ‘.. i,j,)(s,t,s,t,   ... s,$,) ..* (x1w1z2w2... zcwe).
+
+   Any such permutation can be built from two bijective maps ol:
+(L..., k) -+ {k + I )...) 2k), and /3: {k + l,..., 2k) -+ {l,..., k). (5is just the
+sum 01+ ,/I of the two maps. The monomial M, being one of the expan-
+sion of the determinant, corresponds to a map o between rows and
+columns. One easily verifies that 6 is equal to u on the first h rows and
+to @$A on the last k rows, where’p: {k + I,..., 2k) + { 1, 2 ,..., k} is the
+map i + i - k. The sign of M in the expansion of (*) is the signature
+of 6, but we claim that 0 and Ghave the same signature. In fact, compose
+u and 6 with r = p + p-i, then, 70 = PLOI              + p-‘/3, with P’L, p-i/3
+permutations on l,..., k, k + l,..., 2k, respectively,              while TG =
+pn + pp = pa -+ (p-l/3--1.
+   Therefore, E(T) C(U) = +CL) . @l/l)       = +x) E(P~~P) = C(T)~(6).
+   Let us return to M and write it as a trace monomial
+
+
+
+
+   In the expansion of (*), all the impure monomials are obtained from
+pure monomials upon exchanging some uj’s with the corresponding ZJ~‘s,
+conversely given a pure monomial any monomial obtained by such
+exchanges appears; any time such an exchange is made the sign changes,
+if we exchange the uj’s and vj’s for all the indices in a cycle OLof the
+permutation u associated to a pure monomial, we obtain again a pure
+monomial. Its permutation cr’ is obtained from u exchanging the cycle a:
+with a-l.
+   Therefore, given the pure monomial M, let us compute the contribution
+to (*) given by M and all the monomials obtained from M upon es-
+338                                    C.    PROCESI
+
+
+changes. Making all possible exchanges except for the indices ir , sr ,.,., zr,
+we obtain the sum
+
+
+
+
+where N, = 2k - A, where h is the number of cycles in which u decom-
+poses. If we want now to complete the exchanges, we see that we obtain
+also trace monomials relative to permutation           D’ obtained by substituting
+a cycle of u with its inverse. Since we want eventually to sum over all
+allowable u’s, we should not count twice the same term. This is achieved
+by substituting    for Xf, , XL, ,..., Xi, the variables -X<      , -XS, ,..., -X;
+without    changing the coefficient 2”~. Noting that if a cycle is a trans-
+position,    hence, equal to its inverse, we have the formal equality
+Tr(XitXj-)      = Tr(X-X-).      TO sum up, we have
+
+
+
+
+where pa, stands       for the set of special permutations                   of type     CY+ fl,
+as above, e.g.,
+
+      F,,, = 2 . Tr(Xr-X2-)
+
+      F2,4 = 8 Tr(2Y1-X,-X,-X-)             + 8 Tr(X1-X6-X2--Y3-)
+
+                 4 Tr(X,--;I-,-)   Tr(‘Y2-X-)          - 4 Tr(Xi-X4-)      Tr(X,-X3-).
+
+
+   Of course, by lumping into a unique term all the monomials obtained
+from a permutation    CJand the 0’s gotten from u inverting the cycles, we
+can simplify the expressions:
+
+         F2,4 = 16 Tr(X,-X3-X2-Xdp)              - 4 Tr(X,-X3-)         Tr(X,-X4-)
+
+
+
+     Let us compute now F,c,,,c,,; rather than repeating the full reasoning
+we use a trick; introduce a new variable X2k+2 = z&x-+2 @ vkIit2 , where
+V’ 2k+2  =    ‘k+l and uik,, satisfies (formally) the relations (ui , uik+J = 0;
+i=      1,***, k + 1 and (vi , z&.+~) = 0, i = I,..., k, while (cok+r , z&+2) = 1.
+                   INVARIANT THEORY OF ?Z X ?Z MATRICES                                   339
+
+  Then,
+
+
+
+
+   Now, we must eliminate all monomials in Fh+1,2k.2 in which we do not
+have the scalar product   (q.+r , u&+~) = 1. Hence, we sum over all
+special permutations  of 2k + 2 indices, where k + 1 is paired with
+2k + 2. Expanding the relative monomials, we use the computations
+
+
+
+                   Tr(Xk+,SK      ... X;Xz,+,)       = Tr(X<       ... Xj<Sb+r),
+
+to eliminate the variable Xzk+, , and we obtain an explicit formula.
+   Let us be content now to extract the trace identities for n x n matrices
+n < 3.
+   We already know that F,,,, = F, of which we know the explicit
+formula. We must compute F,,, , Fl,3 , Fl,4 , F2,4 we have already com-
+puted F,,, and F2,4; Fla3 can be computed using the previous ideas
+
+               Fl,3 = 4 Tr(lYr-X-XJ              - 2 Tr(X;-S,-)       Tr(&)
+
+As for Fl,4 we have
+
+   Fl,4 = 4[Tr(X-XJ-)           Tr(X,)    + Tr(X,-X’,-XJ            Tr(XJ
+            - Tr(X,-X-,-XJJ          - Tr( X-X*d--YJ,J             - Tr( X2X-X,X1-)]
+            - Tr(XI--YJ-)      Tr(,Y.J Tr(,YJ       + Tr(XI-Xa-)       Tr(X.JJ
+
+  From    these computations        it is easy to extract           the formulas   fo G,:,, ,
+Hk,n for II < 3, and we leave it to the reader.
+10. Symplectic Invariants
+  We consider       now the vector          space       V = K2n endowed            with   the
+canonical alternating form:
+
+    ((Ul 7u2 ,...1 u, , z’l ,‘.., %), (PIP, ,..., Pn 1 41 I..‘, qn)) = c (Wi -ppiQ.
+340                                                  C. PROCESI
+
+    We can proceed exactly as for the orthogonal case in almost all points
+and, therefore, we will only sketch the steps involved. First, the alter-
+nating form identifies V with its dual V *. Therefore, we identify End(V)
+with its dual V*. Therefore,      we identify End(P) with V @ V. Under
+this identification, the product, trace, and adjoint involution are expressed
+as follows:
+
+      (a)       a @ b * c @ d = a @ {b, c)d,
+      (b)       Tr(a 0 b) = (b, a>,
+       (c)      (a @ b)* = -b @ a.
+
+   The automorphism      group of Y with its form is the symplectic group
+Sp(2n, K), and the automorphism     group of End(V)     with its involution
+* is Sp(2n, K)/{l,  -l}.
+   The theorems on invariants of the symplectic group that are necessary
+to carry the theory through as in the orthogonal case are the following
+[16, pp. 167, 1681.
+
+   FIRST FUNDAMENTAL THEOREM. Every multilinear symplectic invariant
+p: v @ v @ ... @ v + K of 2k vectors is a linear combination of
+invaviants obtained by contractions
+
+                          Vl   0   ...   @ v2*   +    (Vi,   ) V;i,)'   ."   (Vi,,&,   1 V,"$.
+
+
+   SECOND FUNDAMENTAL THEOREM.                                 Every relation amongtheinvariants
+(v, w> is a consequence of the following                       basic relations
+
+
+
+
+/nil =         1        4~)<KAl) ,?lx%J(,) ,Y?j’ .” (TAnn+1),Ym,-1‘ .
+             ~E~211+l
+   One deduces immediately from the first fundamental theorem and
+the theory already developed the following results.
+   Call T(Sp)i,P.IL th e ring of invariants of i 2n x 2n matrrces under the
+symplectic group and S(Sp),,, the * algebra, over T(L$J)~,~~~    , of matrix
+valued concomitants we have:
+                 INVARIANT    THEORY   OF   i2   X   X   MATRICES         341
+
+  THEOREM     10.1. (a) The ring T(Sp)i,Bn is generated, as a K aZgebva,
+by the elements Tr(M), where M is a monomial in Xj , Xj*, j = l,..., i of
+degree < 2” - 1.
+    (b)   The algebra S(Sp&,, is spanned, as a T(SP)~,~~ module, by the
+monomials of degree < 2” - 2 in the Xj , Xj*, j = I,..., i.
+
+    As for the second fundamental theorem, one proceeds as in Section 8.
+ First, one constructs the formal algebras T* and S* endowed with
+ Tr and *. These are the same as the ones considered in Section 8 except
+ that noxv, we will write ,Y + X* for the involution to remind ourselves
+ that eventually, we want to compute the formal polynomials into matrices
+ endowed with simplectic involution.
+    Nest, one defines the maps VT~: T* + T(Sp),,,,, , and r8: S* +
+ S(SPL,,,, 7 of which one wants to compute the kernels. Next, one
+ constructs the polynomial ring in the variables ,<xi , sj::,, .(xi , yj>, and
+ ( yi , yj; , subject to the antisymmetry laws ,<x*i, xj> - -,/xj , xij etc.
+ One consider the space I,,, spanned by the monomials of degree m in
+ which x1 ,..., x,, , yi ,..., ynl appear, and identifies this space with the
+ commutative       trace polynomials in the variables Xj = x’~@ yj ,
+j = I,..., m. One should note that this identification is not the same as in
+ Section 8, due to the new laws of the symboIs (2, w>.
+    To establish the second fundamental theorem, we have to translate
+ the relations (A) into trace polynomials, i.e., into elements of 1,,L.
+ This clearly can be done in various inequivalent ways. The way to
+ describe these translations is to stick to the notations of (A) and use the
+ vectors y1 ,..., y2i-1 , x1 ,..., x2,rmhto form in all possible ways n + 1
+ decomposable matrices X, ,..., X,-i .
+    Due to the internal symmetries of the two sets of variables y’s and s’s
+ in the polynomial Ji, it is easy to see that it is sufficient to choose a
+ number h with 0 < h < i, write 2i - 1 = 2h + s and set
+
+
+
+
+  With these notations, Ji gives rise to a trace polynomial denoted
+&@-1 ,**‘>&+i).
+  The polynomials thus defined have the following properties:
+342                                      C. PROCESI
+
+     (4 FL+1 is invariant under a permutation of the variables acting
+separately on the three sets X1 ,..., li’,; X,,, ,..., X,,,; Xs+h+l ,..., ,~~+i .
+      (b)    F,k+l    is invariant under the exchange of Xj with Xj* for j > s.
+
+  The proof of (b) is obtained by noticing that (a @ b)* = --b @ a.
+Hence, the exchange of Xj with X;.* involves a transposition and a
+change of sign, the formula for Ji gives then the result.
+  Therefore, we can write
+
+               %(X,      3. , X,,,)    = F;,,(XI    ,..., 9, , A-,+, ,..., S;+J,
+
+where as usual, X+ = (X + X*)/2.
+   Finally, reasoning as we did for the orthogonal group, we deduce from
+each Fi,, three different noncommutative trace identities by singling
+out a variable out of each of the three sets X1 ,..., X,; X,,, ,..., -i,+, ;
+X sfhtl  Y.**, X n+i .
+
+            Fi,, = Tr(Gi,,      . X,J = Tr(Hi,,     . S,,?,) = Tr(Ki,,      . 9,+).
+
+   Finally, a procedure totally similar to the one of Section 8, 8.2, and
+8.4 gives the second fundamental theorem for symplectic invariants.
+
+  THEOREM        10.2.    (a)    K er rs is the T-ideal of T* generated by the
+polynomials
+
+                                      F;,,(S,   ,..., S,+J
+
+      (b)     Ker rs is the T-ideal of S* generated by the polynomials
+
+                                      Gih,n P H;,, , l&,     .
+
+   We want to make only one explicit computation for the minimal
+identities. The minimal noncommutative identities are, of course, of
+degree n, and obtained from Fign . A priori, one has two identities G,1,,
+and K,1,, , in reality, for this case, one sees that the variable yr is not
+privileged, since it may be paired with any other variable, hence, we
+deduce a unique noncommutative identity of degree n. Its computation
+is possibly made simpler by changing notations and writing X, = xi @ yi,
+Xs = x2 0 y2 ,..., X,+, = x,+~ 0 yn+l , and J1 1 C E(U)< , yn+rj( , > *a*
+< , ). the blanks being filled in all possible ways by the remaining
+symbols. First, transposing two symbols appearing in a single bracket,
+one obtains the same term, hence, collecting all such terms a factor 2”.
+                     INVARIANT      THEORY     OF     ?l   X   72 MATRICES         343
+
+Normalizing     by dividing for this factor, one has a polynomial that is
+obtained as a sum of pure monomials in which in each braket, an x is
+always paired with a y in the order (x, y).
+   The impure monomials are obtained from these on substituting        some
+variables -‘;i , j < n + 1 with -Yj *. Finally, one sees that, after taking
+out XT1 > we obtain the polynomial that is formally equal to G(Xr,..., XJ
+of Section 4, except now, the variables are taken symmetric;    i.e., G is in
+the variables Xj+ = (Xj j AYj*)/2, j = I,..., n. Therefore,       we obtain
+the analog of 4.4(c).
+
+   PROPOSITION    10.3. The minimal noncommutative     trace identity for
+2n >’ 2n symplectic matvices is G(X,+,..., X,7). It is obtained by full
+polarization of the Pfafian polynomial of a symmetric matrix.
+   Piroof. We recall that the Pfaffian polynomial of a is obtained as the
+characteristic    polynomial  by the expression  Pf(x . 1 - a). The proof
+of 10.3 is trivial by the uniqueness of the minimal noncommutative   trace
+identity, as in 4.4.
+
+11. Unitary     Invaviants
+     Let L’ = C” be the n-dimensional  vector space over the complex
+numbers, and endow V with the canonical Hilbert space structure:
+
+                             ((a1,....a,),(6,-..,6,))= c ad,*
+   The group of linear transformations      compatible   with the given
+Hermitian    form is the unitary group U(n). The algebra End(V)          is
+endowed with the canonical involution A + A*, which in matrix form
+is A* = Al. The theory of invariants for U(n) is slightly twisted with
+respect to the orthogonal group theory because of the two following facts:
+     (i)      U(n) is not an algebraic       group.
+     (ii) The involution         * on End(V)        is of the 2nd kind, in fact in* = &
+for any scalar 01.
+    The way to deduce the invariant theory for U(n) from the one already
+developed is based on the following remarks.
+      (iii) The automorphism     group of End(V), as algebra with involu-
+tion over C, is r = U(n)/T, T = {a E C* ’ 1011 = 11.
+     (iv)    The automorphism   group of End( V) as algebra with involution
+over R is the semidirect product of r with Z/(2) = {l, T> acting on r as
+{aF == {a’}-’ ((a} the class of a E U(n) modulo T).
+344                                      C.    PROCESI
+
+
+      (v) The Zariski closure            of U(n) in the algebraic          variety     GZ(n, C)
+is Gl(n, C) itself [16, p. 1771.
+    This last assertion is essentially the Unitarian trick of H. Weyl.
+    We consider End( I’) as a real vector space and construct End(V) 0, C
+with the involution       (u @ a)* = a* @ a.
+    Then, End(V)       0, C as a * algebra is isomorphic,            over C, to
+End(V) @ End(V) = (C),, @ (C), with the involution (a, 6)* = (bl, at),
+its automorphism       group (as * algebra over C) is easily described. It is
+the semidirect product of Z/(2) with PGZ(n, C); an element c E GZ(n, C)
+ induces the inner automorphism        (a, b) -+ (MC-l, (cl)-lbcl) and Z/(2) acts
+mapping (a, 0) into (6, u) ( an d on PGZ(n, C) sending c into (c/)-i).
+    In particular, we consider U(n) C GZ(n, C).
+    Let us restrict the action of Gl(n, C) on (C),, 0, C N (C),, @ (C),
+to U(n). Then, the map of (C), + (C), @ (C), , sending a into (a, a),
+is compatible with the U(n) actions, where (C),, has the usual action of
+ conjugation: u E U(n), a E (C), , u acts on a giving UUZ~-~.
+    If we sum all the remarks, we see that:
+      (a) The ring of complex valued polynomials       on & ((C),, OR C)
+is isomorphic to the ring of polynomials on the real vector space oj (C), .
+    (b) The invariants         under          U(n) coincide   with    the invariants     under
+GE+, C).
+
+  To conclude, we have to see what                       is the GZ(n, C) module          M =
+Oj (CCL CD tc)n)*
+
+
+   LEMMA      11.1. The given Gl(n, C) representation on M is isomorphic
+to the canonical representation, (C)“,i on 2j tuples of matrices, by sending
+((~1 , bl), (~2 , bz),..., (uj , bj)) into
+
+                           ((ul > bit), (62 7bz”),..*Y (aj , b,t)).
+
+  Proof.     This is trivial   by the formula
+
+                                 ((c-y        bc’)t = &c-l.
+
+  Summing up all these remarks and recalling the formula                               for the
+embedding of (C), into (C), @ C ‘v (C), @ (C),, , we have:
+
+  THEOREM       11.2. (a) The unitary     invariants TU,,,  of j complex
+matrices    Xl ,..., Xi aye polynomials in the elements Tr( Wi, ,.. ,, IV,,),
+                           INVARIANT        THEORY   OF    ?l   .< ?Z MATRICES                    345
+
+where Wj = Xi , OY Wj = -Yj*. As a ring, it is isomorphic                              to the ring   qf
+Gl(n, C) invariants of 2j matrices X1 ,..., Xj , IY,* ,..., Xj*.
+      (b)  The unitary matrix valued concomitants SLlj,n of j complex
+matrices X1 ,..., Xj are an algebra generated over TU,,,, by the elements
+xi ) ‘Yi*, i = I,..., j. As an algebra, it is isomorphic to the algebra of
+Gl(n, C) concomitants of 2j matrices ,Yi , Xi*.
+
+   We remark that this theorem contains implicitely       also the second
+fundamental    theorem, it describes formally the rings TL’ and SU as
+isomorphic to rings already considered.
+   The involution that, as a function, is induced by *, can be thought of
+formally as the involution of the 2nd kind obtained as * on C and as the
+exchange of the two distinct variables X, with Xi*, i = I ,..., j.
+
+12. Mixed Invariants                   and Concomitants
+   We consider now the problem of studying the simultaneous        invariants
+of matrices,    vectors and covectors.     For simplicity, we will restrict
+ourselves to Gl(n, K) the other cases being similar. Since the study of
+relative invariants    of Gl(tz, K) is equivalent to the study of absolute
+invariants of S&n, K), we will refer to this group when talking about
+invariants.
+   We consider, thus, the ring T1i,Ti,h,tof invariants of K n I* I2 matrices,
+h, n-vectors, and t, n-covectors,   and we have:
+
+     THEOREM           12.1.      T,,,(,, is generated by the following          elements:
+             (a)   Invariants     of k matrices alone.
+      (b) Scalar products (~j , Mvi>,                     where M is a monomial in the given
+matrices, vj a covector, vi a vector.
+     (c)   Brackets [Ml~i,  , Mzvia ,..., Mnvi,],                     where the Mi’s         are mono-
+mials in the matvices and the vj’s aye vectors.
+    (d) Brackets     [M1’qi,, ~~‘~i, ,..., Mmt~i,l,   where                           the M,‘s       are
+monomials in the matrices and the vj’s are covectors.
+
+   Proof.    It is immediately verified that, upon polariztion and restitution
+of variables, an expression involving the elements of the previous type
+remains of the same type. Therefore,        it is sufficient to deal with multi-
+linear invariants.
+   Assume that the given multilinear         invariant depends on i matrices
+
+607/‘9/3-6
+346                                        C.   PROCESI
+
+
+4 , A, >...>Ai , j vectors         and x covectors          y1 ,..., v2: . Hence, it is described
+by a multilinear   map
+
+End(V) @ End(V) @ ... @ End(V) @ V @ ... @ V @ F* @ ... @ V* 4 K.
+                        i-Times                           j-Times             z-Times
+
+
+  By the identification,          End(V)        ‘v V* @ V, we have an invariant
+
+
+
+  The classification of such invariants [16, p. 451 ensures that $ is a linear
+combination    of invariants of one of the following two types:
+
+      (1) [Vi, ,..a, Vi,lhl  7***>%,I *.. bt, >‘.‘, qpul       > vsl) ... <%, 7 vs,),
+where & ,..., i, h, ,..., h, ... t, ,..., t, s1 ,..., s, IS a permutation     of the
+i + j vector indices and ur ,..., u, is a permutation        of the i + 2 covector
+indices.
+      (2) The same expression where the brackets of vectors are replaced
+by brackets of covectors.
+
+   One can assume that one does not have at the same time brackets                              of
+vectors and of covectors due to the relation:
+
+                    h     > n2    >...>%Ll[%,...,pnI = det((pj , G).
+    Let us consider the type (I), type (2) being perfectly similar.
+    Let us analyze the factor [v~, , nL)i,..., vJ. If all the indices ir ,..., i,
+are vector indices (and not matrix indices), we save this factor and pass
+to the rest of the product; otherwise,    say ii is one of the matrix indices.
+Let us write Ai1 = yil @ vi, , qi, is necessarily paired in a scalar product
+with a vector <yi, , v$.
+    If t, is a vector index we have, setting vi, = (z..~, , qi,) vi, that u;, =
+Ailvrl and
+                     (Pi, 3%,i[%l ,*-*7 win1 = [d, 9viz r---s q&l>
+and we continue on the other indices.
+  Otherwise,  we keep matching the matrix indices
+
+                                    <Fi, 7%lx?Jt, 9nt,) ...
+until we hit a vector index t, and then we have
+                  INVARIANT    THEORY    OF   ?‘Z ‘;   ?l   MATRICES         347
+
+     One preceeds similarly for all the vectors in the brackets. As for the
+remaining scalar products,         we have a similar procedure     of matching
+the matrix indices and one easily sees that in doing this, one obtains the
+factors of type ,(v, fMz> and Tr(M),          where n/r is a monomial in the
+matrices.     The second case is, as we have said, similar except that
+matching the matrix indices with a covector F, one obtains a monomial
+in the transposed        matrices.   (Of course one could have considered
+invariants (‘M+, NzJ), but they are just ‘I?, MNzj.)
+     We describe now the concomitants.
+     Remark first that, over Sl(n, K), we have the identifications   An I7 ,‘v K,
+A” I’* ‘v K, A+-l I’* ‘V T;, A”-’ V e V*. With these identifications
+the “brackets”      (ArLpl I’) @ V + K, (APL-l V*) @ I/* --f K, are iden-
+tified with the usual brackets          < , :, V @ V* + K. Keeping these
+identifications   in mind, plus the usual identification End(V) ‘v V* @ V,
+we formulate the main result.
+
+   THEOREM     12.2 (a) The vector valued concomitants form a module
+over ThSh,t spanned by the elements Jlivj , MItTi A M,$iz A . .. A M~_,cpi “;I
+where the Mj’s are monomials in the matrices, the vj’s vectors and the yi s
+are covectors.
+     (b)     The covector valued concomitants form a module over T,,.,h,t
+spanned by the elements Mitqj , MIvi, A M,viz A ‘.’ A IW,,+~Z~~ n--l ’ where
+the IVj’s are monomials in the matrices, the yj’s are covectoss, and the ~9~‘s
+are vectors.
+     (c) The matrix valued concomitants form an algebra over T,;,,,,,
+generated by the elements A, , yh @J vj , (MIvi, A *.. A iCl,t-lvi,,-l) @ vj
+
+and qua @ (MIt~i, A Mzt~i, A ..’ A MS-IP)i,_l),  where, as usual, the Ai’s
+are the matrices, the Mj’s monomials in the matrices, the z:~‘s are vectors,
+and the cpi’s are covectors.
+
+   Proof.    (a) Let us introduce an extra variable covector 40. If g is a
+vector valued concomitant, then (p, g> is an invariant linear in 9.
+   Furthermore,   (y, g> = 0 if and only if g = 0 since q~is an independent
+variable.
+   By the classification    theorem (12.1), Ly, g> is a polynomial      in the
+invariants of types (a)-(d).
+   Now we make a case analysis. Clearly, 9 appears either in a factor of
+type (b) or in one of type (d). In the first case, we pull out the factor Mv
+and see g as this factor times an invariant; in the second case, we arrive
+348                               C.    PROCESI
+
+
+to the factor M,$J~~ A M~‘~i2 A **. A MA-,~I~~~~ using the identifications
+
+
+
+
+                                       = (v, W*Wf)        pi, A ... A W*M:-1)       vi,,+,?.
+M* the matrix defined formally             by (det M) . (Ml)-l.  The Cayley-
+Hamilton   theorem for Mt shows          that M* is a polynomial    in Mt and
+Tr((Ml)<).
+      (b)   This is dual to (a), so we do not repeat the proof.
+     (c) In this case, we introduce an extra matrix variable as in 2.1,
+and associate to the matrix concomitant g the invariant Tr(gx),   from
+which g can be recovered. Then, we make, as in (a), a case analysis of
+the expression of Tr(gx) in terms of the basic invariants.
+   If z appears in a factor Tr(M),       we single out in g a term 01* N, 01an
+invariant,    N a monomial in the matrix variables. If z appears in a
+monomial M in a factor (v, M-u), we single out in g a term 01* N, cx an
+invariant and N a monomial in the matrix variable plus the matrix
+concomitant      v @ z?. If 2 appears in a monomial, say Ml , in a bracket
+[MA,      > J&vi2 >..., Mmvi,,l, we can set
+
+
+where N is a monomial       in the matrix         variables       plus the matrix    con-
+comitant
+                         (M,ail A ... AiwvLvin)
+                                            0 vi,             .
+   We have not bothered to write explicitely the finiteness statements for
+all the various cases, since they are obvious consequences of Theorem 3.4.
+   Similarly, one can write the second fundamental theorem in all cases
+considered by taking the second fundamental        theorem for vectors and
+covectors and using the method of matching the matrix indices.
+    The resulting theorem would be very messy, in reality, what one
+proves, is that we have the following “free additing category with exterior
+product.”
+   The objects are: The vectors M, the covectors M*, the exterior powers
+of them: Ai M, Aj M*. Freely generated by: vectors (ZQ E M}i=l,...,,;
+covectors (~j E M*)j=1, ,, ,,cc; matrices {X, E hom(M, M)}k=l, ,.,, no, with
+all the formal onerators:
+                    INVARIANT       THEORY OF ?Z >: ?Z MATRICES                349
+
+      (a)    The pairing: (x, 6) -+ x @ 5, M :< M*           --f hom(M, M);
+     (b)     Transposition:      X + X*,    hom(M, M)    --t hom(M*,    M*).
+     (c)     Trace: hom(M, M) +          A0 M.
+     (d)     Evaluation:     (2, <) --f <x, t>; M x M*   +     A0 M.
+      (e)    Object isomorphism: A” M Y A7i-‘L &‘*, A0 M ‘v A0 M*.
+
+   Then, one has to write the usual formal axioms and then, the resulting
+rings and modules are the ones under consideration.
+   This is the form that the second fundamental theorem takes. The
+method of proof is by full polarization and the method of matching the
+matrix indices in the resulting formulas taken from the second funda-
+mental theorem as proved by Weyl. We hope to give a more detailed
+account of these ideas elsewhere, they seem to be related to the concept
+of Cayley algebra introduced in [2].
+
+
+                         II. REPRESENTATIONS     OF *-ALGEBRAS
+
+13. *-Algebras     and Representations
+
+   We want to extend here the theory of Artin on representations of
+algebras [l] (see also [7, Xl). Th e case treated by Artin is the one relative
+to the group GL(n, K). Here, we treat the other classical groups, for
+which a similar theory can be developed.
+    We are not going to discuss the theory in the generality that perhaps
+it deserves. In particular, we will stick often to our assumption that the
+fields under consideration have characteristic 0, although it will be
+apparent from the proofs that most results extend to characteristic p > 0
+or even to the characteristic free case.
+   We hope to return to this point elsewhere. We recall that a ring with
+involution is, a ring R, with a map a + a* satisfying:
+       (i)   (a + b)*     = a* + b*,
+      (ii)       (ab)*    = b*a*,
+     (iii)        a**     = a.
+
+    Rings with involutions form a category, if we insist that a map v: R + S
+between such rings is a homomorphism preserving *.
+   We will consider, rather than rings, algebras with involutions over a
+field K (or more generally over a commutative ring LI). We will refer to
+350                               C.   PROCESI
+
+
+such rings as * algebras. The map * may be either the identity or an
+automorphism       of order 2 on K. In practice, we will consider this second
+case only when K = C and CL* = ?Xon C.
+    The relation among involutions       and forms is the usual one. Given a
+finite-dimensional     vector space V over a field K, and a nondegenerate E
+symmetric      form (6 = &l),      the algebra End(V)    is equipped with a
+canonical involution having the property that (a*~, w) = (ZI, aw).
+    If E = 1, we will refer to the involution as transposition    otherwise as
+symplectic involution.
+    Similarly, when K = C, and V is equipped with a nondegenerate
+Hermitian     form, End(V)     is endowed with an involution called adjoint.
+    We will study the following objects.
+    Given a vector space V with a form of one of the previous three types,
+and a * algebra R, a * representation         of R in V will be a * map 9:
+R -+ End(V).
+    In the language of modules, v gives rise to an R module structure
+on V, the hypothesis that ~JJis a * map becomes
+
+                 p*w, w) = (a, Y w),        for all v, w E V, Y E R.
+
+   We will speak, respectively,     of an orthogonal, symplectic,    or unitary
+representation   according to the nature of the form on V symmetric,
+antisymmetric,   or Hermitian.
+   We have the natural notion of equivalence, for representations        of the
+same type.
+   Two representations     9): R -+ End(V), $J: R + End(W)       will be called
+equivalent, if there exists an isometry U: V -+ W for which
+
+
+
+   In the language of R modules, u is an R-linear         isometry. In this
+situation, we will also say that the two modules are isometric.
+   In particular the group of isometries of a space V acts on the set of *
+representations    of R and the orbits of this action are the equivalence
+classes of representations.
+    To give a concrete example, which is also fundamental for the theory,
+we specialize to the case that R is a free *-algebra.
+    We will consider three different types of free algebras. Given a set 1,
+construct    on the category of * algebras the three set valued functors:
+
+                   R c+ R’,       R C-G-R+‘,        R t-+ R-I.
+                  INVARIANT      THEORY     OF     n   >:   n   MATRICES    351
+
+  R+ and R- will always denote the sets of symmetric, repectively,         anti-
+symmetric   elements of R.
+   Each of the three given functors is representable.
+   The representing  algebras are constructed    in this way.
+
+      (a) The free algebra K(xi , yijiel with the involution assigned by
+the rule xi* = yi . This will be called the free *-algebra in the variables
+xi , we will write xi* rather than -vi and thus, K{xi , yJ will be denoted
+K(Xi ) xi*>.
+      (b) The free algebra K(x~}~,, with the involution      defined by
+x.*, = xi. Th is will be called the free *-algebra    in the symmetric
+variables xi . For convenience of notation, we will write si rather than
+xi .
+       (c) The free algebra K{xJi,,       with the involution     defined by
+x.*2. = -xi . This will be called the free *-algebra in the antisymmetric
+variables xi . For convenience of notations, we will write ti rather than xi .
+
+    There is a very simple relation between these algebras as soon as
+Q E K. In this case, the canonical decomposition R = R+ @ R- gives
+rise to the canonical isomorphism
+
+
+
+
+where   J’J denotes the free product       and
+
+                   s; =E (Si -1 si*)!‘2,         t, =I (Xi - q*):‘2.
+
+   Giving a representation q of K{xi , xi*> in End(V) is equivalent to
+assigning the elements ai = 9(x() E End(V).
+   The equivalence of two such representations {a,}, (hi} corresponds to
+the existence of an isometry u with ZUQU-~= hi , for all i.
+   We see, therefore, that we are considering exactly the actions studied
+in Part I, for which the invariant theory has been developed.
+   Thus, our task will be to relate the invariant theory to the problem of
+equivalence of representations. This is our final goal.
+   We need some further notations and generalities.
+   Let us give a vector space V, without any form, and a map cp:R +
+End( I’), with R a *-algebra.
+   We can deduce, from this map, an orthogonal and a symplectic
+representation as follows.
+352                                C.   PROCESI
+
+
+      (a) Construct  the dual representation              y*: R + End(V*)     by the
+formula T*(Y) = ~(y*)~.
+      (b) Construct the space W = V @ I’*                  and the direct sum repre-
+sentation, 9: R 4 End( IV), of q and y*.
+      (c)   Equip   W with   the canonical        E-symmetric   form:
+
+                     ((240, (w,5)>= i[<v, 5> + 4% ‘31.
+     One readily verifies that g, is in each case a *-map. We will denote the
+orthogonal and symplectic       representation   so defined by qua, cps, respec-
+tively.
+    In our future work, it will be important        to endow, in the previous
+situation, directly I’ with a form for which y is a * representation.       Such
+a form will be called a compatible form. In some cases, such a form may
+not exist at all, in other cases, many inequivalent compatible forms may
+be constructed.
+    In the next section, an important special case will be studied for which
+one has existence and uniqueness.          For the moment, let us make one
+further general remark. Given a left R module V we construct a right R
+module I’# by the formula:
+
+                                    VP= r*v.
+  Next consider the abelian group V# OR V = T.
+  If B: V x V+K     is a compatible  form we have an induced                    map
+B: T --f K making the diagram
+
+                        v x J’                     Fv#@Rv
+
+
+
+
+commutative.
+  The group V+ OR I’ is equipped with an involutory map T: ZJ @ w -+
+w @ V; B will be E-symmetric if and only if B * T = EB.
+
+14. Semisimple *-Algebras
+   We want to specialize the general discussion of the previous paragraph,
+to the case that R is a semisimple *-algebra. The theorems that we will
+prove are mostly well known, in some cases even in a much greater
+                     INVARIANT    THEORY      OF    12 X   ?Z MATRICES                   353
+
+generality, we have chosen to reproduce them here for lack of a coherent
+reference taking our point of view of representation  theory.
+   Let R be a semisimple _trtinian *-algebra,
+
+
+                                           Ri a simple algebra.
+
+
+    The involution * induces a map of order 2 on the set of simple factors
+Iii; therefore, we can subdivide this set in the factors Ri that are fixed
+under *, and the remaining ones exchanged:
+
+
+                    R = 6&l Ri6 (Sj @ Sj*),                (Ri = R,*).
+                                 i=l
+
+
+    Sj* is isomorphic, via *, to Sjo (the opposite algebra).
+   The * algebra Sj @ Sj* is thus isomorphic to the * algebra Sj @ Sjo
+with the exchange involution (a, b)* = (b, u).
+   We want to analyze modules over R.
+
+  THEOREM   14.1. Let R be a simple *-algebra,                 let V be an irreducible    R
+module. A = End,(V),  the centralizer of R.
+
+    (a) There exists an involution           * on A and a nonzero biadditive             map
+B: V x V + A such that:
+
+          (i)   B(r*v,    w) = B(v, rw)for         all v, w E V, and r E R.
+dEA      (ii)   B(dv, w) = dB(v, w); B(v, dw) = B(v, w) d* for v, w E V,
+
+        (iii)   B(v, w) = EB(w, v)*,         E fixed, and E = fl.
+
+      (b)   Condition (i) implies that B is nondegenerate, i.e., B(v, w) = 0
+for all v E V implies w = 0 and symmetrically for all w E V implies v = 0.
+      (c) The involution on A and the form B are unique up to the following
+changes.
+   If *, # are two involutions on A, B, , B, the corresponding forms on V,
+there is an element a E A, a # 0 and a* = Ea (6 = +l), such that:
+        (iv)    b# = ab *a-l,    B,(v, w)a = B,(v, w) for all v, w E V.
+      (d) i’f A ’zsji nz‘t e d imensional over its center K, every involution on A,
+coinciding on K with the automorphism induced by the involution on R, is
+354                                     C.   PROCESI
+
+
+obtained in the way described before. Provided that, given E E K, if e*           = 1,
+then E = &(~/cx*), 01E K.
+
+   (e.g., if * is the identity     of K or conjugation     of the complex   numbers.)
+
+   Proof. (a) With the notations of Section                 13, consider    the group
+I/# OR v with its involutory map T.
+
+              v   N   R/I,       I a maximal left ideal, as an R module.
+
+Similarly, V# ‘V R/I* and I* is a maximal right ideal. Thus, V* OR V N
+vp*v      CT?V”/V#I as abelian groups. Consider V as a vector space over d,
+we have an induced vector space structure        on V+ OR V, which makes
+it isomorphic to V/I* V. Since I* is a maximal right ideal, V/I* V is one-
+dimensional over A.
+   Similarly, we can act on the first factor V#.
+   We obtain, therefore,     two structures   of vector space over A for
+V# OR V, both one-dimensional.
+   Denoting c and o the previously defined operations, one has:
+
+              d n (v @ w) = v @ dw,                d o (v @ w) = dv @ w
+                             T(d o (v @ w)) = d o .(v @ w)
+            d, G (d2 q (v @ w)) = d,v 0 d,w = d, q (dl o (v 0~)).
+
+  Let us now analyze 7. We may have three possibilities:
+
+      (1)   7(m) = m for every m E Vi’ OR V.
+      (2)   7-(m) = -m        for every m E V# OR V.
+      (3)   None of the above.
+
+   We remark first: In case (1) and (2), A is commutative    and * is the
+identity on the center A of R.
+   Let us show it for (l), (2) being similar.
+   From T(m) = m for all m, we deduce d o m = T(d o m) = d c T(m) =
+d q m. The two operations O, c coincide, and we denote them by dm.
+From dl o (d2 E m) = d2 q (dl o m) we deduce d,d,m = d2dlm, and so
+A is commutative     and thus, identified to the center of R. Finally, if
+Y E R, (r*v) @ w = v @ rw, if, furthermore,         Y E A, (r*v) @ w =
+r* * (v @ w), and v @ rw = r * (v @ w), hence, r* = r.
+                 INVARIANT     THEORY   OF   ?‘Z X   ‘?Z MATRICES                  355
+
+   Any choice of a basis element m + 0 in V OR V, identifies this space
+to d and thus, the canonical map V ,i V + V+ OR V gives rise to a
+formB:VX         V+d?T’@,V.
+   In case (l), B is symmetric,  while in case (2), it is antisymmetric. The
+involution on d is, as we have noticed, the identity. In these two cases,
+the uniqueness     of B is clear, every compatible form factors through
+ V* OR V, so it amounts to chasing an isomorphism        of V# OR V with d.
+This is unique up to a nonzero scalar n Ed, (I -= a*, since * is the
+identity on A.
+   For case (3), consider the elements w = T(m) f m and 71= c-(m) - m
+in V# OR V. We have T(W) = w, while T(Z)) = --z’. In our present case,
+we can choose w and v to be nonzero.
+   Let us restrict our attention to the choice of w with T(W) = w f 0.
+   Define a map * on A by the formula: T(d       c w) = d* ‘2 w. We have:
+
+   d o w = ?(d o w) = T(d* c: w) = d”* c zo
+
+(bd)* s w = T((bd) o w) = b q .(d o W) = b q (d* ? zu)
+
+          = d* o (b q w) = d” o (b F T(ZU)) = d” n (T(b         o w)) = d” G (b* L) zu).
+
+   Thus, d** = d and (bd)* = d*b* for all 6, d E A. The * is, therefore.
+an involution.
+   We use w finally to identify V OR V with A by the map d -+ dw. Let
+us callj the inverse of this map, one readily verifies thatj(d o U) = dj(u)
+and j(d o U) = j(u)d*, this proves (i) and (ii) for the form V x V +
+VgR       V-JA.
+   Part (iii) is also clear with E = 1 by the fact that T(W) = w and the
+definition of * on A.
+   Everything    we have done for the choice of a 7 symmetric    element w
+could have been repeated with the choice of 2, with T(V) = -v.
+   In this case, the involution is defined by T(d 3 w) = -d*       3 w, the
+resulting E is - 1.
+     (b) If B(z), w) = 0 f or all w E V and we had o # 0, choosing
+v’ E V, we can find, by the irreducibility of V, an Y E R with v’ = YV.
+Hence, B(v’, w) = B(v, Y*W) = 0. We could deduce that B is 0.
+     (c) Assume that B is a form with the prescribed    requirements.
+By the universal property of V OR V, we have a map i?: V# OR V -+ A
+such that
+356                               C.   PROCESI
+
+
+      (1)   The diagram
+
+
+
+
+is commutative.
+      (2)   B ‘7 = EB
+      (3)   B(d 0 u) = d&L),     B(d 0 24) = B(u)d”.
+
+    In particular,    since B f- 0, B is an isomorphism    between the vector
+space V# OR V with the operation 12 andd.LetwEV#@,                   Vbesuch
+that B(e) = 1.
+    Since &T(W)) = EB(w) = E, we have T(W) = EW.
+    Formula (3) tells us that the involution      on d is necessarily the one
+deduced from W, according to the procedure            used in (a). Finally, to
+compare it with the previously chosen involution and form relative to w,
+let us indicate *, # t h e involutions relative to w and 6, respectively.   Let
+us assume T(W) = EW, T(W) = E%, E, E being 1 or - 1.
+    Then, w = a P w, and EC?= T(W) = ea*               w; hence, a = (EE) a*.
+    Moreover,      ~(d c W) = Ed o w and T(d r: W) = T((da) c w) =
+l (da)* (: w = ea*d*a-%, hence, d* = ad*a-l. Finally, calling the two
+forms B, , B, , we have B,(a, 3)~ = ZJ @ s = B,(v, Z)W, thus B,(n, z) =
+B,(v, z)a.
+     (d) Let # be any involution on d, coinciding with * on K. The
+map cp: d -+ (d#)* is then an automorphism    of d, which is the identity
+on K. Therefore,   F is an inner automorphism   and there is a c E d with
+(d#)* = cdc-l for every d E A.
+
+    Hence, d+ = (c-i)*d*c*.     Set a = (c-l)*, the only thing that remains
+to be proved is that a* = EU with E = + 1. Since # is an involution, we
+have d = d## = (c-l)*((c-l)*d*c*)*      . c*, or d = aa*-ld(aa*-l)-l.       From
+this, we deduce that aa*-l E K. Set E = aa*-1. Thus, a*e = a. Applying
+*, we have a8 = a*, and using the two equalities, EC* = 1. By hypo-
+thesis, E = &(cx/cY*), set z = sol, 8 satisfies the conclusion.
+    Let us now restrict our attention to finite-dimensional           semisimple
+*-algebras over an algebraically closed field K, with the further restriction
+that * is the identity on K.
+                INVARIANT   THEORY   OF 92 X n MATRICES                357
+
+   COROLLARY 14.2. If R is a simple *-algebra over AT, as before, R is
+isomorphic to one of the two algebras:
+
+    (a> II x n matrices with transposition.
+    (b) 2n Y 2n matrices with symplectic involution.
+   Furthermore, any irreducible module has a unique compatible form up to
+a scalar multiple.
+   In particular, in case (a), ezery irreducible * sepresentation of R is
+orthogonal, and any two such representations are isometric. In case (b),
+every irreducible * representation of R is symplectic and any two such
+representations are isometric.
+   Proof. This is a special case of 14.1, once one recalls that, over an
+algebraically closed field K of characteristic not 2, a nondegenerate E
+symmetric form on a space V is unique up to isometry.
+    Remark. If S is a central simple algebra with involution of the
+first kind, finite dimensional over its center K, and R is the algebraic
+closure of K; S OK ki with the involution (a @ z)* = a* @ Y is one
+of the two previous types.
+    We will say accordingly that S has transpose or symplectic involution.
+If dim, S = r?, S has transpose involution if and only if dim, S-t =
+n(n + 1)/2, and dim, S- = n(n - 1)/2; if S has symplectic involution,
+then of course, rz = 2nr is even and dim, S’ == ~~(11   - 1)/2, dim, S- =
+n(n + 1)/2.
+    If a is an invertible symmetric element, we can define a new involution
+on S by the formula d” = ad*a--l, # has the same type as *.
+    If a is an invertible antisymmetric element, the formula d- = ad*a-1
+defines also an involution on S of type opposite to the one of *. Such an
+element exists if and only if n is even.
+    The same reasoning as in 14.1 (d) sh ows that every involution on S is
+deduced from * in the previous way. An easy computation shows finally
+that, if # and b are two involutions deduced from * by the elements a,
+a’, respectively, # and b give rise to isomorphic *-algebra structures on S
+if and onlv if there is an invertible element c E S with c*c = a’a-1.
+
+   LEMMA   14.3. Let R = S @ So be a *-simple (but not simple) algebra.
+Let V, (resp. V”) be an irreducible S module (resp. So module).
+     (a) W = V @ V” has a nonzero symmetric compatible form B.
+B is unique up to a scalar multiple and necessarily nondegenerate.
+358                                   C. PROCESI
+
+     (b) W = V @ V” has a noncero antisymmetvic compatible joym B.
+B is unique up to a scalar multiple and necessarily nondegenerate.
+  Proof    Let us consider W+ OR W; we easily see that W” OR W N
+(V” OS V) GJ (V C&o VU), w h ere we consider V” as a right S module
+and V as a right So module in the natural way. The two summands are
+both one-dimensional over K and 7 exchanges them.
+   Let us choose a nonzero vector u E V” OS V and set
+
+
+
+If B: We OR W -+ K is a linear map, B corresponds to a symmetric
+compatible form B if and only if B(u) = B(u); B corresponds to a com-
+patible antisymmetric form B if and only if B(u) = -B(U). Therefore,
+the existence and uniqueness of B in both cases is ensured. The non-
+degeneracy of B is proved as in 14.1; one remarks that V and V” are
+isotropic subspacesof W that are set in duality by B.
+   We can read the previous lemma in the language of representations,
+using the notations of Section 13.
+   Let us call 9, q”, # the representations of S @ So on the vector spaces
+V, V”, V @ T/O,respectively.
+
+   COROLLARY        14.4.   (a)   CJJO
+                                    is isomorphic to p?*.
+      (b)      $ is equivalent to q? and qs$,respectively.
+      (cl      Any * representation isomorphic to # is isometric to @ or to @.
+  We plan to extend now the previous results to not necessarily ir-
+reducible representations.
+  We deal first with the simple case, then with the case R = S @ So.
+  Let R be a simple *-algebra and V an irreducible R module. Any R
+module is isomorphic to V OK U, where U is a vector space and R acts
+on the first factor.
+
+   LEMMA        14.5. Let R be simplewith transposeinvolution (Yesp.symplectic
+involution).
+    (a) If U is odd-dimensional, W = V OK U possesses   a symmetric
+nondegenerate compatible form B and no antisymmetvic nondegenerate
+compatible form (resp. W possessesan antisymmetric and no symmetric
+compatibleform). B is unique up to R linear isometries.
+      (b)   If U is even-dimensional, W possesses
+                                                both a symmetric and an
+                   INVARIANT   THEORY      OF   72 X   Z   MATRICES          359
+
+antisymmetric    compatible form.       Both forms     are unique up to R linear
+isometries.
+    Proof. Consider W+ OR IV, it is isomorphic to ( V+gRV)      OK ( UBKU).
+This implies that a compatible nondegenerate       form on W is the tensor
+product of a compatible form on k’ with a nondegenerate           form on ci.
+The form on V is, by 14.2, uniquely determined up to a scalar and it is
+symmetric or antisymmetric,     according to the type of involution on R.
+    The form on U can be chosen only symmetric         if E is odd dimen-
+sional, otherwise   it can be chosen both symmetric or antisymmetric.       In
+each case, such a form is unique up to linear isometries of I:. The claims
+follow immediately.
+    For the algebra R = S @ So, we have a similar result, a typical R
+module is of type IV == I’ OK [:I 0 T’O OS r7? .
+
+    LEMMA    14.6. A compatible nondegenerate form on W exists if and
+only if dim U1 = dim CT, .
+   In this case, one can choose both a symmetric or an antisymmetvic com-
+patible form on W.
+   Such a form is unique up to R linear isometrics.
+   Proof.   Assume that B is a nondegenerate       compatible form        on W.
+Let e denote the unit element of S, e* is the unit element of SO.
+   If w, ~1E V @ U, we have
+                B(w, u) = B(eza, z) = B(w, e-z>) = B(w, 0) = 0.
+Thus, I/ @ Ui is an isotropic space, similarly, V” @ Uz is isotropic.
+   The nondegeneracy of B implies that dim I’ @ Ur = dim V” @ 7Ya,
+hence, dim U, = dim Uz. Set U1 = IJ, = Uand construct W+ OR W =
+NV0 OS q 0 (V @so7;/‘O)l
+                      0 (U OK U).
+    As in 14.5, we see that a compatible symmetric nondegenerate form is
+the tensor product of a compatible symmetric         form on V @ V” with a
+nondegenerate     symmetric   form on U, or the tensor product of a com-
+patible antisymmetric     form on P @ V” with a nondegenerate antisym-
+metric form on U. Similarly,         for a compatible    antisymmetric   form.
+ Clearly, the forms obtained in each case are isometric over R. Thus, to
+conclude, we have onIy to compare any form obtained as a tensor
+product of two symmetric ones with one obtained as a tensor product of
+two antisymmetric     ones (similarly in the antisymmetric     case). We have,
+in each case, complete freedom of choice by the previous remarks.
+   Let us choose a compatible symmetric form given by a linear map B on
+360                              C. PROCESI
+
+(V” @s V) 0 (V &        VO). A compatible antisymmetric form B is
+obtained from B by defining B = B on V” OS V, B = -B on F OS0 V”.
+Now, write U g P @ P*, P a vector space, equip U with the canonical
+hyperbolic form H and the canonical symplectic form S, given in
+Section 13 (i), (ii).
+   It is immediately verified that B @ H = B @ S, and so the lemma
+is proved.
+   We are now ready to prove the conclusive theorem on semisimple
+modules. We need to fix our notations. Let
+
+
+
+
+be a semisimple *-algebra. The terms Ri are the ones with transpose
+involution, the Sj the ones with symplectic involution, and Tk is exchanged
+with Tko. Let Vi , i = l,..., s; Wj , j = l,..., t; Z, , Zko, k = l,..., ZLbe
+the irreducible modules over Ri , Sj , Tk: , and Tko, respectively.
+   Consider an R module M, M is isomorphic to C ntVi + C mj Wj +
+c PkZk + c 4kZk0.
+
+  THEOREM     14.7. (a) M has a compatible symmetric form if and only if
+mj is evenforj = l,..., t, andp,; = qkfor k = l,..., u. Any two suchforms
+are isometric over R.
+     (b) M has a compatible antisymmetric form if and only if ni is even,
+i = I,..., s, andp, = qkfor k = l,..., u. Any two suchforms are isometric
+over R.
+
+  Proof.   Let ei , fj , gk , gko7respectively, be the unit element of Ri ,
+Sj , Tk , and T,O. We have
+
+            e.*
+             I = ei ,    .h* = fj ,    g,” = &O,     t$+ = g,.
+
+   Let us carry out the proof of (a), (b) is perfectly similar. If B is a
+compatible form on M, then, since the idempotents ei , fj , g, + gko are
+symmetric and orthogonal, we have the decomposition of M in the
+orthogonal subspaces eiM, fjM, (gk + g,O)M. Thus, B is the direct sum
+of compatible forms on such subspaces.Now, eiM = niVi ,fjM = mj Wj
+and (gk + g,‘J)M = pkZk + q,,J,O. Therefore, we are reduced to the
+case studied in the previous lemmas, and the theorem is proved.
+                     INVARIANT     THEORY    OF    ?Z X   II   MATRICES                 361
+
+ 15. Equivalence     of Representations     under O(n) and Sp(n)
+     We start with some definitions.
+     Recall that a flag on a vector space V is a sequence
+
+                             I- = I -n 3 I m--l 3 .” 3 l,, = 0
+
+of subspaces. If J’, r) Vr are two subspaces of the flag, we have an
+induced flag on V,/ V, by V,/k’, 1 V,.-i/V, r) ... r> V,/V, = 0.
+   If V = VjI r) V,& r) a*. 3 V, = 0 is a flag on V and W is another
+space, we can define the direct sum flag on V @ ?Y by
+                   I7 9 m-3 IT,-, :s WI      “. 3 r;, ,@! TV =: lx’3 0.
+   Assume that V is now endowed with                 an E-symmetric        nondegenerate
+form, we make an inductive definition:
+
+   DEFINITION     15.1. 9 flag V = VjLPl 3 ... 1 JTO= 0 is a compatible
+flag if one of the two possibilities are verified:
+     (a) VI is isotropic,        J7,1--I = ViL, and the induced           flag on VI/V,,-,
+is compatible.
+    (b) The form is nondegenerate                 on Jj7i and the flag is the sum of a
+compatible flag on VIL with Vi .
+   We are implicitly using the fact that, if J4’C V is isotropic JVL/W
+inherits from J’ a natural nondegenerate form, and if the form, on the
+other hand, is nondegenerate    on W, then it is so on WJ- and JY =
+ W@ w-i.
+   The meaning of a compatible flag is understood considering the graded
+space associated gr J/ = @ Vi+JkTi . If the flag is compatible,       gr V
+inherits a nondegenerate form defined inductively    as follows. If we are
+in case (b), V = J,‘i @ J:I, and canonically,      gr V ‘v W, @ gr V,J.
+(we use the induced compatible flag on V,), the form is the orthogonal
+sum. In case (a), we have
+
+
+
+The form is the sum of the inductively      defined form on gr( J-i’/ VI) with
+the canonical hyperbolic form induced by the form on T’ on the soace
+v, @ V/VI’.
+   Let us now consider an orthogonal         representation 9): R + End(V)
+(the symplectic case is similarly treated).
+
+w/r9/3-7
+362                                  C. PROCESI
+
+  THEOREM     15.2. (a) There is a compatible jlag that is a composition
+seriesfor the R module structure.
+     (b) The quotient semisimple representation pv OR gr V, with the
+quotient form, is orthogonal.
+      (c)   qO”is in the ‘Lclosureof the orbit” of y under O(V).
+
+    Proof. (a), (b) Th e orthogonal and symplectic case are essentially
+similar, therefore, let us treat the first one. We proceed by induction on
+dim I/. Let VI be an irreducible submodule of I’. Since v is orthogonal
+ V,l is also an R submodule. Therefore, we either have V, C VII, or
+ VI n VI1 = 0. In the last case, V = V, @ VII, and q is the orthogonal
+sum of two representations, by induction V,i has a compatible com-
+position series and we take the direct sum. In the first case, the form B
+induces a nondegenerate bilinear pairing B: V/VI’ r; VI + K, iden-
+tifying V/V,1 with VI *. V/V11 is also an R module, if E E V, v its class
+modulo VI1 and w E F;, we have: B(rc, w) = B(~v, w) = B(rv, w) =
+B(v, r*w>.
+    Hence, V/VI1 is identified to VI* as R module and the quotient
+representation of R on I’/I’ri     @ V, is isomorphic to vls, yr being the
+induced representation on V, .
+    The representation V/ V,l is also clearly irreducible. The induced
+representation on V,l/Vl       is also orthogonal, and one proceeds by
+induction.
+     (c) We do not want to formalize the meaning of this phrase in
+general; in caseR is the free algebra on j variables, the set of representa-
+tions is an affine space, the closure is intended in the Zariski topology.
+In general, one can define it using the language of schemes.
+
+    We proceed by induction. In case (a) V = V, @ Vri, there is nothing
+to prove, we pass directly to V,J- and use induction.
+    If V, C Vii,          we must show that the representation y’ on
+ v/v11 @ r; @ Vl’/ v, .is in the closure of the orbit of v.
+    Consider a basis of V, vl , z12,..., z’~ , v~+~ ,..., v,,.+~, w1 ,..., w,; , where
+2’1)...) z!,, is a basis of Vr , z~r,..., z’,~+~is a basis of Vll, and B(vi , wj) = S,{,
+i, j = l,..., k. Write the representation in block form:
+                   INVARIANT          THEORY    OF   n   X   7’2 MATRICES   363
+
+   Consider   the matrix       in block form:
+
+
+                                  *-l(t) =     i00t 00
+                                                    1 0 1 ,
+                                                    0 t-l
+
+A(t)   is an isometry    of V, as is easily verified,
+
+
+                    A(t) ii       g     ZJ A(t)-’    := t       ;      g.
+
+
+   This describes a piece of the orbit of 9, setting t -= 0, we stay in the
+closure of the orbit and obtain the representation   in block form:
+
+
+
+
+which is exactly v’.
+   We are now ready to conclude our work.
+
+   THEOREM       15.3. Let R be a finitely generated * algebra. Let W be the
+space of n-dimensional orthogonal representations. Let O(n) be the orthogonal
+group acting on W, Then:
+   The quotient variety W/0( n ) c 1assi ji es isomovphism classes of orthogonal
+semisimple representations.
+   A!loveprecisely, the map V: W---f W/O(n) is onto and rr(q~) = rr($) if and
+only if y0 is isomorphic to @.
+
+   Proof.    First, let us assume that R is the free *-algebra in j variables.
+W is then the (n” * j)-dimensional    affine space.
+   We already know, from 15.2(c), that 9 and @ have the same invariants.
+   From 14.7, we deduce that q” is uniquely determined by q (and not
+by the composition series).
+   If y” is isomorphic     to @, we have z(g)) = Z-(#J). n is onto from the
+theory of reductive groups, since we are in characteristic       0. (This hypo-
+thesis now can be removed because Mumford’s               conjecture    has been
+proved.)
+   The only part that has to be checked is : If vi, qa are nonisomorphic
+semisimple representations,      they have different invariants.
+   First, since vi is semisimple, the ideal ker ~i is detected as the maximal
+364                              C. PROCESI
+
+ideal 1 of R such that ~~(1) is nilpotent. This is equivalent to Tr(a) = 0
+for all a E vi(I), hence, this condition is expressed by invariant equations.
+If Ker y1 = Ker y2 = 1, let us consider the semisimple algebra R/I
+
+                      R:I = @ R< @ Sj @ (T, @ T,o),
+
+with the notations of 14.7. By the same theorem, an orthogonal R/I
+module is specified by the ranks of the idempotents ei , fj , g, + g,O.
+These ranks are in turn determined by the values of the coefficients of
+their characteristic polynomial, again an invariant condition.
+   To pass from the free *-algebra to a g eneral finitely generated algebra,
+we present such an algebra as the quotient R/I of a free *-algebra
+modulo a *-invariant ideal.
+   The representations of R/I form a subvariety of the representations of
+R, invariant under O(n). A semisimple representation 4~ of R factors
+through I if and only if the invariants Tr(v(a)) vanish for a E 1.
+   The theorem is thus completed.
+   We have clearly a similar theorem for symplectic representations,
+which is proved exactly in the same way.
+
+   THEOREM  15.4. Let R be a finitely generated *-algebra. Let Z be the
+space of symplectic 2n-dimensional representations. The quotient variety
+ZjSp(n> class$es isomorphism classesof semisimplesymplectic representa-
+tions,
+
+16. Positive Involutions and Real Points
+   We want to consider new *-algebras over the real numbers R and
+“real” representations of them. For the three classical groups O(n, C),
+Sp(n, C), Gl(n, C), we take the real compact groups O(n, R), Sp(n),
+ U(lz), where Sp(n) now will stand for unitary quaternionic matrices.
+In each case, we may consider the relative notion of real representation
+and their equivalence under the previously defined groups. Thus, we
+have orthogonal representation on the vector space R” with its form
+cb, xi3, quaternionic representations in Hn with its form C q& and
+unitary representation in CL with the Hermitian form C O~~CQ          . The
+theory in these cases in particularly pleasing, the groups are compact,
+thus, the orbits are closed and the quotient is the orbit space on one hand.
+On the other hand, this is reflected at the level of representations by the
+fact that every representation is semisimple, since every subspace has an
+orthogonal complement. We come now to the details.
+                           INVARIANT       THEORY      OF   n   ,X   71 MATRICES                      365
+
+   Let S be a semisimple  *-algebra over the real numbers R. Consider
+the reduced trace tr: S + R and the associated form on S, tr(aa*).
+
+  PROPOSITION              16.1.       The following     conditions      are equizjalent:
+     (a)         tr(na*)     > 0,         Va E S.
+     (b)         tr(aa*)  > 0,      \Ja E S,      a f 0.
+     (c)         S is the direct sum of *-algebras of the following                    three types:
+
+           (‘1        seal matrices with       transposition;
+           (2)        quaternionic     matrices with the involution           (qij)*    = (qji);
+           (3)        complex matrices with adjoint involution                (a,j)*    = (aji).
+      (d) If S is simple, any irreducible module V has a positice symmetric
+compatible form.  with z+ahres in R. Such a form is unique up to positizte
+multiples.
+   Proof.  (c) a (b) +- ( a) trivially. Assume (a) holds; let S = @ Si .
+If we had two terms exchanged by *, Si and Sj , consider their unit
+elements ei and ej . We have ei* = ej . Hence,
+
+                           tr((e, - ej)(ei - ej)*) = tr(-e,           - e,) < 0.
+
+    Therefore,   every terms is fixed under *, furthermore,      each simple
+ *-algebra Si has an involution satisfying (a), hence, (b) since the form
+is nondegenerate.     Then, it follows from [lo, Theorem 0] that Si is of
+the desired type.
+    We have to prove now the equivalence of (d) with the remaining
+assertions. Clearly, if S is of the type described in (c), there is a positive
+form on any irreducible      module.
+    Conversely, let V be irreducible and consider V+ OS V. A compatible
+form of the type described in (d) gives rise to a map B: b’+ OS V -+ R.
+    Let w E VT OS V be a T symmetric         element mapping into 1. We
+identify    P7- ~8, P* with the centralizer  d of ‘3 in V’, d + d . w, and
+consider the induced map B: A ---f R. The map B induces a quadratic
+form on A, &a, b) = B(ab*). Th e axioms on the original form imply
+that B satisfies the properties:
+
+           B(d, h) -.= B(b, d),             B(da*,     b) = B(d, ab),              B(d, ‘I) > 0,
+
+if d f 0.
+   Than, it is easily checked (e.g., 0 < B(i, i), while B( - 1, 1) < 0) that
+366                                  C. PROCESI
+
+
+we must be in one of the three cases (1) A = R, (2) A = C and the
+involution is conjugation, (3) A = H and the involution is conjugation.
+In each case, one sees immediately that B is a positive multiple of the
+reduced trace tr: A ---f R.
+   As for the uniqueness, one remarks that in each of the previous cases,
+the symmetric elements are the elements of R, therefore, the choice of w,
+giving the same involution on A, is unique up to a scalar multiple in R
+(14.1(c)). Hence, a new form on V induces a new map B’: V- OS V+ R
+differing from B by a scalar a: E R, since both forms are positive, wc must
+have a: > 0.
+
+   DEFINITION  16.2. If S is a semisimple *-algebra over R, satisfying
+the hypotheses of 16.1, S will be called a positive *-algebra.
+
+
+      LEMMA     16.3. Let S be a positive
+                                       *-algebra over R, let V be a complex
+orthogonal   module over S $JI1 C.
+    V is the complexijcation of a unique real orthogonal   S module with a
+positive form.
+
+   Proof.   From 16.1, S = @ Ri @ Sj @ T, , where Ri is a ring of
+real matrices with transposition, Sj quaternionic matrices and T,;
+complex matrices with their involution (aii)* = (ajJ.
+   Thus, R, OR C is complex matrices with transposition, Sj OR C
+complex matrices with symplectic involution and T,. OR C is (C), @ (C),
+with exchange involution.
+   We use the classification of orthogonal modules over such a ring (14.7),
+then we see immediately that such a module is the complexification of a
+direct sum of the standard real modules described at the beginning of
+this paragraph. The uniqueness has been proved in part (d) of 16.1,
+remarking that a positive compatible form is always the direct sum of the
+form restricted on orthogonal irreducible submodules, since no subspace
+is isotropic (cf. 15.2).
+   We sum up our work for O(n, R).
+
+
+      THEOREM     16.4.   Let S = R(xi , xi*} be a jinitely      generated    *-algebra.
+    The variety W of equivalence classes of semisimple orthogonal           representa-
+tions of S @JR C has a real structure.
+    The equivalence classes of real orthogonal     representations      of S cowespond
+to the realpoints     of W, where the invariant functions tr(aa*), a E S, are ‘> 0.
+                   INVARIANT    THEORY    OF   n   ;X   n   MATRICES            367
+
+    Proof     The real structure on W is clear from the form of the invariant
+ring, generated by the elements tr(ail ... a,,), ai E S.
+           is a real representations, it is semisimple and its invariants
+tr(F(fzT) ... ~(a.)) are real, hence, it gives a real point of IV, clearly,
+in thiilpoint, v& have the desired inequalities tr(aa*) >, 0.
+    Conversely, let P be a real point, with tr(aa*) > 0. Let s be the
+semisimple algebra of operators obtained evaluating S in P.
+    It is easily verified that the reduced trace tr: ,!?---f R is strictly related
+to the trace Tr of the representation.
+    In fact, if 3 = @ si, si simple, and tr; is the reduced trace in Si ,
+we have tr = 2 tri , while Tr = 2 11~tr, , IZ~> 0 some integers.
+Therefore, from the condition Tr(aa*) > 0, we deduce that s is a
+ positive *-algebra and the claim follows from 16.3.
+    We pass now to unitary representations. Consider an algebra S over C
+with an involution inducing conjugation on C.
+    \I:e want to classify unitary representations of S in (C),, . The first
+remark is that every such representation is semisimple and, if S denotes
+the induced algebra of operators, S 1s a semisimple positive *-algebra.
+    The converse is clear, moreover, 16.1 (d) implies that two unitary
+isomorphic representations are isometric, over r/(n). Now, we have to
+read these results geometrically. This is done as follows, let S for
+simplicity be C{x, ,..., 3, , x1* ,..., x,*).
+    The representations of S in (C),,, are 2n-tuples of matrices and are
+classified by the space [o,, (C),,J OR C with real structure given by the
+first factor. X real point is a Zn-tuple (ul , aI*, u2, u2* ,,,., a, , u,,*).
+    Thus, the real points of the variety of representations are exactly the
+unitary representations.
+    The initial remarks show:
+
+     r~HEORE31  16.5. The equivalence classes, under U(n), of n-dimensional
+tlnitary representations    of S are classified by those real points, of the variety
+of eqzrivulence clusses, under Gl(n, C), 0f semisimple representutions         of S,
+where the invariants     Tr(uu*),   a E S, nre 3 0.
+
+   Finally, we turn our attention to quaternionic representations. If P
+is a 2n-dimensional comples space, a quaternionic structure on b’ is a
+structure of right vector space over H inducing the C vector space
+structure when the scalars are restricted to C C H.
+   Clearly, to give a quaternionic structure on V, one must only give a
+map j: I- - V, with j’ = - 1 andj antilinear over C, i.e., j(ae~) 1 ?j(~).
+368                              C. PROCESI
+
+  We will sketch the main points.
+  A nondegenerate quaternionic form B on V can be defined as in 14.1,
+and it has the form C p&‘.
+  Considering H = C @ jC, the form B gives rise to two forms, K and
+A, with values in C such that
+
+                       B(v, w) = K(v, w) + jA(v, w).
+
+  Since B(w, v) = B(v, w) we have
+
+            S(v, w) = Iqw, 21)     and     A(w, v) = -.4(v, w).
+
+Thus, K is Hermitian and A is alternating.
+   They are nondegenerate on V. If S is a *-algebra over R, and V is a
+symplectic module over S OR C, we will say that V is quaternionic
+if it possessesa quaternionic structure with a quaternionic form, com-
+patible with the involution on S, inducing the given alternating form.
+It is clear that, if S is the operator algebra induced by S on Z’, and V is
+quaternionic, then S 1s a positive *-algebra and the representation is
+semisimple.
+   The representation is identified, up to equivalence relative to L@(n)
+(Sp(n) C (H),, in this case), by the irreducible quaternionic subspaces.
+   These subspaces are easily analyzed for the various terms Ri , Sj ,
+ Tk of the direct sum decomposition of S. In each case, one has the
+indecomposable symplectic representation of the relative algebra
+Ri @ C, Sj @ C, Tk @ C a case analysis similar to the one carried in
+the previous case, shows that the way to make this representation
+quaternionic is essentially unique up to positive real numbers (one has
+to reduce the discussion to V# @ V), thus, one obtains, as in the previous
+case, the theorem:
+
+    THEOREM   16.6. The equivalence classes,under Sp(n), of 2n-dimen-
+sional complex symplectic representations of S OR C with quatevnionic
+structure are classi$edby the real points of the variety of equivalence classes
+of semisimplesymplectic representations of S OR C, where the invaviants
+tr(aa*), a E S, aye 3 0.
+  Remark. We have, in the three casesconsidered, the following set up.
+An algebraic group G defined over R. The real points of G form a com-
+pact group G, . A variety W defined over R, and a group action
+G x W -+ W defined also over R, the quotient variety W/G defined
+                  INVARIANT   THEORY    OF   ?Z 2, fl    MATRICES               369
+
+over R. The real points I&‘, of Wand ( W/G)R of W/G. The quotient map
+W+     W/G restricted   to the real points W, gives a map ~a: W, -+
+( W/G)R . Then, the fibers of nR are exactly the orbits under the compact
+group GR , and the image of 7~~ is the semianalytic      subset of (W/G)R
+defined by the fact that the symmetric     elements XX* of a certain non-
+commutative   algebra have trace 3 0.
+
+17. Azumaya    AZgebras
+   We want to develop now the notions necessary to deal with irreducible
+representations.
+   We will follow the theory for GZ(n, K) very closely (cf. [I, 7, 81).
+   Let R be an Azumaya algebra over its center A. Assume that R has an
+involution     *.
+
+    DEFINITION   17.1. \;l:e say that the involution is of the first kind if *
+is the identity on A.
+    Otherwise we say that it is of the second kind.
+    Let us assume now that 2 is invertible in A and * of the first kind.
+    If A + K is a map in an algebraically          closed field (a geometric
+ point P of Spec A), the   * algebra  R  @A  K  is either n x n matrices with
+transposition   or 272 x 2n matrices with symplectic        involution   (14.2).
+ We will say that R is of transpose type, resp. of symplectic type in P.
+ We notice that the type depends only on the point of Spec A over which
+ the given geometric point lies (cf. remark after 14.2).
+
+
+   PROPOSITION    17.2. Let R be an Axumaya             algebra over A with involu-
+tion of the j%st kind and p E Spec A.
+
+     (a) If rk R = n” and R has transposition type in p, then there exists
+an etale neighborhood Spec U of p such that R @A IT is n x n matrices
+with transposition.
+     (b) If rk R = (2 n ) 2 and R has symplectic involution in p, there is an
+etale neighborhood Spec U of p such that R @.4 Ii’ is 2n x 2n matrices
+with symplectic involution.
+
+   Proof.  Let us do case (a), (b) is analogous.
+   Let P be a geometric point centered in p and A the strict henselization
+of A in P.
+   R @A 2 is an Azumaya algebra of rank n2 over A with involution of
+370                                C. PROCESI
+
+the first kind. If K is the residue field of 2, R @A K is n x n matrices
+ over K with transpose involution.
+    We choose matrix units in R @A K for which the involution is the
+usual transposition, then, by the theory of Azumaya algebras over
+ Hensel rings, such matrix units lift uniquely to units eij .
+   Since es reduces to the same element as eji , we must have, for the
+same theorem, e.$ = eji , and the claim follows for R @ A. To reduce
+from i?i to an etale neighborhood is now a standard direct limit argument.
+   Let us work now in the category fl9?* of * algebras over a fixed ring fl,
+with * the identity on /l.
+   If A is a commutative algebra, define (A)a , (A)& to be the algebra of
+n x n matrices with transposition and of 2n x 2n matrices with sym-
+plectic involution. The two previously defined algebras are in fact
+functors in A, from the category of commutative algebras to .,V*.
+   Let us denote them F,,, and F,,, .
+   Consider the free algebra R = A(x, , xi *’, in infinitely many variables.
+   An element f E R will be called a polynomial identity (briefly P.I.) of
+n >. n matrices with transposition, if f vanishes when computed in all
+the rings (A):, (similarly for symplectic P.I.‘s).
+   Any set of polynomials in R determines a variety in ,%* formed by
+those algebras on which all these identities vanish.
+   PROPOSITION    17.3. Let R be a rank nz Azumaya algebra with involu-
+tion. Assume that R satisfies the P.I.‘s of n x n matrices with transposition.
+   Then, the involution is of the jifivst kind and R is of transposetype at each
+point.
+   Similarly, for symplectic involution.
+  Proof. Let A be the center of R. It is known that A = F(R), the
+Formanek center [8].
+  If f(% >“‘> x~) is a central polynomial for n :s: n matrices, and we
+evaluate f in (A); to obtainf(x, ,..., x/J” = f (x1 ,..., x1,.).This is, therefore
+an identity of n >: n matrices with transposition hence it holds in R and
+so the involution is of the first kind.
+  The rest of the statement follows from the fact that, if n = 2k, there
+are different multilinear identities for n x n matrices with transposition,
+and for n >(: n matrices with symplectic involution (cf. Section 20).
+
+18. Universal Maps
+  We return now to the two functors Ft.,, and F,,,,              considered in
+Section 17.
+                     INVARIANT       THEORY      OF    ?‘Z N    ff   MATRICES                    371
+
+  PROPOSITION        18.1.       Both functovs        F,,,L and F,,, possess a left adjoint.
+   Proof.    Let us do it, for instance, for FIS, . Given a * algebra, R we
+must find a universal map y: R -+ (A)iz . This follows of course by the
+general theorem on the existence of adjoint functors. On the other hand,
+it can be easily accomplished         building ,4 by generators and relations.
+   In this case, the essential point is to do it for R = A[xi, xi*jiel the
+free algebra.
+   Construct     A = A[z$)J,       i E I, s, t = l,..., n the polynomial    ring.
+Map A+ in the matrix Ei = (x$), while xi* is mapped in tit.
+   The formal properties of these functors are easily checked and follow
+the ones given in [9, Chap. 41 for rings without *.
+   Given a commutative          algebra A consider:       G,,(A) the group of A
+automorphisms      of the *-algebra (A)i; H,(A)         the group of A automor-
+phisms of the *-algebra (A).& .
+   Both G,( ) and Ii,,( ) are group valued functors              on the category
+of commutative     algebras.
+   It is immediately    verified that they are both representable        by Hopf
+algebras finitely presented over A.
+   Indicate the two algebras 8, and A$ .
+   Consider, furthermore,       the orthogonal group
+
+
+
+
+and the symplectic group Sp,,(A) = (b E (A)& i bb* = l}.
+   These group valued functors are also clearly representable                            by finitely
+presented Hopf algebras over A.
+   Call these algebras “%/,, and 9% .
+   We have two natural transformations:
+
+                                     n: O,(A)    ---f G,(A),
+
+                                    7: Spn(A)    --f H&4),
+
+given by r(a)(b) = aba-l (similarly for T).
+
+  LEMMA 18.2. Let A be a local ying. We haze two exact sequences:
+
+      (i)       0 + sA* + O,(A)         -     G,(A)     -      A*/(A*)2
+    (ii) 0 + ,A* - Sp,(A) -                   H,,(A) -          A*/(A*)2        -   0,
+where 2A* = {a E A 1d = 1).
+372                                        C. PROCESI
+
+  If n is odd, O,(A)         + G,(A)        is onto;     ;f n is even and A”   is hyperbolic,
+G,(A)   ---t A*/(A*)2       is onto.
+
+  Proof.  Some parts are trivial;                      in particular,   the definition     and
+exactness of
+                                0 + J*     --+ O,(A) --f G,(A),
+and
+                                0 + 2fl* --j q&4)            + H,(A).
+
+   Let o E G,(A),    since u is an automorphism of (A), and A is local,
+u is inner.
+   Thus, u(b) = aba-I,      a E GZ(n, A). We have u(b[) = u(b)t, hence,
+abla-l   = (aba-l)t, and so a abl = bfata for all b E (A)n. .
+   We deduce a”a E A*, the invertible scalars. If c E GZ(n, A) is another
+element such that u(b) = cbc-I, we have c = ala, 01E A*, thus, ctc =
+r2ata. Therefore, the scalar ata is defined up to elements of (A*)2. If u
+comes from O,(A),       we can choose a E O,(A),    hence, ala = 1. Finally,
+if aat = ,Y, set c = a/p, we have c E O,(A),      and the exactness of (i) is
+proved. For (ii), the steps are similar.
+   Ifnisoddandol      = at - a, we have OP = det(a)2, and so a: E (A*)2.
+   For the other assertion, if A2” is hyperbolic (and in the symplectic case),
+choose a hyperbolic basis and consider, in that basis, the block matrix
+
+                                                   a     0
+                                           a=0 (         1’)
+
+  We have at = (i z) and a”a = LY.
+  Consider now, the maps of Hopf algebras
+
+
+
+induced by the natural transformations rr, r.
+
+  PROPOSITION           18.3.    Both    i and j aye injecthe.
+
+   Proof.    Let us do it for i. Let u E Ker i, if m is any maximal ideal
+of ‘2Ym , localize at m and consider the map gn 4 (5’J,,, .
+   This map corresponds to a point u E G,((Yn),),       associate to a the
+scalar 01E (??Jz modulo squares. Let A = (%‘J,,,[x]/(x~    - IX). We have
+                   INVARIANT          THEORY      OF   ?Z X    ?Z MATRICES                373
+
+an induced map 23%-+ A classifying   a o E G,(A) induced,                            as inner
+automorphism, by some element a E O,(A). We can factor:
+
+
+
+
+                                    cg’, ----                 a?l.
+
+    Hence, u is mapped to zero in (g’,,),,, . Since this is true for all maximal
+ideals, we have u = 0.
+    One can derive some consequences on the structure of 3, , *II , when
+A is an integral domain.
+    In this case, Yn is an integral domain while +YVLhas two minimal primes
+relative to the decomposition         of O,, in SO,,, and its complement.
+    For 27,L , ;K,, , we easily see: Pfi is always a domain, 9% is a domain
+when ?zis odd, and has two minimal primes when n is even.
+    This last assertion comes from the fact that, -1 has determinant           -1
+if 12 is odd, O,, = SO,, \,I (I, -I]-,         - 1 is in the kernel of the map
+O,, - G,, .
+    Finally, consider A = Z. In this case, Y,, and P?, are torsion free,
+hence, flat, in each case there is an integer valued point (e.g., the one
+corresponding        to the identity of (Z):, , (Z)&). Therefore, g,L and :X;, are
+faithfully flat over 2.
+    Therefore, the same is true for any A by base change.
+    Let us call for simplicity r,, = Spec 27, , the group scheme associated
+to /9 I, T similarly, 17,, = Spec N;, .
+    Consider again the two functors Ft,,, and F,?,,,; we analyze F,,,, since
+the other case is similar.
+    If R is a *-algebra, we know that the functor Maps 21V*(R, (A);) is
+representable.       Call the representing   object BRllL and A,,, = Spec B,,, .
+    Since the group valued functor G,,(A) acts on Maps LIV*(R, (A):,), we
+have a group scheme action:
+
+
+
+  This is clearly functorial         in R.
+
+19. Irreducible   Representations
+   We wish to study            irreducible      representations        over an algebraically
+closed field.
+374                                   C. PROCESI
+
+
+   We find it convenient to generalize the concept to deal with generic
+points applying the functorial language.
+   We will restrict our analysis to the orthogonal case, the symplectic
+case being absolutely similar.
+
+   DEFINITION          19.1. Let S be a rank n2 Azumaya                    algebra    over      a
+commutative         ring A with an involution of transposition             type.
+        (i)     A * map pl: R -+ S is an orthogonal         irreducible     representation
+ifrp(R)A        = S.
+      (ii) Two representations    vr: R --+ S, , ~a: R ---f S, are equivalent
+if there is a *-isomorphism   7: S, --f S, with ~a = 7~~ .
+   Consider now the subset          I,(A)   C Maps       ,V*(R,    (A)&)     of irreducible
+representations. We have:
+
+   PROPOSITION        19.2. I,(A)    corresponds   to an open subscheme A f ,,, of
+A R,ll invariant     under T,, .
+   Proof.   The invariance of I,,(A) under G,JA) is clear. As for the open
+condition,   we use the criterion    of [7, 81. Let q: R -+ (B&     be the
+universal map and R = Im y, let F(R) be the Formanek          center of a.
+We have F(R) C B, and a point 9) Maps nV*(R, (A);) is in I,,(A) if and
+only if the classifying map 9): B, --f A gives ,(F(a))  + 0.
+   We want to construct now the quotient of Af,, under r,, . Consider
+the previous set up
+
+                                    y: R -+ (&&      >
+
+ R = y(R), L is the center of R, F(R) Z L is the Formanek        center. If
+f EF(W), the ring R, = R[l/f]       is an Azumaya algebra with transpose
+ type involution (cf. 17.3). Let /I$,,fi be the open subscheme of Spec(L),
+ where F(R) is not identically zero. By the previous remarks, AZ,, is
+ equipped with a coherent sheaf 9 of Azumaya algebras with transposition.
+
+  PROPOSITION     19.3. The scheme A:,, represents                the following      functor:
+equivalence classes of irreducible representations.
+   Proof.     The proof is similar to the one in [7]. We clearly have a map
+A: R --t r(/f,*,,, , 3). To a map 91: Spec A 4 AZ,, , we associate the
+composition
+                      A: R - T(A:,, ,a) -+ r(Spec zI, y*(W)).
+                  INVARIANT          THEORY         OF   ?E 7,   Iz MATRICES   375
+
+   Conversely,     if ;\: R ++ 5’ is an orthogonal irreducible representation,
+we split S be a faithfully flat extension T of its center A (17.2) to make
+it 1~ 1: n matrices with transposition.
+   Then, we complete the diagram
+
+                      R   ---Y---t            (B&
+
+
+
+
+   We verify, since h is irreducible,      X induces a map from Spec T to
+Spec B, - V(F(R)).
+   Then, we use faithfully flat descent to see that the map factors through
+m,, .
+   We finally tie the previous discussion        with the classification  of ir-
+reducible representations   in the sense of 15.3, 15.4.
+   We state the Main Theorem for the orthogonal case, the other case
+is similar.
+   Recall the action p: r,, Y il,, )) + /I,,, defined at the end of Section 18.
+
+    ~‘HEOREM      19.4. The action p is scheme theoretically free on At,n . The
+quotient scheme is Af,, . The resulting quotient map p: Af,,, + A;.,, is a
+principal$bration      orer r,, locally trivial in the etale topology of A;,, ,
+     Proof.    We follow the lines of [7], to which we refer for details. Take
+fgF(W)        and consider cl(f),      A(f)   the open subschemes       of AZ,, ,
+ a,,, 7    where f is  invertible.  We  will work locally  on these  subschemes,
+ which cover A;,,         and if:,,, . The universal      map R C (BR)iL gives
+ by localization atf the universal map a --f (B,[l/f])i,        . Rj is a rank n’
+ Azumaya algebra with transpose involution.
+     Let us analyze thus the universal map in this case.
+     If S is a rank n2 Azumaya algebra with transpose involution over its
+ center A, S --f (T)f, is the universal map and .3 -F B is a map of com-
+ mutative rings we obtain, by base change, the universal map S, + ( TB)tl,,
+ In particular, we will apply this remark when B splits S.
+     Thus, we are led to study the split case S = (A);.             In this case,
+ reasoning as in [7], we see that the universal map is obtained as follows:
+     Consider -4 @ -,gq, and the two maps
+376                                C.    PROCESI
+
+
+given by
+                         i(a) = a @ 1,         j(b) = 1 @ b.
+
+  The map j classifies     an automorphism         u of the algebra (A @ 3,);   .
+The composition
+
+
+
+is the universal map for (A); .
+   In the scheme language of Section 18,
+
+                  A (&,.t = Spec(A @ YJ = Spec 4           X   r, ,
+
+the action p: r,l. x (1~~); n + /I(,,; n is the canonical action of I’, on
+itself as second factor.     ’
+    We now collect all the previous steps.
+    The map .i$ + (B,[l/‘])k     induces a map L, + B,[l/f]       that dually
+gives the projection pf: d( f ) + /i( f ).
+    These maps glue together to give the required projection p: clf,,n --+
+%n . Take an etale covering          U, -+ A(f)  over which the Azumaya
+algebra Rf splits. By pull back and all the previous propositions     we have
+
+
+
+
+and (l(f)   x R(fjUE=    U, x r,,pa ’ is the first rejection and the action
+of F, is the canonical action on the second factor.
+   This is sufficient for all the statements of our theorem.
+   Remark.    It follows from the proof that the universal map R -+ (I?& ,
+when R is a rank n2 Azumaya algebra with transposition     over its center A,
+is injective and furthermore,   B, is faithfully flat over A.
+
+20. Qualitative   Results for Rational      Concomitants
+      We want to conclude our work describing various qualitative results
+that apply to the rings of matrix concomitants.    Many of these results are,
+of course, well known (cf. [9]).
+      We consider a field K of characteristic  not 2. Let K{xi , xi*:, K(sJ,
+K{ti}   be the free algebras described in Section 13. Let D be a simple *
+algebra with center an infinite field F 2 K. Assume dim, D = n2. We
+                        INVARIANT      THEORY    OF     ?Z ::    ?Z MATRICES                     377
+
+have the usual two possibilities:  * is of the first kind or of the second kind.
+In the first case, we have two subcases, transpose or symplectic           type.
+In each case one easily shows, as in [9, p. 201, that the ideal of polynomial
+identities in each free algebra does not depend on D. We have in fact
+only: the identities of (F); , the identities of (F)$, , the identities of
+(F)n @ (F): . The last case does not give anything new, one easily can
+verify that the identities of (Q @ (F)O, as a *-algebra are the same as the
+ordinary identities of (F),2 , thinking xi and xi* are distinct variables.
+   In fact, one can by the same argument used in [9, p. 661 show that:
+
+               every prime T-ideal        is one of the ideals of identities             previously
+desc!i?ed.
+     (ii) If K is infinite, the radical of a T-ideal is a T-ideal intersection
+of at most 3 prime T-ideals relative to the 3 types.
+     (iii)       There are various         inclusions           among    the   various     T-ideals
+deducible        from the fact that:
+
+
+
+
+(at c (%+,7m?zc mn+1)(the inclusions do not preserve I).
+   Let us call K[ti , tit]% , K[ti , ([*In the free algebra modulo the ideal
+of identities of (F); , respectively,  of (F)in .
+   Similarly, taking the identities in the free algebras K(si}, K(ti} we will
+obtain algebras K[&       , K[si]i , K[i&, , K[fJk .
+   We list now the properties of these rings and sketch the proofs.
+
+    ‘THEOREM        20.1. All the algebras constructed are prime rings with
+polynomial identities.
+   Indicate by K(fi,           fit),5,  K(&,   ti*),, , K(fJk, Kc~s~);, K<$)L,
+K(EJi       , K(Q):     their respectiue rings of quotients.
+
+cente,(Ji        6)    K(fi    7 i3n   is a central simple algebra of rank n2 oz’er its
+
+         (ii) K(ti, eil)n is a *-algebra of transpose type, k’(ti , fiL),, =
+(D),, , h x h matrices over a division ring D of degree2’, where n == 2’ * h
+and 2 T h.
+             (iii)    K<Si , fiL>rb is the ring of rational concomitants, for                     the
+
+607/19/3-S
+ 37%                                              C.       PROCESI
+
+
+orthogonal group, from I-tuples of matrices to matrices. Z is the field of
+orthogonal invariants of matrices.
+      (iv) If I consists of                       m elements, we have Tr deg Z/K                               =
+mn2 - (nZ - n)/2.
+       (v) If A is the center of K[[i                         , titln , Z is the quotient$eld of A and
+K<fi 7 fi’>n = K[fi 7 (it], @A Z*
+
+its tar          $     K([i        TEi*iia is a central simple algebra of rank (2n)2 over
+
+         (ii) ‘K,c<[~ , fi*jn is a * -algebra of symplectic type K(ti , ti*jn =
+(A),( , h x h matrices over a division ring A of degree 2’; with 2n = 2’ . h,
+2-r h.
+       (iii) K!:ti , si*),,, is the ring of rational concomitants, for the
+symplectic group, from I-tuples of matrices to matrices. W is the field of
+symplectic invariants of I-tuples of matrices.
+           (iv)      If I is finite, with m elements, we have
+                            Tr deg W/S = m . (2~2)~- ((2~2)~f 2n)/2.
+           (v)      If B is the center of K[f, , ,$i*],L , Wis thefield offractions of B
+and Ktti          , fi*),L w K[5;, 5i*],, @e W.
+     (3) Similar resultsfey the algebrasK(si)k , K(t,).~ , K(Qk                                    , K’(li)i
+with the following exceptions:
+       (a) I has one element, n > 1 for the transpose type; every n for
+the symplectic type. In this casethe algebrasare commutative.
+           (b)       K(t&      is commutative.
+           (c)       K(sJs is commutative.
+           (d)       K<s, , s,),S is a quaternion algebra.
+  In the other cases,the results are parallel to cases(1) and (2) with the
+exception of the computation of the transcendencedegreewhich is, respectively;
+                            n2 +    12   n2   -   n                  n2   -   n     n2 -   n
+                       m       2              2        ’        112__-2           - ___2       )
+
+          m (242 2- 2rz -----9
+                            (242 2+ 2n                          m (2n)22+ 2n _ (2nT2f 2n .
+
+
+   Proof. Let us give the main ideas of the proof, for instance, in the
+transposition case.
+                   INVARIANT     THEORY    OF   11 ‘I_ n   MATRICES              379
+
+    It is clear that K[ti , ti’], is the image of the free algebra k’{x( , xi*>
+under the universal map y: K(xi , xi*)-(K[x,z’,]),          , i E I, s, t = I ,..., 11,
+(cf. 18.1). All the statements, except for the last part of (ii), will be a
+consequence         of the theory of rings with polynomial identities and of
+Theorem        19.4 once we shovv that the representation            K{xi , xi*> ---t
+(K(x:‘,))f,    is irreducible    (here, K(xbf’,) denotes the field of rational
+functions in the variables x2$
+    ‘To prove that the representation       is irreducible,  one may proceed in
+various ways. If I has more than one element, we already have two
+generic matrices, and so the claim follows. Otherwise,         we must show that
+a generic matrix and its transpose are irreducible, this can be checked by
+specializing      to a matrix that with its transpose        is irreducible,    such
+matrices are readily found.
+    One can proceed similarly in all the other cases, of course, we have
+the exceptional cases described in (3) for which the universal map is not
+irreducible      (at the generic point).
+    To complete the theorem, one has to prove the last part of (ii). Let us
+do it for the transpose type. First of all, any central simple algebra with
+involution      of first kind is the full matrix ring over a division ring of
+degree a power of 2.
+    In our case, setting K,‘<( , fi’jJL = (D), , we must only prove that h
+is odd.
+    Let n = 2’ - k, thus, we have to show that D has degree 2’ and h = k.
+    It is known that, given a field K and a number 2’, there is a division
+ring E with involution of degree 2’ with center a field F containing K.
+The involution can be fixed to be of transposition           type (cf. the remark
+after 14.2).
+    Consider the simple algebra (E),, , of degree n and of transposition
+type. Let a1 ,..., aTLzbe a basis of (E),; over the center F. Introduce
+variables xj’), i E I,j =: I,..., n2 over F and construct the generic elements
+
+
+
+
+   By the initial remarks,    it is clear that the kernel of the map h:
+K{xi , xi*> -+ (E 0, F(x~‘))~    is the ideal of polynomial      identities of
+n x n matrices with transposition.      Thus, K[f, , tit],, is isomorphic   to
+the algebra K[Q , q7ii] generated by the elements 7i , all. Furthermore,
+h is irreducible. Hence, we have an embedding
+380                                              C.   PROCESI
+
+
+and an isomorphism                of *-algebras:
+
+
+
+     If the division ring constituent         of K(fi , fi’>,[ had degree 2” with
+s < r, we would have a contradiction               since E 0, F(xy’)     is clearly a
+ division ring of degree 2’.
+     We finish with a consequence            of Theorem       19.4 for the rings of
+invariants.      It can be derived in characteristic        + 0, but we will limit
+ourselves to the rings TOi,, , SO{,,. , T(Sp)i,2?L , S(Sp)i,Pn .
+     We can consider the elements of TOi,, that are expressible, as elements
+Of soi.n     , as polynomials    in the variables Xi , Xii with coefficients in K
+( i.e.,  the   central  polynomials      for n x n matrices with transposition).
+The variety of points of TOi,n represents equivalence classes of semi-
+simple orthogonal         representations     of the free algebra, 15.3, and the
+points of this variety on which some central polynomial does not vanish,
+represent the irreducible representations,          by 19.3. This set is nonempty,
+by 20.1, and we may apply Theorem 19.4 to obtain:
+
+   THEOREM    20.2,    The irreducible representations qf the free algebra are
+simple points of the variety of semisimple representations.
+  Proof.     The irreducible representations  are the points of the base of
+a principal fibration over a reduced algebraic group with the total space
+nonsingular.
+   Remark.       The discussion before 20.2 was done for the orthogonal case
+for convenience of language, but it clearly holds in both the orthogonal
+and the symplectic case. In both cases, one has 20.2 (and also in the case
+of Gl(n, K), from which one has in fact started to obtain all these
+generalizations).
+
+
+                                                REFERENCES
+
+
+ 1.   M.   ARTIN,  On Azumaya         algebras     and finite     dimensional        representations    of rings,
+      J. Algebra  11 (1969),    532-563.
+2. P. DOUBILET,      G. C. ROTA, AND J. STEIN, On the foundations                     of combinational    theory.
+   IX. Combinational          methods      in invariant      theory,     in “Studies        in Applied   Mathe-
+   matics,”   Vol. LIII,     pp. 185-216.      (A. H. Taub, Ed.), Math.            Assn. Amer., Washington
+   DC, 1974.
+3. E. FOR~IANER,      A new proof of the theorem              of Amitsur      Levitsky,       preprint.
+4. E. FoRhmmK         AND C. PROCESI,         Mumford’s        conjecture     for GL(n, k), preprint.
+                             INVARIANT           THEORY          OF    ?Z S    ‘PZ MATRICES                                381
+
+ 5. J. H. GRACE AND A. YOUKG, “The Algebra                     of Invariants,”   Cambridge      LTniv. Press,
+    New York,    1903.
+ 6. N. JACOBSON, Structure        of rings, Amer. Math. Sot. Colloquium               Pub!., Vol. XSXVII,
+    2nd ed., 1964.
+ 7. C. PROCESI,    Central      polynomials        and finite-dimensional       representations      of rings,
+    Atas da escola de i\lgebra,       I.M.P.A.,      1972.
+ 8. C. PROCESI,  Finite-dimensional          representations      of algebras, Ismel J. Math.      19 (1973),
+      169-182.
+ 9. C. PROCESI,          “Rings        with Polynomial         Identities,”         No. 17, Dekker,         New York,       1973.
+IO.   C. PROCESI       AND     M. SCHACHER,            A non commutative                real Nullstellensatz        and Hilbert
+      17th problem,         preprint.
+11.   L. ROWEN,         Standard         polynomials       in matrix        algebras,      Trans. Amer. Math.          Sm. 190
+      (I 974), 253-284.
+12.   A. J. RI. SPENCER,                Theory       of invariants,         Continuum          Physics,     Vol. I, Academic
+      Press, New York,             1971.
+13.   A. J. M. SPENCER                AND R. S. RIVLIN,             The theory           of Matrix      Polynomials      and its
+      r\pplications       to the Mechanics               of Isotropic          Continua,       Arch.    Rut. Mech. Anal. 2
+      (1958),     309-336.
+14.   4. J. M. SPENCER           AND R. S. RIVLIN,           Finite Integrity          bases for five or fewer symmetric
+      3 ,< 3 matrices,        Arch. Rut. Mech. Ad.                 2 (1959), 435-446.
+15.   A. J. M. SPENCER            AND R. S. RIVLIN,            Further        results in the theory of matrix           polyno-
+      mials, Arch. Rut. Mech. a&d. 4 (1960), 214-230.
+16.   H. WEYL,        “The Classical           Groups,”      Princeton          Univ. Press, Princeton,          N. J., 1946.
+17.   W. J. HABOUSH,              Reductive         groups     are geometrically             reductive,      Ann. Math.        102
+      (1975),     67-83.
+

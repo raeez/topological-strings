@@ -1,0 +1,2331 @@
+                                                                                                   IASSNS-HEP-92/45
+                                        @vepicture                                                 July, 1992
+
+
+
+
+                                      CHERN-SIMONS GAUGE THEORY AS A STRING THEORY
+
+
+
+
+arXiv:hep-th/9207094v2 22 Dec 2003
+                                                                                        ⋆
+                                                                    Edward Witten
+
+
+                                                                 School of Natural Sciences
+                                                                Institute for Advanced Study
+                                                                        Olden Lane
+                                                                    Princeton, NJ 08540
+
+
+
+
+                                                                       ABSTRACT
+
+                                        Certain two dimensional topological field theories can be interpreted as string
+                                     theory backgrounds in which the usual decoupling of ghosts and matter does not
+                                     hold. Like ordinary string models, these can sometimes be given space-time inter-
+                                     pretations. For instance, three-dimensional Chern-Simons gauge theory can arise
+                                     as a string theory. The world-sheet model in this case involves a topological sigma
+                                     model. Instanton contributions to the sigma model give rise to Wilson line in-
+                                     sertions in the space-time Chern-Simons theory. A certain holomorphic analog of
+                                     Chern-Simons theory can also arise as a string theory.
+
+
+
+
+                                       ⋆ Research supported in part by NSF Grant PHY91-06210.
+                                 1. Introduction
+
+    In this paper, I will describe how Chern-Simons gauge theory in three dimen-
+sions can be viewed as a string theory. The string theory in question will be
+constructed using a topological sigma model [1] (related to Floer/Gromov theory)
+in which the target space is T ∗ M, M being a three-manifold. The perturbation
+theory of this string theory will coincide with Chern-Simons perturbation theory,
+in the form that this has been presented by Axelrod and Singer [4] and further
+studied by Kontsevich [5]. Mathematically, the idea is roughly that there are no
+instantons with target space T ∗ M and boundary values in M, so in an appropri-
+ate topological field theory, the usual counting of instantons is vacuous. However,
+there are virtual instantons at infinity; their proper counting leads to Chern-Simons
+perturbation theory. Chern-Simons theory enters in this particular string theory
+in much the same way that ordinary space-time physics (with general relativity as
+the long wavelength limit) arises in conventional string theory.
+
+    Physically, one might take the following as the starting point. String theorists
+usually construct two dimensional field theories describing particular classical solu-
+tions of string theory by constructing a “matter” system, of total central charge 26,
+and coupling it to the ghosts, of central charge −26. The vanishing total central
+charge ensures the existence of a BRST operator Q, obeying Q2 = 0, and playing
+a crucial role in world-sheet and space-time gauge invariance. One knows, however
+[7], that Q can be interpreted as a generator of linearized gauge transformations,
+mixing ghosts and matter, so the assumption that the matter and ghosts are de-
+coupled cannot be valid as a fundamental principle; it is merely a (partial) gauge
+condition and very likely cannot be imposed at all in some situations, perhaps time
+dependent ones.
+
+    So in §2, we will ask what is left of the standard structure if one does not
+assume decoupling of matter from ghosts. From the discussion, it will become
+obvious that exotic realizations of the same basic structure can be constructed
+using topological sigma models; we therefore do this in §3. The resulting models
+
+                                          2
+can be considered for either open or closed strings, but the open string case is in
+some ways easier to understand. In §4, we use open-string field theory as a short-
+cut to determining the space-time interpretation of the open-string version of our
+models, with the result - alluded to above - that one type of model is equivalent
+in perturbation theory to three dimensional Chern-Simons gauge theory. This is
+possibly the first time that the background independent, gauge invariant space-
+time interpretation of a string theory has been completely determined. (But see
+[8] for a previous investigation of the space-time interpretation of some topological
+string theories of a rather different flavor.) As one application, our result explains
+certain observations by Kontsevich about Chern-Simons gauge theory, and we will
+make a small digression on that account. Another version of the theory has for its
+space-time interpretation a sort of holomorphic version of Chern-Simons theory.
+In §5, we attempt to discuss the closed string sector (which among other things
+should be more closely related to usual manifestations of mirror symmetry). This
+concluding section is brief since I do not understand it.
+
+    To keep this paper within reasonable length, it has not been possible to give a
+self-contained explanation of all of the relevant background. The relevant material
+on topological sigma models can be found in [6]; for their coupling to topological
+gravity see [1]. The relation of Riemann surfaces to gauge theories will be briefly
+recalled presently. Apart from this, it is helpful to have some familiarity with
+construction of string models, the relation between world-sheet and space-time
+physics, string field theory, and Chern-Simons perturbation theory. The main
+point of the paper is the unexpected relation of those latter topics to each other
+and to topological sigma models.
+
+
+
+Riemann Surfaces And Gauge Theories
+
+    Riemann surfaces enter our story in two ways. On the one hand, when we
+study two dimensional quantum field theory, Riemann surfaces are present at the
+beginning. Then we wish to show how gauge theory in the target space emerges.
+
+                                          3
+             (a)                               (b)
+
+
+                                                              k
+                                                       j
+                                               i
+
+    Fig. 1. A two loop Feynman diagram (a) and its thickening (b), in which
+    the boundary components are labeled by gauge indices.
+
+
+
+
+    Fig. 2. The cell decomposition of open string moduli space depends on
+    building Riemann surfaces by gluing together flat strips Si of width π and
+    variable length Ti , 0 ≤ Ti ≤ ∞. The strips are glued together in groups of
+    three along the dotted lines; their midpoints meet in conical singularities
+    of deficit angle −π that are marked as solid dots. The resemblance of this
+    figure to figure (1) is central in this paper.
+
+    On the other hand, oriented two dimensional manifolds arise in gauge theories
+with U(N) gauge group in the following fashion, due originally to ‘t Hooft [9];
+see also [10,§4] for a recent explanation. (SO(N) and Sp(N) can be considered
+similarly and lead to not necessarily orientable Riemann surfaces.) Though the
+following general comments also go through for ordinary Yang-Mills theory in any
+dimension, let us to be definite consider the Chern-Simons action for a U(N)-valued
+connection A on a three manifold M:
+                             Z                       
+                         k                  2
+                     I=          Tr A ∧ dA + A ∧ A ∧ A .                       (1.1)
+                        4π                  3
+                             M
+
+
+Consider expanding this theory in perturbation theory in 1/k, say around the triv-
+ial connection. The successive terms are all topological invariants. The coefficient
+
+                                         4
+of 1/k r comes from Feynman diagrams with r loops, and is a function of N. For
+given r, by considering the dependence on N, how many invariants can be ex-
+tracted? This question can be conveniently answered as follows. The gauge field
+A is essentially a one-form valued in hermitian N × N matrices. Write A as Ai j ,
+i, j = 1 . . . N, making the matrix indices explicit while leaving implicit the fact
+that A is a one-form. The interaction
+
+                         Tr A ∧ A ∧ A = Ai j ∧ Aj k ∧ Ak i                     (1.2)
+
+involves sewing the “lower” index of one A field to the “upper” index of the next.
+To exhibit this in drawing Feynman diagrams, represent the A propagator not as
+a line but as a slightly thickened band in which one edge represents the “upper”
+index and the other line represents the “lower” index. The index flow at the cubic
+vertex (1.2) is then neatly incorporated by smoothly joining the bands, as in figure
+(1(b)). In the process, the Feynman diagram of figure (1(a)) has been replaced by
+the Riemann surface Σ of figure (1(b)). Each boundary component is labeled by
+a gauge index i running from 1 to N. If there are h boundary components, the
+sum over gauge indices gives a factor of N h . The coefficients of N h /k r are the
+three-manifold invariants that can be extracted from Chern-Simons theory with
+gauge group U(N).
+
+   The genus of Σ is g = (r − h + 1)/2. As r and h vary, g and h vary in-
+dependently, and Σ varies over all topological types of oriented two dimensional
+surface with boundary. Thus, U(N) gauge theory gives us a three manifold invari-
+ant Γg,h (M) for every topological type of oriented two dimensional surface with
+boundary. On the other hand, in §3-4 we will consider a two dimensional topolog-
+ical field theory (closely related to the counting of almost holomorphic curves) in
+which one can conveniently take the target space to be T ∗ M, the cotangent bundle
+of a three-manifold M. The partition function Zg,h(M) of this theory formulated
+on a Riemann surface of genus g with h holes is, again, a three-manifold invariant
+depending on g and h. Our main conclusion is that Γg,h (M) = Zg,h (M). In reach-
+ing this conclusion, the link between the Riemann surfaces of the two dimensional
+
+                                         5
+field theory and those of U(N) gauge theory is provided by the fatgraph [11–13] or
+open string field theory [14,15] description of the moduli space of Riemann surfaces
+with boundary; in this description, complex Riemann surfaces are built up from
+pictures similar to that of figure (1(b)), as we will recall in more detail in §4.
+
+
+
+                                     2. Axioms
+
+    In this section, we will discuss what remains of the usual structures in string
+theory if one does not assume that ghosts and matter are decoupled. Σ will be a
+Riemann surface of genus g with local coordinates xα , α = 1, 2. The symbols J
+and h will be used to denote a complex structure and a metric on Σ; of course a
+metric determines a complex structure. The space of all complex structures will be
+called J ; the group of diffeomorphisms of Σ will be called G. The quotient J /G
+is the moduli space of complex structures on Σ. The space of metrics on Σ will be
+called K.
+
+    Usually one considers conformally invariant world-sheeet theories consisting of
+“matter,” of central charge c = 26, and “ghosts,” of c = −26. As explained in the
+introduction, we want to drop the assumption of this decoupling; so if conformal
+invariance is retained, we preserve the fact that the total central charge is c = 0,
+but no longer build this from a cancellation between different contributions. We
+will, however, not necessarily retain the assumption of conformal invariance.
+
+    One part of the structure that must be kept for all that follows is the existence
+of a BRST operator Q with Q2 = 0, and with the further property that the stress-
+tensor Tαβ can be written as
+
+
+                                   Tαβ = {Q, bαβ },                              (2.1)
+
+
+for some field bαβ – which in the usual case is called the antighost field. This
+ensures general covariance – or topological invariance – of the two dimensional
+
+                                          6
+theory. In the conformally invariant case, b and T are traceless. The stress tensor
+is conserved, Dα T α β = 0, and so we will assume that the b field obeys
+
+
+                                           Dα bα β = 0                              (2.2)
+
+
+which when b is traceless is its usual equation of motion. In addition, in the usual
+constructions, there are no short-distance singularities in operator products of b
+fields, and there are only the standard short-distance singularities in products of
+b and T . Concerning the generalization, topological sigma models are an example
+showing that these assumptions are too strong. In those models, there is a delta
+function contact term in the b · T product. (This results in the ρρψψ term in
+the coupling to topological gravity, eqn. (4.18) of [1].) I do not know what sort
+of singularities should be allowed in b · b and b · T operator products, in general,
+except to say that they must be such that a coupling of the model to topological
+gravity must be possible.
+
+      Another feature of the usual case that we wish to preserve is that there is a
+“ghost number” operator G (mathematically it would usually be called the dimen-
+sion), with Q and b having G = 1 and G = −1, respectively. Moreover, we wish to
+preserve the usual fact that the “ghost number of the vacuum” is −3χ(Σ) where
+χ(Σ) is the Euler characteristic of Σ; this means that only an operator product of
+total ghost number 3χ(Σ) can have a non-zero vacuum expectation value. For in-
+stance, for an orientable Riemann surface of genus g, the case that we will consider
+in this section for definiteness, 3χ(Σ) = −(6g − 6).
+
+      A particularly important case (in genus ≥ 2 for simplicity, to avoid ghost zero
+modes) is the expectation value of a product of 6g−6 b’s. Let δ (k) h, k = 1, . . . , 6g−6
+be 6g − 6 variations of h (that is, 6g − 6 tangent vectors to the space K of metrics).
+Let
+                                   Z       √    ′   ′
+                         (k)
+                        b      =       d2 x hhαα hββ δ (k) hαβ · bα′ β ′            (2.3)
+                                   Σ
+
+
+                                                 7
+be the corresponding modes of b, and let
+
+
+                        Θ(δ (1) h, . . . , δ (6g−6) h) = hb(1) . . . b(6g−6) i,                  (2.4)
+
+
+with h     i the expectation value in the “measure” determined by the genus g
+world-sheet path integral. By fermi statistics, Θ is skew-symmetric in the δ (k) h’s
+and so can be interpreted as a 6g − 6 form on K. In the usual case, one proves
+that Θ is closed starting with
+
+                                         6g−5
+                                         X
+                (1)      (6g−5)
+     0 = h{Q, b       ...b        }i =         (−1)j−1 hb(1) . . . {Q, b(j) } . . . b(6g−5) i.   (2.5)
+                                         j=1
+
+
+
+Then using (2.1) to write {Q, b(j) } as a moment of T , and interpreting the insertion
+of T as a derivative on K, one can interpret (2.5) as a first order differential equation
+for Θ which amounts to
+
+                                                dΘ = 0.                                          (2.6)
+
+
+This proof goes through in general if the b·b and b·T operator products are standard;
+however, topological sigma models are an example in which the definition of Θ must
+be modified by addition of contact terms to ensure dΘ = 0. A successful coupling
+of the model to topological gravity will always ensure the existence of a suitable
+modification (by addition of contact terms) of the definition of Θ.
+
+    Θ is obviously diffeomorphism invariant. Moreover, in the usual case it is
+“basic”; that is, it vanishes if any δ (k) h is of the form δ (k) hαβ = Dα vβ + Dβ vα
+induced by an infinitesimal diffeomorphism xα → xα + ǫv α . This is proved by
+integrating by parts, using (2.2) and the absence of short distance singularities of
+the b’s. In general (because of the relation of the topological gravity multiplet to
+the equivariant cohomology of the diffeomorphism group), a successful coupling to
+topological gravity will always ensure that Θ is basic.
+
+                                                    8
+    The fact that Θ is basic and diffeomorphism invariant means that it can be
+interpreted as the pullback of a closed 6g − 6 form ν on the space K/G of metrics
+modulo diffeomorphisms. In the conformally invariant case, Θ is actually a pullback
+from a form µ on the moduli space M of complex structures; as M is 6g − 6
+dimensional, µ is a top form or measure on M. If conformal invariance does not
+hold, there is no natural way to construct from µ a measure on M, but the fact
+that ν is closed, dν = 0, is almost as good. It means that if s is a section of the
+bundle K/G → M, and µ = s∗ (ν), then µ is independent of the choice of s, modulo
+an exact form. µ is the desired 6g − 6-form on M.
+
+Vertex Operators And Ghosts
+
+    The most traditional string theory vertex operators can be written W = ccV
+where c and c are the ghosts and V is a spin (1, 1) conformal field constructed
+from matter fields only. It is well known in the operator formalism [16] that these
+conditions can be relaxed. The only really essential properties of W in conventional
+string theory are that it have ghost number 2, spin zero, and be annihilated by
+Q, and that the Fock space state corresponding to W should be annihilated by
+an operator usually written as b0 − = b0 − b0 (here b0 and b0 are the zero modes
+of left- and right-moving ghosts). The requirement that W have spin zero and
+be annihilated by b0 − ensures that the analogs of Θ defined with an insertion of
+W have the essential properties that entered above (diffeomorphism invariant and
+basic). The ghost number two condition shifts the ghost number of the vacuum,
+leading in a natural way to measures on the moduli space of Riemann surfaces
+with marked points.
+
+    These conditions make sense in our abstract setting, and can be borrowed
+bodily, except that if we do not assume conformal invariance, the definition of b0 −
+                         H
+must be written b0 − = dxα bα0 . (The integration is over a parametrized circle
+and “0” is the normal direction to the circle.) Note, therefore, that in including
+vertex operators, we need make no explicit mention of the ghosts; only the product
+W = ccV , and not the separate factors in that product, needs to be generalized.
+
+                                         9
+Where, therefore, do the ghosts appear in the discussion? Of course, the antighosts
+entered in the definition of the measure for g ≥ 2; but what about the ghosts?
+
+    We perhaps could “find” the ghosts by trying to generalize the usual definition
+of the genus one measure – as c and c each has a zero mode on a surface of genus one.
+To get a different perspective, I will instead discuss the issue from the standpoint
+of closed string field theory.
+
+    In closed string field theory as we know it today (see [17] for a review), the
+string field Ψ is a vector in a string Hilbert space obtained by quantization on a
+circle S. Picking a parametrization of the circle, let L0 − = L0 −L0 be the generator
+of a rotation of the circle, and let c0 − = (c0 − c0 )/2. Ψ is required to obey
+
+                                 L0 − Ψ = b0 − Ψ = 0.                              (2.7)
+
+The quadratic part of the Lagrangian is
+
+                                               
+                                     Ψ, c0 − QΨ ,                                  (2.8)
+
+and the linearized gauge invariance is
+
+                                      δΨ = Qǫ,                                     (2.9)
+
+where ǫ has ghost number 1 and
+
+                                      b0 − ǫ = 0.                                 (2.10)
+
+This is proved to be a gauge invariance as follows. In the usual theory, (2.10)
+implies that
+
+                                      ǫ = b0 − α                                  (2.11)
+
+for some α. Inserting this in (2.8), and using
+
+                                   {b0 − , c0 − } = 1,                            (2.12)
+
+                                           10
+together with
+
+                                   {Q, b0 − } = L0 −                            (2.13)
+
+(which is a consequence of (2.1)) along with (2.7), one verifies the invariance of
+(2.8).
+
+    What are the essential points that should be retained if the ghosts and matter
+fields are not decoupled? In conventional string theory, one has
+
+                                              2
+                                       b0 −        = 0,                         (2.14)
+
+
+a consequence of the absence of singularities in the b · b operator products. This
+property also holds in topological sigma models, and it seems reasonable to insist
+on it in general even if one permits some kind of b · b singularities. The ability to
+write ǫ as in (2.11) is then the assertion that the cohomology of b0 − vanishes in
+ghost number 1. If the cohomology of b0 − is altogether zero, then there exists an
+operator c0 − obeying (2.12). Moreover, c0 − is uniquely determined modulo c0 − →
+c0 − + {b0 − , f } for some f ; using (2.7) and (2.13), one sees that the Lagrangian
+(2.8) is invariant under such a shift of c0 − . Thus, (2.14) and the trivial cohomology
+of b0 − are sufficient requirements for free closed string field theory (and I believe
+also for the interacting case).
+
+    What if the cohomology of b0 − is not zero? Then using (2.13) and the fact that
+the cohomology can be represented by states invariant under the compact group
+generated by L0 − (and in any case since the physical field Ψ is required to have
+this invariance), we see that Q generates a linear transformation of the cohomology
+of b0 − . If this linear transformation is zero, there will be an operator c0 − obeying
+not (2.12) but
+
+                          {b0 − , c0 − }Q = Q{b0 − , c0 − } = Q.                (2.15)
+
+This actually is enough to ensure the gauge invariance of the free Lagrangian (2.8).
+(If the cohomology of b0 − is nonzero in ghost number one, one cannot use (2.11);
+
+                                              11
+but the fact that Q annihilates the cohomology of b0 − means that for ǫ annihilated
+by b0 − and L0 − , one can write Qǫ = b0 − β for some β; this is good enough.)
+Topological sigma models give an example in which the cohomology of b0 − is non-
+zero, but annihilated by Q. We therefore can write down closed string field theory
+in this case, but as we will see in §5, it seems difficult to understand it.
+
+A Conundrum
+
+    The conundrum that I want to state is obvious. The properties of conventional
+string backgrounds that I have cited are the only ones I know of that make sense
+in the general case in which ghosts and matter are not decoupled. Yet they are
+so general as to permit bizarre realizations, like the topological sigma models that
+we will consider presently. Are they adequate and if not how should they be
+supplemented?
+
+    The following example will perhaps serve to sharpen the puzzle. In Type II
+superstring theory, it is usually supposed that a classical solution is described by a
+superconformal world-sheet theory. One therefore might expect and hope to sup-
+plement the above discussion with general properties of superconformal symmetry.
+Yet it has been pointed out [18] that Ramond-Ramond vertex operators do not
+commute with the left- or right-moving superconformal currents, and consequently
+that when such vertex operators are added to the world-sheet Lagrangian (as one
+would expect in a generic time-dependent situation), the world-sheet theory is not
+superconformal. Therefore, the structure of Type II backgrounds, at the general
+level of our above discussion, looks hard to distinguish from that of bosonic string
+theory. If we do not wish to claim that bosonic strings and Type II superstrings are
+the same theory (and I would be skeptical of that interpretation), we apparently
+must find general properties of the world-sheet theory that go well beyond the ones
+I have cited.
+
+
+
+
+                                          12
+              3. Realizations Via Topological Field Theories
+
+    We will now use topological sigma models to make some realizations of the
+structure just explained. There are two classes of such models [6,19,20], which I
+will call the A and B models following some of the papers just cited.
+
+    These models govern maps from a Riemann surface Σ to a target space X,
+which must be presented with an almost complex structure, in the case of the A
+model, or an actual complex structure, for the B model. The A model is concerned
+with almost holomorphic maps from Σ to X, while the B model is related to periods
+of differential forms on X. The B model is only well-defined for X obeying the
+Calabi-Yau condition c1 (X) = 0. The A model is defined without that condition,
+but obeys the axioms of §2 (definite ghost number of the vacuum) only if c1 (X) = 0.
+Therefore, we will limit ourselves to Calabi-Yau target spaces. This is, of course,
+also the case in which the sigma model is conformally invariant.
+
+    For either the A or B models, the ghost number of the vacuum is −d·χ(Σ), with
+d = dim C
+        I (X). This coincides with the desired valued −3χ(Σ) that played such an
+important role in §2 precisely if d = 3, and therefore we will limit ourselves to this
+case. It is curious to note that this is the same value of d that arises in the usual
+“physical” applications of Calabi-Yau manifolds in superstring compactification.
+
+    General tangent space indices to X will be written as I, J, K, while indices of
+type (1, 0) or (0, 1) will be written as i, j, k or i, j, k, respectively. We consider X as
+a Kahler manifold endowed with a Ricci-flat Kahler metric gij̄ . The bosonic fields
+of the A or B models are simply a map Φ : Σ → X; if we pick local coordinates φI
+on X, this map can be described by giving functions φI (xα ). It is also convenient
+to pick a local complex coordinate z on Σ.
+
+The A Model
+
+    The detailed construction of the A and B models is explained in [6]. In the A
+model, the fermi fields are a section χI of Φ∗ (T X), and a one-form ψ with values
+in Φ∗ (T X). ψ obeys a self-duality condition which says that its (1, 0) part ψzi has
+
+                                            13
+values in Φ∗ (T 0,1 X), and its (0, 1) form ψzi has values in Φ∗ (T 1,0 X). The BRST
+transformation laws are
+
+                                    δφI = iαχI
+                                   δχI = 0
+                                                                                                      (3.1)
+                                   δψzī = −α∂z φī − iαχj̄ Γīj̄m ψzm
+                                   δψzi = −α∂z φi − iαχj Γijm ψzm
+
+with α an anticommuting parameter and Γ the affine connnection of X. The BRST
+operator Q is defined by writing δΛ = −iα{Q, Λ} for any field Λ. The Lagrangian
+can be written in the form L = i{Q, V } with any V such that L is nondegenerate.
+A suitable choice of V is
+                                      Z                                  
+                               V =t       d2 z gij ψzi ∂z̄ φj + ∂z φi ψzj                             (3.2)
+                                      Σ
+
+(with d2 z = |dz ∧ dz|) and gives
+            Z                                                                                        
+                          1
+   L = 2t        2
+                d z         gIJ ∂z φI ∂z φJ + iψzi Dz χi gii + iψzi Dz χi gii − Riijj ψzi ψzi χj χj
+                          2
+            Σ
+                                                                                                      (3.3)
+with t a constant.
+
+    The fact that L = i{Q, V } means that the t dependence (and dependence on
+the target space metric) of (3.3) is of the form {Q, . . .} and so does not affect the
+BRST invariant physics. As weak coupling means large t, the fact that there is no
+t dependence means that weak coupling is exact.
+
+    The dependence on the metric of Σ is likewise of the form {Q, . . .}, so we can
+write Tαβ = {Q, bαβ } where at the classical level
+                                                                         
+                     bαβ = itgIJ ψαI ∂β φJ + ψβI ∂α φJ − hαβ hστ ψσI ∂τ φJ .                          (3.4)
+
+Quantum mechanically, the formula for b requires modification except in the
+Calabi-Yau case (T and b will no longer be traceless), but an appropriate b still ex-
+
+                                                    14
+ists, as the theory admits a higher derivative regularization preserving the fermionic
+symmetry.
+
+The B Model
+
+    In the B model, the fermi fields include first of all sections η i , θi of Φ∗ (T 0,1 X);
+actually, it is convenient to write the formulas in terms of not θī but θj = gji θi . The
+other fermi fields are a one-form ρi with values in Φ∗ (T 1,0 X). The transformation
+laws are
+                                         δφi = 0
+                                         δφi = iαη ī
+                                                                                                (3.5)
+                                          δη ī = δθi = 0
+                                          δρi = −α dφi
+
+and the Lagrangian is again of the form L = i{Q, V }; for a suitable V , one gets
+
+                       Z       
+                L =t       d2 z gIJ ∂z φI ∂z̄ φJ + iη ī (Dz ρiz̄ + Dz̄ ρiz )giī
+                       Σ                                                                        (3.6)
+                                                                                        
+                            +iθi (Dz̄ ρz − Dz ρz̄ ) + Riīj j̄ ρiz ρjz̄ η ī θk g kj̄
+                                          i            i
+                                                                                            .
+
+
+The physics is independent of the coupling parameter t for the same reason as in
+the A model.
+
+    In this case, we can write Tαβ = {Q, bαβ } with
+
+                                                                     
+                 bαβ = itgIJ ρIα ∂β φJ + ρIβ ∂α φJ − hαβ hστ ρIσ ∂τ φJ .                        (3.7)
+
+
+
+
+                                                  15
+ 3.1. Boundary Conditions
+
+    In our applications, we will want to formulate these theories on Riemann sur-
+faces Σ that may have non-empty boundary. In doing so, we require a boundary
+         ⋆
+condition. We want local, elliptic boundary conditions that preserve the fermionic
+symmetry. I will explain natural boundary conditions for both the A and B model,
+but there may very well be other natural boundary conditions – perhaps required
+for mirror symmetry – that should be considered.
+
+    The A model is closely related to Floer theory, and the boundary condition
+                                                                                      †
+that I want to consider for the A model is the one that was studied by Floer. For
+each component Ci of ∂Σ, we pick a Lagrangian submanifold Mi of the Kahler
+manifold X. For instance, in the nicest case, there may be a real involution τi of
+X, and Mi may be a component of the fixed point set of τi . Let T Mi and NMi
+be the tangent and normal bundles to Mi in X; we regard them as the real and
+imaginary subbundles of T X|Mi . Then regarding Ci as a real locus in the complex
+Riemann surface Σ, we require that the boundary values should be real in the
+following sense: Φ|Ci is real, that is it maps Ci to Mi ; the normal derivative to Φ
+at Ci is imaginary (it takes values in Φ∗ (NMi )); χ and the pullback of ψ to Mi are
+real (they take values in Φ∗ (T Mi )). These boundary conditions make sense even
+if Mi does not arise as the fixed point set of a real involution.
+
+    For the B model, we pick instead “free” boundary conditions that do not
+require anything analogous to the choice of the Mi . We require that the normal
+derivative of Φ vanishes on ∂Σ, that θ vanishes on ∂Σ, and that the pullback to
+∂Σ of ⋆ρ vanishes (⋆ being here the Hodge star operator).
+
+
+
+
+  ⋆ For some generalities about topological field theories on Riemann surfaces with boundary,
+    and some specifics about the A model, see [21].
+  † Readers to whom these boundary conditions may seem strange at first sight are invited to
+    try to find other local, elliptic, Q-invariant boundary conditions for the A model.
+
+                                            16
+ 3.2. Boundary Terms
+
+    Now, we further wish to couple this system to target space gauge fields in
+the sense of string theory, that is to gauge fields on X. This will be done by
+introducing Chan-Paton factors, that is by coupling the gauge fields to “charges”
+that propagate on ∂Σ. These charges are string theory analogs of the labels on the
+boundaries in figure (1(b)), and will reduce to the latter when we make contact
+with target space Chern-Simons theory. Just as in the construction leading to
+figure (1(b)), we must take the gauge group to be U(N) if we want to consider
+oriented Riemann surfaces only; SO(N) and Sp(N) are possible if one wishes to
+permit unoriented surfaces. The restriction on the gauge group is not needed in
+the preliminary discussion of the present section but is essential in §4.
+
+    The quantum version of either of the models we have introduced is described
+by a Feynman path integral
+                                Z
+                                    DΨi exp(−L(Ψi )),                              (3.8)
+
+
+where Ψi are the various fields and L is the Lagrangian. Let now A = AI dφI
+be a connection with structure group U(N) on a rank N complex vector bundle
+E over X. Let Σ be an oriented Riemann surface whose boundary is a disjoint
+union of circles Ci . The orientation of Σ induces an orientation of each Ci . Given
+Φ : Σ → X, for each Ci we can take the trace of the holonomy of Φ∗ (A) around
+Ci ; we write this as
+                                               I
+                                    Tr P exp        Φ∗ (A).                        (3.9)
+                                               Ci
+
+(The trace is taken in the defining N dimensional representation of U(N).) Then,
+tentatively, the coupling to gauge fields in the target space is accomplished by
+replacing (3.8) by
+                     Z                             Y               I
+                         DΨi exp(−L(Ψi )) ·             Tr P exp        Φ∗ (A).   (3.10)
+                                                    i              Ci
+
+
+                                           17
+(For the B model, this will require some modification.) If A is trivial, this is
+simply a factor of N for each boundary component, just as in the evaluation of the
+Feynman amplitude of figure (1(b)).
+
+    We must determine whether this modification of the path integral preserves the
+fermionic symmetry. In general the variation of the trace of the holonomy about
+a circle C is
+                    I                I               J                        I
+                         ∗                    I dφ
+       δ Tr P exp       Φ (A) = Tr       δφ              FIJ (τ )dτ · P exp       Φ∗ (A).   (3.11)
+                                               dτ
+                    C                C                                    C;τ
+
+                                    H
+Here τ is a coordinate on C, and exp C;τ Φ∗ (A) is the holonomy of Φ∗ (A) around
+C, starting and ending at τ ; and FIJ (or more fastidiously Φ∗ (FIJ )) are the com-
+ponents of the pullback by Φ of the space-time curvature F = dA + A ∧ A.
+
+The A Model
+
+    In the case of the A model, since Φ∗ (Ci ) ⊂ Mi , the bundle E and connection
+A actually need only be defined on the union of the Mi , not on all of X.
+
+    Inserting the A model transformation law δφI = iαχI in (3.11), we see that
+the holonomy factors in (3.10) are invariant under the fermionic symmetry if and
+only if the space-time curvature F vanishes. Thus, in the A model, it is possible
+to couple only to flat connections on the Mi . We will give this a more intuitive
+explanation in §4, where we will see that the target space physics of the A model
+is Chern-Simons gauge theory on the Mi . The classical solutions of Chern-Simons
+gauge theory are precisely the flat connections. Thus, the requirement of the A
+model that the target space connection must be flat is a special case of the fact that
+in string theory, the background fields that can be incorporated in the world-sheet
+theory are always classical solutions of the space-time theory.
+
+    Since A is flat, its role is from some points of view almost trivial. The homotopy
+factors in (3.10) depend only on the topology of Σ and the choice of a homotopy
+class of maps Φ : Σ → X, in which one is evaluating the functional integral.
+
+                                                 18
+But deeper aspects of the theory involve summing over the topology of Σ and
+the homotopy type of Φ, and then the factors coming from holonomies of a flat
+connection on X fit together coherently (to give, as we will see, Chern-Simons
+theory expanded around the given flat connection A).
+
+The B Model
+
+    The situation in the B model is similar but more subtle. Plugging the transfor-
+mation laws δφi = 0, δφi = iαη i into (3.11), we find that the holonomy is invariant
+under the fermionic symmetry if and only if the (1, 1) and (0, 2) parts of the curva-
+ture vanish. The vanishing (0, 2) curvature asserts that the (0, 1) part of A defines
+a holomorphic structure on the bundle E; the additional vanishing of the (1, 1)
+curvature says that A is a holomorphic connection (locally it can be represented
+by a holomorphic one-form of type (1, 0)). The latter condition is rather restrictive
+and we wish to eliminate it. This can be done as follows. Replace Φ∗ (A) by the
+following “improved” connection on the bundle Φ∗ (E) over Σ:
+
+                                 e = Φ∗ (A) − iη i F ρj .
+                                 A                                                  (3.12)
+                                                    ij
+
+
+Then using the transformation laws of the B model, one readily sees that for any
+circle C ⊂ Σ, the trace of the holonomy
+                                                 I
+                                      Tr P exp       e
+                                                     A                              (3.13)
+                                                 C
+
+   e is invariant under the fermionic symmetry, provided that the (0, 2) part of the
+of A
+curvature of A vanishes, that is provided A determines a holomorphic structure
+on E. Thus, the formula (3.10) for coupling external gauge fields to the A model
+should be modified, in the case of the B model, to
+                    Z                      Y           I
+                       DΨi exp(−L(Ψi )) ·                e
+                                               Tr P exp A.                          (3.14)
+                                                     i        Ci
+
+I will leave it to the interested reader to verify that up to terms of the form {Q, . . .},
+the coupling to gauge fields in (3.14) depends only on the holomorphic structure
+
+                                            19
+of E (i.e., the (0, 1) part of A), not on the (1, 0) part of A. This is in accord with
+the fact that, as we will see in §4, the B model has for its classical solutions in
+space-time the holomorphic vector bundles. As always, the classical solutions are
+the objects to which the world-sheet theories can be coupled.
+
+
+ 3.3. Large t Limit
+
+
+    To set up the Hamiltonian version of these theories, for open strings, we take
+Σ to be an infinite strip 0 ≤ σ ≤ π, −∞ ≤ τ ≤ ∞ with metric ds2 = dσ 2 + dτ 2 .
+We consider the A and B models with the boundary conditions just described. In
+the case of the A model, we use the same Lagrangian submanifold M at the two
+ends of the strip. A quantum Hilbert space H is introduced in the usual way by
+quantizing on the initial value surface τ = 0. We want to compute the cohomology
+of Q and certain aspects of the large t behavior that will be essential in the next
+section.
+
+
+The A Model
+
+    If we write ψ = ψσ dσ + ψτ dτ , then, as the self-duality condition determines ψσ
+in terms of ψτ , we can regard χ and ψτ as the independent fermi variables. The
+canonical commutation relations are
+
+                                            
+                            dφI                   i
+                                (σ), φ (σ ) = − g IJ δ(σ − σ ′ )
+                                      J ′
+                            dτ                    t                            (3.15)
+                                                1
+                             {ψτ (σ), χ(σ ′ )} = δ(σ − σ ′ ).
+                                                t
+
+
+The Hilbert space H consists of functionals A(Φ, . . .) where now Φ is a map of the
+interval I = [0, π] to X mapping ∂I to M, and “. . .” is a subset of half the fermi
+variables, depending on a choice of representation of the canonical anticommuta-
+tors.
+
+                                            20
+    The Hamiltonian is
+                                          Zπ
+                                  L0 =         dσ T00 .                      (3.16)
+                                          0
+
+Using the canonical commutation relations to write dφ/dτ in terms of δ/δφ, this
+can be written
+
+           Zπ                                  
+       1        1 IJ      δ2            dφI dφJ
+  L0 =         − g               + tgIJ           + terms with fermions.     (3.17)
+       2        t    δφI δφJ (σ)        dσ dσ
+           0
+
+
+The fundamental relation Tαβ = {Q, bαβ } implies that if we introduce the zero
+mode of the b field,
+                                          Zπ
+                                   b0 =        dσ b00                        (3.18)
+                                          0
+
+then
+
+                                    L0 = {Q, b0 }.                           (3.19)
+
+
+    (3.19) implies that the Q cohomology can be computed in the subspace of
+H annihilated by L0 . Since the Q cohomology (and everything else of essential
+interest) is independent of t, it is enough to study the kernel of L0 for large t.
+Actually, with other applications in mind, we want to understand not just the
+kernel of L0 but all eigenvalues that are of order 1/t for large t.
+
+    Looking at (3.17), we see that such eigenfunctions must be localized near the
+region with dφI /dσ = 0, that is, the space of constant maps Φ : I → X. Because
+of the boundary condition that ∂Σ is mapped to M, the constant map in question
+must in fact map I to M. The non-zero modes of the fermions make contributions
+of order 1 to L0 . Combining these observations, the low-lying eigenfunctions of L0
+can be described by a functional A of the bose and fermi zero modes, with other
+modes in their Fock vacuum. (One must check that the energy of this Fock vacuum
+is zero, but this follows from Q-invariance or better from the supersymmetry of the
+
+                                              21
+untwisted theory.) The bose and fermi zero modes are all tangent to M; denote
+them as q a , χa , ψτ a , a = 1 . . . 3, with q a being coordinates on M. (We reserve the
+letter φ for coordinates on X.) The canonical commutation relations (3.15) show
+that ψτ a can be represented as ∂/∂χa ; then A reduces to a function A(q a , χa ).
+This has an expansion in powers of χa
+
+                       A = c(q) + χa Aa (q) + χa χb Bab (q) + . . .                   (3.20)
+
+in which the successive terms can be interpreted as p-forms on M of degrees 0 ≤
+p ≤ 3. If Chan-Paton factors are included in the discussion, these differential forms
+take values in End(E), the endomorphisms of some flat vector bundle E over M.
+
+    The commutation relations [Q, φI ] = −χI , {Q, χJ } = 0 show that, if we in-
+terpret χI as −dφI , we can identify Q with the exterior derivative d on M (with
+values in End(E)). The Q cohomology is thus H ∗ (M, End(E)).
+
+    Moreover, (3.17) shows that acting on differential forms on M, L0 reduces to
+                                                  π
+                                          L0 =       ∆,                               (3.21)
+                                                  2t
+with ∆ = dd∗ + d∗ d the usual Laplacian on forms. The underlying relation L0 =
+{Q, b0 } leads one to guess that in the same approximation
+                                                  π ∗
+                                           b0 =      d ,                              (3.22)
+                                                  2t
+and this can be verified using the commutation relations.
+
+The B Model
+
+    For the B model we can be brief, as the arguments are so similar. In the large
+t limit, the wave-functional A reduces to a function of the zero modes of φI and
+η i (the zero mode of ρ being represented as ∂/∂η). Expanding
+
+                 A(φI , η i ) = c(φI ) + η i Ai (φI ) + η i η j Bij (φI ) + . . . ,   (3.23)
+
+we see that for the low-lying states, A reduces to a sum of (0, q) forms on X
+(valued in End(E), E being a holomorphic vector bundle on X), for 0 ≤ q ≤ 3.
+
+                                                22
+The commutation relations [Q, φi ] = 0, [Q, φi ] = −η i , {Q, η i } = 0 show that, if
+we interpret η i as −dφi , we can identify Q with the ∂ operator (with values in
+End(E)). So the cohomology of Q is H 0,∗ (X, End(E)). Likewise, by arguments
+similar to those for the A model, L0 and b0 reduce to
+
+                                    π  ∗   ∗
+                                               
+                                L0 =   ∂∂ +∂ ∂
+                                    2t                                           (3.24)
+                                    π ∗
+                                b0 = ∂ .
+                                    2t
+
+
+
+         4. Space-Time Interpretation Via String Field Theory
+
+    In this section we will determine the space-time interpretation of the models
+just constructed in the case of open strings, that is in the case of orientable world-
+sheets with boundary. The reason for focussing on this case is that a simple and
+beautiful answer will arise, as we will see. The more perplexing closed string case
+(Riemann surfaces without boundary) is the subject of §5.
+
+    Usually, closed strings are inescapable even when one tries to do open string
+physics, for elementary topological reasons. The reader may therefore be surprised
+at the lengthy discussion of open strings in this section ignoring closed strings. In
+fact, as we discuss in §4.2, our main points can be formulated at the classical level,
+where closed strings cannot appear; also, we argue in §5 that in these topological
+theories, the open and closed strings are decoupled.
+
+    The simplicity of the open string topological theories is closely related to the
+comparative simplicity of open string field theory [14], which in turn is intimately
+tied up [15] with the existence of a simple cell decomposition of the moduli space
+of Riemann surfaces with boundary [11–13]. This cell decomposition involves the
+construction of Riemann surfaces by gluing together flat strips Si of width π and
+length Ti ; they are glued, as sketched in figure (2), at vertices that generically (un-
+less some Ti = 0) are trivalent. The resulting pictures have been called “fatgraphs”
+
+                                          23
+                 (a)                                             (b)
+
+
+
+
+    Fig. 3. The multiplication law (a) and integration law (b) of open string
+    field theory are defined by pictures involving gluing of strings.
+
+by Penner. In the limit when the Ti are all large, or equivalently when the widths
+of the strips can be neglected, the fatgraphs of the open-string field theory reduce
+to ordinary graphs corresponding to Feynman diagrams of ordinary field theory.
+
+Construction Of Open String Field Theory
+
+    We recall now the highlights of the construction of open string field theory. A
+key part of the structure is a ZZ-graded associative algebra B, with a multiplication
+law that we denote as ⋆, and a derivation Q of degree 1 with Q2 = 0. The degree is
+                              ⋆                            R
+usually called ghost number. There is a linear functional : B → I C, of degree −3
+                                                                R
+(that is, if b is an element of B of definite ghost number, then b vanishes unless
+                                      R                     R     R
+b has ghost number three), obeying a ⋆ b = (−1)deg a deg b b ⋆ a, Qb = 0, for all
+a, b ∈ B. The string field is a ghost number 1 element A ∈ B. The Lagrangian is
+                                Z                      
+                              1               2
+                        L=          A ⋆ QA + A ⋆ A ⋆ A .                   (4.1)
+                              2               3
+
+This is invariant under gauge transformations generated by
+
+                               δA = Qǫ − ǫ ⋆ A + A ⋆ ǫ.                                (4.2)
+
+
+    Chan-Paton factors are introduced as follows (in the case of a trivial rank N
+bundle in space-time with flat connection; the generalization is discussed presently).
+
+  ⋆ The ghost number as I will count it here is the ghost number as defined in [14] plus 3/2;
+    thus, the SL(2, IR) invariant vacuum has ghost number zero.
+
+                                            24
+Let MN ( IC) be the associative algebra of N × N complex matrices. One simply
+                                 R    R
+replaces B with B⊗MN ( IC) (and by ⊗ Tr, Tr being the usual trace on MN ( I
+                                                                         C)).
+This preserves the basic structures. In this process, A acquires matrix indices. If a
+suitable reality condition is imposed, A takes values in N × N hermitian matrices
+– the Lie algebra of U(N).
+
+    Conventionally, B is taken to be the space of open string states in some critical
+                                                                    R
+string theory; the multiplication and integration operations ⋆ and are defined by
+operations of gluing strings that we recall in figure (3). Q is the BRST operator
+of the critical string theory. The integration law is of ghost number −3 since the
+Euler characteristic of a disc is −1, and in critical string theory the ghost number
+of the vacuum is −3χ(Σ).
+
+    Now we want to consider open string field theory with the conventional string
+models replaced by the more exotic ones discussed in §2-3. In particular, for the
+world-sheet theory we take a topological sigma model with a Calabi-Yau target
+space X of complex dimension three; this ensures the correct ghost number of the
+vacuum – or of the integration law. Multiplication and integration are defined by
+the standard gluing operations; Q will now be the BRST operator of whatever
+topological field theory we consider. This framework enables us to construct an
+open-string field theory from any world-sheet theory (obeying the usual axioms).
+For instance, instead of tensoring with MN ( I
+                                            C) to introduce trivial Chan-Paton
+factors, we can use the world-sheet theories with boundary interactions constructed
+in §3.2 to couple to a flat bundle on M in the case of the A model, or a holomorphic
+bundle on X in the case of the B model.
+
+
+ 4.1. The A Model
+
+    We want to understand the physical content of these models. First we consider
+the A model. It is necessary to pick boundary conditions, and as in §3 we follow
+Floer and pick boundary conditions associated with Lagrangian submanifolds of
+X. In §3, in studying a particular surface Σ, we introduced a separate Lagrangian
+
+                                         25
+submanifold Mi for each boundary component Ci of Σ. In string field theory, one
+generates all possible Σ’s via a Feynman diagram expansion, and the Mi ’s must be
+built in universally at the outset. We will do this in the simplest way by picking a
+single M once and for all. Thus the free boundaries of all our strings and surfaces
+will be mapped to M ⊂ X. (Generalizations exist; by correlating the choice of M
+with the Chan-Paton factors one could make a gauge invariant string field theory
+with more than one M.)
+
+   Since X is of complex dimension three, M is a three-manifold. A neighborhood
+of M in X is equivalent topologically and even symplectically to a neighborhood of
+M in its cotangent bundle T ∗ M. The topological string theory with target space
+X involves, roughly, two ingredients. One is the instantons with target X (and
+boundary values in M); these are the usual subjects of study in Floer theory. The
+other side of the story, as we will see, involves Chern-Simons theory with target
+space M. I want first to isolate this “new” ingredient – new in the sense that it is
+not usually coupled with Floer theory. The instantons can be suppressed and the
+new ingredient isolated by replacing X by T ∗ M, since a simple vanishing theorem
+(discussed presently) shows that there are no non-constant instantons mapping
+Σ to T ∗ M. Later we will generalize to arbitrary X and determine the instanton
+corrections to the space-time Chern-Simons theory.
+
+   So until further notice, in discussing the A model, our target space will be
+                                                                     ⋆
+the cotangent bundle T ∗ M of an oriented three-manifold M. Like any symplectic
+manifold, T ∗ M can be given an almost complex structure such that the symplectic
+structure is positive and of type (1, 1); indeed, this is essential in Floer/Gromov
+theory of symplectic manifolds. This is good enough for formulating the A model
+with target space T ∗ M; though the transformation laws and Lagrangian of the A
+model were written in §3 in a way that assumed the integrability of the almost
+complex structure, this assumption can be relaxed, as explained in detail in [1].
+
+
+  ⋆ The orientation is needed to consistently define the sign of the fermion determinant in the
+    world-sheet theory of §3.
+
+                                             26
+The Vanishing Theorem
+
+    Now let us briefly explain the vanishing theorem, which asserts that instantons
+mapping Σ to T ∗ M and mapping ∂Σ to M are necessarily constant.
+
+    Consider temporarily a general symplectic manifold X with symplectic form
+ω and an almost complex structure J such that ω is of type (1, 1) and positive.
+Positivity means that the metric gIK = J S I ωSK is positive definite; the (1, 1)
+condition means that if i, j, k and i, j, k are indices of types (1, 0) and (0, 1), re-
+spectively, then gij = gij = 0, and gij = gji = −iωij . If Σ is a Riemann surface, an
+instanton or almost holomorphic map is a map Φ : Σ → X with ∂φ      ¯ i = 0. Consider
+the bosonic sigma model action
+
+                                   Z
+                            I =i       dz ∧ dz gIJ ∂z φI ∂z φJ .                          (4.3)
+                                   Σ
+
+
+Instantons minimize this action for a given homotopy class since
+
+          Z                                Z                                         
+                             i
+  I =2i                            j
+              dz ∧ dz gij ∂z φ ∂z φ − i         dz ∧ dz gij ∂z φi ∂z φj − ∂z φj ∂z φi
+          Σ
+          Z                             ZΣ                                                (4.4)
+                             i     j            ∗
+    =2i       dz ∧ dz gij ∂z φ ∂z φ +          Φ (ω).
+          Σ                             Σ
+
+
+The first term on the right hand on the right hand side of (4.4) is positive semi-
+definite and vanishes precisely for instantons; so for instantons, the action reduces
+        R
+to I = Σ Φ∗ (ω). The vanishing theorem comes by showing that if X = T ∗ M, and
+Φ(∂Σ) ⊂ M, then
+                                       Z
+                                            Φ∗ (ω) = 0.                                   (4.5)
+                                       Σ
+
+
+If this is known, then I vanishes for instantons that map ∂Σ to M; but from the
+definition (4.3) it is clear that I vanishes only for constant maps.
+
+                                                 27
+    To justify (4.4), pick on M local coordinates q a , a = 1 . . . 3. The symplectic
+                                        P
+structure of T ∗ M can be written as ω = 3a=1 dpa ∧dq a , with pa linear coordinates
+                                                               P
+in the fibers that vanish on M. This is ω = dρ, where ρ =           pa dq a vanishes on
+        R           R
+M. So Σ Φ∗ (ω) = ∂Σ Φ∗ (ρ) = 0, if Φ(∂Σ) ⊂ M.
+
+Low Energy Expansion
+
+    As explained following equation (3.3), the key simplification of the A model
+is that the essential physics is independent of the coupling parameter t. As t and
+the target space metric gIJ appear only in the combination tgIJ , large t is simply
+the limit in which the target space metric is scaled up; it is the limit of large
+distances or long wavelengths. This is the limit in which ordinary string theory
+reduces approximately to field theory. Since ordinary string theory is t-dependent,
+the large t behavior is only an approximation. The topological string theories that
+we are studying are t-independent, so one can hope for an exact description by
+looking at the large t behavior.
+
+    We have analyzed the large t behavior of the string states in §3.3. In particular,
+as we saw there, the low-lying modes can be described as functions A(q a , χb ) of
+the center of mass variables. In §3.3, we computed the cohomology for all ghost
+numbers, but in the string field theory context, we want to insist that that A have
+ghost number 1. This means that it must be linear in χ, so we write
+
+                                    A = χa Aa (q),                               (4.6)
+
+with Aa dq a a one-form on M, valued possibly in End(E), the endomorphisms of a
+flat vector bundle E.
+
+    In §3.3, we identified Q, in the same large t limit, with the exterior derivative
+                                                              R
+d. Then the quadratic part of the string field Lagrangian 12 A ⋆ QA reduces (for
+the low-lying modes in the large t limit) to
+                                       Z
+                                   1
+                                           Tr A ∧ dA,                            (4.7)
+                                   2
+                                       M
+
+
+                                            28
+                                            ∞
+
+
+                                      0              1
+
+
+
+
+     Fig. 4. The coupling of three gauge fields on a disc.
+
+with Tr a trace on the Chan-Paton factors. This is the quadratic part of the
+ordinary Chern-Simons action for a gauge field A.
+
+     What about the cubic part of the string field action? If A(j) is a mode of
+                                                                              (j)
+the gauge field A, the corresponding vertex operator is V (j) = χa Aa (q). Let
+us evaluate by world-sheet path integrals the coupling of three such modes on
+the disc. This is done by inserting three vertex operators V (i) , i = 1 . . . 3 at
+boundary points of the disc, as in figure (4). Because of SL(2, IR) symmetry,
+all that matters in the choice of the three points is the cyclic order. So we can
+take hV (1) (0)V (2) (1)V (3) (∞)i. In the large t limit, the path integral reduces to an
+integral over the constant zero modes; this integral gives
+Z                                                                 Z
+                                    (1)       (2)       (3)
+      1       3   1       3
+    dq . . . dq dχ . . . dχ   Tr χ Aa (q) χb Ab (q) χc Ac (q) =
+                                 a
+                                                                      Tr A(1) ∧A(2) ∧A(3)
+                                                                  M
+                                                                                    (4.8)
+This is simply a matrix element of the cubic part of the usual Chern-Simons action.
+So putting the pieces together, the string field action (4.1) reduces to the ordinary
+Chern-Simons Lagrangian
+                                  Z                       
+                             1                   2
+                        LT =          Tr A ∧ dA + A ∧ A ∧ A .                       (4.9)
+                             2                   3
+                                 M
+
+
+The string field gauge invariances can similarly be seen in the same approximation
+to reduce to conventional gauge invariance. So, under the conditions that we have
+formulated, the abstract Chern-Simons Lagrangian of string field theory reduces
+to the ordinary Chern-Simons Lagrangian.
+
+                                            29
+    Now usually, string theories reduce to field theories at low energy only approxi-
+mately. For instance, ordinary string theories reduce approximately at low energies
+to general relativity plus massless matter fields, but there are O(α′ ) corrections.
+
+    In the case of topological string theories (such as the A model considered
+here) the situation is quite different. The analog of the usual O(α′ ) corrections
+would be perturbative corrections in 1/t. These are absent, because the model
+is t-independent. Instanton corrections are also absent, because for target space
+T ∗ M, there are no non-constant instantons, as we have seen. So the reduction of
+the A model to (4.9) is exact. If we replace T ∗ M by some Calabi-Yau threefold
+X (having M as a Lagrangian subspace), there are instanton corrections to (4.9)
+that we will discuss later.
+
+ 4.2. Reconsideration From The Hamiltonian Point Of View
+
+    Now I want to reconcile what we have said above with previous discussions of
+the A model such as [6] (or [1,§4.1] where the coupling to topological gravity is
+considered).
+
+    Formally, the A model is a quantum field theory that counts holomorphic
+curves obeying various conditions. (This is familiar in applications of the A model
+to mirror symmetry, for instance.) However, in the vanishing theorem that we have
+discussed above, we have seen that for target space T ∗ M, there are no non-constant
+instantons. How therefore can the model possibly be non-trivial, and in particular
+equivalent as we have claimed to perturbative Chern-Simons gauge theory?
+
+    To answer this question, it is necessary to recall some background. Formally,
+in topological quantum field theories of this general nature (“cohomological field
+theories”), one has an infinite dimensional function space S, and over it an infinite
+dimensional vector bundle W; one wishes to make sense of the Euler class of this
+bundle. To tame the situation, one has a section w of W. In finite dimensions, if S
+is compact and without boundary, the Euler class of W would be Poincaré dual to a
+homology class [w] supported on the zeros of w. The Euler class of W, integrated
+
+                                         30
+over S, can be represented by various integral formulas; one can construct an
+integral formula which is localized near the zeros of w [22]. The Feynman path
+integral of a cohomological field theory is a function space version of such a formula.
+This point of view is developed (in an analogous four dimensional gauge theory)
+in [23].
+
+    To identify S, W, and w in the case at hand, let Σ be a compact oriented
+two dimensional surface, perhaps with boundary, not endowed with any a priori
+complex structure. Let X be a symplectic manifold, with an almost complex
+structure obeying the usual conditions, and with a Lagrangian submanifold M.
+Fix a homotopy class H of maps of Φ : Σ → X with Φ(∂Σ) ⊂ M. Such a map can
+be described locally by complex functions φi on Σ (corresponding to local complex
+coordinates on X). Then we set S to be the space of pairs (J, Φ), where J is a
+complex structure on Σ, and Φ is a map Σ → X in the class H, with two such pairs
+considered equivalent if they differ by a diffeomorphism of Σ. For W we take the
+vector bundle over S whose fiber is the space of sections of Ω0,1 (Σ) ⊗ Φ∗ (T 1,0 X),
+where Ω0,1 (Σ) is the space of (0, 1)-forms on Σ in the complex structure J, and
+T 1,0 X is the holomorphic tangent bundle of X. For w, we pick a natural section
+of W given by the equation for an almost holomorphic curve; it can be written
+w = ∂ J φi , with ∂ J the ∂ operator on Σ determined by J.
+
+    Now, let us focus on the case X = T ∗ M, endowed with an almost complex
+structure of the usual type and so in particular with a metric. The vanishing
+theorem discussed earlier implies that for H a non-trivial homotopy class, there
+are no instantons; w has no zeros. If S were compact, we would conclude that the
+Euler class of W is zero.
+
+    However, S is non-compact, and its non-compactness is essential. In fact, in a
+certain sense, there are instantons or zeros of w at infinity. These arise in a limit in
+which the Riemann surface degenerates to a graph Γ. This possibility is sketched
+in figure (5); from the point of view of open-string field theory, the degeneration
+arises in the limit in which all Ti go to infinity in figure (2).
+
+                                           31
+    Fig. 5. Degeneration of a three-holed sphere to a trivalent graph can occur
+    in two ways.
+
+
+    In a given homotopy class of maps of the graph Γ to X, there will be a map
+Φ for which Φ(Γ) is a “geodesic graph” of least total length. Φ can be regarded
+as a limit of maps from almost degenerate Riemann surfaces (obtained by slight
+thickening of Γ) that almost obey the instanton equation. It is an “instanton at
+infinity.” The sigma model action (4.3) (which should vanish for instantons obeying
+our boundary conditions, as we saw in the proof of the vanishing theorem) vanishes
+in the limit of such a geodesic graph.
+
+    The existence of zeros at infinity means that there is no straightforward eval-
+uation of the world-sheet path integral by counting zeros of w. There are no real
+zeros, but there are virtual zeros at infinity. While the contributions of real zeros
+are integers that can be counted topologically, there is no apparent reason for this
+to be true for the virtual zeros at infinity. In any event, the contributions of the
+virtual zeros, summed over all homotopy classes, can be evaluated by computing
+the measure on the moduli space (of complex structures on Σ) that comes from
+                                  ⋆
+the world-sheet path integral.
+
+
+  ⋆ When π1 (M ) has infinitely many conjugacy classes, so that the number of homotopy classes
+    is infinite, it is scarcely plausible that the full answer can be written as a sum over homotopy
+    classes with each class contributing an integer. For convergence, the contributions would
+    have to be almost all zero. The possible noncommutativity of the sum over homotopy
+    classes and the integration over moduli space may also mean that the final answer (which
+    should be obtained by summing over homotopy classes first) cannot be written as a sum of
+    contributions of homotopy classes, though the measure on moduli space can be so written.
+    In this case, the question of whether the individual contributions are integers does not even
+    make sense. This seems to be the case for the one loop contributions, as one can see by
+    comparing to D. Fried’s formulas expressing the logarithm of analytic torsion as a sum over
+    geodesics [24].
+
+                                                32
+                                         T
+
+                        π
+
+
+   Fig. 6. A strip S of width π with one real modulus T .
+
+
+   The essential simplification of the A model always arises because for large
+t, this measure is concentrated near zeros of w. In the case that the only zeros
+are virtual zeros at infinity, the measure is concentrated for large t on the region
+near infinity; but this is the limit in which string theory reduces to field theory,
+and world-sheet path integrals reduce to Feynman graphs. So the non-vanishing
+contributions to the world-sheet path integral come entirely from the regions in
+the moduli space (of complex structures on Σ) in which the string theory reduces
+to the evaluation of Feynman graphs. This is the equivalence of the string theory
+to a field theory that was claimed earlier. Of course, one must remember that (as
+in the figure, where there are two possible degenerations) one Riemann surface will
+in general be capable of degenerating to several possible Feynman graphs.
+
+Perturbation Theory
+
+   To make this a little more explicit, we will now discuss how to extract the field
+theoretic Feynman rules from the string theory.
+
+   We want to describe the measure on the moduli space of Riemann surfaces that
+follows from the description of moduli space via fatgraphs. This can be worked
+out systematically by quantizing open string field theory. The necessary techniques
+were given by Thorn and Boccicchio [25,26] and involve an elegant application of
+the Batalin-Vilkovisky approach to quantization. Instead of following that road, I
+will merely use the fatgraph description of moduli space and the definition of the
+measure in equation (2.4).
+
+   The basic fact that we will use is therefore the fact that every Riemann surface
+
+                                         33
+Σ with boundary has a canonical flat metric (with some conical singularities) built
+as in figure (2). This metric is obtained by gluing together some standard strips.
+The strips are flat rectangles of width π in the σ − τ plane, say 0 ≤ σ ≤ π,
+0 ≤ τ ≤ T , with metric ds2 = dσ 2 + dτ 2 . Such a strip, say S (figure (6)), has one
+real modulus, namely T . A deformation of this modulus from T to T + δT can be
+made by changing the metric to
+
+
+                              ds2 = dσ 2 + dτ 2 (1 + 2f (τ )) ,                          (4.10)
+
+                                  RT
+with f (τ ) any function with        0   dτ f (τ ) = δT . It is convenient to take f (τ ) =
+δT · δ(τ − τ0 ), for some τ0 . If one of the δ (k) h in equation (2.4) is the deformation
+just described of the length of the strip S, then the corresponding mode b(k) of
+equation (2.3) is simply
+                                             Zπ
+                                   (k)
+                                 b       =        dσ b00 (σ, τ0 ).                       (4.11)
+                                             0
+
+This is in other words an insertion of the zero mode b0 at τ = τ0 .
+
+    We also have to worry about the propagation of the string through the proper
+time T ; this gives a factor of exp(−T L0 ), with L0 the string Hamiltonian discussed
+in §3.3. Allowing for the integral over T and the insertion of b0 , we get for each
+strip a factor
+                                   Z∞
+                                         dT b0 exp(−T L0 ).                              (4.12)
+                                     0
+
+Let V be the kernel of L0 , and let 1/L0 be the inverse of L0 in the subspace
+                                                                     ⋆
+orthogonal to V. Since b0 annihilates the kernel of L0 , the integral in (4.12) can
+
+  ⋆ The topological sigma model in question was constructed by twisting an ordinary super-
+    symmetric model (as explained in detail in [6]) by a power of the canonical bundle. On
+    the flat strip under discussion here, the canonical bundle is naturally trivialized, and the
+    twisting does nothing. In the underlying supersymmetric model, b0 is the adjoint of Q, and
+    as in Hodge theory, the relation L0 = {Q, b0 } implies that Q and b0 annihilate the kernel
+    of L0 .
+
+                                                   34
+be evaluated to give
+                            Z∞
+                                                          1
+                                 dT b0 exp(−T L0 ) = b0      .                  (4.13)
+                                                          L0
+                            0
+
+
+
+    In equations (3.21) and (3.22), we determined the large t limits of L0 and b0 to
+be π∆/2t and πd∗ /2t. (Thus, b0 vanishes for large t, but b0 /L0 has a non-vanishing
+limit because of the small eigenvalues of L0 .) So the large t limit of (4.13) is
+
+
+                                              1
+                                         d∗     .                               (4.14)
+                                              ∆
+
+
+Now, (4.13) is the open string propagator, while (4.14) is the propagator of Chern-
+Simons field theory.
+
+    In the fatgraph approach to construction of moduli space, the strips we have
+just analyzed are glued together at cubic vertices to make Riemann surfaces. The
+structure of the interaction vertices is the same as in the open string multiplication
+law, figure (3(a)). We have already seen in connection with figure (4) how these
+vertices reduce at large t to wedge products of differential forms, as in Chern-
+Simons field theory.
+
+    While the underlying string field A had ghost number 1, and the underlying
+Chern-Simons gauge field A is a one-form, in (4.13) and (4.14) states of all ghost
+number – or differential forms of all degrees – are propagating. In either case,
+the vertices of the gauge fixed theory have in a natural sense the same structure
+(gluing of strings or wedge products) as that in the classical theory, though the
+constraint on the ghost number or degree is absent. In the case of string theory,
+this structure was explained by Thorn and Boccicchio [25,26] by solving the master
+equation and gauge fixing of string field theory. In Chern-Simons theory, the
+analogous formulation of the gauge fixed theory, combining the fields of different
+ghost number, is due to Axelrod and Singer [4].
+
+                                           35
+             (a)                                  (b)
+                           α (4)                        α (4)                   α (3)
+
+
+
+
+                                          α (3)         α (1)                   α (2)
+                   α (1)
+                                   α(2)                         α (4)   α (3)
+
+
+
+
+                                                                α (1)   α (2)
+
+
+    Fig. 7. Coupling of four states α(1) , . . . , α(4) on the boundary of a disc
+    (a) with an antighost insertion around α(2) ; the Feynman diagrams corre-
+    sponding to the two possible “channels” (b).
+
+
+The Tree Level S-Matrix
+
+    I would now like to make this more explicit in a particular example. I have
+picked the example to anticipate the following question that may perplex some
+readers. We have extracted Chern-Simons theory from the open string degenera-
+tions of moduli space, but are there additional closed string contributions? It will
+be clear in §5 that the role of the closed strings is not fully understood, though I
+will argue there that the closed and open strings are decoupled. I therefore want
+to demonstrate that the statement “the topological string theory of the A model
+is equivalent to Chern-Simons field theory” can be tested in a situation in which
+closed strings are definitely not relevant. This is the case for scattering amplitudes
+(or the analog of what in ordinary string theory would be scattering amplitudes)
+for the case that Σ is a disc.
+
+    As we know from §3.3, the “physical states” of the open string field theory are
+elements of H 1 (Σ, End(E)), E being a flat vector bundle that we will keep fixed in
+
+                                                         36
+the discussion. The exterior derivative with values in that bundle will be denoted
+as d. Let α(1) , . . . , α(4) be four such states. We consider their coupling on the disc
+in that cyclic order, as in figure (7). To calculate the four point function in field
+theory, all that we really need to know is that there are two possible Feynman
+diagrams, indicated in figure (7), and that the propagator is d∗ /∆. The amplitude
+is therefore
+                             Z                                                      
+                                               d∗                        d∗
+ I(α(1) , . . . , α(4) ) =       Tr α(1) ∧ α(2) α(3) ∧ α(4) + α(2) ∧ α(3) α(4) ∧ α(1) .
+                                               ∆                         ∆
+                             M
+                                                                                    (4.15)
+
+    To do the same calculation in string theory, we introduce vertex operators
+V(i) = α(i) a χa for the external states, and one antighost insertion corresponding to
+the one real modulus of the disc. We can map V(1) , V(3) , and V(4) to 0, 1, and ∞,
+and take the modulus to be the position of V(2) . In that case, the antighost insertion
+can be taken to be a small contour integral around the position of V(2) , as in the
+figure. The contour integral can be evaluated by thinking of V(2) as an operator
+inserted on the end of an open string in a Hamiltonian formulation; the antighost
+contour computes the commutator of this operator with the antighost zero mode
+b0 , and so replaces the zero form operator V(2) by its one-form descendant
+
+                                                                    dq a
+                                     W(2) = [b0 , V(2) ] = Aa (q)        .          (4.16)
+                                                                    dτ
+
+The string theory amplitude is therefore
+
+                         Z1
+                                                    dq a
+                                 dσhV(1) (0) · Aa        (σ) · V(3) (1)V(4) (∞)i.   (4.17)
+                                                    dτ
+                             0
+
+
+Now we wish to evaluate this, as usual, in the limit of t → ∞. If the integral were
+limited to a range of σ bounded away from 0 and 1, it would vanish as 1/t for
+t → ∞. This is so because the φ and ψ − χ propagators are both proportional
+to 1/t. A non-zero result arises only because if the result is blindly expanded in
+
+                                                      37
+powers of 1/t, the endpoint contributions are infinite. This is because the term of
+                                                                        a
+lowest order in 1/t in the operator product V(1) (0) · Aa dq
+                                                          dτ (σ) is proportional to
+1/σ, coming from φ − ∂φ contractions. A simple-minded 1/t expansion of (4.17),
+evaluating those contractions (and discarding a term proportional to {Q, . . .}),
+leads to a divergent contribution near σ = 0 that looks like
+
+                      Zǫ
+               π             1                     
+                           dσ hχa d∗ (α(1) ∧ α(2) ) a (0) V(3) (1) V(4) (∞)i,            (4.18)
+               2t            σ
+                      0
+
+
+with ǫ an arbitrary fixed positive number.
+
+    To cure the infinity, we must remember the anomalous dimensions of the var-
+ious operators, which are given by the eigenvalues of L0 . To order 1/t, we had
+L0 = π∆/2t in §3.3. The physical states have harmonic representatives, and if
+we pick such representatives (discarding terms of the form {Q, . . .}), the V(i) have
+                                                                         
+L0 = 0 in order 1/t. However, the vertex operator χa d∗ (α(1) ∧ α(2) ) a in (4.18)
+corresponds to a state not annihilated by L0 . Including powers of σ coming from
+the anomalous dimensions, and replacing the expectation values h                 i by zero mode
+integrals, (4.18) is replaced by
+
+                  Zǫ             Z                                                
+             π               1
+                          dσ         Tr d∗ (α(1) ∧ α(2) )σ π∆/2t ∧ α(3) ∧ α(4) (∞)       (4.19)
+             2t              σ
+                  0              M
+
+
+The endpoint contribution of the σ integral is now finite as t → ∞, and reproduces
+one of the two Feynman diagram contributions in equation (4.15). The other arises
+from the endpoint at σ = 1.
+
+    Now let us discuss briefly the physical significance of these couplings. Given a
+flat bundle E corresponding to a solution A(0) about which one wishes to expand,
+the space of linearized deformations is H 1 (M, End(E)). Writing A = A(0) + B,
+impose the gauge condition d∗ B = 0 (with d∗ being defined with respect to A(0) ).
+                  P            P
+In turn, write B = i ui α(i) + σ vσ β(σ) , where α(i) are a basis of zero modes of
+
+                                                    38
+the Laplacian ∆ and β(σ) are the non-zero modes; and ui , vσ are real coefficients.
+The underlying Lagrangian
+                                 Z                       
+                                                2
+                            L=       Tr A ∧ dA + A ∧ A ∧ A                                     (4.20)
+                                                3
+                                 M
+
+
+can be regarded as a function L(ui , vσ ). The tree diagrams that we have discussed
+above are a calculational technique for “integrating out” the vσ to get an “effective
+potential” V (ui ). It can be written in terms of the n-point functions on the disc
+discussed above for n = 4 as
+
+             X ui uj uk                         X ui uj uk ul
+ V (ui ) =                hα(i) α(j) α(k) i +                   hα(i) α(j) α(k) α(l) i + . . . . (4.21)
+                     3!                                   4!
+             i,j,k                              i,j,k,l
+
+
+Since V is obtained from the underlying Lagrangian L by “integrating out the
+massive modes,” its stationary points, i.e., solutions of ∂V /∂ui = 0, are in one-to-
+one correspondence with the stationary points of the underlying Lagrangian.
+
+    The process of “integrating out the massive modes” can be described as follows.
+Let L be a function with a critical point at the origin, and let n be the dimension
+of the kernel of the Hessian or matrix of second derivatives of L. Then by a
+generalization of the Morse lemma, it is possible to pick coordinates ui , i = 1 . . . n
+and vσ in a neighborhood of the origin so that
+
+                                                          X
+                               L(ui , vσ ) = V (ui ) +         aσ vσ 2 ,                       (4.22)
+                                                           σ
+
+
+with non-zero constants aσ ; V (ui ) is then the “effective potential with massive
+modes integrated out.” The ui are of course only uniquely determined up to diffeo-
+morphism. Describing the possible canonical forms of V (ui) up to a reparametriza-
+tion of the variables is more or less the problem of singularity theory.
+
+    Since the ui can be described in first order as coordinates near the origin on
+the naturally defined vector space H 1 (M, End(E)), it is natural to think of the
+
+                                                    39
+effective potential V as a function defined on that space, and as such it is uniquely
+defined up to a coordinate transformation
+
+
+                                  ui → u
+                                       ei = ui + cijk uj uk + . . .                             (4.23)
+
+
+that is trivial in first order. The quartic coupling hα(i) α(j) α(k) α(l) i, for particular
+values of i, j, k, and l, is invariant under such transformations if and only if the
+cubic coupling hα(m) α(n) α(p) i vanishes for m, n equal to two consecutive values
+                 ⋆
+of i, j, k, l;       by Poincaré duality, this is so precisely if α(m) ∧ α(n) vanishes in
+H 2 (M, End(E)) whenever m and n equal two consecutive values of i, j, k, and l.
+
+     Under such conditions, the four point coupling can be given the following
+interpretation. Since α(i) ∧ α(j) and α(j) ∧ α(k) vanish in cohomology, there are
+End(E)-valued one-forms y, z with
+
+
+                              dy = α(i) ∧ α(j) , dz = α(j) ∧ α(k) .                             (4.24)
+
+
+In fact, we can set
+                                             1             
+                                      y = d∗   α(i) ∧ α(j)
+                                             ∆                                                  (4.25)
+                                             1             
+                                      z = d∗   α(j) ∧ α(k) .
+                                             ∆
+
+(Because 1/∆ is the inverse of ∆ only in the orthocomplement of the kernel of ∆,
+in proving that (4.25) obeys (4.24) one needs the fact that α(i) ∧α(j) and α(j) ∧α(k)
+vanish in cohomology and so are orthogonal to the kernel.) Let
+
+
+                             w(α(i) , α(j) , α(k) ) = y ∧ α(k) + α(i) ∧ z.                      (4.26)
+
+
+Then dw = 0, so w determines an element of H 2 (M, End(E)). Considering how
+w transforms under a shift in y and z, one sees that it is not well-defined as an
+
+   ⋆ One considers i, j, k, l arranged on a circle in that order, so l and i are consecutive.
+
+                                                  40
+element of H 2 (M, End(E)) but only as an element of the quotient group
+
+
+     H 2 (M, End(E))/(H 1 (M, End(E)) ∧ α(l) ⊕ α(i) ∧ H 1 (M, End(E))).           (4.27)
+
+
+The element w of that quotient space is known as the Massey triple product of
+α(i) , α(j) , and α(k) . Under the further hypothesis that α(k) ∧ α(l) and α(l) ∧ α(i)
+vanish in cohomology,
+                                Z
+                                    Tr w(α(i) , α(j) , α(k) ) ∧ α(l)              (4.28)
+                                M
+
+is well-defined and in fact equals coefficient of the quartic term in the effective
+potential as computed above. The contribution of the quartic coupling to ∂V /∂ul
+is therefore
+                                         Z
+                     1 X
+                         ui uj uk            Tr w(α(i) , α(j) , α(k) ) · α(l) .   (4.29)
+                     3!
+                        i,j,k           M
+
+As a flat connection is a critical point of the Chern-Simons action, this is in keep-
+ing with the observation [27] that the Massey triple product and its higher order
+analogs are the obstructions to deformation of a flat connection.
+
+ 4.3. Comparison To Remarks Of Kontsevich
+
+    What do we learn by interpreting Chern-Simons gauge theory as a string the-
+ory? Here I will only point out one obvious consequence. Other applications may
+involve, for instance, a deeper relation of Chern-Simons theory to mirror manifolds.
+
+    The fact that Chern-Simons theory can be interpreted as a topological sigma
+model coupled to topological gravity means that one can introduce the usual ob-
+servables of topological gravity – the stable cohomology classes on the moduli space
+of Riemann surfaces introduced by Mumford, Morita, and Miller. In the present
+context, this would amount to the following. As was sketched in §2, the topological
+sigma model determines a differential form Θ on moduli space; for open strings,
+the relevant moduli space is the moduli space Mg,s,h of Riemann surfaces of genus
+
+                                                 41
+g with s punctures (where vertex operators are inserted) and h boundary compo-
+nents. Instead of integrating the closed form Θ over Mg,s,h, we can integrate it
+over a homology cycle C in Mg,s,h of codimension, say, n.
+
+    The trouble is that we have fixed X to have complex dimension three precisely
+to ensure that Θ is a top form. It therefore cannot be integrated over a cycle of
+positive codimension unless the definition is modified somehow. The following way
+of doing this will enable us to make contact with observations by Kontsevich.
+
+    Instead of considering a single target space X with a fixed metric, we will
+consider a family of X’s with a family of metrics. The partition function of the
+theory will be not a number but a closed differential form on the space of metrics
+on X. To implement this idea, introduce along with the metric gIJ (φ) of X a
+fermionic variable ζIJ (φ) (of ghost number one) which one can think of as (up to
+a constant) the exterior derivative of gIJ (φ). Take the new transformation laws
+
+
+                             δgIJ = iαζIJ , δζIJ = 0.                         (4.30)
+
+
+Recalculating the Lagrangian starting from (3.2), we find that (3.3) is replaced by
+e = L + L′ , with
+L
+                             Z                           
+                     L = −t d2 zζij ψzi ∂z̄ φj + ∂z φi ψzj .
+                       ′
+                                                                              (4.31)
+                               Σ
+
+
+    Since L′ is of ghost number −1 in the “matter fields” φ, χ, ψ, every insertion
+of L′ shifts the ghost number by one unit. If we want to integrate not over moduli
+space but over a cycle C of codimension n, the non-vanishing contributions will
+be precisely nth order in L′ . As L′ is linear in ζIJ , these contributions will be
+nth order in ζIJ and so will define an n-form Ω on the space R of metrics on X.
+Q-invariance means that Ω is closed. Let F be the group of diffeomorphisms of X.
+Ω is invariant under the natural action of F on R and moreover is basic (to show
+the later one notes that if ζIJ = DI vJ + DJ vI for some v I , then L′ is of the form
+
+                                         42
+{Q, . . .} up to terms that vanish by the equations of motion). So if one has a fiber
+bundle
+                                    X    →    Y
+                                              ↓                               (4.32)
+                                              B,
+
+with an arbitrary base B, then by picking a metric on the total space Y one gets
+a family of metrics on X, parametrized by B, and Ω determines an n-dimensional
+cohomology class of B.
+
+    We have found, therefore, a map from the codimension n homology of Mg,s,h to
+the n-dimensional cohomology of B. This map was described by Kontsevich [5] by
+examining Chern-Simons perturbation theory. The considerations just explained
+give a more conceptual explanation for its existence.
+
+A Digression
+
+    Let us now make a small digression to examine some related observations by
+Kontsevich in the light of standard quantum field theory ideas. We want to con-
+sider the standard Fadde’ev-Popov-BRST quantization of three dimensional Chern-
+Simons gauge theory, with gauge group G, on a three-manifold M. In doing so, in
+addition to the gauge field Aa , one introduces a ghost field c (anticommuting, of
+ghost number one, transforming in the adjoint representation). The usual BRST
+transformation laws are
+                                   δAa = −Da c
+                                         1                                    (4.33)
+                                    δc = [c, c].
+                                         2
+
+We temporarily postpone introducing the antighosts and auxiliary fields that enter
+the gauge fixing.
+
+    Just from the A − c system, it is possible to construct new observables (dis-
+cussed, for instance, in [28], where more information can be found). Let T be an
+invariant, antisymmetric polynomial on the Lie algebra G of G. If P ∈ M is any
+
+                                         43
+point, let
+
+                                  (0)
+                                OT (P ) = T (c(P )).                          (4.34)
+
+
+It is evident that O(0) is BRST invariant and cannot be written in the form δ(. . .).
+By solving the “descent equations”
+
+
+                                   dO(0) = δO(1)
+                                        (1)
+                                   dOT = δO(2)
+                                        (2)
+                                                                              (4.35)
+                                   dOT = δO(3)
+                                        (3)
+                                   dOT = 0,
+
+
+                                                                      (i)
+one finds for each i, 0 ≤ i ≤ 3, an operator-valued i-form OT that is BRST
+invariant up to δ(. . .). Hence, if Y ⊂ M is a i-dimensional cycle, then
+
+                                        Z
+                                                   (i)
+                                              OT                              (4.36)
+                                        Y
+
+
+
+is BRST invariant (and is easily seen, by virture of (4.35), to depend only on the
+homology class of Y ). In particular, setting i = 3 and Y = M, we get new terms
+that can be added to the Chern-Simons Lagrangian. To be precise, if L is the
+usual Chern-Simons Lagrangian and Tα are the antisymmetric invariants on the
+Lie algebra, we can take
+
+                                        X          Z
+                                                               (3)
+                           L→L+               tα         d3 x OTα .           (4.37)
+                                        α
+                                                   M
+
+
+
+This modification of the standard Chern-Simons theory is implicit in the work of
+Kontsevich, who describes the situation in terms of a certain class of homotopy
+Lie algebras.
+
+                                              44
+    One could also, as in Donaldson theory, pick closed submanifolds Mα of M, of
+dimension dα , and generalize (4.37) to
+                                      X          Z
+                                                            (d )
+                           L→L+             tα       d3 x OTαα .              (4.38)
+                                       α
+                                                Mα
+
+
+    As it stands, (4.37) is not very useful. Since the usual Chern-Simons theory
+conserves ghost number, and the O(3) ’s all have ghost number +3, the results will
+be independent of the tα unless we also introduce some interaction of negative
+ghost number. To get something interesting, we will now modify the usual gauge
+fixing.
+
+    Gauge fixing requires the introduction of antighost and auxiliary fields. The
+standard procedure is to introduce the antighost c (anticommuting, of ghost num-
+ber −1, in the adjoint representation) and the auxiliary field w (commuting, of
+ghost number 0, in the adjoint representation), with
+
+                                δc = iw,          δw = 0.                     (4.39)
+
+Gauge fixing is then carried out by
+
+                                     L → L + δΓ,                              (4.40)
+
+with any convenient Γ. A standard choice involves picking a metric gab on M.
+Writing also A = A(0) + B, where A(0) is a solution of the classical equations about
+which one wishes to expand, and denoting the covariant derivative with respect to
+A(0) as D (0) , we take
+                                 Z
+                                            √               (0)
+                          Γ=−        d3 x       gg ab Tr cDa Bb .             (4.41)
+                                M
+
+Computing δΓ, one gets the usual gauge fixing Lagrangian
+                        Z                               
+                              √            (0)       (0)
+                LGF = d3 x g Tr iwDb B b − cDb D b c .                        (4.42)
+                          M
+
+    Just as in our field theoretic discussion, to modify this, we will consider not a
+
+                                            45
+fixed target M but a family of M’s with a variable metric. Instead of considering
+the metric gab of M to be “inert” under the BRST transformations, we introduce
+corresponding fermi variables ζab (of ghost number 1), with
+
+
+                                δgab = ζab ,         δζab = 0.               (4.43)
+
+
+                           eGF = LGF + ∆LGF with
+Then (4.42) is replaced by L
+
+                            Z                          
+                                  3    √      ab 1 ab c     (0)
+                ∆LGF = −         d x       g ζ − g ζ c Tr cDa Bb .           (4.44)
+                                                 2
+                            M
+
+
+Since ∆LGF is of ghost number −1 in the matter fields, insertions of O(3) ’s can
+be balanced by insertions of ∆LGF . As ∆LGF is linear in ζ, the resulting ampli-
+tudes, just as in our string theoretic discussion, will be naturally not numbers but
+differential forms on the base space of a fibration.
+
+
+ 4.4. General Target Spaces
+
+    So far we have only considered the A model with target space X = T ∗ M. Now
+we want to generalize the discussion to consider an arbitrary symplectic target
+manifold X (of c1 = 0), with M as a Lagrangian submanifold.
+
+    The first consequence of replacing T ∗ M with a more general X is that there
+may be nonconstant instantons. The same argument that we used in proving the
+vanishing theorem for T ∗ M shows that a nonconstant instanton would necessarily
+have a positive value of the instanton number
+
+                                            Z
+                                       q=        Φ∗ (ω).                     (4.45)
+                                            Σ
+
+
+To improve the convergence of our formulas, we pick a positive number θ, and
+weight instantons of instanton number q with a factor of exp(−θq). This can be
+
+                                                46
+naturally built into the formulas by adding to the Lagrangian a suitable multiple
+of q:
+                                            Z
+                                L→L+θ              Φ∗ (ω).                      (4.46)
+                                            Σ
+
+    In the absence of non-constant instantons, the space-time theory of the A
+model was ordinary Chern-Simons theory. We want to determine the corrections
+to this coming from the non-constant instantons. In doing so, our goal is to find
+the classical Lagrangian underlying the space-time physics of the A model. To
+this end, we concentrate on the case that the world-sheet is a disc Σ. (However,
+corrections due to higher topologies can be described similarly.) The target space
+Lagrangian LT is equal to a world-sheet path integral on the disc:
+                               Z
+                         LT = DX . . . Dψ exp(−L)                               (4.47)
+
+We already know that the contribution to (4.47) of instanton number q = 0 is the
+ordinary Chern-Simons action. We want to determine the contribution for some
+non-zero value of q.
+
+    Consider the moduli space of holomorphic maps Φ : Σ → X with Φ(∂Σ) ⊂ M
+and with two such maps identified if they differ by an SL(2, IR) transformation.
+The fact that c1 (X) = 0 and dim C
+                                 I (X) = 3 means that in the moduli problem, the
+dimensions of the appropriate H 0 and H 1 are zero. “Generically” this means that
+there are only finitely many such instantons for each value of q. For simplicity, we
+will consider only this case. If Φ is such an instanton, let C = Φ(∂Σ). Generically,
+C is a knot in the three-manifold M. Let us work out the contribution of Φ to the
+path integral (4.47). If we are expanding around a background connection A in
+M, the contribution of the Chan-Paton factors is
+                                         Z
+                                Tr P exp A.                                     (4.48)
+                                               C
+
+Note that though C bounds a disc in X, it may not do so in M, so (4.48) can be non-
+trivial even if A is flat. We also get a factor of exp(−θq) from the instanton-counting
+
+                                          47
+term in (4.46). The remaining contributions are nearly trivial since (i) they are
+independent of t; (ii) they reduce in the large t limit to a ratio of determinants;
+(iii) except for a possible sign, the boson and fermion determinants cancel because
+of the Q symmetry. The contribution of an instanton is hence
+                                                     Z
+                              η exp(−θq) Tr P exp        A                     (4.49)
+                                                     C
+
+
+where η = ±1 is the ratio of determinants.
+
+    The total action is therefore easy to evaluate. If Φi , i = 1, 2, 3, . . . are the
+instantons of non-zero instanton number, with instanton numbers qi , boundaries
+Ci , and determinant factors ηi , then the action is
+
+           Z                        X∞                       Z
+       1                  2
+  LT =         Tr A ∧ dA + A ∧ A ∧ A +   ηi exp(−θqi ) Tr P exp A. (4.50)
+       2                  3
+           M                                   i=1                      C
+
+
+
+    For instance, for θ >> 0, the factors exp(−θqi ) are small, and the instanton
+corrections to amplitudes can be evaluated perturbatively. Their evaluation would
+involve calculating expectation values of products of Wilson lines on the three-
+manifold M.
+
+ 4.5. The B Model
+
+    Now, we would like, in a similar spirit, to identify the space-time field theory
+that is equivalent to the B model, with the “free” boundary conditions of §3.1. To
+be more precise, we consider the open string sector of the B model, and we use the
+same general framework of open string field theory as in §4.1. We can be brief, as
+the arguments are so similar.
+
+    As in the case of the A model, the main simplification comes from the invari-
+ance under rescaling the metric of the target space X by an arbitrary factor t. In
+§3.3, we saw that the low-lying modes of the string are functions A(φI , η i ) of the
+
+                                          48
+zero modes. As we now wish A to have ghost number 1, we take it to be linear in
+η, so in fact
+
+                                   A = η ī Aī (φI ).                          (4.51)
+
+So the physical field A is a one-form of type (0, 1). If gauge fields are included via
+Chan-Paton factors, then A takes values in N × N matrices or more generally in
+the endomorphisms of some holomorphic vector bundle E.
+
+    The linearized gauge transformation law δA = Qǫ reduces for large t to δA =
+∂ǫ, so A must be interpreted as the (0, 1) part of a connection on E. What should
+be the field equation for A? This can be anticipated from the discussion at the
+end of §3.2, where we showed that the background connections to which the B
+model can be coupled are precisely those for which the (0, 2) part of the curvature
+vanishes, in other words those that define holomorphic structures on E. To write
+a Lagrangian from which this equation can be derived, let λ be an everywhere
+non-zero holomorphic three-form on X. Then up to an undetermined constant,
+the Lagrangian whose solutions are connections of vanishing (0, 2) curvature is
+
+                            Z                           
+                        1                      2
+                   LT =         λ ∧ Tr A ∧ ∂A + A ∧ A ∧ A .                     (4.52)
+                        2                      3
+                            X
+
+
+Arguments similar to those that we have given for the A model show that in the
+large t limit, the open string field theory of the B model reduces to (4.52).
+
+    The quantum field theory with Lagrangian (4.52) is unrenormalizable by power
+counting. However, it has the following all-but-unique property: there are no pos-
+sible counterterms that respect the classical symmetries. The symmetries of (4.52)
+include complex gauge transformations, ∂ A → g∂ A g −1, with g an arbitrary gauge
+transformation of E not respecting any reality or unitarity condition; and local
+complex changes of coordinates that preserve λ. There is no local density con-
+structed from A that is invariant under these symmetries. (Even LT itself, though
+possessing these invariances at least if one considers only gauge transformations
+
+                                           49
+                            u
+
+                                                c
+
+    Fig. 8. A cylinder U and an embedded circle C. Any diagram contain-
+    ing this embedded cylinder has two moduli naturally associated with the
+    cylinder; one is the length of the cylinder and the second comes from the
+    possibility of “cutting” the cylinder on C, and twisting about C before
+    regluing.
+
+
+that are connected to the identity, is not the integral of an invariant local density.)
+Infinities in quantum field theory are ordinarily integrals of invariant local densi-
+ties, so if (4.52) could be quantized preserving the symmetries, one would expect
+this theory to be finite, though superficially unrenormalizable.
+
+    Relying only on usual field theory arguments, it is not at all clear that (4.52)
+can be quantized preserving its symmetries. However, the equivalence of (4.52) to
+a string theory strongly suggests that it in fact is finite. One might worry about
+whether closed string poles can ruin the finiteness; at the end of §5 we will argue
+that this does not occur. One might also wonder whether the finite theory given by
+the string theory is really (4.52) or some more elaborate theory with (4.52) coupled
+to closed strings. In §5 we argue that the closed strings are decoupled.
+
+
+
+                         5. The Closed String Sector
+
+    We have discovered that – with some reasonable boundary conditions – the
+open string sector of the topological A and B string theories has an elegant in-
+terpretation in terms of a space-time field theory. The extension to closed strings
+does not work so nicely; the first point of this section is to sketch what the problem
+is. After doing this, I will conclude by trying to show that open and closed strings
+are decoupled in these models; this is intended as partial justification for studying
+the open strings separately in §4.
+
+                                          50
+    For open strings, the propagator is
+
+                                               b0
+                                                  ,                                            (5.1)
+                                               L0
+
+with L0 the Hamiltonian of the string and b0 the antighost zero mode. For closed
+strings, one has separate zero modes b0 and b0 for right- and left-moving antighosts.
+It is convenient to set b±
+                         0 = b0 ± b0 . The formula analogous to (5.1) is that the
+closed string propagator is
+                                      b−
+                                       0 b0
+                                            +  b0 b0
+                                          + Π=       Π.                                        (5.2)
+                                       2L0     L+ 0
+
+Here L+
+      0 = L0 −L0 is the total string Hamiltonian, and Π is the projection operator
+on states invariant under rotation of the circle. This formula is fairly well known,
+and in any case can be derived similarly to (5.1), replacing the strip in figure
+(6) with the cylinder of figure (8); the extra ghost field in the numerator and
+the projection on rotation-invariant states come from the twist symmetry of the
+cylinder, indicated in the figure.
+
+    For the A model, for instance, the long wavelength limits of b0 and b0 are the
+∂ ∗ and ∂ ∗ operators of the target space X. With L0 reducing at long wavelengths
+to the Laplacian ∆, the string propagator looks like
+
+                                              ∂∗∂∗
+                                                   .                                           (5.3)
+                                               ∆
+
+This propagator, however, does not seem to arise by gauge fixing of any local
+Lagrangian. It is a pseudodifferential operator of degree zero, so for it to arise as
+the inverse of a differential operator, that operator would have to be of degree zero,
+that is a constant.
+
+    In fact, by repeating for the closed string the analysis of §3.3, one finds that
+the low energy modes of the closed string sector of the A model are naturally
+                                                      ⋆
+represented by a two-form h in space-time. (For large t, winding sectors of the
+
+  ⋆ For the B model, one gets instead a sum of (0, i) forms with values in ∧j T (1,0) , with i+j = 2.
+
+                                                51
+closed string cannot have small eigenvalues of L0 .) The free Lagrangian for h that
+one might guess by analogy with our open string results would be
+
+                                           Z
+                                      L=       h ∧ ∂∂h.                           (5.4)
+                                           X
+
+
+This has
+                                            ∂∗∂∗
+                                                                                  (5.5)
+                                             ∆2
+
+for a gauge fixed propagator. The extra factor of ∆ in the denominator, which is
+in sharp variance with (5.3), of course, makes (5.5) a pseudodifferential operator
+of degree −2, in keeping with the fact that the kinetic operator in (5.4) is second
+order.
+
+    What sort of Lagrangian do we get by taking the low energy limit of closed
+string field theory? As we discussed in §2 in a related context, the free part of the
+closed string Lagrangian is
+
+                                        (Ψ, c−
+                                             0 QΨ),                              (5.6)
+
+
+where ideally
+
+                                      {b0 − , c0 − } = 1.                        (5.7)
+
+
+Such a c0 − does not exist, since b0 − , whose field theory limit is ∂ ∗ − ∂ ∗ , has
+a non-trivial cohomology. However, one can pick a c0 − such that {b0 − , c0 − } =
+1 − T , where T is the projection operator onto a subspace (say the kernel of L0 )
+annihilated by Q; this is good enough to ensure gauge invariance of (5.7). Such a
+c0 − is, in the field theory limit,
+                                           ∂−∂
+                                               .                                  (5.8)
+                                            2∆
+
+With this choice of c0 − , and recalling that the field theory limit of Q is ∂ + ∂, the
+
+                                               52
+field theory limit of the Lagrangian is not (5.4) but
+
+                                     Z
+                                              1
+                                         h∧     ∂∂h.                               (5.9)
+                                              ∆
+                                    X
+
+
+When this is gauge-fixed and inverted to get a propagator, the factor of ∆−1
+migrates to the numerator, canceling a factor of ∆−1 in (5.5) and reproducing the
+field theory limit of the closed string propagator (5.3).
+
+A General Puzzle
+
+    The conclusion seems to be that closed string field theory of the A model –
+or similarly of the B model – would be non-local in space-time. Sometimes such
+apparent non-localities can be eliminated by introducing additional fields (such
+that the apparent non-locality arises in integrating them out). I have no evidence
+that that can be done here. In any event, certain puzzling arguments seem to
+show that the closed string A and B theories do not behave as one would expect
+of space-time field theories.
+
+    In either the A or the B model, there are non-trivial cubic and higher order
+couplings of the physical modes. In studying the open string sector of the A model,
+there was at the classical level (the world-sheet being a disc) a cubic coupling of
+                                                     R
+three physical fields given by the classical formula M Tr A ∧ A ∧ A, and various
+higher interactions involving Massey products, as we saw in §4.2. As always in field
+theory, these couplings are Taylor series coefficients of a natural potential V (ti ) for
+sources ti coupling to the physical modes. The classical solutions of the space-
+time theory – or equivalently the possible world-sheet theories – are in one-to-one
+correspondence with the critical points of V .
+
+    What about the closed string sectors? There are analogous cubic and higher
+couplings of physical modes. For instance, for the closed string sector of the A
+                                                      R
+model, the cubic coupling in the large volume limit is X h∧h∧h. Experience with
+both field theory and with the open string sectors of the A and B models lead us to
+
+                                           53
+form a generating function V (ti ) from these couplings, with the expectation that
+the allowed world-sheet theories will correspond to the critical points of V . This
+latter expectation proves to be false. For the A model, for instance, the part of the
+h field that is a (1, 1) form in space-time represents a displacement in the Kahler
+class of the metric of X. The A model makes sense for any choice of this Kahler
+class, so in contrast to what one would have anticipated, having V ′ (ti ) 6= 0 is not
+an obstruction to being able to define the world-sheet theory. Likewise, for the
+B model, the low energy modes include a displacement in the complex structure
+of X. The B model makes sense for any complex structure on X, even though
+there are non-zero cubic and higher order couplings for the fields representing a
+displacement in the complex structure.
+
+
+ 5.1. Closed String Contributions To Amplitudes
+
+    Leaving this puzzle as food for thought, I will conclude by making some simple
+comments about the closed string contributions to open string amplitudes of the
+A and B models.
+
+    Let us look briefly at the couplings of open and closed strings in these models.
+To do so we will use the fatgraph or open string field theory description of external
+open and closed strings. An external open string (a marked point on the boundary
+of a Riemann surface) should have one real modulus, while an external closed string
+(a marked point in the interior) should have two. In the fatgraph description, as
+one might expect, external open strings are represented by open string propagators
+going off to infinity, as for O1 and O2 in figure (9(b)). The one real modulus of
+the open string is, roughly, the location at which its propagator is attached to the
+rest of the figure. The proper coupling of external closed strings (which can be
+deduced by seeing how closed string poles arise in open string diagrams, as in [29])
+is as follows. One attaches to the open string diagram an external open string
+propagator of finite length T , closes it up by folding together its free end, and
+inserts the closed string at the resulting conical singularity. The two real moduli
+
+                                         54
+                    (a)                       (b)   O1                 O2
+
+                     C
+
+
+                              T                      T
+                                                         3
+
+                                                                       T2
+                                                         C1       C2
+
+                                                             T1
+
+    Fig. 9. In the fatgraph description of a Riemann surface coupling open
+    and closed strings, the closed strings are incorporated as in (a). A stan-
+    dard open string strip of width π and length T , open at one end (where
+    it attaches to the rest of the diagram) is closed at the other end by fold-
+    ing it over on itself; the closed string is attached at the resulting conical
+    singularity, as shown. A typical fatgraph coupling open and closed strings
+    is shown in (b). It consists of five flat strips glued on the dotted lines,
+    with conical singularities shown as solid dots. The open strings O1 and
+    O2 are attached at the ends of infinite flat strips, while the closed strings
+    appear as conical singularities on strips of finite lengths T1 and T2 . This
+    particular world-sheet has three real moduli: T1 , T2 , and the length T3 of
+    the one internal propagator.
+
+
+of the closed string are, roughly, T and the position at which the propagator is
+attached to the rest of the diagram. This is sketched in figures (9(a,b)).
+
+    To compute the classical couplings of n open strings and m closed strings, we
+consider the moduli space Dn,m of a disc with n marked points on the boundary
+and m in the interior; its real dimension is n+m−3. (The analysis goes through the
+same way in higher genus.) Comparing the dimension of Dn,m to that of Dn+m,0 ,
+there is one extra modulus for each marked point in the interior. As explained
+in the last paragraph, the fatgraph description of Dn,m (figure (9(b))) is similar
+to the fatgraph description of Dn+m,0 except that, while the external open strings
+are attached to outgoing propagators of infinite length, the external closed strings
+are attached to propagators of variable length; the one extra real modulus for
+each external closed string is precisely the length of the propagator to which it is
+attached.
+
+                                         55
+    In the A model, for instance, an external open string is represented by an
+(End(E)-valued) one-form α, while an external closed string is represented by a
+two-form h. Integration over the extra modulus of the propagator by which the
+closed string is attached to the rest of the diagram multiplies h by the open string
+propagator b0 /L0 . In the large t limit, this simply turns h into a one-form
+
+                                        d∗
+                                           · h.                                 (5.10)
+                                        L0
+
+This one-form then couples as just one more external open string state (which
+happens to be valued in the center of End(E)). But the one-form in (5.10) is exact
+(since, for instance, the open string propagator annihilates harmonic forms), so the
+corresponding open string state decouples. Consequently the on-shell couplings of
+open and closed strings are all zero – in either the A or B model.
+
+    If the closed strings are, then, decoupled from the open strings, what is their
+role? The following conjecture seems natural to me. The field theories we have
+extracted from the A and B models all have c-number anomalies, analogous to
+the central charge in two-dimensional conformal field theory. For instance, the
+anomalies of Chern-Simons theory are connected with framings of three-manifolds
+and of knots [30]. One-loop anomalies of the field theory related to the B model
+were calculated long ago by Ray and Singer [31]. These anomalies are possible
+only because of the ultraviolet difficulties of quantum field theory, which of course
+are greatly ameliorated in string theory. It therefore seems reasonable to suspect
+that the closed string contributions in the A and B theories cancel the anomalies
+of these theories, without, in view of the decoupling argued above, having much
+effect on the open string “physics.”
+
+    In any event, whatever the closed string contributions, they are finite. In usual
+string theory, possible infinities come from physical closed string poles, but in these
+topological models, there are no such poles since the closed string propagator
+annihilates the physical states or harmonic forms; this is because (in contrast
+to conventional string backgrounds) the b0 operator annihilates the kernel of L0 .
+
+                                          56
+Thus, for instance, in the case of the B model, whose finiteness perhaps comes as
+a surprise (since the field theory related to the low energy limit of the open strings
+is superficially unrenormalizable), the closed strings will not ruin this finiteness.
+
+Acknowledgements: The discussion of closed string field theory in §2 benefitted
+considerably from discussions with B. Zwiebach. Several relevant references were
+pointed out by L. Jeffrey.
+
+
+
+
+                                          57
+                             REFERENCES
+
+ 1. E. Witten. “Topological Sigma Models,” Comm. Math. Phys. 118 (1988)
+   411.
+
+ 2. M. Gromov, “Pseudo-Holomorphic Curves In Symplectic Manifolds,” Invent.
+   Math. 82 (1985) 307.
+
+ 3. A. Floer, “Symplectic Fixed Points And Holomorphic Spheres,” Comm.
+   Math. Phys. 120 (1989) 575.
+
+ 4. S. Axelrod and I. M. Singer, “Chern-Simons Perturbation Theory,” MIT
+   preprint (1991).
+
+ 5. M. Kontsevich, lecture at Institute for Advanced Study (January, 1992).
+
+ 6. E. Witten, “Mirror Manifolds and Topological Field Theory,” in Essays On
+   Mirror Manifolds, ed. S.-T. Yau (International Press, 1992).
+
+ 7. W. Siegel, “Covariantly Second-Quantized Strings, II,III,” Phys. Lett. 151B
+   (1985) 391,396.
+
+ 8. S. Elitzur, A. Forge, and E. Rabinovici, “On Effective Theories Of Topolog-
+   ical Strings,” preprint CERN-TH.6326 (1991).
+
+ 9. G. ’t Hooft, Nucl. Phys. B72 (1974) 461.
+
+10. E. Witten, “Two Dimensional Gravity And Intersection Theory On Moduli
+   Space,” Surv. Diff. Geom. 1 (1991) 243.
+
+11. R. Penner, “The Teichmuller Space Of A Punctured Surface,” Comm. Math.
+   Phys. (1987), “Perturbative Series And The Moduli Space Of Riemann
+   Surfaces,” J. Diff. Geom. 27 (1988) 35.
+
+12. J. Harer, “The Virtual Cohomological Dimension Of The Mapping Class
+   Group Of Orientable Surfaces,” Inv. Math. 84 (1986) 157.
+
+13. B. H. Bowditch and D. B. A. Epstein, “Natural Triangulations Associated
+   To A Surface,” Topology 27 (1988) 91.
+
+                                     58
+14. E. Witten, “Non-Commutative Geometry And String Field Theory,” Nucl.
+    Phys. B268 (1986) 253.
+
+15. S. Giddings, E. Martinec, and E. Witten, “Modular Invariance In String
+    Field Theory,” Phys. Lett. 176B (f1986) 362.
+
+16. J. Distler and P. Nelson, “Topological Couplings And Contact Terms In 2d
+    Field Theory,” Comm. Math. Phys. 138 (1991) 273.
+
+17. B. Zwiebach, “Closed String Field Theory: Quantum Action And The BV
+    Master Equation,” preprint IASSNS-HEP-92/41 (June, 1992).
+
+18. L. Dixon, lecture at Princeton University, ca. 1987.
+
+19. C. Vafa, “Topological Mirrors And Quantum Rings,” in Essays on Mirror
+    Manifolds, ed S.-T. Yau (International Press, 1992).
+
+20. J. M. F. Labastida and P. M. Llatas, “Topological Matter in Two Dimen-
+    sions” (preprint, 1991).
+
+21. P. Horava, “Equivariant Topological Sigma Models,” preprint (1991).
+
+22. V. Mathai and D. Quillen, “Superconnections, Thom Classes, and Equivari-
+    ant Differential Forms,” Topology 25 (1986) 85.
+
+23. M. F. Atiyah and L. Jeffrey, “Topological Lagrangians And Cohomology,”
+    J. Geom. Phys. 7 (1990) 119.
+
+24. D. Fried, Inv. Math. 84 (1986) 523.
+
+25. C. B. Thorn, “Perturbation Theory For Quantized String Fields,” Nucl.
+    Phys. B287 (1987) 61.
+
+26. M. Bochicchio, “Gauge Fixing For The Field Theory Of The Bosonic String,”
+    Phys. Lett. 193B (1987) 31.
+
+27. D. Johnson and J. Millson, “Deformation Spaces Associated To Compact
+    Hyperbolic Manifolds,” in Discrete Groups In Geometry And Analysis:
+    Papers In Honor Of G. D. Mostow, ed R. Howe (Birkhauser, Boston, 1987).
+
+                                      59
+28. O. Piguet and S. P. Sorella, “On The Finiteness Of BRS Modulo-d Cocycles,”
+    Univ. of Geneva preprint UGVA-DPT 1992/3-759.
+
+29. D. Z. Freedman, S. B. Giddings, J. A. Shapiro, and C. B. Thorn, Nucl. Phys.
+    B298 (1988) 253.
+
+30. E. Witten, “Quantum Field Theory And The Jones Polynomial,” Comm.
+    Math. Phys. 121 (1989) 351.
+
+31. D. Ray and I. M. Singer, “Analytic Torsion And The Laplacian On Complex
+    Manifolds” Ann. of Math. 98 (1973) 154.
+
+
+
+
+                                     60
+

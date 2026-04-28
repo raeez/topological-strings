@@ -1,0 +1,653 @@
+A NNALES SCIENTIFIQUES DE L’É.N.S.
+
+
+
+
+ T. L EVASSEUR
+ J. T. S TAFFORD
+ The kernel of an homomorphism of Harish-Chandra
+ Annales scientifiques de l’É.N.S. 4e série, tome 29, no 3 (1996), p. 385-397
+ <http://www.numdam.org/item?id=ASENS_1996_4_29_3_385_0>
+
+
+
+
+      © Gauthier-Villars (Éditions scientifiques et médicales Elsevier), 1996, tous droits réservés.
+      L’accès aux archives de la revue « Annales scientifiques de l’É.N.S. » (http://www.
+      elsevier.com/locate/ansens) implique l’accord avec les conditions générales d’utilisation
+      (http://www.numdam.org/conditions). Toute utilisation commerciale ou impression systé-
+      matique est constitutive d’une infraction pénale. Toute copie ou impression de ce fi-
+      chier doit contenir la présente mention de copyright.
+
+
+
+
+                                 Article numérisé dans le cadre du programme
+                               Numérisation de documents anciens mathématiques
+                                             http://www.numdam.org/
+  Ann. sclent. EC. Norm. Sup.,
+4e serie, t. 29, 1996, p. 385 a 397.
+
+
+
+
+                  THE KERNEL OF AN HOMOMORPHISM
+                        OF HARISH-CHANDRA
+
+
+                              BY T. LEVASSEUR AND J. T. STAFFORD
+
+
+  ABSTRACT. - Let 0 be a reductive, complex Lie algebra, with adjoint group G, let G act on the ring of differential
+operators ^(g) via the adjoint action and write r : Q —» ^(fl) for the differential of this action. A classic result of
+Harish-Chandra shows that any invariant differential operator that kills 0(Q)0, the algebra of invariant functions
+on 0, also kills all invariant distributions on a real form of g. In this paper we generalize this result by showing that
+
+                                     ^(Q)r(Q)={e^/D(Q):e(0(Q)G)=0}.
+
+This answers a question raised by Dixmier, by Wallach and by Schwarz.
+
+   Key words and phrases. Invariant differential operators, invariant distributions, semi-simple Lie algebras.
+
+
+
+                                                 1. Introduction
+
+   Let G be a connected complex reductive algebraic group with Lie algebra 0. Fix a
+Cartan subalgebra \} and let W be the Weyl group associated to (0, ()). Denote by 0(s)
+and 'D(s) the algebras of polynomial functions and differential operators on Q. The group
+G acts on Q by the adjoint action, and therefore has an induced action on 0{^) and 'D(^).
+In [6], Harish-Chandra defines a homomorphism 8 : V^)0 —^ 'D{^))W and, by [14], 8 is
+surjective. The significance of this result is illustrated by the fact that it allows one to give
+relatively easy proofs of important theorems of Harish-Chandra (see [21]).
+   One would also like to understand the kernel of 8 and one aim of this paper is to
+study this ideal. Set
+             J = [d e P(s) | V/ e 0(0)^ d(f) = 0},                           and     I = J H V^)0.
+
+The differential of the adjoint action of G on s will be denoted by TQ (or simply r); thus,
+T : Q —^ ^(fl) is a Lie algebra map. It is immediate that T(^) C J and the construction
+of 8 ensures that Z = Ker<$. This leads to the natural question, raised in [4, 1.2], [21,
+Section 4] and [19, Section 3]:
+(+)                                          Does J = V{Q)r(Q)7
+
+
+      1980 Mathematics Subject Classification (1985 Revision). Primary 22 E 47, 14 L 30, 16 S 32, 17 B 20.
+      The research of both authors was supported in part by an NSF grant.
+
+
+ANNALES SCIENTIFIQUES DE L'ECOLE NORMALE SUPERIEURE. - 0012-9593/96/037$ 4.00/© Gauthier-Villars
+386                                T. LEVASSEUR AND J. T. STAFFORD
+
+
+  In [4, Theorem 2.1], Dixmier shows that this is tme at the level of vector fields while,
+in [21, Lemma 4.11, Wallach proves that I/^V^Q)0 H V^T^Q)) is torsion with respect
+to the discriminant of Q.
+  The first main result of this paper answers question (f) in the affirmative:
+  THEOREM 1.1. - J = P(0)T(0). Hence I = V{Q)° H ^(^(s).
+   The analogue of this theorem for analytic differential operators also holds and follows
+routinely from the stated, algebraic result (see Corollary 5.6). One reason why Dixmier
+and Wallach raised Question (f) is that it has as an immediate corollary the following
+fundamental result of Harish-Chandra [8, Theorem 5]: Fix a real form Qo of Q and
+assume that 0 is an open, completely invariant subset of Qo. Write P'(^)^0 for the set of
+distributions on f^ that are invariant under the action of the adjoint group C?o of QQ. Then
+I = {d (E V^)0 : dV^)00 = 0}. The proof of Theorem 1.1, while very different from
+Harish-Chandra's proof of [8, Theorem 5], is no easier.
+   In proving Theorem 1.1 we also provide some detailed information about the structure
+of A/0 = 'D(fl)/P(^)T(0). In order to state the result, we need some notation. Identify
+S(Q) with the constant coefficient differential operators on 0. Recall that a finitely
+generated P(^()-module M is called Cohen-Macaulay if there exists p e N such that
+Ext^^(.M,P(0)) = (0) for i / p. In this case, p is the projective homological
+dimension of A4, and M. is homogeneous of Gelfand-Kirillov dimension 2 dim 3 — p
+[1, Theorem 11.7.1, Theorem 11.7.8]. Observe that A/g is a right module over TD(^)°
+and, hence, over S(Q)°. Thus, the next result, which provides the Lie algebra version of
+[12, Theorem 3], makes sense.
+  THEOREM 1.2. - (i) The V(Q)-module A/g = P(0)/P(s)r(0) is Cohen-Macaulay of
+projective dimension dim0 — rkfl.
+  (ii) A/g is a flat right S(Q)°-module.
+   In outline, the proofs of the above theorems are as follows. In Section 2 we study certain
+(P(0), ^(f^^-bimodules. In Section 3 the results of Section 2 are combined with some
+easy, known facts about A/g to show that Theorem 1.2 holds for the module N = T)(^)jJ
+and that C = Ker(A/3 —^ N) is generated by its G-invariants. In Section 4 we provide an
+inductive argument that reduces the problem to the case where C is supported on N(5),
+the nilpotent cone of 0. As is shown in Section 5, it follows easily that C is of finite length.
+Moreover, if C / 0, then some non-zero element of C is killed by a co-finite dimensional
+ideal of S{Q)° and by a power of the augmentation ideal of S^)0 as well as by T(5). At
+this stage one appeals to a result of Harish-Chandra (see Theorem 5.2 and the comments
+thereafter) to show that such an element must be zero.
+
+                                   2. (P(fi), P(l))^)-bimodules
+
+  The aim of this section is to study (^(g), ^(f^^-bimodules satisfying the property
+of the following definition. The importance of this condition is that, as will be shown in
+the next section, it is satisfied by N. This will form the starting point of our proof of
+Theorems 1.1 and 1.2. The Gelfand-Kirillov dimension of a module M will be denoted
+by GKdimM.
+
+4e SERIE - TOME 29 - 1996 - N° 3
+                    THE KERNEL OF AN HOMOMORPHISM OF HARISH-CHANDRA                   387
+
+
+  DEFINITION 2.1. - Define a non-zero (V{g), V{^))w)-bimodule M to satisfy property (*)
+ifM is a finitely generated left T>{o)-module with GKdim^(g)M < rkg + dim 5.
+  Before stating the main results of this section, we need some definitions. The Krull
+dimension, in the sense of Rentschler and Gabriel, of a module M over a ring R will
+be denoted by KdimM. The module M will be called GK-homogeneous (respectively
+Krull-homogeneous) if GKdimM' = GKdimM (respectively KdimM' = KdimM) for all
+non-zero submodules M' of M. A module M with Gelfand-Kirillov dimension is called
+critical if GKdimM' < GKdimM, for all proper factor modules M' of M. More details
+about these concepts can be found in [15, Chapters 6 & 8].
+ PROPOSITION 2.2. - Let M be a (P{^), T>(^))w)-bimodule that satisfies property (*). Then,
+GKdim^(g)M = rkfl + dim^ and KdimM = rkg.
+  Proof. - Let CdimS' denote the maximal Krull dimension of a commutative, finitely
+generated subring of a ring S. Clearly, CdimP^)^ > Cdim^t))^ = rkfl. As P^)^ is
+simple [16, Theorem 2.15], the map ^(f))^ -^ End^(M) induced by the right action
+of ^(t))^ on M is an injection. Thus, by [11, Proposition I.I], one obtains
+
+                    rks < CdimD^ < CdimEnd^^M) < KdimM.
+However, by [15, Corollary 8.5.6] and (*),
+                             KdimM < GKdimM - dimg < rk0,
+as required.    D
+  COROLLARY 2.3. - Let M satisfy property (*). Then:
+  (i) As a left V(Q)-module, M is Krull and GK-homogeneous. Moreover, M has finite
+length as a CP(fl), D^^^-bimodule.
+  (ii) As a left V(Q)-module, M is Cohen-Macaulay, with homological projective dimension
+pdp^M = dims - rkfl.
+   Proof. - (i) If M is not GK-homogeneous, write T for the unique largest P({()-submodule
+of M with GKdimT < GKdimM. Since T is mapped to itself by any P(fl)-endomorphism
+of M, T is a (I>(s), P^^-bisubmodule of M. Thus, T satisfies (*). Thus, by
+Proposition 2.2, GKdimT = rkfl + dim Q = GKdimM, a contradiction. Hence, M is
+GK-homogeneous and, similarly, M is Krull-homogeneous.
+   Next, let M = Mo D Mi D • • • be any proper, descending chain of bisubmodules of M.
+Then each M^/M,+i satisfies (*) and so Proposition 2.2 implies that
+                         KdimM^/M^+i = rk^ = KdimM for each i.
+By the definition of Krull dimension, this forces the chain to have finite length.
+  (ii) Let j(M) = min{j : Ext^^(M, P(s)) / 0}. By [1, Theorem IL5.15]
+                    j(M) = GKdimP(0) - GKdim^^M = dim Q - rkfl.
+
+Also Extip^M, T){Q)) / 0. Thus, if either assertion of part (ii) of the corollary is false,
+there exists an integer s > dimfl - rkfl such that E = Extp^JM, P(s)) / 0. However,
+
+ANNALES SCIENTIFIQUES DE L'ECOLE NORMALE SUPERIEURE
+388                                 T. LEVASSEUR AND J. T. STAFFORD
+
+
+E is naturally a ('D(I))1^ P(^))-bimodule, finitely generated as a right 2)(0)-module and,
+by [1, Proposition 11.5.16],
+
+                        GKdimp(g)£ < GKdimD(Q) - s < dims + rkfl.
+
+This contradicts the left-hand analogue of Proposition 2.2.           D
+                                               /     w
+  THEOREM 2.4. - L^ M be a (V(Q), D(^)) )-bimodule, finitely generated as a left
+V(Q)-module. Then, M is aflat right S^^-module.
+  Before proving this result we need some notation and a subsidiary lemma. Let
+Ck == C[xi,... ,Xk} denote a polynomial ring in k variables and, for any non-zero linear
+polynomial / C Ck, identify C k / ( f ) = C^-i. Define, inductively, ^ to be the family
+of torsion-free right C^-modules L such that L / L f G ^A—I. for all linear polynomials
+o / / e Ck.
+   LEMMA 2.5. - IfL e T^ then L is aflat right Ck-module.
+   Proof. - Suppose that L has weak homological dimension r. By [15, Proposition 7.1.13],
+there exists a simple C^-module S such that Tor^Z^S') / 0. Let / G Annc^(S) be a
+non-zero linear form. By [3, p. 347], there is a spectral sequence associated to the change
+of rings A = Ck -^ T = Ck/fC^:
+
+                           E2^ = Tor^Tor^L, F), S) ==^ Tor^(£, S).
+
+Since / is a non zero divisor in both L and A it is easy to see that Tor^L, F) = 0 for p > 1.
+Since Tor^(£,r) = L / f L , the spectral sequence therefore collapses to isomorphisms
+
+                                    Tor^L/fL^)^Tor^S).
+
+By induction Tor^ ( L / f L , S) = (0) for m / 0, hence the result. D
+   Proof of Theorem 2.4. - Set R = ^(f))^ C A = P(()) and identify A with P(C^) in
+such a way that 5'(f)) is identified with C^. Let £ == M ^p A, which we regard as a
+(P(s), A)-bimodule. Since pA is finitely generated, T>(Q)L is finitely generated. Since A is
+simple, this implies that LA and LQ are torsion-free (use [5, Lemma 7.1]). If / e Cf is a
+non-zero linear polynomial, we may choose the generators of Ci such that / = xi. Hence,
+/ centralizes the natural copy of P(C^~ 1 ) in P(C^). Consequently, L / L f is a finitely
+generated left ^(^-module that is also a (V{^\ P(C^-l))-bimodule. Thus, L / L f is also
+torsion-free as a right module over ^(C^"1) and Q-i. By induction, therefore, L e J^.
+   By Lemma 2.5, £ is a flat right 5'(())-module. Since S(t)) is a free S {^w -module, by
+[15, Proposition 7.2.2], £ is a flat right ^(t^-module.
+   As a C[TV]-module, P(f)) decomposes as P(()) = ^(f))^ C £), where £^ is the direct
+sum of the non-trivial TV-modules. This is clearly a /D(^))w-bimo(Me decomposition and
+so, under the natural embedding, R = ^(l))^ is an .R-bimodule summand of A = T>(\}\
+Thus, as a right JZ-module, and therefore as a right S (1)) ^-module, M is a summand
+of L = M <^R A. Hence, by the last paragraph, M is a flat right S (1))^ -module; as
+required. D
+
+4® SfiRIE - TOME 29 - 1996 - N° 3
+                    THE KERNEL OF AN HOMOMORPHISM OF HARISH-CHANDRA                          389
+
+
+                                3. Preliminary results on A/g
+
+   Let G, 0, f) and W be as in Section 1 and write n = dims and i = dimt). In this
+section we make some preliminary observations, mostly well-known, about the ^(s)-
+module A/^ = P(s)/P(0)r(5). Combined with the results of the last section, these show
+that N = T ) { ^ ) I J satisfies condition (*) of Definition 2.1 and hence that Theorem 1.2
+holds for N.
+   Let K be a nondegenerate invariant symmetric bilinear form on 0. As usual, we identify
+S with 0* through K. If T^^fl denotes the cotangent bundle, then T*g = g x g * ^ 0 X 0
+is a G-variety under the adjoint action. Throughout, P(fl) and its subspaces will be filtered
+by degree of differential operators. The principal symbol gr(T(v)) <E gr(I>(fl)) = 0(r*0)
+of the vector field r(^), for v G fl, will be denoted by cr^); hence cr(v)(rr, ^) = /^(v, [^, rr])
+for (:r,$) e fl x fl. Given a finitely generated ;P(s)-module M, we denote its
+characteristic variety by ChM C T*g, its characteristic cycle by ChM and its support
+by SuppM = TTg(ChM) C 5, as defined in [2]. Recall from [2, VI.1.17] that SuppM
+is Zariski closed.
+   We denote the discriminant of 0 by c^, and write ^ = [x G s I ^(^) 7^ 0} to Ae
+set of generic elements. Let ^x denote the centralizer of x e 0 and write N(s) for the
+nilpotent cone of 0. Recall that the commuting variety of Q is
+
+                        C(0) = {(rr,0 G T*0 | ad^ = [^^] = 0}.
+
+It follows from [17] that €(0) is irreducible of dimension n + L Note that C(fl) is the set
+of zeroes of the ideal a = (a(x)',x € s) C 0(T*0) = gr(P(fl)). Set b = gr(P(0)r(fl))
+and denote by p the prime ideal defining C(fl); hence a C b and ^/a = p. Therefore
+
+(3.1)                                     ChA/g C C(s)
+
+In fact, it is known that one has equality in (3.1). Since we have been unable to find
+an appropriate reference for this assertion, we will give a proof using the results of the
+last section:
+ LEMMA 3.1. - (i) Both N and N ' = P(0)/(P(0)r(0) + V(Q)I) satisfy condition (*) of
+Definition 2.7. In particular, cKd-^N == ow^N' = rkfl + dim^.
+  (ii) GKdimA/5 = dimC(s) and hence ChA^ == C(s).
+   Proof. - (i) By construction N and hence N ' are non-zero. Recall [14, Theorem 1]
+that there exists an isomorphism 8 : V^)0/I -^ V(^))w. Under the embedding
+V(Q)° ^ ^(fl), the left ideal J of ^(fl) becomes a right V(Q)° -module. Hence,
+both N and N ' are right modules over V^)0/I ^ P^)^. Since both modules are
+factors of P(0)/P(0)r(fl), it follows from (3.1) that
+
+                     GKdimTV ^ GKdimTV' < dmiC(s) = rks + dims.
+Thus, both modules satisfy (*) and so part (i) follows from Proposition 2.2.
+   (ii) This follows from part (i) and (3.1).         D
+
+ANNALES SCIENTIFIQUES DE L'ECOLE NORMALE SUPERIEURE
+ 390                                  T. LEVASSEUR AND J. T. STAFFORD
+
+
+  LEMMA 3.2. - (i) Let (x^) G C(fl). Set k = dim^ D ^ and denote by P(^)
+the localisation of p at (x,^). Then P(^) contains a regular sequence of the form
+{(r(vi),..., (r(vn-k)}, for some Vj G Q.
+   (ii) a^ = b^ = p^.
+   Pwo/. - (i) Let (A, m) be the local ring of T*0 at (x, ^). If v G 0 it is easily seen that the
+differential, da(v)(x, Q, ofa(v) at (a;, ^) is given by dcr(v)(^ ^)(a, 6) = ^, [6, rr]+[^ a]).
+It follows that the subvector space of m/m2 = T^ ^( r*fl) generated by the da(v)(r^ ^),
+^ G 5, is of dimension n - k. Hence (i) follows from the fact that A is a regular local ring.
+   (ii) By Lemma 3.1 (ii), a C b C p. Assume that (x,^) G C(^) with x G 07. Since ^x is
+a Cartan subalgebra of Q we obtain that Qx = Q" H ^ is of dimension i. By the proof of
+(i), the ideal generated by the a(^), i = 1 , . . . , n - I, is prime in A. Since p is prime of
+height n - i, we can deduce B(^) = b(^) = P(a^)- Hence the result. D.
+  COROLLARY 3.3. - ChA/3 = [C(g)]. Moreover, A/g to (3 Mm'<^ submodule T with
+GKdimT < rkfl + dimg such that ATg/T is a GK-critical module of Gelfand-Kirillov
+dimension rkg + dimg.
+   Proof. - Set R = O(T*Q). From Lemma 3.2 we know that p^ = b^ = a^. Since
+da (f: p it follows that pRp = bRp. Recall that the multiplicity ofA/g along C(Q) = V(p)
+is defined to be
+
+                                    multv(p)A/^ = lengthy (gr(A^))p.
+Since (gr^))? = I?p/pRp we have mult^p)./^ = 1. Therefore, by definition of the
+characteristic cycle,
+                               ChA/, = multv(p)A/,.[C(0)] = [€(5)].
+In order to prove the second claim, note that Afg does have a unique submodule T,
+maximal with respect to GKdimT < n + t. Moreover, M = Afg/T is GK-homogeneous
+with GKdimM = n + L For any P(^)-module M we set Ch^M = ^;^multvM.[V],
+the sum being taken over the irreducible components of ChM of dimension n + L
+Consequently if M1 is a nonzero submodule of M then, by additivity of Ch^+^( ), one
+obtains Ch^+^M/M7 = 0. Hence M is critical. D
+   Summarizing the results of this and the last section for the module N = V { Q ) / J , we
+obtain the following result. As in Corollary 3.3, we write T for the largest submodule T
+of A/g with GKdimT < GKdimA/g and we write C = Ker(Afg -^ N).
+  COROLLARY 3.4. - (i) If N ' = P(s)/(P(0)T(fl)+P(s)Z), then N ' = N = ATg/T.
+Thus, C = T.
+   (ii) A/g = N <=^ A/g is GK-critical <^=^ A/g is GK-homogeneous.
+  (iii) As a left V{o}-module, N is Cohen-Macaulay with pdp. ^N = dim Q - rkQ.
+  (iv) As a right S^Q)0-module N is flat.
+   (v) N is a simple (P(fl), VW^Ybimodule.
+  Proof. - Lemma 3.1 and Corollary 2.3 imply that N and TV' are homogeneous left
+P(0)-modules of Gelfand-Kirillov dimension rkg + dimQ. Hence, by Corollary 3.3,
+N = N ' = A/5/T is GK-critical. Now apply Corollary 2.3 and Theorem 2.4. D
+
+4'^ SERIE - TOME 29 - 1996 - N° 3
+                     THE KERNEL OF AN HOMOMORPHISM OF HARISH-CHANDRA                      391
+
+
+                          4. Restriction to a reductive subalgebra
+
+   Recall that Theorem 1.1 asserts that C = Ker(A/0 —> TV) is zero. The aim of this section
+is to give an inductive result that shows that, in order to prove this, one may assume that
+C has finite length. Specifically, we prove that, if Theorem 1.1 holds for every proper,
+reductive subalgebra of a semisimple Lie algebra 0, then C is supported on the nilpotent
+cone N(0). It follows easily that C has finite length.
+   Our first proof of this result used analytic P-modules. We would like to thank G. Schwarz
+and M. Van den Bergh for pointing out that one could obtain a direct, algebraic proof using
+Luna's slice theorem. It is the latter proof that we present here. We should emphasize that
+the key result. Proposition 4.4, is implicit in [18] and its proof is merely part of the proof
+of [18 Theorem 4.9]. Unexplained terminology can be found in [18].
+   Assume that G is an arbitrary reductive algebraic group and that X is an affine G-
+variety. Set Q = Lie(G) and let rx : Q —^ ^(^0 be the Lie algebra homomorphism
+induced by the G-action. Set
+
+                      /C(X) = {d e P(X) : V/ G 0(X)^ d(f) = 0}.
+
+Then V(X)rx(Q) C /C(X). Note that /C(fl) = J . Given a reductive subgroup M C G
+and an affine M-variety V, define G x^^ Y = (G x Y)/M, under the M-action
+m.(g^y) = (^m~ l ,rm/). Recall Luna's slice theorem, as stated in [18, Theorem 1.14].
+   THEOREM 4.1. - Let X be a smooth affine algebraic G-variety. Let G.b C X be a
+closed orbit, and denote by M = G6 the centralizer of b. Then M is reductive and
+TbX = N Q Tfc(G.6) for an M-module N. Thus (N,M) is the slice representation at
+the point b.
+   There is a locally closed smooth affine M-stable subvariety S C X containing b such
+that U = G.S is an affine open subset ofX which satisfies:
+    (i) There exists an excellent surjective G-morphism (p : G x M S -» U.
+   (ii) There exists f G O^N^ with J(0) -^ 0, and an excellent surjective morphism
+ip : S -» Nf, such that '0(&) = 0 and the induced G-morphism (f) : G X M S -» G xM Nf
+is excellent.
+  LEMMA 4.2. - Let ^ : Z —> U be an excellent surjective G-morphism of smooth affine
+G-varieties. Then, )C(Z) = 2)(Z)rz(fl) if and only if )C(U) •= V(U)ru(Q\
+   Proof. - Set A = 0(U) and B = 0(Z). Then B° is faithfully flat over A°. It follows
+from the proof of [18, Corollary 4.4] that there is a natural identification B° 0^° T^(U) =
+2)(Z), which induces identities 1 ^A° n/(fl) = ^(fl) and /C(Z) = B° ^AG )C(U).
+   If /C(Z) = V(Z)rz{Q), then combining these observations gives:
+
+               B° 0A^ V(U)ru(Q) = T>(Z)rz{Q) = /C(Z) = B° (^ W).
+
+Therefore T>(U}ru{^} == ^(U) by faithful flatness. The other implication is similar.      D
+   LEMMA 4.3. - Let M be a reductive subgroup of G and Y a smooth affine M-variety and
+set Z = G ^M V. Assume that /C(V) = P(y)Ty(fl). Then JC(Z) = P(Z)Tz(fl).
+
+ANNALES SCIENTIFIQUES DE L'ECOLE NORMALE SUPERIEURE
+ 392                               T. LEVASSEUR AND J. T. STAFFORD
+
+
+   Proof. - Set L = G x M and V = G x Y. Let L act on V by (gi,h).(g^,y) =
+ (9l92h~l,hy) for ^1,^2 € G, fa c M and 2/ e V. This induces actions of G and M
+ such that Z = V/M, and O^ = 0(G xM Y)G = 0^. Set m = Lie(M) and
+ Q = Lie(G). Under the natural identification V(V) = P(C?) 0c ^(T), note that Ty(m)
+ and Ty(m) differ only by elements of DerO(G) = O(G)TG(Q). We may write
+
+                             P(V) = V(V)rv(Q) C 0(G) 0c V(Y).
+ Therefore /C(Y) = {d e 2)(V) : d^V^) = 0} = W^g) + /C', where
+                         /c' = [e e O(G) 0c V(Y) : ^©(Y)^ = o}.
+Clearly 1C' = 0(G) 0c W) = (0(C?) 0c P(r))Ty(m). Hence,
+                  ]C(V) = V{V)(TG{Q) + Ty(m)) = P(V)(TG(0) + Ty(m)).
+
+Now let Q e /C(^). As M acts freely on V, [18, Corollary 4.5(i)] provides a short
+exact sequence:
+                      0 — CWT^m^ —— P(V)^ -2^^(Z) — o
+Set Q = 7(Qi) for some Qi e W)^ Since ry(m) kills 0(Z), the action of Qi on
+0(Z) is the same as that of 7(Qi) = Q. Thus Qi kills ©(Z)^ = ^(V)1'. By the first
+paragraph, and since M is reductive, this implies that
+ Q, G ^(^ = (P(VMs) + Wr^m))" = (V^TG^ + (^(^^(m))''.
+
+Since the actions of G and M commute, (P(y)TG(s)) M = ^(^) M TG(s). Hence
+Q = 7(0i) e 7(^(^) M TG(S)) = V(Z)^TG(Q)) = P(Z)Tz(s), as required. D
+  PROPOSITION 4.4. (Schwarz). - Let X be a smooth affine G-variety and G.b be a closed
+orbit in X. Set M = Gb and let (N, M) be the slice representation at the point b. If
+JC(N) = P(7V)T^(m) on an M-neighbourhood ofO in N, then )C(X) = V(X)rx(Q) on
+a G-neighbourhood of b.
+   Proof. - The result follows from Lemma 4.3, Lemma 4.2 and Theorem 4.1. D
+  We now return to the situation where the semisimple group G acts on Q by the adjoint
+representation. Recall the well known result (see, for example, [13, Section 3, Theorem 3]):
+  LEMMA 4.5. - Let S be a G-stable Zariski closed subset of Q. Assume that 0 is the unique
+semisimple element ofQ contained in S. Then, S C N(fl).
+   THEOREM 4.6. - Let Q be a semisimple Lie algebra. Assume that /C(m) = P(m)Tnz(m)
+for all proper reductive Lie subalgebras m of Q. Then SuppC C N(^) and so A/g = N
+outside N(5).
+   Proof. - Let 0 7^ b e Q be a semisimple element, and set q = [b,Q], M = Gb
+and m = Lie(M) = fl 6 . Thus M is reductive and q identifies with the tangent space
+Tb(G.b) C TbQ = Q. Furthermore, fl = q C m and (m,M) is the slice representation
+at the point b.
+   Therefore it follows from Proposition 4.4 that C = 0 on a neighbourhood of each
+non-zero semisimple element of Q. Since C is a rational G-module, Supp£ is a Zariski
+closed G-stable subset of Q. Thus, the result follows from Lemma 4.5. D
+
+4° SERIE - TOME 29 - 1996 - N° 3
+                     THE KERNEL OF AN HOMOMORPHISM OF HARISH-CHANDRA                     393
+
+
+                                   5. Proof of Theorem 1.1
+
+  In this section we combine the earlier results of this paper to prove Theorem 1.1 for
+a reductive Lie algebra Q. Together with Corollary 3.4, this also completes the proof of
+Theorem 1.2. We begin with some preliminary results.
+  LEMMA 5.1. - Assume that Q is semisimple. Let M. be a finitely generated T){^)-module
+such that
+
+                                  ChA^c(N(fl) xfl*)nC(s).
+
+Then M. is holonomic, and so, in particular, has finite length. Moreover, each element of
+M. is killed by a power of S^(Q*)°.
+   Proof. - A proof is given in [12, Lemma 3.1] although, for sake of completeness,
+we sketch it here. Denote by TT : 0 x 5 -» Q the projection onto the first factor. Let Z
+be an irreducible component of (N(3) x 5) D €(0). Since G is connected, Z is G-stable
+and therefore Y = 7r(Z) is a closed irreducible G-subvariety of N(fl). Thus Y is the
+closure of a single nilpotent orbit, say G.u. Then dm^Tr'^n) D Z) < dimfl", which
+yields dimZ < dim G.u + dim ^ = dimfl. Since dmi(N(fl) x 3) Fl C(s) > dims is
+obvious, we obtain that dim(N(fl) x 0) n C(fl) = dimfl. Hence M is holonomic, and
+therefore has finite length.
+   By [13, Proposition 16], N(fl) is the set of zeros of ^(fl*) 6 ' while, by hypothesis,
+SuppM is a closed subset of N(0). Thus, each element of M is killed by some power
+of S^)°. D
+   The proof of the next result uses analytic P-modules about which we need to make some
+remarks. Let X be a smooth algebraic complex variety or a complex analytic manifold and
+write 0^ for its structure sheaf. We denote by Vx the sheaf of differential operators on
+X. The basic definitions and facts concerning Vx -modules can be found in [I], [2]. When
+X is affine algebraic, the global section functor provides an equivalence of categories
+between Vx -modules and /D{X)-modu\es [2, Proposition VII.9.1]. One can associate to
+X a complex analytic manifold X^, and if T is a quasi-coherent Ox -module one defines
+a quasi-coherent O^an-module by ^ran = O^an ^ox ^ ' The functor T —> ^an is exact
+and faithful. If F is a coherent T>x -module, the sheaf ^an is naturally endowed with the
+structure of a coherent P^arz-module.
+  THEOREM 5.2. - Let Q be a semi-simple Lie algebra. Let F be a left ideal of
+V(Q) such that F D V{^}K + ^(flMs) 4- T ) ( z ) K ' , where K is an ideal of S^)0
+containing a power of S^{Q*)0 and K ' is an ideal of finite codimension in S(Q)°. Then,
+W = F.
+   Proof. - If V(Q)/F ^ 0, pick s e S{Q)° such that [s + F] / 0, but Ps = 0, for some
+maximal ideal P of S{^)0. By its definition, T(fl) commutes with ^(fl) 6 ', while S^)0
+acts ad-nilpotently on T>{^). Thus, [s^-F} is still killed by r(s) and by a power of ^(fl*)6'.
+In other words, replacing P(fl)/F by 2)(g)5, we may assume that K ' == P is a maximal
+ideal of S(Q)°. As such, V{Q)/F is a homomorphic image of P(0)/(P(0)r(0) + P(s)P)
+supported on N(g).
+
+ANNALES SCIENTIFIQUES DE L'fiCOLE NORMALE SUPERIEURE
+394                                T. LEVASSEUR AND J. T. STAFFORD
+
+
+  By the remarks before the statement of the theorem, in order to prove that V(Q)/F = 0,
+we may work with sheaves of analytic ^-modules. The theorem is now a special case
+of [10, Theorem 6.7.2]. D
+   As is observed in [10], [10, Theorem 6.7.2] is an interpretation in terms of V-
+modules of Harish-Chandra's famous result on the regularity of invariant eigendistributions
+[8, Theorem 1]. Similarly, Theorem 5.2 is the interpretation of Harish-Chandra's theorem
+on eigendistributions with nilpotent support [6, Theorem 5]. It is not difficult to prove
+Theorem 5.2 by modifying the proof of [6, Theorem 5] as given, for example, in
+[20, Chapter 5, Section 6].
+   LEMMA 5.3. - Set S = 0i 9 5 where 3 is the centre ofQ and fli is semisimple. Then, Ag
+is GK-homogeneous if and only if J^f^ is GK-homogeneous.
+   Proof. - We identify P(0) = P(fli) 0c ^(a). Thus, given any P(si)-module M, then
+GKdimp(g)P(3) 0c M = GKdinrp^M + GKdimP^). Since tensoring over C is exact,
+one concludes that the P(^i)-module M is GK-homogeneous if and only if the same is
+true for the P(9)-module ^(3) 0c M = V(^) 0p(^) M.
+   Since r(a) = 0, clearly r(Q) = r(0i) and so A/g = P(fl) ^D^) A/^. Now apply the
+observations of the last paragraph. D
+  LEMMA 5.4. - Let x G P(fl) and p G S(Q)° be such that xp G V(Q)r(Q). Then
+p^x G V(Q)r(Q), for some m > 1.
+   Proof. - If v e ^(5), write ad^(v) = pv — vp and set Xm = {<Qi&p}rn{x) for m > 0.
+Since r(0) commutes elementwise with ^(fl) 6 ', certainly V(Q)r(Q)p C V{^)r{^). Hence,
+for any m > 0,
+                             m                    m
+
+                   xmp e Y^v^xp^ c ^P(s)T(sV=P(s)T(s).
+                            1=0                  1=0
+
+In particular, for any % , j >_ 1,
+
+                    p^_l = p ^ - l ^•+J/- l ^•-lp G p ^ - l ^•+P(0)T(0).
+
+Finally, as S{^) acts locally ad-nilpotently on P(s), certainly Xra = 0 ^ ^(0)^(5).
+for some m > 1. By the last displayed equation, and induction, this implies that
+p^x G P(0)r(s).         D
+
+  We can now prove Theorem 1.1. By Corollary 3.4, this also completes the proof of
+Theorem 1.2.
+   THEOREM 5.5. - Let Q be a reductive Lie algebra and set N = P(s)/' J , as in the
+introduction. Then A/g = N.
+   Proof. - By Corollary 3.4 it suffices to prove that A/g is GK-critical. We prove this
+result by induction on dimfl, with the case 0 = 0 being trivial. If Q is not semisimple,
+and in particular if dimfl < 2, the result follows immediately from Lemma 5.3. Thus,
+we may assume that Q is semisimple and that the result holds for every proper, reductive
+subalgebra m of Q.
+
+4e SERIE - TOME 29 - 1996 - N° 3
+                    THE KERNEL OF AN HOMOMORPHISM OF HARISH-CHANDRA                        395
+
+
+   Set C = Ker(A/5 -^ N). Then Ch£ C (N(fl) x 0*) n C(s), by Lemma 3.1 (ii) and
+Theorem 4.6. Hence, by Lemma 5.1, C has finite length and so, by [15, Corollary 9.1.8],
+Endp(g)(£) is a finite dimensional C-vector space. Now, £ is a right ^(s)6' -module and
+hence is a right S {^)° -module. Since the image of S^)0 in Endp(g)(£) is necessarily
+finite dimensional, C is killed on the right by an ideal K^ of finite codimension of S^)0.
+   Recall from Corollary 3.4 (i) that J = P(0)r(s) + P(fl)Z. Thus, if C / 0, we may
+pick x G Z such that a; ^ P(0)r(0). Thus, for any p ^ K^, one has a-p G Pd^r^).
+By Lemma 5.4, pnx e P(s)r(0), for some n, and hence K ' x G P^r^) for some
+ideal K ' of finite codimension in S^)0. Lemma 5.1, applied to the D(0)-submodule
+(V(Q)x + T)(Q)r(Q))/V(Q)r(Q) of £, shows that Kx C V{^}r{^\ where K is a power
+of ^(s*)^ Finally, as a; G I and Z commutes with r(s), certainly r(g).r € P(fl)r(0).
+   Thus, we have shown that F = [r G ^(0) : rrc G P(s)r(0)} satisfies the hypotheses of
+Theorem 5.2. Thus, F = V{^} and x e V{^)r{^). Hence, TV = A/g, as required. D
+  We end the paper with several comments on extensions and applications of Theorem 5.5.
+   An interesting question is whether Theorem 5.5 holds at the graded level: Does
+J H P(fl)m = P(0)m-iT(0) for all m, where P(s)m denotes the differential operators of
+order <_ m? Both Dixmier [4] and Schwarz [19] raise their questions in this generality.
+This is slightly weaker than another well-known problem: is the ideal of zeros of the
+commuting variety generated by the obvious functions {a{x) : x G fl}? Equivalently, does
+a = p in the notation of Section 3?
+   If V is a finite dimensional linear representation of G, one can ask again whether
+Ker^lQ^ ^ V{V/G)) equals V^)0 H V{V)rv{Q) (see [19, Section 0]). For some
+positive results, complementary to Theorem 5.5, the reader is referred to [18, Theorem 8.9].
+   Finally we make some comments on P^^), the ring of differential operators on g with
+analytic coefficients. Recall from the introduction that we claimed that Theorem 5.5 had, as
+an immediate consequence, Harish-Chandra5 s theorem [8, Theorem 5] that asserts that any
+invariant differential operator that kills all invariant functions on Q also kills all invariant
+distributions on ^o- Since Harish-Chandra's result is concerned with analytic differential
+operators, this is only immediate if one has an analogue of Theorem 5.5 for P^^). As
+the next corollary shows, this follows easily from Theorem 5.5. We remark, however, that
+the stated algebraic version of Theorem 5.5 is useful for applications to the analytic theory
+since it allows one to regard invariant distributions as modules over ^(^/Z^T^f))^
+and hence to relate them to Weyl group representations. For example, by copying the
+proof that [21, Theorem 5.4] implies [21, Theorem 5.3], one obtains another proof of
+[7, Theorem 3]. We would like to thank Nolan Wallach for this observation.
+   In the next result we show how to extend Theorem 5.5 to the analytic case. We would
+like to thank the referee for a significant simplification in the proof.
+
+  COROLLARY 5.6. - Let Q be a reductive Lie algebra and define a sheaf J1' of left ideals of
+T>^ by ^(U) = [e G V^(U) | O^^)0) = 0} for any open set U C ^an. Then:
+   (i) T = 2V.r(s);
+  (ii) In particular, if U is a Stein open connected subset of^, then F(U) = V^arz (E/)r(0).
+
+  Proof. - (i) Let f be the sheaf defined by ^(£7) = {(9 e T)^(U} \ (9(0(0)^ = 0}.
+Since P^anT^) C T C T, it suffices to prove that F = T)^r{^) and, in turn, it is
+
+ANNALES SCIENTIFIQUES DE L'ECOLE NORMALE SUPERIEURE
+396                                 T. LEVASSEUR AND J. T. STAFFORD
+
+
+enough to prove this locally. Fix p € Q and write R = T)^p C S = Vgarz ^ and F = ^p.
+Pick coordinates x\^... ^Xn on 5 and set 9i = ^|- as usual.
+   Fix m G N. Let d € S be a differential operator of order < m and write
+d = EH^^ where a, G J3 = O^n,? and ^ = n^F- Let A , . . . J ^ be
+algebra generators of O(Q)°. Then d G F if and only if d(f) = 0 for all monomials
+/ = /n •"/z< wlt!1 t < m- For ^y such /, ^(V) G A = OQ^. Thus we obtain a
+system of linear equations {Ea^c^^ = ^} wlt^ ^c^ G ^ suc^ ^^ d e F if and only
+^ Ea^^a,^ = 0 for all z.
+   Now, B is a flat A-module and so this system of equations has a solution in B if and
+only if it is soluble in A. In other words, if d e F, then there exist Raj ^ A and vj e B
+such that ]Ca^,j^a,z = 0» for all j,%, and a^ = ^ -vj/Saj, for all a. By Theorem 5.5,
+this implies that
+
+                   ^ - E ^^a € {°^ R 1 ^^(fl)'') = °}= ^(5)-
+                          |a|<m
+
+
+   Moreover, d •= Y^jVjPj and so d 6 S'T(0), as required.
+   (ii) By part (i), T is a coherent Pgan-module. Since £7 is connected and Stein, Cartan's
+Theorem B implies that ^{U) = H°{U, T^ = H°(?7, V^r(Q)) = V^(U}r{^) (see
+[9, Theorem 7.4.3] and [1, Section V.2.9]). D
+
+
+                                           Acknowledgement
+
+ This research was conducted while the first author was visiting the University of
+Michigan and supported by the NSF. He would like to thank both institutions.
+
+
+
+                                               REFERENCES
+
+ [1] J.-E. BJORK, Rings of Differential Operators, North Holland, Amsterdam, 1979.
+ [2] A. BOREL et al.. Algebraic D-modules, Academic Press, Boston, 1987.
+ [3] H. CARTAN and S. EILENBERG, Homological Algebra, Princeton University Press, Princeton, 1956.
+ [4] J. DIXMIER, Champs de vecteurs adjoints sur les groupes et algebres de Lie semi-simples (J. Reine Angew.
+        Math., Vol. 309, 1979, pp. 183-190).
+ [5] K. R. GOODEARL and R. B. WARFIELD, Jr., An Introduction to Noncommutative Noetherian Rings, Cambridge
+        Univ. Press, Cambridge, 1989.
+ [6] HARISH-CHANDRA, Invariant distributions on Lie algebras (Amer. J. Math., Vol. 86, 1964, pp. 271-309).
+ [7] HARISH-CHANDRA, Invariant differential operators and distributions on a semi-simple Lie algebra {Amer.
+        J. Math., Vol. 86, 1964, pp. 534-564).
+ [8] HARISH-CHANDRA, Invariant eigendistributions on a semi-simple Lie algebra (Inst. Hautes Etudes Sci. Publ.
+        Math., Vol. 27, 1965, pp. 5-54).
+ [9] L. HORMANDER, An Introduction to Complex Analysis in Several Variables, North-Holland, Amsterdam, 1979.
+[10] R. HOTTA and M. KASHIWARA, The invariant holonomic system on a semisimple Lie algebra (Invent. Math.,
+        Vol. 75, 1984, pp. 327-358).
+[11] A. JOSEPH, A generalisation of Quillen's Lemma and its applications to the Weyl algebras (Israel J. Math.,
+        Vol. 28, 1977, pp. 177-192).
+
+
+4e SERIE - TOME 29 - 1996 - N° 3
+                       THE KERNEL OF AN HOMOMORPHISM OF HARISH-CHANDRA                                       397
+
+
+[12] M. KASHIWARA, The Invariant Holonomic System on a Semisimple Lie Group (in "Algebraic Analysis" dedicated
+        to M. Sato, Vol. 1, 1988, pp. 277-286, Academic Press).
+[13] B. KOSTANT, Lie group representations on polynomial rings (Amer. J. Math., Vol. 85, 1963, pp. 327-404).
+[14] T. LEVASSEUR and J. T. STAFFORD, Invariant differential operators and an homomorphism of Harish-Chandra
+        (J. Amer. Math. Soc., Vol. 8, 1995, pp. 365-372).
+[15] J. C. MCCONNELL and J. C. ROBSON, Noncommutative Noetherian Rings, John Wiley, Chichester, 1987.
+[16] S. MONTGOMERY, Fixed Rings of Finite Automorphism Groups of Associative Rings (Lecture Notes in
+        Mathematics, Vol. 818, Springer-Verlag, Berlin/New York, 1980).
+[17] R. W. RICHARDSON, Commuting varieties ofsemisimple Lie algebras and algebraic groups (Compositio Math.,
+        Vol. 38, 1979, pp. 311-322).
+[18] G. W. SCHWARZ, Lifting differential operators from orbit spaces {Ann. Sci. Ecole Norm. Sup., Vol. 28, 1995,
+        pp. 253-306).
+[19] G. W. SCHWARZ, Invariant differential operators (Proceedings of the 1994 International Congress of
+        Mathematics, to appear).
+[20] V. S. VARADARAJAN, Harmonic Analysis on Real Reductive Groups, Part I (Lecture Notes in Mathematics
+        Vol. 576, Springer-Verlag, Berlin/New York, 1977).
+[21] N. WALLACH, Invariant differential operators on a reductive Lie algebra and Weyl group representations
+        (J. Amer. Math. Soc., Vol. 6, 1993, pp. 779-816).
+
+                                                                     (Manuscript received March 10, 1995;
+                                                                                  revised August 1, 1995.)
+
+
+
+
+                  T. LEVASSEUR
+        Departement de Mathematiques,
+              Universite de Poitiers,
+             86022 Poitiers, France.
+     E-mail: levasseu@knuth.univ-poitiers.fr
+                  J. T. STAFFORD
+          Department of Mathematics,
+            University of Michigan,
+          Ann Arbor, MI 48109, USA.
+         E-mail: jts@math.lsa.umich.edu
+
+
+
+
+ANNALES SCIENTIFIQUES DE L'ECOLE NORMALE SUPERIEURE
+
