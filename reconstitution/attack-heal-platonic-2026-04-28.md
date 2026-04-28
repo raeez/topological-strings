@@ -8132,7 +8132,7 @@ End of Phase-4 EXEC W5-X39 append.
 
 **Totals.** Manuscript-line delta: ~23 (Section 1 +9 + Section 3 +14, with Section 2 net 0). Apparatus-line delta: ~18 (.gitignore +7 + Makefile substring + README rewrite). Tracked-file additions: 9-12 new `.tex` files + 1 new tracked `.sty` (or symlink-flip) + 3 modified files (.gitignore, Makefile, README.md).
 
-**Verification plan.** Pre-commit em-dash / AI-tells / agent-language / authorship-purity scans on every modified file. Post-commit `make clean && make pdf` build with 156-157 page target; pdfinfo Subject/Keywords populated. Cold-clone reproducibility: fresh clone + `make pdf` exit 0.
+**Verification plan.** Pre-commit voice/em-dash/AI-tell/authorship-purity scans on every modified file. Post-commit `make clean && make pdf` exit 0; 156-157 page target; pdfinfo Subject/Keywords populated; cold-clone fresh + `make pdf` exit 0.
 
 **Cross-validation.** Zero conflicts. W5-X26 R3 site (line 5424) and W5-X32 acknowledgements site (line 5959) are 535 lines apart. W5-X32 and W5-X33 TEXDEBRIS asks are idempotent. W5-X27 renames and W5-X26 new labels are distinct identifiers. \keywords and pdfkeywords are independent constructs.
 
