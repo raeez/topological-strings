@@ -1,9 +1,9 @@
-\section{Factorization Current Conventions as Koszul-Duality Interface}
+\section{Factorization Current Conventions for the CE/PV Interface}
 \label{sec:app-factorization-current-conventions}
 
 This appendix fixes the algebraic source/target interface carried by
-the factorization-current theorem.  The interface is universal for the
-Koszul-duality comparison used in the formal-local package: interval Hamiltonian
+the factorization-current theorem.  The interface is used before the
+admissible bar-cobar/enveloping criterion: interval Hamiltonian
 currents form the CE source, distributional Matlis principal parts form
 the cotangent current target, and the CE/PV generator dictionary is
 \[
@@ -16,6 +16,10 @@ Costello brane-defect graph theorem are separate obstruction problems,
 recorded in Remark~\ref{rmk:unreduced-lift-status},
 Appendix~\ref{sec:app-unreduced-bv-qme}, and
 Problem~\ref{prob:analytic-graph-realization}.
+All completed symmetric algebras in this appendix are interpreted
+degreewise in the chosen current category; finite symmetric powers are
+formed before completion, and brackets extend continuously from the
+displayed length-one current formulas.
 
 \begin{defn}[Interval Hamiltonian current algebra]
 \label{def:app-factorization-current-source}
@@ -41,6 +45,12 @@ Problem~\ref{prob:analytic-graph-realization}.
   zero on \(\Omega^\bullet_c\), tensored with the identity on
   \(\mathfrak h\).  Polynomial formulas use the dense scalar-reduced
   subalgebra \(\bar A=\C[z_1,z_2]/\C\cdot1\subset\mathfrak h\).
+  For \(j:I\hookrightarrow J\), extension by zero is smooth because
+  every element of \(\Omega_c^\bullet(I)\) has support compactly
+  contained in \(I\).  On CE cochains the induced map is the dual
+  coproduct/pullback; the covariant factorization structure belongs to
+  the compact-support current target, not to a restriction map on raw
+  CE cochains.
 
   The notation \(a(t)dt\otimes f\) is the oriented density label paired
   with distributional cotangent currents.  It does not convert
@@ -81,7 +91,8 @@ Problem~\ref{prob:analytic-graph-realization}.
     \mathfrak g_I=\mathfrak h_I\ltimes\mathcal P_I[1],
   \]
   where \(\mathfrak h_I\) acts on \(\mathcal P_I\) by the product of
-  multiplication of currents on \(I\) and the Matlis coadjoint action
+  the \(C_c^\infty(I)\)-module operation \(B\mapsto aB\) on compactly
+  supported currents and the Matlis coadjoint action
   on \(\mc P\).  On degree-zero labels this action is
   \[
     (a\otimes f)\cdot(B\otimes\rho)
@@ -163,6 +174,9 @@ Problem~\ref{prob:analytic-graph-realization}.
       \widehat\otimes
       \widehat{\mathbf S}(\mathcal P_I[1]).
   \]
+  This is the same reduced principal-part target denoted
+  \(A_\partial^{\mathrm{pp}}(I)\) in the main text; the superscript
+  \(\mathrm{cur}\) records the current-interface role in this appendix.
   It enlarges the Hamiltonian target
   \(A_\partial^{\mathrm{Ham}}(I)=\widehat{\mathbf S}(\mathfrak h_I)\)
   by adjoining the odd principal-part current generators
@@ -181,7 +195,7 @@ Problem~\ref{prob:analytic-graph-realization}.
     \Phi_I^{\mathrm{cur}}(u_{a(t)dt\otimes f})=B_f(a)
   \]
   extends uniquely to a continuous morphism of completed
-  graded-commutative algebras from the interval CE source
+  graded-commutative algebras from the interval CE cofactorization source
   \(C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g_I)\) to the
   reduced defect-current central-operation target
   \(A_\partial^{\mathrm{cur}}(I)\).  On length-one current generators
@@ -206,7 +220,8 @@ Problem~\ref{prob:analytic-graph-realization}.
   the nonzero Hamiltonian current bracket is the moment-map bracket
   displayed above.  Thus \(u_{a(t)dt\otimes f}\mapsto B_f(a)\) and
   \(c_\lambda\mapsto\theta_\lambda\) form the current-level
-  source/target interface for the Koszul-duality theory.
+  source/target interface used before the admissible bar-cobar/enveloping
+  criterion.
 \end{thm}
 
 \begin{proof}
@@ -241,8 +256,11 @@ Problem~\ref{prob:analytic-graph-realization}.
   target bracket is a biderivation, the generator identities determine
   the full completed current interface.
 
-  Factorization compatibility is strict.  Extension by zero commutes
-  with pointwise products \(ab\) and with distribution products \(aB\).
+  Factorization compatibility is strict in the cofactorization-source
+  convention.  Extension by zero on current Lie algebras induces the CE
+  coproduct, and the target product is compatible with pointwise
+  products \(ab\) and with the \(C_c^\infty(I)\)-module operation
+  \(B\mapsto aB\).
   If two intervals are disjoint, the products have empty support and
   the mixed brackets vanish.  The target product is graded
   commutative, so multiplication by an image generator has zero
@@ -327,13 +345,13 @@ Problem~\ref{prob:analytic-graph-realization}.
 
 \begin{rmk}[Orientation reversal]
 \label{rmk:app-factorization-orientation-reversal}
-  The orientation convention is the ordinary convention for
-  one-dimensional densities and currents.  Under an
-  orientation-reversing coordinate change, \(dt\) contributes its usual
-  sign, and compactly supported currents transform by pullback of
-  densities.  No additional sign is inserted from
+  The orientation convention is the ordinary convention for oriented
+  one-forms and current one-forms.  The labels \(a(t)dt\) and regular
+  currents \(B=b(t)dt\) transform by pullback,
+  \(a(\psi(s))\psi'(s)\,ds\) and \(b(\psi(s))\psi'(s)\,ds\).  No
+  additional sign is inserted from
   \(u_{a(t)dt\otimes f}\), \(c_\lambda\), \(\theta_\lambda\), or the
-  principal-part label \(\rho\).  If the written density is held fixed
+  principal-part label \(\rho\).  If the written one-form is held fixed
   while only the chosen orientation is reversed, the sign is exactly the
   sign of \(dt\).
 \end{rmk}

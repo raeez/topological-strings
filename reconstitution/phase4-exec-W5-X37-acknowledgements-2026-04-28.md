@@ -218,7 +218,7 @@ bibliography entry modified.** Purely additive.
 ## §6. Sanity firewall
 
 This proposal does not commit any text to the manuscript. The
-landing site has been verified by reading `main.tex` lines
+landing site has been verified by interpretation `main.tex` lines
 5933-5970 directly. The bibliography landmark (line 5968,
 `\begin{biblist}`) is unchanged. The appendix landmark (line 5960,
 `\appendix`) is unchanged. The five appendix `\input{}` lines

@@ -49,7 +49,7 @@ Phase-4 G1 research charter has six tasks T1–T6:
   boundary-line module).
 * **T5.** Outline a research program with milestones (3 mo / 6
   mo / 12 mo / 18 mo+), deliverables, collaboration, risk.
-* **T6.** Primary-source reading list with section / theorem
+* **T6.** Primary-source study list with section / theorem
   cites.
 
 The Phase-4 cycle is research-only; no master-ledger inscription
@@ -958,10 +958,10 @@ template). Open-obligations transparency at every step.
 
 ---
 
-## §T6. Primary-source reading list
+## §T6. Primary-source study list
 
 The following theorems / sections from primary sources are
-required reading for the Phase-4 G1 research program. Cited by
+required interpretation for the Phase-4 G1 research program. Cited by
 author / year / section / theorem-number per CLAUDE.md voice.
 
 ### T6.A. Higher-algebra apparatus
@@ -1090,9 +1090,9 @@ author / year / section / theorem-number per CLAUDE.md voice.
   - §1–§3 (DG quotient apparatus; useful for Avenue (D)
     quotient construction).
 
-### T6.J. Reading-priority recommendation
+### T6.J. Interpretation-priority recommendation
 
-For a single-researcher first-year program, the reading-priority
+For a single-researcher first-year program, the study-priority
 order:
 
 1. (M-3 prereq) Lurie HA §5.5.4 + CG Vol. I §6.4–6.5
@@ -1108,7 +1108,7 @@ order:
 6. (M-18 prereq) Hartshorne *Residues and Duality* III.2 +
    Frenkel-Ben-Zvi (residue / vertex algebra; ~2 weeks).
 
-Total foundational reading: ~16 weeks before sustained research
+Total foundational interpretation: ~16 weeks before sustained research
 work begins. This is consistent with the M-3 milestone.
 
 ---
@@ -1138,7 +1138,7 @@ W3-W31-T2 (5d M-theory bridge) — would supply (I-1)–(I-3) if
 unconditionalized; W3-W26-T1 (column-Verma functoriality) —
 constrains M-37 ingredients. Risk assessment names four risk
 classes; mitigation via partial-success publication. Total
-foundational reading ~16 weeks; full program ~18 mo+.
+foundational interpretation ~16 weeks; full program ~18 mo+.
 
 ---
 

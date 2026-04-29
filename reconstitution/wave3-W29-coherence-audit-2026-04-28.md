@@ -267,7 +267,7 @@ $\R^2\times\C^2$ Weiss in W2 and W9.
 
 ### W11's hypothesis pass + W2/W9's "genuine residual" + W24's "structurally outside" form a coherent picture
 
-**Coherent reading.** The factorization-theorem situation is:
+**Coherent interpretation.** The factorization-theorem situation is:
 - (a) Theorem E is **proved** on $\R$ in the admissible Tate envelope
   via the eight manuscript steps (W24).
 - (b) The **brane-line Weiss-cosheaf** is discharged via cosheaf+

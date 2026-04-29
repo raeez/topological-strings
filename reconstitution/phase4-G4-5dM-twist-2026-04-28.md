@@ -513,8 +513,8 @@ representative form $c(\epsilon_1, \epsilon_2) = -(\epsilon_1+
 \epsilon_2)^3/(\epsilon_1\epsilon_2\epsilon_3)$ should be either
 confirmed or replaced by the inscribed-source formula.
 
-**Resources.** PDF acquisition (arXiv) + paper reading + memo
-writing. ~ 30–60 hours of close reading.
+**Resources.** PDF acquisition (arXiv) + paper interpretation + memo
+writing. ~ 30–60 hours of close interpretation.
 
 **Failure mode.** If the CGW PDF reveals the boundary VOA central
 charge is computed *only* via lattice / cohomological data not

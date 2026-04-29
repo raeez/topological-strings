@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""W10 / wave-3 attack-heal: extended derived-intersection checks at N >= 4.
+"""Extended derived-intersection and scalar QME obstruction checks.
 
-Mandate of W10 (Witten + Examples lens):
+Checks:
   T1. Extend the N=2 derived-intersection narrative to N=4 (and N=5).
-      Does the wave-2 narrative scale?
+      Does the derived-intersection narrative scale?
   T2. Compute the one-loop anomaly diagram for Q psi = [phi_1, phi_2]
       and verify it equals the Capelli term hbar*N (i.e. the
-      M-31 + W6-05 identification of `prob:weighted-rg-locality`).
+      scalar contact class of `thm:app-scalar-contact-qme-class`).
   T3. Witten-index sanity: compute the partition function of the
       derived-intersection BV complex at finite N and compare to
       a known matrix-model computation.
@@ -82,7 +82,7 @@ def dim_table(N_max: int = 6) -> None:
     print("Excess = #psi - codim grows as N (excess(N) = N at every N).")
     print("Tr psi alone gives a lower bound 1 on dim Tor^1; the rest of")
     print("the excess records higher-Tor classes and Tr(psi^k) for k >= 1.")
-    print("The wave-2 W3 narrative scales to N >= 2: derived intersection")
+    print("The derived-intersection narrative scales to N >= 2:")
     print("is non-vacuous at every finite N >= 2.")
 
 
@@ -115,7 +115,7 @@ def one_loop_anomaly_capelli(N: int, hbar: Fraction = Fraction(1)) -> Fraction:
     Result: anomaly = hbar * N at one loop.
 
     Cross-reference: appendix-unreduced-bv-qme.tex
-    `prop:app-scalar-contact-qme-class`:
+    `thm:app-scalar-contact-qme-class`:
        Tr(A * X * Y) - Tr(A * Y * X) = hbar * N * Tr(A) mod
        (Weyl-reduced moment ideal).
     The N-dependence is precisely the Tr_{gl_N}(I) = N trace, which is
@@ -144,10 +144,10 @@ def one_loop_anomaly_capelli_check() -> None:
     print()
     print("Conclusion: the one-loop anomaly is *exactly* the hbar*N")
     print("Capelli term identified in appendix-unreduced-bv-qme.tex")
-    print("`prop:app-scalar-contact-qme-class`, lines 93-126:")
+    print("`thm:app-scalar-contact-qme-class`, lines 93-126:")
     print("    Tr(A X Y) - Tr(A Y X) = hbar N Tr(A) mod moment ideal.")
-    print("This is the [bar c] cocycle of Theorem G with coefficient")
-    print("hbar*N; equivalently, M-31's identification of the BV-side")
+    print("This is the [bar c] cocycle of the scalar U(1) anomaly with coefficient")
+    print("hbar*N; equivalently, the BV-side")
     print("[Tr psi]_BV with the closed [bar c]_CE class is the chain-")
     print("level avatar of this one-loop anomaly diagram.")
     print()
@@ -155,7 +155,7 @@ def one_loop_anomaly_capelli_check() -> None:
     print("  The mixed brane-defect QME obstruction class")
     print("    [hbar N bar c] in H^1(O_loc(E_w), Q + {I_0, -})")
     print("  is **non-zero** at hbar^1 (= one-loop) for every N >= 1.")
-    print("  By prop:app-scalar-contact-qme-class, this class is also")
+    print("  By thm:app-scalar-contact-qme-class, this class is also")
     print("  not exact on the scalar-reduced Hamiltonian source.")
     print("  Hence prob:weighted-rg-locality, in its current statement")
     print("  (vanishing of the obstruction class on the unreduced gl_N")
@@ -266,7 +266,7 @@ def witten_index_sanity_check() -> None:
     print("constant-Hamiltonian = N in this counting). The partition")
     print("function is independent of the BV regularization scheme")
     print("at the level of integer coefficients, which is the sanity")
-    print("check that the M-31 identification is well-defined.")
+    print("check that the BV/CE scalar-class identification is well-defined.")
 
 
 # =========================================================================
@@ -315,9 +315,9 @@ def koszul_dual_test_abelian() -> None:
     print("  S(h)               (CE coalgebra side)")
     print("   <- Koszul duality ->")
     print("  CE(h ltimes h^v_cont[1])  (PV polyvector side)")
-    print("under the mapping c^I -> theta^I, u_I -> O_I of Theorem C.")
+    print("under the mapping c^I -> theta^I, u_I -> O_I of the CE/PV theorem.")
     print()
-    print("VERDICT on T4: M-31 / Theorem C respects Koszul duality")
+    print("VERDICT on T4: the CE/PV theorem respects Koszul duality")
     print("in the simplest abelian example. Closes the simplest sanity")
     print("check on the formal symplectic disk's CE/PV identification.")
 
@@ -355,7 +355,7 @@ def boundary_anomaly_inflow_check() -> None:
     print("  removed in the scalar-Hamiltonian quotient.")
     print()
     print("CONSISTENCY CHECK: the boundary condition is consistent IFF")
-    print("  the bulk anomaly (Theorem G's [bar c] class) equals the")
+    print("  the bulk anomaly (the [bar c] scalar class) equals the")
     print("  boundary anomaly (Tr_{gl_N}(I) = N).")
     print()
     print("Result: by appendix-unreduced-bv-qme.tex line 124,")
@@ -364,10 +364,10 @@ def boundary_anomaly_inflow_check() -> None:
     print("This MATCHES the boundary trace anomaly Tr(I) = N exactly.")
     print()
     print("VERDICT on T5: the Dirac brane probe boundary condition is")
-    print("**consistent under anomaly inflow** with the bulk Theorem G")
+    print("**consistent under anomaly inflow** with the bulk scalar anomaly")
     print("anomaly. The N-coefficient is the *same* on both sides; the")
     print("bulk CE class [bar c] absorbs the boundary trace anomaly.")
-    print("This unifies M-31 (BV/CE identification) with the W3-02")
+    print("This unifies the BV/CE scalar-class identification with the")
     print("U(1)_ghost compatibility statement: there is *one* anomaly,")
     print("matched on both bulk and boundary, with coefficient N.")
 
@@ -379,7 +379,7 @@ def boundary_anomaly_inflow_check() -> None:
 
 def run() -> None:
     print("=" * 60)
-    print("W10 / wave-3 / Witten + Examples lens")
+    print("Extended derived-intersection + scalar QME obstruction checks")
     print("Extended derived-intersection + QME anomaly check")
     print("=" * 60)
     dim_table(N_max=6)
@@ -389,21 +389,21 @@ def run() -> None:
     boundary_anomaly_inflow_check()
     print()
     print("=" * 60)
-    print("W10 SUMMARY:")
+    print("SUMMARY:")
     print("  T1: dim table extended N=1..6; #psi - codim = N at every N.")
-    print("      W3 narrative scales without modification; the excess")
+    print("      derived-intersection narrative scales; the excess")
     print("      Tor-1 generators are uniformly N-many at every N >= 2.")
     print("  T2: one-loop anomaly = hbar * N exactly = Capelli class")
     print("      [bar c] coefficient. prob:weighted-rg-locality has a")
     print("      non-vanishing obstruction class on the standard gl_N")
     print("      scalar-reduced source. The vanishing claimed in")
-    print("      prop:wt-conditional-qme-lift is a HYPOTHESIS, not a")
+    print("      prop:wt-qme-lift-obstruction-vanishing is a HYPOTHESIS, not a")
     print("      theorem, on the unreduced source.")
     print("  T3: BV partition function matches Macdonald-Cheah /")
     print("      Hilbert-scheme partition function at N = 1, 2, 3.")
     print("  T4: Koszul duality S(h) <-> CE(h ltimes h^v[1]) holds in")
-    print("      the simplest abelian example, consistent with M-31 /")
-    print("      Theorem C.")
+    print("      the simplest abelian example, consistent with the")
+    print("      CE/PV theorem.")
     print("  T5: Boundary anomaly inflow: bulk [bar c] absorbs boundary")
     print("      Tr_{gl_N}(I) = N. Coefficient matches; brane probe is")
     print("      consistent under anomaly inflow.")
@@ -411,19 +411,19 @@ def run() -> None:
     print("VERDICT on prob:weighted-rg-locality:")
     print("  *Conditionally false* on the unweighted scalar-reduced gl_N")
     print("  source: the one-loop obstruction class is hbar*N*[bar c],")
-    print("  non-zero. C2(W)-q therefore CANNOT be unconditional on the")
+    print("  non-zero. The weighted quantum lift therefore CANNOT be unconditional on the")
     print("  unreduced source. The `escape routes' (supertrace,")
     print("  chi(I)=0 central character, unreduced primitive) are the")
-    print("  only honest paths. W6-05's identification of C2(W)-q with")
-    print("  Theorem G's anomaly is *correct*; the residual is genuinely")
+    print("  only honest paths. The identification of this obstruction with")
+    print("  the scalar U(1) anomaly is correct; the residual is genuinely")
     print("  obstructed, not merely difficult.")
     print()
-    print("VERDICT on stable core (Wave-2 W3, Wave-3 W6 amended):")
-    print("  Theorems A, B, C1^fw, C1^comp, C2(NT), C2(W)-cl, C2(R), D,")
-    print("  E, F, G remain stable.")
-    print("  C2(W)-q is conditional on a HYPOTHESIS now KNOWN to fail")
-    print("  on the standard data; the C2(W)-q residual is upgraded")
-    print("  from `open' to `obstructed unless data is changed'.")
+    print("VERDICT on stable core:")
+    print("  The finite derived-intersection, CE/PV, Moyal, and scalar")
+    print("  anomaly checks remain stable.")
+    print("  The weighted quantum lift is conditional on a HYPOTHESIS")
+    print("  known to fail on the standard scalar-reduced gl_N data;")
+    print("  the residual is obstructed unless the data is changed.")
     print("=" * 60)
 
 

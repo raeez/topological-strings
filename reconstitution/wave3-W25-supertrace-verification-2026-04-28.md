@@ -632,7 +632,7 @@ $\prod_k(1-q^k)^{-(N-M)}|_{N=M}=1$ has the trivial expansion
 $1,0,0,0,\ldots$ — confirming the partition-function vanishing
 to all orders.
 
-**Polyakov anomaly-via-partition-function reading.** In
+**Polyakov anomaly-via-partition-function interpretation.** In
 topological QFT (Witten 1988, Vafa 1991), the partition function
 is a generating function for the Witten index of supersymmetric
 states. Vanishing of the partition function at super-balance is

@@ -119,7 +119,7 @@ The buggy indicator formula fails Lie consistency on
 ============================================================================
 ```
 
-**Reading.** 165,600 commutator instances on the corrected formula
+**Interpretation.** 165,600 commutator instances on the corrected formula
 exhibit zero Lie-consistency failures, including 46,080 instances
 spanning Laurent generators (negative exponents). The buggy indicator
 fails on 12,588 of 119,520 polynomial-generator instances ($\approx
@@ -230,7 +230,7 @@ piece. Findings:
 | W1 Kapranov | "The bi-infinite parent / residue-duality reframe of W4 §4 (lines 276-305) also survives" | line 687 | **S** | Cites the *reframe* (sign-flip + two-cone), not the formula coefficients. The reframe survives intact (now four-cone). |
 | W2 Gaiotto | "Under residue duality (M-29 / W4 universal categorical no-go), $\mathfrak h$ and $\mathcal P$ are positive/negative cones of one bi-infinite parent module on $\Z^2$" | line 405 | **R** | Cites the *cone* picture. Now four cones; the $\mathfrak h$ / $\mathcal P$ identification with positive / negative cone is unchanged, but the picture is enriched by the two mixed cones. |
 | W2 Gaiotto | "the bi-infinite parent module to be present in a single category" | line 416 | **S** | Existence question; indicator-independent. |
-| W2 Gaiotto | W3-W2-10 (Gaiotto-lens reading of M-29) | lines 420-429 | **S** | Reads at meta-level: "no single-object glue" interpretation. Indicator-independent. |
+| W2 Gaiotto | W3-W2-10 (Gaiotto-lens interpretation of M-29) | lines 420-429 | **S** | Reads at meta-level: "no single-object glue" interpretation. Indicator-independent. |
 | W3 Nekrasov | itself the source of the correction; W3-W3-01..07 | full file | **S/V** | W3-W3-01 (the bug FINDING) and W3-W3-02 (the correction) are exactly what we are auditing FROM. They survive as the mathematical content of M-38. The HEAL proposals H-W3-W3-A, H-W3-W3-B, H-W3-W3-C are the proposals being elevated. |
 | W4 Gelfand | "$z_1^p z_2^q\cdot\rho_{a,b} = -(pb-qa+p-q)\rho_{a-p+1,b-q+1}$ is finite in the bidegree direction" | line 559 | **S** | Cites the *Matlis* formula (appendix, line 147), not the bi-infinite formula. Indicator-independent. |
 | W4 Gelfand | "$F_{p,q}: \widetilde\Psi_{a,b} \mapsto (pb - qa) \widetilde\Psi_{a+p-1, b+q-1}$" | line 111 | **S** | Cites the *PBW positive cone* formula (no indicator). Survives. |

@@ -1,6 +1,6 @@
 % !TEX root = main.tex
 %
-% Tate-conilpotent bar-cobar Quillen equivalence.
+% Lower-central Tate-pronilpotent bar-cobar Quillen equivalence.
 %
 % Relative model-categorical promotion of the cochain-level Tate
 % bar-cobar identity of \ref{lem:continuous-bar-cobar}.  The Quillen
@@ -52,8 +52,11 @@ complexes in $\Cat{TateVec}$, large enough to contain every CE
   quasi-isomorphisms: quasi-isomorphisms on every finite quotient
   and on associated graded.  The tensor product is the completed
   Tate tensor product on Mittag-Leffler systems, and filtered inverse
-  limits with surjective transition maps are exact.  All Quillen
-  statements below are relative to this envelope.
+  limits with surjective transition maps are exact.  Assume this
+  envelope satisfies the transfer and smallness hypotheses for the
+  bar-cobar adjunction, the monoid axiom for completed tensor products,
+  and compatibility of \(\widehat\otimes\) with the finite-window model
+  structures.  All Quillen statements below are relative to this envelope.
 \end{stmt}
 
 \begin{lem}[Mittag-Leffler dictionary for closed Tate windows]
@@ -118,15 +121,20 @@ complexes in $\Cat{TateVec}$, large enough to contain every CE
     \mathfrak o^{\mathrm{Cas}}_{M,N}
       =(\pi_{M,N}\otimes\pi^\vee_{M,N})C_M-C_N .
   \]
-  The closed window system is \emph{CE/PV-admissible} if these three
-  obstruction terms vanish for all \(M\geq N\).
+  The closed window system is \emph{cochain-CE/PV-admissible} if
+  \(\mathfrak o^{\mathrm{br}}\) and \(\mathfrak o^{\mathrm{coad}}\)
+  vanish for all \(M\geq N\).  It is
+  \emph{kernel-admissible} only after the additional Casimir term
+  \(\mathfrak o^{\mathrm{Cas}}\) vanishes in the chosen completed tensor
+  category.  The Casimir condition is not part of the coordinate CE/PV
+  cochain identity.
 \end{defn}
 
-\begin{lem}[Closed CE/PV identity passes through finite windows]
+\begin{lem}[Closed CE/PV finite-window compatibility and variance boundary]
 \label{lem:closed-ce-pv-window-limit}
   Assume the closed window system of
   Definition~\ref{defn:closed-window-obstruction-terms} is
-  CE/PV-admissible and each finite window has the finite cotangent
+  cochain-CE/PV-admissible and each finite window has the finite cotangent
   CE/PV identity
   \[
     \Phi_M\colon
@@ -135,15 +143,22 @@ complexes in $\Cat{TateVec}$, large enough to contain every CE
     \xrightarrow{\sim}
     \mathrm{PV}\bigl(\mathbf S(\mathfrak h_{\leq M})\bigr).
   \]
-  Then the \(\Phi_M\) form a strict inverse system and induce an
-  admissible filtered quasi-isomorphism
+  Then the \(\Phi_M\) are compatible as finite coordinate tests under the
+  contravariant CE pullbacks and the corresponding PV coordinate maps.
+  They do not by themselves form an inverse system of dg cochain
+  projections.  A completed admissible filtered quasi-isomorphism
   \[
-    \Phi=\varprojlim_M\Phi_M\colon
+    \Phi\colon
     C^\bullet_{\mathrm{CE},\mathrm{cont}}
       \bigl(\mathfrak h\ltimes D_{\mathrm{cont}}[1]\bigr)
     \xrightarrow{\sim}
-    \mathrm{PV}\bigl(\widehat{\mathbf S}_{\mathrm{Tate}}(\mathfrak h)\bigr).
+    \mathrm{PV}\bigl(\widehat{\mathbf S}_{\mathrm{Tate}}(\mathfrak h)\bigr)
   \]
+  follows only after one supplies either a chain-side inverse limit with
+  exact continuous dualization or a topology whose cochain transition maps
+  are dg maps.  If the kernel-admissible Casimir condition is also
+  supplied, the same finite windows carry compatible \(P_0\)-pairings and
+  kernels in that chosen tensor category.
 \end{lem}
 
 \begin{proof}
@@ -154,24 +169,22 @@ complexes in $\Cat{TateVec}$, large enough to contain every CE
   \(\mathfrak o^{\mathrm{coad}}_{M,N}\) says the cotangent-coordinate
   part of the CE differential, and equivalently the Lichnerowicz
   differential on \(O\)-coordinates, commutes with transition maps.
-  Vanishing of \(\mathfrak o^{\mathrm{Cas}}_{M,N}\) says the finite
-  \(P_0\)-brackets and BV coefficient pairings are compatible under
-  transition.  Therefore the squares with \(\Phi_M\) and \(\Phi_N\)
-  commute.
-
-  Taking the inverse limit gives the displayed completed complexes.
-  Lemma~\ref{lem:tate-mittag-leffler-dictionary} applies because the
-  transition maps are surjective and finite-dimensional on every
-  window.  Since every \(\Phi_M\) is a quasi-isomorphism and the
-  associated graded map is the same finite generator substitution, the
-  inverse-limit map is an admissible filtered quasi-isomorphism.
+  Therefore the finite squares with \(\Phi_M\) and \(\Phi_N\) commute in
+  the variance appropriate to cochains.  A quotient
+  \(\mathfrak h_{\leq M}\twoheadrightarrow\mathfrak h_{\leq N}\) induces
+  CE cochain maps by pullback, not by projection from \(M\) to \(N\).
+  Thus inverse-limit language on cochains requires the additional
+  continuous-dualization or topology hypothesis stated above.  Vanishing
+  of \(\mathfrak o^{\mathrm{Cas}}_{M,N}\) is the separate statement that
+  the finite \(P_0\)-brackets and BV coefficient pairings are compatible
+  under transition in the chosen kernel-admissible tensor category.
 \end{proof}
 
 \subsubsection{Direct universal recognition}
 
 \begin{defn}[Universal open-side twisting cochain]
 \label{defn:universal-open-side-twisting-cochain}
-  Fix a candidate formal-local Koszul datum
+  Fix a candidate admissible filtered-cobar datum
   \[
     \mathfrak h=\varprojlim_M\mathfrak h_{\leq M},\qquad
     D=\varinjlim_M\mathfrak h_{\leq M}^{\vee},\qquad
@@ -396,13 +409,14 @@ complexes in $\Cat{TateVec}$, large enough to contain every CE
 
 \begin{proof}
   The equality \(\omega_{\mathrm{win}}=0\) is equivalent to strict
-  finite-window compatibility of the CE differential, the Schouten
-  differential, and the finite \(P_0\)-pairings; this is exactly
+  finite-window compatibility of the CE differential and the Schouten
+  differential, with \(P_0\)-pairings added only in the
+  kernel-admissible tensor category; this is exactly
   Lemma~\ref{lem:closed-ce-pv-window-limit} and
   Theorem~\ref{thm:universal-formal-local-ce-pv-recognition}.  The
-  vanishing of \(\mathcal O_{\mathrm{top}}\) is the Milnor condition
-  identifying cohomology of the completed CE/PV objects with the inverse
-  limit of finite-window cohomology.
+  vanishing of \(\mathcal O_{\mathrm{top}}\) is the Milnor and variance
+  condition identifying cohomology of the completed CE/PV objects with
+  the admissible finite-window calculation.
 
   The equation \(\mathcal O_{\mathrm{MC}}(\tau)=0\) is the
   Maurer--Cartan equation in the continuous convolution dg Lie algebra.
@@ -664,10 +678,11 @@ through the bar-cobar adjunction itself.
   \end{enumerate}
   Items~(i)-(iii) are checked windowwise (each Tate window is
   finite-dimensional, so the standard Lefevre-Hasegawa proof
-  applies) and assemble by Mittag-Leffler exactness. The unit
+  applies) and assemble by the transfer, smallness, monoid, completed
+  tensor, and Mittag-Leffler exactness hypotheses built into
+  Statement~\ref{stmt:tate-model-envelope}. The unit
   weak-equivalence~(iii) is precisely \alpharef\ item~3
-  (admissible filtered qiso). Therefore the construction lifts
-  verbatim to the admissible Mittag-Leffler Tate envelope.
+  (admissible filtered qiso) inside that envelope.
 \end{proof}
 
 \subsubsection{Bar-cobar Quillen equivalence in the admissible envelope}
@@ -778,11 +793,11 @@ through the bar-cobar adjunction itself.
 
 The Quillen equivalence of \ref{thm:tate-bar-cobar-quillen} is
 \emph{associative} bar-cobar. Specialization to the Lie operad
-gives the cochain-level equivalence used in the CE/PV theorem lane.
+gives the cochain-level equivalence used in the CE/PV theorem.
 
 \begin{cor}[Tate Lie bar-cobar / CE Koszul duality]
   \label{cor:tate-lie-bar-cobar}
-  For $\mathfrak g$ a conilpotent Tate graded Lie algebra in the
+  For $\mathfrak g$ a lower-central Tate-pronilpotent graded Lie algebra in the
   sense of \alpharef, the bar-cobar Quillen equivalence applied
   to $A=\widehat U(\mathfrak g)\in\mathrm{TateAssocAlg}^+$ yields
   the equivalence in the homotopy category
@@ -824,11 +839,12 @@ gives the cochain-level equivalence used in the CE/PV theorem lane.
   (\cite{loday-vallette}*{\S 13.5}).
 \end{proof}
 
-\begin{lem}[Closed-side Tate/Koszul formalism package]
+\begin{lem}[Closed-side Tate formalism package]
 \label{lem:closed-tate-koszul-formalism}
   Let \(\mathfrak h=\varprojlim_M\mathfrak h_{\leq M}\) be a closed
   Hamiltonian Tate Lie algebra whose finite windows are
-  CE/PV-admissible in the sense of
+  cochain-CE/PV-admissible, and kernel-admissible when a \(P_0\) kernel is
+  used, in the sense of
   Definition~\ref{defn:closed-window-obstruction-terms}.  Assume:
   \begin{enumerate}[label=(K\arabic*)]
     \item the shifted cotangent extension
@@ -852,8 +868,10 @@ gives the cochain-level equivalence used in the CE/PV theorem lane.
       \xrightarrow{\ \Phi\ }
     \mathrm{PV}\bigl(\widehat{\mathbf S}_{\mathrm{Tate}}(\mathfrak h)\bigr)
   \]
-  is the finite-window inverse-limit CE/PV identity of
-  Lemma~\ref{lem:closed-ce-pv-window-limit}, and
+  is the admissible completed CE/PV identity obtained from the
+  finite-window family of Lemma~\ref{lem:closed-ce-pv-window-limit}
+  together with the exact continuous-dualization and variance data in
+  (K1)--(K4), and
   \[
     L\Omega C_*^{\mathrm{CE}}(\mathfrak g)
       \simeq \widehat U(\mathfrak g),\qquad
@@ -866,13 +884,14 @@ gives the cochain-level equivalence used in the CE/PV theorem lane.
 \end{lem}
 
 \begin{proof}
-  The first output is exactly
-  Lemma~\ref{lem:closed-ce-pv-window-limit}.  The obstruction terms
-  \(\mathfrak o^{\mathrm{br}}\), \(\mathfrak o^{\mathrm{coad}}\), and
-  \(\mathfrak o^{\mathrm{Cas}}\) are the only possible failures of
-  transition compatibility for the CE differential, the Schouten
-  differential, and the \(P_0\)-pairing on finite windows; their
-  vanishing makes \(\Phi=\varprojlim_M\Phi_M\) well-defined.
+  The first output is Lemma~\ref{lem:closed-ce-pv-window-limit} plus the
+  exact continuous-dualization and variance hypotheses included above.
+  The obstruction terms \(\mathfrak o^{\mathrm{br}}\) and
+  \(\mathfrak o^{\mathrm{coad}}\) are the cochain CE/PV transition
+  obstructions; \(\mathfrak o^{\mathrm{Cas}}\) is the additional
+  kernel/\(P_0\)-pairing obstruction.  Their vanishing does not by itself
+  make \(\Phi=\varprojlim_M\Phi_M\) a cochain inverse limit; the
+  admissible envelope supplies that extra datum.
 
   For the Koszul output, hypotheses (K1)--(K4) put
   \(C_*^{\mathrm{CE}}(\mathfrak g)\) and
@@ -887,24 +906,26 @@ gives the cochain-level equivalence used in the CE/PV theorem lane.
   Mittag-Leffler inverse limit; hence the transition maps are the same.
 \end{proof}
 
-\subsubsection{Application to the local theorem lanes}
+\subsubsection{Application to the local component theorems}
 
 \begin{thm}[Admissible-envelope module reconstruction from the CE/PV identity]
-\label{thm:open-closed-derived-center-derived}
+\label{thm:admissible-envelope-module-reconstruction}
   Let $\mathfrak h_{\mathrm{adm}}$ be a pro-finite-dimensional Lie algebra in
   $\Cat{TateVec}$ whose shifted-cotangent extension
   $\mathfrak g_{\mathrm{adm}}
   =\mathfrak h_{\mathrm{adm}}\ltimes
   \mathfrak h_{\mathrm{adm},\mathrm{cont}}^\vee[1]$
-  satisfies the Tate-conilpotent admissible-envelope hypotheses of
+  satisfies the lower-central Tate-pronilpotent admissible-envelope hypotheses of
   \ref{thm:tate-bar-cobar-quillen}.  Assume further that:
   \begin{enumerate}[label=(M\arabic*)]
     \item the strict cochain map
   $$\Phi\colon C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g_{\mathrm{adm}})
     \longrightarrow \mathrm{PV}\bigl(
     \widehat S_{\mathrm{Tate}}(\mathfrak h_{\mathrm{adm}})\bigr)$$
-      is the finite-window inverse-limit CE/PV quasi-isomorphism of
-      Lemma~\ref{lem:closed-ce-pv-window-limit};
+      is the admissible CE/PV quasi-isomorphism obtained from the
+      finite-window family of Lemma~\ref{lem:closed-ce-pv-window-limit}
+      after the required variance and exact continuous-dualization data
+      are supplied;
     \item the completed dg \(P_0\)-algebras on both sides lie in an
       admissible transferred \(P_0\)-algebra model structure inside
       \(\Cat{TateChain}_{\geq0}^{\mathrm{adm}}\), with weak
@@ -968,7 +989,7 @@ gives the cochain-level equivalence used in the CE/PV theorem lane.
   their Koszul-dual coalgebras. For the operad
   $\mathrm{Lie}_{\Cat{TateVec}}$, Koszul self-duality (with
   shift) gives the equivalence of \ref{cor:tate-lie-bar-cobar}
-  in the Tate-conilpotent setting. The advantage of the model-
+  in the lower-central Tate-pronilpotent setting used here. The advantage of the model-
   categorical proof is concrete: weak equivalences are spelled
   out in terms of admissible filtered qiso of \alpharef, not
   abstractly via the Hammock localization. The two constructions
@@ -989,7 +1010,7 @@ of \alpharef\ or its convergence in the Tate completion.
   \label{prop:quillen-vs-casimir}
   The Quillen equivalence of \ref{thm:tate-bar-cobar-quillen}
   and the resulting $\infty$-categorical equivalence of
-  \ref{thm:open-closed-derived-center-derived}, when their
+  \ref{thm:admissible-envelope-module-reconstruction}, when their
   admissible-envelope hypotheses hold, are independent
   of the convergence of the Tate Casimir element. The cochain
   complexes $C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g)$
@@ -1005,13 +1026,15 @@ of \alpharef\ or its convergence in the Tate completion.
   $\widehat S^c(\mathfrak g[1])$ and $T(\mathfrak g)$ as
   underlying graded objects. Both are well-defined and conilpotent
   in the admissible envelope under \alpharef\ items~1, 2 (continuous
-  dual exact, conilpotent CE coalgebra). The Casimir
-  $\sum_d e_{d,i}\otimes e_d^{i,\vee}$ is an element of
-  $\mathfrak h\widehat\otimes\mathfrak h^\vee_{\mathrm{cont}}$; it
-  is required for the Costello \cite{costello-renormalization}
-  heat-kernel propagator construction at the analytic /
-  factorization-algebra-with-non-strict-bracket level. It is
-  \emph{not} required for the algebraic bar-cobar comparison.
+  dual exact, conilpotent CE coalgebra). The formal Casimir
+  \(\sum_d e_{d,i}\otimes e_d^{i,\vee}\) is a kernel hypothesis only when
+  it converges in the chosen coefficient category; in the strict
+  product/direct-sum Tate endpoint it is precisely the obstruction
+  isolated in Lemma~\ref{lem:tate-casimir-obstruction}.  Such a kernel is
+  required for the Costello \cite{costello-renormalization} heat-kernel
+  propagator construction at the analytic /
+  factorization-algebra-with-non-strict-bracket level. It is \emph{not}
+  required for the algebraic bar-cobar comparison.
 
   Therefore the cochain-level $\Phi$ promotes, in the admissible
   model envelope and only there, to an $\infty$-categorical equivalence. What
@@ -1023,9 +1046,9 @@ of \alpharef\ or its convergence in the Tate completion.
 \begin{prop}[Residual Weiss-cosheaf condition]
   \label{prop:weiss-cosheaf-residual}
   The $\infty$-categorical equivalence of
-  \ref{thm:open-closed-derived-center-derived} on stalks and on
+  \ref{thm:admissible-envelope-module-reconstruction} on stalks and on
   the locally-constant interval-factorization $\mathcal F_{\mathrm{cl}}$
-  of \ref{thm:open-closed-derived-center-factorization} does not,
+  of \ref{thm:hamiltonian-current-factorization} does not,
   by itself, give the Weiss-cosheaf condition for the
   \emph{unreduced} factorization algebra
   $\mathrm{Obs}^{\mathrm{cl}}_{\mathrm{closed},H}$ on $\R^2\times\C^2$.

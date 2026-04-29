@@ -815,7 +815,7 @@ the image $\delta_{\mathrm{CE}}(C^1)$ is a subspace of $C^2$ that
 | (D) Berezin on super | $0$ on bosonic restriction | $0$ | $0$ on $\bar A$; replaces source on $\bar A^{\mathrm{super}}$ | NO on $\bar A$; vacuous on super |
 | (E) Capelli | $\hbar N$ on $f=1$ (doesn't descend) | n/a | n/a | NO (descent obstruction; circular) |
 
-**Reading the table.** No row has `(C3) discharged = YES`. The
+**Interpretation the table.** No row has `(C3) discharged = YES`. The
 class $[\bar c]$ remains non-zero in $H^2_{\mathrm{Lie}}(\bar A,\C)$;
 no candidate primitive trivializes it.
 
@@ -991,7 +991,7 @@ horns of the dilemma.** **Confidence: high.**
 correct route.** The discharge mechanism is *not* a primitive at
 all — it is a *coefficient zero*. The supertrace coefficient
 $\Str(I)=0$ kills the residue without requiring a primitive. This
-is the **correct reading** of the conditional-theorem status:
+is the **correct interpretation** of the conditional-theorem status:
 Theorem F$'$ on the bosonic $\mathfrak{gl}_N$ source is conditional;
 Theorem F$'$ on the super-balanced source is unconditional;
 the difference is the source, not the primitive. **Confidence:

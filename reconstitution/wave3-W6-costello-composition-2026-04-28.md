@@ -389,7 +389,7 @@ no-go route). The **conjunction** of T1, T2, T3, T5 verifies all 17
 invocations; **no single lane** verifies all of them.
 
 **Counterexample / explicit higher-coherence requirement.** A
-"non-conjunctive" reading of M-27 — i.e.\ that T3 alone supplies the
+"non-conjunctive" interpretation of M-27 — i.e.\ that T3 alone supplies the
 dictionary — would fail because T3's inverse systems do not include
 the Hadamard / propagator system of P1, which is a T1-Hadamard
 construct. The composition coherence required is:

@@ -378,7 +378,7 @@ firewall-permanent species** at chain-level isomorphism layer:
   not to the chain-level (A5)-violation P^q J (P^q)^{-1} = -J at
   V.9 which is a queer Lie superalgebra identity independent of
   all four meta-hypotheses. W5-A3 verified that the (V2) "invisible
-  under (A5)-admissible boundary observables" reading preserves the
+  under (A5)-admissible boundary observables" interpretation preserves the
   P^q anti-commutation as the chain-level form of the Sergeev-A5
   firewall, *not* a new R-anomaly. **No path to chain-level
   isomorphism; FW.Sergeev-A5 preserved.**

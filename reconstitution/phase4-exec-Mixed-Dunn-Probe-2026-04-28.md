@@ -1262,7 +1262,7 @@ from but consequential for the mixed Dunn question.
   additivity on a sub-operad, and we have failed to identify
   the precise Williams §3 argument. *Provisional assessment:
   Williams §3-§4 covers only $\C^n$; the mixed setting requires
-  substantial extension; this provisional reading is consistent
+  substantial extension; this provisional interpretation is consistent
   with the G1-M2 §5.3 verdict.*
 * The operadic-level obstruction $\mathrm{HOp}^\bullet$ is
   trivially vanishing by an unrecognized $\infty$-categorical

@@ -79,7 +79,7 @@ delta.
    sub-clause and the W5-A5 Polyakov-class qualifier both inscribe on the
    (A5) clause but at structurally distinct anchors in distinct files;
    no double-count) and one near-duplicate (W5-A3 (A5)-admissibility text
-   subsumes a portion of W5-A5 worldvolume-internal reading at the prose level
+   subsumes a portion of W5-A5 worldvolume-internal interpretation at the prose level
    but at distinct anchors): final mandatory total **+475 lines**, optional
    ceiling **+490 lines** if every cosmetic clarifier is adopted. The
    recommended publication target is **+475 mandatory** with W5-A2
@@ -516,7 +516,7 @@ cochain-level computation on `thm:lane-u1-anomaly` (W5-A6) to introduce
 a Drinfeld-functoriality issue at the BD \S 3.4.5 chiral-algebra ↔
 factorization-algebra equivalence?
 
-**Reading.** The W5-A6 §4.3 Beilinson-school subtlety is: BD \S 3.4.5
+**Interpretation.** The W5-A6 §4.3 Beilinson-school subtlety is: BD \S 3.4.5
 *matches* a covariant cosheaf on the Ran space with a contravariant
 $\mathcal D$-module on $X$ via Verdier-duality adjunction. The
 manuscript's brane-line factorization
@@ -551,7 +551,7 @@ the lift). The Drinfeld 1989 inner/outer twist precedent (W5-A2 §2.4
 3. The W5-A6 SH-3 sharpening on `thm:lane-u1-anomaly`: *cochain-level
    $H^2_{\rm Lie}(\bar A, \C)$ on the matrix factor*.
 
-The three readings consistently say: matrix-factor functoriality (under
+The three interpretations consistently say: matrix-factor functoriality (under
 $\mathrm{Inn}(\mathfrak g)$) is independent of target-factor functoriality
 (under $P_{(z_1)} \subset \mathrm{Symp}_{\rm form}$); the cochain axis
 ($H^2_{\rm Lie}$ via CE differential) is orthogonal to the cosheaf axis

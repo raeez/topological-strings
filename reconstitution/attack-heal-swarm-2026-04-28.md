@@ -11,7 +11,7 @@ a relabeled umbrella theorem.
 
 Protocol: `~/ecosystem/.agents/skills/attack-heal-swarm` with the shared
 `protocol.md` ledger-closure rule.  Agent reports are evidence, not authority;
-the main thread verifies and integrates by reading hunks.
+the main thread verifies and integrates by interpretation hunks.
 
 ## Workers
 

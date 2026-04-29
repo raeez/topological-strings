@@ -564,7 +564,7 @@ manuscript. The DVV physics interpretation (`~/igusa-cusp-form/main.tex`:
 | $X_4$ | Lattice morphism $\Z^2 \to \Lambda^{2,1}_{II}$ | UNMET | FIREWALL-PERMANENT (rank, signature, root data all incompatible) |
 | $X_5$ | Physical duality (T / S) bridge | UNMET | PHASE-5 (constructible if BCOV / Vol III / Igusa convergence is proved) |
 
-**Reading.** Three of five conditions are firewall-permanent at the
+**Interpretation.** Three of five conditions are firewall-permanent at the
 *structural* layer: $X_1$ (no Igusa BV), $X_3$ (no Sp$_4(\Z)$ on
 $\mathfrak{gl}(N|N)$), $X_4$ (lattice incompatibility). $X_2$ is
 open-literature but downstream of $X_1$. $X_5$ is a Phase-5

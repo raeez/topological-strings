@@ -328,7 +328,7 @@ polyvector / $\Omega^2$ pairing**. It is *not* a regulator-class
 artefact and *not* fixable by changing the heat-kernel data; it is
 structural at the level of the BV pairing on polyvectors.
 
-### 2.3. Polyakov-lens reading
+### 2.3. Polyakov-lens interpretation
 
 Polyakov scheme-independence (regulator-class invariance inside the
 admissible class) does *not* extend to a parity-of-$d$ change. The
@@ -338,7 +338,7 @@ non-zero residue $2\hbar N$ is *not* a coboundary; it is a true
 anomaly that no regulator-class flow can absorb. **Polyakov-class
 flexibility on the regulator does not lift the $d$-odd hypothesis.**
 
-### 2.4. Invariants-lens reading
+### 2.4. Invariants-lens interpretation
 
 The dominant invariant is the **polyvector signature**
 $\sigma_d = (-1)^{d(d-1)/2}$. This is a representation-theoretic
@@ -486,9 +486,9 @@ the *real* de Rham complex $\Omega^*(\R^2)$, with differential
 $d_{\R^2}$ (real $1$-form-valued). It is *not* the real underlying
 manifold of a complex curve; it has no holomorphic structure.
 
-### 4.2. Possible dimensional-character readings
+### 4.2. Possible dimensional-character interpretations
 
-Three candidate readings of the manuscript's spacetime:
+Three candidate interpretations of the manuscript's spacetime:
 
 **(R-A) Read as $\C^3$.** Identify $\R^2 \cong \C \cdot \tau$ (the
 "topological time" $t \in \R$ becomes a complex coordinate $\tau$);
@@ -500,7 +500,7 @@ differential* from $D = d_{\R^2} + \bar\partial_{\C^2}$ to
 $\bar\partial_{\C^3}$ (pure Dolbeault on $\C^3$). The manuscript's
 first-class constraint $[\phi_1, \phi_2] = 0$ and BV reduction
 $Q\psi = [\phi_1, \phi_2]$ (`main.tex`:118–125) are formulated on
-$\R$ (real worldline), not on a complex curve. **The R-A reading
+$\R$ (real worldline), not on a complex curve. **The R-A interpretation
 breaks the manuscript's defect structure.**
 
 **(R-B) Read as $\C^2$ with topological reduction.** Treat the $\R^2$
@@ -521,7 +521,7 @@ real dimension $d_{\mathrm{tot}}^\R = 2 + 4 = 6$. Total complex
 dimension *not defined* because the spacetime is not a complex
 manifold.
 
-**This is the manuscript's actual reading** (`main.tex`:78–82,
+**This is the manuscript's actual interpretation** (`main.tex`:78–82,
 1276–1286). The total real dimension is $1+4 = 5$ for the brane
 worldline plus formal disk view, or $2+4 = 6$ for the bulk $\R^2 \times
 \C^2$. The complex dimension is *not* a well-defined invariant for
@@ -720,7 +720,7 @@ the sense that (A5) does not lift the $d$-odd structural barrier; it
 sits inside the *open-algebra parity* layer, while $d$-odd sits
 inside the *spacetime parity* layer.
 
-### 6.5. Polyakov-lens reading
+### 6.5. Polyakov-lens interpretation
 
 Polyakov scheme-independence inside the (A1)–(A5) admissible class
 governs the *open-algebra side*. It ensures that any
@@ -730,7 +730,7 @@ it is *not* a regulator-class statement and *not* a Polyakov-class
 choice. **The two layers are orthogonal**, and (A5) cannot weaken
 the $d$-odd hypothesis (or vice versa).
 
-### 6.6. Invariants-lens reading
+### 6.6. Invariants-lens interpretation
 
 Two invariants survive across the W30 audit:
 - $\mathrm{Str}(I) = N - M$ on the matrix factor (open-algebra side).

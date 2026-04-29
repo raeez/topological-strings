@@ -10,34 +10,91 @@
 \setlength{\tabcolsep}{3pt}
 \renewcommand{\arraystretch}{1.15}
 
-\paragraph{Programme maps and obstruction symbols.}
+\paragraph{Canonical maps and obstruction symbols.}
 \begin{center}
 \begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.25\textwidth}
   >{\raggedright\arraybackslash}p{0.67\textwidth}@{}}
 \hline
 \textbf{Symbol} & \textbf{Meaning}\\
 \hline
-\(\Phi_M\) &
-Finite-window cotangent CE/PV map
+\(\Phi_{\mathfrak l}\) &
+Finite-dimensional cotangent CE/PV map
 \[
-  C^\bullet_{\mathrm{CE}}(\mathfrak h_{\le M}\ltimes D_{\le M}[1])
-  \to \mathrm{PV}(\mathbf S(\mathfrak h_{\le M})),
+  C^\bullet_{\mathrm{CE}}
+  (\mathfrak l\ltimes \mathfrak l^\vee[1])
+  \to \mathrm{PV}(\mathbf S(\mathfrak l)),
   \qquad c\mapsto\theta,\quad u\mapsto O .
 \]\\
 \hline
-\(\Phi=\varprojlim_M\Phi_M\) &
-Completed formal-disk CE/PV map for
+\(\Phi_{\mathrm{coord}}\) &
+Formal-disk coordinate CE/PV map reconstructed from admissible finite
+coordinate tests and pro-window coordinate cochains for
 \(\mathfrak h=\C[[z_1,z_2]]/\C\cdot1\) and
 \(\mathfrak g=\mathfrak h\ltimes
-\mathfrak h^\vee_{\mathrm{cont}}[1]\).\\
+\mathfrak h^\vee_{\mathrm{cont}}[1]\).  It is a completed coordinate dg
+commutative algebra isomorphism before any \(P_0\) bracket is asserted.\\
+\hline
+\(\Phi^B_{P_0}\) &
+Restriction of \(\Phi_{\mathrm{coord}}\) to a bracket-admissible
+subalgebra \(B\subset
+\mathrm{PV}_{\mathrm{coord}}(A_{\partial,\mathrm{coord}})\):
+\[
+  \Phi^B_{P_0}\colon\Phi_{\mathrm{coord}}^{-1}(B)\xrightarrow{\sim}B .
+\]
+This is the completed \(P_0\) comparison only because \(B\) carries a
+specified complete Hausdorff topology, continuous inclusion in the
+coordinate product, continuous multiplication, continuous
+\(d_\pi^{\mathrm{coord}}\), and a continuous closed contraction bracket.
+Boundary Hamiltonians inside this \(P_0\) comparison require the relevant
+\(O_f\) and \(d_\pi^{\mathrm{coord}}O_f\) to lie in \(B\).\\
+\hline
+\(\Theta_B\) &
+Kernel-admissible Maurer--Cartan tensor in a specified completed
+convolution dg Lie algebra \(\mathcal K_B\)
+\[
+  \Theta_B=\sum_I H_I\otimes\theta^I+\sum_I\eta^I\otimes O_I
+\]
+attached to \(B\).  It is asserted only when the displayed diagonal sums
+converge and the convolution differential and bracket are continuous in
+\(\mathcal K_B\).\\
+\hline
+\(\eta^I\) &
+Shifted cotangent generator
+\(\eta^I=(H_I)^\vee[1]\in\mathfrak h^\vee_{\mathrm{cont}}[1]\), for
+\(I=(a,b)\) and \(a+b>0\).  It is the source of the \(O_I\) coordinate in
+the CE/PV map.\\
+\hline
+\(\mathfrak U_{\mathfrak h}\) &
+Admissible formal-local interface datum, not a categorical universal
+object unless a category of admissible completions and a universal
+property are supplied,
+\[
+  \mathfrak U_{\mathfrak h}
+  =(\Phi_{\mathrm{coord}},\{\Phi^B_{P_0}\}_B,\{\Theta_B\}_B),
+\]
+where \(B\) ranges over bracket-admissible subalgebras in the middle term
+and kernel-admissible data in the last term.\\
+\hline
+\(B_{\mathrm{fin}},E_q\) &
+Model admissibility tests.  \(B_{\mathrm{fin}}\) is the finite-support
+coordinate subalgebra on a finite window.  \(E_q\), for \(q>1\), is the
+weighted Köthe test target with seminorms
+\[
+  p_n(x)=\sup_{a,b}|x_{a,b}|q^{a+b}(1+a+b)^n .
+\]
+It is bracket-admissible only after the finite-word tensor convention
+and the corresponding convolution estimate are fixed; it is
+kernel-admissible only if the diagonal tensor converges.\\
 \hline
 \(\mathfrak o^{\mathrm{br}},
-  \mathfrak o^{\mathrm{coad}},
-  \mathfrak o^{\mathrm{Cas}}\) &
-Finite-window obstruction terms for bracket compatibility, coadjoint
-compatibility, and Casimir compatibility. Their vanishing is the
-CE/PV-admissibility condition for passing from finite windows to the
-completed formal disk.\\
+  \mathfrak o^{\mathrm{coad}}\) &
+Transition obstruction terms for bracket and coadjoint compatibility in
+the pro/mixed coordinate CE/PV comparison.\\
+\hline
+\(\mathfrak o^{\mathrm{Cas}}\) &
+Strict product/direct-sum kernel obstruction for the Casimir,
+propagator, and Costello endpoint problem. It is not part of the
+coordinate CE/PV identity.\\
 \hline
 \(\mathfrak o_{\mathrm{BV,end}}\) &
 Endpoint obstruction tuple
@@ -53,8 +110,12 @@ Matched-conventions descent vector
   \operatorname{ob}_{\mathrm{WR}},
   \operatorname{ob}_{\mathrm{anom}},
   \operatorname{ob}_{\mathrm{QME}},
-  \operatorname{ob}_{\mathrm{MD}})\) for compact/global target uses of
-the local theorem.\\
+  \operatorname{ob}_{\mathrm{conv}},
+  \operatorname{ob}_{\mathrm{hyp}},
+  \operatorname{ob}_{6r},
+  \operatorname{ob}_{\mathrm{MD}})\), with target-specific Vol III,
+Igusa/BKM, or sister-volume components appended when such a target is
+claimed.\\
 \hline
 \end{tabular}
 \end{center}
@@ -76,6 +137,22 @@ Maximal ideal of functions vanishing at the brane point.\\
 Reduced Hamiltonian Lie algebra of the formal disk. Constants are
 removed because they generate the zero Hamiltonian vector field.\\
 \hline
+\(\mathfrak g_{\mathrm{str}}\) &
+Strict shifted cotangent Hamiltonian Lie algebra
+\[
+  \mathfrak h\ltimes\mathfrak h^\vee_{\mathrm{cont}}[1].
+\]
+Its Hamiltonian side is a product completion and its cotangent side is
+continuous dual/direct-sum in residue coordinates.  This is the
+formal-local CE/PV object, but not by itself a Costello coefficient
+kernel.\\
+\hline
+\(\mathfrak g_w\) &
+Weighted finite-window Tate replacement used as a regulator.  It carries
+the same coordinate-window CE/PV formulas after passage through the
+admissible tower, but its weight topology is auxiliary data and is not
+the strict cotangent completion.\\
+\hline
 \(\bar A=\C[z_1,z_2]/\C\cdot1\) &
 Polynomial Hamiltonian sector used in explicit trace and Moyal
 calculations.\\
@@ -91,7 +168,7 @@ Poisson bracket and by the Capelli shift.\\
 \hline
 \(N\) &
 Rank of the brane probe stack. Degreewise stable trace statements are
-read at fixed total word degree and then for \(N\) in the stable range.\\
+formed at fixed total word degree and then for \(N\) in the stable range.\\
 \hline
 \(D\) &
 Taylor truncation degree when a finite quotient
@@ -132,11 +209,137 @@ and Matlis labels \(\rho_{a,b}\) live in different modules unless a
 specific theorem supplies a comparison.  The Fourier--Rees theorem
 matches associated-graded labels after Fourier normalization through
 the Fourier delta Rees lattice
-\(\mathcal D_\hbar/(z_1,z_2)\).  Its Cech realization carries the
+\(\mathcal D_\hbar/(z_1,z_2)\).  Its \v{C}ech realization carries the
 factor \((-1)^{a+b}\hbar^{a+b}a!b!\), so before \(\hbar\) is inverted
 it is the Rees sublattice, and as a module statement it uses a
 Fourier-twisted polarization rather than the original Hamiltonian
 coadjoint action.
+
+\paragraph{Source--target status table.}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.22\textwidth}
+  >{\raggedright\arraybackslash}p{0.22\textwidth}
+  >{\raggedright\arraybackslash}p{0.18\textwidth}
+  >{\raggedright\arraybackslash}p{0.28\textwidth}@{}}
+\hline
+\textbf{Source} & \textbf{Target} & \textbf{Status} &
+\textbf{Forbidden identification}\\
+\hline
+\endfirsthead
+\hline
+\textbf{Source} & \textbf{Target} & \textbf{Status} &
+\textbf{Forbidden identification}\\
+\hline
+\endhead
+coordinate-window tower / mixed-continuous replacement attached to
+\(\mathfrak g_{\mathrm{str}}\) &
+\(\mathrm{PV}_{\mathrm{coord}}(A_{\partial,\mathrm{coord}})\) &
+coordinate dg identity; bracketed comparison only after choosing a
+bracket-admissible \(B\) &
+not the full unreduced factorization centre without additional centrality
+and descent data\\
+\hline
+bracket-admissible \(B\subset\mathrm{PV}_{\mathrm{coord}}\) &
+\(P_0\) realization \(\Phi^B_{P_0}\) &
+proved after completeness, \(d_\pi^{\mathrm{coord}}\)-stability, product stability, and
+continuous contraction bracket are part of \(B\)'s data &
+not the strict product/direct-sum completion\\
+\hline
+kernel-admissible \(B\) &
+Maurer--Cartan kernel \(\Theta_B\) &
+conditional on diagonal convergence in the chosen completed tensor
+product &
+not a strict Casimir kernel for the ambient product completion\\
+\hline
+\(C^\bullet_{\mathrm{CE}}(\mathfrak g)\) / \(\mathrm{PV}(A)\) &
+reduced \(P_0\) central-operation model &
+local Poisson cochain model &
+not the ordinary centre and not the unreduced
+\(Z^{P_0}_{\mathrm{fact}}\) without centrality homotopies\\
+\hline
+\(U_\hbar(\mathfrak g)/(\hbar)\) PBW special fibre &
+\(\mathbf S(\mathfrak h\oplus\mathfrak h^\vee[1])\) and then selected
+\(\mathbf S(\bar A\oplus\bar A_{\mathrm{desc}}[1])\) labels &
+associated-graded label comparison &
+not a same-action identification of \(\Psi_{a,b}\) with
+\(\rho_{a,b}\)\\
+\hline
+admissible Tate / relative bar-cobar envelope &
+\(\widehat U(\mathfrak g_{\mathrm{adm}})\) &
+conditional on conilpotent CE chains, exact continuous duality, PBW
+completeness, and strong convergence &
+not available for the raw full formal disk without admissibility data\\
+\hline
+\(c^I\) &
+\(\theta^I\) &
+proved generator rule &
+not a boundary Hamiltonian coordinate\\
+\hline
+\(u_I\) &
+\(O_I\) and brane-line Hamiltonian coordinates \(B_f(a)\) &
+proved generator rule &
+not a Hamiltonian CE ghost\\
+\hline
+\(C^\bullet_{\mathrm{CE}}(\mathfrak g_I)\) on intervals &
+reduced brane-line factorization target &
+cofactorization/opposite-interval source; factorization only after the
+CE coproduct is paired with target multiplication &
+not a same-variance morphism of raw factorization algebras\\
+\hline
+\(\Psi_{a,b}\) &
+stable primitive one-\(\psi\) PBW special-fibre class &
+proved in the stable trace complex &
+not \(\mathfrak h^\vee_{\mathrm{cont}}\), not \(\mathcal P\), and not a
+principal-part current\\
+\hline
+\(\rho_{a,b}\) &
+\(\mathcal P=\operatorname{Ann}_{\mathrm{res}}(\C\cdot1)\) &
+proved by residue/Matlis comparison &
+not a polynomial descendant and not an \(R\)-submodule quotient\\
+\hline
+\(\mathsf F_{\mathrm{Rees}}\) &
+\(\bigoplus\hbar^{a+b}\C[[\hbar]]\rho_{a,b}\) &
+proved after Fourier polarization &
+not a same-action bridge \(\Psi_{a,b}\cong\rho_{a,b}\)\\
+\hline
+\(\Omega_c^\bullet(I)\otimes\mathfrak h\) &
+brane-line Hamiltonian currents &
+proved reduced current model &
+\(C_c^\infty(I)\) denotes only the degree-zero summand\\
+\hline
+\(\mathcal D'_c(I)\widehat\otimes\mathcal P[1]\) &
+principal-part current sector \(\Theta_\rho(B)\) &
+proved reduced post-contraction &
+does not require a product of two distributions\\
+\hline
+formal Moyal algebra \(\bar A_\hbar\) &
+degree-zero Weyl coefficient target &
+proved algebraically in the reduced setting with raw weights \(1\) and
+\(1/24\) &
+not a finite-\(N\) radial-parts theorem by itself\\
+\hline
+finite-\(N\) radial-parts target &
+stable connected trace realization of the Moyal coefficients &
+conditional on the external radial-parts input, including
+\(J_N(f)=J_N^{\mathrm{rad}}(f)\) &
+not supplied by formal Moyal coefficients or by the cited radial-parts
+sources alone; not a Costello analytic graph/QME realization\\
+\hline
+Costello brane-defect kernel &
+closed-open graph/QME specialization &
+open obstruction datum &
+not inferred from the formal Moyal or reduced open-line computation\\
+\hline
+scalar cocycle \([\bar c]\) &
+\(U(1)\) anomaly / Capelli contact line &
+proved distinguished class &
+not an exhaustive classification of unreduced QME cancellation\\
+\hline
+External global bulk-boundary target &
+compact BCOV / Calabi--Yau / Vol III / Igusa--BKM consequence &
+open matched-conventions descent problem &
+not a consequence of the local Koszul Layers 0--6\\
+\hline
+\end{longtable}
 
 \paragraph{PBW special-fibre open trace labels.}
 \begin{center}
@@ -152,12 +355,14 @@ PBW special fibre it labels the scalar-reduced trace observable
 \hline
 \(O_{a,b}\) &
 Open ghost-zero trace class
-\(\overline{\operatorname{Tr}(\phi_1^a\phi_2^b)}\).\\
+\(\overline{\operatorname{Tr}(\phi_1^a\phi_2^b)}\), with \(a+b>0\)
+in the reduced Hamiltonian label set.\\
 \hline
 \(\Psi_{a,b}\) &
 Primitive one-\(\psi\) stable open class, represented by the
 symmetrised trace with one \(\psi\), \(a\) copies of \(\phi_1\), and
-\(b\) copies of \(\phi_2\). It lies in the PBW special-fibre open
+\(b\) copies of \(\phi_2\), with \(a+b>0\) after removing the scalar
+descendant line. It lies in the PBW special-fibre open
 shadow and carries the corresponding polynomial action. In the reduced
 comparison it supplies the primitive indecomposable \(P_0\)-shadow
 label.\\
@@ -166,7 +371,7 @@ label.\\
 Fourier--Rees label bridge of
 Theorem~\ref{thm:app-matlis-rees-fourier-bridge}. It sends the
 polynomial label \(z_1^az_2^b\) to the Fourier-delta label
-\(\partial_1^a\partial_2^be_0\), whose Cech realization is
+\(\partial_1^a\partial_2^be_0\), whose \v{C}ech realization is
 \((-1)^{a+b}\hbar^{a+b}a!b!\rho_{a,b}\).  After inverting
 \(\hbar\) one may divide by this Rees factor and read the
 principal-part label \(\rho_{a,b}\).  It changes polarization and is
@@ -196,26 +401,32 @@ Shifted cotangent Lie algebra of Hamiltonian canonical transformations.\\
 \(H_I\) &
 Hamiltonian generator in \(\mathfrak h\).\\
 \hline
+\(\eta^I\) &
+Shifted cotangent generator \((H_I)^\vee[1]\), with \(I=(a,b)\) and
+\(a+b>0\).\\
+\hline
 \(c^I\) &
 Chevalley--Eilenberg coordinate dual to a Hamiltonian generator
-\(H_I\in\mathfrak h\). Under \(\Phi\), \(c^I\mapsto\theta^I\).\\
+\(H_I\in\mathfrak h\). Under \(\Phi_{\mathrm{coord}}\),
+\(c^I\mapsto\theta^I\).\\
 \hline
 \(u_I\) &
 Chevalley--Eilenberg coordinate dual to the shifted cotangent generator.
-Under \(\Phi\), \(u_I\mapsto O_I\). Boundary Hamiltonian observables
+Under \(\Phi_{\mathrm{coord}}\), \(u_I\mapsto O_I\). Boundary Hamiltonian observables
 come from \(u_I\), not from \(c^I\).\\
 \hline
 \(\theta^I\) &
-Polyvector coordinate corresponding to \(c^I\) under the CE/PV
-derived-centre isomorphism.\\
+Polyvector coordinate corresponding to \(c^I\) under the coordinate CE/PV
+isomorphism.\\
 \hline
 \(O_I\) &
 Hamiltonian observable coordinate corresponding to \(u_I\) under the
-CE/PV derived-centre isomorphism.\\
+coordinate CE/PV isomorphism.\\
 \hline
-\(\Phi\) &
-Cochain-level CE/PV map determined on generators by
-\(c^I\mapsto\theta^I\) and \(u_I\mapsto O_I\).\\
+\(\Phi_{\mathrm{coord}}\) &
+Coordinate dg CE/PV map determined on generators by
+\(c^I\mapsto\theta^I\) and \(u_I\mapsto O_I\).  Its \(P_0\) restriction
+is \(\Phi^B_{P_0}\) only after a bracket-admissible \(B\) is chosen.\\
 \hline
 \end{tabular}
 \end{center}
@@ -291,8 +502,10 @@ Reduced Hamiltonian brane-line \(P_0\) factorization algebra
 \(A^{\mathrm{pp}}_\partial(I)\) &
 Reduced principal-part defect-current model after de Rham-current contraction
 \(\widehat{\mathbf S}(\mathfrak h_I)\widehat\otimes
-\widehat{\mathbf S}(\mathcal P_I[1])\). The unreduced BV observable
-algebra maps to it through the centrality data of the BV/QME model.\\
+\widehat{\mathbf S}(\mathcal P_I[1])\).  An unreduced BV observable
+algebra maps to it only after the centrality homotopies, coefficient
+kernel, brane-defect propagator, descent data, and BV/QME solution are
+supplied.\\
 \hline
 \(\Theta_\rho(B)\) &
 Principal-part current observable with

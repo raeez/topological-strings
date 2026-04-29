@@ -1,19 +1,22 @@
-\subsubsection{Theorem-lane index}\label{ssec:theorem-lanes}
-The theorem-lane index records local hypotheses, asserted scope, and
-proof dependencies.  The proof-bearing text is the cited theorem,
-proposition, lemma, or computation.  Each assertion is read with the
-proof class and acceptance data recorded in the universal
-Koszul-duality interface.
+\subsubsection{Local theorem dependencies}\label{ssec:theorem-lanes}
+This section records local hypotheses, asserted scope, and
+proof inputs.  The proof-bearing text is the cited theorem,
+proposition, lemma, or computation.  Each assertion is interpreted with
+the proof status and admissibility hypotheses recorded in the claim-status table
+and the stratified Koszul criterion.
 
-\begin{stmt}[Index lane: Dirac brane probe]\label{thm:lane-dirac-probe}
+\begin{stmt}[Statement: Dirac brane probe]\label{thm:lane-dirac-probe}
   \emph{Status.} \emph{proved in finite algebraic model}.  The proof is
   confined to the formal local ghost-zero sector of the brane probe.
 
   \emph{Exact hypotheses.} The transverse formal disk is
   \((\widehat{\C^2}_0,dz_1\wedge dz_2)\); the stack size \(N\) is finite;
   fields are \(\phi_1,\phi_2,A\in\mathfrak{gl}_N\) on the brane line;
-  variations are compactly supported; and the only residual gauge group
-  retained in the lane is ordinary \(GL_N\)-conjugation.
+  the raw shifted-Chern--Simons coefficient fields have first been put in
+  the Dirac normalization of
+  Construction~\ref{constr:open-field-basis}; variations are compactly
+  supported; and the only residual gauge group retained in this statement is
+  ordinary \(GL_N\)-conjugation on degree-zero functions.
 
   \emph{Local assertion.} For a stack of \(N\) branes probing
   \((\widehat{\C^2}_0,dz_1\wedge dz_2)\), the ghost-zero open action is
@@ -31,21 +34,75 @@ Koszul-duality interface.
     Q\psi=[\phi_1,\phi_2],\quad Q\phi_i=0.
   \]
   The moment map for conjugation is
-  \(-\operatorname{Tr}(\epsilon[\phi_1,\phi_2])\), so the BV
-  differential is the Koszul differential for the commuting-pair
-  equation.
+  \(-\operatorname{Tr}(\epsilon[\phi_1,\phi_2])\).  With the paper's
+  convention \(\iota_{X_f}\Omega=-df\), its components satisfy
+  \(\{\mu_\epsilon,\mu_\eta\}=-\mu_{[\epsilon,\eta]}\); this
+  anti-equivariance affects only the comoment convention, not the zero
+  locus.  The BV differential is the derived Koszul zero-fibre
+  differential for the commuting-pair equation, not an underived regular
+  sequence assertion.
 
-  \emph{Proof dependency map.}
+  \emph{Proof inputs.}
   Lemma~\ref{lem:dirac-probe-reduction} derives the ghost-zero action
   from the shifted normal directions and fixes the moment-map sign.
   Proposition~\ref{prop:open-bv-truncation} proves that the ghost-zero
   truncation is consistent and identifies the residual Koszul complex.
 
-  \emph{Residuals.} The lane does not assert an untruncated open-string
+  \emph{Scope and exclusions.} The statement does not assert an untruncated open-string
   BV model beyond this ghost-zero finite algebraic truncation.
 \end{stmt}
 
-\begin{stmt}[Index lane: stable trace and one-\(\psi\) PBW shadow]\label{thm:lane-stable-trace}
+\begin{stmt}[Statement: unital cyclic Koszul and normal-ordering core]\label{thm:lane-cyclic-koszul-normal-ordering}
+  \emph{Status.} \emph{proved algebraically, with an explicit
+  obstruction to the full cyclic contraction}.  This is the
+  necklace-level Koszul calculation with the scalar word and
+  one-\(\psi\) homology kept explicit.
+
+  \emph{Exact hypotheses.} Work in the unital cyclic dg Lie algebra
+  \[
+    \mathfrak p_{\mathrm K}
+    =
+    \operatorname{Cyc}\bigl(T(\C x\oplus\C y\oplus\C\psi)\bigr),
+    \qquad
+    Q\psi=xy-yx,\quad Qx=Qy=0,
+  \]
+  with the scalar word \([1]\) retained until the bracket has been
+  checked.  The scalar-reduced quotient
+  \(\bar{\mathfrak p}_{\mathrm K}=\mathfrak p_{\mathrm K}/\C[1]\) is
+  taken only after this unital computation.  The normal-ordering
+  homotopy requires a chosen cyclic cut and applies to the no-\(\psi\)
+  subcomplex selected by that cut.
+
+  \emph{Local assertion.} The cyclic necklace bracket makes
+  \(\mathfrak p_{\mathrm K}\) a dg Lie algebra.  The normal-ordering map
+  \(N\) is a strict dg Lie map to the unital polynomial Hamiltonian
+  algebra and sends \([1]\) to \(1\); after quotienting constants it
+  gives the reduced Hamiltonian map
+  \(N_{\mathrm{red}}\colon\bar{\mathfrak p}_{\mathrm K}\to\bar A\).
+  On the cut no-\(\psi\) sector the straightening homotopy satisfies
+  \(QH_c=\mathrm{id}-iN\).  There is no cyclic homotopy
+  \(K\) with \(QK+KQ=\mathrm{id}-iN\) on the full cyclic complex when
+  \(N\) kills the primitive one-\(\psi\) classes.
+
+  \emph{Proof inputs.}
+  Theorem~\ref{thm:primitive-cyclic-koszul-p0-model} proves the unital
+  dg Lie model and the scalar bracket \(\{[x],[y]\}=[1]\).
+  Proposition~\ref{prop:normal-ordering-quotient-cyclic-koszul}
+  proves the strict normal-ordering quotient.
+  Theorem~\ref{thm:normal-ordering-straightening-homotopy} constructs
+  the cut-dependent no-\(\psi\) straightening homotopy.
+  Lemma~\ref{lem:no-full-cyclic-normal-ordering-contraction} proves the
+  obstruction to a full cyclic contraction.  Lemma~\ref{lem:gauge-paired-necklace-naive-quotient-fails}
+  records the failure of the naive gauge-paired quotient.
+
+  \emph{Scope and exclusions.} This block is not an unreduced
+  BV/factorization-centre theorem.  It does not identify arbitrary
+  open observables with central operations, and polynomial
+  one-\(\psi\) descendants do not replace the principal-part cotangent
+  current module.
+\end{stmt}
+
+\begin{stmt}[Statement: stable trace and one-\(\psi\) PBW shadow]\label{thm:lane-stable-trace}
   \emph{Status.} \emph{proved degreewise stable}.  It is a PBW
   special-fibre trace statement, not a statement about the principal-part
   cotangent module.
@@ -58,13 +115,13 @@ Koszul-duality interface.
 
   \emph{Local assertion.} The Hamiltonian open observables in ghost
   number zero are generated by scalar-reduced connected trace classes
-  \(\overline{\operatorname{Tr} f(\phi_1,\phi_2)}\).  The primitive
-  one-\(\psi\) classes \(\Psi_{a,b}\) are the primitive PBW
+  \(\overline{\operatorname{Tr} f(\phi_1,\phi_2)}\).  The non-scalar
+  primitive one-\(\psi\) classes \(\Psi_{a,b}\), \(a+b>0\), are the primitive PBW
   special-fibre shadow classes.  They do not realize the continuous
   \(\mathfrak h\)-coadjoint module and are not the principal-part
   currents \(\rho_{a,b}\).
 
-  \emph{Proof dependency map.}
+  \emph{Proof inputs.}
   Procesi--Razmyslov stable invariant theory supplies the stable trace
   generators.  The Koszul differential \(Q\psi=[\phi_1,\phi_2]\) turns
   adjacent swaps into boundaries in the connected trace quotient.
@@ -75,32 +132,42 @@ Koszul-duality interface.
   Theorem~\ref{thm:no-polynomial-realization-categorical} separate that
   PBW shadow from the coadjoint principal-part module.
   Theorem~\ref{thm:one-psi-label-hbar-obstruction} proves the
-  same separation for every \(\hbar\)-adic deformation whose leading term
-  is the classical primitive label projection.
+  same separation for every \(\hbar\)-adic deformation satisfying its
+  flatness, PBW-linear-action, Moyal-coadjoint-target, and leading-term
+  hypotheses.
 
-  \emph{Residuals.} Unstable finite-\(N\) trace identities and any
+  \emph{Scope and exclusions.} Unstable finite-\(N\) trace identities and any
   ordinary \(\mathfrak h\)-module identification of
-  \(\Psi_{a,b}\) with \(\rho_{a,b}\) are outside the lane.  The
+  \(\Psi_{a,b}\) with \(\rho_{a,b}\) are outside this statement.  The
   Fourier--Rees comparison of
   Theorem~\ref{thm:app-matlis-rees-fourier-bridge} is only an
-  associated-graded label bridge.  The corrected quantum target, when
+  associated-graded label bridge for the original Hamiltonian action; the
+  legitimate bridge is Fourier-twisted in the Rees
+  \(\mathcal D_\hbar\)-module sense.  The corrected quantum target, when
   needed, is the reduced distributional principal-part target of
   Construction~\ref{constr:quantum-principal-part-descendant-target},
   not the PBW one-\(\psi\) span.
 \end{stmt}
 
-\begin{stmt}[Index lane: CE/PV reduced Hamiltonian central-operation model]\label{thm:lane-ce-pv-center}
+\begin{stmt}[Statement: CE/PV reduced Hamiltonian central-operation model]\label{thm:lane-ce-pv-center}
   \emph{Status.} \emph{proved degreewise stable}.  The proof is at
   cochain level for the reduced formal Hamiltonian algebra and its
-  continuous shifted cotangent extension.  The bar-cobar consequence is
-  used only under the stated Tate-conilpotent hypothesis.
+  continuous shifted cotangent extension.  The bracketed \(P_0\)
+	  consequence is used only after a bracket-admissible realization has
+	  been chosen, and the bar-cobar consequence is used only under the
+	  stated lower-central Tate-pronilpotent hypothesis.
 
   \emph{Exact hypotheses.} The Hamiltonian algebra is
   \(\mathfrak h=\C[[z_1,z_2]]/\C\cdot1\) with its \(m\)-adic topology;
   the cotangent direction is
-  \(\mathfrak h^\vee_{\mathrm{cont}}[1]\); CE cochains are completed and
-  continuous; and every use of bar-cobar duality is restricted to the
-  conilpotent Tate hypothesis named in the cited lemma.
+  \(\mathfrak h^\vee_{\mathrm{cont}}[1]\), equivalently to
+  \(\mathcal P[1]\) after the residue scalar is fixed by
+  Theorem~\ref{thm:principal-part-coadjoint-uniqueness}; CE cochains are
+	  completed in coordinate products; \(P_0\)-brackets require a
+	  bracket-admissible subalgebra \(B\); kernels require a
+	  kernel-admissible \(B\); and every use of bar-cobar duality is
+	  restricted to the lower-central Tate-pronilpotent hypothesis named in
+	  the cited lemma.
 
   \emph{Local assertion.} Let
   \[
@@ -108,39 +175,49 @@ Koszul-duality interface.
     \mathfrak g=\mathfrak h\ltimes
       \mathfrak h^\vee_{\mathrm{cont}}[1].
   \]
-  The completed CE cochains of \(\mathfrak g\) identify, windowwise and
-  after the coordinate completion specified in
+  The coordinate completion of the CE cochains of \(\mathfrak g\)
+  identifies, windowwise and after the coordinate completion specified in
   Definition~\ref{defn:formal-disk-ce-pv-completion}, with
   the corresponding Schouten polyvector algebra:
   \[
-    \Phi:
-    C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g)
+    \Phi_{\mathrm{coord}}\colon
+    C^\bullet_{\mathrm{CE},\mathrm{coord}}(\mathfrak g)
     \xrightarrow{\sim}
     \mathrm{PV}_{\mathrm{coord}}
-    \bigl(\widehat{\mathbf S}_{\mathrm{Tate}}(\mathfrak h)\bigr).
+    (A_{\partial,\mathrm{coord}}).
   \]
+  On a bracket-admissible \(B\subset
+  \mathrm{PV}_{\mathrm{coord}}(A_{\partial,\mathrm{coord}})\) the
+  restriction \(\Phi^B_{P_0}\) is a dg \(P_0\)-isomorphism.  On a
+  kernel-admissible \(B\) the diagonal tensor \(\Theta_B\) is the
+  associated Maurer--Cartan kernel.  The ambient strict product completion
+  carries neither assertion.
   The generator dictionary is
   \[
     c^I\mapsto\theta^I,\qquad u_I\mapsto O_I .
   \]
   The \(Z^{P_0}_{\mathrm{red,Ham}}\) identification is asserted only on the
-  finite-window or mixed/weighted-continuous sector where the Schouten
+  coordinate-window or mixed/weighted-continuous sector where the Schouten
   bracket is a continuous operation; the strict ambient product
   completion is not a \(P_0\)-algebra here.
   Here \(|u_I|=0\), \(|c^I|=1\), and \(u_I\) is the CE coordinate dual
   to the shifted-cotangent generator, not to a Hamiltonian generator.
 
-  \emph{Proof dependency map.}
+  \emph{Proof inputs.}
   Proposition~\ref{prop:grav-ops} identifies closed local operators as
-  continuous CE cochains.  Lemma~\ref{lem:linear-poisson-schouten}
-  computes the Schouten differential.  Theorem~\ref{thm:open-closed-derived-center}
-  checks \(\Phi d_{\mathrm{CE}}=d_\pi\Phi\) on generators and extends
+  continuous CE cochains, which sit inside the coordinate envelope only
+  after the chosen continuity condition is specified.
+  Lemma~\ref{lem:formal-disk-ce-schouten-continuity} computes the
+  coordinate PV differential.  Theorem~\ref{thm:reduced-ce-pv-central-operation}
+  checks
+  \(\Phi_{\mathrm{coord}} d_{\mathrm{CE}}
+  =d_\pi^{\mathrm{coord}}\Phi_{\mathrm{coord}}\) on generators and extends
   by the completed Leibniz rule.  Lemma~\ref{lem:continuous-bar-cobar}
   supplies the conilpotent bar-cobar template only in its own
   hypothesis; the untruncated formal Hamiltonian algebra with linear
-  modes is not used as a lower-central conilpotent input.
+  modes is not used as a lower-central Tate-pronilpotent input.
 
-  \emph{Residuals.} The lane does not prove an unrestricted
+  \emph{Scope and exclusions.} The statement does not prove an unrestricted
   factorization-centre theorem or a conilpotence statement for the
   untruncated formal Hamiltonian algebra.  It also does not construct a
   BV heat-kernel propagator, a BV Laplacian, or a QME-compatible
@@ -153,11 +230,15 @@ Koszul-duality interface.
   A cotangent CE/PV datum is a Lie algebra \(\mathfrak l\) in a
   complete linear category, a continuous dual module
   \(\mathfrak l^\vee\), and the shifted cotangent Lie algebra
+	  \[
+	    T^*[1]\mathfrak l=\mathfrak l\ltimes\mathfrak l^\vee[1],
+	    \qquad
+	    [x,\lambda[1]]=(x\cdot\lambda)[1],\quad
+	    [\lambda[1],\mu[1]]=0 .
+	  \]
+  The dual action is the coadjoint action:
   \[
-    T^*[1]\mathfrak l=\mathfrak l\ltimes\mathfrak l^\vee[1],
-    \qquad
-    [x,\lambda[1]]=(x\cdot\lambda)[1],\quad
-    [\lambda[1],\mu[1]]=0 .
+    (x\cdot\lambda)(y)=-\lambda([x,y]).
   \]
   Choose a basis \(e_i\) of \(\mathfrak l\), dual basis
   \(\epsilon^i\), and structure constants
@@ -238,6 +319,18 @@ Koszul-duality interface.
   \]
   with all \(c,c\), \(u,u\), \(\theta,\theta\), and \(O,O\) brackets
   equal to zero.  The biderivation rule gives the full bracket identity.
+  The square-zero check on the cotangent coordinate is the coadjoint
+  representation identity in coordinates:
+  \[
+    d_{\mathrm{CE}}^2u_k
+    =
+    C^\ell_{kj}C^m_{\ell r}u_m c^r c^j
+    -\frac12 C^\ell_{kj}C^j_{rs}u_\ell c^r c^s
+    =0,
+  \]
+  because
+  \([\operatorname{ad}^{\vee}_{e_r},\operatorname{ad}^{\vee}_{e_s}]
+    =\operatorname{ad}^{\vee}_{[e_r,e_s]}\).
 \end{proof}
 
 \begin{defn}[Formal-disk coordinate CE/PV completion]\label{defn:formal-disk-ce-pv-completion}
@@ -249,7 +342,12 @@ Koszul-duality interface.
   \(\mathfrak h^\vee_{\mathrm{cont}}=\bigoplus_{d\geq1}H_d^\vee\).
   Write \(c^{a,b}\) for the CE coordinate dual to
   \(H_{a,b}=z_1^az_2^b\), and \(u_{a,b}\) for the CE coordinate dual to
-  the shifted cotangent generator \((H_{a,b})^\vee[1]\).
+  the shifted cotangent generator \((H_{a,b})^\vee[1]\).  When
+  \(I=(a,b)\) with \(a+b>0\), write
+  \[
+    H_I=z_1^az_2^b,\qquad
+    \eta^I=(H_I)^\vee[1]\in\mathfrak h^\vee_{\mathrm{cont}}[1].
+  \]
 
   For \(M,L\geq0\), let \(\mathcal B_{M,L}^{\mathrm{CE}}\) be the
   finite set of graded-commutative monomials in the letters
@@ -268,16 +366,21 @@ Koszul-duality interface.
     \mathfrak g=\mathfrak h\ltimes
       \mathfrak h^\vee_{\mathrm{cont}}[1].
   \]
-  The PV completion is defined by the same rule with \(u_{a,b}\)
-  replaced by \(O_{a,b}\) and \(c^{a,b}\) by \(\theta^{a,b}\):
-  \[
-    \mathrm{PV}_{\mathrm{coord}}(\mathfrak h)
-    :=
-    \widehat{\mathbf S}_{\mathrm{coord}}(O_{a,b})
-    \widehat\otimes
+	  The PV completion is defined by the same rule with \(u_{a,b}\)
+	  replaced by \(O_{a,b}\) and \(c^{a,b}\) by \(\theta^{a,b}\):
+	  \[
+	    A_{\partial,\mathrm{coord}}
+	    :=\widehat{\mathbf S}_{\mathrm{coord}}(\mathfrak h),
+	    \qquad
+	    \mathrm{PV}_{\mathrm{coord}}(\mathfrak h)
+	    =
+	    \mathrm{PV}_{\mathrm{coord}}(A_{\partial,\mathrm{coord}})
+	    :=
+	    \widehat{\mathbf S}_{\mathrm{coord}}(O_{a,b})
+	    \widehat\otimes
     \widehat\Lambda_{\mathrm{coord}}(\theta^{a,b}).
   \]
-  These product algebras are coordinate enlargements.  They strictly
+	  These product algebras are coordinate enlargements.  They strictly
   contain the literal continuous CE cochains: for example an infinite
   length-one sum in the \(c^{a,b}\)-coordinates is a vector in the
   coordinate product but not a continuous linear functional on
@@ -285,12 +388,89 @@ Koszul-duality interface.
   mixed continuous subspace in which the \(c/\theta\)-linear directions
   have continuous-dual support and the contraction pairing is a
   continuous biderivation.  Without this mixed condition the construction
-  is only an ambient pro-coordinate product.  The projections are finite
-  coordinate tests for the displayed differential formulas, not
-  Lie-algebra quotients of the full formal Hamiltonian algebra.
+	  is only an ambient pro-coordinate product.  The projections are finite
+	  coordinate tests for the displayed differential formulas, not
+	  Lie-algebra quotients of the full formal Hamiltonian algebra.
+  A map out of either coordinate product is \emph{coordinate-continuous}
+  when every output coefficient depends on finitely many input
+  coefficients after projection to any finite set of word labels.
+  Multiplication is defined by the usual finite decompositions of a fixed
+  output word into two subwords; hence each output coefficient of a
+  product is a finite sum.  The infinite behavior enters through the
+  differential and contraction formulas, where coordinate-continuity or
+  bracket-admissibility is the required summability condition.
+		\end{defn}
+
+\begin{defn}[Bracket- and kernel-admissible CE/PV realizations]\label{defn:bracket-kernel-admissible}
+  Let \(A_{\partial,\mathrm{coord}}\) and
+  \(\mathrm{PV}_{\mathrm{coord}}(A_{\partial,\mathrm{coord}})\) be as in
+  Definition~\ref{defn:formal-disk-ce-pv-completion}.  A
+  \emph{bracket-admissible realization} is a complete Hausdorff
+  topological subalgebra
+  \(i_B\colon B\hookrightarrow
+  \mathrm{PV}_{\mathrm{coord}}(A_{\partial,\mathrm{coord}})\) with
+  continuous inclusion such that multiplication
+  \(B\widehat\otimes B\to B\), the restricted differential
+  \(d_\pi^{\mathrm{coord}}\colon B\to B\), and the Schouten contraction
+  bracket \(B\widehat\otimes B\to B[-1]\) are continuous.  The source
+  \(\Phi_{\mathrm{coord}}^{-1}(B)\) is given the pullback topology; it is
+  required to be closed under \(d_{\mathrm{CE}}\), multiplication, and the
+  transported cotangent bracket, with these operations continuous.  For
+  such \(B\), write
+  \[
+    \Phi^B_{P_0}\colon
+    \Phi_{\mathrm{coord}}^{-1}(B)\xrightarrow{\sim}B
+  \]
+  for the restricted completed dg \(P_0\)-map.
+
+  If \(S\subset\mathfrak h\) is a class of Hamiltonians, \(B\) is
+  \emph{\(S\)-Hamiltonian-spanning} if \(O_f\in B\) and
+  \(d_\pi^{\mathrm{coord}}O_f\in B\) for every \(f\in S\).  Boundary
+  Hamiltonian statements inside \(\Phi^B_{P_0}\) are made only for such
+  \(f\).
+
+  A \emph{kernel-admissible datum} is a bracket-admissible \(B\) together
+  with a specified completed tensor product, hence a completed
+  convolution dg Lie algebra \(\mathcal K_B\), in which the diagonal sums
+  \[
+    \sum_I H_I\otimes\theta^I,\qquad
+    \sum_I \eta^I\otimes O_I
+  \]
+  converge and the differential and convolution bracket are continuous.
+  In that case set, as an element of \(\mathcal K_B\),
+  \[
+    \Theta_B=\sum_I H_I\otimes\theta^I+\sum_I\eta^I\otimes O_I .
+  \]
+  The strict ambient product/direct-sum completion is not
+  kernel-admissible unless this diagonal convergence is supplied as
+  additional structure.
+
+	  The finite-support subalgebra \(B_{\mathrm{fin}}\) is a finite-test
+	  model in every finite coordinate window; it is not a global
+	  bracket-admissible \(B\) for the full formal disk unless the chosen
+	  completion is also stable under the infinite coadjoint differential.
+	  For \(q>1\) the weighted rapidly decreasing test target \(E_q\) is defined by the
+	  seminorms
+  \[
+    p_n(x)=
+    \sup_{a,b}\,|x_{a,b}|\,q^{a+b}(1+a+b)^n,\qquad n\geq0,
+  \]
+  and by the analogous finite-word seminorms on polyvectors.  The
+	  monomial estimate
+  \[
+    |ad-bc|\leq (a+b)(c+d)
+  \]
+	  is only the first local convolution bound needed to absorb the
+	  Poisson structure constants into the polynomial factor of the
+	  seminorms.  Thus a Köthe completion built from these seminorms is a
+	  candidate bracket-admissible \(B\) only after the chosen finite-word
+	  tensor convention proves multiplication, the coordinate differential,
+	  and the Schouten contraction continuous; it is kernel-admissible only
+	  if the two diagonal sums above converge in that completed tensor
+	  product.
 \end{defn}
 
-\begin{lem}[Formal-disk CE and Schouten continuity, square-zero form]\label{lem:formal-disk-ce-schouten-continuity}
+\begin{lem}[Formal-disk coordinate differential formulas]\label{lem:formal-disk-ce-schouten-continuity}
   In the coordinate product completion of
   Definition~\ref{defn:formal-disk-ce-pv-completion}, the formulas
   \[
@@ -298,8 +478,8 @@ Koszul-duality interface.
   \]
   with \(H_{r,s}=0\) for \(r<0\), \(s<0\), or \(r+s=0\), determine
   degree-one coordinate-continuous derivations
-  \(d_{\mathrm{CE}}\) and \(d_\pi=[\pi,-]_S\), and these derivations
-  satisfy \(d_{\mathrm{CE}}^2=d_\pi^2=0\).  On generators,
+  \(d_{\mathrm{CE}}\) and \(d_\pi^{\mathrm{coord}}\), and these derivations
+  satisfy \(d_{\mathrm{CE}}^2=(d_\pi^{\mathrm{coord}})^2=0\).  On generators,
   \[
     d_{\mathrm{CE}}c^{r,s}
       =
@@ -314,7 +494,7 @@ Koszul-duality interface.
       (rd-sc)\,
       u_{r+c-1,s+d-1}c^{c,d},
   \]
-  and the Schouten differential has the identical formulas after
+    and the coordinate PV differential \(d_\pi^{\mathrm{coord}}\) has the identical formulas after
   \(c^{a,b}\mapsto\theta^{a,b}\) and \(u_{a,b}\mapsto O_{a,b}\).
   Terms whose output label is the reduced constant \(H_{0,0}\) are
   omitted.
@@ -337,30 +517,45 @@ Koszul-duality interface.
   A completed monomial has finite word length before passage to the
   product completion, so the derivation rule applies to finitely many
   factors.  Continuity extends the derivation uniquely to arbitrary
-  products over the finite-word basis.  The Schouten formulas have the
-  same coefficient support, with \(O,\theta\) in place of \(u,c\), so
-  the same argument proves continuity of \(d_\pi\).
+  products over the finite-word basis.  The PV coordinate formulas have
+  the same coefficient support, with \(O,\theta\) in place of \(u,c\), so
+  the same argument proves continuity of \(d_\pi^{\mathrm{coord}}\).
 
   The square-zero assertions are checked before completion and then
   extended by continuity.  The CE formulas are the continuous dual of the
   genuine Hamiltonian Lie bracket on
-  \((z_1,z_2)\C[[z_1,z_2]]/\C\cdot1\), whose Jacobi identity gives
-  \(d_{\mathrm{CE}}^2=0\) on the generators.  On the PV side the linear
-  Poisson tensor
-  \(\pi=\frac12 C^K_{IJ}O_K\theta^I\theta^J\) satisfies
-  \([\pi,\pi]_S=0\) by the same structure-constant Jacobi identity; hence
-  \(d_\pi^2=\frac12[[\pi,\pi]_S,-]_S=0\).  Since both differentials are
-  continuous derivations, generator-level square-zero implies square-zero
-  on the completed product algebras.
+  \(\C[[z_1,z_2]]/\C\cdot1\), equivalently on the zero-constant
+  representatives \((z_1,z_2)\C[[z_1,z_2]]\), whose Jacobi identity gives
+  \(d_{\mathrm{CE}}^2c^{r,s}=0\).  On the cotangent coordinates,
+  \[
+    d_{\mathrm{CE}}^2u_{r,s}
+    =
+    C^L_{(r,s)J}C^M_{LR}u_Mc^Rc^J
+    -\frac12 C^L_{(r,s)J}C^J_{RS}u_Lc^Rc^S
+    =0,
+  \]
+  where the constants \(C^K_{IJ}\) are those of
+  \([H_I,H_J]=C^K_{IJ}H_K\), and the equality is exactly
+  \([\operatorname{ad}^{\vee}_{H_R},\operatorname{ad}^{\vee}_{H_S}]
+    =\operatorname{ad}^{\vee}_{[H_R,H_S]}\).
+  On the PV side the displayed coordinate formulas define a derivation
+  \(d_\pi^{\mathrm{coord}}\); its square on generators is the same Jacobi
+  and coadjoint identity with \(O,\theta\) replacing \(u,c\).  This avoids
+  asserting that the infinite
+  linear Poisson bivector is a globally summable Schouten element in the
+  strict ambient product.  Since both differentials are continuous
+  coordinate derivations, generator-level square-zero implies
+  square-zero on the completed coordinate product algebras.
 \end{proof}
 
-\begin{thm}[Coordinate formal-disk CE/PV reconstruction]\label{thm:formal-disk-completed-ce-pv}
+\begin{thm}[Coordinate formal-disk CE/PV theorem and admissible \(P_0\) realizations]\label{thm:formal-disk-completed-ce-pv}
   Let
   \[
-    \mathfrak h=(z_1,z_2)\C[[z_1,z_2]]
-      =\C[[z_1,z_2]]/\C\cdot1
+    \mathfrak h=\C[[z_1,z_2]]/\C\cdot1
+      \cong (z_1,z_2)\C[[z_1,z_2]]
   \]
-  with the projected Poisson bracket modulo constants
+  where the isomorphism chooses the zero-constant representative, with
+  the projected Poisson bracket modulo constants
   \[
     \{f,g\}=\partial_{z_1}f\,\partial_{z_2}g
       -\partial_{z_2}f\,\partial_{z_1}g .
@@ -368,58 +563,81 @@ Koszul-duality interface.
   Complete the coordinate CE and PV algebras as in
   Definition~\ref{defn:formal-disk-ce-pv-completion}.  Then
   \[
-    \Phi\colon
-    C^\bullet_{\mathrm{CE},\mathrm{coord}}
-    \bigl(\mathfrak h\ltimes\mathfrak h^\vee_{\mathrm{cont}}[1]\bigr)
+	    \Phi_{\mathrm{coord}}\colon
+	    C^\bullet_{\mathrm{CE},\mathrm{coord}}
+	    \bigl(\mathfrak h\ltimes\mathfrak h^\vee_{\mathrm{cont}}[1]\bigr)
     \xrightarrow{\ \sim\ }
     \mathrm{PV}_{\mathrm{coord}}(\mathfrak h),
     \qquad
     c^{a,b}\mapsto\theta^{a,b},\quad u_{a,b}\mapsto O_{a,b},
-  \]
-  is an isomorphism of completed coordinate dg commutative algebras.
-  On the finite-support mixed subalgebra, and on every finite admissible
-  window, the generator cotangent/Schouten contraction brackets are
-  compatible.  The full
-  product coordinate algebra is not asserted to carry the global
-  continuous contraction bracket; the missing infinite diagonal is the
-  strict Casimir obstruction of
-  Theorem~\ref{thm:lane-strict-casimir-obstruction}.  Under the stable
-  boundary evaluation of Theorem~\ref{thm:bulk-boundary}, the
-  degree-zero cotangent coordinate \(u_f\) maps to the boundary
-  Hamiltonian
+	  \]
+	  is an isomorphism of completed coordinate dg commutative algebras.
+	  If \(B\subset
+	  \mathrm{PV}_{\mathrm{coord}}(A_{\partial,\mathrm{coord}})\) is
+	  bracket-admissible in the sense of
+	  Definition~\ref{defn:bracket-kernel-admissible}, then
+	  \[
+	    \Phi^B_{P_0}\colon\Phi_{\mathrm{coord}}^{-1}(B)
+	    \xrightarrow{\sim}B
+	  \]
+	  is an isomorphism of completed dg \(P_0\)-algebras.  If \(B\) is
+	  kernel-admissible as part of a datum \((B,\mathcal K_B)\), then the
+	  diagonal element
+	  \[
+	    \Theta_B=\sum_I H_I\otimes\theta^I+\sum_I\eta^I\otimes O_I
+	  \]
+	  satisfies the Maurer--Cartan equation
+	  \(d\Theta_B+\frac12[\Theta_B,\Theta_B]=0\) in \(\mathcal K_B\).  The
+	  full product
+	  coordinate algebra is not asserted to carry the global continuous
+	  contraction bracket or a strict kernel; the missing infinite diagonal
+	  is the strict Casimir obstruction of
+	  Theorem~\ref{thm:lane-strict-casimir-obstruction}.  The admissible
+	  formal-local interface is
+	  \[
+	    \mathfrak U_{\mathfrak h}
+	    =(\Phi_{\mathrm{coord}},\{\Phi^B_{P_0}\}_B,\{\Theta_B\}_B),
+	  \]
+	  with \(B\) ranging over bracket-admissible realizations in the middle
+	  term and kernel-admissible data in the last term.  At the coordinate
+	  dg-algebra level, and inside \(\Phi^B_{P_0}\) for every
+	  Hamiltonian-spanning \(B\), the stable boundary evaluation of
+	  Theorem~\ref{thm:bulk-boundary} sends the degree-zero cotangent
+	  coordinate \(u_f\) to the boundary Hamiltonian
   \[
     B_f=\overline{\operatorname{Tr}f(\phi_1,\phi_2)} ,
   \]
   while \(c^f\) maps to the Hamiltonian vector field of \(B_f\).  This
   is the cochain-level bulk-boundary Koszul shadow; it does not use
-  lower-central conilpotence of the full Hamiltonian Lie algebra.
+  lower-central Tate-pronilpotence of the full Hamiltonian Lie algebra.
 \end{thm}
 
 \begin{proof}
-  The completed coordinate source and target are products over the same
-  finite-word coordinate set after the substitutions
-  \(c^{a,b}\leftrightarrow\theta^{a,b}\) and
-  \(u_{a,b}\leftrightarrow O_{a,b}\).  Hence \(\Phi\) is a continuous
+	  The completed coordinate source and target are products over the same
+	  finite-word coordinate set after the substitutions
+		  \(c^{a,b}\leftrightarrow\theta^{a,b}\) and
+		  \(u_{a,b}\leftrightarrow O_{a,b}\).  Hence
+	  \(\Phi_{\mathrm{coord}}\) is a continuous
   isomorphism of completed graded-commutative algebras, with continuous
   inverse given by the reverse substitution.
 
   Lemma~\ref{lem:formal-disk-ce-schouten-continuity} gives
   coordinate-continuous
-  derivations \(d_{\mathrm{CE}}\) and \(d_\pi\).  On the generators
+  derivations \(d_{\mathrm{CE}}\) and \(d_\pi^{\mathrm{coord}}\).  On the generators
   \(c^{r,s}\) and \(u_{r,s}\), the displayed CE formulas are the duals
   of the Hamiltonian bracket and coadjoint action in
   \(\mathfrak h\ltimes\mathfrak h^\vee_{\mathrm{cont}}[1]\).  The
-  Schouten formulas are the Lichnerowicz differential for the linear
-  Poisson tensor
+  PV coordinate formulas are the coefficientwise Lichnerowicz formulas
+  for the linear Poisson tensor
   \[
     \pi=\frac12 C^K_{IJ}O_K\theta^I\theta^J .
   \]
-  Therefore \(\Phi d_{\mathrm{CE}}=d_\pi\Phi\) on \(c^{r,s}\) and
-  \(u_{r,s}\).  Both sides are continuous degree-one derivations, so the
+	  Therefore \(\Phi_{\mathrm{coord}} d_{\mathrm{CE}}=d_\pi^{\mathrm{coord}}\Phi_{\mathrm{coord}}\) on \(c^{r,s}\) and
+	  \(u_{r,s}\).  Both sides are continuous degree-one derivations, so the
   equality extends from generators to every finite word and then, by the
   product completion, to the whole completed algebra.
 
-  On the finite-support mixed subalgebra the cotangent/Schouten bracket is
+	  On the finite-support mixed subalgebra the cotangent/Schouten bracket is
   checked on generators:
   \[
     \{c^{a,b},u_{r,s}\}_{\mathrm{CE}}
@@ -435,24 +653,43 @@ Koszul-duality interface.
   bracket of \(\sum_I c^I\) with \(\sum_I u_I\), which are both admitted
   by the coordinate product, would require the divergent diagonal
   coefficient \(\sum_I1\).  Thus the full product statement above is a
-  dg coordinate reconstruction, not a global completed \(P_0\)-algebra
-  theorem.
+	  dg coordinate reconstruction, not a global completed \(P_0\)-algebra
+	  theorem.
 
-  The moment-map shadow is the restriction of \(\Phi\) to the cotangent
+	  If \(B\) is bracket-admissible, the preceding generator calculation
+	  restricts to \(B\), and all infinite contractions that occur in the
+	  \(P_0\) bracket converge by definition of \(B\).  Hence the restricted
+	  map \(\Phi^B_{P_0}\) is a completed dg \(P_0\)-isomorphism.  If \(B\)
+	  is kernel-admissible, the two diagonal sums defining \(\Theta_B\)
+	  converge in the specified convolution dg Lie algebra \(\mathcal K_B\).
+	  The Maurer--Cartan equation is
+	  then checked coefficientwise in the completed convolution complex:
+	  every requested coefficient sees only the finitely many labels
+	  contributing to that coefficient, and the equality is exactly the
+	  Jacobi and coadjoint identity in the full Hamiltonian Lie algebra.
+	  Convergence in \(B\) passes these coefficient identities to the
+	  completed tensor product.  No finite coordinate window is being used
+	  as a Hamiltonian Lie quotient.  Without diagonal
+	  convergence this sentence has no target object, which is precisely the
+	  strict Casimir obstruction.
+
+		  The coordinate moment-map shadow is the restriction of
+	  \(\Phi_{\mathrm{coord}}\) to the cotangent
   coordinates: \(u_f\mapsto O_f\).  The Kirillov--Poisson bracket gives
   \(\{O_f,O_g\}=O_{\{f,g\}}\).  Theorem~\ref{thm:bulk-boundary} sends
   \(O_f\) to
   \(\overline{\operatorname{Tr}f(\phi_1,\phi_2)}\) and preserves the
-  Hamiltonian bracket in the stable connected sector.  Thus \(u_f\) is
-  the bulk source of the boundary Hamiltonian, while
-  \(c^f\mapsto\theta^f\) records the corresponding Hamiltonian vector
-  field.
+  Hamiltonian bracket in the stable connected sector.  Inside a
+  bracket-admissible \(P_0\)-realization this sentence applies only for
+  the \(f\)'s in the Hamiltonian-spanning set of \(B\).  Thus \(u_f\) is
+  the bulk source of the boundary Hamiltonian, while \(c^f\mapsto\theta^f\)
+  records the corresponding Hamiltonian vector field.
 \end{proof}
 
-\begin{thm}[Universal formal-local CE/PV recognition criterion]\label{thm:universal-formal-local-ce-pv-recognition}
+\begin{thm}[Abstract bracket-compatible CE/PV recognition criterion]\label{thm:universal-formal-local-ce-pv-recognition}
   Let \(L=\varprojlim_\alpha L_\alpha\) be a complete Hausdorff
   filtered dg Lie algebra over \(\C\), with finite-dimensional
-  coordinate quotients \(L_\alpha\), and let
+  bracket-compatible dg Lie quotients \(L_\alpha\), and let
   \(D=L^\vee_{\mathrm{cont}}=\varinjlim_\alpha L_\alpha^\vee\).
   Put \(G=L\ltimes D[1]\).  Form the completed coordinate CE and PV
   algebras by taking products over finite words and finite coordinate
@@ -461,7 +698,7 @@ Koszul-duality interface.
     \item the internal differential, Lie bracket on \(L\), and
       coadjoint action on \(D\) are continuous, equivalently every
       finite coordinate projection of \(d_Lx\), \([x,y]\), and
-      \(x\cdot\lambda\) factors through a finite coordinate quotient of
+      \(x\cdot\lambda\) factors through a finite Lie quotient of
       the inputs;
     \item the linear Poisson bivector
       \[
@@ -470,11 +707,12 @@ Koszul-duality interface.
       determined by the structure constants of \(L\) is a continuous
       Schouten bivector on
       \(\widehat{\mathbf S}_{\mathrm{coord}}(L)\);
-    \item the coordinate cotangent/Schouten contraction bracket
-      \(\{\theta^i,O_j\}=\delta^i_j\) is a continuous biderivation on
-      the chosen mixed or weighted completion.  This is a summability
-      hypothesis, not a consequence of the generator formula on the
-      ambient product.
+    \item the source cotangent bracket
+      \(\{c^i,u_j\}_{\mathrm{CE}}=\delta^i_j\) and the target Schouten
+      contraction bracket \([\theta^i,O_j]_S=\delta^i_j\) are continuous
+      biderivations on the chosen mixed or weighted completion.  This is
+      a summability hypothesis, not a consequence of the generator
+      formula on the ambient product.
   \end{enumerate}
   Then the generator assignment
   \[
@@ -490,9 +728,12 @@ Koszul-duality interface.
   condition in (U3), the conclusion is only the compatible pro
   finite-window dg-commutative CE/PV identity and the global contraction
   bracket is obstruction data.  This is a formal-local cochain theorem.
-  It does not require lower-central conilpotence and it does not assert
+  It does not require lower-central Tate-pronilpotence and it does not assert
   that the coordinate pairing is represented by a strict kernel
   \(C_L\in L\widehat\otimes D\).
+  The strict formal Hamiltonian disk is not an instance of this theorem
+  unless such a bracket-compatible finite quotient system is supplied;
+  for the disk itself one uses the coordinate finite-test theorem above.
 \end{thm}
 
 \begin{proof}
@@ -544,12 +785,12 @@ Koszul-duality interface.
   Theorem~\ref{thm:formal-disk-completed-ce-pv}, the boundary Hamiltonian
   \(O_f\) is the image of the shifted-cotangent CE coordinate \(u_f\):
   \[
-    \Phi(u_f)=O_f.
+	    \Phi_{\mathrm{coord}}(u_f)=O_f.
   \]
   The Hamiltonian CE coordinate \(c^f\) maps to the vector-field
   generator \(\theta^f\), not to \(O_f\).  Equivalently,
   \[
-    d_\pi O_f=X_{O_f}=\Phi(d_{\mathrm{CE}}u_f).
+	    d_\pi^{\mathrm{coord}} O_f=X_{O_f}=\Phi_{\mathrm{coord}}(d_{\mathrm{CE}}u_f).
   \]
   After stable boundary evaluation, \(O_f\) becomes
   \(\overline{\operatorname{Tr}f(\phi_1,\phi_2)}\), the moment-map
@@ -557,11 +798,14 @@ Koszul-duality interface.
 \end{prop}
 
 \begin{proof}
-  This is the \(u\)-generator part of the defining formula for \(\Phi\).
+  This is the \(u\)-generator part of the defining formula for
+  \(\Phi_{\mathrm{coord}}\).
   For \(f=H_k\), the CE differential is
-  \(d_{\mathrm{CE}}u_k=C^\ell_{kj}u_\ell c^j\).  Applying \(\Phi\) gives
+  \(d_{\mathrm{CE}}u_k=C^\ell_{kj}u_\ell c^j\).  Applying
+  \(\Phi_{\mathrm{coord}}\) gives
   \(C^\ell_{kj}O_\ell\theta^j\), which is exactly the Hamiltonian vector
-  field \(d_\pi O_k=[\pi,O_k]_S\).  Thus the cotangent coordinate, not the
+	  field \(d_\pi^{\mathrm{coord}}O_k\); on a bracket-admissible \(B\) this
+	  is the Schouten bracket \([\pi,O_k]_S\).  Thus the cotangent coordinate, not the
   Hamiltonian ghost coordinate, carries the boundary Hamiltonian.  The
   last assertion is Theorem~\ref{thm:bulk-boundary} applied to the
   degree-zero Kirillov map \(f\mapsto O_f\).
@@ -597,7 +841,8 @@ Koszul-duality interface.
 
 \begin{thm}[Primitive-label obstruction to Matlis cotangent-current equivariance]\label{thm:lane-one-psi-not-cotangent-current}
   Let \(V_\Psi\) be the span of primitive PBW special-fibre labels
-  \(\widetilde\Psi_{a,b}\), with the linear Hamiltonian action
+  \(\widetilde\Psi_{a,b}\), \(a+b>0\), with the reduced scalar target
+  killed and with the linear Hamiltonian action
   \[
     O_{1,0}\cdot\widetilde\Psi_{a,b}
       =b\,\widetilde\Psi_{a,b-1},\qquad
@@ -616,7 +861,7 @@ Koszul-duality interface.
 \end{thm}
 
 \begin{proof}
-  Apply equivariance for \(z_1\) to \(\widetilde\Psi_{a,0}\).  On the
+  Apply equivariance for \(z_1\) to \(\widetilde\Psi_{a,0}\), \(a>0\).  On the
   PBW special-fibre side,
   \(O_{1,0}\cdot\widetilde\Psi_{a,0}=0\).  Hence
   \(F(O_{1,0}\cdot\widetilde\Psi_{a,0})=0\).  On the principal-part side,
@@ -779,21 +1024,28 @@ Koszul-duality interface.
   finite-window towers.
 \end{proof}
 
-\begin{defn}[Universal open-trace \(A_\infty\)-Koszul acceptance datum]\label{defn:stable-ainfty-koszul-horizon-datum}
+\begin{defn}[Universal open-trace \(A_\infty\)-Koszul acceptance datum]\label{defn:stable-ainfty-koszul-acceptance-datum}
   A universal open-trace \(A_\infty\)-Koszul acceptance datum consists of:
   \begin{enumerate}[label=(K\arabic*)]
-    \item the completed augmented open algebra
+    \item a completed augmented filtered \(A_\infty\)-algebra
+      \(A_{\mathrm{op}}\) in the scalar-reduced stable trace/Koszul/BV
+      sector, with associated graded
       \[
-        A_{\mathrm{op}}
-          =
-        \widehat{
+        \operatorname{gr}A_{\mathrm{op}}\cong
+        \widehat{\mathbf S}(V_H),
+        \qquad
+        \operatorname{Indec}\operatorname{gr}A_{\mathrm{op}}
+          =\mathfrak m/\mathfrak m^2\cong V_H,
+      \]
+      where the connected/primitive expression
+      \[
         \pi_{\mathrm{Ham}}
         \operatorname{Conn}_{N\to\infty}
         \operatorname{Prim}_{\mathrm{st}}
-        \bigl(\mc R_N^{GL_N},Q\bigr)}
+        \bigl(\mc R_N^{GL_N},Q\bigr)
       \]
-      in the scalar-reduced stable trace/Koszul/BV sector, read as an
-      \(A_\infty\)-algebra;
+      is only this linear associated-graded symbol, not the algebra object
+      itself;
     \item the completed closed target
       \[
         B_{\mathrm{CE/PV}}
@@ -856,7 +1108,7 @@ Koszul-duality interface.
 
 \begin{thm}[Universal open-side filtered \(A_\infty\)-Koszul acceptance]\label{thm:stable-ainfty-koszul-under-hypotheses}
   For a datum in the sense of
-  Definition~\ref{defn:stable-ainfty-koszul-horizon-datum}, the following
+  Definition~\ref{defn:stable-ainfty-koszul-acceptance-datum}, the following
   are equivalent:
   \begin{enumerate}[label=(\alph*)]
     \item \(\tau_{\mathrm{op}}\) is an accepted open-side twisting
@@ -909,7 +1161,7 @@ Koszul-duality interface.
   of the same criterion, followed by exact continuous dualization.
 \end{proof}
 
-\begin{stmt}[Index lane: Matlis principal-part cotangent module]\label{thm:lane-principal-parts}
+\begin{stmt}[Statement: Matlis principal-part cotangent module]\label{thm:lane-principal-parts}
   \emph{Status.} \emph{proved degreewise stable}.  The proof uses
   residue calculus and Matlis local-cohomology duality for the
   \(m\)-adic topology on \(R=\C[[z_1,z_2]]\), after quotienting
@@ -918,10 +1170,13 @@ Koszul-duality interface.
   \emph{Exact hypotheses.} Work over \(R=\C[[z_1,z_2]]\) with maximal
   ideal \(\mathfrak m=(z_1,z_2)\); put
   \(\mathfrak h=R/\C\cdot1\); take continuous duals for the
-  \(m\)-adic topology; normalize the residue pairing only up to one
-  nonzero scalar; and, for the Fourier--Rees comparison only, distinguish
-  the Fourier delta Rees lattice \(\mathcal D_\hbar/(z_1,z_2)\) from the
-  full Cech local-cohomology lattice before \(\hbar\) is inverted.
+  \(m\)-adic topology; give \(\mathcal P\) the locally finite
+  direct-sum topology transported from
+  \(\mathfrak h^\vee_{\mathrm{cont}}\); normalize the residue pairing
+  only up to one nonzero scalar; and, for the Fourier--Rees comparison
+  only, distinguish the Fourier delta Rees lattice
+  \(\mathcal D_\hbar/(z_1,z_2)\) from the full \v{C}ech
+  local-cohomology lattice before \(\hbar\) is inverted.
 
   \emph{Local assertion.} The continuous dual of the reduced Hamiltonian
   Lie algebra is the reduced Matlis-local-cohomology module
@@ -942,25 +1197,29 @@ Koszul-duality interface.
     =
     -(pb-qa+p-q)\rho_{a-p+1,b-q+1},
   \]
-  with negative-index targets equal to zero.  The residue pairing is
-  determined up to one nonzero scalar, and this scalar is the only
-  normalization ambiguity in the lane.
+  with negative-index targets equal to zero.  Among continuous
+  total-degree-zero pairings, the residue pairing is determined up to one
+  nonzero scalar, and this scalar is the only normalization ambiguity in
+  this statement.
 
-  \emph{Proof dependency map.}
+  \emph{Proof inputs.}
   Appendix~\ref{sec:app-matlis-principal-parts} centralizes the
-  reduced Matlis calculation in the notation of this lane.
+  reduced Matlis calculation in the notation of this statement.
   Theorem~\ref{thm:canonical-residue-pairing} proves the residue
-  pairing and its scalar ambiguity.  Proposition~\ref{prop:principal-part-coadjoint}
+  pairing and its total-degree-zero scalar ambiguity.  Proposition~\ref{prop:principal-part-coadjoint}
   computes the explicit coadjoint action.  Theorem~\ref{thm:principal-part-coadjoint-uniqueness}
-  gives the Matlis-form uniqueness statement.  Theorem~\ref{thm:pbw-vs-deformation}
+  gives the total-degree-zero Matlis-form uniqueness statement.  Theorem~\ref{thm:pbw-vs-deformation}
   and Theorem~\ref{thm:no-polynomial-realization-categorical} state the
   no-go result for replacing \(\mathcal P\) by polynomial descendants.
   Theorem~\ref{thm:app-matlis-rees-fourier-bridge} supplies the limited
   Fourier--Rees label bridge through the Rees lattice
   \(\bigoplus\hbar^{a+b}\C[[\hbar]]\rho_{a,b}\) and proves that it is not
-  an \(\mathfrak h\)-module bridge.
+  an \(\mathfrak h\)-module bridge.  Its flatness is the PBW normal-form
+  flatness of the left cyclic \(\mathcal D_\hbar\)-modules
+  \(\mathcal D_\hbar/(\partial_1,\partial_2)\) and
+  \(\mathcal D_\hbar/(z_1,z_2)\).
 
-  \emph{Residuals.} A same-action \(D_\hbar\), Fourier, or Rees
+  \emph{Scope and exclusions.} A same-action \(D_\hbar\), Fourier, or Rees
   comparison identifying the PBW descendant module with the Matlis
   coadjoint module is ruled out on the generic fibre by local nilpotence
   unless the Hamiltonian action or the boundary target is changed.  The
@@ -968,19 +1227,23 @@ Koszul-duality interface.
   comparison.
 \end{stmt}
 
-\begin{stmt}[Index lane: brane-line factorization currents]\label{thm:lane-factorization-current}
+\begin{stmt}[Statement: brane-line factorization currents]\label{thm:lane-factorization-current}
   \emph{Status.} \emph{proved degreewise stable}.  The proof is for
   compactly supported de Rham Hamiltonian currents and compactly
   supported distributional principal-part currents on intervals.  This
-  lane is a strict \(P_0\) current statement in the reduced Hamiltonian
-  sector.
+  statement is a strict support-local \(P_0\) current statement in the
+  reduced Hamiltonian sector; local constancy is asserted only after the
+  compact-support de Rham contraction of the Hamiltonian density sector.
 
   \emph{Exact hypotheses.} Intervals lie in the brane line \(\R\);
   \(\mathfrak h_I=\Omega^\bullet_c(I)\widehat\otimes\mathfrak h\);
   \(\mathcal P_I=\mathcal D'_c(I)\widehat\otimes\mathcal P\);
   extension by zero is the functoriality; and source coordinates in the
   displayed boundary operation are shifted-cotangent CE coordinates
-  \(u_{a(t)dt\otimes f}\), not Hamiltonian ghost coordinates.
+  \(u_{a(t)dt\otimes f}\), not Hamiltonian ghost coordinates.  The CE
+  source is cofactorization data: extension by zero on current Lie
+  algebras induces pullback/coproduct on CE cochains, while covariant
+  factorization belongs to the compactly supported current target.
 
   \emph{Local assertion.} For each interval \(I\subset\R\),
   \[
@@ -988,7 +1251,7 @@ Koszul-duality interface.
     \mathcal P_I=\mathcal D'_c(I)\widehat\otimes\mathcal P,\qquad
     \mathfrak g_I=\mathfrak h_I\ltimes\mathcal P_I[1].
   \]
-  The Hamiltonian factor admits an interval-wise locally constant
+  The Hamiltonian current sector admits an interval-wise locally constant
   \(P_0\) factorization equivalence.  On length-one shifted-cotangent
   CE coordinates the source is
   \[
@@ -1007,27 +1270,27 @@ Koszul-duality interface.
   For a regular current \(B=b(t)\,dt\) this is
   \(\int_I a(t)b(t)\,dt\,\operatorname{Res}(\rho f)\).  Orientation
   reversal contributes only the ordinary sign of the one-form density
-  \(dt\); no extra sign is inserted in the lane.
+  \(dt\); no extra sign is inserted in this statement.
 
-  \emph{Proof dependency map.}
+  \emph{Proof inputs.}
   Appendix~\ref{sec:app-factorization-current-conventions} fixes the
   interval source, current dual, shifted-cotangent CE coordinate, and
-  orientation convention used in this lane.
+  orientation convention used in this statement.
   Construction~\ref{constr:interval-fact-algebras} fixes the de
   Rham-current objects and extension-by-zero functoriality.
   Proposition~\ref{prop:brane-bracket-locality} proves disjoint-support
   locality.  Theorem~\ref{thm:hamiltonian-current-center-lift} supplies
-  the smeared Hamiltonian central operation.  Theorem~\ref{thm:open-closed-derived-center-factorization}
+  the smeared Hamiltonian central operation.  Theorem~\ref{thm:hamiltonian-current-factorization}
   identifies the interval-wise reduced Hamiltonian current
   central-operation map and its
   compatibility with factorization products.
 
-  \emph{Residuals.} The strict current statement does not include the
+  \emph{Scope and exclusions.} The strict current statement does not include the
   unreduced BV/factorization-centre morphism or its centrality homotopies
   against arbitrary open observables.
 \end{stmt}
 
-\begin{stmt}[Index lane: reduced principal-part defect currents]\label{thm:lane-reduced-principal-part-current}
+\begin{stmt}[Statement: reduced principal-part defect currents]\label{thm:lane-reduced-principal-part-current}
   \emph{Status.} \emph{proved degreewise stable}.  The proof applies
   only after the de Rham-current correction and only in the
   reduced \(P_0\) model after contraction.  It is not an unreduced
@@ -1035,11 +1298,15 @@ Koszul-duality interface.
   against arbitrary open observables.
 
   \emph{Exact hypotheses.} The algebra is the reduced
-  defect-current model on intervals after de Rham-current contraction; the Hamiltonian
-  factor is \(\widehat{\mathbf S}(\mathfrak h_I)\); the cotangent factor
-  is \(\widehat{\mathbf S}(\mathcal P_I[1])\); brackets are strict
-  \(P_0\)-brackets; and the primitive one-\(\psi\) comparison is taken
-  only after passing to indecomposables.
+  defect-current model on intervals after de Rham-current contraction;
+  the Hamiltonian factor is
+  \(\widehat{\mathbf S}(\Omega_c^0(I)\widehat\otimes\bar A)\); the
+  cotangent factor is
+  \(\widehat{\mathbf S}(\mathcal D'_c(I)\widehat\otimes\mathcal P[1])\);
+  brackets are strict \(P_0\)-brackets; the completed symmetric algebra
+  is interpreted degreewise in the current category; and the primitive
+  one-\(\psi\) comparison is taken only after passing to
+  indecomposables.
 
   \emph{Local assertion.} The principal-part cotangent factor extends
   the Hamiltonian brane-line algebra to the reduced defect-current
@@ -1047,9 +1314,9 @@ Koszul-duality interface.
   \[
     A^{\mathrm{pp}}_\partial(I)
     =
-    \widehat{\mathbf S}(\mathfrak h_I)
+    \widehat{\mathbf S}(\Omega_c^0(I)\widehat\otimes\bar A)
     \widehat\otimes
-    \widehat{\mathbf S}(\mathcal P_I[1])
+    \widehat{\mathbf S}(\mathcal D'_c(I)\widehat\otimes\mathcal P[1])
   \]
   with
   \[
@@ -1066,7 +1333,7 @@ Koszul-duality interface.
   where \(f\cdot\rho\) is replaced by
   \(\operatorname{ad}^{\vee}_{f,\hbar}\rho\).
 
-  \emph{Proof dependency map.}
+  \emph{Proof inputs.}
   Theorem~\ref{thm:reduced-principal-part-boundary-current} proves the
   reduced current model and its \(P_0\) bracket.  Theorem~\ref{thm:boundary-principal-part-cotangent-operators}
   records the boundary local-dual realization in the same reduced
@@ -1080,8 +1347,8 @@ Koszul-duality interface.
   that the polynomial primitive label projection does not quantize to
   the Moyal coadjoint target.
 
-  \emph{Residuals.} The unreduced cotangent factorization-centre
-  morphism and its centrality homotopies remain outside the lane.  The
+  \emph{Scope and exclusions.} The unreduced cotangent factorization-centre
+  morphism and its centrality homotopies remain outside this statement.  The
   reduced Moyal principal-part target is constructed, but a quantum lift
   from polynomial one-\(\psi\) primitives is ruled out under the
   leading-term assumptions above.  The pointwise classical obstruction
@@ -1104,23 +1371,27 @@ Koszul-duality interface.
   observables.
 \end{stmt}
 
-\begin{stmt}[Index lane: degree-zero Moyal/Weyl sector and graph boundary]\label{thm:lane-moyal-degree-zero}
+\begin{stmt}[Statement: degree-zero Moyal/Weyl sector and graph boundary]\label{thm:lane-moyal-degree-zero}
   \emph{Status.} \emph{proved in finite algebraic model} for the formal
   Weyl/Moyal coefficient algebra and the reduced open-line Wick
   normalization.  The degree-zero stable trace comparison is
   \emph{conditional} on the external radial-parts input of
   Statement~\ref{stmt:app-radial-external-input}.  The mixed QME,
   unweighted regulator endpoint, descendant one-\(\psi\) lift, and
-  Costello brane-defect graph realization are separate residual lanes
+  Costello brane-defect graph realization are separate residual statements
   and are not hypotheses for the formal Moyal coefficient theorem.
 
   \emph{Exact hypotheses.} Work in the scalar-reduced degree-zero
   Hamiltonian sector at finite \(N\), assume the radial-parts input of
   Statement~\ref{stmt:app-radial-external-input} for the all-\(N\)
-  reduction, then take the stable connected trace range degreewise; use
-  the Capelli/Weyl normalization of the Weyl algebra and the formal
-  Moyal product on \(\bar A_\hbar\); and exclude one-antifield
-  descendants and graph-theoretic BV data from the proved comparison.
+	  reduction, then take the stable connected trace range degreewise; use
+	  the Capelli/Weyl normalization of the Weyl algebra and the formal
+	  Moyal product on \(\bar A_\hbar\); and exclude one-antifield
+	  descendants and graph-theoretic BV data from the proved comparison.
+	  The all-\(N\) radial-parts input includes the matched-normalization
+	  assertion \(J_N(f)=J_N^{\mathrm{rad}}(f)\); the formal Moyal
+	  coefficient theorem and the cited radial-parts sources do not imply
+	  this equality in the present Weyl/Capelli convention.
 
   \emph{Local assertion.} On the scalar-reduced degree-zero Hamiltonian
   sector, conditional on the radial-parts input, the classical
@@ -1139,15 +1410,19 @@ Koszul-duality interface.
   graph lift of those coefficients is conditional on the sector,
   propagator, counterterm, anomaly, and QME data named in the analytic
   graph problem.
+  Here ``first'' and ``third'' refer to raw star-commutator powers
+  \(\hbar^1\) and \(\hbar^3\).  After division by \(\hbar\), these become
+  the normalized Hamiltonian-bracket coefficients in powers \(\hbar^0\)
+  and \(\hbar^2\), namely \(P(f,g)\) and \(P^3(f,g)/24\).
   In the descendant direction the reduced target is not polynomial:
   Construction~\ref{constr:quantum-principal-part-descendant-target}
   gives the Moyal principal-part coadjoint complex, and
   Theorem~\ref{thm:one-psi-label-hbar-obstruction} rules out
   any strict \(\hbar\)-adic deformation of the classical
-  \(\Psi_{a,b}\mapsto\rho_{a,b}\) projection with PBW linear
-  Hamiltonian leading term.
+  \(\Psi_{a,b}\mapsto\rho_{a,b}\) projection satisfying its flatness,
+  PBW-linear-action, Moyal-coadjoint-target, and leading-term hypotheses.
 
-  \emph{Proof dependency map.}
+  \emph{Proof inputs.}
   Appendix~\ref{sec:app-radial-parts-moyal} separates the formal
   Moyal/Capelli calculation from the external radial-parts input.
   Theorem~\ref{thm:finite-n-reduced-moyal} uses that input to obtain
@@ -1158,7 +1433,7 @@ Koszul-duality interface.
   Capelli-renormalized map.  Proposition~\ref{prop:moyal-monomial}
   proves the Moyal coefficient formula, with an independent finite exact
   arithmetic sweep as verification evidence.  Proposition~\ref{prop:conditional-boundary-product-normalization}
-  and Proposition~\ref{prop:open-line-midpoint-graph-weights} compute
+  and Theorem~\ref{thm:open-line-midpoint-graph-weights} compute
   the reduced open-line first and third coefficients.
   Theorem~\ref{thm:first-third-costello-normalizations} is conditional
   on Problem~\ref{prob:analytic-graph-realization}, and
@@ -1171,18 +1446,18 @@ Koszul-duality interface.
   the one-\(\psi\) quantum target and the no-go for the polynomial
   primitive projection.
 
-  \emph{Residuals.} Without the radial-parts source input the all-\(N\)
+  \emph{Scope and exclusions.} Without the radial-parts source input the all-\(N\)
   trace identity is conditional; the finite exact check covers only finite sweeps,
   the rank-two Cartan shadow, and the direct \(N=2,3\) radial
   restrictions.  The all-order Costello graph realization, the mixed
   brane-defect QME, the unweighted regulator problem, and an unreduced
-  one-antifield Moyal lift are not consequences of this algebraic lane.
+  one-antifield Moyal lift are not consequences of this algebraic statement.
   The reduced principal-part Moyal target is only a target-side
   construction.
 \end{stmt}
 
-\begin{stmt}[Index lane: scalar \(U(1)\) anomaly]\label{thm:lane-u1-anomaly}
-  \emph{Status.} \emph{proved in finite algebraic model}.  The lane
+\begin{stmt}[Statement: scalar \(U(1)\) anomaly]\label{thm:lane-u1-anomaly}
+  \emph{Status.} \emph{proved in finite algebraic model}.  The statement
   records the scalar-reduction obstruction to lifting the reduced
   Hamiltonian comparison back to the unreduced constant direction.
 
@@ -1191,7 +1466,7 @@ Koszul-duality interface.
   its quotient \(\bar A=\mathfrak h_{\mathrm{poly}}/\C\cdot1\); the open
   side is the finite-\(N\) trace algebra before and after quotienting
   \(\C\cdot\operatorname{Tr}(1)\); and the quantum comparison uses the
-  same Capelli/Weyl normalization as the degree-zero Moyal lane.
+  same Capelli/Weyl normalization as the degree-zero Moyal theorem.
 
   \emph{Local assertion.} The scalar-reduction axis carries the
   distinguished class
@@ -1200,21 +1475,23 @@ Koszul-duality interface.
   \]
   represented by the constant Taylor coefficient of the Poisson
   bracket.  The same class appears on the open side as the
-  centre-of-mass \(\mathfrak{gl}_N\) anomaly and quantum mechanically
-  as the Capelli shift \(\hbar N\).  All reduced Hamiltonian
-  comparisons are made after killing constants; the unreduced scalar
-  line is governed by this anomaly class.
+  centre-of-mass \(\mathfrak{gl}_N\) anomaly; quantum mechanically its
+  finite-\(N\) trace-character representative is the Capelli contact
+  \(\hbar N\).  All reduced Hamiltonian comparisons are made after
+  killing constants; the unreduced scalar line is governed by this
+  anomaly class.
 
-  \emph{Proof dependency map.}
+  \emph{Proof inputs.}
   Lemma~\ref{lem:omega-cocycle} identifies the closed Poisson cocycle.
   Theorem~\ref{thm:u1-center-anomaly} proves the closed-side central
   extension statement.  Theorem~\ref{thm:u1-center-anomaly-open}
   computes the open \(U(1)\) centre.  Theorem~\ref{thm:quantum-classical-anomaly}
-  identifies the classical cocycle with the quantum Capelli shift.
+  identifies the classical cocycle with the Rees central extension whose
+  finite-\(N\) trace-character value is the quantum Capelli shift.
   Corollary~\ref{cor:local-bulk-boundary-coupling} gives the explicit
   local central term in the smeared boundary bracket.
 
-  \emph{Residuals.} The lane does not lift the reduced comparison to the
+  \emph{Scope and exclusions.} The statement does not lift the reduced comparison to the
   unreduced scalar direction and does not imply compact Calabi--Yau,
   BKM, Igusa, or sister-volume anomaly statements.
 \end{stmt}

@@ -299,7 +299,7 @@ which is **isomorphic to $\mathfrak{gl}_N(\C[i])\cong\mathfrak{gl}_N\otimes\C[i]
 (under $A+iB\mapsto((A,B),(-B,A))$). This is a **complexified bosonic
 gl-brane**.
 
-**Physical reading.** The $+1$ eigensector is the **diagonal-block
+**Physical interpretation.** The $+1$ eigensector is the **diagonal-block
 even part** of the q(N) algebra plus the **off-diagonal-block odd
 part of $\mathfrak q(N)_{\bar 1}$ aligned with $J$**. Concretely:
 the $A$-block is even (in $\mathfrak q(N)_{\bar 0}\cong\mathfrak{gl}_N$),
@@ -333,7 +333,7 @@ This sector is **distinct from $\mathfrak q(N)$**: it is the
 periplectic-pattern complement (where the $C$-block is $+B$ rather
 than $-B$, and $D=-A$ rather than $D=A$).
 
-**Physical reading.** The $-1$ sector encodes the **parity-flipped
+**Physical interpretation.** The $-1$ sector encodes the **parity-flipped
 otr-brane** at the parametric level: a Chan-Paton bundle with the
 sign-flipped queer pattern. Its boundary evaluation is
 $\partial^{\mathrm{otr},-}\colon T\mapsto -\mathrm{otr}(T)$, where
@@ -439,7 +439,7 @@ correspond to the following physical sectors:
 
 **Confidence.** Medium-high. The eigensector identification is exact
 ($JTJ^{-1}=\lambda T$ for $\lambda\in\{1,i,-1,-i\}$ defines a
-standard Jordan decomposition). The brane-physics reading of the
+standard Jordan decomposition). The brane-physics interpretation of the
 $\pm i$ sectors as Hecke-Clifford braid-conjugate is **structurally
 correct** but requires the chain-level Clifford-vacuum identification
 to be made fully rigorous (Phase-5 R-P4-EXEC-Z4-1).
@@ -1093,7 +1093,7 @@ identity on $\End(V=\C^{2|2})$ at $N=2$.
 * **Parity-mirror conjecture** on q(N) (Brane-Species-Audit §9):
   the bosonic Theorem G is the parity-mirror-self-dual class.
 * **Theorem G\textsuperscript{otr} inscription** §3.5 (Witten lens
-  reading): the bosonic Theorem G is the *closed-string image* on
+  interpretation): the bosonic Theorem G is the *closed-string image* on
   q(N), invariant under the boundary-evaluation channel choice
   ($\Str$ vs $\mathrm{otr}$); the parity-self-duality records this
   invariance algebraically.
@@ -1306,7 +1306,7 @@ G are all closed at Phase-4 level.**
 * T-otr-Inscription §3.3 two-cohomology decomposition: the 2-d graded
   cohomology $H^2(\C\oplus\Pi\C)$ on which the $\Z/4$-action operates.
 * T-otr-Inscription §3.5 Witten lens: the parastatistic open-closed
-  duality reading, refined here as the parastatistic $\Z/4$ R-symmetry.
+  duality interpretation, refined here as the parastatistic $\Z/4$ R-symmetry.
 * T-otr-Inscription §6 brane interpretation: the off-diagonal
   mixed-parity brane = the otr-brane, identified here as the
   $\{-1, +i, -i\}$ orbit of the $\Z/4$-action.

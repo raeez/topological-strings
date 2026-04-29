@@ -459,10 +459,10 @@ $I_L$ must remain in the same weighted category.
       interactions
       (Theorem~\ref{thm:wt-rg-compatibility});
     \item the cochain-level $\Phi$ of
-      Theorem~\ref{thm:open-closed-derived-center} extends to the
+      Theorem~\ref{thm:reduced-ce-pv-central-operation} extends to the
       weighted cotangent extension $\mathfrak g_w=\mathfrak h_w\ltimes
-      \mathfrak h^{\vee,w}_{\mathrm{cont}}[1]$ as a continuous
-      $P_0$-algebra cochain map in the weighted coefficient envelope
+      \mathfrak h^{\vee,w}_{\mathrm{cont}}[1]$ as a continuous cochain
+      map in the weighted coefficient envelope
       $$\Phi^w\colon C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g_w)
         \to\mathrm{PV}\bigl(\widehat{\mathbf S}_{\mathrm{Tate}}(
         \mathfrak h_w)\bigr);$$
@@ -474,22 +474,22 @@ $I_L$ must remain in the same weighted category.
   Propositions~\ref{prop:wt-casimir-convergence},
   \ref{prop:wt-propagator-extends}, and
   Theorem~\ref{thm:wt-rg-compatibility}. For item~(d): the
-  classical $\Phi$ of Theorem~\ref{thm:open-closed-derived-center}
+  classical $\Phi$ of Theorem~\ref{thm:reduced-ce-pv-central-operation}
   acts on continuous CE cochains by the cochain identity
   $\Phi d_{\mathrm{CE}}=d_\pi\Phi$, which is a degree-by-degree
   algebraic identity on the polynomial Hamiltonian Lie algebra
   $\mathfrak h$ together with its dual $\mathfrak h^\vee[1]$. The
   identity is preserved under any rescaling of the bases by an
   invertible weight, so it descends to the weighted pair. The
-  $P_0$-algebra structure on the source is the CE cochain
-  $P_0$-algebra structure formed in the weighted coefficient
-  envelope; this is not the strict continuous duality statement of
-  Lemma~\ref{lem:continuous-bar-cobar} for a product/direct-sum Tate
-  pair.  The needed dual generators are inserted by the symmetric
-  Mittag-Leffler coefficient pairing of
-  Remark~\ref{rmk:wt-topology-content}. On the target, the Schouten
-  bracket descends to the weighted symmetric algebra by
-  \ref{w:W2}.
+  \(P_0\)-algebra reading is available only after the weighted envelope is
+  treated as a bracket-admissible realization in the sense of
+  Definition~\ref{defn:bracket-kernel-admissible}; this is not the strict
+  continuous duality statement of Lemma~\ref{lem:continuous-bar-cobar} for
+  a product/direct-sum Tate pair.  The needed dual generators are inserted
+  by the symmetric Mittag-Leffler coefficient pairing of
+  Remark~\ref{rmk:wt-topology-content}. On the target, the Schouten bracket
+  descends to the weighted symmetric algebra by \ref{w:W2}, subject to the
+  same bracket-admissibility reading.
 
   The all-order QME and regulator-independence assertions are separate
   theorems; the quantum assertion is isolated in
@@ -502,7 +502,7 @@ $I_L$ must remain in the same weighted category.
   counterterm system for the mixed brane-defect interaction has
   vanishing obstruction class and is compatible with the weighted
   coefficient category.  Under this assumption, the formal quantum
-  derived-center map $\Phi_\hbar^{(0)}$ governed by
+  CE/PV central-operation map $\Phi_\hbar^{(0)}$ governed by
   Theorem~\ref{thm:phi-hbar-all-order} has a weighted-continuous
   cotangent extension
   $$\Phi_{\hbar,\mathrm{cond}}^{w}\colon
@@ -532,7 +532,10 @@ $I_L$ must remain in the same weighted category.
   force, the formal $\hbar$-adic construction of
   Theorem~\ref{thm:phi-hbar-all-order} applies in the weighted
   coefficient envelope.  The graphwise finite-scale assertions above are
-  the part proved before this obstruction is evaluated.
+  the part proved before this obstruction is evaluated and before the
+  principal-part current extension is adjoined; they do not decide
+  compatibility with
+  \(\mathcal D'_c(I)\widehat\otimes\mathcal P[1]\).
 \end{proof}
 
 \begin{prob}[Costello-locality compatibility for the weighted RG flow]\label{prob:weighted-rg-locality}
@@ -848,6 +851,12 @@ $I_L$ must remain in the same weighted category.
   Mittag-Leffler compatibility of the finite-window obstruction system.
 \end{proof}
 
+The next theorem is a finite-window weight-transport statement.  It is
+not a \(q\to1^+\) endpoint theorem for the strict product/direct-sum
+Tate pair, and it is not a full regulator-independence theorem for
+classes detecting the quotient \(D_{\Pi,w}/D_{\oplus}\).  That endpoint
+is excluded by Theorem~\ref{thm:strict-unweighted-no-go}.
+
 \begin{thm}[Regulator independence inside the admissible finite-window sector]\label{thm:wt-regulator-independence-admissible}
   Let \(w,w'\) be degree weights satisfying
   Definition~\ref{defn:wt-degree-weight}, and let \(I_0^w\) be a
@@ -1006,7 +1015,7 @@ $I_L$ must remain in the same weighted category.
       \(C^{w_0}_{\mathfrak h}\) for every \(w_0\);
     \item the endpoint transport maps carry differential, Poisson
       bracket, coadjoint action, propagator contraction, interaction,
-      counterterm representatives, and the CE/PV derived-centre
+      counterterm representatives, and the CE/PV central-operation
       generator assignment \(c\mapsto\theta,\ u\mapsto O\) to their
       endpoint versions;
     \item local observables compute the admissible filtered cohomology
@@ -1076,8 +1085,8 @@ $I_L$ must remain in the same weighted category.
   compatibility required by (E1) and exactness in the admissible envelope.
 \end{proof}
 
-\begin{thm}[Finite-window \(q\to1^+\) stabilization of the derived-centre map]
-\label{thm:wt-derived-center-qtoone-stabilization}
+\begin{thm}[Finite-window \(q\to1^+\) stabilization of the CE/PV generator map]
+\label{thm:wt-ce-pv-qtoone-stabilization}
   Let \(w_q(d)=q^d\), \(q>1\), and let
   \[
     \Phi^q_M\colon
@@ -1086,7 +1095,7 @@ $I_L$ must remain in the same weighted category.
     \longrightarrow
     \mathrm{PV}\bigl(\mathbf S(\mathfrak h_{q,\leq M})\bigr)
   \]
-  be the finite-window restriction of the weighted derived-centre map.
+  be the finite-window restriction of the weighted CE/PV generator map.
   Let \(\Phi^{0,M}\) be the finite-dimensional unweighted CE/PV map on
   \((\mathfrak h_{\leq M},D_{\leq M})\).  Then
   \[

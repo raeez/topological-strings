@@ -1,48 +1,124 @@
-\section*{Universal formal-local Koszul duality interface}
-\addcontentsline{toc}{section}{Universal formal-local Koszul duality interface}
+\section*{Claim status and dependencies: coordinate CE/PV and admissible Koszul layers}
+\addcontentsline{toc}{section}{Claim status and dependencies: coordinate CE/PV and admissible Koszul layers}
 
 \begingroup
 \small
 \setlength{\parindent}{0pt}
 
 \noindent\fbox{\begin{minipage}{0.96\textwidth}
-\textbf{Formal-local theorem infrastructure.}
-The universal formal-local Koszul-duality interface is attached to
+\textbf{Formal-local theorem data.}
+The formal-local interface is attached to
 the shifted cotangent Hamiltonian Lie algebra
 \[
   \mathfrak h=\C[[z_1,z_2]]/\C\cdot1,\qquad
   \mathfrak g=\mathfrak h\ltimes
     \mathfrak h^\vee_{\mathrm{cont}}[1].
 \]
-Its visible interface is the chain
+Its visible interface is stratified by proof strength:
 \[
 \begin{gathered}
-  \text{finite cotangent CE/PV}\\
+  \text{finite cotangent CE/PV, proved}\\
   \Downarrow\\
-  \text{completed formal-disk CE/PV}\\
+  \text{coordinate formal-disk CE/PV, proved as dg algebra}\\
   \Downarrow\\
-  \text{admissible Tate bar-cobar/Quillen envelope}\\
+  \text{bracket-admissible \(P_0\) realizations, proved after \(B\)}\\
   \Downarrow\\
-  \text{closed-open derived-centre data}.
+  \text{kernel-admissible MC kernels and Tate bar-cobar, conditional}.
 \end{gathered}
 \]
-The closed-open generator map is fixed once and for all:
+The reduced CE/PV central-operation generator map is fixed once and for all:
 \[
   c^I\longmapsto\theta^I,\qquad u_I\longmapsto O_I .
 \]
-The theory is extended by the primitive higher-\(\psi\) extraction, the
+The admissible interface datum is
+\[
+  \mathfrak U_{\mathfrak h}
+  =(\Phi_{\mathrm{coord}},\{\Phi^B_{P_0}\}_B,\{\Theta_B\}_B),
+\]
+where \(B\) ranges over bracket-admissible subalgebras in the second
+component and kernel-admissible data in the third.  This is not a
+categorical universal object unless a category of admissible completions
+and a universal property are supplied.  The theory is
+extended by the primitive higher-\(\psi\) extraction, the
 \(\mathcal D_\hbar\) Fourier--Rees bridge, the weighted finite-window
 regulator, the endpoint criteria, and the unreduced factorization-current
 lift datum.
 
 \smallskip
-\textbf{Acceptance principle.}
-Every frontier extension is stated as theorem data plus an obstruction
-complex.  No compact BCOV, Vol III,
-Igusa/BKM, or global Calabi--Yau statement follows from the formal disk alone;
-such statements are accepted exactly by a matched-conventions datum with
-vanishing period, anomaly, QME, descent, and operadic obstruction vector.
+\textbf{Admissibility principle.}
+A frontier extension is admissible only when a target theorem supplies
+the matched-conventions datum and proves vanishing, with null-homotopies,
+of the period, anomaly, QME, convergence, hyperdescent, six-relation,
+descent, and operadic obstruction vector.
 \end{minipage}}
+
+\medskip
+\paragraph{Proof route.}
+For the proof route read the local theorem dependencies, then the local theorem,
+then the obstruction complexes in Section~\ref{sec:open-obligations}.
+For theorem names read the status table below together with
+Theorem~\ref{thm:witten-centrality-local-form}.  For residual
+obligations read the admissible Tate, unreduced factorization-current,
+one-antifield, radial, Costello/QME, and descent rows.  For cross-volume
+uses read only the firewall row: no compact Calabi--Yau, Vol III,
+Igusa/BKM, or global BCOV consequence follows without the named
+matched-conventions descent theorem.
+
+\medskip
+\paragraph{Admissibility stages.}
+Stage A0 is the finite cotangent CE/PV identity.  Stage A1 is the
+coordinate formal-disk CE/PV identity \(\Phi_{\mathrm{coord}}\), proved
+as a completed dg commutative algebra statement.  Stage A2 is a
+bracket-admissible \(P_0\)-realization
+\(\Phi^B_{P_0}\colon\Phi_{\mathrm{coord}}^{-1}(B)\to B\).  Here
+\(B\) is an explicitly topologized complete Hausdorff subalgebra with
+continuous inclusion in the coordinate product, continuous
+multiplication, continuous \(d_\pi^{\mathrm{coord}}\), and a continuous
+closed Schouten contraction bracket whose transport to
+\(\Phi_{\mathrm{coord}}^{-1}(B)\) is again continuous.  Boundary
+Hamiltonian uses also require \(B\) to contain the relevant \(O_f\)'s and
+their forced differentials \(d_\pi^{\mathrm{coord}}O_f\).  Stage A3 is a
+kernel-admissible Maurer--Cartan kernel \(\Theta_B\), conditional on a
+specified completed convolution dg Lie algebra \(\mathcal K_B\) in which
+the diagonal sums converge.
+Stage A4 is an admissible Tate or relative bar-cobar/Quillen envelope.
+Stage A5 is the stable scalar-reduced Dirac trace comparison.  Stage A6
+is the conditional radial, one-antifield, and Costello/QME quantum
+realization.  Stage A7 is any external matched-conventions descent
+problem; it is not a consequence of the local stages.
+
+\paragraph{Koszul comparison layers.}
+Layer 0 is the operadic Lie/coComm Koszul input
+\(\mathrm{Lie}^{!}\simeq\mathrm{coComm}[-1]\).  Layer 1 is the
+Tate CE/bar-cobar identity
+\(\Omega C^{\mathrm{CE}}_*(\mathfrak g)\simeq U(\mathfrak g)\) only in an
+admissible lower-central Tate-pronilpotent envelope.  Layer 2 is the corresponding Tate
+Quillen equivalence.  Layer 3 is the coordinate CE/PV reduced \(P_0\)
+central-operation theorem with \(c^I\mapsto\theta^I\) and
+\(u_I\mapsto O_I\).  Layer 4 is the PBW/Rees special-fibre shadow
+\[
+  U_\hbar(\mathfrak g)
+  =
+  T(\mathfrak g)[[\hbar]]/
+  \langle xy-(-1)^{|x||y|}yx-\hbar[x,y]\rangle,\qquad
+  U_\hbar(\mathfrak g)/(\hbar)\cong
+  S(\mathfrak h\oplus\mathfrak h^\vee[1]).
+\]
+Layer 5 is the Matlis/Grothendieck cotangent module
+\[
+  \mathfrak h^\vee_{\mathrm{cont}}\cong
+  \mathcal P=\bigoplus_{a+b>0}\C\rho_{a,b},\qquad
+  z_1^pz_2^q\cdot\rho_{a,b}
+  =-(pb-qa+p-q)\rho_{a-p+1,b-q+1}.
+\]
+Layer 6 is the brane-line factorization-current comparison
+\[
+  \mathfrak h_I=\Omega^\bullet_c(I)\widehat\otimes\mathfrak h,\qquad
+  u_{a(t)dt\otimes f}\longmapsto B_f(a).
+\]
+Layer 7 is the stable large-\(N\) bulk-boundary horizon; it is
+conjectural here and not used to prove the local Hamiltonian BF/Moyal
+core.
 
 \medskip
 \paragraph{Status table.}
@@ -51,14 +127,25 @@ vanishing period, anomaly, QME, descent, and operadic obstruction vector.
 \begin{tabular}{p{0.35\textwidth}p{0.18\textwidth}p{0.37\textwidth}}
 \textbf{Claim surface} & \textbf{Status} & \textbf{Boundary}\\
 \hline
-Reduced coordinate CE/PV & proved windowwise / mixed-completed &
-pro finite-window comparison; global \(P_0\) bracket requires mixed or
-weighted continuity; strict product completion is obstructed\\
+Coordinate formal-disk CE/PV theorem & proved as dg coordinate
+algebra &
+\(\Phi_{\mathrm{coord}}\) is a finite-test/pro-window cochain theorem;
+it is not a strict global \(P_0\) theorem\\
+Bracket-admissible \(P_0\) realization & proved after \(B\) &
+\(\Phi^B_{P_0}\) is asserted only for complete \(B\subset
+\mathrm{PV}_{\mathrm{coord}}\) stable under the coordinate differential
+\(d_\pi^{\mathrm{coord}}\), closed under
+multiplication, and equipped with a continuous closed contraction bracket
+whose transported source bracket is closed\\
+Kernel-admissible MC kernel & conditional &
+\(\Theta_B\) exists only when the diagonal tensor converges in the chosen
+completed tensor product; the strict product/direct-sum endpoint has no
+such assertion\\
 Full \(Z^{P_0}_{\mathrm{fact}}\) of the open BV algebra &
 open & requires centrality homotopies, descent, and QME data\\
 Full open BV identification & open &
 only the scalar-reduced connected Hamiltonian sector is used\\
-Full formal conilpotent Koszul duality & conditional &
+Admissible formal conilpotent Koszul duality & conditional &
 only admissible Tate, nilpotent, weighted, or relative envelopes\\
 Matlis cotangent module & proved &
 \(\operatorname{Ann}_{\mathrm{res}}(\C\cdot1)\) is a residue-annihilator,
@@ -68,7 +155,10 @@ uses the external radial-parts input\\
 Costello graph/QME realization & conditional &
 requires locality, counterterms, propagator, and vanishing QME obstruction\\
 QME cancellation mechanisms & partial &
-scalar central-character and balanced-supertrace mechanisms are proved; no exhaustive classification
+central-character and balanced-supertrace are proved source/model replacements;
+closed-exchange cancellation in the original scalar-reduced
+\(\mathfrak{gl}_N\) model is conditional on explicit
+\(W_{\mathrm{ext}},C\); no exhaustive classification
 \end{tabular}
 \end{center}
 
@@ -76,39 +166,71 @@ scalar central-character and balanced-supertrace mechanisms are proved; no exhau
 \paragraph{Theorem data.}
 
 \begin{enumerate}
-  \item \emph{Finite cotangent CE/PV.}
-  For each finite window,
+  \item \emph{Stage A0: finite cotangent CE/PV.}
+  For each finite-dimensional Lie algebra \(\mathfrak l\),
   \[
-    \Phi_M\colon
+    \Phi_{\mathfrak l}\colon
     C^\bullet_{\mathrm{CE}}
-      (\mathfrak h_{\le M}\ltimes D_{\le M}[1])
+      (\mathfrak l\ltimes \mathfrak l^\vee[1])
     \xrightarrow{\sim}
-    \mathrm{PV}(\mathbf S(\mathfrak h_{\le M}))
+    \mathrm{PV}(\mathbf S(\mathfrak l))
   \]
-  with \(c\mapsto\theta\), \(u\mapsto O\).  The coordinate comparison
-  assembles as a pro finite-window statement and as a completed statement
-  only in a mixed or weighted topology where the contraction bracket is
-  continuous.  The strict ambient product/direct-sum completion is
-  obstructed by the infinite diagonal.
+  with \(c\mapsto\theta\), \(u\mapsto O\).  The formal-disk coordinate
+  comparison is reconstructed from admissible finite coordinate tests and
+  pro-window coordinate cochains.  It becomes a completed bracketed
+  statement only in a mixed or weighted topology where the contraction
+  bracket is continuous.  The strict ambient product/direct-sum
+  completion is obstructed by the infinite diagonal.
 
-  \item \emph{Completed formal disk CE/PV.}
-  The completed formal-disk comparison is a pro finite-window or
-  mixed-continuous comparison
+  \item \emph{Stage A1: coordinate formal disk CE/PV.}
+  The completed formal-disk comparison is first a coordinate dg algebra
+  isomorphism
   \[
-    \Phi\colon
-    C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g)
+    \Phi_{\mathrm{coord}}\colon
+    C^\bullet_{\mathrm{CE},\mathrm{coord}}(\mathfrak g)
     \longrightarrow
-    \mathrm{PV}(\widehat{\mathbf S}_{\mathrm{Tate}}(\mathfrak h)).
+    \mathrm{PV}_{\mathrm{coord}}(A_{\partial,\mathrm{coord}}).
   \]
+  It becomes a \(P_0\) comparison only after choosing a
+  bracket-admissible subalgebra \(B\).  If \(B\) is kernel-admissible, the
+  diagonal kernel \(\Theta_B\) is an additional conditional datum.
   Its coordinate transition obstruction terms are
   \[
     \mathfrak o^{\mathrm{br}}_{M,N},\qquad
     \mathfrak o^{\mathrm{coad}}_{M,N}.
-  \]
-  The separate strict-kernel and ambient-product bracket obstruction is
-  \(\mathfrak o^{\mathrm{Cas}}_{M,N}\).
+	  \]
+	  The separate strict-kernel and ambient-product bracket obstruction is
+	  \(\mathfrak o^{\mathrm{Cas}}_{M,N}\).
 
-  \item \emph{Admissible Tate bar-cobar/Quillen envelope.}
+  \item \emph{Stage A2: bracket-admissible \(P_0\) realization.}
+  A bracket-admissible \(B\subset
+  \mathrm{PV}_{\mathrm{coord}}(A_{\partial,\mathrm{coord}})\) is complete,
+  stable under \(d_\pi^{\mathrm{coord}}\), closed under multiplication, and closed under a
+  continuous Schouten contraction bracket.  Its source
+  \(\Phi_{\mathrm{coord}}^{-1}(B)\) must be closed under the transported
+  bracket.  Under these hypotheses
+  \[
+    \Phi^B_{P_0}\colon\Phi_{\mathrm{coord}}^{-1}(B)
+    \xrightarrow{\sim}B
+  \]
+  is the completed dg \(P_0\)-comparison.
+
+  \item \emph{Stage A3: kernel-admissible Maurer--Cartan tensor.}
+  A bracket-admissible \(B\) is kernel-admissible when the diagonal sums
+  \[
+    \Theta_B=\sum_I H_I\otimes\theta^I+\sum_I\eta^I\otimes O_I
+  \]
+  converge in the completed tensor product attached to \(B\).  Then
+  \(\Theta_B\) is the corresponding Maurer--Cartan tensor, checked
+  coefficientwise from the Jacobi and coadjoint identities after the
+  diagonal sums converge:
+  \[
+    d\Theta_B+\frac12[\Theta_B,\Theta_B]=0.
+  \]
+  The strict product/direct-sum endpoint has no such kernel without an
+  additional coefficient replacement.
+
+	  \item \emph{Stage A4: admissible Tate bar-cobar/Quillen envelope.}
   For an admissible Tate replacement
   \(\mathfrak g_{\mathrm{adm}}\),
   \[
@@ -122,7 +244,7 @@ scalar central-character and balanced-supertrace mechanisms are proved; no exhau
   completeness, completed symmetric associated graded, and an admissible
   transferred \(P_0\)-algebra model structure.
 
-  \item \emph{Closed-open generator map.}
+  \item \emph{Reduced CE/PV central-operation generator map.}
   The Hamiltonian CE ghost \(c^I\) becomes the Schouten vector
   \(\theta^I\).  The shifted-cotangent CE coordinate \(u_I\) becomes the
   Hamiltonian boundary coordinate \(O_I\).  Boundary Hamiltonian
@@ -135,7 +257,11 @@ scalar central-character and balanced-supertrace mechanisms are proved; no exhau
     (\phi_1\,d\phi_2+A[\phi_1,\phi_2]),\qquad
     Q\psi=[\phi_1,\phi_2].
   \]
-  Stable trace invariants are read degreewise; for total word degree
+  The displayed action is in the Dirac-normalized variables obtained from
+  the raw shifted-Chern--Simons coefficient fields; the Koszul complex is
+  the derived zero fibre of the commuting-pair equation, not an assertion
+  that the finite-\(N\) moment-map components form a regular sequence.
+  Stable trace invariants are taken degreewise; for total word degree
   \(d\), the stable range is \(N\ge d\).
 
   \item \emph{Primitive higher-\(\psi\) extraction.}
@@ -237,24 +363,31 @@ scalar central-character and balanced-supertrace mechanisms are proved; no exhau
     \operatorname{Ob}_{\mathrm{sc}}
     =\hbar N\,\omega(f,g)
       \int_\R a(t)b(t)\gamma_{\mathbf 1}(t)\,dt ,
-  \]
-  with associated graded \(\hbar N[\bar c]\).  Central-character,
-  balanced-supertrace, or closed-exchange data must kill this class.
+	  \]
+	  with associated graded formal class
+	  \(\hbar N[\bar c]\in H^2_{\mathrm{Lie}}(\bar A;\C)[[\hbar]]\).
+	  In the original scalar-reduced ordinary \(\mathfrak{gl}_N\) model,
+	  closed-exchange data must supply the opposite leading class.  The
+	  central-character and balanced-supertrace mechanisms instead replace the
+	  source or open model before the reduced scalar class forms.
 
   \item \emph{Global and cross-volume descent.}
   A target theorem supplies a matched-conventions datum
-  \(\mathfrak C_{\mathrm{tar}}\).  The acceptance vector is
+  \(\mathfrak C_{\mathrm{tar}}\).  The admissibility vector is
   \[
     \operatorname{Ob}_{\mathfrak C_{\mathrm{tar}}}
     =
-    (\operatorname{per}_{\mathrm{tar}},
-     \operatorname{ob}_{\mathrm{WR}},
-     \operatorname{ob}_{\mathrm{anom}},
-     \operatorname{ob}_{\mathrm{QME}},
-     \operatorname{ob}_{\mathrm{MD}}).
+	    (\operatorname{per}_{\mathrm{tar}},
+	     \operatorname{ob}_{\mathrm{WR}},
+	     \operatorname{ob}_{\mathrm{anom}},
+	     \operatorname{ob}_{\mathrm{QME}},
+	     \operatorname{ob}_{\mathrm{conv}},
+	     \operatorname{ob}_{\mathrm{hyp}},
+	     \operatorname{ob}_{6r},
+	     \operatorname{ob}_{\mathrm{MD}}).
   \]
   It must vanish, with compatible null-homotopies, before any compact
-  BCOV, Vol III, Igusa/BKM, or global Calabi--Yau consequence is read
+  BCOV, Vol III, Igusa/BKM, or global Calabi--Yau consequence is deduced
   from the formal-local theorem.
 \end{enumerate}
 

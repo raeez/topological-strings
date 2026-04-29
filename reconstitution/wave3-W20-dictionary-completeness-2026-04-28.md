@@ -395,7 +395,7 @@ keep.
 > *T²-Cartan rigidity.* The bigraded total-degree-zero
 > 𝔥-equivariance constraint forcing the residue pairing to be
 > unique up to a scalar; see Theorem D₂ and `rmk:residue-pairing-schur`.
-> Replaces the deprecated "Schur rigidity" reading (master ledger
+> Replaces the deprecated "Schur rigidity" interpretation (master ledger
 > M-06).
 
 **P-W3-W20-17** (W3-W20-17). Extend D6:

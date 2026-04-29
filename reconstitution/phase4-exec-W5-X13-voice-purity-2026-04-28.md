@@ -47,7 +47,7 @@ inscribed-LaTeX surface.
    (A2$'$) tensor-factor commentary is delivered as a LaTeX `%%` comment
    block; the closing line contains `W22-T1/T2/P4-G3-T-A1`, an internal
    wave / phase / theorem identifier. This is **not visible to a
-   referee reading the rendered PDF**, so it does not violate the
+   referee interpretation the rendered PDF**, so it does not violate the
    reader-visible Russian-school voice scope. It does live in the source
    repository for collaborator visibility. **Recommendation
    (cosmetic).** Either strip the internal identifier from the comment
@@ -166,7 +166,7 @@ $E_2$-coherence structure on the column-Verma.
 **Russian-school referee re-attack.** Would Drinfeld or Beilinson
 object? No. The line *"in line with the Beilinson--Drinfeld §3.5
 cross-walk for chiral algebras localized at a closed point"* matches
-the BD 2004 reading register exactly: name the source, name the
+the BD 2004 interpretation register exactly: name the source, name the
 section, name the construction (chiral algebra at a closed point).
 Costello would similarly approve *"Lurie HA §5.5.4 $E_2$-coherence
 structure on the column-Verma"* — name the source, name the section,
@@ -206,8 +206,8 @@ name the structural construction.
 **Russian-school referee re-attack.** The Drinfeld 1989/1990
 attribution is correct register. The W22-T1/T2/P4-G3-T-A1 token in a
 LaTeX `%%` comment is repository-internal scaffolding rather than
-reader-visible prose. A Costello-tier referee reading the rendered PDF
-would not see it. A collaborator reading the source would see an
+reader-visible prose. A Costello-tier referee interpretation the rendered PDF
+would not see it. A collaborator interpretation the source would see an
 internal cross-reference label, which is normal mathematical-source
 practice (e.g. `\todo` / `\note` macros routinely contain similar
 internal scaffolding).

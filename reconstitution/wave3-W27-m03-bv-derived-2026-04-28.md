@@ -396,7 +396,7 @@ $\Lambda(\psi^i{}_j)$). At $N = 1$, $[\phi_1, \phi_2] = 0$ trivially,
 the BV differential vanishes, and $\Delta(1) = 1$ is the trivial
 $\mathrm{Tr}\,\psi = \psi$ class — the abelian boundary stratum.
 
-### §3.4 Drinfeld-canonical reading
+### §3.4 Drinfeld-canonical interpretation
 
 The derived self-intersection
 $[\mathcal C_N / \mathrm{GL}_N]_{\mathrm{derived}}$ is the canonical
@@ -433,7 +433,7 @@ four-cone / Čech-SES enrichment.
 
 ## §5. T5 — Why is M-03 absent from the plan?
 
-**Direct verification.** Reading
+**Direct verification.** Interpretation
 `reconstitution/platonic-clean-paper-plan-2026-04-28.md` (full) and
 `reconstitution/platonic-ideal-plan-2026-04-28.md` §3 (Theorem A,
 lines 183–203) and §3 (Theorem G, lines 426–451):
@@ -470,7 +470,7 @@ quantum-classical anomaly identification. But:
    the same class appears as the Capelli/normal-ordering shift" —
    this is the Capelli observation, but it does *not* connect the
    Capelli shift to the U(1)$_{\mathrm{ghost}}$ one-loop anomaly of
-   the derived intersection (which is the M-03 / M-32 reading).
+   the derived intersection (which is the M-03 / M-32 interpretation).
 
 **Verdict.** M-03 is **genuinely absent** from the plan, both in §3
 Theorem A preface and in §3 Theorem G re-narration. W3-W13-5's
@@ -778,11 +778,11 @@ re-narration.
 
 W27 of Wave 3 independently verifies M-03 ("Finite-$N$ commuting
 variety is not Koszul; BV computes derived intersection") via the
-Drinfeld + Hypotheses lens combination. The Drinfeld reading:
+Drinfeld + Hypotheses lens combination. The Drinfeld interpretation:
 $H^\bullet(\mathcal R_N^{\mathrm{GL}_N}, Q)$ is the structure-sheaf
 of the canonical derived self-intersection groupoid
 $[\mathcal C_N / \mathrm{GL}_N]_{\mathrm{derived}}$. The Hypotheses
-reading: `main.tex`:127 prose silently strengthens to a
+interpretation: `main.tex`:127 prose silently strengthens to a
 complete-intersection hypothesis on $\mathcal C_N$ that fails for
 $N \ge 2$. Four primary-source citations (Motzkin–Taussky 1955,
 Gerstenhaber 1961, Vasconcelos 1994, Premet 2003) verify the result;

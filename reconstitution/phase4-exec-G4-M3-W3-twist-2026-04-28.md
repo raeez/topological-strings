@@ -526,9 +526,9 @@ conjecture **at the spin-1 level only**:
   asserting the spin-1 component of the topological twist, with the
   spin-tower contribution explicitly truncated**.
 
-### §5.4 Two readings of the spin-3 mismatch
+### §5.4 Two interpretations of the spin-3 mismatch
 
-Reading A (spin-tower truncation). The manuscript's structure is
+Interpretation A (spin-tower truncation). The manuscript's structure is
 intrinsically *single-spin* (Heisenberg only) and the topological
 twist of CGW must include a *spin-tower truncation* that kills
 $J^{(s)}$ for $s \geq 2$. The spin-2 truncation is the conformal-
@@ -537,7 +537,7 @@ is the further $J^{(3)}$ truncation, which *cannot* be done in the
 Bousfield framework alone. This requires a *second* localisation
 that kills the residual $W^{(3)}$ generators. **Open question P4-EXEC-G4-M3-Q1.**
 
-Reading B (manuscript extension). The manuscript's $[\bar c]$ is
+Interpretation B (manuscript extension). The manuscript's $[\bar c]$ is
 *incomplete* and there exist higher-spin extensions $[\bar c^{(s)}]$
 for $s \geq 3$ that match $[c^{(s)}]$. The manuscript would need to
 be augmented with these. **Severity 4** if confirmed; would force
@@ -550,13 +550,13 @@ $\hbar^2 = \epsilon_1 \epsilon_2$ at $\lambda = 1$ as a non-zero
 finite class $[c^{(3)}] = 2 [\omega^{(3)}]$ (Costello unit) with no
 manuscript-side analog. **The bridge for W3-W31-T2 holds at spin-1
 only**; the spin-3 (and higher-spin) components are *extra structure*
-on the CGW side without manuscript counterpart. The two readings
+on the CGW side without manuscript counterpart. The two interpretations
 (A: spin-tower truncation, B: manuscript extension) are recorded as
 **P4-EXEC-G4-M3-R-A** (residual 1, severity 3, sharpening) and
 **P4-EXEC-G4-M3-R-B** (residual 2, severity 4 if confirmed).
 
 **Confidence.** Medium-high. The class survival is structurally
-clean; the readings A/B are open until the topological-twist limit
+clean; the interpretations A/B are open until the topological-twist limit
 is constructed at the spin-tower level (M4 / M5 horizons).
 
 ---
@@ -666,7 +666,7 @@ the spin-tower obstruction at the M=N balanced configuration via
 super-trace cancellation, where the bosonic case does not. This
 provides a *physical mechanism* (orientifold + brane-anti-brane
 charge cancellation, per phase4-G3-supertrace-beyond §1(d)) for the
-spin-tower truncation Reading A of §5.4.
+spin-tower truncation Interpretation A of §5.4.
 
 **Confidence.** Medium. The existence of super-W_3 is well-established
 (textbook in Bouwknegt–Schoutens 1993 §6); the *vanishing* at $M=N$
@@ -793,7 +793,7 @@ analog).** **Phase-4. Severity 3 (sharpening, may upgrade to 4).**
 > \epsilon_2$, $\lambda = 1$ is *non-zero* and has *no manuscript-side
 > analog* in $H^2_{\mathrm{Lie}}(\bar A; \C)_{(0,0)}$ (the manuscript's
 > $[\bar c]$ is purely Heisenberg-type on weight-(1,1) generators).
-> Two readings:
+> Two interpretations:
 > - **A (spin-tower truncation).** W3-W31-T2 must include a spin-tower
 >   truncation that kills $[c^{(s)}]$ for $s \geq 3$. This requires
 >   a *second* localisation beyond M2's $\tau_{\mathfrak h}$ — the
@@ -872,7 +872,7 @@ identify the truncation mechanism:
 - (c) verify the super-extension on osp(2N|2N) at $M=N$ provides
   the natural truncation mechanism.
 
-**Reading C** (super-extension truncation) is the most physically
+**Interpretation C** (super-extension truncation) is the most physically
 grounded and ledger-consistent: the brane-anti-brane + orientifold
 configuration at $M = N$ on the manuscript side gives the
 super-W spin tower with all higher-spin cocycles vanishing, matching
@@ -904,9 +904,9 @@ The M3:
   super-trace cancellation. This is consistent with W22-T1+T2 +
   W30 (A5) + P4-EXEC-G3-T-A1 chain-level closures.
 - **W3-W31-T2 conjecture refinement.** The topological-twist conjecture
-  must include a *spin-tower truncation* (Reading A) or a
-  *super-extension* (Reading C) to be consistent with the manuscript's
-  single-spin structure. Reading B (manuscript extension to higher
+  must include a *spin-tower truncation* (Interpretation A) or a
+  *super-extension* (Interpretation C) to be consistent with the manuscript's
+  single-spin structure. Interpretation B (manuscript extension to higher
   spins) is also possible but less physically motivated.
 - **Cross-volume firewall (W3-W16) is unchanged.** The toy is
   intra-volume (manuscript ↔ CGW spin-3 sub-VOA), not cross-volume.
@@ -970,7 +970,7 @@ P4-EXEC-G4-M3 confidence:
   preserved verbatim; super-extension chain-level argument
   parallel to W22-T1+T2).
 - (M3.5) type-clash class table: **medium-high** (class survival
-  structurally clean; readings A/B/C residual).
+  structurally clean; interpretations A/B/C residual).
 - (M3.6) super-W_3 in osp(2N|2N): **medium** (super-existence
   textbook; chain-level vanishing at spin-3 structural extension
   of phase4-exec-osp).

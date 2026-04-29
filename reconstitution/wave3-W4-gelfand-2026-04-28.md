@@ -354,7 +354,7 @@ The three subtheorems compose to: "the formula $z_1^2 z_2\cdot\rho_{1,1} = -2\rh
 
 W2-08 states D₃ is `thm:no-polynomial-realization-categorical`. W4
 verifies this label resolves to `main.tex`:4148 (the categorical
-no-go theorem). The W4 reading: the **categorical** no-go is the
+no-go theorem). The W4 interpretation: the **categorical** no-go is the
 sharpest D₃ — it rules out the realization in the abelian category
 $\mathsf P_{\mathrm{pol}}$ of all polynomial $\bar A$-bimodules with
 locally nilpotent linear Hamiltonian. Wave 2's universal no-go M-29
@@ -435,7 +435,7 @@ spaces.
 
 W4 conclusion: M-36 (distribution-product avoidance is structural)
 extends to a fuller statement: **no functional-analytic completion
-beyond bidegree-by-bidegree is silently invoked**. The Gelfand reading
+beyond bidegree-by-bidegree is silently invoked**. The Gelfand interpretation
 is clean.
 
 ### 4.4 Residual: full wave-front-set statement
@@ -490,7 +490,7 @@ split is computationally verified.
 ### W3-W4-02 — T3 admissible envelope is bracket-aware only via T1 W1
 **Severity 2 (sharpening cross-reference). Status valid. Confidence high.**
 **Lens.** Hypotheses (silent compatibility between two lane files).
-**Provenance.** W3-W4 reading of T1 vs T3 cross-references.
+**Provenance.** W3-W4 interpretation of T1 vs T3 cross-references.
 **Target.** `tate-T1-weighted-completion.tex` Definition `defn:wt-degree-weight`;
 `tate-T3-quillen-equivalence.tex` Statement `stmt:tate-model-envelope`
 (line 46) and the Quillen-equivalence theorem.

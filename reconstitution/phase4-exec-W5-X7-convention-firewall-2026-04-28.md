@@ -227,7 +227,7 @@ The drafted pointer passes all three scans (em-dash, AI-tells,
 agent/swarm/ledger) and all three re-attacks (Drinfeld
 functoriality, Witten boundary, Polyakov-class invariance). The
 proposal is ready for the maintainer to merge into `main.tex` if
-the manuscript line of attack endorses the symmetric reading of
+the manuscript line of attack endorses the symmetric interpretation of
 the firewall. The proposal is strict-additive and does not
 disturb any existing claim.
 

@@ -417,7 +417,7 @@ would require precisely the bi-infinite parent module to be
 present in a single category, and M-29 closes that in the
 negative.
 
-**W3-W2-10 (Gaiotto-lens reading of M-29).** The wave-2 M-29
+**W3-W2-10 (Gaiotto-lens interpretation of M-29).** The wave-2 M-29
 universal categorical no-go has a Gaiotto interpretation: the
 formal-disk-to-punctured-disk interface in the local Hamiltonian
 BF theory cannot be a deformation-theoretic single-object
@@ -428,7 +428,7 @@ R-W4-A residual (bi-infinite parent
 Hamiltonian-equivariant splitting,
 `reconstitution/attack-heal-platonic-2026-04-28.md`:1914–1920).
 
-**No new residual.** The Gaiotto-lens reading of M-29 / R-W4-A
+**No new residual.** The Gaiotto-lens interpretation of M-29 / R-W4-A
 adds interpretive weight but no new mathematical obligation.
 
 ### §3.2 Dimensional reduction: compactify one $\C$-direction
@@ -624,7 +624,7 @@ invalidated. Five clarifications:
 2. Weiss-on-$\R$ discharge via cosheaf+symmetric-algebra reduction
    (W3-W2-02–03).
 3. M-31 bulk-only scope sharpening (W3-W2-06–07; H2).
-4. M-29 = Gaiotto interface obstruction reading (W3-W2-09–10).
+4. M-29 = Gaiotto interface obstruction interpretation (W3-W2-09–10).
 5. Higher-form U(1) framing of Theorem G compatible with M-31
    (W3-W2-14–17; H3 optional).
 
@@ -691,7 +691,7 @@ produces:
 2. **Sharpening of M-31 to bulk-only scope** (§2.2, W3-W2-06–07):
    defect-cohomology extension gated on M-37 ingredient 3
    (bulk-to-defect kernel). Heal H2 proposed.
-3. **Reading of M-29 as the Gaiotto interface obstruction**
+3. **Interpretation of M-29 as the Gaiotto interface obstruction**
    (§3.1, W3-W2-09–10): the universal categorical no-go is
    exactly the formal-disk-to-punctured-disk interface
    obstruction; no new residual.

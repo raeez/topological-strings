@@ -5,9 +5,9 @@ Evidence harness for the quantum derived-center subsection of main.tex
 (propositions prop:moyal-monomial, prop:quantum-boundary-descends-products,
 lem:capelli-renormalized-stable-trace, thm:finite-n-reduced-moyal,
 cor:degree-zero-quantum-upgrade, prop:conditional-boundary-product-normalization,
-prop:open-line-midpoint-graph-weights, and the formal coefficient target used
+thm:open-line-midpoint-graph-weights, and the formal coefficient target used
 by thm:first-third-costello-normalizations, thm:phi-hbar-all-order, and
-cor:phi-hbar-supremum). The script is dependency-free;
+prob:quantum-p0-operation-realization). The script is dependency-free;
 rationals are exact via `fractions.Fraction`. No NumPy/SymPy.
 
 It verifies, on the four nontrivial test pairs
@@ -46,17 +46,12 @@ plus a sweep up to exponent 10 and order 11:
       summands commute.  Verified by direct symbolic commutator against
       S_2([f,g]_*) on the Cartan-rank-2 specialization (N=2) for all
       primary and higher-order test pairs.
-  7.  Connected cumulant bracket on `bar h`: define the connected
-      single-trace projection by removing the constant trace and (by the
-      Capelli triangular identity) by passing to `bar J`.  The induced
-      bracket
-        {f, g}_conn = f * g - g * f mod constants and mod the lower-trace
-                       Capelli shift
-      is checked here on the leading coefficient of the scalar Moyal bracket
-      for the primary test pairs.  Higher hbar-graded connected-cumulant
-      coverage would require a separate coefficientwise test.
-  8.  Open-line midpoint graph weights (Proposition
-      `prop:open-line-midpoint-graph-weights`): the one-edge weight is
+  7.  Pre-quotient scalar Moyal / U(1) anomaly coefficient: compute the
+      leading scalar Moyal coefficient before quotienting constants.  The
+      nonconstant terms are the connected Hamiltonian bracket; the constant
+      term is the scalar anomaly killed only after reduction.
+  8.  Open-line midpoint graph weights (Theorem
+      `thm:open-line-midpoint-graph-weights`): the one-edge weight is
       hbar P/2 and the three-parallel-edge weight is hbar^3 P^3/48; their
       antisymmetrisations give hbar P and hbar^3 P^3/24.
 
@@ -725,29 +720,31 @@ def direct_rank_radial_checks(N: int) -> int:
 
 
 # ---------------------------------------------------------------------------
-# Connected cumulant projection (Lemma in proposed-quantum-derived-center.tex).
+# Pre-quotient scalar Moyal coefficient and connected projection.
 #
-# On bar h = C[z1, z2] / C, the connected single-trace bracket is
-#   {f, g}_conn := scalar Moyal bracket {f, g}_hbar.
-# The Capelli/connected-trace projection removes constants and the lower
-# triangular Capelli pieces.  Here we verify the cumulant bracket on the
-# leading scalar Moyal coefficient in the primary cases.  The projection is the linear map
+# On bar h = C[z1, z2] / C, constants are killed.  This harness deliberately
+# computes the leading scalar Moyal coefficient before that quotient, so the
+# pair (z1, z2) prints the U(1) anomaly coefficient rather than a reduced
+# connected bracket.  The nonconstant image is then read through the linear map
 #   pi : J_N(z1^a z2^b) -> z1^a z2^b for (a, b) != (0, 0).
 # ---------------------------------------------------------------------------
 
 
-def projected_moyal_bracket(f: Poly, g: Poly, max_order: int) -> Poly:
-    """Sum the odd Moyal commutator coefficients up to max_order, then drop
-    the constant Hamiltonian part.  Returns hbar-stripped scalar bracket."""
+def prequotient_scalar_moyal_leading(f: Poly, g: Poly, max_order: int) -> Poly:
+    """Return the hbar-stripped leading scalar Moyal coefficient.
+
+    This deliberately keeps the constant coefficient for primary tests such
+    as (z1, z2); scalar reduction is checked by the surrounding comparison.
+    """
     # The scalar Moyal bracket {f,g}_hbar = sum_{s>=0} hbar^{2s} / (2^{2s} (2s+1)!) P^{2s+1}(f,g).
     # This harness returns P^1(f,g). Higher hbar powers are independent
-    # generators in C[[hbar]] and are not covered by this connected-cumulant
+    # generators in C[[hbar]] and are not covered by this finite scalar
     # check.
     return p_power(f, g, 1)
 
 
 # ---------------------------------------------------------------------------
-# Open-line midpoint graph weights (Proposition `prop:open-line-midpoint-graph-weights`).
+# Open-line midpoint graph weights (Theorem `thm:open-line-midpoint-graph-weights`).
 #
 # The one-edge ordered weight is hbar P / 2 = hbar * P^1(f, g) / 2.
 # The three-parallel-edge ordered weight is hbar^3 / 48 * P^3(f, g).
@@ -921,20 +918,24 @@ def run() -> None:
         )
         print(f"     {label}: [S_2(f), S_2(g)] = S_2([f,g]_*).  PASS.")
 
-    # ----- Section 6: connected cumulant bracket -----------------------------
-    print("[6] Connected cumulant bracket = leading scalar Moyal coefficient on bar h:")
+    # ----- Section 6: pre-quotient scalar Moyal coefficient ------------------
+    print("[6] Pre-quotient scalar Moyal / U(1) anomaly leading coefficient:")
     for label, f, g in TEST_CASES:
-        bracket = projected_moyal_bracket(f, g, max_order=11)
+        bracket = prequotient_scalar_moyal_leading(f, g, max_order=11)
         # Compare with the leading hbar coefficient of the star commutator
         leading = p_power(f, g, 1)
         assert bracket == leading, (
-            f"Connected-bracket mismatch on {label}: {bracket} vs {leading}"
+            f"Pre-quotient scalar Moyal mismatch on {label}: {bracket} vs {leading}"
         )
-        print(f"     {label}: {{f,g}}_conn = {poly_to_str(bracket)}.  PASS.")
+        print(
+            f"     {label}: leading scalar coefficient before quotient = "
+            f"{poly_to_str(bracket)}.  PASS."
+        )
 
     # ----- Section 7: open-line midpoint graph weights -----------------------
-    print("[7] Open-line midpoint graph weights (Proposition prop:open-line-midpoint-graph-weights):")
-    for label, f, g in TEST_CASES:
+    print("[7] Open-line midpoint graph weights (Theorem thm:open-line-midpoint-graph-weights):")
+    graph_weight_cases = TEST_CASES + HIGHER_ORDER_CASES[:2]
+    for label, f, g in graph_weight_cases:
         w1 = one_edge_ordered_weight(f, g)
         w3 = three_edge_ordered_weight(f, g)
         c1 = one_edge_commutator_weight(f, g)

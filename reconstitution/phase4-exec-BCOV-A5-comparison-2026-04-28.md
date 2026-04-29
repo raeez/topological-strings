@@ -446,7 +446,7 @@ the natural meeting point.**
   match between the BCOV anomaly cohomology class and our
   $[\bar c]$ requires either (i) the firewall to lift via a
   matched-conventions theorem (no such theorem is currently
-  inscribed in the manuscript), or (ii) reading both sides at the
+  inscribed in the manuscript), or (ii) interpretation both sides at the
   *coupling coefficient* level and not as cohomology classes in a
   single complex.
 
@@ -800,7 +800,7 @@ of Eq. (6.11) — we have only the matrix-factor coefficient at
 fixed (formal) symplectic structure. The comparison is at the
 matrix-factor coefficient level, not at the moduli-equation level.
 
-**Polyakov-lens reading.** The Beltrami is the *moduli direction*;
+**Polyakov-lens interpretation.** The Beltrami is the *moduli direction*;
 the matrix-factor coefficient is the *symmetry coupling*. Polyakov's
 question "what changes under regulator change?" answers identically
 on both sides: the matrix-factor coefficient is regulator-invariant.
@@ -951,13 +951,13 @@ The full chain-level isomorphism between BCOV BV on $\C^3$ and
 Hamiltonian BF on $\R^2 \times \widehat{\C^2}_0$ is the
 firewall-permanent obstruction.
 
-**Polyakov reading.** Polyakov's question "which class is preserved
+**Polyakov interpretation.** Polyakov's question "which class is preserved
 across the comparison?" answers: **the coupling coefficient
 $\hbar(N-M)$ is preserved**; the vertex cocycle changes
 ($[\bar c]$ on our side; $\bar\partial$-coboundary on BCOV side);
 the ambient complex changes structurally.
 
-**Invariants reading.** The dominant invariant under the
+**Invariants interpretation.** The dominant invariant under the
 comparison is $\mathrm{Str}_{\mathfrak{gl}(N|N)}(I) = 0$, the
 representation-theoretic constant on the open algebra. Both sides
 preserve it; (A5) + (A2$'$) on our side, Costello–Li 2015 / 2016
@@ -1048,7 +1048,7 @@ trivially satisfied via the Killing form on $\mathfrak{gl}_N$).
 The bosonic comparison is a *separate* match that does not
 involve the (A5) + (A2$'$) machinery.
 
-**Polyakov + Invariants final reading.** The dominant invariant
+**Polyakov + Invariants final interpretation.** The dominant invariant
 preserved across the comparison is the representation-theoretic
 constant $\mathrm{Str}_{\mathfrak{gl}(N|N)}(I) = 0$. (A5) + (A2$'$)
 ensures the regulator preserves this on our side; Costello–Li 2015

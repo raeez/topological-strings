@@ -690,7 +690,7 @@ on the unreduced source (e.g., if a closed-exchange counterterm
 cancels the scalar contact); or, if only modulo regulator, the
 residue might depend on the choice of regulator scheme.
 
-**Reading of the appendix.** Two distinct theorems organize the
+**Interpretation of the appendix.** Two distinct theorems organize the
 appendix:
 
 (A) `thm:app-unreduced-polynomial-centrality-no-go` (lines 33–91):

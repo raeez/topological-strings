@@ -546,7 +546,7 @@ finds the discipline that closes the cross-volume question.
 
 **Search.** `grep -n "tau_h\|Bousfield"` across all .tex files: **0
 matches**. **Confirmed silent.**
-**Reading by a referee.** A referee reading `rmk:E1-translation`
+**Interpretation by a referee.** A referee interpretation `rmk:E1-translation`
 (`main.tex`:2229-2246) sees Lurie HA §5.5.4 cited together with
 Costello-Gwilliam Vol I §6.4. The reader is left to assume the
 standard Quillen equivalence between the two presentations
@@ -563,7 +563,7 @@ heal is a one-line remark. **Severity 1-2 minor revision.**
 
 **Search.** `grep -n "(A5)\^{\\mathrm{RG}}\|A5-RG\|A5.*RG"` across all
 .tex files: **0 matches**. **Confirmed silent.**
-**Reading by a referee.** The manuscript declares the (CC3)
+**Interpretation by a referee.** The manuscript declares the (CC3)
 compatibility-with-Costello-RG-flow condition at
 `tate-T1-weighted-completion.tex`:107-112 as an **external** Costello
 requirement (the residual locality/QME problem in
@@ -585,7 +585,7 @@ inscription delta lands.
 **Search.** `grep -n "Theorem F\|F''\|joint-Fpp\|parabolic"` across all
 .tex files: **0 matches** for "F''", parabolic functoriality, or
 $P_{(z_1)}$. **Confirmed silent.**
-**Reading by a referee.** Theorem F'' is **not yet inscribed in the
+**Interpretation by a referee.** Theorem F'' is **not yet inscribed in the
 working tree**. The manuscript does not declare F'' or its parabolic
 restriction. The W5-A2 §1 finding is therefore **a wave-5
 strengthening for the +472 inscription target**, not a defect of the
@@ -598,7 +598,7 @@ PRE-AUTHORIZATION snapshot.
 
 **Search.** `grep -n "FW.BCOV\|FW.Sergeev\|FW.Igusa\|FW.Unreduced\|FW.Costello-Li\|firewall-permanent\|firewall typology"` across all .tex files: **0
 matches**. **Confirmed silent.**
-**Reading by a referee.** The five named firewall species
+**Interpretation by a referee.** The five named firewall species
 (FW.BCOV, FW.Sergeev-A5/Sergeev-Howe, FW.Igusa, FW.Unreduced-Bosonic,
 FW.Costello-Li-d-even) live entirely in the reconstitution audit
 trail. The manuscript carries the **substance** of each via:
@@ -619,7 +619,7 @@ trail. The manuscript carries the **substance** of each via:
 "FW.X" identifiers. **5 of 5** species have substance-bearing remark
 or theorem in the manuscript. **5 of 5** are distinguishable by their
 inscribed substance.
-**Acceptable for referee?** YES. A referee reading the working tree
+**Acceptable for referee?** YES. A referee interpretation the working tree
 encounters the **substance** of all five firewalls without the
 FW.X naming convention. The naming convention is wave-5 audit
 shorthand and is **not load-bearing for the manuscript's correctness**.
@@ -680,7 +680,7 @@ Quillen equivalence remark). **0 severity-3 (load-bearing) items.**
 
 2. **The status vocabulary is uniformly applied** across abstract,
    theorem-lanes, claim-strength-ledger, and open-obligations. A
-   referee reading any one of these four standardised sites finds
+   referee interpretation any one of these four standardised sites finds
    the same vocabulary: proved-finite, proved-degreewise-stable,
    proved-weighted-Tate, computed-to-stated-order, conditional,
    reduced-target / unreduced-lift-open, conjectural, open, not
@@ -790,7 +790,7 @@ publishable with the noted minor revisions.
 
 ## §10. Recommended next steps (Phase-5)
 
-* **R-W5-X21-01.** Accept-with-minor-revisions reading: the
+* **R-W5-X21-01.** Accept-with-minor-revisions interpretation: the
   manuscript at 155 pages is publication-grade with 6 minor-
   revision items. **Recommend the +472 inscription delta** to
   reduce the minor-revision item count from 6 to 2-3.

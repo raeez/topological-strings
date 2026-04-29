@@ -57,7 +57,7 @@ declaration** inside each caption. The current captions cite the bivector
 $P_\partial$ but do not cite the underlying time-domain propagator
 $G(t,s)=\tfrac12\,\mathrm{sgn}(t-s)$ from
 Proposition~\ref{prop:conditional-boundary-product-normalization}
-(`main.tex` lines 5572-5601). A referee reading the caption alone cannot
+(`main.tex` lines 5572-5601). A referee interpretation the caption alone cannot
 reproduce the boundary integral
 $\int a(t)b(t')\,G(t,t')\,P_\partial\,dt\,dt'$. This is a self-containment
 gap, not a structural mis-rendering.
@@ -109,7 +109,7 @@ conventions".
 | Ordered vs commutator weight | YES ("ordered one-edge weight is $\hbar P_\partial/2$; commutator weight is $\hbar P_\partial$") | none |
 | BV cohomological degree | NO (implicit; never stated in caption) | All legs are degree-zero Hamiltonians; reader infers from context. |
 | Cross-references | YES (Prop.~`prop:first-order-bracket`, Prop.~`prop:moyal-monomial`, Lem.~`lem:omega-cocycle`) | none |
-| "Schematic; not a separate Feynman-integral proof" disclaimer | PARTIAL: appears in body text after `\end{figure}` (line 4640-4643), not in the caption itself | Referee reading caption alone may not see the disclaimer. |
+| "Schematic; not a separate Feynman-integral proof" disclaimer | PARTIAL: appears in body text after `\end{figure}` (line 4640-4643), not in the caption itself | Referee interpretation caption alone may not see the disclaimer. |
 
 ### 2.2 Third-order figure (Γ_{3a}, Γ_{3b}, lines 5720-5793)
 
@@ -127,7 +127,7 @@ conventions".
 | Weight (order in $\hbar$) | YES (caption: "the third-order Moyal weight is $\hbar^3/24$") | none |
 | Closed Moyal-coefficient formula | YES (full sum $P^3(f,g)=\sum_{a=0}^3(-1)^a\binom{3}{a}(k)_{3-a}(l)_a(m)_a(n)_{3-a}\,z_1^{k+m-3}z_2^{l+n-3}$) | none |
 | Cross-references | YES (Prop.~`prop:moyal-monomial`, Prop.~`prop:open-line-midpoint-graph-weights`, Prob.~`prob:first-third-graph-normalizations`) | none |
-| "Schematic; not a separate Feynman-integral proof" disclaimer | NO: neither caption nor immediately surrounding body text carries this disclaimer for Γ_{3} | A referee reading p. 50-51 alone will not see the disclaimer. |
+| "Schematic; not a separate Feynman-integral proof" disclaimer | NO: neither caption nor immediately surrounding body text carries this disclaimer for Γ_{3} | A referee interpretation p. 50-51 alone will not see the disclaimer. |
 | BV cohomological degree | NO (implicit; never stated in caption) | All legs degree-zero. |
 
 ---
@@ -136,7 +136,7 @@ conventions".
 
 The following are stand-alone LaTeX patches. Each replaces the existing
 `\caption{...}` block with a self-contained version. After application a
-referee reading the caption alone, together with the manuscript's standing
+referee interpretation the caption alone, together with the manuscript's standing
 conventions on the brane line $\R$ and the reduced first-order open model
 $S_0=\int_\R\mathrm{Tr}(\phi_1\,d\phi_2)$, can reconstruct the propagator
 integral that the graph encodes.
@@ -161,7 +161,7 @@ integral that the graph encodes.
     (no nontrivial edge or vertex symmetry that fixes the labelled
     insertions). Ordered one-edge weight $\hbar P_\partial/2$; commutator
     weight $\hbar P_\partial$ after subtracting the reverse ordering.
-    Reading the bivector contraction on monomials $f=z_1^kz_2^l$, $g=z_1^mz_2^n$
+    Interpretation the bivector contraction on monomials $f=z_1^kz_2^l$, $g=z_1^mz_2^n$
     reproduces the cocycle coefficient $(kn-lm)$ of
     Proposition~\ref{prop:first-order-bracket}, the order-$\hbar$ Moyal
     coefficient of Proposition~\ref{prop:moyal-monomial}, and the U(1) centre

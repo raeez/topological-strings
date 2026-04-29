@@ -377,10 +377,10 @@ $P_0$ bracket]\label{lem:filtration-preservation}
     C_1(k,l)=\C\{\mathsf W_{k,l}\},\qquad
     C_0(k,l)=\C\{\mathsf N_{k+1,l+1}\}.
   \]
-  The basis vector \(w\in\mathsf W_{k,l}\) represents
-  \(\operatorname{Tr}(\psi w)\), with the graded cyclic rule
-  \(\operatorname{Tr}(ab)=(-1)^{|a||b|}\operatorname{Tr}(ba)\),
-  \(|x|=|y|=0\), \(|\psi|=1\).  The first boundary is
+	  The basis vector \(w\in\mathsf W_{k,l}\) represents
+	  \(\operatorname{Tr}(\psi w)\), with the graded cyclic rule
+	  \(\operatorname{Tr}(ab)=(-1)^{|a||b|}\operatorname{Tr}(ba)\),
+	  \(|x|=|y|=0\), \(|\psi|\equiv1\pmod2\).  The first boundary is
   \[
     \partial_1(w)=[xyw]_{\mathrm{cyc}}-[yxw]_{\mathrm{cyc}}.
   \]
@@ -526,10 +526,10 @@ $P_0$ bracket]\label{lem:filtration-preservation}
 
 \begin{defn}[Full primitive \(\psi\)-complex]\label{def:T5-full-psi-complex}
   Let
-  \[
-    A_\psi=\C\langle x,y,\psi\rangle,\qquad
-    |x|=|y|=0,\quad |\psi|=1,
-  \]
+	  \[
+	    A_\psi=\C\langle x,y,\psi\rangle,\qquad
+	    |x|=|y|=0,\quad |\psi|\equiv1\pmod2,
+	  \]
   with \(d\psi=xy-yx\) and \(dx=dy=0\).  In the graded cyclic quotient
   \(\operatorname{Cyc}(A_\psi)=A_\psi/[A_\psi,A_\psi]_{\mathrm{gr}}\),
   put
@@ -774,7 +774,7 @@ $P_0$ bracket]\label{lem:filtration-preservation}
   More precisely, every stable primitive chain-level construction generated
   by \(x,y,\psi\), with \(Q\psi=xy-yx\) and with only graded-cyclic trace
   relations, factors on homology through the two displayed summands.  Thus
-  a universal Koszul-dual cotangent theory in this lane has no available
+  a Koszul-dual cotangent theory in this statement has no available
   hidden higher-\(\psi\) correction term: the entire descendant side is the
   one-\(\psi\) line \(\bar A_{\mathrm{desc}}[1]\).
 
@@ -805,7 +805,7 @@ $P_0$ bracket]\label{lem:filtration-preservation}
   single scalar allowed by residue-pairing rigidity; the displayed formula
   chooses that scalar.  With this normalization, the positive flat Rees
   construction is exactly the Fourier-twisted cyclic \(D_\hbar\)-module
-  \(\mathcal D_\hbar/(z_1,z_2)\) embedded into the principal-part Cech
+  \(\mathcal D_\hbar/(z_1,z_2)\) embedded into the principal-part \v{C}ech
   lattice with the explicit factor
   \((-1)^{a+b}\hbar^{a+b}a!b!\).  If one removes the Fourier twist and asks
   for the same Hamiltonian action, local nilpotence of the linear
@@ -896,7 +896,7 @@ $P_0$ bracket]\label{lem:filtration-preservation}
       Theorem~\ref{thm:T5-one-psi-homology} extending it to the
       cotangent sector via the closed cocycle property of $\Psi_{a,b}$);
     \item \emph{(Factorization product.)}
-      The zero-\(\psi\) Hamiltonian factorization-product compatibility is
+      The zero-\(\psi\) Hamiltonian-current compatibility is
       the unit-retaining linearized statement of
       Theorem~\ref{thm:chain-level-primitive-projection-factorization}.
       The one-\(\psi\) label shadow satisfies the analogous
@@ -909,8 +909,8 @@ $P_0$ bracket]\label{lem:filtration-preservation}
 		      Hamiltonian zero-$\psi$ indecomposable quotient
 		      (Theorem~\ref{thm:chain-level-primitive-projection-P0}). On the
 		      one-$\psi$ shadow the map records labels only; it does
-	      not intertwine the open polynomial descendant raising action
-	      with the principal-part coadjoint lowering action. The reduced
+	      not intertwine the open polynomial descendant PBW action
+	      with the principal-part coadjoint action. The reduced
 	      target bracket
 	      $\{B_f(a),\Theta_\rho(B)\}=\Theta_{f\cdot\rho}(aB)$ is supplied
 	      separately by
@@ -946,7 +946,10 @@ $P_0$ bracket]\label{lem:filtration-preservation}
   because the boundary formula of
   Lemma~\ref{lem:T5-two-psi-boundary-sign} has two positive and two
   negative one-\(\psi\) summands of the same bidegree.  It sends
-  \(\Psi_{a,b}\) to \(\rho_{a,b}\), and it kills the scalar
+  the indecomposable label represented by \(\Psi_{a,b}\) to the imposed
+  reduced target basis vector \(\rho_{a,b}\); this is not an
+  \(\mathfrak h\)-equivariant realization of the polynomial one-\(\psi\)
+  module.  It kills the scalar
   \(\Psi_{0,0}\).  Primitive chains with \(p\ge2\) displayed
   \(\psi\)'s are killed by definition; after one application of
   \(Q_{\mathrm{BV}}\) they land in the kernel just described, since the
@@ -967,15 +970,15 @@ $P_0$ bracket]\label{lem:filtration-preservation}
 	  $P_0$-bracket compatibility asserted here is the zero-$\psi$
 	  Hamiltonian statement already proved above. The one-$\psi$ shadow
 	  deliberately does not assert compatibility between the open
-	  descendant raising action and the principal-part coadjoint lowering
-	  action; their difference is
+	  descendant PBW action and the principal-part coadjoint action;
+	  their difference is
 	  Corollary~\ref{cor:descendant-coadjoint-difference}. The
 	  bracket of two cotangent generators is zero on both sides because
 	  $\mc P[1]$ is an abelian odd ideal in
   $\mathfrak g_I=\mathfrak h_I\ltimes\mathcal P_I[1]$.
 
 	  Cosheaf compatibility is automatic on each summand: extension by zero
-	  on the \(\Omega^\bullet_c\) Hamiltonian factor and on the
+	  on the \(\Omega^\bullet_c\) Hamiltonian summand and on the
 	  \(\mathcal D'_c\) principal-part current factor commute with the fixed
 	  trace-label projections.
 
@@ -1154,7 +1157,7 @@ $P_0$ bracket]\label{lem:filtration-preservation}
   reduction modulo \(\hbar\) and for the linear Hamiltonian \(z_1\).
   Consequently no strict quantum descendant lift of the classical
   primitive label shadow exists under these assumptions.  The only
-  surviving quantum target in this lane is the reduced
+  surviving quantum target in this statement is the reduced
   principal-part complex itself, not the polynomial one-\(\psi\) source.
 \end{thm}
 
@@ -1207,13 +1210,19 @@ $P_0$ bracket]\label{lem:filtration-preservation}
     \Delta^{\mathsf F}_\hbar=D_\hbar/(z_1,z_2),
   \]
   and let \(e_0\) be the image of \(1\) in
-  \(\Delta^{\mathsf F}_\hbar\).  The Fourier automorphism
+  \(\Delta^{\mathsf F}_\hbar\).  The quotients are left cyclic
+  \(D_\hbar\)-modules, with left ideals generated by
+  \(\partial_1,\partial_2\) and by \(z_1,z_2\). PBW normal form gives
+  \(\mathcal O_\hbar\) the free \(\C[[\hbar]]\)-basis \(z_1^az_2^b\)
+  and gives \(\Delta^{\mathsf F}_\hbar\) the free basis
+  \(\partial_1^a\partial_2^b e_0\), so both modules are
+  \(\C[[\hbar]]\)-flat.  The Fourier automorphism
   \[
     \mathsf F(z_i)=\partial_i,\qquad
     \mathsf F(\partial_i)=-z_i
   \]
   identifies the Fourier twist of \(\mathcal O_\hbar\) with
-  \(\Delta^{\mathsf F}_\hbar\).  In the Cech local-cohomology lattice
+  \(\Delta^{\mathsf F}_\hbar\).  In the \v{C}ech local-cohomology lattice
   generated by
   \(\rho_{a,b}=z_1^{-a-1}z_2^{-b-1}dz_1dz_2\), the map
   \(e_0\mapsto\rho_{0,0}\) sends
@@ -1248,7 +1257,7 @@ $P_0$ bracket]\label{lem:filtration-preservation}
   cyclic generator is killed by \(z_1,z_2\), which is exactly the
   defining cyclic vector of \(\Delta^{\mathsf F}_\hbar\).
 
-  In the Cech model \(\partial_i\) acts as
+  In the \v{C}ech model \(\partial_i\) acts as
   \(\hbar\partial_{z_i}\).  Hence
   \[
   \begin{aligned}
@@ -1356,10 +1365,10 @@ $P_0$ bracket]\label{lem:filtration-preservation}
   \label{cor:unreduced-d-closed}
   Combining
   Theorem~\ref{thm:chain-level-primitive-projection} with the
-  cochain-level closed-open derived center
-  (Theorem~\ref{thm:open-closed-derived-center}) and the Hamiltonian
+  cochain-level reduced CE/PV central-operation comparison
+  (Theorem~\ref{thm:reduced-ce-pv-central-operation}) and the Hamiltonian
   factorization-algebra equivalence
-  (Theorem~\ref{thm:open-closed-derived-center-factorization}), one
+  (Theorem~\ref{thm:hamiltonian-current-factorization}), one
 	  obtains a chain-level primitive indecomposable shadow of the reduced cotangent
   comparison:
   \begin{align*}
@@ -1379,15 +1388,15 @@ $P_0$ bracket]\label{lem:filtration-preservation}
 
 \begin{proof}
   $\Phi_{\mathrm{cl}}$ is constructed at the cochain level by
-  Theorem~\ref{thm:open-closed-derived-center} on the reduced sector
-  after de Rham-current contraction.  Theorem~\ref{thm:open-closed-derived-center-factorization}
+  Theorem~\ref{thm:reduced-ce-pv-central-operation} on the reduced sector
+  after de Rham-current contraction.  Theorem~\ref{thm:hamiltonian-current-factorization}
   promotes this to a $P_0$ factorization algebra equivalence
   in the Hamiltonian sector.
 	  Theorem~\ref{thm:chain-level-primitive-projection} gives the
 	  primitive indecomposable \(P_0\)-shadow and one-$\psi$ label shadow. The
   composition therefore exists only at the indecomposable-shadow level.
   Since the one-$\psi$ projection does not intertwine the descendant
-  raising action with the principal-part coadjoint lowering action, the
+  PBW action with the principal-part coadjoint action, the
   asserted result is exactly the shadow statement and nothing stronger.
 \end{proof}
 

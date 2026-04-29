@@ -134,7 +134,7 @@ because $\{f, 1\} = 0$. Verified directly. **No gap here.**
 
 W12's printed `0 → ā_desc → C+- ⊕ C-+ → P → 0` is grading-disjoint
 and **wrong as printed** (W3-W21-07). W21's correction is **proved**
-mechanically by reading off the four-step filtration and the three
+mechanically by extracting the four-step filtration and the three
 successive quotient SESs.
 
 **Skeptic concern.** Does the corrected SES actually *compose* into

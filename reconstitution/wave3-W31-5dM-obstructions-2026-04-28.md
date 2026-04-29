@@ -113,7 +113,7 @@ From `reconstitution/wave3-W23-5dM-sigma-2026-04-28.md` §5.1, lines
 
 ### §1.2 Severity ordering
 
-Reading the five obstructions through the Drinfeld + Boundary lens
+Interpretation the five obstructions through the Drinfeld + Boundary lens
 yields a **strict severity ordering** (highest first):
 
 | Rank | ID | Obstruction | Severity | Type | Load-bearing? |

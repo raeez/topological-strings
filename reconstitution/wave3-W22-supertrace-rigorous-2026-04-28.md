@@ -113,7 +113,7 @@ lines 866–906.
 > the super-balanced condition $N=M$ is preserved by the
 > regularization.
 
-**Disambiguation.** Three readings of CT1, ordered weakest to
+**Disambiguation.** Three interpretations of CT1, ordered weakest to
 strongest:
 
 * (CT1.weak) **Existence-of-a-vanishing-source.** "There exists a

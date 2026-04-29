@@ -731,7 +731,7 @@ under"; `∥` denotes "is parallel/independent".
    ╚═══════════════════════════════════════════════════════════════════════╝
 ```
 
-**Reading.** Every super-balanced super-Lie discharge milestone
+**Interpretation.** Every super-balanced super-Lie discharge milestone
 depends on the chain (A1)–(A5)+(A2$'$). The bosonic Theorem G is
 parallel and independent of (A5)+(A2$'$). The negative primitive
 catalogs (G5 unreduced, G5-M2 reduced) confirm that the class

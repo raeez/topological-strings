@@ -1,4 +1,4 @@
-# Closed Hamiltonian BF Theory as a Derived Poisson Centre
+# Closed Hamiltonian BF Theory and Reduced CE/PV Central Operations
 
 This repository contains a research manuscript on the formal local
 mixed holomorphic-topological Dirac brane model on
@@ -6,16 +6,17 @@ mixed holomorphic-topological Dirac brane model on
 `main.tex`, with front matter and support files split into the adjacent
 `.tex` files.
 
-The manuscript builds a universal formal-local Koszul duality theory:
-finite cotangent CE/PV, completed formal-disk CE/PV, the closed-open
-generator map \(c^I\mapsto\theta^I\), \(u_I\mapsto O_I\), the
-admissible Tate bar-cobar/Quillen envelope, primitive higher-\(\psi\)
-Koszul sectors, the \(\mathcal D_\hbar\) Fourier--Rees bridge and its
-same-action obstruction, weighted finite-window regulator independence,
-endpoint criteria, unreduced factorization-current lift data, and
-global/descent acceptance criteria.  Analytic and global claims enter
-through named obstruction complexes rather than by transfer from the
-formal disk alone.
+The manuscript builds a formal-local reduced CE/PV central-operation
+interface: finite cotangent CE/PV, completed formal-disk coordinate CE/PV,
+the closed-open generator map \(c^I\mapsto\theta^I\),
+\(u_I\mapsto O_I\), admissible Tate or relative bar-cobar/Quillen
+criteria, primitive higher-\(\psi\) Koszul sectors, the
+\(\mathcal D_\hbar\) Fourier--Rees bridge and its same-action
+obstruction, weighted finite-window regulator criteria, endpoint
+criteria, unreduced factorization-current lift data, and global/descent
+acceptance criteria.  \(P_0\), kernel, analytic, and global claims enter
+through explicit admissibility hypotheses and named obstruction complexes,
+not by transfer from the formal disk alone.
 
 ## Build
 

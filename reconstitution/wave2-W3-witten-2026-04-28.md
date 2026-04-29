@@ -114,7 +114,7 @@ the residual; out of scope for the swarm.
 ### W3-02 — U(1)$_{\mathrm{ghost}}$: regularization-compatible, not anomaly-canceling
 **Severity 3 (sharpening). Status valid. Confidence high.**
 **Lens.** Witten + Boundary.
-**Provenance.** Wave-1 M-03 / E2 heal claim; this wave's reading of
+**Provenance.** Wave-1 M-03 / E2 heal claim; this wave's interpretation of
 Costello *RenEFT* §5.3 and Henneaux–Teitelboim §18.3.
 **Target.** Wave-1 master ledger M-03 / M-15 narrative;
 `appendix-unreduced-bv-qme.tex`.

@@ -179,7 +179,7 @@ conformal-anomaly statement.
 
 ### 1.3 What the manuscript actually means by "Polyakov-class"
 
-Reading W3-W8-01 (line 50–94 of `wave3-W8-polyakov-composition`):
+Interpretation W3-W8-01 (line 50–94 of `wave3-W8-polyakov-composition`):
 
 > "The path-integral / heat-kernel scheme is declared at
 > `stmt:costello-bv-package`; the universal $\hbar N$ Capelli class
@@ -215,7 +215,7 @@ anomalies are decoupled from worldsheet conformal anomalies.
 **Structural sharpening recommended.** The §0.1 meta-theorem statement
 should explicitly qualify "Polyakov-class regulator-invariance" as
 **"Polyakov-style worldvolume-internal regulator-class scheme-
-independence via (A1)-(A5)+(A2$'$)"**, to forestall a referee reading
+independence via (A1)-(A5)+(A2$'$)"**, to forestall a referee interpretation
 this as a Polyakov 1981 conformal-anomaly claim. **Severity 0
 (prose-clarity sharpening).** Not an obstruction.
 
@@ -585,7 +585,7 @@ explicitly qualify "Polyakov-class regulator-invariance" as
 **"Polyakov-style worldvolume-internal regulator-class scheme-
 independence via (A1)-(A5)+(A2$'$) of `defn:regulator-admissible-sector`,
 not Polyakov 1981 worldsheet conformal anomaly invariance"** to forestall
-referee misreadings.
+referee misinterpretations.
 
 **Sharpening 2 (Severity 0, prose clarity).** The Wave-4 ledger
 attack-heal-platonic line 6063–6065 entry "Common Polyakov-class
@@ -818,7 +818,7 @@ this probe certifies clean. Does the certification add anything?"
    robust under Polyakov + Invariants attack.
 2. Adds **Sharpening 1** (Polyakov qualifier on prose, +6 lines on
    the Wave-4 ledger; Severity 0); this is a minor prose improvement
-   forestalling a Polyakov 1981 misreading.
+   forestalling a Polyakov 1981 misinterpretation.
 3. Adds **Sharpening 3** (optional $1/N$ table, +5 lines on the
    `rmk:firewall-typology`; Severity 1); this is an optional
    clarifier.

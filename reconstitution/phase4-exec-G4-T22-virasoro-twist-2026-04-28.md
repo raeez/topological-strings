@@ -961,8 +961,8 @@ The discharge is **conditional** on:
 (b) **R-P4-EXEC-G4-M3-A (spin-3 cocycle survives, no manuscript
    analog).** The companion-tower construction $\{\tau_{(s)}\}_{s \geq 1}$
    includes spin-$s$ promotion functors for $s \geq 3$; per M3 §5.4
-   Reading A (spin-tower truncation), a *second* localisation is
-   required to kill the higher-spin classes. **If Reading A holds,
+   Interpretation A (spin-tower truncation), a *second* localisation is
+   required to kill the higher-spin classes. **If Interpretation A holds,
    $\tau_{(s)}$ for $s \geq 3$ produces *extra structure* not
    present in the manuscript, exposing the manuscript as carrying
    only the spin-1 and spin-2 components.** This is a Phase-5
@@ -1158,7 +1158,7 @@ Severity 3.**
 > The companion tower $\{\tau_{(s)}\}_{s \geq 1}$ produces
 > conformal-promotion functors at all spins; for $s \geq 3$, these
 > produce *extra structure* not present in the manuscript (per M3
-> Reading A). A *second* localisation truncating spin $\geq 3$ is
+> Interpretation A). A *second* localisation truncating spin $\geq 3$ is
 > required to align with the manuscript's spin-1-only $[\bar c]$
 > structure. Discharge: super-extension to $\mathrm{osp}(2N|2N)$ at
 > $M = N$ (M3 §6) provides physical truncation mechanism via

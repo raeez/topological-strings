@@ -1,7 +1,8 @@
 \begin{abstract}
-The formal-local theorem infrastructure constructs a universal
-Koszul-duality interface at the mixed holomorphic-topological brane on the
-symplectic disk \((\operatorname{Spf}\C[[z_1,z_2]],dz_1\wedge dz_2)\).
+We prove a coordinate Chevalley--Eilenberg/polyvector theorem and an
+admissible bar-cobar/enveloping criterion at the mixed
+holomorphic-topological brane on the symplectic disk
+\((\operatorname{Spf}\C[[z_1,z_2]],dz_1\wedge dz_2)\).
 On a stack of \(N\) probes the coordinates become matrices
 \(\phi_1,\phi_2\in\mathfrak{gl}_N\), and the open sector starts from
 the Dirac first-order theory
@@ -17,18 +18,25 @@ Hamiltonian Lie algebra
   \mathfrak g=\mathfrak h\ltimes
   \mathfrak h^\vee_{\mathrm{cont}}[1].
 \]
-Finite cotangent windows carry the Chevalley--Eilenberg/polyvector
-identity
+Every finite-dimensional Lie algebra \(\mathfrak l\) carries the
+cotangent Chevalley--Eilenberg/polyvector identity
 \[
   C^\bullet_{\mathrm{CE}}
-  (\mathfrak h_{\le M}\ltimes D_{\le M}[1])
-  \simeq \mathrm{PV}(\mathbf S(\mathfrak h_{\le M})),
+  (\mathfrak l\ltimes \mathfrak l^{\vee}[1])
+  \simeq \mathrm{PV}(\mathbf S(\mathfrak l)),
   \qquad c^I\mapsto\theta^I,\quad u_I\mapsto O_I,
 \]
-and the completed formal disk is obtained by the same generator map in
-the finite-word coordinate product completion.  The Casimir transition
-obstruction belongs to the stronger kernel, propagator, and bar-cobar
-endpoint problem, not to this coordinate CE/PV identity.
+and the completed formal disk is reconstructed by the coordinate map
+\(\Phi_{\mathrm{coord}}\) through finite coordinate tests and pro-window
+coordinate cochains.  The strict product completion is only a dg
+commutative coordinate theorem.  A \(P_0\)-realization is asserted after a
+bracket-admissible subalgebra \(B\subset
+\mathrm{PV}_{\mathrm{coord}}(A_{\partial,\mathrm{coord}})\) has been
+chosen, giving \(\Phi^B_{P_0}\).  A Maurer--Cartan kernel
+\(\Theta_B\) is asserted only for kernel-admissible \(B\), where the
+diagonal tensor converges.  The Casimir transition obstruction belongs to
+the stronger kernel, propagator, and bar-cobar endpoint problem, not to
+the coordinate CE/PV identity.
 
 The cotangent variables are Grothendieck--Matlis residue currents
 \[
@@ -39,8 +47,8 @@ The cotangent variables are Grothendieck--Matlis residue currents
 \]
 while the stable polynomial one-\(\psi\) classes \(\Psi_{a,b}\) are the
 PBW special-fibre open labels.  These two modules remain
-separate; the bridge between them is computed by Koszul, Matlis, and
-Moyal methods.  The Rees Weyl algebra
+separate; the bridge between their shared labels is computed by Koszul,
+Matlis, and Moyal methods.  The Rees Weyl algebra
 \(\mathcal D_\hbar\) supplies the Fourier bridge
 \[
   z_1^az_2^b\mapsto\partial_1^a\partial_2^be_0
@@ -49,16 +57,25 @@ Moyal methods.  The Rees Weyl algebra
 and the same-action obstruction shows that this is a Fourier-polarized
 label comparison, not a polynomial realization of principal parts.
 
-The formal-local package consists of finite CE/PV, completed disk
-CE/PV, the admissible Tate bar-cobar/Quillen envelope
-\(B^!\simeq\widehat U(\mathfrak g_{\mathrm{adm}})\), weighted
-finite-window regulator independence, endpoint admissibility criteria,
-primitive higher-\(\psi\) Koszul extraction, the
-\(\mathcal D_\hbar\) bridge and obstruction, the unreduced
-factorization-current lift datum, and the scalar QME obstruction
-complex.  The Moyal normalization fixes the first and third raw
-commutator weights \(1\) and \(1/24\).  Global BCOV, compact
-Calabi--Yau, Vol III, Igusa/BKM, and sister-volume uses enter through
-matched-conventions descent data and vanishings of the corresponding
-period, anomaly, QME, and operadic obstruction classes.
+The proved formal-local results are the Dirac brane probe calculation,
+the finite cotangent CE/PV identity, the coordinate formal-disk CE/PV
+theorem, the bracket-admissible \(P_0\) realization after a choice of
+\(B\), the Matlis principal-part coadjoint module, the scalar \(U(1)\)
+anomaly, primitive higher-\(\psi\) Koszul homology, the
+\(\mathcal D_\hbar\) Fourier--Rees bridge and same-action obstruction,
+and the formal Weyl/Moyal coefficient calculation, whose first and
+third raw commutator weights are \(1\) and \(1/24\).  The conditional
+results are the kernel-admissible Maurer--Cartan tensor, the
+admissible-envelope Tate bar-cobar/Quillen criterion
+\(B_{\mathrm{adm}}^!\simeq\widehat U(\mathfrak g_{\mathrm{adm}})\),
+regulator independence inside the admissible finite-window sector,
+	endpoint stabilization criteria, and the finite-\(N\) radial comparison
+	and Costello graph/QME realization criteria.  The unreduced factorization-center
+lift is an obstruction datum, not a proved full
+\(Z^{P_0}_{\mathrm{fact}}\)-theorem.  No global BCOV,
+compact Calabi--Yau, MNOP/chiral-volume, Vol III, Igusa/BKM, or
+sister-volume consequence follows here. Such a target use requires a
+matched-conventions descent theorem and vanishing, with null-homotopies,
+of the corresponding period, anomaly, QME, convergence, hyperdescent,
+six-relation, and operadic obstruction classes.
 \end{abstract}

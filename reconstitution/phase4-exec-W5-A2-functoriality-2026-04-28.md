@@ -234,7 +234,7 @@ cite Lurie HA §5.5.4 in the F'' theorem block.
 remark).** Add one sentence to the F'' theorem block, immediately
 after the sentence "Let $\mathrm{Symp}_{\mathrm{form}}(\C^2, 0)$ act
 on the second tensor factor via the Hamiltonian-Lie algebra
-exponential..." reading:
+exponential..." interpretation:
 
 > Concretely, the action restricts to the parabolic stabiliser
 > $P_{(z_1)} = \{\varphi \in \mathrm{Symp}_{\mathrm{form}} :
@@ -440,7 +440,7 @@ of "structural permanence". This is not a logical error: the
 structural-permanence claim holds in each functoriality class.
 **But it loses the W4 #110 typology granularity** at the inscription.
 
-### §3.3 The Drinfeld-functoriality referee's reading
+### §3.3 The Drinfeld-functoriality referee's interpretation
 
 A Drinfeld-functoriality referee reads the firewall-typology remark
 and asks: "These five firewalls all live in

@@ -555,7 +555,7 @@ canonical separator).
 **Blast radius.** Without disambiguation, the manuscript's
 "large-$N$ stable" prose is ambiguous between three distinct
 operations; the U(1)/Capelli class then lives in different objects
-under different readings, and Theorem G's classical-quantum
+under different interpretations, and Theorem G's classical-quantum
 identification is correspondingly ambiguous.
 **Minimal heal.** Author the disambiguation subsection N10
 (plan §7) as a one-page statement, with explicit definitions of
@@ -641,7 +641,7 @@ same distinguished anomaly class $[\bar c]$."
 **Provenance.** A5-Attack 7.
 **Target.** Theorem A and the introduction's brane setup.
 **Claim under attack.** The brane probe is the bosonic
-$\mathfrak{gl}_N$ Dirac probe (default reading).
+$\mathfrak{gl}_N$ Dirac probe (default interpretation).
 **Broken step.** The manuscript adopts the SU($N$) slice + Capelli
 counterterm; a $\mathfrak{gl}(N|N)$ supertrace alternative would be
 a *different* brane model (super-stack with anti-branes) and is not
@@ -2394,7 +2394,7 @@ to Phase-4 (M-37 ingredient 4).
 * W3-W5-04: M-31 is therefore the line identification
   *restricted to GL₂×T² ⊂ Symp_form*. Not a defect, but the
   wave-2 W3-03 phrasing "the same line viewed from CE/PV's
-  two sides" risks Symp_form-naturality misreading.
+  two sides" risks Symp_form-naturality misinterpretation.
 **Heal proposals.** WP3-W5-T1 (insert one-sentence equivariance
 classification at M-31's master ledger entry, parallel to how
 M-35 sharpens M-04 / M-05); WP3-W5-T2 (in
@@ -5068,7 +5068,7 @@ preserved.
 **Strategic implication.** The G3-M2 strategic boundary now has a
 clean physical interpretation: the chain-level discharge structure
 classifies brane species into Tier I / II / III. Theorem $G^{\rm otr}$
-(Phase-5 frontier) has a precise physical reading as the otr-brane
+(Phase-5 frontier) has a precise physical interpretation as the otr-brane
 charge anomaly. The (A5) failure on $\mathfrak p(N)$ corresponds to
 the *absence of any consistent brane species*, not merely a
 representation-theoretic obstruction.
@@ -5207,7 +5207,7 @@ failures.**
 
 **Strategic implication.** Theorem F'' is now chain-level closed
 through degree-3 generators with structural argument extending to all
-spin orders. The W$_\infty$ matching is the precise reading: our
+spin orders. The W$_\infty$ matching is the precise interpretation: our
 chain-level closure is the leading Heisenberg share, with the
 higher-spin SV content arising post-twist via the $\tau_h \to \tau_T$
 chain in G4. The adversarial finding **R-P4-EXEC-HSJ-A** is a
@@ -6464,7 +6464,7 @@ No severity-3+ obstruction. (V1) Witten 1988 twist is irrelevant on
 the 1d brane line; the chain-level obstruction is the (A5)-violating
 parity automorphism P^q already recorded in the firewall typology.
 (V2) Wave-4's "invisible under all unitary boundary observables" is
-too strong; correct reading: invisible under (A5)-admissible
+too strong; correct interpretation: invisible under (A5)-admissible
 observables, visible under non-admissible P^q-equivariant observables.
 The P^q anti-commutation P^q · Ad_J · (P^q)^{-1} = Ad_J^{-1} is the
 chain-level form of the Sergeev-A5 firewall, not a new R-anomaly.

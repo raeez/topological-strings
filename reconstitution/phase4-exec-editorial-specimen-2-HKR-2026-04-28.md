@@ -287,10 +287,10 @@ by inspection of the four boxed final inscribable forms in §2.
 **Russian-school + Polyakov + Form lens summary.** Each pin names
 the primary theorem (HKR 1962, Theorem 5.2), the lift theorem (Lurie
 HA Theorem 5.5.3.18), and the manuscript-internal mediating lemma
-(`\lem:continuous-bar-cobar` Item 2). The Polyakov-lens reading: the
+(`\lem:continuous-bar-cobar` Item 2). The Polyakov-lens interpretation: the
 brane-side Hochschild $\simeq$ polyvector identification is the named
 algebraic backbone of the open-closed derived-centre theorem; the
-Form-lens reading: the Schouten bracket on the polyvector side is
+Form-lens interpretation: the Schouten bracket on the polyvector side is
 the cotangent-Poisson avatar paired against the CE differential on
 the closed side. Both lenses converge on the W17 closure path.
 

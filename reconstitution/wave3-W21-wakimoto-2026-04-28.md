@@ -331,7 +331,7 @@ holomorphic-in-$z_1$ / Laurent-in-$z_2$ distribution.
 *Complex Convexity and Analytic Functionals* (Birkhauser 2004), §3.
 
 This identification is **structurally compatible** with W3-W21-05's
-support-restricted reading. **Status: heuristic / suggestive**, not
+support-restricted interpretation. **Status: heuristic / suggestive**, not
 yet a proven Lie module isomorphism.
 
 ### §3.2 Mellin transform space

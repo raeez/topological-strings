@@ -191,7 +191,7 @@ All attribution and epistemic discipline satisfied.
 
 ### §3.2 Mathematical-physics frontier (Polyakov)
 
-The remark sits at the Theorem A preface. Polyakov-lens reading: the
+The remark sits at the Theorem A preface. Polyakov-lens interpretation: the
 worldsheet/brane action is the constrained mechanics of the matrix
 moment-map; gauge fixing produces the BV/Koszul resolution
 $Q\psi = [\phi_1, \phi_2]$; the Koszul complex of the moment-map ideal
@@ -225,7 +225,7 @@ The remark explicitly:
   explicit script paths;
 - distinguishes "Koszul complex not exact" (literature consequence)
   from "BV cohomology is the derived self-intersection" (the M-03
-  Form-lens reading);
+  Form-lens interpretation);
 - names the $N = 1$ abelian boundary stratum as the special case
   where the phenomenon collapses.
 

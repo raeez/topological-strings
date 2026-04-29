@@ -28,11 +28,11 @@ global shift of the cotangent coordinate.
         -(\partial_{z_2}f)\partial_{z_1},\qquad
     X_{z_1}=\partial_{z_2},\quad X_{z_2}=-\partial_{z_1}.
   \]
-  In the graded cyclic quotient,
-  \[
-    [uv]_{\mathrm{cyc}}=(-1)^{|u||v|}[vu]_{\mathrm{cyc}},
-    \qquad |x|=|y|=0,\quad |\psi|=1.
-  \]
+	  In the graded cyclic quotient,
+	  \[
+	    [uv]_{\mathrm{cyc}}=(-1)^{|u||v|}[vu]_{\mathrm{cyc}},
+	    \qquad |x|=|y|=0,\quad |\psi|\equiv1\pmod 2.
+	  \]
 \end{defn}
 
 \begin{lem}[CE/PV signs]
@@ -185,8 +185,8 @@ global shift of the cotangent coordinate.
   \]
   The companion ghost coordinate \(c_{a\otimes f}\) maps to the PV
   coordinate \(\theta_{a\otimes f}\).  If
-  \(B\in\mathcal D'_c(I)\), multiplication by a test function is the
-  ordinary distribution product \(aB\), and
+  \(B\in\mathcal D'_c(I)\), the standard multiplication of a distribution
+  by a smooth test function \(a\) is written \(aB\), and
   \[
     \{B_f(a),\Theta_\rho(B)\}=\Theta_{f\cdot\rho}(aB),\qquad
     \{\Theta_\rho(B),\Theta_\sigma(C)\}=0.
@@ -195,7 +195,7 @@ global shift of the cotangent coordinate.
 
 \begin{proof}
   The de Rham factor supplies the compactly supported density on the
-  brane line; the Hamiltonian factor supplies \(f\).  Pairing this source
+  brane line; the Hamiltonian current supplies \(f\).  Pairing this source
   with the boundary field gives the integral defining \(B_f(a)\).  The
   distributional cotangent factor is a module over
   \(C_c^\infty(I)\), so \(aB\) is defined by
@@ -305,9 +305,10 @@ global shift of the cotangent coordinate.
     z_2\cdot\rho_{a,b}=(a+1)\rho_{a+1,b}.
   \]
   This is the universal cotangent normalization used by the Matlis
-  principal-part module.  With it fixed, the polynomial descendant formulas
-  \(z_1\cdot\Psi_{a,b}=b\Psi_{a,b-1}\) and
-  \(z_2\cdot\Psi_{a,b}=-a\Psi_{a-1,b}\) cannot be made into the same
+  principal-part module.  With it fixed, the averaged polynomial
+  descendant formulas
+  \(z_1\cdot\widetilde\Psi_{a,b}=b\widetilde\Psi_{a,b-1}\) and
+  \(z_2\cdot\widetilde\Psi_{a,b}=-a\widetilde\Psi_{a-1,b}\) cannot be made into the same
   \(\mathfrak h\)-module action by changing signs, factorials, or the
   Moyal \(1/24\) convention.
 \end{cor}
@@ -319,7 +320,7 @@ global shift of the cotangent coordinate.
   \((p,q)=(1,0)\) and \((p,q)=(0,1)\) in the \(r=1\) term gives the two
   linear formulas.  They raise pole order, whereas the polynomial
   descendant formulas lower polynomial degree.  No scalar renormalization of
-  basis vectors can turn a locally nilpotent lowering action into this
-  non-locally-nilpotent raising action; the obstruction is structural, not a
+  basis vectors can turn a locally nilpotent polynomial-degree action into
+  this non-locally-nilpotent principal-part action; the obstruction is structural, not a
   convention error.
 \end{proof}

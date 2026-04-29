@@ -82,7 +82,7 @@ principal parts, hence raises pole order and is not locally nilpotent.
 
 - Theorem `thm:app-matlis-rees-fourier-bridge`: Fourier--Rees bridge,
   with the explicit \((-1)^{a+b}\hbar^{a+b}a!b!\) label formula and the
-  obstruction to reading it as an \(\mathfrak h\)-module comparison.
+  obstruction to interpretation it as an \(\mathfrak h\)-module comparison.
 - Corollary `cor:app-matlis-no-flat-same-action-interpolation`: no flat
   same-action interpolation from polynomial descendants to
   \(\mathcal P\) after inverting \(\hbar\).

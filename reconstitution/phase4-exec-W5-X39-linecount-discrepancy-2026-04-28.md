@@ -268,7 +268,7 @@ peers). It is the right number for purposes of:
 
 - Estimating reader-visible prose density;
 - Comparing to other manuscript expansions on a content-volume basis;
-- Calibrating reading time / page-flow expectations.
+- Calibrating review time / page-flow expectations.
 
 ### 3.2 +683 is correct as a "source-LaTeX inscription delta"
 

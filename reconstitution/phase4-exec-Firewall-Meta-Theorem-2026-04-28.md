@@ -252,7 +252,7 @@ This is the structural common ancestor for both sides; it is the
 only object preserved on both sides under the comparison map
 $\Phi_{\mathrm{coef}}$ (BCOV-A5 §3.2).
 
-**Polyakov / Invariants reading.** The dominant invariant preserved
+**Polyakov / Invariants interpretation.** The dominant invariant preserved
 under regulator change is $\mathrm{Str}(I) = 0$ on $\mathfrak{gl}(N|N)$
 at super-balance. The residue cohomology class
 $\hbar \, \mathrm{Str}(I) \, [\bar c]$ vanishes at super-balance via
@@ -315,7 +315,7 @@ target line. Both share the same chain-level firewall structure,
 but the BCOV case discharges to zero while the Sergeev case
 discharges to a Sergeev-dual non-zero residue.
 
-**Polyakov / Invariants reading.** Same as FW.BCOV-chain: the
+**Polyakov / Invariants interpretation.** Same as FW.BCOV-chain: the
 representation-theoretic central character $N$ is preserved on both
 sides, the chain-level vertex class is not. The Sergeev case is
 "non-trivial firewall": the residue $\hbar N [\bar c]^{\mathrm{otr}}$
@@ -379,7 +379,7 @@ which depends on the lattice point $\alpha = (n, l, m) \in
 no representation-theoretic common ancestor on which both sides
 agree (Igusa-Heuristic-Audit §5.2).
 
-**Polyakov / Invariants reading.** The Polyakov question "what
+**Polyakov / Invariants interpretation.** The Polyakov question "what
 generating-function symmetry survives?" returns `null` on every
 candidate generating function. The Invariants question "which
 lattice gets mapped?" returns "no lattice morphism" on the
@@ -441,7 +441,7 @@ manuscript's super-balanced extension (W22-T1 / W22-T2) provides
 the cancellation via $\mathrm{Str}(I) = 0$ at super-balance, but
 this discharge mechanism is structurally super-balanced.
 
-**Polyakov / Invariants reading.** The dominant invariant is
+**Polyakov / Invariants interpretation.** The dominant invariant is
 $\mathrm{Tr}(I) = N \neq 0$. Preserved by every regulator inside
 the (A1)–(A4) admissible class; not gauged away by any geometric
 symmetry or topological twist on the closed-string side. **The
@@ -505,7 +505,7 @@ cancellation on $d$ even: the parity-of-$d$ sign defeats the
 discharge. The polyvector signature $(-1)^d$ is the dominant
 invariant blocking the lift.
 
-**Polyakov / Invariants reading.** Two invariants control the
+**Polyakov / Invariants interpretation.** Two invariants control the
 firewall:
 * **Supertrace $\mathrm{Str}(I) = 0$:** preserved on $d$ odd and
   $d$ even; representation-theoretic.

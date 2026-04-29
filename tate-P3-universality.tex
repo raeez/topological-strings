@@ -221,7 +221,7 @@ formal local theorem of \S\ref{ssec:local-theorem} applies.
   \(\mathfrak{gl}(N|N)\) supertrace pairing,
   \(K_{\mathfrak s}=\operatorname{sdim}(V)I=0\), so
   \(\kappa_{\mathfrak s}=0\).
-  Thus the scalar channel is an accepted universal Koszul-duality input
+  Thus the scalar channel is an accepted conditional quantum input
   precisely on this locus: its acceptance component is the class
   \(\hbar\,\kappa_{\mathfrak s}[\bar c]\).
 
@@ -336,7 +336,7 @@ formal local theorem of \S\ref{ssec:local-theorem} applies.
   Since \(N\ge1\), the class does not vanish over \(\C[[\hbar]]\) before
   imposing an odd scalar quotient or a target null-homotopy of the odd
   line \(\Pi\C\cdot[\bar c]^{\mathrm{otr}}\).
-  Hence the odd-trace channel is accepted by a universal Koszul-duality
+  Hence the odd-trace channel is accepted by a conditional quantum
   target exactly after that quotient or null-homotopy is included in the
   target datum; otherwise its acceptance obstruction is the displayed
   nonzero odd class.
@@ -410,7 +410,7 @@ formal local theorem of \S\ref{ssec:local-theorem} applies.
   The period statement is the connecting morphism of
   \(0\to\C_X\to\mc O_X\xrightarrow d\Omega^1_{X,\mathrm{cl}}\to0\):
   local Hamiltonian primitives \(h_i\) for \(\alpha_v\) differ by
-  constants on overlaps, and that Cech cocycle is exactly
+  constants on overlaps, and that \v{C}ech cocycle is exactly
   \(\delta(\alpha_v)\).  It vanishes precisely when the local primitives
   glue to a global Hamiltonian, modulo one global constant.
 
@@ -451,7 +451,8 @@ formal local theorem of \S\ref{ssec:local-theorem} applies.
   branes on $\R\times p$ supplies an admissible protected Hamiltonian
   sector at $\widehat p$.  Then, after the Darboux coordinate and
   scalar-anomaly normalizations included in the admissibility data, that
-  restricted sector is identified with the formal local open--closed model
+  restricted sector is identified with the formal local reduced Hamiltonian
+  CE/PV brane model
   of \S\ref{ssec:local-theorem}.
 
   The open side is
@@ -521,8 +522,10 @@ formal local theorem of \S\ref{ssec:local-theorem} applies.
       compatible with compactly supported interval factorization.
   \end{enumerate}
   Then the candidate protected sector determines an admissible protected
-  Hamiltonian restriction.  Consequently the formal local Hamiltonian
-  theorem applies to that sector.  If, in addition, the QME solution
+  Hamiltonian restriction.  Consequently the reduced brane-line
+  Hamiltonian CE/PV, factorization-current, and scalar-anomaly
+  statements of the formal local theorem apply to that protected sector.
+  If, in addition, the QME solution
   includes the one-antifield weighted Tate lift of
   Problem~\ref{prob:weighted-rg-locality}, then the corresponding
   one-antifield quantum Hamiltonian comparison is valid for that
@@ -547,9 +550,11 @@ formal local theorem of \S\ref{ssec:local-theorem} applies.
   An admissible protected Hamiltonian restriction contributes precisely
   the formal Hamiltonian disk, the Dirac brane Ext algebra, the brane-line
   factorization restriction, and the scalar anomaly class \( [\bar c] \).
-  For an external compact BCOV, CY-to-chiral, Igusa, Borcherds, or BKM
-  target \(T\), this contribution is an accepted universal Koszul-duality
-  input exactly after the target supplies its convention datum
+  For an external compact BCOV, MNOP/chiral-volume, CY-to-chiral, Igusa,
+  Borcherds, or BKM target \(T\), this contribution remains only a
+  conditional quantum input.  The target theorem accepts it as
+  matched-conventions global or cross-volume descent data exactly after
+  \(T\) supplies its convention datum
   \(\mathfrak C_T\), a morphism
   \(\mathfrak C_{\widehat p}^{\mathrm{Ham}}\to \mathfrak C_T\), and
   null-homotopies for the obstruction vector
@@ -560,8 +565,12 @@ formal local theorem of \S\ref{ssec:local-theorem} applies.
       \operatorname{per}_T,
       \operatorname{ob}^{\mathrm{desc}}_T,
       \operatorname{ob}^{\mathrm{BCOV}}_T,
+      \operatorname{ob}^{\mathrm{QME}}_T,
+      \operatorname{ob}^{\mathrm{conv}}_T,
+      \operatorname{ob}^{\mathrm{hyp}}_T,
       \operatorname{ob}^{\mathrm{VolIII}}_T,
-      \operatorname{ob}^{\mathrm{Igusa/BKM}}_T
+      \operatorname{ob}^{\mathrm{Igusa/BKM}}_T,
+      \operatorname{ob}^{6r/\mathrm{MD}}_T
     \bigr)
     \in H^1(\mathfrak K_T),
   \]
@@ -652,10 +661,11 @@ formal local theorem of \S\ref{ssec:local-theorem} applies.
 
 \begin{cor}[Protected-sector matched-conventions acceptance criterion]\label{cor:protected-matched-conventions-interface}
   A theorem in a compact BCOV, CY-to-chiral, or Igusa/BKM target may use
-  the protected-sector reduction exactly by a morphism of convention data
-  from \(\mathfrak C_{\widehat p}^{\mathrm{Ham}}\) to its target datum,
-  together with a proof that the target period, descent, anomaly, and
-  operadic obstruction classes vanish.
+  the protected-sector reduction only as a matched-conventions descent
+  input: it must give a morphism
+  \(\mathfrak C_{\widehat p}^{\mathrm{Ham}}\to\mathfrak C_T\) and
+  null-homotopies for every asserted component of
+  \(\operatorname{Ob}^{\mathrm{ext}}_T\).
 \end{cor}
 
 \begin{proof}

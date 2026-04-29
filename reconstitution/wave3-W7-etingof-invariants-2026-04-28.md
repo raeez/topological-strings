@@ -412,7 +412,7 @@ The two views express the **same obstruction**:
   this gluing.
 
 **No disagreement found.** The W7 Etingof-tensor-category framework
-**confirms** the W3-W2 Gaiotto-interface reading.
+**confirms** the W3-W2 Gaiotto-interface interpretation.
 
 ### §4.2 Refinement: what each lens adds
 
@@ -445,7 +445,7 @@ with the Gaiotto interface view. The combined picture is:
 $$\text{M-29 universal no-go} = \text{Etingof tensor-category obstruction} = \text{Gaiotto interface obstruction}$$
 with the Etingof side giving a representation-theoretic /
 cohomological proof and the Gaiotto side giving a defect-interface
-geometric reading.
+geometric interpretation.
 
 ---
 
@@ -581,7 +581,7 @@ scalar in $\End(\mathbf 1)$) and the Gaiotto interface framework
 (no single-object interface from formal disk to punctured disk)
 identify the **same** obstruction. No disagreement.
 
-**Adjudication.** Cross-confirms W3-W2 Gaiotto reading; both lenses
+**Adjudication.** Cross-confirms W3-W2 Gaiotto interpretation; both lenses
 converge on M-29 universality.
 
 ### W3-W7-10 — Lens orthogonality (clarification)
@@ -598,7 +598,7 @@ subordinates the other.
 
 **Adjudication.** Editorial clarification; supports the
 manuscript's W4-derived language by giving two complementary
-readings.
+interpretations.
 
 ---
 
@@ -727,7 +727,7 @@ $\Ext^\bullet$, Drinfeld twist, Moyal star (key: $z_i$ are linear,
 so all higher Moyal corrections vanish), Faddeev–Reshetikhin q-twist,
 Lusztig at root of unity, BGG category $\mathcal O$, and a
 per-invariant audit. W3-W7-09 confirms the Etingof view agrees
-with the W3-W2 Gaiotto interface reading; the two lenses are
+with the W3-W2 Gaiotto interface interpretation; the two lenses are
 orthogonal (representation-theoretic vs geometric) views of the
 same obstruction. The unique escapes remain R-W4-A (bi-infinite
 local-cohomology) and R-W4-B ($L_\infty$ categorified bracket),

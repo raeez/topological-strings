@@ -52,7 +52,7 @@ The four sub-questions are clusters of W2-NN ledger entries below.
 ### W2-01 — Rigidity proof inspected: it is T²-Cartan-equivariant, not full $\mathfrak h$-Schur
 **Severity 3. Status valid. Confidence high.**
 **Lens.** Drinfeld + Functoriality.
-**Provenance.** Wave-1 M-06; W2 verification by re-reading
+**Provenance.** Wave-1 M-06; W2 verification by rechecking
 `appendix-matlis-principal-parts.tex` Theorem~\ref{thm:app-matlis-residue-rigidity}
 lines 179–206 and `main.tex` Theorem~\ref{thm:canonical-residue-pairing}
 lines 3838–3906.

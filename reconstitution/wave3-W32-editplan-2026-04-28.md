@@ -284,7 +284,7 @@ Also affects `tate-T2-nilpotent-truncation.tex`.
 size in $\mathfrak{gl}_N$) and $N$ as Taylor truncation order in
 $\mathfrak m^{N+1}$ are different physical quantities (one is an
 internal index; one is a UV cutoff in the formal disk). Conflating
-them risks reading "stable in $N$" two different ways. **Polyakov
+them risks interpretation "stable in $N$" two different ways. **Polyakov
 hits at low severity** (no load-bearing theorem currently uses both
 in the same equation, but the future Phase-3 sign-convention appendix
 will).
@@ -898,7 +898,7 @@ the plan body).
 | **W3-W32-W30.2** | W3-W30-02 | `tate-T1` + `tate-P1`: verify heat-kernel super-Killing, Pauli–Villars, and Hadamard parametrix all satisfy (A5) by construction | 3 | C | W3-W32-W30.1 |
 | **W3-W32-W30.3** | W3-W30-03 | `appendix-unreduced-bv-qme.tex` + W22-T2 status update: confirm (A5) makes W22-T2 unconditional on $\mathfrak{gl}(N\|N)$ super-balanced source; remains vacuous on bosonic source so $\hbar N [\bar c]$ obstruction unchanged | 3 | C | W3-W32-W30.1 |
 
-**Polyakov-lens reading of the W30 thread.** The (A5) parity heal is
+**Polyakov-lens interpretation of the W30 thread.** The (A5) parity heal is
 load-bearing for the supertrace escape route from the
 $\hbar N [\bar c]$ Capelli obstruction (M-47, M-51,
 `prob:weighted-rg-locality`). Without (A5), the W22 supertrace claim
@@ -909,7 +909,7 @@ vacuous there and the bosonic obstruction $\hbar N [\bar c]$ remains
 non-zero — confirming Theorem G's anomaly is genuine, not a
 regularization artefact (cross-resonant with W3-W32-D24).
 
-**Form-lens reading.** (A5) replaces the previous narration "we use
+**Form-lens interpretation.** (A5) replaces the previous narration "we use
 a parity-respecting regulator" with the constructive condition
 $[R_{\epsilon,L}, P] = 0$. Each manuscript-cited regulator
 (super-Killing heat kernel, parity-weighted PV, Hadamard parametrix

@@ -16,7 +16,7 @@ decomposition); Wave-2 W6
 eight-link DAG; W6-04 hypothesis paragraph for Lurie 5.5.4; W6-07
 sharpened R-03); Wave-2 W2
 `reconstitution/wave2-W2-drinfeld-2026-04-28.md` §1–§6 (Drinfeld's
-Tannakian moduli reading; volume-datum canonicity; Theorem D split);
+Tannakian moduli interpretation; volume-datum canonicity; Theorem D split);
 Wave-3 W6 `wave3-W6-costello-composition-2026-04-28.md`
 W3-W6-04 (regulator-class canonicity);
 `appendix-factorization-current-conventions.tex` (full);
@@ -41,7 +41,7 @@ against W3-W6-04.
 
 ## §0. Lens calibration: what Drinfeld + Definitions buys
 
-A Drinfeld reading of a factorization-algebra construction asks
+A Drinfeld interpretation of a factorization-algebra construction asks
 five questions:
 
 (D1) *What is the Ran space / underlying stratification?* For a
@@ -382,7 +382,7 @@ theorem closes the residual.*
 The Wave-2 W4 universal categorical no-go (M-29) identified the
 PBW polynomial side and Matlis principal-part side as the
 **positive and negative cones of one bi-infinite parent module
-on $\Z^2$**. The W3-W2 §3.1 (W3-W2-09–10) reading:
+on $\Z^2$**. The W3-W2 §3.1 (W3-W2-09–10) interpretation:
 formal-disk-to-punctured-disk interface in the local Hamiltonian
 BF cannot be a deformation-theoretic single-object interface; it
 is a $\Z^2$-graded bi-infinite parent with two cones (PBW raising
@@ -488,7 +488,7 @@ than separating them.
 stack lens; it is *recast* as a non-existence of an equivariant
 splitting in $\mathrm{QCoh}(\mathfrak{M}_{\mathrm{Symp},\C^2,0})$.
 This is consistent with the W3-W2-09–10 Gaiotto interface
-reading: M-29 closes the splitting in the negative.
+interpretation: M-29 closes the splitting in the negative.
 
 **W3-W9-09 (Drinfeld stack interpretation reinforces M-29).**
 The bi-infinite parent corresponds to a canonical sheaf on a

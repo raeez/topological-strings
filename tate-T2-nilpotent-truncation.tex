@@ -7,11 +7,11 @@
 \section*{Nilpotent truncation of the cotangent shadow}
 
 The main theorem \ref{thm:main-local} is unconditional for the
-cochain-level derived-centre, principal-part, brane-line factorization,
+cochain-level reduced CE/PV central-operation, principal-part, brane-line factorization,
 formal degree-zero Weyl/Moyal coefficient algebra, and scalar-anomaly
 statements.  The finite-\(N\) and stable trace comparison through
 radial parts remains conditional on the external radial-parts input
-named in the degree-zero Moyal lane.
+named in the degree-zero Moyal theorem.
 Part (d) is proved at the reduced principal-part level after de Rham-current contraction;
 its unreduced primitive shadow and part (e) on the descendant
 (one-antifield) sector are governed by
@@ -55,7 +55,7 @@ $$\{z_1^2,z_2^2\}=4z_1z_2,\quad
   \{z_1z_2,z_2^2\}=2z_2^2.$$
 Thus $\mathfrak m^2/\mathfrak m^{N+1}$ contains a nonabelian
 semisimple subalgebra and is not nilpotent, hence does not satisfy
-the Tate-conilpotency hypothesis of
+the lower-central Tate-pronilpotence hypothesis of
 \ref{lem:continuous-bar-cobar}. The truncation $k=3$ removes the
 $H_2$ direction; the bracket on $\mathfrak m^3$ raises
 $\mathfrak m$-adic degree strictly, making the truncation
@@ -88,9 +88,10 @@ For every $N\geq 3$:
 \end{lem}
 
 \begin{proof}
-\emph{(i)} Both $\mathfrak m^3$ and $\mathfrak m^{N+1}$ are Lie
-ideals of the polynomial Hamiltonian Lie algebra
-$\mathfrak h_{\mathrm{poly}}$: for $f\in\mathfrak m^p$ and
+\emph{(i)} The space $\mathfrak m^3$ is a Lie subalgebra of the
+polynomial Hamiltonian Lie algebra $\mathfrak h_{\mathrm{poly}}$, and
+$\mathfrak m^{N+1}$ is a Lie ideal inside $\mathfrak m^3$: for
+$f\in\mathfrak m^p$ and
 $g\in\mathfrak m^q$ one has $\{f,g\}\in\mathfrak m^{p+q-2}$, since the
 Poisson bracket on $\C[z_1,z_2]$ lowers total polynomial degree by
 exactly two, and each partial derivative lowers $\mathfrak m$-adic
@@ -175,7 +176,7 @@ CE/PV cotangent shadow of the reduced Hamiltonian model; it is not an
 unreduced open BV factorization-centre morphism. The isomorphism is determined on generators by
 $\Phi_{\leq N}(c^I)=\theta^I$, $\Phi_{\leq N}(u_I)=O_I$, with the
 same Schouten/Lichnerowicz convention as in
-\ref{thm:open-closed-derived-center}. It is compatible with extension
+\ref{thm:reduced-ce-pv-central-operation}. It is compatible with extension
 by zero and with disjoint-interval products in this reduced finite
 model, and on the Hamiltonian generators it recovers the stalkwise
 operation \(f\mapsto L_{B_f}\). The cotangent generators are finite
@@ -188,19 +189,26 @@ Problem~\ref{prob:formal-factorization-center}.
 The Lie algebra $\mathfrak g_{\leq N}$ is finite-dimensional
 ($\dim\mathfrak g_{\leq N}=2\dim\mathfrak h_{\leq N}=
 2\binom{N+2}{2}-12$), hence pro-finite-dimensional in the trivial
-constant filtration. It is Tate-conilpotent in the sense of
+constant filtration. It is lower-central Tate-pronilpotent in the sense of
 \ref{lem:continuous-bar-cobar}: by
 \ref{lem:trunc-is-nilpotent-lie}(ii) the descending Lie powers of
-$\mathfrak h_{\leq N}$ vanish after at most $N-2$ brackets, and
-since $\mathfrak h_{\leq N}^\vee[1]$ is abelian, the descending
-Lie powers of $\mathfrak g_{\leq N}=\mathfrak h_{\leq N}\ltimes
-\mathfrak h_{\leq N}^\vee[1]$ also terminate. Hence
+$\mathfrak h_{\leq N}$ vanish after at most $N-2$ brackets.  The
+cotangent summand is abelian, but this alone would not imply nilpotence
+of the semidirect product.  The needed point is the degree-lowering
+coadjoint action: since \([H_p,H_q]\subset H_{p+q-2}\), an element
+\(f\in H_p\), \(p\geq3\), sends \(H_d^\vee\) to
+\(H_{d-p+2}^\vee\), hence lowers dual degree by at least one.  Repeated
+action therefore kills every finite quotient
+\(\mathfrak h_{\leq N}^\vee\).  Together with nilpotence of
+\(\mathfrak h_{\leq N}\), the descending Lie powers of
+\(\mathfrak g_{\leq N}=\mathfrak h_{\leq N}\ltimes
+\mathfrak h_{\leq N}^\vee[1]\) also terminate. Hence
 $\bigcap_m\mathfrak g_{\leq N}^{(\geq m)}=0$ in any Tate
-filtration, and the conilpotency hypothesis of
+filtration, and the lower-central Tate-pronilpotence hypothesis of
 \ref{lem:continuous-bar-cobar} is satisfied trivially.
 
-Apply \ref{thm:open-closed-derived-center} (the universal
-cochain-level open-closed derived center) to $\mathfrak h_{\leq N}$.
+Apply \ref{thm:reduced-ce-pv-central-operation} (the cochain-level reduced
+Hamiltonian CE/PV central-operation theorem) to $\mathfrak h_{\leq N}$.
 The conclusion is a canonical isomorphism of completed dg
 graded-commutative $P_0$-algebras
 $$\Phi_{\leq N}^{\mathrm{stalk}}:
@@ -208,11 +216,11 @@ $$\Phi_{\leq N}^{\mathrm{stalk}}:
   \xrightarrow{\ \sim\ }
   \mathrm{PV}\bigl(\widehat{\mathbf S}(\mathfrak h_{\leq N})\bigr),$$
 with the explicit generator-level data of
-\ref{thm:open-closed-derived-center}.
+\ref{thm:reduced-ce-pv-central-operation}.
 
 To pass from the stalk identification to the factorization-algebra
-identification on intervals $I\subset\R$, the Hamiltonian factor
-upgrade of \ref{thm:open-closed-derived-center-factorization}
+identification on intervals $I\subset\R$, the Hamiltonian-sector
+factorization upgrade of \ref{thm:hamiltonian-current-factorization}
 applies verbatim with $\mathfrak h$ replaced by
 $\mathfrak h_{\leq N}$: the locality input
 $\{(\phi_1)^i{}_j(t),(\phi_2)^k{}_l(s)\}=\delta^i_l\delta^k_j\delta(t-s)$
@@ -239,12 +247,12 @@ infinite-support tensor in the direct-sum dual.
 
 The bracket compatibility and graded Leibniz extension to the completed
 finite CE/PV algebra is the same argument as in
-\ref{thm:open-closed-derived-center}, with the additional
+\ref{thm:reduced-ce-pv-central-operation}, with the additional
 simplification that all completions are trivial because
 $\mathfrak h_{\leq N}$ is finite-dimensional. Compatibility with
 extension by zero, disjoint-interval factorization, and the
 stalkwise limit follow as in
-\ref{thm:open-closed-derived-center-factorization}.
+\ref{thm:hamiltonian-current-factorization}.
 \end{proof}
 
 \subsection*{Quantum obstruction for the finite truncation}
@@ -376,65 +384,71 @@ $\mathfrak m$-adic Lie structure is preserved at every level.
 
 \subsection*{Cubic inverse-limit survivor}
 
-\begin{prop}[Cubic inverse-limit survivor]
+\begin{prop}[Cubic coordinate-window survivor and variance boundary]
 \label{prop:colim-recovery}
-The classical truncated isomorphism $\Phi_{\leq N}$ of
-\ref{thm:phi-trunc-classical} is compatible with the inverse
-system: for every $N\leq M$, the diagram
-$$\begin{array}{ccc}
-  C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g_{\leq M,I})
-  & \xrightarrow{\ \Phi_{\leq M}\ } &
-  Z^{P_0}_{\mathrm{red,Ham}}\bigl(\widehat{\mathbf S}(\mathfrak h_{\leq M,I})\bigr)\\
-  \downarrow\pi_{M\to N} & & \downarrow\pi_{M\to N}\\
-  C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g_{\leq N,I})
-  & \xrightarrow{\ \Phi_{\leq N}\ } &
-  Z^{P_0}_{\mathrm{red,Ham}}\bigl(\widehat{\mathbf S}(\mathfrak h_{\leq N,I})\bigr)
-\end{array}$$
-commutes, where $\pi_{M\to N}$ is induced by the surjection
-$\mathfrak h_{\leq M}\twoheadrightarrow\mathfrak h_{\leq N}$. Passing to
-the inverse limit gives the cochain-level isomorphism
-$$\Phi_{\mathfrak m^3}:=\varprojlim_N\Phi_{\leq N}:
-	  C^\bullet_{\mathrm{CE},\mathrm{cont}}\bigl(\mathfrak m^3\ltimes
-	    (\mathfrak m^3)^\vee_{\mathrm{cont}}[1]\bigr)
-	  \xrightarrow{\ \sim\ }
-	  Z^{P_0}_{\mathrm{red,Ham}}\bigl(\widehat{\mathbf S}_{\mathrm{Tate}}(\mathfrak m^3)\bigr).$$
-This is the maximal survivor of the nilpotent tower: the construction
-recovers the complete cubic ideal \(\mathfrak m^3\), not the removed
-linear and quadratic Hamiltonian sectors.
+The finite Lie quotients
+\[
+  \mathfrak h_{\leq N}=\mathfrak m^3/\mathfrak m^{N+1}
+\]
+recover the complete cubic Lie algebra
+\(\varprojlim_N\mathfrak h_{\leq N}=\mathfrak m^3\).  The finite
+cotangent maps \(\Phi_{\leq N}\) of
+\ref{thm:phi-trunc-classical} form a compatible family of coordinate
+tests.  They do not, however, form an inverse system of dg CE cochain
+projections.  A Lie quotient
+\(\mathfrak h_{\leq M}\twoheadrightarrow\mathfrak h_{\leq N}\) induces CE
+cochain maps by pullback in the opposite direction.  Consequently
+\(\Phi_{\mathfrak m^3}\) denotes the coordinate-window family
+\(\{\Phi_{\leq N}\}_N\) together with the chain-side inverse limit and an
+exact continuous-dualization datum; it is not an unconditional formula
+\(\varprojlim_N\Phi_{\leq N}\) on CE cochains.
+
+This is the maximal survivor of the nilpotent tower only in that precise
+sense: the Lie-side tower recovers \(\mathfrak m^3\), while a completed
+cochain \(P_0\)-statement requires the additional variance and
+bracket-admissibility data named above.
 \end{prop}
 
 \begin{proof}
-Compatibility with the inverse system follows from the naturality of
-\ref{thm:open-closed-derived-center} in the Lie source: a Lie
-surjection $\pi:\mathfrak h_M\to\mathfrak h_N$ induces a CE cochain
-map by pullback and a Schouten cochain map by pushforward, and the
-universal map $\Phi$ is built from the structure constants alone, so
-$\pi^*$ on the source and $\pi_*$ on the target intertwine $\Phi_M$
-and $\Phi_N$. The inverse limit converges in $\Cat{TateVec}$ because
-each truncation is finite-dimensional and the structure maps are
-surjective.
+The Lie-side inverse limit is the usual \(\mathfrak m\)-adic completion
+of \(\mathfrak m^3\).  The variance warning is forced already at
+\(M=4\), \(N=3\).  In \(\mathfrak h_{\leq4}\),
+\[
+  \{z_1^3,z_2^3\}=9z_1^2z_2^2,
+  \qquad
+  d_{\mathrm{CE}}c^{2,2}\supset -9c^{3,0}c^{0,3}.
+  \]
+The coordinate projection to the \(N=3\) cochain window kills
+\(c^{2,2}\) but not \(c^{3,0}c^{0,3}\), so
+\[
+  p(d_{\mathrm{CE}}c^{2,2})=-9c^{3,0}c^{0,3}
+  \neq0=d_{\mathrm{CE}}p(c^{2,2}).
+  \]
+Thus projection of CE cochains is not a dg map.  The correct finite
+functoriality is contravariant pullback along Lie quotients, while a
+completed cochain theorem must be obtained either from a chain-side
+inverse limit followed by exact continuous dualization or from a
+separately supplied topology whose cochain transition maps are dg maps.
 
-The Lie algebra $\mathfrak m^3$ is Tate-conilpotent in the
+The Lie algebra $\mathfrak m^3$ is lower-central Tate-pronilpotent in the
 $\mathfrak m$-adic Tate filtration: its descending Lie powers satisfy
 $(\mathfrak m^3)^{(\geq m)}\subset\mathfrak m^{m+3}$ because each
 iterated bracket raises the $\mathfrak m$-adic degree by at least
 $1$ when both arguments lie in $\mathfrak m^3$ (since
 $\{H_p,H_q\}\subset\mathfrak m^{p+q-2}$ and $p,q\geq 3$ implies
 $p+q-2\geq p+1$). Hence $\bigcap_m(\mathfrak m^3)^{(\geq m)}=0$,
-and the conilpotency hypothesis of
+	and the lower-central Tate-pronilpotence hypothesis of
 \ref{lem:continuous-bar-cobar} holds. The Tate Casimir
 $C_{\mathfrak m^3}=\sum_{d\geq 3}\sum_i e_{d,i}\otimes e_d^i$
 is governed by the same product/direct-sum convergence question
 as in \ref{lem:tate-casimir-obstruction}, but on the smaller
-direct-sum dual $\bigoplus_{d\geq 3}H_d^\vee\subset
-\bigoplus_{d\geq 1}H_d^\vee$. The inverse-limit construction
-through finite-dimensional truncations bypasses the convergence
-question on $\mathfrak m^3$ specifically: the cochain isomorphism
-$\Phi_{\leq N}$ at every finite $N$ uses only the finite Casimir
-$\sum_{3\leq d\leq N}\sum_i e_{d,i}\otimes e_d^i$, and the
-isomorphism property is preserved at the inverse limit by the
-Mittag-Leffler argument because each $\pi_{M\to N}$ is a
-surjection of finite-dimensional spaces.
+	direct-sum dual $\bigoplus_{d\geq 3}H_d^\vee\subset
+\bigoplus_{d\geq 1}H_d^\vee$.  The finite maps
+\(\Phi_{\leq N}\) at every finite \(N\) use only the finite Casimir
+\(\sum_{3\leq d\leq N}\sum_i e_{d,i}\otimes e_d^i\).  Passing from these
+finite identities to a completed cochain identity is exactly the
+continuous-dualization and variance datum isolated in the statement, not
+a formal inverse-limit consequence.
 \end{proof}
 
 \begin{defn}[Low-degree obstruction datum for the nilpotent tower]
@@ -519,9 +533,9 @@ surjection of finite-dimensional spaces.
 
 \begin{thm}[Low-degree obstruction datum for full Hamiltonian recovery]
 \label{rmk:colim-does-not-recover-full}
-The inverse limit
+The coordinate-window family
   $\Phi_{\mathfrak m^3}$ of \ref{prop:colim-recovery} is the
-  classical cotangent lift on $\mathfrak m^3$, not on
+  classical cotangent lift datum on $\mathfrak m^3$, not on
 $\mathfrak h=\mathfrak m$. To extend to all of $\mathfrak h$ one must
 include the low-degree sectors
 $\mathfrak m/\mathfrak m^3=H_1\oplus H_2=\C\cdot z_1\oplus
@@ -559,7 +573,7 @@ components, which is exactly the Casimir support obstruction of
 solve that obstruction; it removes the sector on which the
 obstruction is felt.  A full recovery theorem must therefore supply
 both a coefficient category in which \(C_{\mathfrak h}\) converges and a
-relative or non-conilpotent model for the \(H_2\)-sector.
+relative or reductive model for the \(H_2\)-sector.
 \end{thm}
 
 \begin{proof}
@@ -626,12 +640,13 @@ relative or non-conilpotent model for the \(H_2\)-sector.
     \qquad
     H_2\subset\bigcap_{r\geq1}\mathfrak h^{(r)} .
   \]
-  Therefore a universal full-\(\mathfrak h\) Koszul theorem requires,
+  Therefore a universal full-\(\mathfrak h\)
+  bar-cobar/enveloping theorem requires,
   before any open-side \(A_\infty\) comparison, all of the following:
   a coefficient topology representing \(C_{\mathfrak h}\), continuity of
   the finite-window bracket and coadjoint transition maps, vanishing
   \(\varprojlim^1\) for the completed CE/PV and cobar towers, a
-  relative or non-conilpotent treatment of the
+  relative or reductive treatment of the
   \(H_2\)-sector, and a twisting cochain whose associated-graded cobar
   map has acyclic cone.
 \end{cor}
@@ -643,8 +658,10 @@ relative or non-conilpotent model for the \(H_2\)-sector.
   Theorem~\ref{thm:universal-formal-local-ce-pv-recognition}: the
   bracket and coadjoint formulas are continuous for finite coordinate
   projections, so the generator substitution
-  \(c\mapsto\theta,\ u\mapsto O\) is a completed dg \(P_0\)-algebra
-  isomorphism.
+  \(c\mapsto\theta,\ u\mapsto O\) is a completed dg commutative cochain
+  isomorphism.  The \(P_0\)-algebra reading is finite-level or
+  bracket-admissible data; it is not supplied by an unqualified inverse
+  limit of ambient coordinate products.
 
   The filtered-cobar recognition theorem asks for more.  The linear
   obstruction is the same computation as in
@@ -672,14 +689,14 @@ relative or non-conilpotent model for the \(H_2\)-sector.
 
 \begin{prob}[Low-degree-sector lift from the cubic ideal to the maximal ideal]
 \label{prob:linear-sector-lift}
-Extend the inverse-limit isomorphism $\Phi_{\mathfrak m^3}$ of
+Extend the coordinate-window cotangent lift datum $\Phi_{\mathfrak m^3}$ of
 \ref{prop:colim-recovery} from $\mathfrak m^3$ to all of
 $\mathfrak h=\mathfrak m$. Equivalently, supply a Tate or
 weighted-coefficient extension in which the degree-$1$ and
 degree-$2$ Casimir components converge as kernels for the BV
 propagator, and in which the conformal-symplectic
-$\mathfrak{sl}_2$ direction $H_2$ is included without violating the
-Tate-conilpotency hypothesis of
+$\mathfrak{sl}_2$ direction $H_2$ is included by a relative or reductive
+replacement for the lower-central Tate-pronilpotence hypothesis of
 \ref{lem:continuous-bar-cobar}. By
 \ref{rmk:colim-does-not-recover-full} this is the
 low-degree-sector failure; by
@@ -697,21 +714,20 @@ to its restricted form on the low-degree sector
 $\mathfrak m/\mathfrak m^3=H_1\oplus H_2$ alone.
 \end{prob}
 
-\begin{thm}[Semisimple lower-central obstruction to Tate conilpotency]
+\begin{thm}[Semisimple obstruction to lower-central Tate-pronilpotence]
 \label{rmk:conilpotency-essential}
 A second obstruction to extending $\Phi_{\mathfrak m^3}$ to all of
 $\mathfrak h$ is structural rather than analytic: the inclusion of
-$H_2=\mathfrak{sl}_2$ violates Tate-conilpotency because
+$H_2=\mathfrak{sl}_2$ violates the lower-central Tate-pronilpotence route
+used in Lemma~\ref{lem:continuous-bar-cobar} because
 $[H_2,H_2]=H_2$ is its own descending Lie series. Even if the
 degree-$1$ and degree-$2$ Casimir components converged in some
-weighted Tate completion, the universal cochain-level
-\ref{thm:open-closed-derived-center} would not apply directly to
-the resulting Lie algebra: a Koszul-bar/cobar duality argument for
-the semisimple $\mathfrak{sl}_2$ direction is non-trivial and is
-the same as the failure of the cobar formalism for non-conilpotent
-coalgebras (\cite{loday-vallette}). One either restricts to
-nilpotent radicals (the route taken here) or replaces the Lie source
-by a model that builds in semisimple subalgebras separately.
+weighted Tate completion, the pronilpotent bar-cobar route would not
+apply directly to the resulting Lie algebra.  This does not say that
+ordinary finite-dimensional bar-cobar or PBW formalism fails for
+\(\mathfrak{sl}_2\); it says that the manuscript's chosen lower-central
+Tate-pronilpotent criterion must be replaced by a relative or reductive
+model that builds in semisimple subalgebras separately.
 \end{thm}
 
 \begin{proof}
@@ -724,7 +740,7 @@ by a model that builds in semisimple subalgebras separately.
     H_2\subset \bigcap_{n\geq1} L^{(n)} .
   \]
   The intersection of the descending Lie powers is therefore nonzero.
-  This contradicts the Tate-conilpotency condition used in
+  This contradicts the lower-central Tate-pronilpotence condition used in
   Lemma~\ref{lem:continuous-bar-cobar}.  The bar-cobar argument may be
   applied to the nilpotent radical \(\mathfrak m^3\), but it cannot be
   applied unchanged to a Lie source containing the semisimple
@@ -776,7 +792,7 @@ on every higher-degree window, which is precisely the
 finite-window obstruction of
 \ref{lem:finite-window-hamiltonian-obstruction}(iii) plus the
 $\mathfrak{sl}_2\subset H_2$ semisimple obstruction to
-Tate-conilpotency.
+lower-central Tate-pronilpotence.
 \end{rmk}
 
 \subsection*{Summary}
@@ -788,10 +804,12 @@ sector (degree-zero Hamiltonian plus finite cotangent labels). It does
 not construct the unreduced open BV factorization-centre morphism. The quantum
 all-order version on the same finite source is obstructed by
 \ref{thm:phi-hbar-trunc}: the Moyal bracket leaves
-$\mathfrak m^3/\mathfrak m^{N+1}$ for $N\geq4$.  The inverse limit
-$\Phi_{\mathfrak m^3}=\varprojlim_N\Phi_{\leq N}$ of
-\ref{prop:colim-recovery} is the classical cotangent lift on the
-full classical $\mathfrak m^3$ sector. What is lost: the low-degree sector
+$\mathfrak m^3/\mathfrak m^{N+1}$ for $N\geq4$.  The family
+$\Phi_{\mathfrak m^3}=\{\Phi_{\leq N}\}_N$ of
+\ref{prop:colim-recovery} is the classical coordinate-window cotangent
+lift datum on the full classical $\mathfrak m^3$ sector; a completed
+cochain inverse-limit statement requires the variance and
+continuous-dualization datum named there. What is lost: the low-degree sector
 $\mathfrak m/\mathfrak m^3=H_1\oplus H_2$ (linear translations and
 the conformal-symplectic $\mathfrak{sl}_2$), the
 constant-Hamiltonian $\hbar$-normalization, the U(1) center anomaly
@@ -799,8 +817,10 @@ $[\bar c]$, and the stable connected limit on the full
 $\mathfrak h$. Recovering the low-degree sector requires the
 coefficient-category change of
 \ref{prob:formal-factorization-center} together with a
-non-conilpotent extension of \ref{lem:continuous-bar-cobar} to
-accommodate the semisimple $\mathfrak{sl}_2\subset H_2$. Thus the
+relative or reductive replacement for the lower-central
+Tate-pronilpotent route of \ref{lem:continuous-bar-cobar}, so that the
+semisimple $\mathfrak{sl}_2\subset H_2$ is treated as semisimple data
+rather than as a pronilpotent radical. Thus the
 nilpotent truncation
 closes only the classical $\mathfrak m^3$ truncation; its all-order
 quantum version is the separate Moyal-flat truncation problem above.

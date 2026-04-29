@@ -52,7 +52,7 @@ Substantive content of each silent strengthening:
 
 * **HR-a (Q-Eq).** The manuscript at `rmk:E1-translation`
   (`main.tex`:2229-2246) cites Lurie HA §5.5.4 jointly with
-  Costello-Gwilliam Vol I §6.4. A referee reading this remark is
+  Costello-Gwilliam Vol I §6.4. A referee interpretation this remark is
   left to assume the standard Quillen equivalence between the
   Lurie HA $\infty$-categorical and the Costello-Gwilliam model-
   categorical presentations of locally constant factorization

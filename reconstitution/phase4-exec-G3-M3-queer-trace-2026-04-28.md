@@ -810,7 +810,7 @@ $\Str$-boundary-state is anomaly-free; the `otr`-boundary-state is
 anomalous with the same coefficient $N$ as the bosonic
 $\mathfrak{gl}_N$ Theorem G.
 
-**Open-closed duality reading.** The manuscript's Theorem G is the
+**Open-closed duality interpretation.** The manuscript's Theorem G is the
 open-side image (under $\partial_{\mathrm{bb},N}^{\mathrm{full}}$) of
 a closed-side cocycle. On $\mathfrak{q}(N)$, the boundary evaluation
 splits into two channels: $\partial_{\mathrm{bb},N}^{\Str}$ and
@@ -1061,7 +1061,7 @@ Phase-5 work should be initiated if:
   point the comparison with the present G\textsuperscript{otr}
   candidate becomes load-bearing.
 * **Witten's parastatistics framework** is invoked in any paper
-  reading from this manuscript, requiring an honest queer-anomaly
+  interpretation from this manuscript, requiring an honest queer-anomaly
   story.
 * **Boundary-state catalog** for $\mathfrak{q}(N)$ branes is
   completed; at that point the orientifold projection between the

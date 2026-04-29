@@ -272,7 +272,7 @@ with zero homotopies inside the added current target; the ordinary
   \]
   Thus the unreduced source with central character constructs the
   \(P_0\) current presentation as far as the distributional algebraic
-  current model permits.  This is not yet a morphism into
+  current model permits.  This is not constructed as a morphism into
   \(Z^{P_0}_{\mathrm{fact}}(\mathrm{Obs}_{\mathrm{open}})\) for the
   genuine unreduced open BV factorization algebra.  It does not
   contradict the polynomial no-go
@@ -335,6 +335,11 @@ with zero homotopies inside the added current target; the ordinary
   every monomial and, by continuity, for every element of the completed
   algebra.  Thus the centrality homotopies against arbitrary algebraic
   current-target monomials are strict zero homotopies in this model.
+  Here ``arbitrary'' means arbitrary monomial in the freely adjoined
+  algebraic current target.  It does not mean arbitrary element of the
+  genuine unreduced open BV observable factorization algebra, and it
+  does not supply the unreduced
+  \(Z^{P_0}_{\mathrm{fact}}\)-morphism.
 \end{proof}
 
 \begin{lem}[Unreduced scalar primitive]
@@ -368,7 +373,7 @@ with zero homotopies inside the added current target; the ordinary
 \end{proof}
 
 \begin{thm}[Scalar contact QME obstruction]
-\label{prop:app-scalar-contact-qme-class}
+\label{thm:app-scalar-contact-qme-class}
   Let
   \[
     \omega(f,g)=[\{f,g\}]_0
@@ -395,13 +400,13 @@ with zero homotopies inside the added current target; the ordinary
     \operatorname{Tr}(A\,XY)-\operatorname{Tr}(A\,YX)
       =
       \hbar N\,\operatorname{Tr}(A)
-      \quad\bmod\ \mathcal W_N\widehat\mu(\lie{gl}_N).
+      \quad\bmod\ \mathcal W_N\widehat\mu(\lie{sl}_N).
   \]
   Equivalently,
   \[
     \operatorname{Tr}(A[X,Y])
       =\hbar N\,\operatorname{Tr}(A)
-      \quad\bmod\ \mathcal W_N\widehat\mu(\lie{gl}_N),
+      \quad\bmod\ \mathcal W_N\widehat\mu(\lie{sl}_N),
   \]
   for the matrix Weyl commutator \([X,Y]=XY-YX\).
   After insertion of the central boundary ghost
@@ -413,8 +418,9 @@ with zero homotopies inside the added current target; the ordinary
     \hbar N\,\omega(f,g)
     \int_\R a(t)b(t)\gamma_{\mathbf 1}(t)\,dt .
   \]
-  Its associated graded CE class is \(\hbar N[\bar c]\).  This class is
-  not exact in the scalar-reduced Hamiltonian source.  Hence the
+  Its associated graded CE class is the formal scalar multiple
+  \(\hbar N[\bar c]\in H^2_{\mathrm{Lie}}(\bar A;\C)[[\hbar]]\).  This
+  class is not exact in the scalar-reduced Hamiltonian source.  Hence the
   ordinary scalar-reduced \(\lie{gl}_N\) brane-defect model has no
   internal scalar counterterm whose leading symbol cancels this
   obstruction.
@@ -442,8 +448,8 @@ with zero homotopies inside the added current target; the ordinary
   central ghost \(\gamma_{\mathbf 1}\) makes the QME obstruction
   representative degree \(1\), the degree of the obstruction complex.
   The CE associated graded of this representative is the scalar
-  extension cocycle \(\hbar N\omega\), hence the class
-  \(\hbar N[\bar c]\).
+  extension cocycle \(\hbar N\omega\), hence the formal class
+  \(\hbar N[\bar c]\in H^2_{\mathrm{Lie}}(\bar A;\C)[[\hbar]]\).
 
   If it were exact in the scalar-reduced Hamiltonian source, the leading
   scalar term would give a linear primitive
@@ -455,10 +461,10 @@ with zero homotopies inside the added current target; the ordinary
     \omega(z_1,z_2)=1,\qquad \{z_1,z_2\}=1 .
   \]
   Equivalently, Lemma~\ref{lem:app-unreduced-scalar-primitive} gives
-  the only scalar primitive.  It lives on the unreduced polynomial
-  Hamiltonian algebra and does not descend to \(\bar A\). Thus the
-  scalar-reduced source has no counterterm whose associated graded
-  kills the class.
+  the unreduced scalar primitive used here.  It lives on the unreduced
+  polynomial Hamiltonian algebra and does not descend to \(\bar A\).
+  Thus the scalar-reduced source has no counterterm whose associated
+  graded kills the class.
 \end{proof}
 
 \begin{thm}[Central-character source replacement for the scalar QME symbol]
@@ -511,7 +517,7 @@ with zero homotopies inside the added current target; the ordinary
   \[
     \{f,g\}=\overline{\{f,g\}}+\omega(f,g)\cdot1 .
   \]
-  By Theorem~\ref{prop:app-scalar-contact-qme-class},
+  By Theorem~\ref{thm:app-scalar-contact-qme-class},
   \[
     \{I_\partial(a,\bar f),I_\partial(b,\bar g)\}_{\mathrm{open}}
       =
@@ -583,7 +589,7 @@ with zero homotopies inside the added current target; the ordinary
   super vector space it is
   \(\operatorname{Str}(\operatorname{id}_V)=\operatorname{sdim}V\).
   The same local calculation as in
-  Theorem~\ref{prop:app-scalar-contact-qme-class} therefore gives the
+  Theorem~\ref{thm:app-scalar-contact-qme-class} therefore gives the
   displayed classical formula.  For \(V=\C^{N|N}\), this coefficient is
   zero.
 
@@ -621,7 +627,7 @@ with zero homotopies inside the added current target; the ordinary
   with \(C\in\mathcal O_{\mathrm{loc}}^{\mathrm{bd}}\) can hold only if
   \[
     [w_{\mathrm{ext}}]=-\hbar N[\bar c]
-      \qquad\text{in }H^2_{\mathrm{Lie}}(\bar A;\C).
+      \qquad\text{in }H^2_{\mathrm{Lie}}(\bar A;\C)[[\hbar]].
   \]
   In particular, with \(W_{\mathrm{ext}}=0\), or with
   \(w_{\mathrm{ext}}\) exact, the ordinary scalar-reduced
@@ -644,8 +650,9 @@ with zero homotopies inside the added current target; the ordinary
   leading scalar part of \(C\).  Passing to cohomology gives the stated
   necessary condition.  If \(W_{\mathrm{ext}}=0\), or if
   \(w_{\mathrm{ext}}\) is exact, this condition would force
-  \(\hbar N[\bar c]=0\).  For \(N>0\) and formal \(\hbar\), this
-  contradicts Theorem~\ref{prop:app-scalar-contact-qme-class}, which
+  \(\hbar N[\bar c]=0\) in \(H^2_{\mathrm{Lie}}(\bar A;\C)[[\hbar]]\).
+  For \(N>0\) and formal \(\hbar\), this
+  contradicts Theorem~\ref{thm:app-scalar-contact-qme-class}, which
   identifies \([\bar c]\neq0\) on \(\bar A\).  Thus no internal local
   counterterm cancels the ordinary scalar-reduced obstruction.
 \end{proof}

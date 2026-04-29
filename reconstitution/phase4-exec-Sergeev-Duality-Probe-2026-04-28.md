@@ -1295,7 +1295,7 @@ identical in form and resolution to BCOV-A5.**
   $H^2_{\mathrm{Lie}}(\bar A,\C)_{\bar 0}$ and
   $H^2_{\mathrm{Lie}}(\bar A,\Pi\C)_{\bar 1}$, not within a single
   parity sector).
-* §3.5 Witten lens reading: extended here with §1–§4 of the
+* §3.5 Witten lens interpretation: extended here with §1–§4 of the
   brane-physics translation.
 
 ### §A.3 G3-M3-queer-trace anchors

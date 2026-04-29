@@ -468,7 +468,7 @@ sources, which sit in different parity sectors of the graded BV
 cohomology. The "independence" is a statement about the *coupled*
 classes (cocycle × character), not the bare cocycle. $\square$
 
-### §3.5 Witten lens — physical reading of independence
+### §3.5 Witten lens — physical interpretation of independence
 
 **The two-supertrace structure as an open-closed witness.** The
 manuscript's Theorem G is the open-side image of the closed-side
@@ -490,7 +490,7 @@ is "pure" (zero coupling), while the `otr`-channel is "anomalous"
 (coupling $N$). The two realizations are physically distinct
 boundary conditions on the brane probe.
 
-**Open-closed duality reading.** In BCOV 1994 §6.3, the open-closed
+**Open-closed duality interpretation.** In BCOV 1994 §6.3, the open-closed
 duality is the statement that the closed-side (string) cocycle has
 an open-side (brane) image; the present manuscript's Theorem G is
 the local d=2 formal-disk shadow of this on $\mathfrak{gl}_N$. The

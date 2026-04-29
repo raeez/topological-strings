@@ -216,7 +216,7 @@ Each wave-3 sub-ledger is, by construction, a coordination document; process-tag
 - **A-brane $\otimes$ B-brane $\otimes$ Koszul (P4-G6-27).** Draft prose at W32 §1.2 W3-W32-D10: "**Open-string state space from A-brane $\otimes$ B-brane $\otimes$ Koszul resolution (W3-W13-10).**" Scrub the "(W3-W13-10)" tag. The body cites the field content; clean.
 - **Local-operator Euler contraction (P4-G6-28).** "**- Local-operator Euler contraction (W3-W13-2 / W3-W32-S2).**" Scrub both ledger tags.
 - **Quotient-stack vs invariant-reduction (P4-G6-29).** "**- Quotient-stack vs invariant-reduction (W3-W13-8 / W3-W32-D8).**" Scrub.
-- **Theorem E step heals (P4-G6-33..37).** Draft prose at W3-W24 lines 482, 579, 703, 813, 906 is mathematical step-by-step prose. **Scrub status: verified clean** by reading W3-W24 step prose; no process tags appear in the actual paragraph bodies.
+- **Theorem E step heals (P4-G6-33..37).** Draft prose at W3-W24 lines 482, 579, 703, 813, 906 is mathematical step-by-step prose. **Scrub status: verified clean** by interpretation W3-W24 step prose; no process tags appear in the actual paragraph bodies.
 - **Sign-appendix stack (P4-G6-38..40, 42).** Draft prose at W32 §1.1 / §1.2 names "(W3-W13-4)," "(W3-W13-19 / M-07)," and similar — all to be scrubbed at inscription.
 
 ### §4.3 Phase-3 prose (structural splits)
@@ -254,7 +254,7 @@ Three tiers, mapped to the 47 Tier-A + 8 Tier-B + 2 Tier-C count from W32 final 
 
 **What user authorizes.** All 47 mechanical inscriptions (Phases 1, 2, 3 of §2 above). Each has draft-verified prose at the wave-3 sub-ledger level. Inscription is paragraph-level paste-with-scrub per §4.4 above.
 
-**Tier-A subdivisions (for sanity-check reading order).**
+**Tier-A subdivisions (for sanity-check study order).**
 
 | Tier-A bucket | Count | Phase | Files affected |
 |---|---|---|---|

@@ -321,7 +321,7 @@ recourse to the operadic mixed-Dunn machinery.
 **(S-1) The proof of `thm:u1-center-anomaly` lives on
 $(\widehat{\C^2}_0, dz_1\wedge dz_2)$, not on global $\C^2$.**
 
-Reading `main.tex`:334-352 (the proof of
+Interpretation `main.tex`:334-352 (the proof of
 `thm:u1-center-anomaly`):
 * The cocycle $\omega(f, g) = [\{f, g\}]_0$ is computed on
   monomials $z_1^k z_2^l$ in $\C[z_1, z_2]$ — these are functions
@@ -335,7 +335,7 @@ Reading `main.tex`:334-352 (the proof of
   Chevalley-Eilenberg complex of the **algebraic** Lie algebra
   $\bar A = \C[z_1, z_2]/\C\cdot 1$.
 
-**Beilinson lens reading.** Sheaf-theoretic descent on
+**Beilinson lens interpretation.** Sheaf-theoretic descent on
 $\mathrm{Ran}(\R^2 \times \C^2)$ would be required to globalize
 the cocycle $\omega$ to a sheaf cocycle on the 6-real-dim Ran
 space. **The manuscript's `thm:u1-center-anomaly` does not

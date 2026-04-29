@@ -1,36 +1,61 @@
-\section{Acceptance criteria and obstruction complexes}\label{sec:open-obligations}
+\section{Admissibility criteria and obstruction complexes}\label{sec:open-obligations}
 
-The universal formal-local Koszul duality programme is organized by
-theorem data.  Each item below is either a construction already used in
-the local theorem, an acceptance criterion for a frontier extension, or
-an obstruction complex whose vanishing is the exact condition for the
-next theorem.
+The coordinate CE/PV theorem and staged admissibility programme is
+governed by constructions, hypotheses, and obstruction complexes.  Each
+item below is either a construction already used in the local theorem, an
+admissibility criterion for a frontier extension, or an obstruction complex
+whose vanishing is the exact condition for the next theorem.
 
 \begin{enumerate}
   \item \emph{Finite cotangent CE/PV data.}
-  A finite window consists of
-  \(\mathfrak h_{\le M}\), a finite dual \(D_{\le M}\), and the
+  The finite model is attached to a finite-dimensional Lie algebra
+  \(\mathfrak l\), its ordinary dual \(\mathfrak l^\vee\), and the
   cotangent Lie algebra
   \[
-    \mathfrak g_{\le M}=\mathfrak h_{\le M}\ltimes D_{\le M}[1].
+    \mathfrak g_{\mathfrak l}
+    =\mathfrak l\ltimes \mathfrak l^\vee[1].
   \]
   The finite comparison is
   \[
-    \Phi_M\colon
-    C^\bullet_{\mathrm{CE}}(\mathfrak g_{\le M})
+    \Phi_{\mathfrak l}\colon
+    C^\bullet_{\mathrm{CE}}(\mathfrak g_{\mathfrak l})
     \xrightarrow{\sim}
-    \mathrm{PV}(\mathbf S(\mathfrak h_{\le M})),
+    \mathrm{PV}(\mathbf S(\mathfrak l)),
     \qquad c\mapsto\theta,\quad u\mapsto O .
   \]
 
-  \item \emph{Completed formal-disk CE/PV acceptance.}
+  \item \emph{Completed formal-disk CE/PV admissibility.}
   The comparison for
   \(\mathfrak h=\C[[z_1,z_2]]/\C\cdot1\) and
   \(\mathfrak g=\mathfrak h\ltimes
   \mathfrak h^\vee_{\mathrm{cont}}[1]\) is accepted first as a pro
-  finite-window CE/PV comparison.  It becomes a completed bracketed
-  statement only after a mixed continuous or weighted coefficient
-  completion makes the coordinate contraction bracket continuous.  The
+  coordinate-window CE/PV comparison.  It becomes a completed bracketed
+  statement only after a bracket-admissible realization \(B\subset
+  \mathrm{PV}_{\mathrm{coord}}(A_{\partial,\mathrm{coord}})\) has a
+  specified complete Hausdorff topology, continuous inclusion in the
+  coordinate product, continuous multiplication, continuous
+  \(d_\pi^{\mathrm{coord}}\), a continuous closed coordinate contraction
+  bracket, and the transported continuous source structure on
+  \(\Phi_{\mathrm{coord}}^{-1}(B)\).  Boundary Hamiltonian uses also
+  require \(B\) to contain the relevant \(O_f\)'s and
+  \(d_\pi^{\mathrm{coord}}O_f\)'s.  It becomes a kernel statement only
+  after a kernel-admissible datum \((B,\mathcal K_B)\) is supplied, so that
+  the diagonal tensor
+  \[
+    \Theta_B=\sum_I H_I\otimes\theta^I+\sum_I\eta^I\otimes O_I
+  \]
+  converges in \(\mathcal K_B\) and satisfies
+  \[
+    d\Theta_B+\frac12[\Theta_B,\Theta_B]=0.
+  \]
+  The admissible formal-local interface datum is
+  \[
+    \mathfrak U_{\mathfrak h}
+    =(\Phi_{\mathrm{coord}},\{\Phi^B_{P_0}\}_B,\{\Theta_B\}_B).
+  \]
+  It is not a categorical universal object unless a category of
+  admissible completions and a universal property are supplied.
+  The
   coordinate obstruction terms are
   \[
     \mathfrak o^{\mathrm{br}}_{M,N}(x,y)
@@ -41,21 +66,28 @@ next theorem.
       =\pi^\vee_{M,N}(x\cdot_M\lambda)
        -(\pi_{M,N}x)\cdot_N(\pi^\vee_{M,N}\lambda),
   \]
-  Their vanishing gives the pro finite-window coordinate comparison
+  Their vanishing gives the pro coordinate-window comparison
+	  \[
+	    \Phi_{\mathrm{coord}}\colon
+	    C^\bullet_{\mathrm{CE},\mathrm{coord}}(\mathfrak g)
+	    \xrightarrow{\sim}
+	    \mathrm{PV}_{\mathrm{coord}}(A_{\partial,\mathrm{coord}}).
+	  \]
+  On a bracket-admissible \(B\) the restricted map
   \[
-    C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g)
-    \xrightarrow{\sim}
-    \mathrm{PV}(\widehat{\mathbf S}_{\mathrm{Tate}}(\mathfrak h)).
+    \Phi^B_{P_0}\colon
+    \Phi_{\mathrm{coord}}^{-1}(B)\xrightarrow{\sim}B
   \]
+  is the corresponding completed \(P_0\)-comparison.
   The Casimir transition term
   \[
     \mathfrak o^{\mathrm{Cas}}_{M,N}
       =(\pi_{M,N}\otimes\pi^\vee_{M,N})C_M-C_N
   \]
   diagnoses the failure of a strict global kernel, propagator, endpoint,
-  ambient-product bracket, and bar-cobar package in the unweighted
+  ambient-product bracket, and bar-cobar/enveloping comparison in the unweighted
   product/direct-sum topology.  It is not an additional hypothesis for
-  each finite-window coordinate CE/PV identity.
+  each coordinate-window CE/PV identity.
 
   \item \emph{Admissible Tate bar-cobar/Quillen envelope.}
   For an admissible Tate replacement
@@ -64,16 +96,18 @@ next theorem.
     B_{\mathrm{adm}}=
     C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g_{\mathrm{adm}}).
   \]
-  The Koszul duality theorem in the envelope is
+  The admissible Koszul duality theorem in the envelope is
   \[
     B_{\mathrm{adm}}^!\simeq
     \widehat U(\mathfrak g_{\mathrm{adm}}),
   \]
-  together with the bar-cobar Quillen equivalence under conilpotency,
-  PBW completeness, and the completed symmetric associated graded.
+  together with the bar-cobar Quillen equivalence under lower-central
+  Tate-pronilpotence, PBW completeness, and the completed symmetric
+  associated graded.
 
-  \item \emph{Closed-open generator map.}
-  The closed-open map is determined on CE/PV generators by
+  \item \emph{Reduced CE/PV central-operation generator map.}
+  The reduced formal central-operation map is determined on CE/PV
+  generators by
   \[
     c^I\mapsto\theta^I,\qquad u_I\mapsto O_I .
   \]
@@ -130,7 +164,7 @@ next theorem.
     \qquad
     z_2\cdot\rho_{a,b}=(a+1)\rho_{a+1,b}.
   \]
-  This local-nilpotence obstruction is the acceptance criterion for any
+  This local-nilpotence obstruction is the necessary condition for any
   proposed polynomial realization of \(\mathcal P\): it must change the
   target, the action, or the category.
 
@@ -221,10 +255,12 @@ next theorem.
   \]
   or, in Weyl normalization,
   \[
-    \operatorname{Tr}(A\,XY)-\operatorname{Tr}(A\,YX)
-      =\hbar N\,\operatorname{Tr}(A)
-      \quad\bmod\ \mathcal W_N\widehat\mu(\mathfrak{gl}_N).
-  \]
+	    \operatorname{Tr}(A\,XY)-\operatorname{Tr}(A\,YX)
+	      =\hbar N\,\operatorname{Tr}(A)
+	      \quad\bmod\ \mathcal W_N\widehat\mu(\lie{sl}_N).
+	  \]
+	  The brane stack is still ordinary \(\mathfrak{gl}_N\), but the quantum
+	  moment-map ideal is traceless after the scalar comoment vanishes.
   With the central ghost \(\gamma_{\mathbf 1}\), the representative is
   \[
     \operatorname{Ob}_{\mathrm{sc}}
@@ -236,20 +272,53 @@ next theorem.
 	  \(W_{\mathrm{ext}}\) with leading class
 	  \[
 	    [w_{\mathrm{ext}}]=-\hbar N[\bar c]
-	    \qquad\text{in }H^2_{\mathrm{Lie}}(\bar A,\C).
+	    \qquad\text{in }H^2_{\mathrm{Lie}}(\bar A;\C)[[\hbar]].
 	  \]
 	  Alternatively, the unreduced central-character source absorbs the
 	  scalar symbol before scalar reduction, while a Casimir-balanced
 	  supertrace model makes the scalar representative zero.
 
   \item \emph{Unreduced factorization-current lift.}
-  The unreduced cotangent lift is a datum:
-  distributional principal-part boundary fields, product centrality
-  homotopies, \(P_0\)-bracket homotopies, a coefficient kernel, a
-  brane-defect propagator, and a QME solution.  Polynomial boundary
-  representatives are ruled out by the local-nilpotence theorem; the
-  accepted target is the principal-part current sector with the
-  centrality homotopies displayed as part of the theorem data.
+	  The unreduced cotangent lift is a datum:
+	  distributional principal-part boundary fields, product centrality
+	  homotopies, \(P_0\)-bracket homotopies, a coefficient kernel, a
+	  brane-defect propagator, and a QME solution.  Polynomial boundary
+	  representatives are ruled out by the local-nilpotence theorem; the
+	  accepted target is the principal-part current sector; the centrality
+	  homotopies must be supplied as additional unreduced lift data.  In
+	  convolution form an unreduced coupling
+	  \[
+	    \kappa\colon C^\bullet_{\mathrm{CE}}(\mathfrak g)
+	    \longrightarrow Z^{P_0}_{\mathrm{fact}}(A_{\mathrm{BV}})
+	  \]
+	  must first satisfy
+	  \[
+	    \operatorname{Curv}(\kappa)
+	    =d\kappa+\frac12[\kappa,\kappa]=0,
+	  \]
+		  and then pass the descent and QME tests.  A chain-level
+		  normal-ordering lift is separate data: either a cut-dependent
+		  no-\(\psi\) straightening as in
+		  Theorem~\ref{thm:normal-ordering-straightening-homotopy}, or a
+		  genuinely larger target retaining the descendant module together with
+		  maps \(N,i,H\) satisfying the relevant deformation of
+		  \(QH+HQ=\mathrm{id}-iN\).  Only in such a larger target could one
+		  attempt to form a correction.  After matching the bracket convention of
+		  Construction~\ref{constr:boundary-local-dual-principal-parts}, the
+		  defect
+		  \[
+		    \{O_f,\Theta_\rho\}-\Theta_{f\cdot\rho}
+		  \]
+		  would have to be \(Q\)-exact; no fixed formula for that homotopy is
+		  asserted before the target and signs are constructed.
+		  Until these maps are constructed in the chosen target, the
+		  principal-part cotangent lift is an obligation rather than a theorem.
+		  Moreover, the explicit normal-ordering straightening now proved in the
+		  body is only the cut-dependent no-\(\psi\) calculation.  A full cyclic
+		  contraction with \(N\) killing all one-\(\psi\) descendants is
+		  impossible by Lemma~\ref{lem:no-full-cyclic-normal-ordering-contraction};
+		  any genuine unreduced lift must retain those descendant classes or
+		  replace the target by a larger homotopy-coherent object.
 
   \item \emph{Moyal and graph normalization.}
   The Weyl/Moyal convention is
@@ -267,6 +336,8 @@ next theorem.
   The first and third raw commutator weights are \(1\) and \(1/24\);
   any Costello realization must reproduce these coefficients after its
   sign, orientation, automorphism, and counterterm conventions are fixed.
+  These coefficients are necessary tests for a Costello realization, not
+  sufficient data for analytic BV/QME existence.
 
   \item \emph{Global and cross-volume descent.}
   A target theorem supplies a matched-conventions datum
@@ -277,7 +348,7 @@ next theorem.
   \chi_{\mathrm{cl}},\chi_{\mathrm{op}},\chi_{\mathrm{anom}},
   \mathcal K_{\mathrm{obs}}).
   \]
-  Its acceptance vector is
+  Its admissibility vector is
   \[
     \operatorname{Ob}_{\mathfrak C_{\mathrm{tar}}}
     =
@@ -285,10 +356,20 @@ next theorem.
      \operatorname{ob}_{\mathrm{WR}},
      \operatorname{ob}_{\mathrm{anom}},
      \operatorname{ob}_{\mathrm{QME}},
+     \operatorname{ob}_{\mathrm{conv}},
+     \operatorname{ob}_{\mathrm{hyp}},
+     \operatorname{ob}_{6r},
      \operatorname{ob}_{\mathrm{MD}}).
   \]
-  The formal-local theorem transfers to a compact BCOV, Vol III,
-  Igusa/BKM, or sister-volume statement precisely when this vector
-  vanishes and the comparison morphisms identify the target formal
-  restriction with the local Hamiltonian BF/Moyal normalization.
+  Here \(\operatorname{ob}_{\mathrm{conv}}\) records convergence of the
+  transported obstruction tower, \(\operatorname{ob}_{\mathrm{hyp}}\)
+  records hyperdescent and the absence of hidden \(\varprojlim^1\)
+  defects, and \(\operatorname{ob}_{6r}\) records any asserted
+  six-relation factorization constraint.  A compact BCOV,
+  MNOP/chiral-volume, Vol III, Igusa/BKM, or sister-volume theorem may
+  use the formal-local theorem only after the target supplies this
+  vanishing obstruction vector, chosen null-homotopies, and comparison
+  morphisms identifying its formal restriction with the local Hamiltonian
+  BF/Moyal normalization.  The transfer theorem is target data, not a
+  consequence of the formal disk.
 \end{enumerate}

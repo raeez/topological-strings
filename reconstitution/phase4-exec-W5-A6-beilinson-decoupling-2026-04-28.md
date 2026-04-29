@@ -57,7 +57,7 @@ sharpenings recommended below do not re-open the proposition; they
 sharpen the inscription so that the load-bearing distinctions are
 explicit on the surface of the manuscript.
 
-**(V-1) Composition lens reading of (I-1) ∘ (I-2).** The
+**(V-1) Composition lens interpretation of (I-1) ∘ (I-2).** The
 $\mathcal C_{\mathrm{ML}}$ Dunn additivity uniting (I-1) and (I-2)
 runs **entirely inside the topological factor $\R^2$**, not across
 the topological-holomorphic interface. The G1-M2 construction
@@ -163,7 +163,7 @@ this $E_2$ structure manifestly compose with (I-1)'s $E_1$
 brane-line structure, and if so, does the composition cross the
 topological-holomorphic interface?
 
-### §1.1 Reading G1-M2 §2.1 — the candidate $E_2$ algebra has TWO $\R$ factors
+### §1.1 Interpretation G1-M2 §2.1 — the candidate $E_2$ algebra has TWO $\R$ factors
 
 From `phase4-exec-G1-M2-E2-promotion-2026-04-28.md` §2.1:
 
@@ -179,7 +179,7 @@ From `phase4-exec-G1-M2-E2-promotion-2026-04-28.md` §2.1:
 > on the same formal symplectic disk $\widehat{\C^2}_0$); the
 > distinction is which $\R$-direction-of-$\R^2$ is being smeared.
 
-**Composition reading.** (I-1)'s brane-line $E_1$ algebra
+**Composition interpretation.** (I-1)'s brane-line $E_1$ algebra
 $A_{\mathrm{brane}} = A_\partial^{\mathrm{Ham}}(I)
 = \widehat{\mathbf S}(\mathfrak h_I)$ sits inside (I-2)'s
 $E_2$ algebra $A_{E_2}$ as **the brane-direction tensor factor**,
@@ -249,7 +249,7 @@ equivalence at the $(\infty, 2)$-categorical level. The chain-level
 closure of Theorem G needs only the BV-cohomological identity, **not**
 the operadic equivalence.
 
-### §1.3 Beilinson lens reading of the composition
+### §1.3 Beilinson lens interpretation of the composition
 
 Taking the Beilinson school (1981 localization, 1996 Hitchin) as
 methodological foil: the canonical Beilinson move is to **factor a
@@ -451,7 +451,7 @@ Wave-4 #105 §2.5 (Step 5 of the proof outline) says:
 > by $F_\alpha = 0$ as a Maurer-Cartan twist.
 
 This is correct but elliptic on the Jacobi distinction. **The
-Beilinson + Composition reading is:** (i) uses (J-1) (classical
+Beilinson + Composition interpretation is:** (i) uses (J-1) (classical
 Lie Jacobi), (ii) uses (J-2) inside (I-1) and the Lurie 5.5.4.16
 strict $E_2$ inside (I-2), (iii) avoids (J-3) by replacing the
 operadic chiral axiom on the product manifold with the chain-level
@@ -550,7 +550,7 @@ brane-line factorization (I-1) appears only in
 algebra; there, the cosheaf descent runs on **$\mathrm{Ran}(\R)$** —
 not on $\mathrm{Ran}(\R^2 \times \C^2)$.
 
-### §3.4 Beilinson lens reading
+### §3.4 Beilinson lens interpretation
 
 The Beilinson school's localisation picture (BB81; BD96 Hitchin) is:
 **a global flatness statement on a moduli space descends to a

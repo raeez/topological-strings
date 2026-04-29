@@ -4,7 +4,7 @@
 modifications. Date: 2026-04-28.
 
 **Lens.** X17 = Cross-Volume Worktree Integration. Wave-5 follow-on to
-W5-X1 (which audited declarative firewall consistency by reading
+W5-X1 (which audited declarative firewall consistency by interpretation
 `CLAUDE.md` and `main.tex` of each sister volume). X17 probes the
 *worktree state* (uncommitted work, branches, active worktrees) to
 detect cross-volume merge debt that X1's source-of-truth lens cannot

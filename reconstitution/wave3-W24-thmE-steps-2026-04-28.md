@@ -786,7 +786,7 @@ $[d_\R, \iota_{\partial_t}] = \partial_t$ contracts positive jets,
 leaving the *chain-level zeroth jet* (the value at a point), not
 necessarily a degree-zero cohomology class.
 
-Reading more carefully: the cosheaf is `\Omega^\bullet_c(I)`, in
+Interpretation more carefully: the cosheaf is `\Omega^\bullet_c(I)`, in
 total degree on the brane line `\R`. The locally constant claim is
 about the *factorization-algebra structure maps* on $I' \subset I$,
 which on `\Omega^\bullet_c(I')` extends to `\Omega^\bullet_c(I)` and

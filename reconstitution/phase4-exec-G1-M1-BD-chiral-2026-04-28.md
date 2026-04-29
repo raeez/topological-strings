@@ -22,7 +22,7 @@ ledger schema; IDs prefix `P4-EXEC-G1-`.
 **Inputs (read in full).**
 - `/Users/raeez/topological-strings/CLAUDE.md`.
 - `reconstitution/phase4-G1-weiss-product-2026-04-28.md` (G1 outline
-  §T5.A 3-month milestone definition; T6.A-J primary-source reading
+  §T5.A 3-month milestone definition; T6.A-J primary-source interpretation
   list).
 - `reconstitution/wave3-W11-beilinson-hypotheses-2026-04-28.md`
   (W3-W11-05; Lurie HA §5.5.4 hypothesis verification table; eleven
@@ -979,7 +979,7 @@ Phase-4 EXEC P4-G1-M1 (this report) read in full:
 - `reconstitution/phase4-G1-weiss-product-2026-04-28.md` (G1
   outline; T1.A precise problem; T2 known-results landscape; T3
   attack avenues; T5 milestones M-3 / M-6 / M-12 / M-18+; T6
-  primary-source reading list).
+  primary-source study list).
 - `reconstitution/wave3-W11-beilinson-hypotheses-2026-04-28.md`
   (W3-W11-01 through W3-W11-05; hypothesis verification table; 11
   external cite checks).

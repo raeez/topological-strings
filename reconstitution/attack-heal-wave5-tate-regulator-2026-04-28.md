@@ -6,7 +6,7 @@ Status: converged for admissible finite-window weight independence; blocked, by 
 
 ## Claim Attacked
 
-The weighted Tate replacement was tested against four possible readings:
+The weighted Tate replacement was tested against four possible interpretations:
 
 1. merely a regulator;
 2. a completion changing the theory;

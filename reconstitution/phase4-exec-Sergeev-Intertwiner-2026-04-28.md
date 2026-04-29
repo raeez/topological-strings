@@ -556,7 +556,7 @@ brane:
   $\hbar N$; on the queer side (otr-brane, $\mathfrak q(N)$) it
   produces the parity-shifted residue $\hbar N$ in the odd sector.
 
-**Physical reading.** The boundary state of the Str-brane is
+**Physical interpretation.** The boundary state of the Str-brane is
 $|B\rangle_{\mathrm{Str}}\in\mathcal H_{\mathrm{cl}}\otimes\C\,$
 with closed-string state in $\mathcal H_{\mathrm{cl}}$ paired against
 the diagonal Chan–Paton state in $\C$. The boundary state of the
@@ -585,7 +585,7 @@ $V^{\otimes n}$ commutes with every element of $\mathcal{HC}_n$
 scaling) intertwiner exchanging the two boundary states while fixing
 the closed-string image.
 
-### §7.4 Boundary algebra reading
+### §7.4 Boundary algebra interpretation
 
 In Boundary lens (the open-closed brane-defect catalog of BCOV 1994
 §6 + Costello–Gwilliam Vol II + manuscript's brane-defect comparison
@@ -832,7 +832,7 @@ parity-graded; the central element $J$ is grouplike in the super sense:
 $\Delta(J)=J\otimes 1+1\otimes J$ (cocommutative super-coproduct on
 the centre).
 
-**Hopf-like reading of $\Phi_{\mathrm{Sergeev}}$.** Under the super-Hopf
+**Hopf-like interpretation of $\Phi_{\mathrm{Sergeev}}$.** Under the super-Hopf
 structure, the parity-twist via $J$ implements an automorphism of the
 $U(\mathfrak q(N))$-comodule structure on $V^{\otimes n}$. This
 automorphism is the parametric realization of $\Phi_{\mathrm{Sergeev}}$

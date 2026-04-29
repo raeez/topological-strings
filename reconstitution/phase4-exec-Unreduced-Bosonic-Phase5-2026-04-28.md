@@ -186,7 +186,7 @@ cancellation**, as `prop:costello-li-2012-fail-local` (F4) records:
 > $\mathfrak{gl}_N$. The U(1) center class $[\bar c]$ in part (f)
 > of `thm:main-local` is precisely this anomaly.
 
-### §1.2 Polyakov/Invariants reading
+### §1.2 Polyakov/Invariants interpretation
 
 **What is preserved.** The Costello–Li 2015 / 2016 chain-level
 discharge preserves the regulator-class admissibility framework
@@ -285,7 +285,7 @@ $\Lambda$ and $P_\Lambda$ is the IR-cutoff propagator.
 local counterterm that cancels the residue $\hbar N[\bar c]$ on the
 bosonic source?
 
-### §2.2 Polyakov-lens reading: regulator-class invariance of $[\bar c]$
+### §2.2 Polyakov-lens interpretation: regulator-class invariance of $[\bar c]$
 
 The (A1)–(A4) admissible regulator class
 (`tate-T1-weighted-completion.tex`:596–632) is *defined* to ensure
@@ -339,7 +339,7 @@ $Q^{\mathrm{GF}} = d_{\R^2}^* + \bar\partial_{\C^2}^*$. The RG flow
 from $\epsilon \to 0$ is canonical inside the (A1)–(A4) admissible
 class.
 
-### §2.4 Invariants-lens reading
+### §2.4 Invariants-lens interpretation
 
 **Invariant 1 — $\mathrm{Tr}(I) = N$.** The bosonic matrix-factor
 trace coefficient is *purely representation-theoretic* and is
@@ -362,12 +362,12 @@ and is preserved.
 **NEGATIVE.** Wilsonian RG flow does not provide a bosonic discharge
 mechanism distinct from the (A5) super-balance.
 
-**Polyakov reading.** The residue is *manifestly Polyakov-invariant*
+**Polyakov interpretation.** The residue is *manifestly Polyakov-invariant*
 inside the (A1)–(A4) admissible class. Polyakov scheme-independence
 (`thm:wt-regulator-independence-admissible`) records this
 explicitly.
 
-**Invariants reading.** The class lives in two structurally
+**Invariants interpretation.** The class lives in two structurally
 invariant complexes (matrix-factor representation theory and
 Lie-algebra cohomology of $\bar A$); Wilsonian flow does not act on
 either.
@@ -410,7 +410,7 @@ $\lambda, \mu \in \C^*$ with $\lambda\mu = 1$ (preserves $\omega$).
 (G6) **$\mathrm{Sp}(4, \R)$ outer.** No: $\mathrm{Sp}(4, \R)$ does
 not act on $\C^2$ holomorphically.
 
-### §3.2 Polyakov-lens reading: does any symmetry kill the constant Taylor coefficient cocycle?
+### §3.2 Polyakov-lens interpretation: does any symmetry kill the constant Taylor coefficient cocycle?
 
 The Lie 2-cocycle $\omega(f, g) = [\{f, g\}]_0$ is the constant
 Taylor coefficient of the Poisson bracket. Each candidate symmetry
@@ -450,7 +450,7 @@ on the Lie 2-cocycle class $[\bar c]$. The constant Taylor
 coefficient $\omega(z_1, z_2) = 1$ is *invariant* under every
 symplectic and rescaling symmetry of $(\widehat{\C^2}_0, \omega)$.
 
-### §3.3 Invariants-lens reading: m-adic completion and brane-defect coupling
+### §3.3 Invariants-lens interpretation: m-adic completion and brane-defect coupling
 
 **m-adic completion.** The formal disk $\widehat{\C^2}_0$ is the
 m-adic completion of $\C[z_1, z_2]$ at $\mathfrak m = (z_1, z_2)$.
@@ -496,11 +496,11 @@ discharge the bosonic class.
 discharges the residue $\hbar N[\bar c]$ on bosonic
 $\mathfrak{gl}_N$.
 
-**Polyakov reading.** The class $[\bar c]$ is fixed by every
+**Polyakov interpretation.** The class $[\bar c]$ is fixed by every
 holomorphic-symplectic symmetry (Sp(2, $\C$), Hamiltonian rotation,
 scaling); Möbius is ill-posed on the symplectic structure.
 
-**Invariants reading.** The class survives m-adic completion (since
+**Invariants interpretation.** The class survives m-adic completion (since
 the symmetries fix $\mathfrak m$) and the brane-defect coupling
 (since the boundary evaluation is symmetry-equivariant).
 
@@ -548,7 +548,7 @@ rebasing. Could a *non-diagonal* point in
 $(\varepsilon_1, \varepsilon_2)$-parameter space produce a
 cancellation $[c^{(1)}] = 0$?
 
-### §4.3 Polyakov-lens reading
+### §4.3 Polyakov-lens interpretation
 
 **The CGW level computation.** From G4-M2:
 $$k(\varepsilon_1, \varepsilon_2) = \frac{(\varepsilon_1 + \varepsilon_2)^2}{\varepsilon_1 \varepsilon_2}$$
@@ -575,7 +575,7 @@ flow inside the (A1)–(A4) admissible class. Polyakov-class
 scheme-independence does *not* extend to deformation-parameter
 degeneration.
 
-### §4.4 Invariants-lens reading
+### §4.4 Invariants-lens interpretation
 
 **Invariant under twist.** The CGW twist functor $\tau_{\mathfrak h}$
 preserves the spin-tower decomposition; the central charge
@@ -635,7 +635,7 @@ $$\langle 0 | e^{-\int I_0} | L \rangle = \langle 0 | e^{-\int I_0} | 0 \rangle 
 where $\delta_L$ encodes the boundary contribution. **Could
 $\delta_L$ produce a counter-term cancelling $\hbar N[\bar c]$?**
 
-### §5.2 Polyakov-lens reading
+### §5.2 Polyakov-lens interpretation
 
 **Where does the bosonic counter-term come from?** A Lagrangian
 boundary at infinity introduces *boundary modes* that contribute to
@@ -668,7 +668,7 @@ $\R^2 \times \C^2$ with brane $\R \times p$).
 locality. This violates (A1)–(A4) of the admissible regulator class
 and is therefore outside the manuscript's framework.
 
-### §5.3 Invariants-lens reading
+### §5.3 Invariants-lens interpretation
 
 **Invariant under (5.A).** Localising the boundary fragment changes
 the underlying spacetime to $\R^2 \times \C^2 \cup L$ where $L$ is
@@ -709,11 +709,11 @@ cost of either (5.A) changing the spacetime or (5.B) violating
 Costello-RG locality. Neither is a discharge of the inscribed
 Theorem G inside the manuscript's framework.
 
-**Polyakov reading.** Boundary conditions are regulator-class data;
+**Polyakov interpretation.** Boundary conditions are regulator-class data;
 admissible-class regulators are insensitive to boundary-state
 choice (`thm:wt-regulator-independence-admissible`).
 
-**Invariants reading.** The class $[\bar c]$ is invariant under
+**Invariants interpretation.** The class $[\bar c]$ is invariant under
 admissible regulator change; non-admissible (5.A or 5.B) regulators
 do change the class but *also* change the theory.
 
@@ -771,7 +771,7 @@ postpones the residue from order $\hbar^1 N^1$ to order
 $\hbar^3 N^3$ via the cup product $[\bar c]^{\cup 2}$, but does not
 cancel it.
 
-### §6.3 Polyakov-lens reading
+### §6.3 Polyakov-lens interpretation
 
 **Polyakov scaling.** A degree shift in the BV complex changes the
 *grading* of the obstruction class but does not change its
@@ -785,7 +785,7 @@ $+1$ if $\zeta$ has BV degree 0. Either way, the
 *coefficient* $\hbar N$ is unchanged. The shift moves the residue
 to a different degree slice but preserves the coefficient.
 
-### §6.4 Invariants-lens reading
+### §6.4 Invariants-lens interpretation
 
 **Invariant under shift.** The class $[\bar c]$ is invariant under
 degree shifts because it is a Lie-algebra cohomology class on
@@ -808,10 +808,10 @@ discharge the residue $\hbar N[\bar c]$. The same Massey-product
 obstruction that closes the A$_\infty$-deformed unreduced primitive
 route closes the UB.6 candidate.
 
-**Polyakov reading.** Cohomology classes are invariant under
+**Polyakov interpretation.** Cohomology classes are invariant under
 degree shifts; the shift preserves the residue coefficient.
 
-**Invariants reading.** The cup product $[\bar c]^{\cup 2}$ is
+**Invariants interpretation.** The cup product $[\bar c]^{\cup 2}$ is
 non-zero in $H^4_{\mathrm{Lie}}(\bar A, \C)$; the Massey product
 re-introduces the obstruction at higher order.
 
@@ -876,7 +876,7 @@ $\mathfrak{gl}_N$**: the closed-string mechanism cancels the
 *open-string* U(1) center; the open-string mechanism requires
 super-balance.
 
-### §7.3 Polyakov-lens reading
+### §7.3 Polyakov-lens interpretation
 
 **Polyakov: regulator-class invariance.** Even if a matched-
 conventions theorem existed, the residue $\hbar N[\bar c]$ would
@@ -893,7 +893,7 @@ anomaly that is *not* cancelled by the Calabi–Yau condition. **No
 analogue of the Calabi–Yau cancellation works for bosonic
 $\mathfrak{gl}_N$.**
 
-### §7.4 Invariants-lens reading
+### §7.4 Invariants-lens interpretation
 
 **Invariant 1: $\mathrm{Tr}(I) = N$.** Preserved under any matched-
 conventions functor between BCOV and our local model. Cannot be

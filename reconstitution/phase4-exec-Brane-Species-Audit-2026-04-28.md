@@ -182,7 +182,7 @@ $\C^{N|N}=\C^N\oplus\Pi\C^N$, and the open-string field algebra is
 $\C[\mathfrak{gl}(N|N)\oplus\mathfrak{gl}(N|N)]^{GL(N|N)}$ — the
 super-invariant ring of pairs of supermatrices.
 
-**Witten 1992 / 1998 reading.** This is a **B-brane stack** in the
+**Witten 1992 / 1998 interpretation.** This is a **B-brane stack** in the
 mixed sense of `def:local-th-string` (`main.tex` 745): topological
 along the $\R$-direction, formal-holomorphic in the $\C^2$-direction
 (Dolbeault model). The supersymmetric structure realizes Witten
@@ -317,7 +317,7 @@ W23 / W31 territory not closed at this level.
 psl(N|N) is the simple quotient of sl(N|N) by its 1-dimensional
 center $\C\cdot I_{2N}$. The G3-M2 §1 verdict establishes that the
 chain-level discharge mechanism on psl(N|N) operates **via lift to
-gl(N|N)**, not natively on psl. The brane-species reading is:
+gl(N|N)**, not natively on psl. The brane-species interpretation is:
 
 > The psl(N|N) brane is a **gl(N|N) brane stack with the
 > central Chan–Paton scalar quotiented out**. The lift "reaches
@@ -343,10 +343,10 @@ in G3-M4 §3): the **adjoint-rep supertrace** on psl(2|2) is
 $-2\neq 0$, while the **defining-rep supertrace** is $0$. The W22
 mechanism uses the defining-rep supertrace, so the discharge holds;
 but the adjoint-rep non-zero supertrace records a residual
-"non-basic-classical-ness" of psl that the brane-species reading
+"non-basic-classical-ness" of psl that the brane-species interpretation
 absorbs into the **central projection** step.
 
-### §4.3 Witten reading: a D-brane "modulo Chan–Paton scalar"
+### §4.3 Witten interpretation: a D-brane "modulo Chan–Paton scalar"
 
 The psl brane is a **D-brane stack on which the Chan–Paton scalar
 $\C\cdot I$ is gauge-equivalent to the identity**. Physically:
@@ -746,7 +746,7 @@ configuration, the SYZ self-duality forces a *truncation*:
   spin-$s$ cocycle at $M=N$.
 
 This is the **physical mechanism** for the spin-tower truncation
-identified as Reading A in G4-M3 §5.4: it is **not** ad hoc; it is
+identified as Interpretation A in G4-M3 §5.4: it is **not** ad hoc; it is
 forced by the SYZ-self-dual O-brane condition.
 
 ### §8.3 Brane condition for spin-tower truncation
@@ -767,7 +767,7 @@ configuration $M=N$:
 
 W3-W31-T2 (W31 §4.4) conjectures that a regularised double
 holomorphic-twist limit of the CGW boundary VOA recovers the
-manuscript's $[\bar c]$. The G4-M3 §5.4 Reading A says this
+manuscript's $[\bar c]$. The G4-M3 §5.4 Interpretation A says this
 requires a *spin-tower truncation* killing $J^{(s)}$ for $s\geq 2$.
 The brane condition identified here is **the precise truncation
 mechanism**: the SYZ-self-dual O-brane structure on osp(2N|2N) at
@@ -787,7 +787,7 @@ self-duality, the orthosymplectic Chan–Paton structure forces
 spin-tower contributions to cancel pairwise via supertrace,
 truncating the spin-tower at every level $s\geq 1$. This is the
 brane-physical mechanism for the W3-W31-T2 topological-twist
-conjecture's spin-tower truncation, identified as Reading A in
+conjecture's spin-tower truncation, identified as Interpretation A in
 G4-M3 §5.4.
 
 **Confidence.** Medium. The SYZ-self-dual / spin-tower-truncation
@@ -918,7 +918,7 @@ quotation).
 **Does CGW realize a queer (otr-channel) defect?** Within the bosonic
 $W_{1+\infty}$ framework, no — the CGW boundary VOA is bosonic.
 However:
-* CGW 2007.09497 §5–6 (according to W31 §1.1 reading) does
+* CGW 2007.09497 §5–6 (according to W31 §1.1 interpretation) does
   construct **fermionic** defect spectra in some cases;
 * The orthosymplectic super-extension of $W_{1+\infty}$, namely
   the super-$W_{1+\infty}$ on osp(2N|2N) (per G4-M3 §6), would

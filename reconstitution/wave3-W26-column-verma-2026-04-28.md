@@ -328,21 +328,21 @@ Hamiltonian $z_1^p z_2^q \in \bar A$ is not.
 
 ## §2. T2 — z_1^2 worked example: Hamiltonian vs Verma action
 
-The two readings of "z_1^2":
-1. **Verma reading**: $z_1^2 \in U(\C \cdot Y)$ where $Y = z_1 \in
+The two interpretations of "z_1^2":
+1. **Verma interpretation**: $z_1^2 \in U(\C \cdot Y)$ where $Y = z_1 \in
    \mathfrak{b}$. This is iterated $Y^2$ in the universal enveloping
    algebra of the rank-1 unipotent.
-2. **Hamiltonian reading**: $z_1^2 \in \bar A$ as a single distinct
+2. **Hamiltonian interpretation**: $z_1^2 \in \bar A$ as a single distinct
    Hamiltonian generator (monomial of degree 2 in $z_1$).
 
 At $v_{2, -1}$:
-- Verma reading: $Y^2 \cdot v_{2, -1} = z_1 \cdot (z_1 \cdot v_{2, -1})
+- Verma interpretation: $Y^2 \cdot v_{2, -1} = z_1 \cdot (z_1 \cdot v_{2, -1})
   = z_1 \cdot (-v_{2, -2}) = z_1 \cdot (-1)v_{2, -2} = -1 \cdot (-2) v_{2, -3}
   = +2 v_{2, -3}$. Stays in column $a = 2$.
-- Hamiltonian reading: $z_1^2 \cdot v_{2, -1} = (2 \cdot -1 - 0 \cdot 2) v_{3, -2}
+- Hamiltonian interpretation: $z_1^2 \cdot v_{2, -1} = (2 \cdot -1 - 0 \cdot 2) v_{3, -2}
   = -2 v_{3, -2}$. Jumps OFF column to $a = 3$.
 
-| Reading | Target | Coefficient | Tensor factorization predicts |
+| Interpretation | Target | Coefficient | Tensor factorization predicts |
 |---------|--------|-------------|------------------------------|
 | Verma ($Y^2$ in $U(\mathfrak{b})$) | $(2, -3)$ | $+2$ | $+2$ — MATCH |
 | Hamiltonian ($z_1^2 \in \bar A$, single monomial) | $(3, -2)$ | $-2$ | $+2$ — MISMATCH |

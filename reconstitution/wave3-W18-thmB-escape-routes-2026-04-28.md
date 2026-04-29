@@ -502,7 +502,7 @@ Calabi–Yau anti-brane apparatus.
 algebra $\widehat U(\mathfrak{gl}_N)$ and its centre.
 
 **Construction.** Replace the trace
-$\mathrm{Tr}:\widehat U(\mathfrak{gl}_N)\to\C$ (reading off the
+$\mathrm{Tr}:\widehat U(\mathfrak{gl}_N)\to\C$ (extracting the
 constant term in the PBW expansion) by a *central character*
 $\chi:Z(\widehat U(\mathfrak{gl}_N))\to\C$ extending to the full
 algebra by translation-invariance. The centre
