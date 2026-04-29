@@ -1,12 +1,9 @@
 \subsubsection{Theorem-lane index}\label{ssec:theorem-lanes}
-This subsection is an index, not a second proof of the local theorem
-package.  Each lane records the local hypotheses, the assertion whose
-proof is carried later in the manuscript, and the exact proof
-dependencies.  The numbered entries keep stable cross-reference labels
-so that the summary package can refer to the same lanes, but the
-proof-bearing text is the cited theorem, proposition, lemma, or
-computation.  Each assertion below is read with the proof class and
-acceptance data recorded in the universal Koszul-duality interface.
+The theorem-lane index records local hypotheses, asserted scope, and
+proof dependencies.  The proof-bearing text is the cited theorem,
+proposition, lemma, or computation.  Each assertion is read with the
+proof class and acceptance data recorded in the universal
+Koszul-duality interface.
 
 \begin{stmt}[Index lane: Dirac brane probe]\label{thm:lane-dirac-probe}
   \emph{Status.} \emph{proved in finite algebraic model}.  The proof is
@@ -111,21 +108,25 @@ acceptance data recorded in the universal Koszul-duality interface.
     \mathfrak g=\mathfrak h\ltimes
       \mathfrak h^\vee_{\mathrm{cont}}[1].
   \]
-  The completed CE cochains of \(\mathfrak g\) identify with the
-  Schouten polyvector algebra of the Tate symmetric algebra:
+  The completed CE cochains of \(\mathfrak g\) identify, windowwise and
+  after the coordinate completion specified in
+  Definition~\ref{defn:formal-disk-ce-pv-completion}, with
+  the corresponding Schouten polyvector algebra:
   \[
     \Phi:
     C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g)
     \xrightarrow{\sim}
-    \mathrm{PV}\bigl(\widehat{\mathbf S}_{\mathrm{Tate}}(\mathfrak h)\bigr)
-    \simeq
-    Z^{P_0}_{\mathrm{red,Ham}}
-    \bigl(\widehat{\mathbf S}_{\mathrm{Tate}}(\mathfrak h)\bigr),
+    \mathrm{PV}_{\mathrm{coord}}
+    \bigl(\widehat{\mathbf S}_{\mathrm{Tate}}(\mathfrak h)\bigr).
   \]
-  with generator dictionary
+  The generator dictionary is
   \[
     c^I\mapsto\theta^I,\qquad u_I\mapsto O_I .
   \]
+  The \(Z^{P_0}_{\mathrm{red,Ham}}\) identification is asserted only on the
+  finite-window or mixed/weighted-continuous sector where the Schouten
+  bracket is a continuous operation; the strict ambient product
+  completion is not a \(P_0\)-algebra here.
   Here \(|u_I|=0\), \(|c^I|=1\), and \(u_I\) is the CE coordinate dual
   to the shifted-cotangent generator, not to a Hamiltonian generator.
 
@@ -165,6 +166,9 @@ acceptance data recorded in the universal Koszul-duality interface.
   \[
     |c^i|=1,\qquad |u_i|=0 .
   \]
+  This is the cotangent-coordinate grading: \(u_i\) is the
+  CE-suspended coordinate dual to the odd cotangent generator, not the
+  ordinary graded dual computed from the BV degree of \(\epsilon^i[1]\).
   The polyvector model is
   \[
     \mathrm{PV}\bigl(\mathbf S(\mathfrak l)\bigr)
@@ -187,8 +191,8 @@ acceptance data recorded in the universal Koszul-duality interface.
   \[
     \Phi(c^i)=\theta^i,\qquad \Phi(u_i)=O_i
   \]
-  extends uniquely to an isomorphism of dg graded-commutative
-  \(P_0\)-algebras
+  extends uniquely to an isomorphism of dg graded-commutative algebras
+  with their degree-\((-1)\) cotangent/Schouten brackets
   \[
     \Phi\colon
     C^\bullet_{\mathrm{CE}}\bigl(\mathfrak l\ltimes\mathfrak l^\vee[1]\bigr)
@@ -226,7 +230,8 @@ acceptance data recorded in the universal Koszul-duality interface.
   \(\Phi d_{\mathrm{CE}}=d_\pi\Phi\) on generators.  Both differentials
   are degree-one derivations, so equality propagates to all words.
 
-  The \(P_0\)-brackets are also checked on generators:
+  The degree-\((-1)\) cotangent/Schouten brackets are also checked on
+  generators:
   \[
     \{c^i,u_j\}_{\mathrm{CE}}=\delta^i_j,\qquad
     [\theta^i,O_j]_S=\delta^i_j,
@@ -235,7 +240,7 @@ acceptance data recorded in the universal Koszul-duality interface.
   equal to zero.  The biderivation rule gives the full bracket identity.
 \end{proof}
 
-\begin{defn}[Formal-disk CE/PV completion]\label{defn:formal-disk-ce-pv-completion}
+\begin{defn}[Formal-disk coordinate CE/PV completion]\label{defn:formal-disk-ce-pv-completion}
   Let \(H_d=\operatorname{Span}\{z_1^az_2^b:a+b=d\}\) and
   \[
     \mathfrak h=\prod_{d\geq1}H_d=(z_1,z_2)\C[[z_1,z_2]] .
@@ -249,11 +254,13 @@ acceptance data recorded in the universal Koszul-duality interface.
   For \(M,L\geq0\), let \(\mathcal B_{M,L}^{\mathrm{CE}}\) be the
   finite set of graded-commutative monomials in the letters
   \(u_{a,b},c^{a,b}\) of word length at most \(L\), all of whose labels
-  satisfy \(1\leq a+b\leq M\).  The completed CE algebra used here is
-  the product over all finite words, equivalently the inverse limit of
+  satisfy \(1\leq a+b\leq M\).  The coordinate product algebra used here
+  is the product over all finite words, equivalently the inverse limit of
   finite coordinate projections
   \[
-    \widehat{\mathbf S}_{\mathrm{Tate}}
+    C^\bullet_{\mathrm{CE},\mathrm{coord}}(\mathfrak g)
+    :=
+    \widehat{\mathbf S}_{\mathrm{coord}}
     \bigl(\mathfrak g^\vee_{\mathrm{cont}}[-1]\bigr)
     =
     \varprojlim_{M,L}\prod_{w\in\mathcal B_{M,L}^{\mathrm{CE}}}\C w ,
@@ -264,24 +271,33 @@ acceptance data recorded in the universal Koszul-duality interface.
   The PV completion is defined by the same rule with \(u_{a,b}\)
   replaced by \(O_{a,b}\) and \(c^{a,b}\) by \(\theta^{a,b}\):
   \[
-    \mathrm{PV}\bigl(\widehat{\mathbf S}_{\mathrm{Tate}}(\mathfrak h)\bigr)
-    =
-    \widehat{\mathbf S}_{\mathrm{Tate}}(O_{a,b})
+    \mathrm{PV}_{\mathrm{coord}}(\mathfrak h)
+    :=
+    \widehat{\mathbf S}_{\mathrm{coord}}(O_{a,b})
     \widehat\otimes
-    \widehat\Lambda(\theta^{a,b}).
+    \widehat\Lambda_{\mathrm{coord}}(\theta^{a,b}).
   \]
-  These projections are finite coordinate tests for continuity, not
+  These product algebras are coordinate enlargements.  They strictly
+  contain the literal continuous CE cochains: for example an infinite
+  length-one sum in the \(c^{a,b}\)-coordinates is a vector in the
+  coordinate product but not a continuous linear functional on
+  \(\mathfrak h=\prod_d H_d\).  A genuine completed \(P_0\)-object is the
+  mixed continuous subspace in which the \(c/\theta\)-linear directions
+  have continuous-dual support and the contraction pairing is a
+  continuous biderivation.  Without this mixed condition the construction
+  is only an ambient pro-coordinate product.  The projections are finite
+  coordinate tests for the displayed differential formulas, not
   Lie-algebra quotients of the full formal Hamiltonian algebra.
 \end{defn}
 
 \begin{lem}[Formal-disk CE and Schouten continuity, square-zero form]\label{lem:formal-disk-ce-schouten-continuity}
-  In the completion of
+  In the coordinate product completion of
   Definition~\ref{defn:formal-disk-ce-pv-completion}, the formulas
   \[
     [H_{a,b},H_{c,d}]=(ad-bc)H_{a+c-1,b+d-1}
   \]
   with \(H_{r,s}=0\) for \(r<0\), \(s<0\), or \(r+s=0\), determine
-  continuous degree-one derivations
+  degree-one coordinate-continuous derivations
   \(d_{\mathrm{CE}}\) and \(d_\pi=[\pi,-]_S\), and these derivations
   satisfy \(d_{\mathrm{CE}}^2=d_\pi^2=0\).  On generators,
   \[
@@ -338,29 +354,36 @@ acceptance data recorded in the universal Koszul-duality interface.
   on the completed product algebras.
 \end{proof}
 
-\begin{thm}[Continuous formal-disk CE/PV reconstruction]\label{thm:formal-disk-completed-ce-pv}
+\begin{thm}[Coordinate formal-disk CE/PV reconstruction]\label{thm:formal-disk-completed-ce-pv}
   Let
   \[
     \mathfrak h=(z_1,z_2)\C[[z_1,z_2]]
       =\C[[z_1,z_2]]/\C\cdot1
   \]
-  with Poisson bracket
+  with the projected Poisson bracket modulo constants
   \[
     \{f,g\}=\partial_{z_1}f\,\partial_{z_2}g
       -\partial_{z_2}f\,\partial_{z_1}g .
   \]
-  Complete the CE and PV algebras as in
+  Complete the coordinate CE and PV algebras as in
   Definition~\ref{defn:formal-disk-ce-pv-completion}.  Then
   \[
     \Phi\colon
-    C^\bullet_{\mathrm{CE},\mathrm{cont}}
+    C^\bullet_{\mathrm{CE},\mathrm{coord}}
     \bigl(\mathfrak h\ltimes\mathfrak h^\vee_{\mathrm{cont}}[1]\bigr)
     \xrightarrow{\ \sim\ }
-    \mathrm{PV}\bigl(\widehat{\mathbf S}_{\mathrm{Tate}}(\mathfrak h)\bigr),
+    \mathrm{PV}_{\mathrm{coord}}(\mathfrak h),
     \qquad
     c^{a,b}\mapsto\theta^{a,b},\quad u_{a,b}\mapsto O_{a,b},
   \]
-  is an isomorphism of completed dg \(P_0\)-algebras.  Under the stable
+  is an isomorphism of completed coordinate dg commutative algebras.
+  On the finite-support mixed subalgebra, and on every finite admissible
+  window, the generator cotangent/Schouten contraction brackets are
+  compatible.  The full
+  product coordinate algebra is not asserted to carry the global
+  continuous contraction bracket; the missing infinite diagonal is the
+  strict Casimir obstruction of
+  Theorem~\ref{thm:lane-strict-casimir-obstruction}.  Under the stable
   boundary evaluation of Theorem~\ref{thm:bulk-boundary}, the
   degree-zero cotangent coordinate \(u_f\) maps to the boundary
   Hamiltonian
@@ -373,14 +396,15 @@ acceptance data recorded in the universal Koszul-duality interface.
 \end{thm}
 
 \begin{proof}
-  The completed source and target are products over the same
+  The completed coordinate source and target are products over the same
   finite-word coordinate set after the substitutions
   \(c^{a,b}\leftrightarrow\theta^{a,b}\) and
   \(u_{a,b}\leftrightarrow O_{a,b}\).  Hence \(\Phi\) is a continuous
   isomorphism of completed graded-commutative algebras, with continuous
   inverse given by the reverse substitution.
 
-  Lemma~\ref{lem:formal-disk-ce-schouten-continuity} gives continuous
+  Lemma~\ref{lem:formal-disk-ce-schouten-continuity} gives
+  coordinate-continuous
   derivations \(d_{\mathrm{CE}}\) and \(d_\pi\).  On the generators
   \(c^{r,s}\) and \(u_{r,s}\), the displayed CE formulas are the duals
   of the Hamiltonian bracket and coadjoint action in
@@ -395,7 +419,8 @@ acceptance data recorded in the universal Koszul-duality interface.
   equality extends from generators to every finite word and then, by the
   product completion, to the whole completed algebra.
 
-  The \(P_0\)-bracket is checked on generators:
+  On the finite-support mixed subalgebra the cotangent/Schouten bracket is
+  checked on generators:
   \[
     \{c^{a,b},u_{r,s}\}_{\mathrm{CE}}
       =\delta_{a,r}\delta_{b,s},
@@ -404,8 +429,14 @@ acceptance data recorded in the universal Koszul-duality interface.
       =\delta_{a,r}\delta_{b,s},
   \]
   and all \(c,c\), \(u,u\), \(\theta,\theta\), and \(O,O\) brackets
-  vanish.  Since both brackets are continuous biderivations, generator
-  compatibility gives compatibility on the completed \(P_0\)-algebras.
+  vanish.  This gives bracket compatibility on finite words and on any
+  mixed topology in which the \(c/\theta\)-directions have finite label
+  support.  It does not extend to the arbitrary product completion: the
+  bracket of \(\sum_I c^I\) with \(\sum_I u_I\), which are both admitted
+  by the coordinate product, would require the divergent diagonal
+  coefficient \(\sum_I1\).  Thus the full product statement above is a
+  dg coordinate reconstruction, not a global completed \(P_0\)-algebra
+  theorem.
 
   The moment-map shadow is the restriction of \(\Phi\) to the cotangent
   coordinates: \(u_f\mapsto O_f\).  The Kirillov--Poisson bracket gives
@@ -439,9 +470,11 @@ acceptance data recorded in the universal Koszul-duality interface.
       determined by the structure constants of \(L\) is a continuous
       Schouten bivector on
       \(\widehat{\mathbf S}_{\mathrm{coord}}(L)\);
-    \item the coordinate \(P_0\)-bracket
+    \item the coordinate cotangent/Schouten contraction bracket
       \(\{\theta^i,O_j\}=\delta^i_j\) is a continuous biderivation on
-      the completed finite-word product algebra.
+      the chosen mixed or weighted completion.  This is a summability
+      hypothesis, not a consequence of the generator formula on the
+      ambient product.
   \end{enumerate}
   Then the generator assignment
   \[
@@ -452,10 +485,13 @@ acceptance data recorded in the universal Koszul-duality interface.
     \qquad
     c^i\mapsto\theta^i,\quad u_i\mapsto O_i,
   \]
-  is an isomorphism of completed dg \(P_0\)-algebras.  This is a
-  formal-local cochain theorem.  It does not require lower-central
-  conilpotence and it does not assert that the coordinate pairing is
-  represented by a strict kernel
+  is an isomorphism of completed dg algebras with the degree-\((-1)\)
+  cotangent/Schouten contraction bracket.  Without the summability
+  condition in (U3), the conclusion is only the compatible pro
+  finite-window dg-commutative CE/PV identity and the global contraction
+  bracket is obstruction data.  This is a formal-local cochain theorem.
+  It does not require lower-central conilpotence and it does not assert
+  that the coordinate pairing is represented by a strict kernel
   \(C_L\in L\widehat\otimes D\).
 \end{thm}
 
@@ -489,7 +525,7 @@ acceptance data recorded in the universal Koszul-duality interface.
   compatibility gives \(\Phi_Ld_{\mathrm{CE}}=d_{\pi_L}\Phi_L\) on the
   completed algebras.
 
-  Assumption (U3) gives the same result for the \(P_0\)-brackets:
+  Assumption (U3) gives the same result for the contraction brackets:
   \[
     \{c^i,u_j\}_{\mathrm{CE}}=\delta^i_j
     \quad\text{and}\quad
@@ -497,10 +533,10 @@ acceptance data recorded in the universal Koszul-duality interface.
   \]
   on generators, with all same-type brackets zero.  Continuity and the
   biderivation rule extend this equality to finite words and then to the
-  product completion.  The last sentence records the boundary of the
-  theorem: a strict Casimir kernel is a stronger tensor-topological
-  requirement than the coordinate biderivation used in this
-  formal-local cochain identity.
+  chosen mixed or weighted completion.  The last sentence records the
+  boundary of the theorem: a strict Casimir kernel is stronger than the
+  coordinate biderivation, while the unweighted ambient product may fail
+  even to carry that biderivation globally.
 \end{proof}
 
 \begin{prop}[Shifted-cotangent coordinate is the boundary Hamiltonian]\label{prop:cotangent-coordinate-boundary-hamiltonian}
@@ -645,7 +681,8 @@ acceptance data recorded in the universal Koszul-duality interface.
     \xrightarrow{\ \sim\ }
     \mathrm{PV}(A_{\mathrm{rel}})
   \]
-  of completed dg \(P_0\)-algebras.  If, in addition, the relative
+  of completed dg algebras with the degree-\((-1)\)
+  cotangent/Schouten contraction bracket.  If, in addition, the relative
   bar-cobar functor is taken in the category of
   \(\mathfrak a\)-modules and the \(\mathfrak n\)-coalgebra is
   conilpotent, this cochain identity is promoted to relative
@@ -981,7 +1018,8 @@ acceptance data recorded in the universal Koszul-duality interface.
   Proposition~\ref{prop:brane-bracket-locality} proves disjoint-support
   locality.  Theorem~\ref{thm:hamiltonian-current-center-lift} supplies
   the smeared Hamiltonian central operation.  Theorem~\ref{thm:open-closed-derived-center-factorization}
-  identifies the interval-wise factorization-centre map and its
+  identifies the interval-wise reduced Hamiltonian current
+  central-operation map and its
   compatibility with factorization products.
 
   \emph{Residuals.} The strict current statement does not include the
@@ -1068,11 +1106,13 @@ acceptance data recorded in the universal Koszul-duality interface.
 
 \begin{stmt}[Index lane: degree-zero Moyal/Weyl sector and graph boundary]\label{thm:lane-moyal-degree-zero}
   \emph{Status.} \emph{proved in finite algebraic model} for the formal
-  Weyl/Moyal coefficient algebra; \emph{conditional on named
-  QME/radial-parts/unweighted-regulator theorem} for the finite-\(N\)
-  all-\(N\) radial-parts reduction step.  The descendant one-\(\psi\)
-  lift and the Costello brane-defect graph realization are not included
-  in the proved algebraic lane.
+  Weyl/Moyal coefficient algebra and the reduced open-line Wick
+  normalization.  The degree-zero stable trace comparison is
+  \emph{conditional} on the external radial-parts input of
+  Statement~\ref{stmt:app-radial-external-input}.  The mixed QME,
+  unweighted regulator endpoint, descendant one-\(\psi\) lift, and
+  Costello brane-defect graph realization are separate residual lanes
+  and are not hypotheses for the formal Moyal coefficient theorem.
 
   \emph{Exact hypotheses.} Work in the scalar-reduced degree-zero
   Hamiltonian sector at finite \(N\), assume the radial-parts input of

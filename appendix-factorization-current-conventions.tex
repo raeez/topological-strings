@@ -3,7 +3,7 @@
 
 This appendix fixes the algebraic source/target interface carried by
 the factorization-current theorem.  The interface is universal for the
-Koszul-duality comparison used in this manuscript: interval Hamiltonian
+Koszul-duality comparison used in the formal-local package: interval Hamiltonian
 currents form the CE source, distributional Matlis principal parts form
 the cotangent current target, and the CE/PV generator dictionary is
 \[
@@ -61,6 +61,9 @@ Problem~\ref{prob:analytic-graph-realization}.
   \[
     \mathcal P_I=\mathcal D'_c(I)\widehat\otimes\mc P .
   \]
+  This is the selected support-local current dual used after
+  contraction, not an assertion that the full strong dual of
+  \(\Omega_c^\bullet(I)\widehat\otimes\mathfrak h\) has been imported.
   The pairing with degree-zero Hamiltonian currents is
   \[
     \langle B\otimes\rho,\;a\otimes f\rangle
@@ -182,7 +185,7 @@ Problem~\ref{prob:analytic-graph-realization}.
   \(C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g_I)\) to the
   reduced defect-current central-operation target
   \(A_\partial^{\mathrm{cur}}(I)\).  On length-one current generators
-  the target \(P_0\) brackets are
+  the target open-current \(P_0\) brackets are
   \[
   \begin{aligned}
     \{B_f(a),B_g(b)\}
@@ -194,12 +197,14 @@ Problem~\ref{prob:analytic-graph-realization}.
       &=0 .
   \end{aligned}
   \]
-  The factorization product and the \(P_0\)-centrality defects in this
-  reduced current target are strict:
+  The factorization product and the reduced current source-target
+  \(P_0\)-equivariance defects in this reduced current target are strict:
   \[
     H_{\mathrm{fact}}=0,\qquad H_{P_0}=0.
   \]
-  Thus \(u_{a(t)dt\otimes f}\mapsto B_f(a)\) and
+  This is not a zero Poisson-centre statement for overlapping supports;
+  the nonzero Hamiltonian current bracket is the moment-map bracket
+  displayed above.  Thus \(u_{a(t)dt\otimes f}\mapsto B_f(a)\) and
   \(c_\lambda\mapsto\theta_\lambda\) form the current-level
   source/target interface for the Koszul-duality theory.
 \end{thm}
@@ -243,7 +248,7 @@ Problem~\ref{prob:analytic-graph-realization}.
   commutative, so multiplication by an image generator has zero
   Hochschild product-centrality defect.
 
-  For \(P_0\)-centrality, let \(x\) be a length-one source generator and
+  For reduced current \(P_0\)-equivariance, let \(x\) be a length-one source generator and
   let \(Y\) be a homogeneous monomial in the CE source.  The defect
   \[
     D_x(Y)=
@@ -254,7 +259,7 @@ Problem~\ref{prob:analytic-graph-realization}.
   give \(D_x(Y)=0\) for every length-one \(Y\).  The Leibniz rule gives
   \(D_x(Y)=0\) for every monomial, and continuity extends this to the
   completed algebra.  Thus \(H_{\mathrm{fact}}\) and \(H_{P_0}\) are
-  zero homotopies in the reduced current model.
+  zero equivariance-defect homotopies in the reduced current model.
 \end{proof}
 
 \begin{cor}[Principal-part current brackets in monomial coordinates]

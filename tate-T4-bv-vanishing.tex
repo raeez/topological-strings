@@ -13,7 +13,7 @@
 
 \subsection*{Costello--Li 2012 hypotheses, restated}
 
-\begin{stmt}[Costello--Li 2012 BV-cohomology vanishing,
+\begin{stmt}[Costello--Li 2012 BCOV package,
    restated]\label{stmt:costello-li-2012-restated}
   Let $X$ be a compact Calabi--Yau manifold of complex dimension $d$,
   with holomorphic volume form $\Omega$. Let $\mathrm{PV}(X)[[t]]$ be
@@ -25,23 +25,14 @@
     =\int_X (\alpha\wedge\beta)\big|_{\mathrm{PV}^{d,d}}\cdot\Omega^2.$$
   The classical BCOV interaction $I_{\mathrm{BCOV}}$ is the cubic
   vertex on $\mathrm{PV}(X)[[t]]$ supplied by
-  \cite{costello-li-quantum-bcov}. Then:
-  \begin{enumerate}
-    \item the cohomology of the local-functional obstruction complex
-      $H^*\bigl(\operatorname{Loc}(X),\,Q+\{I_{\mathrm{BCOV}},-\}\bigr)$
-      is concentrated in known degrees;
-    \item the one-loop quantization obstruction is a single explicit
-      local class which vanishes by the Calabi--Yau condition
-      ($\partial_\Omega$ is exact on $\mathrm{PV}(X)$ via $\Omega$);
-    \item all higher-loop obstructions vanish, giving a perturbative
-      quantization compatible with the $S^1$ symmetry, unique up to the
-      equivalences in the Costello--Li renormalization scheme.
-  \end{enumerate}
-  The hypotheses are $X$ compact Calabi--Yau, $\Omega$ a holomorphic
-  volume form, BCOV gauge fixing (K\"ahler metric, harmonic
-  projection, $L^2$-regularized propagator), polyvector fields with
-  the $t$-Tate completion, and pure closed BCOV without brane
-  defects.
+  \cite{costello-li-quantum-bcov}.  The source package supplies the
+  generalized classical BCOV complex, its local-functional obstruction
+  complex, and the renormalization framework in which quantization
+  obstructions are stated.  The quantization vanishing theorems used as
+  primary-source precedent here are only those with their own stated
+  hypotheses.  No general all-dimensional compact-Calabi--Yau theorem
+  is imported saying that every
+  higher-loop obstruction vanishes in the mixed brane-defect sector.
 \end{stmt}
 
 The 2015 sequel \cite{costello-li-open-closed-bcov} extends to
@@ -61,19 +52,21 @@ $\mathbb C^d$, not on $\R^2\times\C^2$ with topological factor.
   and gauge data $\lie{gl}_N$ along five independent axes.
 
   \begin{enumerate}
-    \item[(S1)] \emph{Non-compactness.} $\C^2$ is not compact.
-      Costello--Li's harmonic projection and $L^2$-regularized
-      propagator depend on Hodge theory for $X$ compact. The
-      formal local jet model is at most a stalk of the global theory
-      and is not directly a Costello--Li target.
+    \item[(S1)] \emph{Compact-Hodge input.} The 2012 compact
+      Hodge-theoretic input does not apply directly to the formal
+      \(\C^2\) jet model.  The 2015 theorem shows that flat
+      non-compact geometry can be admissible under its own odd-dimensional
+      \(\mathfrak{gl}(N\mid N)\) hypotheses; those are not the mixed
+      topological-holomorphic defect hypotheses used here.
     \item[(S2)] \emph{Topological--holomorphic mixing.} The local
       theory has a topological factor $\R^2$ (de~Rham) crossed with
       a holomorphic factor $\C^2$ (Dolbeault). Costello--Li 2012 is
       pure BCOV/HCS on a single holomorphic Calabi--Yau; there is no
       pure BCOV statement covering the mixed kinematics. The
       protected sector of twisted M-theory \cite{costello-twistedM}
-      has the right shape, but Costello--Li 2012 is not stated for
-      it.
+      has the right shape as motivation, but no theorem from that source
+      is used here without a separate local anchor, and Costello--Li 2012
+      is not stated for it.
     \item[(S3)] \emph{Brane defect.} The brane \(L\) is
       one-real-dimensional in the topological direction and
       point-supported in the holomorphic direction. Costello--Li
@@ -85,7 +78,8 @@ $\mathbb C^d$, not on $\R^2\times\C^2$ with topological factor.
       $\lie{gl}(N\mid N)$. Costello--Li 2015 cancel the U(1) center
       anomaly by the supertrace; this cancellation is unavailable for
       ordinary $\lie{gl}_N$. The U(1) center class $[\bar c]$ in
-      part~(f) of \ref{thm:main-local} is precisely this anomaly.
+      part~(f) of \ref{thm:main-local} is the local trace-line avatar of
+      that Costello--Li anomaly, not a graph-level identification with it.
     \item[(S5)] \emph{Tate direction.} Costello--Li's $t$-Tate
       completion is along the worldsheet $S^1$ rotation, not along
       the coefficient system. The Tate completion required by
@@ -119,15 +113,15 @@ $\mathbb C^d$, not on $\R^2\times\C^2$ with topological factor.
   not BCOV kinematics; the brane \(L\) is a topological
   line transverse to a holomorphic point, not an open boundary on a
   flat $\C^d$; ordinary $\lie{gl}_N$ lacks the Costello--Li
-  supertrace cancellation (which is exactly the class
-  $[\bar c]$ of part~(f)); and the worldsheet-$t$ Tate completion
+  supertrace cancellation (whose local trace-line avatar here is the
+  class $[\bar c]$ of part~(f)); and the worldsheet-$t$ Tate completion
   is orthogonal to the coefficient-Casimir Tate direction.
 \end{proof}
 
 \begin{cor}[Costello--Li input and the unreduced coefficient endpoint]
 \label{cor:costello-li-input-coefficient-endpoint}
-  The Costello--Li 2012 BV-cohomology vanishing theorem supplies a pure
-  closed BCOV template.  The unreduced Tate-coefficient cotangent lift
+  The Costello--Li 2012 BCOV package supplies a pure closed BCOV
+  template.  The unreduced Tate-coefficient cotangent lift
   for the present brane-defect model additionally requires the endpoint
   coefficient data of
   Definition~\ref{defn:endpoint-admissible-coefficient-module}.  The
@@ -144,8 +138,9 @@ $\mathbb C^d$, not on $\R^2\times\C^2$ with topological factor.
 
 \begin{proof}
   By Proposition~\ref{prop:costello-li-2012-hypothesis-separation}, the
-  BV-cohomology vanishing of \cite{costello-li-quantum-bcov} is stated
-  for different geometric and coefficient data.  Its conclusion contains
+  BCOV package of \cite{costello-li-quantum-bcov} is stated
+  for different geometric and coefficient data.  Its conclusion, in the
+  form used here as source precedent, contains
   neither the coefficient-system Tate completion in which the Casimir
   converges nor a brane-defect extension of the propagator.  The closures
   cited in the statement supply the classical chain-level lift and the
@@ -156,7 +151,7 @@ $\mathbb C^d$, not on $\R^2\times\C^2$ with topological factor.
 
 \begin{thm}[Costello--Li endpoint coefficient criterion]
 \label{thm:costello-li-no-coefficient-endpoint}
-  The Costello--Li 2012 vanishing theorem
+  The Costello--Li 2012 BCOV package
   \cite{costello-li-quantum-bcov} and its 2015 open-closed extension
   \cite{costello-li-open-closed-bcov}, in the forms cited above, can
   yield an endpoint-admissible coefficient module for
@@ -169,6 +164,12 @@ $\mathbb C^d$, not on $\R^2\times\C^2$ with topological factor.
     \text{(E5) endpoint RG preservation}.
   \end{gathered}
   \]
+  Here (E1) and (E4) are the inherited finite-window and Mittag--Leffler
+  envelope conditions of
+  Definition~\ref{defn:endpoint-admissible-coefficient-module}.  A
+  quantum endpoint additionally requires vanishing of the separate QME
+  component \(\mathfrak o_{\mathrm{QME}}\) in
+  Definition~\ref{defn:bv-endpoint-obstruction-tuple}.
 \end{thm}
 
 \begin{proof}
@@ -269,9 +270,9 @@ $\mathbb C^d$, not on $\R^2\times\C^2$ with topological factor.
   \begin{enumerate}
     \item \emph{Non-compact / Omega-background BV-cohomology
       vanishing.} A version of \ref{stmt:costello-li-2012-restated}
-      on $\R^2\times\C^2$, either via Costello's Omega-background
-      \cite{costello-twistedM} or via a compactification with
-      Lagrangian boundary at infinity.
+      on $\R^2\times\C^2$, either via a separately anchored
+      Omega-background route or via a compactification with Lagrangian
+      boundary at infinity.
     \item \emph{Topological--holomorphic mixed kinematics.} The
       vanishing must hold on the kinematic differential
       $D=d_{\R^2}+\bar\partial_{\C^2}$, with the linearized

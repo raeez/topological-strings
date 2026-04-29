@@ -7,7 +7,7 @@
 
 \noindent\fbox{\begin{minipage}{0.96\textwidth}
 \textbf{Formal-local theorem infrastructure.}
-The manuscript builds a universal formal-local Koszul duality theory for
+The universal formal-local Koszul-duality interface is attached to
 the shifted cotangent Hamiltonian Lie algebra
 \[
   \mathfrak h=\C[[z_1,z_2]]/\C\cdot1,\qquad
@@ -38,11 +38,39 @@ lift datum.
 \smallskip
 \textbf{Acceptance principle.}
 Every frontier extension is stated as theorem data plus an obstruction
-complex.  The manuscript does not infer compact BCOV, Vol III,
-Igusa/BKM, or global Calabi--Yau statements from the formal disk alone;
+complex.  No compact BCOV, Vol III,
+Igusa/BKM, or global Calabi--Yau statement follows from the formal disk alone;
 such statements are accepted exactly by a matched-conventions datum with
 vanishing period, anomaly, QME, descent, and operadic obstruction vector.
 \end{minipage}}
+
+\medskip
+\paragraph{Status table.}
+
+\begin{center}
+\begin{tabular}{p{0.35\textwidth}p{0.18\textwidth}p{0.37\textwidth}}
+\textbf{Claim surface} & \textbf{Status} & \textbf{Boundary}\\
+\hline
+Reduced coordinate CE/PV & proved windowwise / mixed-completed &
+pro finite-window comparison; global \(P_0\) bracket requires mixed or
+weighted continuity; strict product completion is obstructed\\
+Full \(Z^{P_0}_{\mathrm{fact}}\) of the open BV algebra &
+open & requires centrality homotopies, descent, and QME data\\
+Full open BV identification & open &
+only the scalar-reduced connected Hamiltonian sector is used\\
+Full formal conilpotent Koszul duality & conditional &
+only admissible Tate, nilpotent, weighted, or relative envelopes\\
+Matlis cotangent module & proved &
+\(\operatorname{Ann}_{\mathrm{res}}(\C\cdot1)\) is a residue-annihilator,
+not a naive \(R\)-submodule quotient\\
+Finite-\(N\) radial parts & conditional &
+uses the external radial-parts input\\
+Costello graph/QME realization & conditional &
+requires locality, counterterms, propagator, and vanishing QME obstruction\\
+QME cancellation mechanisms & partial &
+scalar central-character and balanced-supertrace mechanisms are proved; no exhaustive classification
+\end{tabular}
+\end{center}
 
 \medskip
 \paragraph{Theorem data.}
@@ -57,23 +85,28 @@ vanishing period, anomaly, QME, descent, and operadic obstruction vector.
     \xrightarrow{\sim}
     \mathrm{PV}(\mathbf S(\mathfrak h_{\le M}))
   \]
-  with \(c\mapsto\theta\), \(u\mapsto O\).  The finite windows assemble
-  when the bracket, coadjoint, and Casimir transition defects vanish.
+  with \(c\mapsto\theta\), \(u\mapsto O\).  The coordinate comparison
+  assembles as a pro finite-window statement and as a completed statement
+  only in a mixed or weighted topology where the contraction bracket is
+  continuous.  The strict ambient product/direct-sum completion is
+  obstructed by the infinite diagonal.
 
   \item \emph{Completed formal disk CE/PV.}
-  The completed formal-disk comparison is
+  The completed formal-disk comparison is a pro finite-window or
+  mixed-continuous comparison
   \[
-    \Phi=\varprojlim_M\Phi_M\colon
+    \Phi\colon
     C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g)
     \longrightarrow
     \mathrm{PV}(\widehat{\mathbf S}_{\mathrm{Tate}}(\mathfrak h)).
   \]
-  Its transition obstruction terms are
+  Its coordinate transition obstruction terms are
   \[
     \mathfrak o^{\mathrm{br}}_{M,N},\qquad
-    \mathfrak o^{\mathrm{coad}}_{M,N},\qquad
-    \mathfrak o^{\mathrm{Cas}}_{M,N}.
+    \mathfrak o^{\mathrm{coad}}_{M,N}.
   \]
+  The separate strict-kernel and ambient-product bracket obstruction is
+  \(\mathfrak o^{\mathrm{Cas}}_{M,N}\).
 
   \item \emph{Admissible Tate bar-cobar/Quillen envelope.}
   For an admissible Tate replacement
@@ -107,8 +140,12 @@ vanishing period, anomaly, QME, descent, and operadic obstruction vector.
 
   \item \emph{Primitive higher-\(\psi\) extraction.}
   The primitive Koszul complex has nonconstant Hamiltonian \(H_0\)
-  classes and one-\(\psi\) primitive \(H_1\) classes \(\Psi_{a,b}\);
-  the higher primitive sectors satisfy \(H_p=0\) for \(p\ge2\).  The
+  classes and positive Hamiltonian one-\(\psi\) primitive \(H_1\)
+  classes \(\Psi_{a,b}\) with \(a+b>0\).  The scalar
+  \(\Psi_{0,0}=\operatorname{Tr}(\psi)\) is the removed odd scalar line,
+  not a Matlis principal-part class.  The higher primitive sectors
+  satisfy \(H_p=0\) for \(p\ge2\) in the stable finite-bidegree cyclic
+  word model.  The
   one-\(\psi\) action is
   \[
     \{\overline{\operatorname{Tr}(\phi_1^p\phi_2^q)},

@@ -1,7 +1,7 @@
 % frontier_mnop_framing_volume.tex
-% Standalone frontier notes: MNOP as E_2-centre automorphism,
-% chain-level S^3-framing on the quintic, chiral-volume quintic data,
-% and the NCCR substitute at generic compact CY_3.
+% Standalone frontier notes: MNOP/DT/PT source facts, E_2-centre
+% conjecture, S^3-framing targets on the quintic, chiral-volume quintic
+% evidence, and compact CY_3 categorical descent targets.
 %
 % Not bound into main.tex: the main paper is the closed local
 % mixed A/B theorem on R^2 x C^2. This file records the compact
@@ -37,14 +37,13 @@
 \providecommand{\cO}{\mathcal{O}}
 \renewcommand{\P}{\mathbb{P}}
 
-\title[MNOP, framing, volume on the quintic]{MNOP as an $\E_2$-centre
-  automorphism, chain-level $S^3$-framing on the quintic, and the
-  chiral-volume asymptotic}
+\title[Compact CY$_3$ frontier]{Conditional compact CY$_3$ frontier:
+  MNOP substitution, $S^3$ framing, and quintic period evidence}
 
 \begin{document}
 \maketitle
 
-\section{The MNOP substitution as an $\E_2$-centre automorphism}\label{sec:mnop}
+\section{MNOP source facts and the $\E_2$-centre target}\label{sec:mnop}
 
 Let $X$ be a smooth compact Calabi--Yau threefold. Write
 $\Perf(X)$ for its perfect derived category, $\PhiFA_3:
@@ -66,23 +65,17 @@ Three dualisable $\cF_X$-modules are canonically attached to $X$:
     1997), with $Z_{\GW}(u) = \sum_g \GW_g(X) u^{2g-2}$.
 \end{itemize}
 
-\begin{thm}[Chain-level MNOP at the quintic]\label{thm:mnop-quintic}
+\begin{thm}[DT/PT factorisation at the quintic]\label{thm:mnop-quintic}
   Let $Q \subset \P^4$ be a smooth quintic threefold, so that
   $\chi(Q) = -200$. The degree-zero DT generating function factors off
   as the MacMahon power, and the reduced DT partition function
   coincides with the PT partition function:
   $$Z_{\DT}(Q;\, q) \;=\; M(-q)^{\chi(Q)} \cdot Z_{\PT}(Q;\, q),
     \qquad M(q) = \prod_{n \geq 1}(1-q^n)^{-n}.$$
-  There is a unique $\E_2$-centre automorphism
-  $$\sigma_Q \in \Aut_{\E_2}\bigl(Z_{\E_2}(\cF_Q)\bigr)$$
-  effecting the substitution $-q = e^{iu}$ on the Novikov torus and
-  intertwining $M_{\PT}$ with $M_{\GW}$ via
-  $$\sigma_Q \cdot Z'_{\PT}(Q;\, q) \;=\; Z'_{\GW}(Q;\, u)\big|_{-q = e^{iu}},$$
-  where the primes denote the connected-component (reduced)
-  amplitudes, normalised by dividing out the degree-zero
-  contribution. This PT/GW leg is conditional on the
-  Katz--Klemm--Vafa integrality conjecture for $Q$; it is verified
-  through genus $22$ by Huang--Klemm--Quackenbush.
+  The PT/GW leg with substitution \(-q=e^{iu}\) is conditional on the
+  Katz--Klemm--Vafa integrality conjecture for \(Q\); it is finite-genus
+  evidence through genus \(22\) in the Huang--Klemm--Quackenbush
+  computation.
 \end{thm}
 
 \begin{proof}[Proof sketch]
@@ -96,50 +89,43 @@ Three dualisable $\cF_X$-modules are canonically attached to $X$:
   with the degree-zero Behrend-weighted Euler characteristic of
   $\Hilb(Q)$.
 
-  The $\E_2$-centre automorphism $\sigma_Q$ effecting
-  $-q = e^{iu}$ exists and is unique by rigidity of $\Aut_{\E_2}$ on
-  a simply-connected $\E_2$-algebra: Dunn additivity gives
-  $\pi_0 \Aut_{\E_2}(Z_{\E_2}(\cF_Q))
-  \hookrightarrow \Aut_{\mathrm{gr}}(H^*Z)$, and the graded
-  automorphism group of the PT vertex algebra contains a unique
-  involution compatible with the motivic MacMahon factor.
-
   The PT/GW intertwining $Z'_{\GW}(u) = Z'_{\PT}(q)|_{-q = e^{iu}}$
   is the MNOP identity at connected-component level, equivalent to
   KKV integrality of $n_\beta^g$: the multi-cover formula
   $\GW_g(Q) = \sum_\beta n_\beta^g \cdot (\text{multi-cover})$ is
   universal, and the DT/GW correspondence at $Q$ reduces to
   integrality of the BPS invariants $n_\beta^g$.
-  Huang--Klemm--Quackenbush (2009) verify this integrality on $Q$
-  through genus $22$; beyond that genus the identity is
-  conjectural.\qed
+	  Huang--Klemm--Quackenbush (2009) verify this integrality on $Q$
+	  through genus $22$; beyond that genus the identity is
+	  conjectural.\qed
 \end{proof}
 
-\begin{rmk}
+\begin{conj}[E2-centre MNOP package]\label{conj:e2-centre-mnop-package}
   The substitution $-q = e^{iu}$ is not a tautology. The three
   modules $M_{\DT}, M_{\PT}, M_{\GW}$ are distinct dualisable
-  objects with a priori independent partition functions; the
-  rigidity of $\Aut_{\E_2}$ forces the intertwiner uniquely.
-\end{rmk}
+  objects with a priori independent partition functions.  The desired
+  chain-level upgrade is a constructed automorphism
+  \[
+    \sigma_Q\in\Aut_{\E_2}\bigl(Z_{\E_2}(\cF_Q)\bigr)
+  \]
+  effecting \(-q=e^{iu}\), together with a rigidity theorem proving its
+  uniqueness.  This is target data: it neither constructs
+  \(\sigma_Q\) nor proves \(\Aut_{\E_2}\)-rigidity.
+\end{conj}
 
 \begin{rmk}[Generic compact CY$_3$, via Joyce--KPS vertex algebra]
-  Theorem~\ref{thm:mnop-quintic} extends to any smooth projective
-  CY$_3$ $X$: the Joyce vertex algebra $V_X$ on the derived
+  The DT/PT factorisation has a source-backed smooth projective
+  CY$_3$ form.  The Joyce vertex algebra $V_X$ on the derived
   moduli stack $\cM_X$ of perfect complexes (Joyce 2021,
   arXiv:2111.04694 Theorem~5.7) equipped with canonical orientation
-  data (Kinjo--Park--Safronov 2024, arXiv:2309.08673 Theorem~1.2)
-  carries three dualisable modules $M_{\DT}^X, M_{\PT}^X, M_{\GW}^X$
-  whose Behrend-weighted $\E_2$-traces are intertwined by a unique
-  $\E_2$-centre automorphism $\sigma_X$ effecting $-q = e^{iu}$.
-  Uniqueness is Dunn additivity
-  $\mathrm{Aut}_{\E_2}(Z_{\E_2}(V_X)) = \Omega^2\mathrm{Aut}(V_X)$:
-  the graded-automorphism group is the Picard-lattice isometry group
-  together with the KPS orientation $\Z/2$, forcing
-  $\sigma_X: y\mapsto -y$, $(q, Q)\mapsto (q, Q)$. The DT/PT leg is
+  data (Kinjo--Park--Safronov 2024, arXiv:2309.08673 Theorem~1.2) is the
+  expected home for a chain-level centre statement.  The DT/PT leg is
   unconditional; the PT/GW leg is KKV-conditional
   (known for toric targets by MNOP 2006, for primitive-fibre
   $K3 \times E$ by Oberdieck--Pandharipande 2015, and in the
-  projective-$\beta$ case by Maulik--Toda 2018). See Vol III,
+  projective-$\beta$ case by Maulik--Toda 2018).  The unique
+  \(\E_2\)-centre automorphism remains target data, not a theorem in this
+  note. See Vol III,
   Theorem~\path{thm:mnop-generic-cy3-joyce-kps}, in
   \path{chapters/examples/k3_chiral_bialgebra_platonic.tex}, for the
   complete statement.
@@ -158,12 +144,12 @@ lies in
 $$\pi_0\bigl(\mathrm{Map}(S^3, SO(3))\bigr) = \pi_3(SO(3)) = \Z,$$
 corresponding to Hirzebruch's $\sigma$-invariant.
 
-\begin{prop}[Canonical chain-level trivialisation]
+\begin{prop}[Normal-bundle orientation and topological triviality]
   \label{prop:s3-framing-quintic}
   For a Lagrangian $L \cong S^3 \subset Q$ in a smooth quintic
-  threefold, the framing torsor $\mathrm{Fr}(L)$ admits a canonical
-  chain-level trivialisation induced by the CY$_3$ structure on
-  $Q$. Explicitly, the line bundle
+  threefold, the CY$_3$ structure orients \(N_{L/Q}\), and the oriented
+  rank-three bundle \(N_{L/Q}\to S^3\) is topologically trivial.
+  Explicitly, the line bundle
   $$\det T_L \otimes \det N_{L/Q} = \det\bigl(TQ|_L\bigr)$$
   is canonically trivialised by the nowhere-vanishing holomorphic
   volume form $\Omega_Q \in H^0(Q, K_Q)$ (which trivialises
@@ -180,20 +166,18 @@ corresponding to Hirzebruch's $\sigma$-invariant.
   hence $\det(N_{L/Q})$ is trivial, fixing an orientation on the
   rank-$3$ normal bundle $N_{L/Q} \to S^3$. Every oriented rank-$3$
   real bundle on $S^3$ is trivial: the classifying map lands in
-  $BSO(3)$, and $\pi_3(BSO(3)) = \pi_2(SO(3)) = 0$. The holomorphic
-  volume form $\Omega_Q$ therefore picks out a definite homotopy
-  class of global frame of $N_{L/Q}$, up to the contractible space of
-  oriented parallelisations of $S^3$; this is the chain-level framing
-  datum of Costello 2017 \S4.\qed
+  $BSO(3)$, and $\pi_3(BSO(3)) = \pi_2(SO(3)) = 0$. This proves
+  orientation and topological trivializability.  It does not select the
+  integer point of the framing torsor
+  \(\pi_3(SO(3))=\Z\), nor a BV/$A_\infty$ chain homotopy.\qed
 \end{proof}
 
-\begin{rmk}
-  Proposition~\ref{prop:s3-framing-quintic} upgrades the
-  Priority-7 assertion ``CY-A topological $\Rightarrow$ chain'' on
-  the quintic: the CY-A datum (holomorphic volume form) directly
-  produces the chain-level framing datum without further
-  contractible-choice input.
-\end{rmk}
+\begin{conj}[Chain-level \(S^3\)-framing target]
+  A chain-level framing requires a chosen integer framing class in the
+  \(\Z\)-torsor of trivializations and a Costello-compatible homotopy on
+  the brane BV complex.  The holomorphic volume form supplies the
+  orientation/triviality input above, not the full chain-level datum.
+\end{conj}
 
 \section{Chiral-volume conjecture at small enumerative degree}
 
@@ -245,15 +229,15 @@ increments
 \{+0.029,\ +0.060,\ +0.062,\ +0.058,\ +0.052,\ +0.046,\ +0.041\}.
 \]
 
-\begin{prop}[Extended quintic chiral-volume data through $N = 10$]
+\begin{prop}[Finite quintic chiral-volume evidence through $N = 10$]
   \label{prop:chiral-volume-quintic}
   The sequence $a_N = N^{-1} \log n_N$ on the quintic with hyperplane
   class $H$ has a minimum at $N = 3$ and, on the tail
   $N \in \{5, \dots, 10\}$, fits the three-parameter ansatz
   $$a_N \;=\; L \;+\; \alpha\, \frac{\log N}{N} \;+\; \frac{\beta}{N}$$
   to residuals below $5 \times 10^{-6}$ with
-  $L = 7.593$, $\alpha = -3.32$, $\beta = 0.45$. The extrapolated
-  limit $L$ agrees to three significant figures with the
+  $L = 7.593$, $\alpha = -3.32$, $\beta = 0.45$. The fitted
+  parameter \(L\) is compatible, to three significant figures, with the
   Hodge-normalised mirror period $|t(z_c)|$ at the conifold point
   $z_c = 5^{-5}$ of the Candelas--de la Ossa--Green--Parkes mirror
   family:
@@ -262,9 +246,10 @@ increments
   with $\omega_0 = \sum_n ((5n)!/(n!)^5)\, z^n$ the fundamental period
   and $\omega_1 = \omega_0(z) \log z + \sum_n ((5n)!/(n!)^5) \cdot
   5(H_{5n} - H_n)\, z^n$ the logarithmic period ($H_k$ the $k$-th
-  harmonic number). The attractor upper bound is the OSV rate
-  $5 \log 5 \approx 8.047$; the data $\{a_N\}$ rises monotonically
-  from $N = 4$ toward this bound.
+  harmonic number). The OSV physical rate is
+  $5 \log 5 \approx 8.047$; the finite data $\{a_N\}$ rises
+  monotonically from $N = 4$ in a way compatible with, but not proving,
+  that asymptotic picture.
 \end{prop}
 
 \begin{proof}
@@ -288,17 +273,19 @@ increments
   $5 \log 5$ is the Ooguri--Strominger--Vafa entropy rate at the
   rank-$1$ attractor $\gamma = N [H]$:
   $\log \Omega_{\mathrm{BPS}}(N \gamma) \sim \pi |Z(\gamma)|^2
-  \sim N \cdot 5 \log 5 + o(N)$.\qed
+  \sim N \cdot 5 \log 5 + o(N)$. This is used here as physical
+  asymptotic evidence, not as a theorem for the fixed-class quintic
+  counts.\qed
 \end{proof}
 
 \begin{rmk}
   The extended data closes the $6 \leq N \leq 10$ computational gap
-  of the prior small-$N$ table. Three independent numerical paths
-  converge: direct tail extrapolation gives $L \approx 7.59$, the
+  in the preceding small-\(N\) data. Three independent numerical paths
+  are mutually compatible: direct tail extrapolation gives \(L\approx7.59\), the
   CDGP mirror period $|t(z_c)| \approx 7.60$, the OSV attractor
   bound $5 \log 5 \approx 8.05$. The correction
   $\alpha = -3.32 < 0$ forces the approach to $L$ from below: the
-  chiral-volume limit is \emph{not} bounded above by
+	  conjectural chiral-volume limit would therefore not be bounded above by
   $\{a_1, a_2, a_3\}$; those points lie on the
   Schubert--Katz--Ellingsrud--Str\o mme Fano-geometric branch, below
   the large-$N$ BPS regime that governs the asymptotic.
@@ -313,11 +300,11 @@ increments
   holomorphic $3$-form $\Omega_Q$ along $C_H$. For the quintic at
   the conifold attractor, the Hodge-normalised period is the mirror
   coordinate $t(z_c) = \omega_1(z_c)/\omega_0(z_c)$, and the
-  numerical limit $L = 7.59$ equals $|t(z_c)| = 7.60$ directly: the
+  fitted value \(L=7.59\) is compatible with \(|t(z_c)|=7.60\): the
   $1/(2\pi)$ factor in the conjecture is absorbed into the
   $2\pi i$-normalised monodromy of the log-period $\omega_1$. The
-  three-path convergence on $L \in [7.59,\, 8.05]$ confirms this
-  normalisation.
+  three-path finite evidence on \(L\in[7.59,\,8.05]\) supports this
+  normalisation but does not prove the \(N\to\infty\) limit.
 \end{rmk}
 
 \section{NCCR substitute at generic compact CY$_3$}
@@ -331,39 +318,33 @@ At the smooth quintic $Q$ there is no crepant resolution to
 resolve --- $Q$ is already smooth --- and the NCCR question
 degenerates in the following strict sense.
 
-\begin{prop}[Serre-equivariant quasi-NCCR on smooth compact CY$_3$]
+\begin{prop}[Serre pairing on smooth compact CY$_3$]
   \label{prop:serre-nccr-substitute}
   Let $X$ be a smooth compact Calabi--Yau threefold. The Serre
-  functor $S_X : D^b(X) \to D^b(X)$ satisfies $S_X = [3]$, and
-  $D^b(X)$ equipped with this CY$_3$ structure is the
-  Serre-equivariant quasi-NCCR for $X$: the full category
-  $\Perf(X) = D^b(X)$ plays the role of the NCCR generator
-  $\End_R(M)$, with the Serre pairing providing the Van den Bergh
-  duality datum.
+  functor $S_X : D^b(X) \to D^b(X)$ satisfies \(S_X=[3]\).  The CY$_3$
+  structure gives the Serre pairing on \(\Perf(X)=D^b(X)\).  This is the
+  categorical Calabi--Yau datum that any local quasi-NCCR descent must
+  preserve; it is not by itself a Van den Bergh NCCR or a global
+  quasi-NCCR construction.
 \end{prop}
 
 \begin{proof}
   Smoothness plus $K_X = \cO_X$ gives $S_X = \otimes K_X[3] = [3]$.
   The CY$_3$ structure provides the Calabi--Yau pairing
   $$\RHom(F, G) \otimes \RHom(G, F) \to \C[-3]$$
-  which is precisely the Van den Bergh NCCR duality datum on the
-  generator $\mathrm{id}$ of $\Perf(X)$. Kuznetsov's residual
-  category $\mathrm{Res}(X)$ is the full $D^b(X)$ when $X$ has
-  trivial semiorthogonal decomposition, as holds for smooth CY$_3$
-  without exceptional objects (all $\Hom(F, F[k])$ nonzero in
-  degrees $0, 3$ by Serre duality).\qed
+  which is the Serre duality pairing.  No sheaf of endomorphism algebras,
+  local tilting object, or descent datum is constructed here.\qed
 \end{proof}
 
 \begin{rmk}
-  Proposition~\ref{prop:serre-nccr-substitute} settles the
-  Priority ``global NCCR substitute'' at the quintic cleanly: the
-  substitute is the CY$_3$ structure itself. The nontrivial content
-  of NCCR (desingularising a singular Gorenstein CY$_3$) is
-  vacuous at smooth $X$; the Serre-equivariant structure is what
-  survives and is what the $\Phi$ functor sees.
+  Proposition~\ref{prop:serre-nccr-substitute} records the Serre
+  structure that a compact-CY substitute must preserve.  The global
+  quasi-NCCR descent problem remains target data: one still needs a local
+  algebraic or dg model with finite-dimensionality, descent, and
+  Serre-equivariance hypotheses checked.
 \end{rmk}
 
-\section{Absolute Fourier--Mukai self-duality on $K3 \times E$}
+\section{Fourier--Mukai partners for $K3 \times E$}
 
 The Kuznetsov homological projective duality (Kuznetsov 2007,
 arXiv:math/0610957) takes as input a smooth projective variety $X$
@@ -378,16 +359,16 @@ derives its content from non-trivial Lefschetz collections on a Fano
 ambient --- does not apply in the Fano sense to the CY$_3$ $K3 \times
 E$.
 
-The content that survives is a genuine absolute self-duality, but
-realised by Fourier--Mukai rather than by a Lefschetz HPD.
+The content that survives is a Fourier--Mukai partner construction,
+not a Lefschetz HPD or an automatic self-duality statement.
 
-\begin{thm}[Absolute Fourier--Mukai self-duality on $K3 \times E$]
+\begin{thm}[Fourier--Mukai equivalence in the isotropic \(K3\times E\) case]
   \label{thm:fm-self-duality-k3e}
   Let $S$ be a projective $K3$ surface with primitive polarisation
   $H_S$, and let $E$ be a principally polarised elliptic curve. Fix a
   Mukai vector $v = (r, \ell, s) \in \widetilde{H}(S, \Z)$ with $\ell
-  \in \mathrm{NS}(S)$, Mukai pairing $\langle v, v \rangle = 2n \geq
-  -2$, and $H_S$ chosen $v$-generic. Assume the coprimality condition
+  \in \mathrm{NS}(S)$, Mukai pairing \(\langle v,v\rangle=0\), and
+  $H_S$ chosen $v$-generic. Assume the coprimality condition
   \begin{equation}\label{eq:coprimality-star}
     \gcd(r,\, \ell \cdot H_S,\, s) = 1. \tag{$\star$}
   \end{equation}
@@ -410,20 +391,21 @@ realised by Fourier--Mukai rather than by a Lefschetz HPD.
         D^b(S \times E) \xrightarrow{\,\sim\,}
         D^b(M \times E)$$
       is an equivalence of CY$_3$ categories preserving the Serre
-      structure $S_{X} = [3]$, i.e.\ an absolute self-duality of
-      $D^b(K3 \times E)$ in the Fourier--Mukai sense.
+      structure $S_{X} = [3]$.  When \(M\simeq S\) this is an
+      untwisted Fourier--Mukai self-equivalence; in general it is a
+      derived equivalence to the partner \(M\times E\).
   \end{enumerate}
 \end{thm}
 
 \begin{proof}
   (1) Under $(\star)$ and $v$-genericity of $H_S$, every
   $H_S$-semistable sheaf with Mukai vector $v$ is stable
-  (no strictly semistables); the moduli $M$ is then a smooth
-  projective holomorphic symplectic surface with $\langle v, v \rangle
-  = 2 \dim M - 2 = 2n$. For $n = 1$ one gets a $K3$; for $n \geq 2$
-  the moduli is higher-dimensional hyperk\"ahler (O'Grady). The
-  $K3$-case is exactly $n = 1$, equivalently $\langle v, v \rangle =
-  2$.
+  (no strictly semistables); the moduli $M$ is then a smooth projective
+  holomorphic symplectic variety of dimension
+  \(\langle v,v\rangle+2=2\).  Hence \(M\) is a \(K3\) surface.  For
+  positive Mukai square the moduli space is higher-dimensional
+  hyperk\"ahler and the product with \(E\) is no longer a CY$_3$ of the
+  form asserted here.
 
   (2) The universal sheaf $\mathcal{U}$ exists on $S \times M$ under
   $(\star)$: $\gcd(r, \ell \cdot H_S, s) = 1$ kills the Brauer
@@ -453,17 +435,17 @@ realised by Fourier--Mukai rather than by a Lefschetz HPD.
   survives.\qed
 \end{proof}
 
-\begin{prop}[Dichotomy at coprimality]
+\begin{prop}[Brauer-twisted dichotomy in the isotropic case]
   \label{prop:coprimality-dichotomy}
-  Drop $(\star)$ in Theorem~\ref{thm:fm-self-duality-k3e}. Then there
+  Keep the isotropic hypothesis \(\langle v,v\rangle=0\) and drop
+  $(\star)$ in Theorem~\ref{thm:fm-self-duality-k3e}. Then there
   exists a Brauer class $\alpha \in \mathrm{Br}(M)$, whose order
   divides $\gcd(r, \ell \cdot H_S, s)$, such that
   $$D^b(S \times E) \simeq D^b\bigl((M, \alpha) \times E\bigr),$$
   where the right-hand side denotes the derived category of
-  $p_M^*\alpha$-twisted sheaves. The self-dual partner is an
-  $(M, \alpha) \times E$ with twisted $K3$ factor; the untwisted
-  self-duality of Theorem~\ref{thm:fm-self-duality-k3e} fails beyond
-  coprimality.
+  $p_M^*\alpha$-twisted sheaves. The partner is
+  \((M,\alpha)\times E\) with twisted \(K3\) factor; an untwisted
+  kernel exists only under the coprimality hypothesis.
 \end{prop}
 
 \begin{proof}
@@ -476,13 +458,14 @@ realised by Fourier--Mukai rather than by a Lefschetz HPD.
 \end{proof}
 
 \begin{rmk}[Why ``Kuznetsov Fano HPD'' is the wrong frame]
-  The W1 TS-B reduction targeted a ``Kuznetsov Fano HPD on $K3
-  \times E$''. Kuznetsov Fano HPD requires a smooth Fano ambient
+  The attempted ``Kuznetsov Fano HPD on $K3
+  \times E$'' formulation requires a smooth Fano ambient
   with a non-trivial Lefschetz collection; $K3 \times E$ is CY$_3$,
-  not Fano, and its $D^b$ is indecomposable. The correct absolute
-  self-duality is Fourier--Mukai
-  (Theorem~\ref{thm:fm-self-duality-k3e}), governed by Mukai-vector
-  coprimality $(\star)$, with the Brauer-twisted dichotomy
+  not Fano, and its $D^b$ is indecomposable. The correct replacement is
+  the Fourier--Mukai partner construction
+  (Theorem~\ref{thm:fm-self-duality-k3e}), in the isotropic
+  Mukai-vector case and governed by coprimality $(\star)$, with the
+  Brauer-twisted dichotomy
   (Proposition~\ref{prop:coprimality-dichotomy}) supplying the
   beyond-coprimality partner. The Kuznetsov--Perry 2019
   categorical-join / rectangular-HPD machinery does not upgrade
@@ -492,14 +475,17 @@ realised by Fourier--Mukai rather than by a Lefschetz HPD.
 \end{rmk}
 
 \begin{rmk}[Alignment with Vol III]
-  Coprimality $(\star)$ is the same ``primitive Mukai vector''
-  hypothesis that controls Maulik--Pandharipande--Thomas 2010 at
-  $K3 \times E$ and the $\kappa$-spectrum
-  $\{2, 3, 5, 24\}$ inscribed in
-  \texttt{cy\_d\_kappa\_stratification.tex}: $\kappa_{\mathrm{cat}}
-  (K3 \times E) = \chi(\cO) = 0$ by K\"unneth, and the
-  Fourier--Mukai self-duality here preserves $\chi(\cO)$ since it
-  is an exact equivalence of CY$_3$ categories.
+  Coprimality $(\star)$ is the primitive Mukai-vector hypothesis that
+  controls the untwisted Fourier--Mukai kernel.  The total-space
+  categorical value is
+  \(\kappa_{\mathrm{cat}}(K3\times E)=\chi(\cO)=0\) by K\"unneth.  The
+  Vol III comparison keeps the other normalizations separate:
+  \(\kappa_{\mathrm{ch}}^{\mathrm{Heis}}=3\),
+  \(\kappa_{\mathrm{BKM}}(\Phi_1)=5\) in the paramodular
+  \(\Delta_5\) row, \(\kappa_{\mathrm{fibre}}(K3)=2\), and
+  \(\mathrm{rk}\,\widetilde H^*(K3)=24\).  The value \(2\) is fibre
+  Euler data, and the value \(24\) is Mukai-rank data; neither is the
+  compact CY$_3$ total-space invariant.
 \end{rmk}
 
 \section{Non-perturbative BCOV on the quintic: Gopakumar--Vafa closure}
@@ -522,9 +508,9 @@ is expected, and checked in the standard conifold asymptotics, to be
 Gevrey-$1$ in $\lambda$: the Shenker--Marino factorial growth
 $F_g \sim (2g - 3)! / A^{2g - 2}$ with $A = \oint_{\gamma_c} \Omega_X$
 the vanishing-cycle period at the nearest conifold singularity forces
-Borel non-summability on the physical ray. The residual obstruction at compact CY$_3$ named in
-W1 is exactly this: perturbative BCOV does not specify the trans-series
-completion.
+Borel non-summability on the physical ray. The residual obstruction at
+compact CY$_3$ is exactly this: perturbative BCOV does not specify the
+trans-series completion.
 
 The Gopakumar--Vafa 1998 M-theory argument predicts and organizes the full
 topological string amplitude as a sum over M2-brane BPS states,
@@ -540,7 +526,7 @@ at $\lambda = 2\pi k / m$ whose residues are electric--magnetic
 pair-production amplitudes. This is the proposed trans-series completion
 missing from perturbative BCOV.
 
-\begin{conj}[GV non-perturbative closure on the quintic, through genus $22$]
+\begin{conj}[GV non-perturbative closure target on the quintic]
   \label{conj:bcov-np-quintic}
   Let $Q \subset \P^4$ be the smooth quintic. Let
   $F^{\mathrm{BCOV}}_g(Q, t)$ be the genus-$g$ solution of the BCOV
@@ -552,25 +538,24 @@ missing from perturbative BCOV.
   $t_c$ is the image of the conifold locus $\psi = 1$ on the
   complex-structure moduli space of the mirror quintic $\widetilde Q$:
   \begin{enumerate}
-    \item[(i)] \emph{(Genus-by-genus agreement, verified.)} For every
+    \item[(i)] \emph{(Finite-genus evidence.)} For every
       $0 \leq g \leq 22$,
       \[
         F^{\mathrm{BCOV}}_g(Q, t) \;=\; [\lambda^{2g - 2}]\, F^{\mathrm{GV}}(\lambda, t)
       \]
       as formal power series in $e^{-\beta \cdot t}$; equality holds in
       $\Z[[e^{-t}]]$ after the Katz--Klemm--Vafa integrality normalisation.
-    \item[(ii)] \emph{(Convergence of~\eqref{eq:gv-expansion} at fixed genus.)}
-      The genus-$0$ BPS series $\sum_\beta n_\beta^0 e^{-\beta t}$
-      converges absolutely on $\Re t > t_c$, with $t_c$ finite and equal
-      to the entropy temperature of genus-$0$ BPS states; the
-      Castelnuovo bound $n_\beta^0 \leq \binom{\beta \cdot H + 2}{2} + O(\beta)$
-      (HKQ 2009) is the input.
-    \item[(iii)] \emph{(Stokes match at the conifold.)} The trans-series
+    \item[(ii)] \emph{(Convergence target.)}
+      The genus-$0$ BPS series $\sum_\beta n_\beta^0 e^{-\beta t}$ is
+      expected to have a nonempty convergence domain controlled by the
+      conifold/entropy scale.  No coefficient-growth theorem proving this
+      convergence is supplied here.
+    \item[(iii)] \emph{(Local conifold Stokes evidence.)} The trans-series
       completion of $F^{\mathrm{pert}}$ produced by the GV resummation
-      agrees at the conifold point $\psi = 1$ with the Candelas--de la
-      Ossa--Green--Parkes 1991 mirror-period monodromy: the Stokes
-      constant across the conifold ray is $S_c = 1$, and the instanton
-      action is $A = 2\pi i\, \tau_c$ where $\tau_c$ is the
+      is compatible near the conifold point $\psi = 1$ with the
+      Candelas--de la Ossa--Green--Parkes 1991 mirror-period monodromy:
+      the local Stokes normalization is expected to have \(S_c=1\), and
+      the instanton action is \(A=2\pi i\,\tau_c\), where \(\tau_c\) is the
       vanishing-cycle period $\oint_{\gamma_c} \Omega_{\widetilde Q}$.
   \end{enumerate}
 \end{conj}
@@ -586,11 +571,11 @@ missing from perturbative BCOV.
   propagator ring combined with Castelnuovo-type bounds on $n_\beta^g$;
   their computer-assisted computation is primary source.
 
-  (ii) The Castelnuovo bound gives $\log n_\beta^0 = O(\log \beta)$;
-  combined with the genus-zero MacMahon-type generating function,
-  $\sum_\beta n_\beta^0 e^{-\beta t}$ converges for $\Re t > 0$, the
-  actual radius $t_c$ being fixed by the conifold period
-  $t_c = -\log |\psi_c - 1|$ in the mirror coordinate.
+  (ii) The HKQ computation gives finite-genus and finite-degree data, but
+  Castelnuovo-type genus bounds do not bound the number \(n_\beta^0\) of
+  rational curves.  The convergence domain of the genus-zero BPS series is
+  therefore an open asymptotic input, outside the proved statements of
+  the compact-CY frontier.
 
   (iii) Near the conifold, Huang--Klemm 2007 establish the leading
   factorial growth
@@ -606,10 +591,10 @@ missing from perturbative BCOV.
   mirror symmetry; on the quintic this identification is the
   Candelas--de la Ossa conifold match and is scoped to a neighbourhood
   of the conifold ray, not to the full moduli space. The
-  \'Ecalle--Borel resurgent sum is unique once the Stokes constant
-  $S_c = 1$ is fixed by the monodromy of the mirror period across the
-  conifold ray; this is the Cecotti--Codesido--Marino 2013
-  resurgent-completion protocol, with HKQ data as input.
+  local \'Ecalle--Borel resurgent sum is compatible with the normalization
+  \(S_c=1\) across the conifold ray; this is the
+  Cecotti--Codesido--Marino 2013 resurgent-completion protocol, with HKQ
+  data as input, not a global compact-CY closure theorem.
 \end{rmk}
 
 \begin{conj}[Conditional conifold trinity on the quintic]
@@ -632,7 +617,7 @@ missing from perturbative BCOV.
   $A_{\mathrm{period}} = \oint_{\gamma_c} \Omega_{\widetilde Q}$ is
   the vanishing-cycle period at the conifold locus $\psi = 1$ on
   the mirror quintic. Equality of all three reads the conifold
-  Stokes constant as $S_c = 1$ with a single BPS hypermultiplet
+  Stokes normalization as \(S_c=1\) with a single BPS hypermultiplet
   $n_{\beta_c}^0 = 1$.
 \end{conj}
 
@@ -646,9 +631,10 @@ missing from perturbative BCOV.
   hypermultiplet that becomes massless at the conifold; its mass is
   the vanishing-cycle period. The two identifications compose to
   $A_{\mathrm{BCOV}} = A_{\mathrm{Schwinger}}$, and the Stokes
-  constant $S_c = 1$ follows from the Cecotti--Codesido--Marino
-  2013 resurgent-transseries match with $n_{\beta_c}^0 = 1$ on the
-  Strominger-paired A-side class.
+	  normalization \(S_c=1\) is the local Cecotti--Codesido--Marino
+	  2013 resurgent-transseries match with \(n_{\beta_c}^0=1\) on the
+	  Strominger-paired A-side class; it is not a global Stokes-sheaf
+	  construction.
 \end{rmk}
 
 \begin{rmk}[What (iii) does \emph{not} claim]
@@ -700,47 +686,47 @@ missing from perturbative BCOV.
   of the chiral-volume conjecture (Prop.~\ref{prop:chiral-volume-quintic}):
   the Hodge-normalised Abel--Jacobi period $|\AJ(C_H)|_{\mathrm{Hodge}}$
   coincides with the mirror-coordinate modulus $|t(z_c)|$ (Rmk.\
-  \ref{rmk:hodge-normalisation-aj}), so the chiral-volume limit
-  $L = 7.59$ is the logarithmic period
+  \ref{rmk:hodge-normalisation-aj}), so the conjectural
+  chiral-volume limit \(L\) would be the logarithmic period
   $|\varpi_1(z_c)/\varpi_0(z_c)|$ of the CDGP family evaluated at the
-  conifold attractor. HKQ genus-$22$ data closes this link through
-  genus $22$; higher genera require the resurgent completion of
+	  conifold attractor. HKQ genus-$22$ data gives finite evidence for this
+	  link; higher genera require the resurgent completion of
   Conjecture~\ref{conj:bcov-np-quintic}(iii).
 \end{rmk}
 
 \section{Honest-status summary}
 
 \begin{enumerate}
-  \item MNOP $-q = e^{iu}$ as the unique $\E_2$-centre automorphism
-    on $Z_{\E_2}(\cF_X)$: theorem on the $(DT, PT)$ pair for every
-    smooth compact CY$_3$ (Bridgeland--Toda + rigidity of
-    $\Aut_{\E_2}$); conditional on KKV for the $(DT, PT, GW)$ triple.
-    At the quintic, verified through genus $22$.
-  \item Chain-level $S^3$-framing on the quintic: theorem; canonical
-    trivialisation by $\Omega_Q$ (Prop.~\ref{prop:s3-framing-quintic}).
-  \item Chiral-volume conjecture on the quintic through $N = 10$:
+  \item MNOP source facts: the DT/PT MacMahon factorisation is theorem
+    grade.  The PT/GW leg is KKV-conditional and finite-genus evidence at
+    the quintic through genus \(22\).  The unique \(\E_2\)-centre
+    automorphism remains conjectural target data.
+  \item \(S^3\)-framing on the quintic: the CY volume form orients the
+    normal bundle and the oriented rank-three bundle is topologically
+    trivial (Prop.~\ref{prop:s3-framing-quintic}).  The integer framing
+    and Costello-compatible chain homotopy remain target data.
+  \item Chiral-volume evidence on the quintic through $N = 10$:
     the sequence $a_N = N^{-1} \log n_N$ has a minimum at $N = 3$
     and increases monotonically thereafter; the three-parameter
     tail fit $a_N = L + \alpha (\log N)/N + \beta / N$ gives
-    $L = 7.593$, matching the CDGP conifold-point mirror period
-    $|t(z_c)| = 7.599$ to three significant figures and bounded
-    above by the OSV attractor rate $5 \log 5 \approx 8.047$
+    $L = 7.593$, compatible with the CDGP conifold-point mirror period
+    $|t(z_c)| = 7.599$ to three significant figures and with the OSV
+    physical rate $5 \log 5 \approx 8.047$
     (Prop.~\ref{prop:chiral-volume-quintic}).
-  \item NCCR substitute at smooth compact CY$_3$: theorem;
-    $D^b(X)$ with Serre $= [3]$ is the Serre-equivariant
-    quasi-NCCR (Prop.~\ref{prop:serre-nccr-substitute}).
-  \item Absolute self-duality on $K3 \times E$: theorem in the
-    Fourier--Mukai sense under Mukai-vector coprimality $(\star)$
+  \item Smooth compact CY$_3$ categorical input: theorem-grade statement is
+    \(S_X=[3]\) and the Serre pairing
+    (Prop.~\ref{prop:serre-nccr-substitute}).  A local
+    Serre-equivariant quasi-NCCR descent object remains open target data.
+  \item Fourier--Mukai equivalence on $K3 \times E$: theorem in the
+    isotropic Mukai-vector case under coprimality $(\star)$
     (Theorem~\ref{thm:fm-self-duality-k3e}); dichotomy to twisted
     $K3$ partner beyond $(\star)$
     (Proposition~\ref{prop:coprimality-dichotomy}). Kuznetsov
     Fano HPD does not apply: $K3 \times E$ is CY$_3$, not Fano,
     and $D^b$ of each factor is Bridgeland-indecomposable.
-  \item Non-perturbative closure of BCOV on the quintic through
-    genus $22$: conjectural target checked against the three special loci (large
-    complex structure via GV, conifold via Stokes match, Gepner via
-    HKQ modular bootstrap); conditional on Cecotti--Codesido--Marino
-    2013 resurgence globally. Residual obstruction: the global
+  \item Non-perturbative closure of BCOV on the quintic: conjectural target
+    with finite-genus HKQ evidence and local conifold consistency.
+    Residual obstruction: convergence of the GV/BPS series and the global
     resurgent sheaf across all Stokes walls simultaneously
     (Conjecture~\ref{conj:bcov-np-quintic} and the following remark).
   \item Mirror-period recovery from the GV resummation
@@ -750,20 +736,19 @@ missing from perturbative BCOV.
     through $\beta \leq 3$ by Schubert / Katz / Ellingsrud--Strømme.
 \end{enumerate}
 
-Items~(1), (2), (4), and (5) upgrade prior conjectural statements to
-theorems within their scope. Item~(3) extends the quintic
-chiral-volume data through $N = 10$ and exhibits three-path numerical
-convergence on
+Theorem-grade statements are restricted to the DT/PT
+factorisation, the normal-bundle orientation/triviality statement, the
+Serre functor and pairing, and the isotropic Fourier--Mukai equivalence.
+Item~(3) extends the quintic chiral-volume data through $N = 10$ and
+exhibits finite numerical compatibility on
 \[
   L \approx 7.59 \approx |t(z_c)|,
 \]
 against the Candelas--de la Ossa--Green--Parkes conifold-point mirror
-period and the Ooguri--Strominger--Vafa attractor rate $5 \log 5$.
-Item~(6) states the non-perturbative completion target for BCOV at the
-quintic through genus $22$ at each special locus and names the exact
-remaining obstruction: a global resurgent sheaf across Stokes walls
-matching BCOV monodromy on the full Kahler moduli space. Items~(3),
-(6), and~(7) remain conjectural, sharpened against CDGP period data and
-HKQ BPS data.
+period and the Ooguri--Strominger--Vafa attractor rate \(5\log5\).
+Items~(1)'s \(\E_2\)-centre package, (2)'s chain-level framing, (3)'s
+large-\(N\) limit, (4)'s quasi-NCCR descent, (6), and~(7) remain
+conjectural or target data, sharpened against CDGP period data and HKQ
+BPS data.
 
 \end{document}

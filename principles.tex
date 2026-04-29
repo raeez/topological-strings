@@ -3,7 +3,7 @@
 After the symplectic primitive, scalar quotient, and residue
 normalization are fixed, the formal-local Koszul duality theory is
 organized by three source principles.  Each is physical in origin; each
-enters the manuscript as algebraic theorem data.  Together they specify
+enters as algebraic theorem data.  Together they specify
 the open brane complex, the closed Hamiltonian BF complex, the
 closed-open CE/PV map, the Tate coefficient envelope, the current lift
 datum, and the obstruction complexes controlling global use.
@@ -85,19 +85,22 @@ the shifted cotangent theory
   \mathfrak g
   =\mathfrak h\ltimes\mathfrak h^\vee_{\mathrm{cont}}[1].
 \]
-The finite and completed CE/PV theorem is the cochain identity
+The finite-window and coordinate-completed CE/PV theorem is the
+cochain identity
 \[
   C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g)
   \cong
-  \mathrm{PV}\bigl(\widehat{\mathbf S}_{\mathrm{Tate}}(\mathfrak h)\bigr)
-  \simeq
-  Z^{P_0}_{\mathrm{red,Ham}}
+  \mathrm{PV}_{\mathrm{coord}}
   \bigl(\widehat{\mathbf S}_{\mathrm{Tate}}(\mathfrak h)\bigr),
 \]
 with generator dictionary
 \[
   c^I\mapsto\theta^I,\qquad u_I\mapsto O_I .
 \]
+The \(Z^{P_0}_{\mathrm{red,Ham}}\) interpretation is made only after
+imposing the finite-window or mixed/weighted continuity condition that
+makes the bracket continuous; it is not a statement about the full
+ambient product completion.
 The boundary Hamiltonian observable is the image of the shifted
 cotangent coordinate \(u_I\). It is not the image of the Hamiltonian
 ghost coordinate \(c^I\). This distinction is the type check behind
@@ -138,18 +141,20 @@ contributes
   \hbar N\,\omega(f,g)
   \int_\R a(t)b(t)\gamma_{\mathbf 1}(t)\,dt .
 \]
-Its associated graded class is \(\hbar N[\bar c]\). The reduced
-Hamiltonian source has no constant Hamiltonian line on which the
-primitive \(\eta(f)=-[f]_0\) could live.  The scalar QME acceptance
-criterion is therefore explicit: choose a central-character primitive,
-a balanced-supertrace model, or a closed-exchange contribution
-\(W_{\mathrm{ext}}\) whose leading class satisfies
-\[
-  [w_{\mathrm{ext}}]=-\hbar N[\bar c]
-  \qquad\text{in }H^2_{\mathrm{CE}}(\bar A,\C).
-\]
-The obstruction complex controls any further mechanism by the same
-degree-one class.
+  Its associated graded class is \(\hbar N[\bar c]\). The reduced
+  Hamiltonian source has no constant Hamiltonian line on which the
+  primitive \(\eta(f)=-[f]_0\) could live.  A fixed scalar-reduced
+  ordinary \(\mathfrak{gl}_N\) lift therefore requires a closed-exchange
+  contribution \(W_{\mathrm{ext}}\) whose leading class satisfies
+  \[
+    [w_{\mathrm{ext}}]=-\hbar N[\bar c]
+    \qquad\text{in }H^2_{\mathrm{Lie}}(\bar A,\C).
+  \]
+  Alternatively, the unreduced central-character source absorbs the
+  scalar symbol before scalar reduction, while a Casimir-balanced
+  supertrace model makes the scalar representative zero.
+  The obstruction complex controls any further mechanism by the same
+  degree-one class.
 
 \subsection{Grothendieck: cotangent modes are residue currents}
 
@@ -215,7 +220,7 @@ formal-local programme.
   and separates principal parts from polynomial descendants.
 \end{enumerate}
 
-The rest of the paper proves the resulting package in independent
+The resulting package decomposes into independent
 lanes: the Dirac probe theorem; the stable trace and one-\(\psi\)
 calculation; the CE/PV derived-centre theorem; the Matlis
 principal-part theorem; the brane-line factorization-current theorem;

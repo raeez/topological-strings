@@ -5,8 +5,9 @@ Evidence harness for the quantum derived-center subsection of main.tex
 (propositions prop:moyal-monomial, prop:quantum-boundary-descends-products,
 lem:capelli-renormalized-stable-trace, thm:finite-n-reduced-moyal,
 cor:degree-zero-quantum-upgrade, prop:conditional-boundary-product-normalization,
-prop:open-line-midpoint-graph-weights, thm:first-third-costello-normalizations,
-thm:phi-hbar-all-order, cor:phi-hbar-supremum). The script is dependency-free;
+prop:open-line-midpoint-graph-weights, and the formal coefficient target used
+by thm:first-third-costello-normalizations, thm:phi-hbar-all-order, and
+cor:phi-hbar-supremum). The script is dependency-free;
 rationals are exact via `fractions.Fraction`. No NumPy/SymPy.
 
 It verifies, on the four nontrivial test pairs

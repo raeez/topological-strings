@@ -136,19 +136,26 @@ formal local theorem of \S\ref{ssec:local-theorem} applies.
   Problem~\ref{prob:weighted-rg-locality}.
 \end{defn}
 
-\begin{defn}[Super-balanced equivariant QME datum]\label{defn:super-balanced-equivariant-qme-datum}
-  A super-balanced equivariant brane-defect datum consists of:
+\begin{defn}[Casimir-balanced equivariant QME datum]\label{defn:super-balanced-equivariant-qme-datum}
+  A Casimir-balanced equivariant brane-defect datum consists of:
   \begin{enumerate}[label=(\roman*)]
     \item a matrix Lie superalgebra \(\mathfrak s\) acting on the
       Chan-Paton factor, together with an even nondegenerate invariant
       form \(B_{\mathfrak s}\) used to build the BV heat-kernel
       contraction;
     \item a trace character \(\operatorname{tr}_{\mathfrak s}\) on the
-      matrix factor and a lifted identity element \(I_{\mathfrak s}\)
-      with
+      matrix factor.  Let
+      \(C_{B_{\mathfrak s}}=\sum_\alpha e_\alpha\otimes e^\alpha\) be the
+      Casimir for \(B_{\mathfrak s}\), put
+      \(K_{\mathfrak s}=m(C_{B_{\mathfrak s}})\), and define the scalar
+      contraction coefficient \(\kappa_{\mathfrak s}\) on the scalar
+      trace line by
       \[
-        \operatorname{tr}_{\mathfrak s}(I_{\mathfrak s})=0;
+        \operatorname{tr}_{\mathfrak s}(A K_{\mathfrak s})
+        =
+        \kappa_{\mathfrak s}\operatorname{tr}_{\mathfrak s}(A).
       \]
+      The datum is Casimir-balanced when \(\kappa_{\mathfrak s}=0\);
     \item the weighted brane-defect local-functional complex
       \[
         \mathfrak Q_{\mathfrak s}=
@@ -157,6 +164,16 @@ formal local theorem of \S\ref{ssec:local-theorem} applies.
         d_{\mathrm{QME}}=Q+\{I_{0,\mathfrak s},-\}
         \right);
       \]
+    \item a \(d_{\mathrm{QME}}\)-stable scalar filtration and a filtered
+      chain projection
+      \[
+        \widehat\sigma_{\mathrm{sc}}\colon
+        \mathfrak Q_{\mathfrak s}
+        \longrightarrow
+        C^\bullet_{\mathrm{Lie}}(\bar A;\C\gamma_{\mathbf 1})[1]
+      \]
+      whose associated graded is the scalar-symbol map
+      \(\sigma_{\mathrm{sc}}\);
     \item a \(P_{(z_1)}\)-equivariant coefficient topology on the formal
       symplectic disk, where
       \[
@@ -171,10 +188,10 @@ formal local theorem of \S\ref{ssec:local-theorem} applies.
   boundary ghost line \(\C\gamma_{\mathbf 1}\).
 \end{defn}
 
-\begin{thm}[Theorem F double-prime: super-balanced equivariant scalar QME vanishing]\label{thm:joint-super-balanced-symp-qme-vanishing}
+\begin{thm}[Theorem F double-prime: Casimir-balanced equivariant scalar QME criterion]\label{thm:joint-super-balanced-symp-qme-vanishing}
   Let
   \((\mathfrak s,B_{\mathfrak s},\operatorname{tr}_{\mathfrak s})\)
-  be a super-balanced equivariant datum in the sense of
+  be a Casimir-balanced equivariant datum in the sense of
   Definition~\ref{defn:super-balanced-equivariant-qme-datum}.  For
   \(a,b\in\Omega^0_c(\R)\) and
   \(f,g\in\C[z_1,z_2]\), the scalar part of the mixed brane-defect QME
@@ -183,36 +200,41 @@ formal local theorem of \S\ref{ssec:local-theorem} applies.
     \operatorname{Ob}^{\mathfrak s}_{\mathrm{sc}}
     (\gamma_{\mathbf 1};a,f;b,g)
     =
-    \hbar\,\operatorname{tr}_{\mathfrak s}(I_{\mathfrak s})\,
+    \hbar\,\kappa_{\mathfrak s}\,
     \omega(f,g)
     \int_{\R}a(t)b(t)\gamma_{\mathbf 1}(t)\,dt .
   \]
-  Hence the scalar obstruction vanishes identically for a
-  super-balanced datum.  The vanishing is \(P_{(z_1)}\)-equivariant.
+  Hence the scalar obstruction vanishes identically on the
+  Casimir-balanced locus \(\kappa_{\mathfrak s}=0\).  The vanishing is
+  \(P_{(z_1)}\)-equivariant.
   Equivalently, the associated graded scalar class is
   \[
     [\operatorname{Ob}^{\mathfrak s}_{\mathrm{sc}}]
     =
-    \hbar\,\operatorname{tr}_{\mathfrak s}(I_{\mathfrak s})\,
+    \hbar\,\kappa_{\mathfrak s}\,
     [\bar c]
     \in
     H^2_{\mathrm{Lie}}(\bar A,\C\gamma_{\mathbf 1}),
   \]
-  and the theorem applies exactly on the super-balanced locus
-  \(\operatorname{tr}_{\mathfrak s}(I_{\mathfrak s})=0\).
+  and the theorem applies exactly on the Casimir-balanced locus
+  \(\kappa_{\mathfrak s}=0\).  For the standard
+  \(\mathfrak{gl}(N|N)\) supertrace pairing,
+  \(K_{\mathfrak s}=\operatorname{sdim}(V)I=0\), so
+  \(\kappa_{\mathfrak s}=0\).
   Thus the scalar channel is an accepted universal Koszul-duality input
   precisely on this locus: its acceptance component is the class
-  \(\hbar\,\operatorname{tr}_{\mathfrak s}(I_{\mathfrak s})[\bar c]\).
+  \(\hbar\,\kappa_{\mathfrak s}[\bar c]\).
 
   If, in addition, the reduced non-scalar summand
   \[
-    \mathfrak Q_{\mathfrak s}^{\mathrm{red}}
+    \mathfrak Q_{\mathfrak s}^{\mathrm{nsc}}
       =
       \operatorname{Cone}\!\left(
+      \widehat\sigma_{\mathrm{sc}}\colon
       \mathfrak Q_{\mathfrak s}
       \longrightarrow
-      C^\bullet_{\mathrm{Lie}}(\bar A;\C\gamma_{\mathbf 1})
-      \right)
+      C^\bullet_{\mathrm{Lie}}(\bar A;\C\gamma_{\mathbf 1})[1]
+      \right)[-1]
   \]
   has zero degree-one cohomology after the chosen weighted regulator and
   interval-factorization null-homotopies are imposed, then the complete
@@ -222,10 +244,10 @@ formal local theorem of \S\ref{ssec:local-theorem} applies.
 
 \begin{proof}
   The scalar contraction in the BV bracket is obtained by closing the
-  matrix index in the single boundary loop.  For an ordinary matrix
-  trace this contraction is \(N\).  For a supertrace datum it is the
-  trace of the lifted identity, namely
-  \(\operatorname{tr}_{\mathfrak s}(I_{\mathfrak s})\).  The target
+  matrix index in the single boundary loop.  With the invariant form
+  \(B_{\mathfrak s}\) this contraction is the multiplication
+  \(K_{\mathfrak s}=m(C_{B_{\mathfrak s}})\) of the Casimir tensor, and
+  its scalar trace-line coefficient is \(\kappa_{\mathfrak s}\).  The target
   part of the same local bracket is the constant Taylor coefficient
   cocycle
   \[
@@ -238,18 +260,20 @@ formal local theorem of \S\ref{ssec:local-theorem} applies.
 
   Passing to the scalar associated graded keeps only the Hamiltonian
   cocycle \([\bar c]\) and the matrix coefficient
-  \(\operatorname{tr}_{\mathfrak s}(I_{\mathfrak s})\), giving the
-  displayed cohomology class.  Super-balance sets this coefficient to
+  \(\kappa_{\mathfrak s}\), giving the displayed cohomology class.
+  Casimir-balance sets this coefficient to
   zero, so the degree-one representative is the zero cochain, not
   merely an exact cochain.  The \(P_{(z_1)}\)-equivariance follows because
-  \(\operatorname{tr}_{\mathfrak s}(I_{\mathfrak s})\) is matrix-factor
-  data and \(\omega\) is the symplectic Poisson cocycle on the target
+  \(\kappa_{\mathfrak s}\) is matrix-factor data and \(\omega\) is the
+  symplectic Poisson cocycle on the target
   factor.  The completion at the brane axis is functorial only under
   \(P_{(z_1)}\), which is exactly the equivariance group in the
   hypothesis.
 
-  The last assertion is the long exact sequence of cohomology for the
-  displayed cone.  The scalar quotient class is zero by the first part,
+  The last assertion uses the long exact sequence of cohomology for the
+  displayed cone, which is defined only for the filtered chain projection
+  \(\widehat\sigma_{\mathrm{sc}}\) included in the datum.  The scalar
+  quotient class is zero by the first part,
   and the reduced degree-one cohomology is zero by hypothesis.  Therefore
   the total degree-one obstruction class in
   \(H^1(\mathfrak Q_{\mathfrak s})\) vanishes.
@@ -613,7 +637,7 @@ formal local theorem of \S\ref{ssec:local-theorem} applies.
 
 \begin{rmk}[Dirac language inside the protected sector]
   For an admissible protected Hamiltonian sector, the Dirac-thesis
-  language of Remark~\ref{rmk:dirac-thesis} is a reading of the
+  language of Remark~\ref{rmk:dirac-thesis} is a shorthand for the
   already identified formal local model.  The brane stack probes the
   formal symplectic normal disk; Dirac reduction gives the open trace
   algebra; the closed Hamiltonian BF theory is the shifted cotangent

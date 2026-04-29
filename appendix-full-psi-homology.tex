@@ -8,9 +8,11 @@ attached to the moment-map equation \([x,y]=0\).  Universal means that no
 choice of Matlis target, PBW model, finite \(N\) trace identity, or quantum
 deformation is used: after stable trace invariant theory has identified
 primitive traces with graded cyclic words, the answer is the cellular homology
-of a chip-moving state complex.  Every stable primitive descendant calculation
-with \(d\psi=xy-yx\) and no trace relations beyond graded cyclicity is obtained
-from this one by applying the desired coefficient functor.
+of a chip-moving state complex.  Every finite-bidegree stable primitive
+descendant calculation over \(\C\), with \(d\psi=xy-yx\) and no trace
+relations beyond graded cyclicity, is obtained from this one.  Passage to
+completed coefficient systems requires an exact coefficient functor, or an
+explicit condition excluding new \(\varprojlim^1\) classes.
 
 \begin{defn}[Graded cyclic word complex]
 \label{def:app-full-psi-complex}
@@ -235,7 +237,7 @@ from this one by applying the desired coefficient functor.
   chips in the interiors of \(p\) distinct edges.  Several stationary chips
   may occupy the same vertex.  No edge contains more than one moving chip.
 
-  Encode such a state by reading around \(\mathscr C_S\).  At a vertex write one
+  Encode such a state by traversing \(\mathscr C_S\).  At a vertex write one
   \(x\) for each stationary chip sitting there.  Then write \(y\) if the
   following edge is empty and \(\psi\) if the following edge contains a
   moving chip.  This gives a word with \(R-p\) letters \(x\), \(S-p\) letters

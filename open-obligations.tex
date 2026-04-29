@@ -24,12 +24,14 @@ next theorem.
   \]
 
   \item \emph{Completed formal-disk CE/PV acceptance.}
-  The inverse-limit comparison for
+  The comparison for
   \(\mathfrak h=\C[[z_1,z_2]]/\C\cdot1\) and
   \(\mathfrak g=\mathfrak h\ltimes
-  \mathfrak h^\vee_{\mathrm{cont}}[1]\) is accepted when the finite
-  windows form a CE/PV-admissible inverse system.  The obstruction
-  terms are
+  \mathfrak h^\vee_{\mathrm{cont}}[1]\) is accepted first as a pro
+  finite-window CE/PV comparison.  It becomes a completed bracketed
+  statement only after a mixed continuous or weighted coefficient
+  completion makes the coordinate contraction bracket continuous.  The
+  coordinate obstruction terms are
   \[
     \mathfrak o^{\mathrm{br}}_{M,N}(x,y)
       =\pi_{M,N}[x,y]_M-[\pi_{M,N}x,\pi_{M,N}y]_N,
@@ -39,17 +41,21 @@ next theorem.
       =\pi^\vee_{M,N}(x\cdot_M\lambda)
        -(\pi_{M,N}x)\cdot_N(\pi^\vee_{M,N}\lambda),
   \]
-  and
-  \[
-    \mathfrak o^{\mathrm{Cas}}_{M,N}
-      =(\pi_{M,N}\otimes\pi^\vee_{M,N})C_M-C_N .
-  \]
-  Their vanishing gives
+  Their vanishing gives the pro finite-window coordinate comparison
   \[
     C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g)
     \xrightarrow{\sim}
     \mathrm{PV}(\widehat{\mathbf S}_{\mathrm{Tate}}(\mathfrak h)).
   \]
+  The Casimir transition term
+  \[
+    \mathfrak o^{\mathrm{Cas}}_{M,N}
+      =(\pi_{M,N}\otimes\pi^\vee_{M,N})C_M-C_N
+  \]
+  diagnoses the failure of a strict global kernel, propagator, endpoint,
+  ambient-product bracket, and bar-cobar package in the unweighted
+  product/direct-sum topology.  It is not an additional hypothesis for
+  each finite-window coordinate CE/PV identity.
 
   \item \emph{Admissible Tate bar-cobar/Quillen envelope.}
   For an admissible Tate replacement
@@ -226,10 +232,15 @@ next theorem.
     \hbar N\,\omega(f,g)
     \int_\R a(t)b(t)\gamma_{\mathbf 1}(t)\,dt .
   \]
-  A scalar-reduced ordinary \(\mathfrak{gl}_N\) lift requires
-  \(W_{\mathrm{ext}}\) with leading class
-  \([w_{\mathrm{ext}}]=-\hbar N[\bar c]\), or a central-character /
-  balanced-supertrace mechanism that kills the same line.
+	  A scalar-reduced ordinary \(\mathfrak{gl}_N\) lift requires
+	  \(W_{\mathrm{ext}}\) with leading class
+	  \[
+	    [w_{\mathrm{ext}}]=-\hbar N[\bar c]
+	    \qquad\text{in }H^2_{\mathrm{Lie}}(\bar A,\C).
+	  \]
+	  Alternatively, the unreduced central-character source absorbs the
+	  scalar symbol before scalar reduction, while a Casimir-balanced
+	  supertrace model makes the scalar representative zero.
 
   \item \emph{Unreduced factorization-current lift.}
   The unreduced cotangent lift is a datum:

@@ -270,7 +270,8 @@ normalization at all \(N\).
 Manuscript action:
 
 `appendix-radial-parts-moyal.tex` now contains
-Lemma `lem:app-radial-pure-shear-extension`, which proves that the
-pure-power plus shear package would imply the exact image normalization
-for every polynomial.  The theorem remains explicitly conditional
-because the cited primary sources do not verify that package.
+Lemma `lem:app-radial-nonlinear-shear-obstruction`, which shows that
+pure powers plus classical nonlinear shears do not determine the exact
+mixed Weyl-trace image.  The theorem remains explicitly conditional
+because the cited primary sources do not supply the required
+quantum-corrected radial-parts normalization package.

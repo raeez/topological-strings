@@ -91,7 +91,7 @@ one real mathematical improvement is inscribed.
 
 The main thread integrates; agents do not vote truth into existence.
 Preserve all mathematically substantive content, resolve conflicts by
-reading both sides in context, and verify with targeted `rg`, local
+examining both sides in context, and verify with targeted `rg`, local
 computations, and session-end builds only when appropriate.
 
 ## How to work

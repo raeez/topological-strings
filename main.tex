@@ -304,7 +304,7 @@ The map $f\mapsto J(f)$ is the \emph{moment-map shadow} of the
 closed-open operation one expects from the open/closed string-field
 formalism. Witten's centrality slogan enters here as a local algebraic
 criterion proved in the reduced Hamiltonian model, not as a transfer theorem
-from BCOV. In this paper the algebraic target is the derived
+from BCOV. The algebraic target is the derived
 reduced Hamiltonian Poisson centre of the open factorisation algebra rather than a single
 boundary function. Write
 \(Z^{P_0}_{\mathrm{red,Ham}}(A)=\mathrm{PV}(A)\) for this reduced local
@@ -322,8 +322,9 @@ brane.
 
 \begin{thm}[Witten central-operation criterion, local \(P_0\) form]
   \label{thm:witten-centrality-local-form}
-  Let \(A_\partial\) be a classical \(P_0\) factorization algebra on the
-  brane line and let \(F\in A_\partial(I)\) be the boundary image of a
+  Let \(A_\partial\) be a locally constant classical \(P_0\)
+  factorization algebra on the brane line, in the reduced algebraic
+  model, and let \(F\in A_\partial(I)\) be the boundary image of a
   closed insertion supported in an interval \(I\). The statement that this
   insertion may cross any open insertion without changing the local theory
   is equivalent, in the classical algebraic model, to an operation in the
@@ -343,8 +344,8 @@ brane.
   \]
   Thus the target of a theorem-level closed-open map is the derived
   \(P_0\)-factorization centre of the open algebra, not the underlying
-  open observable algebra. In the present paper only the reduced
-  Hamiltonian central-operation model is proved; the unreduced cotangent
+  open observable algebra. Only the reduced Hamiltonian
+  central-operation model is proved here; the unreduced cotangent
   centrality homotopies are precisely the content of
   Problem~\ref{prob:formal-factorization-center}.
 \end{thm}
@@ -637,7 +638,7 @@ open/closed string-duality philosophy of \cite{witten-cs}: the closed
 local theory is identified with the derived Poisson centre of the open
 local theory inside the stated filtered datum.
 
-The Koszul spine used in this manuscript has four levels.  The finite
+The Koszul spine has four levels.  The finite
 cotangent identity is the coordinate-free calculation
 \(C^\bullet_{\mathrm{CE}}(T^*[1]\mathfrak l)\cong
 \mathrm{PV}(\mathbf S(\mathfrak l))\).  The formal disk is the completed
@@ -791,7 +792,7 @@ claims are made.
 \begin{thm}[BV replacement for unitarity in the protected sector]
   \label{thm:bv-replacement-unitarity}
   For the local mixed holomorphic-topological sector studied here, the
-  consistency conditions used in the manuscript are
+  consistency conditions are
   \[
     QI+\frac12\{I,I\}=0,\qquad
     QI+\frac12\{I,I\}+\hbar\Delta I=0
@@ -1027,7 +1028,7 @@ holomorphic direction.
 
 \subsection{The local mixed model}
 
-The paper studies the product local model
+The product local model is
 $$\R^2_{\mathrm{top}}\times\C^2_{\mathrm{hol}}.$$
 The theorem is not a global statement about all twisted M-theory
 backgrounds. It is the formal local calculation obtained after completing
@@ -1188,6 +1189,12 @@ Shifts follow the BV convention used in the field descriptions: an element
 of $V[1]$ has parity reversed and cohomological degree one lower than the
 corresponding element of $V$. The notation $\mathbf S(V)$ always means the
 free graded-commutative algebra on the graded vector space $V$.
+The CE/PV cotangent block below uses its own coordinate grading: the
+odd BV cotangent generator $\lambda[1]$ has BV degree $-1$, while the
+CE coordinate $u_\lambda$ dual to it is assigned PV function degree
+$0$. Equivalently, the symbol ``dual'' in that block means the
+CE-suspended cotangent coordinate dual, not the ordinary graded dual
+computed from the BV degree alone.
 
 Let
 $$\bar A=\C[z_1,z_2]/\C\cdot1,\qquad
@@ -1233,15 +1240,18 @@ shadow of Dirac reduction: the constraint
 $Q\psi=[\phi_1,\phi_2]$ is the Koszul resolution of the moment-map
 equation.
 
-The large-$N$ principle is the string-field-theoretic form of the
-Loday-Quillen-Tsygan principle \cites{loday-quillen,tsygan}; see also
-\cite{loday-vallette}*{Ch.~13} for the operadic packaging. Open strings
-on a stack produce matrix algebras; closed modes appear in the primitive
-stable part. LQT controls the stable invariants of the \emph{unconstrained}
-matrix algebra; the moment-map equation $[\phi_1,\phi_2]=0$ is the
-first-class constraint whose Koszul resolution is exactly the BV reduction
-$Q\psi=[\phi_1,\phi_2]$. Theorem~\ref{thm:main-local} verifies this
-principle directly on the connected Hamiltonian trace sector.
+Open strings on a stack produce matrix algebras; closed modes appear in
+the primitive stable part. In this local computation,
+Procesi--Razmyslov invariant theory controls the stable trace invariant
+coordinate ring.  The Loday--Quillen--Tsygan principle
+\cites{loday-quillen,tsygan}; see also
+\cite{loday-vallette}*{Ch.~13} for the operadic packaging, supplies the
+cyclic-homology template for primitive large-\(N\) classes, not the
+coordinate-ring invariant theorem itself. The moment-map equation
+$[\phi_1,\phi_2]=0$ is the first-class constraint whose Koszul
+resolution is exactly the BV reduction $Q\psi=[\phi_1,\phi_2]$.
+Theorem~\ref{thm:main-local} verifies this principle directly on the
+connected Hamiltonian trace sector.
 
 \begin{thm}[Loday-Quillen-Tsygan]
   Let $A$ be a unital associative algebra over a field of characteristic
@@ -1307,10 +1317,12 @@ The vector-space pairing
 $e^{\mathrm{PBW}}_{k,l}\mapsto[\Psi_{k,l}]$ used in the PBW special fibre is
 therefore not the principal-part realization and not an
 $\mathfrak h$-module isomorphism to the Matlis module
-$\mc P=\bigoplus\C\rho_{a,b}$.  A passage from
-$\Psi_{k,l}$ to $\rho_{k,l}$ would require an additional
-Rees/Fourier $D_\hbar$-module theorem; it is listed among the open
-obligations in Section~\ref{sec:open-obligations}.
+$\mc P=\bigoplus\C\rho_{a,b}$.  The available passage from
+$\Psi_{k,l}$ to $\rho_{k,l}$ is the Fourier-polarized Rees
+$D_\hbar$-module label bridge of
+Theorem~\ref{thm:app-matlis-rees-fourier-bridge}; it is not a
+same-action $\mathfrak h$-module realization and it is not the unreduced
+quantum boundary observable.
 
 Each later step has a concrete target: construct
 $O_{k,l},\Psi_{k,l}$ from the open fields; construct
@@ -1330,6 +1342,10 @@ formula by finite-coordinate tests.  Bar-cobar/Koszul duality is the
 separate admissible enhancement governed by conilpotence and filtered
 convergence.  Thus the boundary Hamiltonian is not a Hamiltonian ghost;
 it is the function coordinate dual to the cotangent generator.
+This paragraph uses the cotangent-coordinate grading fixed above:
+the Schouten/cotangent bracket has degree \(-1\), while the reduced
+Hamiltonian boundary bracket introduced later is the degree-zero
+Poisson bracket.
 
 \begin{defn}[Reduced Hamiltonian \(P_0\)-centre]\label{defn:reduced-hamiltonian-p0-center}
   Let \(A\) be a complete graded-commutative Poisson algebra with Poisson
@@ -1339,8 +1355,10 @@ it is the function coordinate dual to the cotangent generator.
     Z^{P_0}_{\mathrm{red,Ham}}(A)
       :=\mathrm{PV}(A),\qquad d_{\pi}=[\pi,-]_S,
   \]
-  with the completed Schouten bracket. This is a local reduced model for
-  central operations. It is not the unreduced factorization-centre object.
+  with the completed Schouten bracket of degree \(-1\). This is a local
+  reduced model for central operations. It is not the unreduced
+  factorization-centre object, and its Schouten bracket is not the
+  degree-zero reduced Hamiltonian Poisson bracket on boundary currents.
 \end{defn}
 
 \begin{thm}[Coordinate-free cotangent CE/PV identity]
@@ -1352,7 +1370,8 @@ it is the function coordinate dual to the cotangent generator.
   \]
   Let \(A_{\mathfrak l}=\mathbf S(\mathfrak l)\), regarded as functions on
   \(\mathfrak l^\vee\), with the Kirillov Poisson bracket. Then there is a
-  canonical isomorphism of dg graded-commutative \(P_0\)-algebras
+  canonical isomorphism of dg graded-commutative algebras with their
+  degree-\((-1)\) cotangent/Schouten brackets
   \[
     \Phi_{\mathfrak l}:
     C^\bullet_{\mathrm{CE}}\bigl(T^*[1]\mathfrak l\bigr)
@@ -1395,7 +1414,8 @@ it is the function coordinate dual to the cotangent generator.
   Hence the substitution \(c^i\mapsto\theta^i\), \(u_i\mapsto O_i\)
   intertwines the differentials on generators. Both differentials are
   derivations, so the equality extends to all CE words. The Schouten and
-  cotangent \(P_0\)-brackets are also identified on generators:
+  degree-\((-1)\) cotangent/Schouten brackets are also identified on
+  generators:
   \[
     \{c^i,u_j\}_{\mathrm{CE}}=\delta^i_j,\qquad
     [\theta^i,O_j]_S=\delta^i_j,
@@ -1419,15 +1439,19 @@ it is the function coordinate dual to the cotangent generator.
     A_{\partial,H}^{\mathrm{st}}
       \cong \widehat{\mathbf S}_{\mathrm{Tate}}(\mathfrak h),
   \]
-  the completed inverse-limit form of
+  the pro finite-window form of
   Theorem~\ref{thm:coordinate-free-cotangent-ce-pv} gives
   \[
-    C^\bullet_{\mathrm{CE},\mathrm{cont}}
+    C^\bullet_{\mathrm{CE},\mathrm{coord}}
     \bigl(\mathfrak h\ltimes\mathfrak h^\vee_{\mathrm{cont}}[1]\bigr)
-      \xrightarrow{\ \sim\ }
+      \dashrightarrow
     Z^{P_0}_{\mathrm{red,Ham}}
     \bigl(A_{\partial,H}^{\mathrm{st}}\bigr).
   \]
+  After a mixed or weighted completion makes the coordinate contraction
+  bracket continuous, this dashed generator map is upgraded to the
+  completed bracketed comparison.  In the strict ambient coordinate
+  product no global \(P_0\)-bracket is asserted.
   The boundary evaluation
   \[
     J(f)=\overline{\mathrm{Tr}\,f(\phi_1,\phi_2)}
@@ -1439,11 +1463,13 @@ it is the function coordinate dual to the cotangent generator.
 \end{thm}
 
 \begin{proof}
-  The finite theorem passes to the formal disk by projecting to bounded
-  Taylor degree and bounded CE/PV word length. In each finite window the
-  formula is the finite-dimensional cotangent CE/PV identity; the transition
-  maps preserve \(c\mapsto\theta\) and \(u\mapsto O\). Taking the completed
-  inverse limit gives the continuous map.
+  The finite theorem is used through finite coordinate tests, not through
+  bounded Taylor-degree Lie quotients of the full Hamiltonian algebra. In
+  each admissible finite coordinate window the formula is the
+  finite-dimensional cotangent CE/PV identity and the transition maps
+  preserve \(c\mapsto\theta\) and \(u\mapsto O\). A completed bracketed
+  limit requires the mixed or weighted continuity condition recorded in
+  Theorem~\ref{thm:formal-disk-completed-ce-pv}.
 
   Proposition~\ref{prop:stable-trace-invariants}, Lemma~\ref{lem:adjacent-swaps},
   and Corollary~\ref{cor:matrix-evaluation-well-defined} identify the stable
@@ -1552,17 +1578,21 @@ Section~\ref{sec:open-obligations}.
         \cong
         \mathrm{PV}\bigl(\mathbf S(\mathfrak l)\bigr)
       \]
-      as dg \(P_0\)-algebras.
+	      as dg graded-commutative algebras with the degree-\((-1)\)
+	      cotangent/Schouten bracket.
     \item For the completed formal symplectic disk
       \(\mathfrak h=\C[[z_1,z_2]]/\C\cdot1\), the same generator
-      assignment gives the continuous completed cochain isomorphism
+	      assignment gives the pro finite-window coordinate cochain
+	      isomorphism
       \[
-        C^\bullet_{\mathrm{CE},\mathrm{cont}}
+	        C^\bullet_{\mathrm{CE},\mathrm{coord}}
         \bigl(\mathfrak h\ltimes
           \mathfrak h^\vee_{\mathrm{cont}}[1]\bigr)
         \cong
-        \mathrm{PV}\bigl(\widehat{\mathbf S}_{\mathrm{Tate}}(\mathfrak h)\bigr).
-      \]
+	        \mathrm{PV}_{\mathrm{coord}}(\mathfrak h).
+	      \]
+	      It becomes a completed bracketed statement only in a mixed or
+	      weighted topology where the contraction bracket is continuous.
       The boundary Hamiltonian \(B_f\) is the image of the shifted
       cotangent coordinate \(u_f\), while the Hamiltonian CE coordinate
       \(c^f\) maps to the vector-field operation.
@@ -1606,7 +1636,8 @@ Section~\ref{sec:open-obligations}.
   Theorem~\ref{rmk:conilpotency-essential}, and the obstruction clause of
   Lemma~\ref{lem:filtered-cobar-qiso-criterion}; the QME class is the
   residual class of Problem~\ref{prob:weighted-rg-locality}.  Thus the
-  formal-disk cochain identity is already a theorem, and the
+	  formal-disk pro finite-window/mixed-continuous cochain identity is
+	  already a theorem, and the
   enveloping/Koszul-dual upgrade is precisely the stated universal
   criterion.
 \end{proof}
@@ -1634,9 +1665,10 @@ Section~\ref{sec:open-obligations}.
   this identification.  The cotangent direction
   is realized by the Matlis principal-part module; the polynomial
   one-$\psi$ descendants give the PBW special-fibre labels and the
-  primitive Koszul homology.  The quantum extension is carried by the
-  degree-zero Moyal/Weyl sector, the one-antifield principal-part target,
-  and the scalar anomaly class $[\bar c]$.
+  primitive Koszul homology.  The degree-zero quantum extension is carried
+  by the Moyal/Weyl sector and the scalar anomaly class $[\bar c]$.  The
+  one-antifield principal-part quantum target is governed by the
+  obstruction lane of Problem~\ref{prob:tate-coefficient-descendant-lift}.
 
   The analytic graph, regulator, unreduced cotangent, one-antifield
   quantum, and cross-volume extensions are the obstruction and theorem
@@ -1674,7 +1706,7 @@ Section~\ref{sec:open-obligations}.
 
 \begin{rmk}[Dirac probe principle in the reduced Hamiltonian sector]\label{rmk:dirac-thesis}
   Corollary~\ref{thm:main-local} makes precise the Dirac
-  thesis sentence that organizes the manuscript:
+  thesis sentence for the reduced Hamiltonian sector:
   \begin{quote}
     \itshape
     A stack of branes is a system of probes for the formal symplectic
@@ -1729,9 +1761,8 @@ sector and no further.
 
 The local theorem is built from a single geometric setup: a topological
 line carrying a stack of probes, crossed with a holomorphic-symplectic
-disk to which they couple. The remainder of the manuscript constructs
-and quantizes that setup, and verifies that the theorem lanes hold on
-the resulting data.
+disk to which they couple. Quantizing this setup gives the data on which
+the theorem lanes are verified.
 
 \subsection{Setup}
 Let
@@ -1825,7 +1856,7 @@ $\C^2$.
   Theorem~\ref{thm:bulk-boundary} construct the degree-zero Hamiltonian
   boundary component and prove its bracket compatibility. The full
   Poisson factorization-center closed-open map is Problem~\ref{prob:formal-factorization-center},
-  not a theorem proved here.
+  outside the proved local theorem.
 \end{proof}
 
 \subsection{Open mixed brane states}
@@ -2409,7 +2440,8 @@ factorization-center morphism is left to
       &=\widehat{\mathbf S}(\mathfrak h_I)\widehat\otimes
         \widehat{\mathbf S}(\mathcal P_I[1]),
   \end{align*}
-  with $P_0$ bracket extended as a biderivation from
+  with degree-zero reduced Hamiltonian \(P_0\) bracket extended as a
+  biderivation from
   \begin{align*}
     \{a\otimes f,b\otimes g\}_{A_\partial}&=ab\otimes\{f,g\}_{\bar A},\\
     \{a\otimes f,B\otimes\rho[1]\}_{A_\partial}
@@ -2418,8 +2450,8 @@ factorization-center morphism is left to
   \end{align*}
   The factorization product on disjoint intervals is the multiplication
   in $\widehat{\mathbf S}$ after extension by zero. These are the
-  reduced targets after de Rham-current contraction for the closed-open
-  factorization-center map. The Hamiltonian factor
+  reduced targets after de Rham-current contraction for the reduced
+  Hamiltonian current central-operation map. The Hamiltonian factor
   $A_\partial^{\mathrm{Ham}}$ is the connected component of the formal
   Hamiltonian sector of the open brane factorization algebra; the
   principal-part factor
@@ -2570,24 +2602,20 @@ Hamiltonian sector]\label{thm:open-closed-derived-center-factorization}
 \end{thm}
 
 \begin{proof}
-  \emph{Step 1.} Identify the interval-wise central factorization
-  algebra. In the formal stable Hamiltonian sector, the boundary
-  factorization algebra
+  \emph{Step 1.} Identify the interval-wise reduced \(P_0\) model. In
+  the formal stable Hamiltonian sector, the boundary factorization algebra
   $A_\partial^{\mathrm{Ham}}(I)=\widehat{\mathbf S}(\mathfrak h_I)$
   is graded-commutative, with strict $P_0$ bracket inherited from
-  $\mathfrak h_I$ as a biderivation. By the
-  Hochschild--Kostant--Rosenberg theorem in the smooth/algebraic
-  setting, applied here to the free graded-commutative algebra on the
-  Tate vector space $\mathfrak h_I$, the Hochschild cochain complex
-  $\mathrm{Hoch}^\bullet\bigl(\widehat{\mathbf S}(\mathfrak h_I)\bigr)$
-  is quasi-isomorphic to the polyvector fields
+  $\mathfrak h_I$ as a biderivation.  In this theorem
+  \(\mathrm Z^{P_0}_{\mathrm{red,Ham}}\) means the reduced
+  interval-wise Poisson-CE model
   $\mathrm{PV}^\bullet\bigl(\widehat{\mathbf S}(\mathfrak h_I)\bigr)
   =\widehat{\mathbf S}(\mathfrak h_I)\widehat\otimes
-    \widehat{\mathbf S}(\mathfrak h^{\vee}_{I,\mathrm{cont}}[-1])$
-  with the Schouten bracket. The locally constant
-  factorization-center stalk on the line records exactly the
-  Hochschild cochains in the corresponding $E_1$ algebra; for
-  graded-commutative algebras this collapses to PV. Restricting to the
+	    \widehat{\mathbf S}(\mathfrak h^{\vee}_{I,\mathrm{cont}}[-1])$
+  with the Schouten bracket.  A genuine Hochschild/factorization-centre
+  identification for the completed Tate algebra would require a
+  continuous HKR theorem with interval functoriality; it is not used as
+  an input here. Restricting to the
   polynomial subalgebra
   $\mathbf S(\mathfrak h_I)\subset\widehat{\mathbf S}(\mathfrak h_I)$
   and to the constant polyvectors gives the central multiplication
@@ -2647,12 +2675,13 @@ Hamiltonian sector]\label{thm:open-closed-derived-center-factorization}
   propagates this to all CE lengths.
 
   \emph{Step 5.} Quasi-isomorphism on each interval. Both sides are
-  free graded-commutative algebras on the same continuous Tate vector
+  free graded-commutative algebras on the same chosen compact-support
+  current reduced Tate vector
   space after the generator dictionary
   $c\mapsto\theta$, $u\mapsto O$, with the same CE
   differential induced from the semidirect Lie bracket of $\mathfrak g_I$
-  (closed side: by definition; brane side: through the HKR
-  identification of Step 1 and the Schouten bracket). The map
+	  (closed side: by definition; brane side: by the reduced
+	  interval-wise PV model of Step 1 and the Schouten bracket). The map
   respects the symmetric-algebra generators by construction. Thus it
   is an isomorphism of underlying graded vector spaces and
   intertwines the differentials. The map is therefore an isomorphism
@@ -2730,23 +2759,27 @@ Hamiltonian sector]\label{thm:open-closed-derived-center-factorization}
   In the locally constant setting on $\R$, factorization algebras are
   equivalent to homotopy associative algebras up to translation
   invariance by Lurie, \emph{Higher Algebra}, \S 5.5.4, in the
-  Costello--Gwilliam vocabulary of locally constant factorization
-  algebras \cite{costello-gwilliam}*{Vol.~I \S 6.4}. The Hochschild cochain complex of
-  the $E_1$ algebra computes the factorization-center stalk. For
-  graded-commutative $E_1$ algebras (which the open Hamiltonian stalk
-  is, in the reduced model), the Hochschild cochain complex is
-  quasi-isomorphic to polyvector fields by HKR, and its strict $P_0$
-  subalgebra of multiplication operators with constant differential
-  is the polynomial Hamiltonian sector
-  $\widehat{\mathbf S}(\mathfrak h_I)\widehat\otimes
-  \widehat{\mathbf S}(\mathfrak h_I^\vee[-1])$. The CE source
-  identification of
+	  Costello--Gwilliam vocabulary of locally constant factorization
+	  algebras \cite{costello-gwilliam}*{Vol.~I \S 6.4}. The Hochschild
+	  cochain complex of the $E_1$ algebra computes the
+	  factorization-center stalk.  The present reduced Hamiltonian theorem
+	  uses the explicit PV model
+	  $\widehat{\mathbf S}(\mathfrak h_I)\widehat\otimes
+	  \widehat{\mathbf S}(\mathfrak h_I^\vee[-1])$ and its strict $P_0$
+	  subalgebra of multiplication operators.  Identifying this PV model
+	  with continuous Hochschild cochains for the completed Tate algebra is
+	  a separate HKR/topology theorem. The CE source
+	  identification of
   \ref{thm:open-closed-derived-center-factorization} is exactly the
   closed dual of this PV picture in the connected Hamiltonian sector.
 \end{rmk}
 
-\begin{rmk}[Quillen equivalence of presentations]\label{rmk:lurie-cg-quillen-equivalence}
-  The two presentations of locally constant factorization algebras cited above are Quillen equivalent: the model-categorical presentation of \cite{costello-gwilliam-vol2}*{Cor.~A.5.0.5} matches the $\infty$-categorical presentation of \cite{lurie-ha}*{Thm.~A.3.7.5}, so the $E_1$ translation used here is convention-independent.
+\begin{rmk}[Presentations of one-dimensional factorization algebras]\label{rmk:lurie-cg-quillen-equivalence}
+  The precise equivalence used here is Lurie's identification of locally
+  constant factorization algebras on the line with \(E_1\)-algebras
+  \cite{lurie-ha}*{Thm.~A.3.7.5}.  The Costello--Gwilliam
+  model-categorical language is used only as a compatible presentation
+  convention unless the cited corollary is separately anchored.
 \end{rmk}
 
 For a factorization algebra $\mc A$ on the line, write
@@ -2856,7 +2889,7 @@ corollary of
   \ref{prop:ce-source-obstruction} is met. The CE-length-one cochain
   $\xi_{a,b}=c^{a,b}$ dual to $H_{a,b}=z_1^az_2^b$ is therefore not
   closed, and no closed CE cochain has linear Hamiltonian part
-  $c^{a,b}$, recovering the earlier source-obstruction observation.
+  $c^{a,b}$; this is the source obstruction.
 \end{rmk}
 
 \begin{thm}[Open-closed derived center, cochain level]\label{thm:open-closed-derived-center}
@@ -2870,7 +2903,8 @@ corollary of
   \ref{lem:linear-poisson-schouten}.
 
   Then there is a canonical isomorphism of completed dg
-  graded-commutative $P_0$-algebras
+  graded-commutative algebras with their degree-\((-1)\)
+  cotangent/Schouten brackets
   $$\Phi:C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g)
     \xrightarrow{\ \sim\ }
     \mathrm{PV}\bigl(A_\partial\bigr),$$
@@ -2943,15 +2977,16 @@ corollary of
   hence fix the completed algebras. So $\Phi$ is an isomorphism of
   complete dg graded-commutative algebras.
 
-  \emph{$P_0$-bracket compatibility.} The CE side carries the canonical
+  \emph{Cotangent/Schouten bracket compatibility.} The CE side carries the canonical
   $(-1)$-shifted Poisson structure on
   $C^\bullet_{\mathrm{CE},\mathrm{cont}}(T^*[1]\mathfrak h)$ with
   $$\{c^I,u_J\}_{\mathrm{CE}}=\delta^I_J,\quad
     \{c^I,c^J\}_{\mathrm{CE}}=0,\quad
     \{u_I,u_J\}_{\mathrm{CE}}=0.$$
-  These are the standard Poisson brackets on the cochain algebra of a
-  $(-1)$-shifted cotangent of a Lie algebra. The bracket compatibility
-  used here is the displayed generator computation.
+  These are the degree-\((-1)\) cotangent brackets on the cochain
+  algebra of a shifted cotangent Lie algebra. The bracket compatibility
+  used here is the displayed generator computation; it is separate from
+  the degree-zero reduced Hamiltonian \(P_0\) bracket on boundary currents.
   The Schouten bracket on $\mathrm{PV}(A_\partial)$ satisfies
   $$[\theta^I,O_J]_S=\delta^I_J,\quad
     [\theta^I,\theta^J]_S=0,\quad
@@ -2966,7 +3001,7 @@ corollary of
   completed words gives compatibility on the full completed algebra.
 
   \emph{Identification with the reduced $P_0$ Hamiltonian central-operation model.}
-  For the reduced constant-stalk convention used in this paper, the
+  For the reduced constant-stalk convention used here, the
   reduced \(P_0\) Hamiltonian central-operation model of a Poisson algebra \(A\) is by
   definition represented by the Poisson cochain complex
   $\mathrm{PV}(A)$ with the Lichnerowicz differential $[\pi,-]_S$.
@@ -3019,19 +3054,21 @@ corollary of
   $\{O_{a,b},O_{c,d}\}_\partial=(ad-bc)O_{a+c-1,b+d-1}$.
   The generator calculation underlying
   \ref{thm:open-closed-derived-center} gives the cochain-level
-  CE/PV identity
+  coordinate CE/PV identity, read in the pro finite-window sense,
   $$\Phi:C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak h\ltimes
     \mathfrak h^\vee_{\mathrm{cont}}[1])\xrightarrow{\ \sim\ }
-    \mathrm{PV}\bigl(\widehat{\mathbf S}_{\mathrm{Tate}}(\mathfrak h)\bigr),
+    \mathrm{PV}_{\mathrm{coord}}
+    \bigl(\widehat{\mathbf S}_{\mathrm{Tate}}(\mathfrak h)\bigr),
     \qquad c^{a,b}\mapsto\theta^{a,b},\quad u_{a,b}\mapsto O_{a,b}.$$
   Its moment-map shadow is the boundary evaluation map
   $J(f)=O_f=\overline{\mathrm{Tr}\,f(\phi_1,\phi_2)}$ of
   \ref{thm:bulk-boundary} after identifying $A_\partial$ with the
   stable connected scalar-reduced Hamiltonian trace algebra of
-  \ref{prop:brane-ops}. The conilpotent bar-cobar and factorization
-  derived-center isomorphism is read in the theorem-data table through the
-  nilpotent or weighted replacements of
-  \S\ref{ssec:tate-residual-resolution}.
+  \ref{prop:brane-ops}. The \(P_0\) and factorization derived-center
+  interpretation is imposed only after the finite-window or
+  mixed/weighted continuity hypotheses in the theorem-data table; the
+  strict product coordinate completion is not used as a global
+  \(P_0\)-algebra.
 \end{cor}
 
 \begin{proof}
@@ -3224,8 +3261,9 @@ corollary of
   centers.
 
   Four mathematical mechanisms analyze the residual
-  (\S\ref{ssec:tate-residual-resolution}): Costello--Li 2012
-  BV-cohomology vanishing, refuted on the present geometry; weighted
+  (\S\ref{ssec:tate-residual-resolution}): the Costello--Li 2012
+  BCOV package, which does not transfer to the present mixed defect geometry;
+  weighted
   Tate completion, which repairs the coefficient kernel and finite-scale
   propagator and gives graphwise RG control; nilpotent truncation to
   \(\mathfrak m^3/\mathfrak m^{N+1}\), classical only, with an explicit
@@ -3239,9 +3277,9 @@ corollary of
 The mechanisms in \ref{ssec:tate-residual-resolution} analyzing
 \ref{prob:formal-factorization-center} are separated below into proved
 mechanisms and the residual obstruction. The
-BV-cohomology vanishing strategy of Costello--Li 2012 is recorded as a
-counter-example: it does not transfer to the geometry studied here, and the
-failure mode forces the replacement mechanisms below. The weighted Tate completion
+  Costello--Li 2012 BCOV package is recorded as a negative applicability
+  check: it does not transfer to the geometry studied here, and the
+  failure mode forces the replacement mechanisms below. The weighted Tate completion
 closes the Casimir convergence and the finite-scale heat-kernel
 propagator extension.
 The nilpotent truncation closes a conformal-symplectic-quotient sector
@@ -3690,8 +3728,8 @@ field.
 \end{proof}
 
 \begin{defn}[Three large-\(N\) operations]\label{defn:three-large-N-operations}
-  The manuscript uses three different operations that must not be
-  conflated. They have different domains and are applied in the order
+  Three different operations must not be conflated. They have different
+  domains and are applied in the order
   displayed below.
   \begin{enumerate}
     \item \emph{Degreewise invariant stabilisation}
@@ -3731,7 +3769,7 @@ field.
   does the decoupled scalar class $\mathrm{Tr}(\psi)$.
 \end{rmk}
 
-\begin{prob}[Full primitive Koszul homology]\label{prob:full-psi-homology}
+\begin{cor}[Full primitive Koszul homology]\label{prob:full-psi-homology}
   Let
   $$A_{\psi}=\C\langle x,y,\psi\rangle,\qquad
     |x|=|y|=0,\quad |\psi|=1,$$
@@ -3751,25 +3789,26 @@ field.
     [&a_1\cdots a_{i-1}xy\,a_{i+1}\cdots a_n\\
      &-a_1\cdots a_{i-1}yx\,a_{i+1}\cdots a_n]_{\mathrm{cyc}}.
   \end{align*}
-  Prove the primitive homology formula
+  The primitive homology is
   $$H_p(K_{R,S})\cong
     \begin{cases}
       \C\cdot[x^Ry^S],&p=0,\\
       \C\cdot[\Psi_{R-1,S-1}],&p=1,\ R,S\geq1,\\
       0,&p\geq2.
     \end{cases}$$
-  Equivalently, prove that the primitive stable Koszul homology is
+  Equivalently, the primitive stable Koszul homology is
   $\C[x,y]\oplus\C[x,y]\theta$ with $|\theta|=1$ and
   $\mathrm{wt}(\theta)=(1,1)$.
 
-  The required new ingredient is the all-$p$ orientation statement identifying
-  this graded cyclic complex with the cellular chains of the chip-moving
-  necklace state complex, together with the Abel-map proof that the relevant
-  state complex has the homology of $S^1$. Proposition~\ref{prop:one-psi-homology}
-  proves exactly the $p\leq2$ skeleton needed for the Hamiltonian sector. The
-  complete theorem also requires the all-$\psi$ stable trace presentation and an
-  exact computational check of the finite complex.
-\end{prob}
+  This is a universal stable primitive cyclic-word computation.  The
+  proof identifies the graded cyclic complex with the cellular chains of
+  the chip-moving necklace state complex and uses the Abel map to compute
+  the state complex as \(H_\bullet(S^1;\C)\); see
+  Theorem~\ref{thm:T5-full-primitive-psi-homology} and
+  Theorem~\ref{thm:app-full-primitive-psi-homology}.  The result does
+  not identify the polynomial one-\(\psi\) span with Matlis principal
+  parts or with the Moyal coadjoint module.
+\end{cor}
 
 \subsection{Operators in the closed Hamiltonian sector}\label{sec:grav-ops}
 
@@ -4016,7 +4055,8 @@ upgrade.
   criterion. It is satisfied by the nilpotent truncations and by the
   weighted admissible replacements used later.  The full reduced formal
   Hamiltonian algebra with linear modes is already covered at cochain
-  level by the completed CE/PV calculation; its enveloping/Koszul
+  level by the pro finite-window/mixed-continuous CE/PV calculation; its
+  enveloping/Koszul
   promotion is governed by the obstruction terms of
   Remark~\ref{rmk:ce-source-obstruction-disk} and
   Theorem~\ref{thm:universal-ce-pv-koszul-criterion}. The
@@ -4028,17 +4068,18 @@ upgrade.
 
 \begin{lem}[Linear Poisson Schouten differential]\label{lem:linear-poisson-schouten}
   Let $\mathfrak h$ be a pro-finite-dimensional Lie algebra in
-  $\Cat{TateVec}$. The completed symmetric algebra
-  $\widehat{\mathbf S}_{\mathrm{Tate}}(\mathfrak h)$ is naturally a
-  Poisson algebra with Kirillov--Kostant--Souriau bracket
+  $\Cat{TateVec}$, and choose a mixed or weighted completion on which the
+  linear Kirillov--Kostant--Souriau bracket is continuous.  The bracket is
   $\{O_I,O_J\}_\partial=O_{[H_I,H_J]}=C^K_{IJ}\,O_K$ on a chosen
   homogeneous basis $\{H_I\}$ of $\mathfrak h$, where
   $O_I\in\mathfrak h^*$ is the linear coordinate. The associated
   Poisson bivector is the linear bivector
   $$\pi_\partial=\tfrac12\,C^K_{IJ}\,O_K\,\theta^I\wedge\theta^J,
     \qquad \theta^I=\partial/\partial O_I\in\mathrm{Der}\bigl(
-    \widehat{\mathbf S}_{\mathrm{Tate}}(\mathfrak h)\bigr),$$
-  and the Lichnerowicz/Schouten differential
+    \widehat{\mathbf S}_{\mathrm{Tate}}(\mathfrak h)\bigr).$$
+  Assume that this linear bivector and the Schouten contraction bracket
+  are continuous on the chosen mixed or weighted completion.  Then the
+  Lichnerowicz/Schouten differential
   $d_\pi=[\pi_\partial,-]_S$ on
   $$\mathrm{PV}\bigl(\widehat{\mathbf S}_{\mathrm{Tate}}(\mathfrak h)\bigr)=
     \widehat{\mathbf S}_{\mathrm{Tate}}(\mathfrak h)\widehat\otimes
@@ -4070,7 +4111,7 @@ upgrade.
 \begin{prop}[Admissible Tate Koszul-duality criterion]\label{prop:ce-koszul}
   Let \(\mathfrak g_{\mathrm{adm}}\) be a Tate graded Lie algebra satisfying
   the conilpotency hypothesis of Lemma~\ref{lem:continuous-bar-cobar};
-  in this paper this means one of the nilpotent finite-window replacements,
+  for the formal-local setting this means one of the nilpotent finite-window replacements,
   the weighted admissible envelope where the hypothesis is explicitly
   imposed, or another stated admissible replacement. Put
   \[
@@ -4642,20 +4683,22 @@ $\mathfrak h$-equivariant isomorphism modulo that scalar.
       bidegree relabelling between the PBW special-fibre basis
       $\widetilde\Psi_{a,b}$ and the coadjoint basis
       $\rho_{a,b}\leftrightarrow\delta_{a,b}$ is only an isomorphism of
-      graded vector spaces and label sets. It is \emph{not} an
-      isomorphism of $\mathfrak h$-modules: pulling the coadjoint
-      $\mathfrak h$-action across this relabelling does not equal the
-      symmetric raising action displayed in $(1)$, by exactly the
-      difference $-(pb-qa+p-q)\rho_{a-p+1,b-q+1}$ versus
-      $(pb-qa)\rho_{a+p-1,b+q-1}$. The formal Moyal/Weyl Rees
-      deformation controls the Weyl algebra and its continuous dual
-      $\mathfrak h^\vee_{\hbar,\mathrm{cont}}$; it does not identify
-      the polynomial one-$\psi$ descendant module with $\mc P$.
-      Constructing a Rees/Fourier $D_\hbar$-module bridge between
-      these two realizations is a separate problem.
+	      graded vector spaces and label sets. It is \emph{not} an
+	      isomorphism of $\mathfrak h$-modules: pulling the coadjoint
+	      $\mathfrak h$-action across this relabelling does not equal the
+	      symmetric raising action displayed in $(1)$, by exactly the
+	      difference $-(pb-qa+p-q)\rho_{a-p+1,b-q+1}$ versus
+	      $(pb-qa)\rho_{a+p-1,b+q-1}$. The formal Moyal/Weyl Rees
+	      deformation controls the Weyl algebra and its continuous dual
+	      $\mathfrak h^\vee_{\hbar,\mathrm{cont}}$; it does not identify
+	      the polynomial one-$\psi$ descendant module with $\mc P$.
+	      The Fourier-polarized Rees label bridge is constructed in
+	      Theorem~\ref{thm:app-matlis-rees-fourier-bridge}; the
+	      same-action and unreduced quantum-observable realizations remain
+	      separate problems.
   \end{enumerate}
   Thus the two formulas are not two bases of a single
-  $\mathfrak h$-module in this paper. They are the PBW special-fibre
+  $\mathfrak h$-module in the formal-local category. They are the PBW special-fibre
   shadow and the continuous coadjoint cotangent module, respectively.
   The structural separation recorded in
   Corollary~\ref{cor:descendant-coadjoint-difference} follows.
@@ -4665,12 +4708,11 @@ $\mathfrak h$-equivariant isomorphism modulo that scalar.
   $(1)$ is Proposition~\ref{prop:open-descendant-action}, with the
   rephrasing ``raising'' for the index shift $(a+p-1,b+q-1)$. $(2)$ is
   Theorem~\ref{thm:principal-part-coadjoint-uniqueness}. For $(3)$, the
-  symmetric raising action on $\widetilde\Psi_{a,b}$ generates an
-  $\mathfrak h$-submodule of $\bar A_{\mathrm{desc}}$ that is
-  \emph{free} as a graded $\C[\widetilde\Psi_{0,0}]$-module after
-  stabilisation; this is the PBW property. The coadjoint action on
-  $\rho_{a,b}$ is by lowering operators, hence is \emph{cofree} as a
-  graded comodule. These two module behaviours are incompatible by the
+	  symmetric raising action on the nonconstant
+	  \(\widetilde\Psi_{a,b}\) labels is the PBW special-fibre action after
+	  the Hamiltonian scalar quotient. The coadjoint action on
+	  $\rho_{a,b}$ is by lowering operators. These two module behaviours are
+	  incompatible by the
   displayed raising/lowering formulas, already for the linear
   Hamiltonians $z_1,z_2$; hence any bidegree-only relabelling between
   $\widetilde\Psi_{a,b}$ and $\delta_{a,b}$ cannot be an
@@ -4692,7 +4734,8 @@ $\mathfrak h$-equivariant isomorphism modulo that scalar.
   adjoint or coadjoint action of the Lie algebra. It therefore cannot
   identify the descendant module with the continuous coadjoint module.
   This proves the asserted separation and identifies the Rees/Fourier
-  bridge as additional structure not constructed here.
+	  bridge as additional Fourier-polarized structure rather than a
+	  same-action module identification.
 \end{proof}
 
 \begin{prop}[Polynomial realization obstruction for principal parts]\label{prop:no-polynomial-principal-part-boundary}
@@ -4723,10 +4766,9 @@ $\mathfrak h$-equivariant isomorphism modulo that scalar.
   observables in the current open BV/Koszul model.
 \end{proof}
 
-The categorical refinement rules out the same obstruction at the
-level of every polynomial sub-bimodule: \emph{no} polynomial
-sub-bimodule of any boundary observable algebra carrying a locally
-nilpotent $z_i$-action carries the coadjoint action $\mc P$.
+The categorical refinement records the same local-nilpotence obstruction
+at the level of polynomial sub-bimodules.  It does not assert a
+classification of all \(\bar A\)-module morphisms out of \(\mc P\).
 
 \begin{thm}[Categorical polynomial-realization obstruction for principal parts]\label{thm:no-polynomial-realization-categorical}
   Let $\mathsf P_{\mathrm{pol}}$ denote the abelian category of
@@ -4741,17 +4783,12 @@ nilpotent $z_i$-action carries the coadjoint action $\mc P$.
   This category models polynomial boundary observables of the open BV
   theory with respect to the polynomial sub-bimodule structure preserved
   by all morphisms of the boundary algebra into itself. Then
-  $\mc P\notin\operatorname{Ob}(\mathsf P_{\mathrm{pol}})$. More precisely,
-  every nonzero submodule $M\subset\mc P$ in the larger category of all
-  graded Hamiltonian Lie modules contains a generator $\rho_{a,b}$ on
-  which both $z_1$ and $z_2$ act non-locally-nilpotently, hence $M$
-  violates condition $(2)$. Consequently
-  $$\Hom_{\mathrm{Lie\text{-}Mod}_{\bar A}}(\mc P,M)=0
-    \quad\text{for every}\quad
-    M\in\operatorname{Ob}(\mathsf P_{\mathrm{pol}}),$$
-  and the inclusion
-  $\mathsf P_{\mathrm{pol}}\hookrightarrow\mathrm{Lie\text{-}Mod}_{\bar A}$
-  has no left adjoint sending $\mc P$ into $\mathsf P_{\mathrm{pol}}$.
+  $\mc P\notin\operatorname{Ob}(\mathsf P_{\mathrm{pol}})$.  More
+  generally, no injective \(\bar A\)-module map
+  \(\mc P\hookrightarrow M\) exists with
+  \(M\in\operatorname{Ob}(\mathsf P_{\mathrm{pol}})\).  In particular
+  \(\mc P\) cannot be realized as a polynomial boundary submodule with
+  the same Hamiltonian action.
 \end{thm}
 
 \begin{proof}
@@ -4763,18 +4800,21 @@ nilpotent $z_i$-action carries the coadjoint action $\mc P$.
   for every $N$, so $z_1$ is not locally nilpotent on any nonzero
   element of $\mc P$. The same argument applies to $z_2$.
 
-  Now let $M\subset\mc P$ be a nonzero $\bar A$-submodule. Pick
-  $\rho_{a,b}\in M$ with smallest $a+b$. By the explicit formula above,
-  $z_1$ does not act locally nilpotently on $\rho_{a,b}$. Hence $M$
-  violates condition $(2)$ of $\mathsf P_{\mathrm{pol}}$.
-
-  Any $\bar A$-equivariant linear map $\Phi:\mc P\to M$ sending
-  $\rho_{a,b}\mapsto m_{a,b}$ must satisfy
-  $z_1^N\cdot m_{a,b}
-   =(-1)^N(b+1)\cdots(b+N)\,m_{a,b+N}$. Local nilpotence of $z_1$ on
-  $M$ forces $m_{a,b+N}=0$ for $N\gg0$, which contradicts the
-  injectivity of $\Phi$ unless $\Phi=0$. The Hom statement and the
-  no-left-adjoint statement follow.
+  Hence \(\mc P\) itself violates condition \((2)\) and is not an object
+  of \(\mathsf P_{\mathrm{pol}}\).  If
+  \(\Phi:\mc P\hookrightarrow M\) were an injective
+  \(\bar A\)-module map into an object of \(\mathsf P_{\mathrm{pol}}\),
+  then \(m=\Phi(\rho_{a,b})\neq0\) for some generator.  Equivariance gives
+  \[
+    z_1^N\cdot m
+      =
+    \Phi(z_1^N\cdot\rho_{a,b})
+      =
+    (-1)^N(b+1)\cdots(b+N)\Phi(\rho_{a,b+N}),
+  \]
+  which is nonzero for every \(N\) by injectivity.  This contradicts
+  local nilpotence of \(z_1\) on \(M\).  The same argument applies with
+  \(z_2\).
 \end{proof}
 
 \begin{rmk}[Polynomial obstruction scope]\label{rmk:no-polynomial-categorical-status}
@@ -4987,12 +5027,14 @@ nilpotent $z_i$-action carries the coadjoint action $\mc P$.
 
 \begin{rmk}[Reduced principal-part current scope]\label{rmk:reduced-status-principal-part-currents}
   Theorem~\ref{thm:reduced-principal-part-boundary-current} is a reduced
-  \(P_0\) factorization algebra after de Rham-current contraction. It is not an unreduced
-  BV/factorization algebra. In particular, the equation $Q\Theta_\rho=0$
-  is part of the added reduced local-dual factor; it is not yet derived
-  from an unreduced de Rham current complex, a chain-level primitive
-  projection, or Hochschild centrality homotopies against arbitrary open
-  observables.
+  \(P_0\) factorization algebra after de Rham-current contraction, with
+  \(\Omega_c^\bullet(I)\) retained as the compact-support de Rham
+  resolution and the cotangent current differential already contracted in
+  the reduced factor. It is not an unreduced BV/factorization algebra. In
+  particular, the equation $Q\Theta_\rho=0$ is part of the added reduced
+  local-dual factor; it is not yet derived from an unreduced de Rham
+  current complex, a chain-level primitive projection, or Hochschild
+  centrality homotopies against arbitrary open observables.
 \end{rmk}
 
 \begin{thm}[Reduced factorization realization of the boundary local dual]\label{thm:boundary-principal-part-cotangent-operators}
@@ -5027,7 +5069,8 @@ nilpotent $z_i$-action carries the coadjoint action $\mc P$.
 \begin{rmk}[Unreduced lift obstruction datum]\label{rmk:unreduced-lift-status}
   Theorem~\ref{thm:boundary-principal-part-cotangent-operators} resolves
   the boundary local-dual factorization realization at the reduced
-  level after de Rham-current contraction. The remaining obligation is to lift this
+  level after de Rham-current contraction, with the cotangent current
+  differential already contracted. The remaining obligation is to lift this
   reduced object to the unreduced boundary BV/factorization theory:
   define the compactly supported de Rham functoriality before
   contraction, the full BV differential and homotopies, the pairing with
@@ -5067,7 +5110,7 @@ nilpotent $z_i$-action carries the coadjoint action $\mc P$.
   morphism on the unreduced sector. The desired unreduced lift would be a
   quantum-level homotopical lift, beyond the classical reduced theorem
   above; it sits in the residual
-  $\mathrm{prob:tate{-}coefficient{-}cotangent{-}lift}$.
+  Problem~\ref{prob:tate-coefficient-descendant-lift}.
 \end{rmk}
 
 \begin{thm}[Classical bulk-to-boundary Hamiltonian map]\label{thm:bulk-boundary}
@@ -5219,8 +5262,10 @@ nilpotent $z_i$-action carries the coadjoint action $\mc P$.
     \node[font=\footnotesize, anchor=north, align=center] at (0,-1.0)
       {$|\mathrm{Aut}(\Gamma_1)|=1,\quad
         \tfrac{1}{|\mathrm{Aut}(\Gamma_1)|}=1,\quad
-        \text{weight}=\hbar^1$};
+        \text{one edge}$};
     \node[font=\footnotesize, anchor=north, align=center] at (0,-1.5)
+      {ordered:\ $\hbar P_\partial/2$;\quad commutator:\ $\hbar P_\partial$};
+    \node[font=\footnotesize, anchor=north, align=center] at (0,-1.82)
       {output:\quad $\hbar(kn-lm)\,
         \overline{\mathrm{Tr}(\phi_1^{k+m-1}\phi_2^{l+n-1})}$
         \ \ on $f=z_1^kz_2^l$, $g=z_1^mz_2^n$};
@@ -5232,8 +5277,8 @@ nilpotent $z_i$-action carries the coadjoint action $\mc P$.
     other (and the antisymmetric partner). The automorphism group is
     trivial. In the Weyl ordered product the ordered one-edge weight is
     $\hbar P_\partial/2$; after subtracting the reverse order the
-    commutator weight is $\hbar P_\partial$. Reading the bivector
-    contraction on monomials reproduces
+    commutator weight is $\hbar P_\partial$. The bivector contraction
+    on monomials reproduces
     the cocycle coefficient $(kn-lm)$ of
     Proposition~\ref{prop:first-order-bracket}, the order-$\hbar$ Moyal
     coefficient of Proposition~\ref{prop:moyal-monomial}, and the U(1)
@@ -5581,11 +5626,13 @@ Theorem~\ref{thm:bulk-boundary}.
   is exactly the assertion that the Vandermonde-conjugated radial map on
   invariants has the moment-map ideal as kernel, injects this quantum
   Hamiltonian reduction, and has the generator image normalization
-  recorded in Statement~\ref{stmt:app-radial-external-input}.  The
-  pure-power and shear argument in Appendix~\ref{sec:app-radial-parts-moyal}
-  is a convention check on this input, not an independent proof of the
-  Harish-Chandra theorem. Therefore the displayed radial formula for
-  \(J_N(f)\) is valid under the exact external input named there.
+	  recorded in Statement~\ref{stmt:app-radial-external-input}.  The
+	  nonlinear shear obstruction in
+	  Lemma~\ref{lem:app-radial-nonlinear-shear-obstruction} explains why
+	  the mixed Weyl-trace image is kept as part of that external input,
+	  rather than derived from pure-power radial images. Therefore the
+	  displayed radial formula for \(J_N(f)\) is valid only under the exact
+	  external input named there.
 
   Finally,
   $$\hbar^{-1}[S_N(f),S_N(g)]=S_N(\{f,g\}_\hbar),$$
@@ -5602,8 +5649,9 @@ Theorem~\ref{thm:bulk-boundary}.
   \(80\) corresponding pairs.  The same computation also checks
   $$[S_2(f),S_2(g)]=S_2([f,g]_*)$$
   in the normal-form convention \(z_2=-\hbar\partial_\lambda\) on the
-  primary and higher-order pairs that exhibit nonzero \(P^3\) and \(P^5\)
-  coefficients.  These are finite-rank falsification tests; they do not
+  primary pairs, and on the higher-order pairs that exhibit nonzero
+  \(P^3\) and \(P^5\) coefficients.  These are finite-rank
+  falsification tests; they do not
   close the all-\(N\) source theorem.
 
   For the connected-projection statement, the projection
@@ -5956,14 +6004,15 @@ input to that construction is the open task below.
         \quad\bmod\ \mathcal W_N\widehat\mu(\lie{gl}_N).$$
       It survives the naive connected trace projection, since the
       right-hand side is a nonempty connected trace when $A$ is nonconstant.
-      The Costello anomaly cocycle is the degree-one local class obtained
-      by lifting this boundary contact term.  The QME repairs cancel this
-      class by an explicit closed exchange graph and counterterm,
-      $$\omega_{\mathrm{Cap}}+W_{\mathrm{closed\,exch}}
-        +(Q+\{I_0,-\})C=0,$$
-      remove it by a specified supertrace or central-character normalization,
-      or build it into the renormalized boundary generators. The displayed
-      obstruction complex controls exhaustiveness;
+	      The Costello anomaly cocycle is the degree-one local class obtained
+	      by lifting this boundary contact term.  A closed-exchange repair
+	      would have to supply \(W_{\mathrm{closed\,exch}}\) and a
+	      counterterm \(C\) with
+	      $$\omega_{\mathrm{Cap}}+W_{\mathrm{closed\,exch}}
+	        +(Q+\{I_0,-\})C=0.$$
+	      The proved local mechanisms here are the specified
+	      supertrace and central-character normalizations; any exhaustive
+	      classification is controlled by the displayed obstruction complex;
     \item construct the bulk-to-defect kernel as a cochain map to the
       Poisson central-operation object of the brane observables. On degree-zero Hamiltonians
       it must send $f(z_1,z_2)$ to the Weyl-ordered boundary observable
@@ -5993,8 +6042,8 @@ input to that construction is the open task below.
       Remark~\ref{rmk:normal-ordering-obstruction}.
   \end{enumerate}
   The computations here settle the formal polynomial Hamiltonian algebra
-  and the formal Moyal coefficients. The analytic graph theorem is the
-  sector-identification, obstruction, brane-defect kernel, and
+  and the formal Moyal coefficients. The analytic graph-realization
+  problem is the sector-identification, obstruction, brane-defect kernel, and
   first/third normalization problem listed above.
 \end{prob}
 
@@ -6011,7 +6060,17 @@ input to that construction is the open task below.
 \end{rmk}
 
 \begin{rmk}[Parabolic functoriality of the local model]\label{rmk:parabolic-functoriality}
-  The m-adic completion at $z_1$ used here breaks the formal symplectomorphism group $\mathrm{Symp}_{\mathrm{form}}(\C^2,0)$ to its parabolic stabiliser $P_{(z_1)}=\{\varphi\in\mathrm{Symp}_{\mathrm{form}}:\varphi^*\mathfrak m\subset\mathfrak m\}$ of the maximal ideal. Any cross-volume transfer therefore supplies a parabolic-equivariant comparison rather than a full $\mathrm{Symp}_{\mathrm{form}}$-equivariant one.
+  The completion along the brane divisor \(z_1=0\) used here breaks the
+  formal symplectomorphism group \(\mathrm{Symp}_{\mathrm{form}}(\C^2,0)\)
+  to the parabolic stabiliser
+  \[
+    P_{(z_1)}=
+    \{\varphi\in\mathrm{Symp}_{\mathrm{form}}(\C^2,0):
+      \varphi^*(z_1)\in (z_1)\}.
+  \]
+  Any cross-volume transfer therefore supplies a parabolic-equivariant
+  comparison rather than a full
+  \(\mathrm{Symp}_{\mathrm{form}}\)-equivariant one.
 \end{rmk}
 
 \subsubsection{Formal Weyl/Moyal target, all orders}
@@ -6127,7 +6186,7 @@ descendant sector and it is not the Costello graph realization.
   summand is governed by the separate Tate-coefficient obstruction datum.
 \end{proof}
 
-\begin{cor}[Quantum derived-center comparison with radial-parts datum]\label{cor:phi-hbar-supremum}
+\begin{cor}[Candidate quantum derived-center comparison and radial-parts datum]\label{cor:phi-hbar-supremum}
   The candidate full quantum derived-center comparison
   $$\Phi_\hbar^{\mathrm{cand}}\colon
     C^\bullet_{\mathrm{CE},\mathrm{cont}}\bigl(
@@ -6135,9 +6194,10 @@ descendant sector and it is not the Costello graph realization.
     \bigr)[[\hbar]]
     \longrightarrow
     Z^{P_{0,\hbar}}_{\mathrm{fact}}\bigl(\mathrm{Obs}^\hbar_{\mathrm{open}}\bigr)$$
-  is the quantum comparison governed by the radial-parts input of
-  Statement~\ref{stmt:app-radial-external-input}.  On the degree-zero
-  Hamiltonian generator sector it is Theorem~\ref{thm:phi-hbar-all-order}.
+	  is not constructed here.  The radial-parts input of
+	  Statement~\ref{stmt:app-radial-external-input} supplies only its
+	  degree-zero Hamiltonian generator restriction, namely
+	  Theorem~\ref{thm:phi-hbar-all-order}.
   The descendant sector is governed by
   Problem~\ref{prob:formal-factorization-center} and
   Problem~\ref{prob:tate-coefficient-descendant-lift}. A realization of
@@ -6219,11 +6279,9 @@ descendant sector and it is not the Costello graph realization.
   $P_{\partial}=P$ with weight $\hbar/2$.
 
   The all-order boundary product on $\bar A_\hbar$ is then determined by:
-  (a) the universal property of the Weyl quantization of the constant
-  Poisson tensor; among associative deformations of the symmetric algebra on
-  $(z_1,z_2)$ extending the Heisenberg commutator, the symmetrised Moyal
-  product is the unique translation-invariant deformation
-  \cite{kontsevich-dq}*{Theorem~6.1};
+  (a) the local Weyl/BCH computation for the constant Poisson tensor,
+  with Kontsevich deformation quantization \cite{kontsevich-dq} serving
+  only as general context here;
   (b) Proposition~\ref{prop:moyal-monomial} together with item (iii) above;
   (c) the antisymmetrisation argument of
   Proposition~\ref{prop:open-line-midpoint-graph-weights}.
@@ -6393,7 +6451,11 @@ subtraction forms the commutator.
     identical propagators (symmetry factor $1/6$), and $\Gamma_{3b}$
     realises $a\in\{1,2\}$ with automorphism group $S_2$ permuting the
     two same-orientation propagators (symmetry factor $1/2$). Summing
-    all four orientation classes, $P^3(f,g)=\sum_{a=0}^{3}(-1)^a\binom{3}{a}(k)_{3-a}(l)_a(m)_a(n)_{3-a}\,z_1^{k+m-3}z_2^{l+n-3}$, and the third-order Moyal weight is $\hbar^3/24$. The reduced open-line
+    all four orientation classes,
+    \(P^3(f,g)=\sum_{a=0}^{3}(-1)^a\binom{3}{a}
+    (k)_{3-a}(l)_a(m)_a(n)_{3-a}\,z_1^{k+m-3}z_2^{l+n-3}\).
+    The third-order raw commutator weight after antisymmetrising is
+    \(\hbar^3/24\). The reduced open-line
     weights are computed in
     Proposition~\ref{prop:open-line-midpoint-graph-weights}; the
     Costello counterterm and anomaly checks remain the analytic
@@ -6439,6 +6501,9 @@ checks in the problem below.
   Proposition~\ref{prop:conditional-boundary-product-normalization}. Thus each
   boundary cross-contraction contributes the operator $P$ with weight
   $\hbar/2$.
+  Here the \(S_3\) count treats the three edges as copies of the aggregate
+  bivector \(P=A-B\).  After expanding \(P^3\), a mixed orientation class
+  has residual automorphism \(S_2\) and binomial coefficient \(3\).
 
   Item (i): one edge, no edge automorphisms, weight $\hbar P/2$ for the
   ordered product (Proposition~\ref{prop:open-line-midpoint-graph-weights});
@@ -6523,13 +6588,15 @@ checks in the problem below.
 
 \subsection{Cross-volume matched-conventions theorem}\label{ssec:cross-volume-horizon}
 
-The theorem proved in this paper is local on
+The theorem is local on
 \(\R^2_{\mathrm{top}}\times\widehat{\C^2}_{0,\mathrm{hol}}\), with brane
 line \(\R_{\mathrm{brane}}\times\{0\}\times\{0\}\). It is the
 Hamiltonian BF theorem for the formal symplectic disk and its Dirac
 brane probe.  Compact Calabi-Yau, Borcherds/BKM, and global
-twisted-M-theory consequences enter through the matched-conventions
-theorem of Theorem~\ref{thm:matched-conventions-transfer}.
+twisted-M-theory consequences are not consequences of this local theorem.
+They can enter only through a supplied matched-conventions datum and the
+vanishing, with null-homotopies, of the obstruction vector in
+Theorem~\ref{thm:matched-conventions-transfer}.
 
 The formal Weyl/Moyal calculation fixes the Capelli coefficients on
 the reduced degree-zero Hamiltonian sector. The Costello first/third
@@ -6545,9 +6612,9 @@ a \(K3\times E\) specialisation, or a BKM denominator identity.
 
 \section*{Acknowledgements}
 This work belongs to the lineage of Bershadsky--Cecotti--Ooguri--Vafa 1993,
-Witten 1988, Costello 2011, and Beilinson--Drinfeld 2004; the local
+Witten 1988, Costello 2011, and Beilinson--Drinfeld 2004. The local
 Hamiltonian BF analysis is a finite algebraic chain-level probe of the
-formal-disk corner of that program. Errors are the author's.
+formal-disk corner of that program.
 
 \appendix
 \input{appendix-matlis-principal-parts}

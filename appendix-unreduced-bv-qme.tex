@@ -2,16 +2,17 @@
 \label{sec:app-unreduced-bv-qme}
 
 This appendix computes the scalar part of the mixed brane-defect QME,
-the algebraic factorization-centre lift available after passing to
+the algebraic current presentation available after passing to
 distributional principal-part currents, and the precise cancellations
 available before scalar reduction or after balanced superization.  The
 calculation separates four local facts: finite polynomial boundary
 observables cannot carry the principal-part module; the current
-principal-part model carries a strict algebraic \(P_0\)
-factorization-centre lift with zero homotopies; the ordinary
-scalar-reduced trace model has a nonzero central CE class; the
-unreduced central-character lift and the balanced supertrace model
-cancel that scalar class exactly.
+principal-part model carries a strict algebraic \(P_0\) presentation
+with zero homotopies inside the added current target; the ordinary
+  scalar-reduced trace model has a nonzero central CE class; the
+  unreduced central-character source absorbs the scalar symbol before
+  scalar reduction; and the standard balanced supertrace model makes the
+  scalar representative vanish.
 
 \begin{defn}[BV degrees and signs]
 \label{def:app-unreduced-bv-degrees}
@@ -26,10 +27,13 @@ cancel that scalar class exactly.
   \[
     |c_f|=1,\qquad |u_\rho|=0 .
   \]
-  The reduced \(P_0\) bracket has degree \(0\).  The QME obstruction
-  differential \(Q+\{I_0,-\}\) has degree \(1\).  The Poisson sign
-  convention is \(\{z_1,z_2\}=1\), and the principal-part coadjoint
-  action is
+  This is the cotangent-coordinate grading of the CE/PV block; it is
+  not the ordinary graded dual of the BV degree of \(\rho[1]\).  The
+  CE/PV cotangent--Schouten bracket has degree \(-1\).  The reduced
+  Hamiltonian boundary \(P_0\) bracket has degree \(0\).  The QME
+  obstruction differential \(Q+\{I_0,-\}\) has degree \(1\).  The
+  Poisson sign convention is \(\{z_1,z_2\}=1\), and the
+  principal-part coadjoint action is
   \[
     z_1^p z_2^q\cdot\rho_{a,b}
     =
@@ -51,6 +55,38 @@ cancel that scalar class exactly.
   ghost \(\gamma_{\mathbf 1}\) for the omitted constant Hamiltonian
   line.  Its associated graded is the Chevalley--Eilenberg complex of
   \(\bar A\) with trivial coefficients on this central line.
+  Writing
+  \[
+    \mathfrak Q^\bullet_{\mathrm{bd}}
+      =(\mathcal O_{\mathrm{loc}}^{\mathrm{bd}},d_{\mathrm{QME}}),
+  \]
+  the associated-graded scalar-symbol projection is
+  \[
+    \sigma_{\mathrm{sc}}\colon
+    \operatorname{gr}_{\mathrm{sc}}\mathfrak Q^\bullet_{\mathrm{bd}}
+    \longrightarrow
+    C^\bullet_{\mathrm{Lie}}(\bar A;\C\gamma_{\mathbf 1})[1].
+  \]
+  A cone or long exact sequence is formed only after one has chosen a
+  \(d_{\mathrm{QME}}\)-stable scalar filtration and an actual filtered
+  chain projection
+  \[
+    \widehat\sigma_{\mathrm{sc}}\colon
+    \mathfrak Q^\bullet_{\mathrm{bd}}
+    \longrightarrow
+    C^\bullet_{\mathrm{Lie}}(\bar A;\C\gamma_{\mathbf 1})[1]
+  \]
+  whose associated graded is the displayed \(\sigma_{\mathrm{sc}}\).
+  Without this extra projection, the assertion below is only an
+  associated-graded scalar obstruction statement.
+  Thus a degree-one QME representative with two Hamiltonian inputs maps to
+  a Lie two-cocycle.  Explicitly,
+  \[
+    \sigma_{\mathrm{sc}}\!\left(
+    \kappa(f,g)\int_\R a(t)b(t)\gamma_{\mathbf 1}(t)\,dt\right)
+    =
+    \kappa(f,g)\gamma_{\mathbf 1}.
+  \]
 \end{defn}
 
 \begin{thm}[Polynomial unreduced centrality no-go]
@@ -185,7 +221,7 @@ cancel that scalar class exactly.
   Theorem~\ref{thm:app-unreduced-polynomial-centrality-no-go}.
 \end{defn}
 
-\begin{constr}[Algebraic factorization-centre lift]
+\begin{constr}[Algebraic current presentation map]
 \label{constr:app-algebraic-factorization-centre-lift}
   Let
   \[
@@ -221,7 +257,7 @@ cancel that scalar class exactly.
   and extend continuously and multiplicatively.
 \end{constr}
 
-\begin{thm}[Algebraic current factorization-centre lift with zero homotopies]
+\begin{thm}[Algebraic current presentation with zero homotopies]
 \label{thm:app-algebraic-factorization-centre-zero-homotopies}
   The maps \(\Phi_I^\chi\) of
   Construction~\ref{constr:app-algebraic-factorization-centre-lift}
@@ -235,8 +271,11 @@ cancel that scalar class exactly.
     H_{\mathrm{fact}}=0,\qquad H_{P_0}=0 .
   \]
   Thus the unreduced source with central character constructs the
-  factorization-centre lift as far as the distributional algebraic
-  current model permits.  It does not contradict the polynomial no-go
+  \(P_0\) current presentation as far as the distributional algebraic
+  current model permits.  This is not yet a morphism into
+  \(Z^{P_0}_{\mathrm{fact}}(\mathrm{Obs}_{\mathrm{open}})\) for the
+  genuine unreduced open BV factorization algebra.  It does not
+  contradict the polynomial no-go
   theorem: the image of \(\Theta_\rho(B)\) lives in the added
   principal-part current sector, not in finite polynomial open
   observables.
@@ -256,9 +295,10 @@ cancel that scalar class exactly.
   Under \(\Phi_I^\chi\), these three structure maps become the three
   displayed \(P_0\) brackets of
   Definition~\ref{def:app-central-character-principal-part-current-algebra}.
-  Hence the CE differential and the target Schouten/\(P_0\)
-  differential agree on generators, and the biderivation property
-  extends the equality to the completed symmetric algebra.
+  Hence the CE differential and the target Schouten differential agree
+  on generators, while the degree-zero current \(P_0\) brackets agree
+  by the same source brackets.  The biderivation property extends the
+  equality to the completed symmetric algebra.
 
   Factorization compatibility is also strict.  Extension by zero sends
   \(a,B\) to their extensions as test functions and currents; the
@@ -272,8 +312,8 @@ cancel that scalar class exactly.
   it is zero by the previous paragraph.  Therefore
   \(H_{\mathrm{fact}}\) and \(H_{P_0}\) may both be chosen to be zero.
 
-  The same statement holds against arbitrary open observables in the
-  completed algebra, not only against length-one generators.  Let
+  The same statement holds against arbitrary monomials in the added
+  algebraic current target, not only against length-one generators.  Let
   \(Y=Y_1\cdots Y_r\) be a homogeneous source monomial and put
   \(W=\Phi_I^\chi(Y)\), a monomial in the target generators
   \(B_g^\chi(b)\) and \(\Theta_\sigma(C)\).  For a source generator
@@ -294,7 +334,7 @@ cancel that scalar class exactly.
   displayed brackets.  Hence the Leibniz rule gives \(D_x(Y)=0\) for
   every monomial and, by continuity, for every element of the completed
   algebra.  Thus the centrality homotopies against arbitrary algebraic
-  open observables are strict zero homotopies in this current model.
+  current-target monomials are strict zero homotopies in this model.
 \end{proof}
 
 \begin{lem}[Unreduced scalar primitive]
@@ -421,7 +461,7 @@ cancel that scalar class exactly.
   kills the class.
 \end{proof}
 
-\begin{thm}[Central-character cancellation in the unreduced source]
+\begin{thm}[Central-character source replacement for the scalar QME symbol]
 \label{thm:app-central-character-qme-cancellation}
   Let \(A=\C[z_1,z_2]\) and let
   \(\bar f\) denote the image of \(f\) in
@@ -449,13 +489,21 @@ cancel that scalar class exactly.
       =J^\chi_N([z_1,z_2]_{*})\,\operatorname{Tr}(A)
       =\hbar J^\chi_N(1)\operatorname{Tr}(A).
   \]
-  Thus the scalar QME obstruction
-  \(\operatorname{Ob}_{\mathrm{sc}}\) vanishes after replacing the
+  Thus the scalar QME symbol is absorbed after replacing the
   scalar-reduced source by the unreduced source with central character
-  \(\chi_N\).  Equivalently, the central character is the boundary
-  realization of the unreduced scalar primitive of
-  Lemma~\ref{lem:app-unreduced-scalar-primitive}, multiplied by \(N\)
-  and by the Weyl factor \(\hbar\) in the quantum normalization.
+  \(\chi_N\).  This is a source replacement before scalar reduction, not a
+  null-homotopy inside the original scalar-reduced QME complex.
+  Equivalently, if \(\eta(f)=-[f]_0\), then
+  \[
+    d_{\mathrm{CE}}\eta=\omega,\qquad
+    \chi_N(f)=N[f]_0=-N\eta(f),
+  \]
+  so
+  \[
+    d_{\mathrm{CE}}\chi_N=-N\omega,\qquad
+    \hbar N\omega+d_{\mathrm{CE}}(\hbar\chi_N)=0
+  \]
+  in the unreduced source.
 \end{thm}
 
 \begin{proof}
@@ -496,7 +544,7 @@ cancel that scalar class exactly.
   the QME obstruction class.
 \end{proof}
 
-\begin{thm}[Balanced supertrace QME cancellation]
+\begin{thm}[Standard \(\mathfrak{gl}(N|N)\) supertrace scalar QME cancellation]
 \label{thm:app-balanced-supertrace-qme-cancellation}
   Let \(V=\C^{N|N}\), replace the ordinary trace by the supertrace, and
   use the canonical even Weyl relations on \(\operatorname{End}(V)\)
@@ -564,7 +612,7 @@ cancel that scalar class exactly.
   ordinary trace on the open \(\lie{gl}_N\) brane.  Let
   \(W_{\mathrm{ext}}\) be any additional local closed-exchange or
   brane-defect graph contribution whose leading scalar associated
-  graded is \(w_{\mathrm{ext}}\in C^2_{\mathrm{CE}}(\bar A;\C)\).  A
+  graded is \(w_{\mathrm{ext}}\in C^2_{\mathrm{Lie}}(\bar A;\C)\).  A
   cancellation
   \[
     \operatorname{Ob}_{\mathrm{sc}}
@@ -573,7 +621,7 @@ cancel that scalar class exactly.
   with \(C\in\mathcal O_{\mathrm{loc}}^{\mathrm{bd}}\) can hold only if
   \[
     [w_{\mathrm{ext}}]=-\hbar N[\bar c]
-      \qquad\text{in }H^2_{\mathrm{CE}}(\bar A;\C).
+      \qquad\text{in }H^2_{\mathrm{Lie}}(\bar A;\C).
   \]
   In particular, with \(W_{\mathrm{ext}}=0\), or with
   \(w_{\mathrm{ext}}\) exact, the ordinary scalar-reduced
@@ -590,7 +638,7 @@ cancel that scalar class exactly.
   to
   \[
     \hbar N\omega+w_{\mathrm{ext}}+\delta\bar\eta=0
-      \qquad\text{in }C^2_{\mathrm{CE}}(\bar A;\C),
+      \qquad\text{in }C^2_{\mathrm{Lie}}(\bar A;\C),
   \]
   where \(\bar\eta\) is the linear functional represented by the
   leading scalar part of \(C\).  Passing to cohomology gives the stated
