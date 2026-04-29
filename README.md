@@ -1,7 +1,9 @@
-# Closed Hamiltonian BF Theory and Reduced CE/PV Central Operations
+# Remarks on mixed topological-holomorphic strings
 
-This repository contains a research manuscript on the formal local
-mixed holomorphic-topological Dirac brane model on
+This repository contains a research manuscript with the descriptive subtitle
+``Closed Hamiltonian BF theory and reduced CE/PV central operations for a
+Dirac brane probe''.  It studies the formal local mixed
+holomorphic-topological Dirac brane model on
 \(\mathbb R^2\times\mathbb C^2\).  The source of the paper is
 `main.tex`, with front matter and support files split into the adjacent
 `.tex` files.
