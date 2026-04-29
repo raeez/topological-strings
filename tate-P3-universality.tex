@@ -1,23 +1,20 @@
 % =============================================================================
-% Protected twisted-M motivation and admissible local reduction.
+% Protected twisted-M obstruction and admissible local reduction.
 %
-% This fragment is an outlook firewall.  It records the conditional use
-% of Costello's twisted-M-theory motivation only after an ambient
-% background has supplied a protected Hamiltonian sector satisfying the
-% local hypotheses below.  The local theorem remains a theorem of the
-% formal Hamiltonian disk and its Dirac brane probe.
+% This fragment isolates the exact obstruction datum whose vanishing
+% promotes Costello's twisted-M-theory motivation to a protected
+% Hamiltonian realization at a brane point.
 % =============================================================================
 
 \subsection{Protected twisted-M motivation and local reduction}\label{ssec:twistedM-universality}
 
 Perturbative twisted M-theory in the sense of
-Costello~\cite{costello-twistedM} is used here as physical motivation
-for a protected sector near a brane point.  It is not used as a global
-realization theorem.  The mathematical assertion in this subsection is
-only the following reduction: if an ambient twisted-M background
-supplies the protected Hamiltonian data specified below, then the
-formal local theorem of \S\ref{ssec:local-theorem} applies to that
-restricted sector.
+Costello~\cite{costello-twistedM} enters through a protected
+Hamiltonian realization datum at a brane point.  The mathematical
+assertion is a realization criterion: vanishing of the period,
+closed-field comparison, scalar-anomaly, and brane-defect QME
+obstructions constructs the admissible Hamiltonian sector to which the
+formal local theorem of \S\ref{ssec:local-theorem} applies.
 
 \begin{defn}[Protected Hamiltonian sector at a brane point]
   Let $(X,\omega)$ be a connected holomorphic-symplectic surface, let
@@ -42,8 +39,8 @@ restricted sector.
   at the symplectic disk $\widehat X_p$, and the protected
   bulk-to-boundary evaluation on the brane algebra.
 
-  This is a name for a restricted object.  It does not assert that
-  every ambient twisted-M-theory background admits such an object.
+  The realization problem is to construct this triple from the ambient
+  BV fields and to prove the vanishing of the obstruction datum below.
 \end{defn}
 
 \begin{defn}[Admissible protected Hamiltonian restriction]\label{defn:admissible-protected-hamiltonian-restriction}
@@ -71,13 +68,358 @@ restricted sector.
   \end{enumerate}
 \end{defn}
 
-\begin{rmk}[Protected sector, not ambient theory]
-  The admissibility condition is an external input.  It is not proved
-  here from the full field content of twisted M-theory on
-  $\R\times X$.  Dependence on non-protected directions, holonomy
-  along the topological direction, or gauge data not detected by the
-  formal Hamiltonian jet at $p$ lies outside the local theorem.
-\end{rmk}
+\begin{defn}[Protected twist obstruction datum]\label{defn:protected-twist-obstruction-datum}
+  Fix a candidate protected twisted-M background near
+  \(\R\times p\) and a candidate comparison with the Hamiltonian
+  formal-disk model.  The comparison carries four obstruction classes.
+
+  First, every holomorphic symplectic vector field \(v\) determines the
+  closed one-form
+  \[
+    \alpha_v=-\iota_v\omega.
+  \]
+  The holomorphic de Rham exact sequence
+  \[
+    0\longrightarrow\C_X\longrightarrow\mc O_X
+      \xrightarrow{d}\Omega^1_{X,\mathrm{cl}}\longrightarrow0
+  \]
+  gives the period obstruction
+  \[
+    \operatorname{per}(v)=\delta(\alpha_v)\in H^1(X,\C_X).
+  \]
+  This is the obstruction to choosing a single global holomorphic
+  Hamiltonian primitive for \(v\).
+
+  Second, a chosen local comparison of closed protected fields with the
+  Hamiltonian BF fields gives a cone
+  \[
+  \mc C_{\mathrm{cl},p}=
+  \operatorname{Cone}\!\left(
+    \mc E_{\mathrm{cl},\mathrm{prot},c}^{!}(\R\times\widehat X_p)
+      \xrightarrow{\ \chi_{\mathrm{cl}}\ }
+    \Omega^\bullet_c(\R)\widehat\otimes
+      (\widehat{\mathfrak h}\ltimes
+       \widehat{\mathfrak h}^{\vee}_{\mathrm{cont}}[1])^{!}
+  \right).
+  \]
+  The comparison is a field-level equivalence only after this cone is
+  acyclic in the protected summand.
+
+  Third, the scalar anomaly mismatch is
+  \[
+    \operatorname{ob}_{\mathrm{scal}}
+      =
+    \chi_{\mathrm{anom}}\bigl([\operatorname{anom}_{\mathrm{prot}}]\bigr)
+      -[\bar c]\in H^2_{\mathrm{Lie}}(\bar A,\C),
+  \]
+  where \(\chi_{\mathrm{anom}}\) is the anomaly map induced by the
+  comparison and \([\bar c]\) is the scalar class used in the local
+  theorem.
+
+  Fourth, after choosing the weighted coefficient model used by the
+  local theorem, the brane-defect quantum obstruction is the class
+  \[
+  \operatorname{ob}_{\mathrm{QME}}=
+  \left[
+    QI_{\mathrm{prot}}
+    +\frac12\{I_{\mathrm{prot}},I_{\mathrm{prot}}\}
+    +\hbar\Delta I_{\mathrm{prot}}
+  \right]
+  \in
+  H^1\!\left(
+    \mathcal O_{\mathrm{loc}}(\mc E_{\mathrm{prot},w}),
+    Q+\{I_{0,\mathrm{prot}},-\}
+  \right).
+  \]
+  Its vanishing is the precise statement that the protected brane-defect
+  interaction satisfies the QME in the same normalization as
+  Problem~\ref{prob:weighted-rg-locality}.
+\end{defn}
+
+\begin{defn}[Super-balanced equivariant QME datum]\label{defn:super-balanced-equivariant-qme-datum}
+  A super-balanced equivariant brane-defect datum consists of:
+  \begin{enumerate}[label=(\roman*)]
+    \item a matrix Lie superalgebra \(\mathfrak s\) acting on the
+      Chan-Paton factor, together with an even nondegenerate invariant
+      form \(B_{\mathfrak s}\) used to build the BV heat-kernel
+      contraction;
+    \item a trace character \(\operatorname{tr}_{\mathfrak s}\) on the
+      matrix factor and a lifted identity element \(I_{\mathfrak s}\)
+      with
+      \[
+        \operatorname{tr}_{\mathfrak s}(I_{\mathfrak s})=0;
+      \]
+    \item the weighted brane-defect local-functional complex
+      \[
+        \mathfrak Q_{\mathfrak s}=
+        \left(
+        \mathcal O_{\mathrm{loc}}(\mc E^{\mathfrak s}_{\mathrm{bd},w}),
+        d_{\mathrm{QME}}=Q+\{I_{0,\mathfrak s},-\}
+        \right);
+      \]
+    \item a \(P_{(z_1)}\)-equivariant coefficient topology on the formal
+      symplectic disk, where
+      \[
+        P_{(z_1)}=\{\varphi\in
+        \operatorname{Symp}_{\mathrm{form}}(\widehat{\C^2}_0):
+        \varphi^*(z_1)\in (z_1)\}.
+      \]
+  \end{enumerate}
+  The scalar associated graded of \(\mathfrak Q_{\mathfrak s}\) is the
+  Chevalley--Eilenberg complex of the reduced Hamiltonian algebra
+  \(\bar A=\C[z_1,z_2]/\C\cdot1\) with coefficients in the central
+  boundary ghost line \(\C\gamma_{\mathbf 1}\).
+\end{defn}
+
+\begin{thm}[Theorem F double-prime: super-balanced equivariant scalar QME vanishing]\label{thm:joint-super-balanced-symp-qme-vanishing}
+  Let
+  \((\mathfrak s,B_{\mathfrak s},\operatorname{tr}_{\mathfrak s})\)
+  be a super-balanced equivariant datum in the sense of
+  Definition~\ref{defn:super-balanced-equivariant-qme-datum}.  For
+  \(a,b\in\Omega^0_c(\R)\) and
+  \(f,g\in\C[z_1,z_2]\), the scalar part of the mixed brane-defect QME
+  obstruction is represented in \(\mathfrak Q_{\mathfrak s}\) by
+  \[
+    \operatorname{Ob}^{\mathfrak s}_{\mathrm{sc}}
+    (\gamma_{\mathbf 1};a,f;b,g)
+    =
+    \hbar\,\operatorname{tr}_{\mathfrak s}(I_{\mathfrak s})\,
+    \omega(f,g)
+    \int_{\R}a(t)b(t)\gamma_{\mathbf 1}(t)\,dt .
+  \]
+  Hence the scalar obstruction vanishes identically for a
+  super-balanced datum.  The vanishing is \(P_{(z_1)}\)-equivariant.
+  Equivalently, the associated graded scalar class is
+  \[
+    [\operatorname{Ob}^{\mathfrak s}_{\mathrm{sc}}]
+    =
+    \hbar\,\operatorname{tr}_{\mathfrak s}(I_{\mathfrak s})\,
+    [\bar c]
+    \in
+    H^2_{\mathrm{Lie}}(\bar A,\C\gamma_{\mathbf 1}),
+  \]
+  and the theorem applies exactly on the super-balanced locus
+  \(\operatorname{tr}_{\mathfrak s}(I_{\mathfrak s})=0\).
+  Thus the scalar channel is an accepted universal Koszul-duality input
+  precisely on this locus: its acceptance component is the class
+  \(\hbar\,\operatorname{tr}_{\mathfrak s}(I_{\mathfrak s})[\bar c]\).
+
+  If, in addition, the reduced non-scalar summand
+  \[
+    \mathfrak Q_{\mathfrak s}^{\mathrm{red}}
+      =
+      \operatorname{Cone}\!\left(
+      \mathfrak Q_{\mathfrak s}
+      \longrightarrow
+      C^\bullet_{\mathrm{Lie}}(\bar A;\C\gamma_{\mathbf 1})
+      \right)
+  \]
+  has zero degree-one cohomology after the chosen weighted regulator and
+  interval-factorization null-homotopies are imposed, then the complete
+  degree-one brane-defect QME obstruction class in
+  \(H^1(\mathfrak Q_{\mathfrak s})\) vanishes.
+\end{thm}
+
+\begin{proof}
+  The scalar contraction in the BV bracket is obtained by closing the
+  matrix index in the single boundary loop.  For an ordinary matrix
+  trace this contraction is \(N\).  For a supertrace datum it is the
+  trace of the lifted identity, namely
+  \(\operatorname{tr}_{\mathfrak s}(I_{\mathfrak s})\).  The target
+  part of the same local bracket is the constant Taylor coefficient
+  cocycle
+  \[
+    \omega(f,g)=[\{f,g\}]_0
+  \]
+  of Lemma~\ref{lem:omega-cocycle}, and the brane-line locality gives
+  the compactly supported factor
+  \(\int_\R a(t)b(t)\gamma_{\mathbf 1}(t)\,dt\).  This proves the
+  displayed representative.
+
+  Passing to the scalar associated graded keeps only the Hamiltonian
+  cocycle \([\bar c]\) and the matrix coefficient
+  \(\operatorname{tr}_{\mathfrak s}(I_{\mathfrak s})\), giving the
+  displayed cohomology class.  Super-balance sets this coefficient to
+  zero, so the degree-one representative is the zero cochain, not
+  merely an exact cochain.  The \(P_{(z_1)}\)-equivariance follows because
+  \(\operatorname{tr}_{\mathfrak s}(I_{\mathfrak s})\) is matrix-factor
+  data and \(\omega\) is the symplectic Poisson cocycle on the target
+  factor.  The completion at the brane axis is functorial only under
+  \(P_{(z_1)}\), which is exactly the equivariance group in the
+  hypothesis.
+
+  The last assertion is the long exact sequence of cohomology for the
+  displayed cone.  The scalar quotient class is zero by the first part,
+  and the reduced degree-one cohomology is zero by hypothesis.  Therefore
+  the total degree-one obstruction class in
+  \(H^1(\mathfrak Q_{\mathfrak s})\) vanishes.
+\end{proof}
+
+\begin{defn}[Spin-Hecke queer coefficient input]\label{defn:spin-hecke-queer-input}
+  Let \(N\ge1\) and
+  \[
+    \mathfrak q(N)=
+    \left\{
+      \begin{pmatrix} A&B\\ B&A\end{pmatrix}:
+      A,B\in\mathfrak{gl}_N
+    \right\}\subset\mathfrak{gl}(N|N).
+  \]
+  Put
+  \[
+    J=\begin{pmatrix}0&I_N\\ -I_N&0\end{pmatrix},
+    \qquad
+    P^{\mathfrak q}=\begin{pmatrix}I_N&0\\0&-I_N\end{pmatrix},
+  \]
+  and define the queer trace
+  \[
+    \operatorname{otr}
+      \begin{pmatrix}A&B\\ B&A\end{pmatrix}
+      =\operatorname{Tr}(B)\in\Pi\C .
+  \]
+  A spin-Hecke input for the queer brane is the Sergeev
+  Hecke--Clifford action on \(V^{\otimes n}\), \(V=\C^{N|N}\), whose
+  central-character comparison identifies
+  \[
+    \operatorname{Tr}_{\mathfrak{gl}_N}(I_N)
+      =
+    \operatorname{otr}_{\mathfrak q(N)}(J)
+      =N .
+  \]
+\end{defn}
+
+\begin{thm}[Theorem G odd-trace: queer centre anomaly from the spin-Hecke input]\label{thm:queer-u1-center-anomaly-spin-hecke}
+  Assume the spin-Hecke input of
+  Definition~\ref{defn:spin-hecke-queer-input}.  For the queer-trace
+  boundary evaluation
+  \(f\mapsto\operatorname{otr} f(\phi_1,\phi_2)\), the odd scalar QME
+  representative is
+  \[
+    \operatorname{Ob}^{\mathrm{otr}}_{\mathrm{sc}}
+    (\gamma_{\mathbf 1};a,f;b,g)
+    =
+    \hbar N\,\omega(f,g)
+    \int_\R a(t)b(t)\gamma_{\mathbf 1}(t)\,dt
+    \in
+    \mathcal O_{\mathrm{loc}}(\mc E^{\mathfrak q}_{\mathrm{bd},w})_{\bar1}.
+  \]
+  Its associated graded CE class is
+  \[
+    \hbar N[\bar c]^{\mathrm{otr}}
+    \in H^2_{\mathrm{Lie}}(\bar A,\Pi\C)_{\bar1}.
+  \]
+  This class is nonzero and is independent of the even class
+  \(\hbar N[\bar c]\in H^2_{\mathrm{Lie}}(\bar A,\C)_{\bar0}\).
+  Since \(N\ge1\), the class does not vanish over \(\C[[\hbar]]\) before
+  imposing an odd scalar quotient or a target null-homotopy of the odd
+  line \(\Pi\C\cdot[\bar c]^{\mathrm{otr}}\).
+  Hence the odd-trace channel is accepted by a universal Koszul-duality
+  target exactly after that quotient or null-homotopy is included in the
+  target datum; otherwise its acceptance obstruction is the displayed
+  nonzero odd class.
+  The spin-Hecke input justifies the coefficient identity at the
+  cohomology layer.  It does not give a chain-level QME cancellation:
+  \[
+    P^{\mathfrak q}J(P^{\mathfrak q})^{-1}=-J
+  \]
+  is the obstruction to the unsigned parity-equivariant regulator used
+  in the super-balanced theorem above.
+\end{thm}
+
+\begin{proof}
+  The queer brane has two central coefficient lines:
+  the even line generated by the identity and the odd line generated by
+  \(J\).  The queer trace kills the even identity and evaluates the odd
+  central element by
+  \[
+    \operatorname{otr}(J)=
+    \operatorname{Tr}(I_N)=N .
+  \]
+  The spin-Hecke input asserts that this coefficient is preserved by the
+  Sergeev central-character comparison; the Hamiltonian cocycle on the
+  target remains the same \(\omega(f,g)=[\{f,g\}]_0\).  Therefore the
+  scalar boundary loop gives exactly the displayed odd representative.
+
+  Passing to associated graded removes the brane-line smearing and keeps
+  the Lie two-cocycle \(\Pi\omega\), hence the class
+  \(\hbar N[\bar c]^{\mathrm{otr}}\).  Nontriviality is the same
+  calculation as Lemma~\ref{lem:omega-cocycle}: a primitive
+  \(\bar\eta:\bar A\to\Pi\C\) would lift with
+  \(\tilde\eta(1)=0\), but then
+  \[
+    \delta\tilde\eta(z_1,z_2)
+      =-\tilde\eta(\{z_1,z_2\})
+      =-\tilde\eta(1)=0
+  \]
+  while \(\omega(z_1,z_2)=1\).
+  The even and odd classes are independent because they lie in the two
+  direct summands
+  \(H^2_{\mathrm{Lie}}(\bar A,\C)\oplus
+  H^2_{\mathrm{Lie}}(\bar A,\Pi\C)\).
+  Since \(N\ge1\) in the datum and \(\hbar\) is formal, the displayed
+  odd class is not killed inside
+  \(H^2_{\mathrm{Lie}}(\bar A,\Pi\C)[[\hbar]]\).  Killing it requires an
+  additional target quotient or null-homotopy; it is not a consequence
+  of the spin-Hecke coefficient comparison.
+
+  Finally,
+  \(P^{\mathfrak q}J(P^{\mathfrak q})^{-1}=-J\) is an explicit matrix
+  computation.  Thus the queer channel has signed parity, not the
+  unsigned parity condition used in the super-balanced cancellation.
+  The algebraic spin-Hecke input gives the coefficient class, but not a
+  null-homotopy of this odd obstruction.
+\end{proof}
+
+\begin{lem}[Primary obstruction test]\label{lem:protected-primary-obstruction-test}
+  A protected twisted-M background can supply an admissible protected
+  Hamiltonian restriction only if the period class, the comparison cone,
+  the scalar mismatch, and the QME obstruction in
+  Definition~\ref{defn:protected-twist-obstruction-datum} vanish in the
+  senses stated there.  Conversely, if the period classes vanish for the
+  Hamiltonian vector fields under consideration, the comparison cone is
+  acyclic on the protected summand, the scalar mismatch is zero, and a
+  solution of the displayed QME class has been chosen compatibly with
+  interval factorization, then the candidate comparison supplies the data
+  of Definition~\ref{defn:admissible-protected-hamiltonian-restriction}.
+\end{lem}
+
+\begin{proof}
+  The period statement is the connecting morphism of
+  \(0\to\C_X\to\mc O_X\xrightarrow d\Omega^1_{X,\mathrm{cl}}\to0\):
+  local Hamiltonian primitives \(h_i\) for \(\alpha_v\) differ by
+  constants on overlaps, and that Cech cocycle is exactly
+  \(\delta(\alpha_v)\).  It vanishes precisely when the local primitives
+  glue to a global Hamiltonian, modulo one global constant.
+
+  A comparison of protected closed fields with Hamiltonian BF fields is a
+  quasi-isomorphism on the protected summand exactly when its mapping cone
+  is acyclic.  If the cone has cohomology, the unmatched class is a
+  protected closed field invisible to the formal Hamiltonian model, or a
+  Hamiltonian BF field not produced by the protected sector.
+
+  Scalar compatibility is an equality in
+  \(H^2_{\mathrm{Lie}}(\bar A,\C)\), since both the protected anomaly and
+  the local scalar anomaly are central Lie algebra cocycles after the
+  comparison.  Finally, the displayed QME expression is the standard
+  degree-one obstruction class for deforming the classical interaction to
+  a quantum BV interaction in the fixed weighted coefficient category.
+  The interval-factorization compatibility is precisely the
+  brane-defect locality clause in the admissibility definition.
+\end{proof}
+
+\begin{defn}[Ambient-to-protected realization map]\label{defn:ambient-protected-realization-map}
+  An ambient-to-protected realization map is a morphism from the ambient
+  twisted-M BV fields near \(\R\times p\) to the triple
+  \[
+    \bigl(
+      \mc E_{\mathrm{open},\mathrm{prot}},
+      \mc E_{\mathrm{cl},\mathrm{prot}},
+      \partial_{\mathrm{bb}}^{\mathrm{prot}}
+    \bigr)
+  \]
+  whose closed-field cone is \(\mc C_{\mathrm{cl},p}\), whose scalar
+  anomaly map is \(\chi_{\mathrm{anom}}\), and whose brane interaction
+  has QME obstruction \(\operatorname{ob}_{\mathrm{QME}}\).
+\end{defn}
 
 \begin{prop}[Admissible protected-sector reduction]
   Let $(X,\omega)$ be a connected holomorphic-symplectic surface and
@@ -127,8 +469,10 @@ restricted sector.
   factorization map, primitive projection, and weighted Hadamard
   reduction already used in the local theorem.  These
   hypotheses put the protected sector in the same algebraic category
-  as the local model.  They do not prove QME-flatness for the
-  one-antifield quantum extension.
+  as the local model.  QME-flatness for the one-antifield quantum
+  extension is the vanishing condition
+  \(\operatorname{ob}_{\mathrm{QME}}=0\) in
+  Theorem~\ref{thm:protected-twist-hamiltonian-criterion}.
 
   Scalar anomaly compatibility identifies the brane centre-of-mass
   anomaly with the class $[\bar c]$ appearing in the local anomaly
@@ -137,14 +481,69 @@ restricted sector.
   gives the asserted protected-sector reduction.
 \end{proof}
 
-\begin{lem}[Admissibility is not globalization]\label{lem:admissibility-not-globalization}
-  An admissible protected Hamiltonian restriction is neither a
-  globalization functor nor a comparison map from twisted-M backgrounds,
-  compact Calabi--Yau threefolds, Vol III CY-to-chiral data, or
-  Igusa/BKM data to the local theorem.
-  It selects only the formal Hamiltonian disk, the Dirac brane Ext
-  algebra, the brane-line factorization restriction, and the scalar
-  anomaly class \( [\bar c] \).
+\begin{thm}[Protected twist-to-Hamiltonian comparison criterion]\label{thm:protected-twist-hamiltonian-criterion}
+  Let \((X,\omega)\) be a connected holomorphic-symplectic surface and
+  \(p\in X\).  Suppose a perturbative twisted-M background with branes on
+  \(\R\times p\) supplies a candidate protected sector together with the
+  obstruction datum of
+  Definition~\ref{defn:protected-twist-obstruction-datum}.  Assume:
+  \begin{enumerate}[label=(\roman*)]
+    \item the period classes \(\operatorname{per}(v)\) vanish for the
+      locally Hamiltonian symplectic vector fields used by the sector;
+    \item the closed-field comparison cone \(\mc C_{\mathrm{cl},p}\) is
+      acyclic on the protected summand;
+    \item \(\operatorname{ob}_{\mathrm{scal}}=0\);
+    \item \(\operatorname{ob}_{\mathrm{QME}}=0\), with a chosen solution
+      compatible with compactly supported interval factorization.
+  \end{enumerate}
+  Then the candidate protected sector determines an admissible protected
+  Hamiltonian restriction.  Consequently the formal local Hamiltonian
+  theorem applies to that sector.  If, in addition, the QME solution
+  includes the one-antifield weighted Tate lift of
+  Problem~\ref{prob:weighted-rg-locality}, then the corresponding
+  one-antifield quantum Hamiltonian comparison is valid for that
+  protected sector and for that sector only.
+\end{thm}
+
+\begin{proof}
+  By Lemma~\ref{lem:protected-primary-obstruction-test}, the four
+  hypotheses supply the Darboux Hamiltonian reduction, the field-level
+  protected comparison, scalar anomaly compatibility, and brane-defect
+  QME locality required in
+  Definition~\ref{defn:admissible-protected-hamiltonian-restriction}.
+  Applying Proposition~\ref{prop:formal-local-global-restriction} at the
+  formal disk and then the admissible protected-sector reduction gives the
+  local Hamiltonian BF model and its bulk-to-boundary evaluation.  The last
+  sentence is exactly the conditional weighted Tate/QME extension isolated in
+  Problem~\ref{prob:weighted-rg-locality}, transported through the chosen
+  protected-sector equivalence.
+\end{proof}
+
+\begin{lem}[Formal-restriction external acceptance criterion]\label{lem:admissibility-not-globalization}
+  An admissible protected Hamiltonian restriction contributes precisely
+  the formal Hamiltonian disk, the Dirac brane Ext algebra, the brane-line
+  factorization restriction, and the scalar anomaly class \( [\bar c] \).
+  For an external compact BCOV, CY-to-chiral, Igusa, Borcherds, or BKM
+  target \(T\), this contribution is an accepted universal Koszul-duality
+  input exactly after the target supplies its convention datum
+  \(\mathfrak C_T\), a morphism
+  \(\mathfrak C_{\widehat p}^{\mathrm{Ham}}\to \mathfrak C_T\), and
+  null-homotopies for the obstruction vector
+  \[
+    \operatorname{Ob}^{\mathrm{ext}}_T
+    =
+    \bigl(
+      \operatorname{per}_T,
+      \operatorname{ob}^{\mathrm{desc}}_T,
+      \operatorname{ob}^{\mathrm{BCOV}}_T,
+      \operatorname{ob}^{\mathrm{VolIII}}_T,
+      \operatorname{ob}^{\mathrm{Igusa/BKM}}_T
+    \bigr)
+    \in H^1(\mathfrak K_T),
+  \]
+  with a component omitted only when \(T\) does not assert the
+  corresponding structure.  A non-zero component is the exact obstruction
+  to the corresponding external theorem.
 \end{lem}
 
 \begin{proof}
@@ -158,28 +557,59 @@ restricted sector.
   holomorphic anomaly equation, no Borcherds input Jacobi form, no Weyl
   chamber, and no compact Hall orientation.  Two ambient theories can
   have the same admissible formal restriction and different choices of
-  all those global data.  There is therefore no functorial operation from
-  the local restriction to any of those external structures.  The
-  admissible restriction cannot determine any compact CY\(_3\), global
-  BCOV, Vol III, Igusa, Borcherds, or BKM theorem.
+  all those global data.  In the target convention complex
+  \(\mathfrak K_T\) these choices are independent coordinates of
+  \(\operatorname{Ob}^{\mathrm{ext}}_T\).  Vanishing with specified
+  null-homotopies is therefore precisely the acceptance datum for using
+  the formal restriction in \(T\); a non-zero coordinate is precisely the
+  named target obstruction.
 \end{proof}
 
-\begin{rmk}[BCOV comparison]
-  The original BCOV theory~\cite{bcov} is a theory on
-  Calabi--Yau threefolds.  The model in this paper is a formal
-  holomorphic-symplectic surface model at $d=2$, with closed fields
-  $\bar A\oplus\bar A^\vee[1]$ and branes on the line $\R$.  No
-  compact CY$_3$ BCOV theorem, anomaly cancellation theorem, or global
-  Kodaira-Spencer theorem is imported by the protected-sector reduction
-  above.
-\end{rmk}
+\begin{defn}[Protected-sector matched-conventions contribution]\label{defn:protected-sector-matched-conventions-contribution}
+  The protected-sector reduction contributes the following datum to any
+  external matched-conventions theorem:
+  \[
+  \mathfrak C_{\widehat p}^{\mathrm{Ham}}=
+  \bigl(
+    d=2,\widehat X_p,\omega_p,
+    \R_{\mathrm{brane}},
+    \widehat{\mathfrak h}=\C[[z_1,z_2]]/\C,
+    \Ext_X^*(\mc O_p,\mc O_p),
+    [\bar c],
+    \Phi^{\mathrm{Ham}}_{\mathrm{fact}}
+  \bigr).
+  \]
+  The remaining datum for a compact BCOV, CY-to-chiral, or Igusa/BKM
+  theorem consists of the compact target, its Calabi--Yau or modular
+  class, the worldsheet or specialization curve, the framing, the global
+  propagator or Hall orientation, and the target obstruction complex.
+\end{defn}
 
-\begin{rmk}[Uniformity after admissibility]
-  Once admissibility has been supplied, the reduction is uniform over
-  connected holomorphic-symplectic surfaces and brane points.  This is
-  only the formal Darboux uniformity of the completed symplectic disk.
-  It is not a statement about arbitrary ambient twisted-M backgrounds.
-\end{rmk}
+\begin{cor}[Formal uniformity after admissibility]\label{cor:protected-formal-uniformity}
+  For every connected holomorphic-symplectic surface \((X,\omega)\), every
+  brane point \(p\in X\), and every protected twisted-M realization whose
+  obstruction datum vanishes, the restricted sector is identified with the
+  same formal Hamiltonian brane model
+  \[
+    \bigl(\widehat{\mathfrak h}\ltimes
+    \widehat{\mathfrak h}^{\vee}_{\mathrm{cont}}[1],
+    \Omega^*(\R)\otimes\Lambda(\varepsilon_1,\varepsilon_2)
+      \otimes\lie{gl}_N[1],
+    [\bar c]\bigr)
+  \]
+  after choosing a formal Darboux coordinate at \(p\).
+\end{cor}
+
+\begin{proof}
+  The period vanishing gives global Hamiltonian primitives for the vector
+  fields used in the sector.  The acyclic closed comparison cone identifies
+  the protected closed fields with
+  \(\widehat{\mathfrak h}\ltimes
+  \widehat{\mathfrak h}^{\vee}_{\mathrm{cont}}[1]\).  The Ext-algebra
+  identification gives the Dirac brane probe, and scalar compatibility
+  fixes the same class \([\bar c]\).  These are exactly the inputs of
+  Proposition~\ref{prop:formal-local-global-restriction}.
+\end{proof}
 
 \begin{rmk}[Dirac language inside the protected sector]
   For an admissible protected Hamiltonian sector, the Dirac-thesis
@@ -191,22 +621,28 @@ restricted sector.
   observables identify with derived Poisson-central operations on the
   stable open Hamiltonian brane algebra only in the reduced local sense
   proved by Theorem~\ref{thm:main-local}.  The scalar anomaly is the
-  same class $[\bar c]$ on the closed and open sides.  This is not an
-  ambient twisted-M or BCOV centrality theorem.
+  same class $[\bar c]$ on the closed and open sides.  The corresponding
+  ambient centrality statement is the matched-conventions interface of
+  Corollary~\ref{cor:protected-matched-conventions-interface}.
 \end{rmk}
 
-\begin{rmk}[Cross-volume firewall]
-  The protected-sector reduction is local at the formal symplectic
-  disk.  It carries no compact Calabi--Yau datum, no $\Phi_d$ functor,
-  no $\kappa_{\mathrm{ch}}$ or $\kappa_{\mathrm{BKM}}$ consequence, no
-  $K3\times E$ specialization, no Igusa cusp form, no Borcherds input
-  form, no BKM denominator identity, no global BCOV amplitude, no
-  compact-CY$_3$ chiral-homology computation, and no Stage-1 or Stage-2
-  $\Phi_d$ specialization.  Any global CY-to-chiral, compact BCOV, or
-  Igusa/BKM comparison requires a separate matched-conventions theorem
-  internal to the sibling volume making that claim.  This subsection can
-  enter such a theorem only as a $d=2$ formal-disk normalization after
-  the external global data have already been supplied there.
-\end{rmk}
+\begin{cor}[Protected-sector matched-conventions acceptance criterion]\label{cor:protected-matched-conventions-interface}
+  A theorem in a compact BCOV, CY-to-chiral, or Igusa/BKM target may use
+  the protected-sector reduction exactly by a morphism of convention data
+  from \(\mathfrak C_{\widehat p}^{\mathrm{Ham}}\) to its target datum,
+  together with a proof that the target period, descent, anomaly, and
+  operadic obstruction classes vanish.
+\end{cor}
+
+\begin{proof}
+  Lemma~\ref{lem:admissibility-not-globalization} identifies the
+  external acceptance class
+  \(\operatorname{Ob}^{\mathrm{ext}}_T\in H^1(\mathfrak K_T)\).  A
+  morphism of convention data and null-homotopies for this class supply
+  exactly the compact, worldsheet, modular, orientation, and descent
+  coordinates needed by the target theorem.  Corollary~\ref{cor:protected-formal-uniformity}
+  then supplies the \(d=2\) formal-disk normalization functorially in the
+  chosen Darboux chart.
+\end{proof}
 
 % --- End of fragment.

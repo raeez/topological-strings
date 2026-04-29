@@ -29,7 +29,7 @@ TEXFLAGS      :=-output-directory=out -interaction=nonstopmode
 TEX           :=pdflatex $(TEXFLAGS)
 BUILDTEX      :=$(TEX) $(TEXMAIN).tex
 QUICKBUILDTEX :=$(TEX) $(TEXFLAGS) $(TEXMAIN).tex
-TEXDEBRIS     :=*.toc *.ilg *.log *.nlo *.dvi *.aux *.tar.gz *.nlo *.nls *.nls *.out *.toc *.sta *.gla *.fdb_latexmk *.fls *.synctex.gz
+TEXDEBRIS     :=*.aux *.bbl *.bcf *.blg *.brf *.dvi *.fdb_latexmk *.fls *.gla *.idx *.ilg *.ind *.log *.nlo *.nls *.out *.run.xml *.sta *.synctex.gz *.tar.gz *.toc
 STANDALONE_TEX :=$(wildcard standalone/*.tex)
 STANDALONE_PASSES :=3
 STANDALONE_TEXENGINE :=pdflatex
@@ -44,7 +44,7 @@ BUILDHTML  :=pdf2htmlex $(HTMLFLAGS)
 PDF2HTMLEXJSFILENAME :=pdf2htmlEX.min.js
 GOOGLEANALYTICSID    :=UA-8883032-10
 define STATICPDFHTML
-<head><meta charset="utf-8"><meta name="Description" content="silliness" /><title>Raeez Lorgat</title><meta name="author" content="Raeez Lorgat"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="google-site-verification" content="WfuYCzFoftKafLhmWLqacdDaXEsU4EKbRyZnEwLFxQw" /><link rel="stylesheet" href="scale.css"><!--<script src="jquery-2.1.0.min.js"></script>--><script src="modernizr-2.0.6.min.js"></script><meta http-equiv="refresh" content="0; url=http://raeez.com/$(INSTALLURL)/$(TEXMAIN)/$(TEXMAIN).pdf" /> </head>
+<head><meta charset="utf-8"><meta name="Description" content="Closed Hamiltonian BF Theory as a Derived Poisson Centre" /><title>Raeez Lorgat</title><meta name="author" content="Raeez Lorgat"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="google-site-verification" content="WfuYCzFoftKafLhmWLqacdDaXEsU4EKbRyZnEwLFxQw" /><link rel="stylesheet" href="scale.css"><!--<script src="jquery-2.1.0.min.js"></script>--><script src="modernizr-2.0.6.min.js"></script><meta http-equiv="refresh" content="0; url=http://raeez.com/$(INSTALLURL)/$(TEXMAIN)/$(TEXMAIN).pdf" /> </head>
 endef
 
 define STATICJAVASCRIPT
@@ -121,14 +121,14 @@ release:
 	$(MKDIR) $(OUTDIR) $(LOGDIR)
 	@echo ""
 	@echo "  =========================================="
-	@echo "  -- RELEASE BUILD (topological strings) --"
+	@echo "  -- COMPLETE BUILD (topological strings) --"
 	@echo "  =========================================="
 	@echo ""
 	@echo "  [1/1] Paper, standalone documents and iCloud"
 	@$(MAKE) --no-print-directory icloud
 	@echo ""
 	@echo "  =========================================="
-	@echo "  Release complete. All output in out/:"
+	@echo "  Build complete. All output in out/:"
 	@ls -1 $(OUTDIR)/*.pdf 2>/dev/null | sed 's/^/    /'
 	@echo "  =========================================="
 
@@ -233,8 +233,6 @@ qall: clean
 # -- build pdf and html
 #
 .PHONY: pdf html index
-# TODO  pdf html quick quickfullpdf index clean
-
 p:
 	$(BUILDTEX)
 
@@ -259,13 +257,11 @@ index:
 		echo "  (no nomenclature file: $(OUTDIR)/$(TEXMAIN).nlo)"; \
 	fi
 
-# TODO track dependencies
 html:
 	$(BUILDHTML) $(OUTDIR)/$(TEXMAIN).pdf
 
 # ----------------------------------------------------------------------------
 # -- install
-# TODO
 .PHONY: install install-pdf install-html intall-tar
 
 tar:

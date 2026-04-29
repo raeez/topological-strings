@@ -42,7 +42,7 @@ $$\mathfrak h_{\leq N}:=\mathfrak h_{\leq N}^{(3)}=
 Concretely, $\mathfrak h_{\leq N}$ is the finite-dimensional vector
 space spanned by monomials $z_1^az_2^b$ with $3\leq a+b\leq N$.
 
-\begin{rmk}[Why $k=3$ and not $k=2$]
+\begin{rmk}[Why degree three and not degree two]
 The naive choice $k=2$ fails to give a nilpotent Lie algebra: the
 degree-$2$ piece $H_2=\mathrm{span}\{z_1^2,z_1z_2,z_2^2\}$ is closed
 under the Poisson bracket because $\{H_2,H_2\}\subset H_{2+2-2}=H_2$,
@@ -120,7 +120,7 @@ is nilpotent of class at most $N-2$.
 exclusion $a+b\leq 2$.
 \end{proof}
 
-\begin{rmk}[Why the $\mathfrak m$-adic obstruction does not apply]
+\begin{rmk}[Why the maximal-ideal-adic obstruction does not apply]
 \label{rmk:why-no-finite-window-obstruction}
 \ref{lem:finite-window-hamiltonian-obstruction} shows that
 $\mathfrak h/\mathfrak m^{N+1}$ is \emph{not} a Lie quotient of the
@@ -244,9 +244,9 @@ stalkwise limit follow as in
 \ref{thm:open-closed-derived-center-factorization}.
 \end{proof}
 
-\subsection*{Quantum status of the finite truncation}
+\subsection*{Quantum obstruction for the finite truncation}
 
-\begin{thm}[Quantum status of the nilpotent truncation]
+\begin{thm}[Quantum obstruction for the nilpotent truncation]
 \label{thm:phi-hbar-trunc}
   The classical finite truncation
   \ref{thm:phi-trunc-classical} is unconditional.  The same finite
@@ -342,7 +342,7 @@ data from the local theorem \ref{thm:main-local}:
     the truncation.
   \item\label{lost:colim}
     The stable connected limit $N\to\infty$ on the full
-    $\mathfrak h$. The directed system
+    $\mathfrak h$. The inverse system
     $\{\mathfrak h_{\leq N}\}_{N\geq 3}$ has structure maps the
     natural surjections
     $\mathfrak h_{\leq N+1}\twoheadrightarrow\mathfrak h_{\leq N}$
@@ -371,12 +371,12 @@ formal series in $\mathfrak m^3\subset\C[[z_1,z_2]]$, and the
 $\mathfrak m$-adic Lie structure is preserved at every level.
 \end{proof}
 
-\subsection*{Colim recovery question}
+\subsection*{Cubic inverse-limit survivor}
 
-\begin{prop}[Inverse-limit recovery on $\mathfrak m^3$]
+\begin{prop}[Cubic inverse-limit survivor]
 \label{prop:colim-recovery}
 The classical truncated isomorphism $\Phi_{\leq N}$ of
-\ref{thm:phi-trunc-classical} is compatible with the directed
+\ref{thm:phi-trunc-classical} is compatible with the inverse
 system: for every $N\leq M$, the diagram
 $$\begin{array}{ccc}
   C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g_{\leq M,I})
@@ -391,14 +391,17 @@ commutes, where $\pi_{M\to N}$ is induced by the surjection
 $\mathfrak h_{\leq M}\twoheadrightarrow\mathfrak h_{\leq N}$. Passing to
 the inverse limit gives the cochain-level isomorphism
 $$\Phi_{\mathfrak m^3}:=\varprojlim_N\Phi_{\leq N}:
-  C^\bullet_{\mathrm{CE},\mathrm{cont}}\bigl(\mathfrak m^3\ltimes
-    (\mathfrak m^3)^\vee_{\mathrm{cont}}[1]\bigr)
-  \xrightarrow{\ \sim\ }
-  Z^{P_0}_{\mathrm{red,Ham}}\bigl(\widehat{\mathbf S}_{\mathrm{Tate}}(\mathfrak m^3)\bigr).$$
+	  C^\bullet_{\mathrm{CE},\mathrm{cont}}\bigl(\mathfrak m^3\ltimes
+	    (\mathfrak m^3)^\vee_{\mathrm{cont}}[1]\bigr)
+	  \xrightarrow{\ \sim\ }
+	  Z^{P_0}_{\mathrm{red,Ham}}\bigl(\widehat{\mathbf S}_{\mathrm{Tate}}(\mathfrak m^3)\bigr).$$
+This is the maximal survivor of the nilpotent tower: the construction
+recovers the complete cubic ideal \(\mathfrak m^3\), not the removed
+linear and quadratic Hamiltonian sectors.
 \end{prop}
 
 \begin{proof}
-Compatibility with the directed system follows from the naturality of
+Compatibility with the inverse system follows from the naturality of
 \ref{thm:open-closed-derived-center} in the Lie source: a Lie
 surjection $\pi:\mathfrak h_M\to\mathfrak h_N$ induces a CE cochain
 map by pullback and a Schouten cochain map by pushforward, and the
@@ -431,7 +434,87 @@ Mittag-Leffler argument because each $\pi_{M\to N}$ is a
 surjection of finite-dimensional spaces.
 \end{proof}
 
-\begin{rmk}[The colim does NOT recover the full $\mathfrak h$]
+\begin{defn}[Low-degree obstruction datum for the nilpotent tower]
+\label{defn:nilpotent-low-degree-obstruction-terms}
+  For \(N\geq3\) let
+  \[
+    \pi_N\colon\mathfrak m^3\twoheadrightarrow
+    \mathfrak h_{\leq N}=\mathfrak m^3/\mathfrak m^{N+1}
+  \]
+  be the nilpotent window projection.  The two obstruction terms for
+  adjoining the removed low-degree sector are:
+  \[
+    \mathfrak o^{\mathrm{lin}}_N(x;\tau)
+      =\{x,\tau\}\bmod \mathfrak m^{N+1},
+      \qquad
+      x\in H_1,\ \tau\in \mathfrak m^{N+1}/\mathfrak m^{N+2},
+  \]
+  and
+  \[
+    \mathfrak o^{\mathrm{ss}}\colon\Lambda^2H_2\to H_2,\qquad
+    \mathfrak o^{\mathrm{ss}}(x,y)=\{x,y\}.
+  \]
+  Concretely
+  \[
+    \mathfrak o^{\mathrm{lin}}_N(z_1;z_2^{N+1})
+      =(N+1)z_2^N\neq0
+      \quad\text{in }\mathfrak m^N/\mathfrak m^{N+1},
+  \]
+  and
+  \[
+    \{z_1^2,z_2^2\}=4z_1z_2,\qquad
+    \{z_1^2,z_1z_2\}=2z_1^2,\qquad
+    \{z_1z_2,z_2^2\}=2z_2^2 .
+  \]
+  The compatible Casimir missing from the nilpotent tower is
+  \[
+    \mathfrak o^{\mathrm{Cas}}_{\leq2}
+      =\sum_i e_{1,i}\otimes e_1^i
+       +\sum_i e_{2,i}\otimes e_2^i .
+  \]
+\end{defn}
+
+\begin{lem}[Obstruction-datum criterion for enlarging the tower]
+\label{lem:nilpotent-obstructions-exact}
+  A finite \(\mathfrak m\)-adic tower extending
+  \(\{\mathfrak h_{\leq N}\}_{N\geq3}\) to a Lie tower containing
+  \(H_1\oplus H_2\) and using the same quotient maps exists only if
+  \(\mathfrak o^{\mathrm{lin}}_N=0\) for all \(N\) and
+  \(\mathfrak o^{\mathrm{ss}}\) is nilpotent in the lower-central
+  filtration.  A cotangent CE/PV extension of the inverse limit to the
+  full \(\mathfrak h=\mathfrak m\) also requires a coefficient category
+  in which the compatible tensor
+  \(\mathfrak o^{\mathrm{Cas}}_{\leq2}
+    +\sum_{d\geq3}\sum_i e_{d,i}\otimes e_d^i\)
+  converges.
+\end{lem}
+
+\begin{proof}
+  If \(H_1\) is included and the window \(N\) is still the quotient by
+  \(\mathfrak m^{N+1}\), then the tail
+  \(\mathfrak m^{N+1}\) must be a Lie ideal for the enlarged source.
+  The displayed value
+  \(\{z_1,z_2^{N+1}\}=(N+1)z_2^N\notin\mathfrak m^{N+1}\)
+  shows that this ideal condition is exactly the vanishing of
+  \(\mathfrak o^{\mathrm{lin}}_N\), and it fails.
+
+  If \(H_2\) is included, then its bracket remains inside \(H_2\) and
+  equals the nonabelian \(\mathfrak{sl}_2\) bracket displayed in
+  Definition~\ref{defn:nilpotent-low-degree-obstruction-terms}.  The
+  image of \(\mathfrak o^{\mathrm{ss}}\) is all of \(H_2\), so the
+  descending Lie powers never leave \(H_2\).  This is exactly the
+  obstruction to nilpotence and to the conilpotent bar-cobar hypothesis.
+
+  The finite cotangent windows for
+  \(\mathfrak h_{\leq N}\) use the finite Casimir
+  \(\sum_{3\leq d\leq N}\sum_i e_{d,i}\otimes e_d^i\).  Extending to
+  \(\mathfrak h\) adds the missing \(d=1,2\) components and then the
+  whole compatible family over all \(d\geq1\).  Thus the full
+  cotangent lift requires precisely the convergence of the displayed
+  full Casimir family.
+\end{proof}
+
+\begin{thm}[Low-degree obstruction datum for full Hamiltonian recovery]
 \label{rmk:colim-does-not-recover-full}
 The inverse limit
   $\Phi_{\mathfrak m^3}$ of \ref{prop:colim-recovery} is the
@@ -440,9 +523,23 @@ $\mathfrak h=\mathfrak m$. To extend to all of $\mathfrak h$ one must
 include the low-degree sectors
 $\mathfrak m/\mathfrak m^3=H_1\oplus H_2=\C\cdot z_1\oplus
 \C\cdot z_2\oplus\mathrm{span}\{z_1^2,z_1z_2,z_2^2\}$, which by
-\ref{lem:finite-window-hamiltonian-obstruction}(iii) is not stable
+\ref{lem:finite-window-hamiltonian-obstruction}(iii) and
+\ref{lem:nilpotent-obstructions-exact} is not stable
 under any $\mathfrak m$-adic cutoff: the bracket
 $\{z_1,z_2^{N+1}\}=(N+1)z_2^N$ is the explicit obstruction.
+Equivalently, the obstruction datum is
+\[
+  \bigl(\mathfrak o^{\mathrm{lin}}_N,\,
+    \mathfrak o^{\mathrm{ss}},\,
+    C_{\mathfrak h}\bigr),
+\]
+where
+\[
+  \mathfrak o^{\mathrm{lin}}_N(z_1;z_2^{N+1})
+    =(N+1)z_2^N\neq0,\qquad
+  \operatorname{im}\mathfrak o^{\mathrm{ss}}=H_2\cong\mathfrak{sl}_2,
+\]
+and \(C_{\mathfrak h}\) is the full infinite Casimir family below.
 Equivalently, the Tate Casimir
 $C_{\mathfrak h}=\sum_{d\geq 1}\sum_i e_{d,i}\otimes e_d^i$ has
 low-degree components
@@ -457,10 +554,120 @@ $C_{\mathfrak h}$ converges \emph{including} both low-degree
 components, which is exactly the Casimir support obstruction of
 \ref{lem:tate-casimir-obstruction}. The truncation route does not
 solve that obstruction; it removes the sector on which the
-obstruction is felt.
-\end{rmk}
+obstruction is felt.  A full recovery theorem must therefore supply
+both a coefficient category in which \(C_{\mathfrak h}\) converges and a
+relative or non-conilpotent model for the \(H_2\)-sector.
+\end{thm}
 
-\begin{prob}[Low-degree-sector lift to $\mathfrak m^3\rightsquigarrow\mathfrak m$]
+\begin{proof}
+  The tower used in \ref{prop:colim-recovery} is
+  \(\mathfrak h_{\leq N}=\mathfrak m^3/\mathfrak m^{N+1}\).
+  Since the transition maps are the usual quotient maps,
+  \[
+    \varprojlim_N \mathfrak h_{\leq N}
+      =\varprojlim_N \mathfrak m^3/\mathfrak m^{N+1}
+      =\mathfrak m^3
+  \]
+  as a complete filtered Lie algebra.  The homogeneous pieces
+  \(H_1\) and \(H_2\) have zero image in every term of this tower;
+  hence no element of the inverse limit can recover them.
+
+  The failure is not an artefact of the chosen notation.  If one tries
+  to include \(H_1\) while keeping the same \(\mathfrak m\)-adic
+  finite windows, the tails are not Lie ideals: for every \(N\),
+  \[
+    z_2^{N+1}\in\mathfrak m^{N+1},\qquad
+    \{z_1,z_2^{N+1}\}=(N+1)z_2^N\notin\mathfrak m^{N+1}.
+  \]
+  Therefore the quotient by the tail does not carry the full
+  Hamiltonian bracket.  If one includes \(H_2\), the degree-two
+  Hamiltonians contain the \(\mathfrak{sl}_2\) bracket
+  \([H_2,H_2]=H_2\), so the finite quotient is not nilpotent.  Thus a
+  finite nilpotent \(\mathfrak m\)-adic tower cannot contain the
+  low-degree sector \(H_1\oplus H_2\).
+
+  Finally, the full Casimir \(C_{\mathfrak h}\) has nonzero components
+  in \(H_1\otimes H_1^\vee\), \(H_2\otimes H_2^\vee\), and in every
+  higher \(H_d\otimes H_d^\vee\).  The nilpotent tower sees only the
+  \(d\geq3\) part.  Hence the inverse-limit cotangent lift on
+  \(\mathfrak m^3\) cannot be promoted to the full Hamiltonian sector
+  without an additional coefficient category in which the full Casimir
+  converges.
+\end{proof}
+
+\begin{cor}[Full maximal-ideal universal obstruction class]
+\label{cor:full-maximal-ideal-universal-obstruction-class}
+  For the full reduced formal Hamiltonian algebra
+  \(\mathfrak h=\mathfrak m=(z_1,z_2)\C[[z_1,z_2]]\), the direct
+  formal-local CE/PV recognition theorem remains valid in the
+  finite-coordinate product completion.  The universal filtered-cobar
+  Koszul recognition criterion of
+  Theorem~\ref{thm:universal-filtered-cobar-recognition}, however, has
+  a nonzero obstruction class in
+  \(\mathcal O_{\mathrm{Kos}}\) of
+  Definition~\ref{defn:universal-koszul-obstruction-complex}.  Its
+  visible components are
+  \[
+    \mathfrak o^{\mathrm{lin}}_N(z_1;z_2^{N+1})
+      =(N+1)z_2^N\neq0,
+    \qquad
+    \operatorname{im}\mathfrak o^{\mathrm{ss}}=H_2\cong\mathfrak{sl}_2,
+  \]
+  \[
+    [C_{\mathfrak h}]
+      =
+      \left[
+        \sum_{d\geq1}\sum_i e_{d,i}\otimes e_d^i
+      \right]
+      \in Q_{\mathrm{Cas}},
+    \qquad
+    H_2\subset\bigcap_{r\geq1}\mathfrak h^{(r)} .
+  \]
+  Therefore a universal full-\(\mathfrak h\) Koszul theorem requires,
+  before any open-side \(A_\infty\) comparison, all of the following:
+  a coefficient topology representing \(C_{\mathfrak h}\), continuity of
+  the finite-window bracket and coadjoint transition maps, vanishing
+  \(\varprojlim^1\) for the completed CE/PV and cobar towers, a
+  relative or non-conilpotent treatment of the
+  \(H_2\)-sector, and a twisting cochain whose associated-graded cobar
+  map has acyclic cone.
+\end{cor}
+
+\begin{proof}
+  The formal-local CE/PV part is
+  Theorem~\ref{thm:formal-disk-completed-ce-pv}, equivalently the
+  formal-disk instance of
+  Theorem~\ref{thm:universal-formal-local-ce-pv-recognition}: the
+  bracket and coadjoint formulas are continuous for finite coordinate
+  projections, so the generator substitution
+  \(c\mapsto\theta,\ u\mapsto O\) is a completed dg \(P_0\)-algebra
+  isomorphism.
+
+  The filtered-cobar recognition theorem asks for more.  The linear
+  obstruction is the same computation as in
+  Definition~\ref{defn:nilpotent-low-degree-obstruction-terms}:
+  adjoining \(H_1\) to the \(\mathfrak m\)-adic nilpotent windows makes
+  the tail non-invariant because
+  \(\{z_1,z_2^{N+1}\}=(N+1)z_2^N\notin\mathfrak m^{N+1}\).  The
+  semisimple obstruction is the displayed \(\mathfrak{sl}_2\) bracket
+  on \(H_2\), hence \(H_2\subset\bigcap_r\mathfrak h^{(r)}\).  This
+  gives a nonzero lower-central component in
+  \(\mathcal O_{\mathrm{conilp}}\).
+
+  The Casimir component is nonzero in the strict product/direct-sum
+  topology by the support argument of
+  Theorem~\ref{thm:lane-strict-casimir-obstruction}: the compatible
+  finite-window Casimirs have nonzero identity component in every
+  \(H_d\otimes H_d^\vee\), while a strict tensor with a direct-sum dual
+  has only finitely many dual-degree components.  Finally, even after
+  changing topology and handling \(H_2\) relatively, the universal
+  criterion still demands the cobar cone and the Milnor
+  \(\varprojlim^1\) terms in
+  Definition~\ref{defn:universal-koszul-obstruction-complex} to vanish.
+  These are precisely the listed remaining requirements.
+\end{proof}
+
+\begin{prob}[Low-degree-sector lift from the cubic ideal to the maximal ideal]
 \label{prob:linear-sector-lift}
 Extend the inverse-limit isomorphism $\Phi_{\mathfrak m^3}$ of
 \ref{prop:colim-recovery} from $\mathfrak m^3$ to all of
@@ -472,7 +679,13 @@ $\mathfrak{sl}_2$ direction $H_2$ is included without violating the
 Tate-conilpotency hypothesis of
 \ref{lem:continuous-bar-cobar}. By
 \ref{rmk:colim-does-not-recover-full} this is the
-low-degree-sector failure; by \ref{lem:tate-casimir-obstruction}
+low-degree-sector failure; by
+\ref{defn:nilpotent-low-degree-obstruction-terms} its obstruction
+terms are
+\(\mathfrak o^{\mathrm{lin}}_N\),
+\(\mathfrak o^{\mathrm{ss}}\), and
+\(\mathfrak o^{\mathrm{Cas}}_{\leq2}\); by
+\ref{lem:tate-casimir-obstruction}
 this is the same coefficient-category problem as
 \ref{prob:formal-factorization-center}. Thus the nilpotent-truncation route
 closes the classical nilpotent cotangent shadow on $\mathfrak m^3$, and the
@@ -481,7 +694,7 @@ to its restricted form on the low-degree sector
 $\mathfrak m/\mathfrak m^3=H_1\oplus H_2$ alone.
 \end{prob}
 
-\begin{rmk}[The conilpotency obstruction is essential]
+\begin{thm}[Semisimple lower-central obstruction to Tate conilpotency]
 \label{rmk:conilpotency-essential}
 A second obstruction to extending $\Phi_{\mathfrak m^3}$ to all of
 $\mathfrak h$ is structural rather than analytic: the inclusion of
@@ -496,12 +709,29 @@ the same as the failure of the cobar formalism for non-conilpotent
 coalgebras (\cite{loday-vallette}). One either restricts to
 nilpotent radicals (the route taken here) or replaces the Lie source
 by a model that builds in semisimple subalgebras separately.
-\end{rmk}
+\end{thm}
+
+\begin{proof}
+  Let \(L\) be any filtered Lie algebra containing the degree-two
+  Hamiltonians \(H_2\) as a Lie subalgebra with the usual Poisson
+  bracket.  The descending Lie powers of \(L\) satisfy
+  \(L^{(n)}\cap H_2\supset H_2\) for every \(n\), because
+  \([H_2,H_2]=H_2\).  Hence
+  \[
+    H_2\subset \bigcap_{n\geq1} L^{(n)} .
+  \]
+  The intersection of the descending Lie powers is therefore nonzero.
+  This contradicts the Tate-conilpotency condition used in
+  Lemma~\ref{lem:continuous-bar-cobar}.  The bar-cobar argument may be
+  applied to the nilpotent radical \(\mathfrak m^3\), but it cannot be
+  applied unchanged to a Lie source containing the semisimple
+  \(H_2\)-sector.
+\end{proof}
 
 \subsection*{Costello--Li precedent}
 
-\begin{rmk}[Costello--Li $\mathfrak{gl}(N\mid N)$ truncation as
-structural model]\label{rmk:costello-li-precedent}
+\begin{rmk}[Costello--Li balanced matrix truncation as structural
+model]\label{rmk:costello-li-precedent}
 Costello and Li \cite{costello-li-quantum-bcov} prove the
 quantum perturbative BCOV theorem on flat Calabi--Yau by an
 $N\to\infty$ stable connected limit through the open gauge algebra

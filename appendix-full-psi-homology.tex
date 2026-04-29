@@ -1,0 +1,567 @@
+% !TEX root = main.tex
+
+\section{\texorpdfstring{Full Primitive Higher-\(\psi\) Koszul Homology}{Full Primitive Higher-psi Koszul Homology}}
+\label{sec:app-full-psi-homology}
+
+This appendix computes the universal primitive single-trace Koszul complex
+attached to the moment-map equation \([x,y]=0\).  Universal means that no
+choice of Matlis target, PBW model, finite \(N\) trace identity, or quantum
+deformation is used: after stable trace invariant theory has identified
+primitive traces with graded cyclic words, the answer is the cellular homology
+of a chip-moving state complex.  Every stable primitive descendant calculation
+with \(d\psi=xy-yx\) and no trace relations beyond graded cyclicity is obtained
+from this one by applying the desired coefficient functor.
+
+\begin{defn}[Graded cyclic word complex]
+\label{def:app-full-psi-complex}
+  Let
+  \[
+    A_\psi=\C\langle x,y,\psi\rangle,\qquad
+    |x|=|y|=0,\quad |\psi|=1,
+  \]
+  and let \(d\) be the odd derivation determined by
+  \[
+    d\psi=xy-yx,\qquad dx=dy=0.
+  \]
+  Put
+  \[
+    \operatorname{Cyc}(A_\psi)
+      =A_\psi/[A_\psi,A_\psi]_{\mathrm{gr}},
+      \qquad [uv]=(-1)^{|u||v|}[vu].
+  \]
+  Give the letters weights
+  \[
+    \operatorname{wt}(x)=(1,0),\qquad
+    \operatorname{wt}(y)=(0,1),\qquad
+    \operatorname{wt}(\psi)=(1,1).
+  \]
+  For \(R,S\geq0\) define
+  \[
+    K^p_{R,S}
+      =
+      \C\{[w]_{\mathrm{cyc}}:
+        \#\psi(w)=p,\ \#x(w)=R-p,\ \#y(w)=S-p\},
+  \]
+  with \(K^p_{R,S}=0\) unless \(0\leq p\leq\min(R,S)\).  If
+  \(w=a_1\cdots a_n\), the boundary is
+  \[
+  \begin{aligned}
+    \partial[w]
+      =
+      \sum_{i:a_i=\psi}(-1)^{\#\{j<i:a_j=\psi\}}
+      [&a_1\cdots a_{i-1}xy\,a_{i+1}\cdots a_n\\
+       &-a_1\cdots a_{i-1}yx\,a_{i+1}\cdots a_n]_{\mathrm{cyc}} .
+  \end{aligned}
+  \]
+  Thus \(\partial:K^p_{R,S}\to K^{p-1}_{R,S}\).
+\end{defn}
+
+\begin{lem}[Stable super-cyclic trace presentation]
+\label{lem:app-full-stable-super-traces}
+  Fix a total word length \(d\).  In the stable range \(N\geq d\), the
+  primitive \(GL_N\)-invariant single-trace functions in the variables
+  \(x,y,\psi\), homogeneous of total word length \(d\), are exactly the
+  graded cyclic words in \(\operatorname{Cyc}(A_\psi)\).  Equivalently, after
+  connected single-trace extraction, the only stable relation among words in
+  \(x,y,\psi\) is
+  \[
+    \operatorname{Tr}(uv)=(-1)^{|u||v|}\operatorname{Tr}(vu).
+  \]
+\end{lem}
+
+\begin{proof}
+  First replace the odd letter \(\psi\) by \(p\) distinct even marked
+  matrices \(\eta_1,\ldots,\eta_p\), and take the summand multilinear in the
+  \(\eta_i\)'s and homogeneous of the prescribed \(x,y\)-degree.  The
+  Procesi--Razmyslov stable invariant theorem
+  \cites{procesi,razmyslov} identifies the primitive single-trace invariants
+  of total word length \(d\), for \(N\geq d\), with ordinary cyclic words in
+  the letters \(x,y,\eta_1,\ldots,\eta_p\), modulo only cyclicity of the
+  trace.
+
+  The symmetric group \(\mathbb S_p\) permutes the marked letters.  Passing
+  from \(p\) even marked letters to one odd letter is the sign-isotypic
+  projection for this action, followed by the identification
+  \(\eta_i\mapsto\psi\).  Since the ground field has characteristic zero, this
+  projection is exact.  Interchanging two marked occurrences contributes the
+  sign of the transposition, and rotating a block with \(a\) marked letters
+  past a block with \(b\) marked letters contributes \((-1)^{ab}\).  This is
+  precisely the graded cyclic rule for a single odd letter \(\psi\).  No other
+  stable trace relation remains in word length \(d\).
+\end{proof}
+
+\begin{lem}[Boundary signs and \(\partial^2=0\)]
+\label{lem:app-full-boundary-d2}
+  The formula of Definition~\ref{def:app-full-psi-complex} is well-defined on
+  the graded cyclic quotient and satisfies \(\partial^2=0\).
+\end{lem}
+
+\begin{proof}
+  On the free algebra \(A_\psi\), the displayed formula is the derivation
+  rule for the odd derivation \(d\): replacing the \(i\)-th occurrence of
+  \(\psi\) crosses exactly the preceding odd letters and hence contributes
+  \((-1)^{\#\{j<i:a_j=\psi\}}\).  Since \(d(x)=d(y)=0\) and
+  \(d(\psi)=xy-yx\) is even and \(d\)-closed, one has \(d^2=0\) on the
+  generators, hence on all of \(A_\psi\).
+
+  If \(u,v\) are homogeneous, then
+  \[
+    d(uv-(-1)^{|u||v|}vu)
+  \]
+  is a sum of graded commutators, using the odd Leibniz rule and the fact that
+  \(d\) lowers the number of odd letters by one.  Thus \(d\) preserves
+  \([A_\psi,A_\psi]_{\mathrm{gr}}\), so it descends to
+  \(\operatorname{Cyc}(A_\psi)\).  The descended operator is exactly
+  \(\partial\), and \(\partial^2=0\) follows from \(d^2=0\).
+\end{proof}
+
+\begin{lem}[Exact \(p\)-face formula]
+\label{lem:app-full-p-face-formula}
+  Let \(u_1,\ldots,u_p\) be ordinary words in \(x,y\).  In
+  \(K^{p-1}_{R,S}\),
+  \[
+  \begin{aligned}
+    \partial[\psi u_1\psi u_2\cdots\psi u_p]
+      =
+      \sum_{j=1}^p(-1)^{j-1}
+      [&\psi u_1\cdots\psi u_{j-1}xy\,u_j\psi u_{j+1}\cdots\psi u_p\\
+       &-\psi u_1\cdots\psi u_{j-1}yx\,u_j\psi u_{j+1}\cdots\psi u_p]_{\mathrm{cyc}},
+  \end{aligned}
+  \]
+  where, for \(j=1\), the initial displayed \(\psi u_1\cdots\psi u_{j-1}\)
+  is absent.
+\end{lem}
+
+\begin{proof}
+  This is the boundary of Definition~\ref{def:app-full-psi-complex} applied
+  to the representative \(\psi u_1\psi u_2\cdots\psi u_p\).  The \(j\)-th
+  displayed \(\psi\) has \(j-1\) preceding odd letters, and replacing it by
+  the even word \(xy-yx\) produces no further Koszul sign.
+\end{proof}
+
+\begin{lem}[Two-\(\psi\) boundary sign]
+\label{lem:app-full-two-psi-boundary-sign}
+  For ordinary words \(u,v\),
+  \[
+    \partial[\psi u\psi v]
+      =[\psi vxyu]-[\psi vyxu]-[\psi uxyv]+[\psi uyxv].
+  \]
+  After removing the common front \(\psi\) from each term, this is the
+  boundary
+  \[
+    vxyu-vyxu-uxyv+uyxv.
+  \]
+\end{lem}
+
+\begin{proof}
+  Lemma~\ref{lem:app-full-p-face-formula} with \(p=2\) gives
+  \[
+    [(xy-yx)u\psi v]-[\psi u(xy-yx)v].
+  \]
+  The first two terms are cyclically rotated to put the remaining \(\psi\) in
+  front:
+  \[
+    [(xy)u\psi v]=[\psi vxyu],\qquad
+    [(yx)u\psi v]=[\psi vyxu].
+  \]
+  The moved block is even, so no Koszul sign is produced.  The second
+  replacement already has the surviving \(\psi\) in front, and its overall
+  sign is the sign \(-1\) from the preceding odd letter.  Expanding gives the
+  displayed formula.
+
+  Interchanging \(u\) and \(v\) gives
+  \(uxyv-uyxv-vxyu+vyxu\), the negative of the displayed expression.  Thus
+  the formula is compatible with the alternating two-\(\psi\) quotient used
+  below.
+\end{proof}
+
+\begin{constr}[One-\(\psi\) three-term skeleton]
+\label{constr:app-one-psi-three-term-skeleton}
+  For \(k,l\geq0\), let \(\mathsf W_{k,l}\) be the ordinary words with
+  \(k\) letters \(x\) and \(l\) letters \(y\), and let
+  \(\mathsf N_{a,b}\) be the necklaces with \(a\) letters \(x\) and
+  \(b\) letters \(y\).  The one-\(\psi\) skeleton in bidegree \((k,l)\) is
+  the finite complex
+  \[
+    C_2(k,l)\xrightarrow{\partial_2}C_1(k,l)
+      \xrightarrow{\partial_1}C_0(k,l),
+  \]
+  with
+  \[
+    C_1(k,l)=\C\{\mathsf W_{k,l}\},\qquad
+    C_0(k,l)=\C\{\mathsf N_{k+1,l+1}\},
+  \]
+  and
+  \[
+    C_2(k,l)=
+    \bigl(\C\{(u,v):\deg u+\deg v=(k-1,l-1)\}\bigr)_{\mathrm{alt}},
+  \]
+  where \((u,v)=-(v,u)\) and \((u,u)=0\).  If \(k=0\) or \(l=0\), then
+  \(C_2(k,l)=0\).  The boundaries are
+  \[
+    \partial_1(w)=[xyw]_{\mathrm{cyc}}-[yxw]_{\mathrm{cyc}},
+  \]
+  and
+  \[
+    \partial_2(u,v)=vxyu-vyxu-uxyv+uyxv.
+  \]
+  This is the truncation
+  \(K^2_{k+1,l+1}\to K^1_{k+1,l+1}\to K^0_{k+1,l+1}\) after putting the
+  remaining \(\psi\) at the front of a one-\(\psi\) cyclic word.
+  Equivalently, it is the cellular chain complex in dimensions
+  \(2,1,0\) of the state complex constructed below: \(C_0\) records chip
+  configurations, \(C_1\) records one moving chip, and \(C_2\) records two
+  independent moving chips with the orientation fixed by the ordered moving
+  edges.
+\end{constr}
+
+\begin{proof}
+  The identifications of \(C_1\) and \(C_0\) are exactly the graded cyclic
+  normal forms in \(\psi w\) and the ordinary necklaces.  The source
+  \(C_2\) is the two-\(\psi\) summand of \(K^2_{k+1,l+1}\): after cutting
+  at one displayed \(\psi\), a class is written \(\psi u\psi v\), and
+  moving the second \(\psi\)-block past the first contributes the sign
+  \(-1\).  Lemma~\ref{lem:app-full-two-psi-boundary-sign} gives
+  \(\partial_2\), while the definition of \(\partial\) gives
+  \(\partial_1\).
+\end{proof}
+
+\begin{constr}[Labelled chip-moving state complex]
+\label{constr:app-chip-state-complex}
+  Assume \(R,S>0\).  Let \(\mathscr C_S\) be the oriented circle subdivided
+  into \(S\) labelled oriented edges and \(S\) labelled vertices.  Define
+  \(\widetilde Y_{R,S}\) as follows.  A \(p\)-cell is a state with
+  \(R-p\) stationary indistinguishable chips on vertices and \(p\) moving
+  chips in the interiors of \(p\) distinct edges.  Several stationary chips
+  may occupy the same vertex.  No edge contains more than one moving chip.
+
+  Encode such a state by reading around \(\mathscr C_S\).  At a vertex write one
+  \(x\) for each stationary chip sitting there.  Then write \(y\) if the
+  following edge is empty and \(\psi\) if the following edge contains a
+  moving chip.  This gives a word with \(R-p\) letters \(x\), \(S-p\) letters
+  \(y\), and \(p\) letters \(\psi\), with a distinguished starting edge.
+
+  The \(p\)-cell is oriented by the increasing order of the labelled edges
+  carrying moving chips.  Its \(j\)-th oriented coordinate has boundary
+  \[
+    \text{terminal face }xy-\text{ initial face }yx.
+  \]
+  Hence the cellular boundary in the labelled complex is
+  \[
+    \sum_j(-1)^{j-1}(\text{replace the \(j\)-th moving edge by \(xy\)}
+      -\text{replace it by \(yx\)}).
+  \]
+  The cyclic group \(\Gamma_S=\Z/S\Z\) rotates the edge labels and acts
+  cellularly on \(\widetilde Y_{R,S}\).
+\end{constr}
+
+\begin{lem}[Cellular chain identification with cyclic relabelling]
+\label{lem:app-state-chain-identification}
+  For \(R,S>0\), the cellular chain complex of
+  \(\widetilde Y_{R,S}\), after taking \(\Gamma_S\)-coinvariants, is naturally
+  isomorphic to \(K^\bullet_{R,S}\):
+  \[
+    C_p(\widetilde Y_{R,S};\C)_{\Gamma_S}\cong K^p_{R,S}.
+  \]
+  Under this isomorphism the cellular boundary is the boundary
+  \(\partial\) of Definition~\ref{def:app-full-psi-complex}.
+\end{lem}
+
+\begin{proof}
+  A labelled \(p\)-cell is equivalently a labelled cyclic sequence
+  \[
+    x^{a_1}m_1x^{a_2}m_2\cdots x^{a_S}m_S,\qquad
+    m_i\in\{y,\psi\},
+  \]
+  with exactly \(p\) of the \(m_i\)'s equal to \(\psi\) and
+  \(\sum_i a_i=R-p\).  Every graded cyclic word in
+  \(K^p_{R,S}\) has a representative of this form: move the cut, if
+  necessary, past even \(x\)-letters until it lies immediately before an edge
+  marker \(y\) or \(\psi\).  This representative is unique after a starting
+  edge has been chosen.  The remaining ambiguity is rotation of the \(S\) edge
+  markers, hence quotienting by \(\Gamma_S\) is exactly passage to graded
+  cyclic words.  No further relation is introduced: in the labelled complex
+  the \(S\) edge markers are ordered, and in the coinvariant complex the only
+  identifications are their rotations with the orientation character below.
+
+  It remains to check the sign.  Suppose a rotation moves a block containing
+  \(a\) occurrences of
+  \(\psi\) past the complementary block containing \(b\) occurrences of
+  \(\psi\).  On cellular orientations this rotation moves \(a\) oriented
+  interval coordinates past \(b\) oriented interval coordinates, hence changes
+  the orientation by \((-1)^{ab}\).  This is exactly the graded cyclic sign
+  \([uv]=(-1)^{|u||v|}[vu]\), since \(x\) and \(y\) are even and every
+  \(\psi\) is odd.
+
+  With this orientation convention, the cellular boundary in
+  Construction~\ref{constr:app-chip-state-complex} is
+  \[
+    \sum_j(-1)^{j-1}([xy]-[yx])
+  \]
+  in the \(j\)-th moving edge.  The terminal face is the state in which the
+  chip has crossed the edge and is read as \(xy\); the initial face is read as
+  \(yx\).  This is exactly Lemma~\ref{lem:app-full-p-face-formula}, term by
+  term.
+\end{proof}
+
+\begin{lem}[Abel map for labelled states]
+\label{lem:app-abel-map-state-homology}
+  For \(R,S>0\), the labelled state complex \(\widetilde Y_{R,S}\) has the
+  homology of a circle:
+  \[
+    H_q(\widetilde Y_{R,S};\C)\cong
+    \begin{cases}
+      \C,&q=0,\\
+      \C,&q=1,\\
+      0,&q\geq2.
+    \end{cases}
+  \]
+  The cyclic rotation action of \(\Gamma_S\) is trivial on these two homology
+  lines.
+\end{lem}
+
+\begin{proof}
+  Work in the universal cover of \(\mathscr C_S\), whose vertices are the integers and
+  whose edges are the unit intervals.  A lifted labelled cell is described by
+  the positions of the \(R\) chips: stationary chips have integer positions,
+  and a moving chip on the edge \([m,m+1]\) has coordinate \(m+t\) with
+  \(0<t<1\).  The closure of the cell permits \(t=0,1\), which are exactly the
+  two vertex states \(yx\) and \(xy\) in the boundary convention of
+  Construction~\ref{constr:app-chip-state-complex}.  Define the Abel map
+  \[
+    A:\widetilde Y_{R,S}\longrightarrow \R/S\Z
+  \]
+  by summing the chip positions on the oriented circle, counted with
+  multiplicity, and reducing modulo \(S\).  On every cell this map is affine.
+
+  Lift the target to \(\R\) and fix a cyclic order of the \(R\) lifted chips.
+  A lifted fibre is described by weakly ordered coordinates
+  \[
+    t_1\leq t_2\leq\cdots\leq t_R\leq t_1+S
+  \]
+  with fixed sum.  This is a convex polytope.  Its faces are cut out by the
+  equalities \(t_i\in\Z\) and by the choices of those unit intervals which
+  contain a moving chip; these faces are precisely the cells of the
+  chip-moving subdivision meeting the fibre.  Hence every lifted fibre is a
+  contractible finite polyhedral complex.  The map is a proper PL map of
+  finite polyhedra with acyclic fibres.  The Vietoris--Begle theorem, applied
+  to this affine cellular map, gives a homology equivalence
+  \[
+    H_\bullet(\widetilde Y_{R,S};\C)\cong H_\bullet(S^1;\C).
+  \]
+
+  A cyclic relabelling of the \(S\) edges adds a constant to every chip
+  coordinate, so it rotates the target circle by an orientation-preserving
+  rotation.  Therefore \(\Gamma_S\) acts trivially on
+  \(H_0(S^1;\C)\) and \(H_1(S^1;\C)\), and hence on the two homology lines of
+  \(\widetilde Y_{R,S}\).
+\end{proof}
+
+\begin{lem}[Cyclic Abel quotient and stabilizer fibres]
+\label{lem:app-cyclic-abel-stabilizers}
+  Let \(Y_{R,S}\) denote the cyclic relabelling quotient of
+  \(\widetilde Y_{R,S}\), with the orientation character encoded by the
+  graded cyclic rule.  Then the quotient chain complex
+  \(C_\bullet(\widetilde Y_{R,S};\C)_{\Gamma_S}\) has the homology of \(S^1\).
+  Moreover, every stabilizer quotient of an Abel fibre is contractible.
+\end{lem}
+
+\begin{proof}
+  By Lemma~\ref{lem:app-abel-map-state-homology}, the labelled Abel map is
+  a homology equivalence from \(\widetilde Y_{R,S}\) to the circle.  A
+  cyclic relabelling by \(r\in \Gamma_S\) adds \(r\) to each of the \(R\) chip
+  positions, hence translates the Abel coordinate by \(Rr\) in
+  \(\R/S\Z\).  The action on the target circle is by
+  orientation-preserving rotations, so it is trivial on the two homology
+  lines.  Since \(\C[\Gamma_S]\) is semisimple,
+  \[
+    H_\bullet(C_\bullet(\widetilde Y_{R,S};\C)_{\Gamma_S})
+      \cong H_\bullet(\widetilde Y_{R,S};\C)_{\Gamma_S}
+      \cong H_\bullet(S^1;\C).
+  \]
+
+  Now fix an Abel value and a stabilizer subgroup \(G\subset \Gamma_S\) of that
+  value.  In the universal cover, choose the lifted fibre before decomposing
+  it into chip cells.  It is a convex polytope cut out by weak ordering, the
+  fixed-sum equation, and the chip-cell inequalities, and \(G\) acts affinely
+  on it.  Averaging a point over \(G\) gives a \(G\)-fixed point.  Straight-line
+  contraction to this fixed point is \(G\)-equivariant and respects the
+  chip-cell subdivision.  Hence the stabilizer quotient of the Abel fibre is
+  contractible.
+\end{proof}
+
+\begin{lem}[\(S^1\) generator]
+\label{lem:app-full-s1-generator}
+  For \(R,S>0\), the cycle
+  \[
+    \Psi_{R-1,S-1}
+      =
+      \sum_{w\in\mathsf W_{R-1,S-1}}[\psi w]_{\mathrm{cyc}}
+  \]
+  represents the fundamental \(H_1\)-line of the cyclic chip-moving
+  complex.
+\end{lem}
+
+\begin{proof}
+  Its boundary is
+  \[
+    \partial\Psi_{R-1,S-1}
+      =
+      \sum_{w\in\mathsf W_{R-1,S-1}}
+      ([xyw]_{\mathrm{cyc}}-[yxw]_{\mathrm{cyc}}).
+  \]
+  For a fixed necklace with \(R\) letters \(x\) and \(S\) letters \(y\),
+  the coefficient is the number of cyclic \(xy\)-transitions minus the
+  number of cyclic \(yx\)-transitions.  These two numbers are equal on a
+  circle; hence \(\Psi_{R-1,S-1}\) is closed.
+
+  Let \(\epsilon:K^1_{R,S}\to\C\) send every one-\(\psi\) cyclic word to
+  \(1\).  Lemma~\ref{lem:app-full-two-psi-boundary-sign} shows that every
+  two-\(\psi\) boundary has two positive and two negative terms, so it
+  lies in \(\ker\epsilon\).  But
+  \[
+    \epsilon(\Psi_{R-1,S-1})=\binom{R+S-2}{R-1}\neq0.
+  \]
+  By Lemma~\ref{lem:app-cyclic-abel-stabilizers}, the \(H_1\)-line is
+  one-dimensional.  Moreover, every one-cell in the displayed sum is oriented
+  in the positive Abel direction: its terminal face has the moved chip one edge
+  farther along the oriented circle.  Thus the displayed cycle maps to
+  \(\binom{R+S-2}{R-1}\) times the oriented circle class and spans the
+  fundamental \(H_1\)-line.
+\end{proof}
+
+\begin{thm}[Full primitive higher-\(\psi\) Koszul homology]
+\label{thm:app-full-primitive-psi-homology}
+  For every \(R,S\geq0\),
+  \[
+    H_p(K_{R,S})\cong
+    \begin{cases}
+      \C\cdot[x^Ry^S],&p=0,\\
+      \C\cdot[\Psi_{R-1,S-1}],&p=1,\ R,S\geq1,\\
+      0,&p\geq2,
+    \end{cases}
+  \]
+  where
+  \[
+    \Psi_{R-1,S-1}
+      =
+      \sum_{w\in\mathsf W_{R-1,S-1}}[\psi w]_{\mathrm{cyc}} .
+  \]
+  Consequently the primitive stable Koszul homology is
+  \[
+    \C[x,y]\oplus\C[x,y]\theta,\qquad
+    |\theta|=1,\quad \operatorname{wt}(\theta)=(1,1),
+  \]
+  with the scalar Hamiltonian removed later if one passes to the reduced
+  Hamiltonian sector.
+\end{thm}
+
+\begin{proof}
+  If \(R=0\) or \(S=0\), then \(K^p_{R,S}=0\) for \(p>0\), and
+  \(K^0_{R,S}\) is spanned by the unique cyclic word \(x^R\) or \(y^S\)
+  (including the empty word when \(R=S=0\)).  This gives the stated homology.
+
+  Assume \(R,S>0\).  By Lemma~\ref{lem:app-state-chain-identification},
+  \(K^\bullet_{R,S}\) is the \(\Gamma_S\)-coinvariant cellular chain complex of
+  \(\widetilde Y_{R,S}\).  Since \(\C[\Gamma_S]\) is semisimple, taking
+  coinvariants is an exact functor on finite-dimensional \(\C[\Gamma_S]\)-modules.
+  Therefore
+  \[
+    H_p(K_{R,S})
+      \cong H_p(\widetilde Y_{R,S};\C)_{\Gamma_S}.
+  \]
+  Lemma~\ref{lem:app-cyclic-abel-stabilizers} identifies this homology
+  with \(H_\bullet(S^1;\C)\).  Thus \(H_p(K_{R,S})\) is one-dimensional
+  for \(p=0,1\) and vanishes for \(p\geq2\).
+  In particular, the three-term skeleton
+  \(C_2\to C_1\to C_0\) already computes \(H_1\): cells of dimension
+  \(p\ge3\) have boundaries in \(C_{p-1}\) and cannot change
+  \(\ker(C_1\to C_0)/\operatorname{im}(C_2\to C_1)\).
+
+  The degree-zero line is generated by any necklace of multidegree \((R,S)\).
+  The functional sending every zero-\(\psi\) necklace to \(1\) kills every
+  one-\(\psi\) boundary, so this line is nonzero; it is denoted
+  \(\C\cdot[x^Ry^S]\).
+
+  Lemma~\ref{lem:app-full-s1-generator} identifies the degree-one
+  generator as \(\Psi_{R-1,S-1}\).
+\end{proof}
+
+\begin{thm}[Universal primitive descendant calculation]
+\label{thm:app-full-universal-primitive-descendant}
+  Let \(\mathsf K_{\mathrm{univ}}\) be the stable primitive cyclic Koszul
+  complex generated by two even letters \(x,y\) and one odd letter
+  \(\psi\), with \(d\psi=xy-yx\), decomposed by the weights of
+  Definition~\ref{def:app-full-psi-complex}.  Then
+  \[
+    H_\bullet(\mathsf K_{\mathrm{univ}})
+      \cong
+      \C[x,y]\oplus\C[x,y]\theta,\qquad
+      |\theta|=1,\quad\operatorname{wt}(\theta)=(1,1),
+  \]
+  with \(x^ay^b\theta\) represented by the symmetrised primitive cycle
+  \(\Psi_{a,b}\).  This is the universal primitive calculation in the
+  following precise sense.  If \(E_\bullet\) is any stable primitive
+  single-trace model whose generators are the images of \(x,y,\psi\), whose
+  differential sends \(\psi\) to \(xy-yx\), and whose only stable primitive
+  trace relation is graded cyclicity, then the induced map
+  \[
+    \mathsf K_{\mathrm{univ}}\longrightarrow E_\bullet
+  \]
+  factors on homology through the displayed two-line module.  Hence there
+  are no hidden universal primitive higher-\(\psi\) classes from which a
+  further cotangent or descendant bridge can be built.
+\end{thm}
+
+\begin{proof}
+  The first assertion is Theorem~\ref{thm:app-full-primitive-psi-homology}
+  summed over all bidegrees \((R,S)\), with
+  \(x^ay^b\theta=\Psi_{a,b}\) and \(R=a+1\), \(S=b+1\) in degree one.
+  For the universal property,
+  Lemma~\ref{lem:app-full-stable-super-traces} says that the stable
+  primitive trace span is exactly the graded cyclic quotient of the free
+  algebra on \(x,y,\psi\).  Therefore any stable primitive model satisfying
+  the stated hypotheses receives a unique chain map from
+  \(\mathsf K_{\mathrm{univ}}\) after choosing the images of \(x,y,\psi\).
+  The homology of the source is the two-line module just computed.  Since
+  \(H_p(K_{R,S})=0\) for \(p\ge2\) in every bidegree, every universal
+  primitive class in the target comes from the degree-zero polynomial line
+  or the degree-one \(\Psi\)-line.  The statement is independent of the
+  later choice of principal-part, PBW, or Moyal coefficient module.
+\end{proof}
+
+\begin{thm}[Hamiltonian-sector extraction]
+\label{thm:app-full-hamiltonian-sector-extraction}
+  The full primitive homology decomposes as
+  \[
+    \C\cdot[1]\oplus \bar A
+      \oplus \C\cdot[\Psi_{0,0}]
+      \oplus \bar A_{\mathrm{desc}}[1],
+  \]
+  where
+  \[
+    \bar A=\bigoplus_{R+S>0}\C\cdot[x^Ry^S],
+    \qquad
+    \bar A_{\mathrm{desc}}[1]
+      =\bigoplus_{a+b>0}\C\cdot[\Psi_{a,b}].
+  \]
+  The Hamiltonian comparison uses only
+  \(\bar A\oplus\bar A_{\mathrm{desc}}[1]\).  The complementary sectors
+  are exactly the scalar unit \([1]\), the scalar odd primitive
+  \(\Psi_{0,0}\), and the vanishing higher-\(\psi\) primitive groups
+  \(H_p(K_{R,S})=0\) for \(p\geq2\).
+\end{thm}
+
+\begin{proof}
+  The constant Hamiltonian has zero Hamiltonian vector field, so the
+  reduced Hamiltonian algebra is \(\bar A=\C[x,y]/\C\cdot1\) degree by
+  degree.  This removes the degree-zero scalar class \([1]\).  The odd
+  scalar \(\Psi_{0,0}\) is the one-\(\psi\) descendant of the same removed
+  constant direction; it is a stable primitive trace class, but it has no
+  partner in \(\bar A_{\mathrm{desc}}[1]\).  Theorem~\ref{thm:app-full-primitive-psi-homology}
+  proves that no primitive classes remain in \(\psi\)-degree at least
+  two.  What remains is exactly the positive-degree Hamiltonian and
+  one-\(\psi\) PBW label sector displayed above.  This is a vector-space
+  homology statement; it does not identify \(\Psi_{a,b}\) with Matlis
+  principal parts or with the Moyal coadjoint module.
+\end{proof}

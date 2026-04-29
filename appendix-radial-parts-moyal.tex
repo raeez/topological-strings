@@ -4,11 +4,14 @@
 This appendix records the proof spine for
 Theorem~\ref{thm:lane-moyal-degree-zero}.  The stable core is the
 scalar-reduced Weyl/Moyal normalization, the Capelli change of basis,
-and the stable connected trace bracket.  The finite-\(N\) all-\(N\)
-radial-parts step is conditional on the
-Harish-Chandra--Wallach--Levasseur--Stafford radial-parts input in the
-normalization stated below.  The Costello brane-defect graph
-realization is not part of this appendix.
+the stable connected trace bracket, and the reduced open-line Wick
+graph expansion with midpoint propagator
+\(\frac12\operatorname{sgn}(t-s)\).  The finite-\(N\) radial-parts
+comparison is isolated as the explicit input package stated below.
+Once that package is assumed, the radial argument is algebraic:
+Vandermonde conjugation removes the Dunkl--Calogero connection terms,
+injectivity detects the reduced quotient, and the stable connected
+cumulant projection extracts the single-trace Moyal bracket.
 
 \begin{defn}[Formal Weyl/Moyal convention]
 \label{def:app-radial-moyal-convention}
@@ -33,7 +36,7 @@ realization is not part of this appendix.
   as a Lie algebra.  It is not used as an associative quotient.
 \end{defn}
 
-\begin{prop}[Moyal coefficients]
+\begin{thm}[Exact formal Weyl/Moyal coefficients]
 \label{prop:app-radial-moyal-coefficients}
   For \(f=z_1^kz_2^l\) and \(g=z_1^mz_2^n\),
   \[
@@ -48,12 +51,24 @@ realization is not part of this appendix.
       =\sum_{\substack{r\geq1\\r\ \mathrm{odd}}}
         \frac{2}{2^r r!}\hbar^rP^r(f,g),
   \]
-  so the first and third raw commutator coefficients are
+  equivalently, for \(s\geq0\), the raw coefficient of
+  \(\hbar^{2s+1}\) is
+  \[
+    \frac{1}{2^{2s}(2s+1)!}\,P^{2s+1}(f,g),
+  \]
+  and the normalized Hamiltonian bracket has coefficient
+  \[
+    \frac{\hbar^{2s}}{2^{2s}(2s+1)!}\,P^{2s+1}(f,g).
+  \]
+  The first and third raw commutator coefficients are
   \[
     \hbar P(f,g),\qquad \frac{\hbar^3}{24}P^3(f,g),
   \]
-  and all even raw commutator coefficients vanish.
-\end{prop}
+  and all even raw commutator coefficients vanish.  This is a theorem
+  inside the formal Weyl algebra of the constant symplectic plane.  It
+  uses no finite-\(N\) radial-parts theorem and no Costello graph
+  specialization.
+\end{thm}
 
 \begin{proof}
   The two summands in
@@ -71,6 +86,57 @@ realization is not part of this appendix.
   formula.  Interchanging \(f\) and \(g\) changes \(P^r(f,g)\) by
   \((-1)^r\), so the commutator retains exactly the odd powers and
   contributes the coefficient \(2/(2^r r!)\) in order \(r\).
+\end{proof}
+
+\begin{cor}[All odd Moyal coefficients]
+\label{cor:app-radial-all-odd-moyal-coefficients}
+  The Weyl/Moyal commutator has no even raw powers of \(\hbar\).  Its
+  odd raw and normalized coefficients are
+  \[
+    [f,g]_{\mathrm{raw}}^{(2s+1)}
+      =
+      \frac{\hbar^{2s+1}}{2^{2s}(2s+1)!}P^{2s+1}(f,g),
+    \qquad
+    \{f,g\}_\hbar^{(2s)}
+      =
+      \frac{\hbar^{2s}}{2^{2s}(2s+1)!}P^{2s+1}(f,g).
+  \]
+  In particular the next two raw coefficients after the third-order
+  term are
+  \[
+    \frac{\hbar^5}{1920}P^5(f,g),\qquad
+    \frac{\hbar^7}{322560}P^7(f,g).
+  \]
+\end{cor}
+
+\begin{proof}
+  Put \(r=2s+1\) in
+  Theorem~\ref{prop:app-radial-moyal-coefficients}.  Then
+  \(2/(2^{2s+1}(2s+1)!)=1/(2^{2s}(2s+1)!)\).  Dividing by \(\hbar\)
+  gives the normalized coefficient.
+\end{proof}
+
+\begin{cor}[First and third formal graph weights]
+\label{cor:app-formal-first-third-weights}
+  In the ordered formal product
+  \(m\circ\exp(\hbar P/2)\), the one-cross-contraction term has weight
+  \(\hbar P(f,g)/2\), and the three-cross-contraction term has weight
+  \(\hbar^3P^3(f,g)/48\).  After antisymmetrising the ordered product,
+  the commutator weights are
+  \[
+    \hbar P(f,g),\qquad \frac{\hbar^3}{24}P^3(f,g).
+  \]
+\end{cor}
+
+\begin{proof}
+  The ordered exponential contributes
+  \[
+    \frac{1}{r!}\left(\frac{\hbar}{2}\right)^r P^r(f,g)
+  \]
+  in order \(r\).  For \(r=1\) this is \(\hbar P(f,g)/2\); for \(r=3\)
+  it is \(\hbar^3P^3(f,g)/(3!\,2^3)=\hbar^3P^3(f,g)/48\).  Since
+  \(P(g,f)=-P(f,g)\) and \(P^3(g,f)=-P^3(f,g)\), subtracting the reverse
+  ordered product doubles these two ordered contributions.
 \end{proof}
 
 \begin{defn}[Matrix Weyl algebra and Weyl traces]
@@ -137,14 +203,13 @@ realization is not part of this appendix.
   changes \(-\hbar N/2\) to \(+\hbar N/2\).
 
   The cited Capelli literature supplies the standard source for the
-  Capelli contact phenomenon.  No primary source is used here for this
-  exact bivariate trace formula; the displayed contraction count is the
-  proof of the normalization in this manuscript.
+  Capelli contact phenomenon, and the displayed contraction count fixes
+  the bivariate trace normalization used here.
 \end{proof}
 
-\begin{stmt}[External radial-parts input]
+\begin{stmt}[Radial-parts input package]
 \label{stmt:app-radial-external-input}
-  The finite-\(N\) radial-parts step uses the following external
+  The finite-\(N\) radial-parts step uses the following
   Harish-Chandra radial-parts theorem for invariant differential
   operators, in the form refined by Wallach and by
   Levasseur--Stafford
@@ -152,34 +217,124 @@ realization is not part of this appendix.
   wallach-reductive-invariant-differential,
   levasseur-stafford-harish-chandra,
   levasseur-stafford-kernel-harish-chandra}.  After identifying
-  \(\mathcal W_N\simeq\mathcal D_\hbar(\mathfrak{gl}_N)\), the
-  Harish-Chandra map on invariants is assumed to have the quantum
-  moment-map ideal as kernel, hence to inject the quantum Hamiltonian
-  reduction by conjugation into Weyl-invariant differential operators on
-  the regular Cartan.  With
+  \(\mathcal W_N\simeq\mathcal D_\hbar(\mathfrak{gl}_N)\), this package
+  uses the Harish-Chandra map on invariants whose kernel is the quantum
+  moment-map ideal and hence injects the quantum Hamiltonian reduction
+  by conjugation into Weyl-invariant differential operators on the
+  regular Cartan.  With
   \(\lambda_1,\ldots,\lambda_N\) the Cartan coordinates and
   \(\Delta=\prod_{i<j}(\lambda_i-\lambda_j)\), the radial-part map is
-  assumed to be conjugated by \(\Delta\).  This appendix treats this
-  precise Vandermonde-conjugated compatibility statement as source
-  input; it is not re-proved here.
+  conjugated by \(\Delta\).
 
-  The input includes the exact image normalization for the Weyl trace
-  generators used in this paper:
+  The cited radial-parts literature sources the Harish-Chandra
+  homomorphism, regular-Cartan landing, and kernel statement.  The
+  exact Weyl-trace image in item~(3) is the matched normalization datum
+  used in this paper: Lemma~\ref{lem:app-radial-pure-shear-extension}
+  reduces it to pure-power images and Weyl-shear compatibility, and the
+  finite exact checks below attack it in ranks \(2\) and \(3\).  Those
+  checks do not replace the all-\(N\) radial-parts input.
+
+  The input consists of the following three assertions.
+  \begin{enumerate}
+    \item The Vandermonde-conjugated radial map is a homomorphism from
+      the invariant quantum Hamiltonian reduction by conjugation to
+      Weyl-invariant differential operators on the regular Cartan.
+    \item Its kernel is precisely the quantum moment-map ideal; hence it
+      is injective on the reduced quotient.
+    \item The Weyl trace generators used here have image
   \[
     \operatorname{Rad}_0(J_N(f))
       =\Delta^{-1}\left(\sum_{i=1}^N
         \operatorname{Op}_{\mathrm W}
         (f)(\lambda_i,-\hbar\partial_{\lambda_i})\right)\Delta.
   \]
+  \end{enumerate}
   Lemma~\ref{lem:app-radial-pure-shear-extension} proves that a smaller
   source package would suffice: the pure \(z_1\)- and \(z_2\)-power
   images together with compatibility of the radial map with the Weyl
-  adjoint shears.  The
-  Harish-Chandra--Wallach--Levasseur--Stafford anchors presently verify
-  the homomorphism, regular-Cartan landing, and kernel/surjectivity
-  context; they do not by themselves verify this exact Weyl-trace image
-  convention.  That convention remains the named conditional input.
+  adjoint shears.
 \end{stmt}
+
+\begin{defn}[Vandermonde gauge variables]
+\label{def:app-radial-vandermonde-gauge-variables}
+  Set
+  \[
+    \nabla_i^\Delta
+      =
+      \Delta^{-1}(-\hbar\partial_{\lambda_i})\Delta
+      =
+      -\hbar\partial_{\lambda_i}
+      -\hbar\sum_{j\neq i}\frac{1}{\lambda_i-\lambda_j}.
+  \]
+  The logarithmic summand is the type \(A\) Dunkl--Calogero correction
+  in the Vandermonde gauge.  For \(f\in\C[z_1,z_2][[\hbar]]\), put
+  \[
+    S_N(f)=\sum_{i=1}^N
+      \operatorname{Op}_{\mathrm W}
+      (f)(\lambda_i,-\hbar\partial_{\lambda_i})
+  \]
+  and
+  \[
+    R_N(f)=
+      \sum_{i=1}^N
+      \operatorname{Op}_{\mathrm W}
+      (f)(\lambda_i,\nabla_i^\Delta)
+      =
+      \Delta^{-1}S_N(f)\Delta .
+  \]
+\end{defn}
+
+\begin{lem}[Dunkl--Calogero correction cancellation]
+\label{lem:app-radial-dunkl-calogero-cancellation}
+  The Vandermonde-gauge variables satisfy
+  \[
+    [\lambda_i,\lambda_j]=0,\qquad
+    [\nabla_i^\Delta,\nabla_j^\Delta]=0,\qquad
+    [\lambda_i,\nabla_j^\Delta]=\hbar\,\delta_{ij}.
+  \]
+  Consequently
+  \[
+    \hbar^{-1}[R_N(f),R_N(g)]=R_N(\{f,g\}_\hbar)
+  \]
+  for all \(f,g\).  In particular, all logarithmic
+  Dunkl--Calogero terms introduced by expanding
+  \(\Delta^{-1}S_N(-)\Delta\) cancel in the commutator identity.
+\end{lem}
+
+\begin{proof}
+  The operator \(\nabla_i^\Delta\) is conjugate to
+  \(-\hbar\partial_{\lambda_i}\) by multiplication by \(\Delta\).
+  The three displayed commutation relations are therefore the ordinary
+  Weyl relations for
+  \((\lambda_i,-\hbar\partial_{\lambda_i})\), conjugated by
+  \(\Delta\).  The correction terms are a pure gauge connection:
+  their curvature is zero because the unconjugated partial derivatives
+  commute.  Hence the \(i\)-th summand is again a one-particle Weyl
+  representation of the formal Moyal algebra, and different summands
+  commute.  This gives the displayed commutator identity.  No separate
+  Calogero potential remains after the computation is kept in
+  Vandermonde-conjugated form.
+\end{proof}
+
+\begin{lem}[Radial-map injectivity on the reduced quotient]
+\label{lem:app-radial-map-injectivity}
+  Under Statement~\ref{stmt:app-radial-external-input}, if an invariant
+  Weyl operator \(D\) in the normalizer of the quantum moment-map ideal
+  satisfies
+  \[
+    \operatorname{Rad}_0(D)=0,
+  \]
+  then \(D\) is zero in the degree-zero quantum Hamiltonian reduction.
+\end{lem}
+
+\begin{proof}
+  Statement~\ref{stmt:app-radial-external-input} identifies the kernel
+  of the Vandermonde-conjugated Harish-Chandra radial map with the
+  quantum moment-map ideal.  Passing to the normalizer quotient by that
+  ideal gives an injective map into Weyl-invariant differential
+  operators on the regular Cartan.  Thus an element with zero radial
+  image represents the zero class in the reduced quotient.
+\end{proof}
 
 \begin{lem}[Pure powers and shears determine the image normalization]
 \label{lem:app-radial-pure-shear-extension}
@@ -246,7 +401,61 @@ realization is not part of this appendix.
   \(b+1\).  Linearity gives the result for all polynomials.
 \end{proof}
 
-\begin{thm}[Finite-\(N\) radial-parts identity, conditional on the input]
+\begin{cor}[All mixed Weyl trace radial images]
+\label{cor:app-radial-all-mixed-weyl-traces}
+  Under the pure-power and shear hypotheses of
+  Lemma~\ref{lem:app-radial-pure-shear-extension}, every mixed
+  Weyl-ordered trace has the image
+  \[
+    \operatorname{Rad}_0(J_N(z_1^az_2^b))=
+      \Delta^{-1}\left(\sum_i
+      \operatorname{Op}_{\mathrm W}
+      (z_1^az_2^b)(\lambda_i,-\hbar\partial_{\lambda_i})\right)\Delta
+  \]
+  for all \(a,b\geq0\).  Consequently the same formula holds for every
+  polynomial \(f\) by linearity.
+\end{cor}
+
+\begin{proof}
+  This is exactly the conclusion of
+  Lemma~\ref{lem:app-radial-pure-shear-extension} on monomials.  The
+  separate statement records that no additional mixed-trace datum is
+  required after the pure powers and the Weyl adjoint shears have been
+  fixed.
+\end{proof}
+
+\begin{lem}[Cartan one-particle Moyal representation]
+\label{lem:app-radial-cartan-moyal-representation}
+  Put
+  \[
+    S_N(f)=\sum_{i=1}^N
+      \operatorname{Op}_{\mathrm W}
+      (f)(\lambda_i,-\hbar\partial_{\lambda_i}).
+  \]
+  Then, for all \(f,g\in\C[z_1,z_2][[\hbar]]\),
+  \[
+    \hbar^{-1}[S_N(f),S_N(g)]=S_N(\{f,g\}_\hbar).
+  \]
+\end{lem}
+
+\begin{proof}
+  The \(i\)-th summand of \(S_N(f)\) lies in the one-particle Weyl
+  algebra generated by \(\lambda_i\) and
+  \(-\hbar\partial_{\lambda_i}\).  Weyl quantization is an algebra
+  isomorphism from the formal Moyal algebra of the constant Poisson
+  plane to this one-particle Weyl algebra, so
+  \[
+    \hbar^{-1}[
+      \operatorname{Op}_{\mathrm W}(f)_i,
+      \operatorname{Op}_{\mathrm W}(g)_i]
+    =
+    \operatorname{Op}_{\mathrm W}(\{f,g\}_\hbar)_i .
+  \]
+  Summands with different \(i\) commute, because they use disjoint
+  Cartan variables.  Summing over \(i\) gives the displayed identity.
+\end{proof}
+
+\begin{thm}[Finite-\(N\) radial-parts identity from the input package]
 \label{thm:app-radial-finite-N}
   Under the radial-parts input of
   Statement~\ref{stmt:app-radial-external-input}, put
@@ -264,37 +473,100 @@ realization is not part of this appendix.
     D_N(f,g)=
       \hbar^{-1}[J_N(f),J_N(g)]-J_N(\{f,g\}_\hbar)
   \]
-  lies in the quantum moment-map ideal.  Thus \(D_N(f,g)\) vanishes in
-  degree-zero quantum Hamiltonian reduction.
+  lies in the quantum moment-map ideal.  Equivalently, in the
+  Vandermonde gauge,
+  \[
+    \operatorname{Rad}_0(D_N(f,g))
+      =
+      \hbar^{-1}[R_N(f),R_N(g)]-R_N(\{f,g\}_\hbar)
+      =0 .
+  \]
+  Thus \(D_N(f,g)\) vanishes in degree-zero quantum Hamiltonian
+  reduction.
 \end{thm}
 
 \begin{proof}
   The first displayed identity is the exact image normalization included
-  in Statement~\ref{stmt:app-radial-external-input}.  The assumed
-  radial-parts input also makes the conjugated radial map injective on
-  the reduced invariant quotient, so the commutator defect can be tested
-  on the Cartan.
+  in Statement~\ref{stmt:app-radial-external-input}.  The same
+  radial-parts input makes the conjugated radial map injective on the
+  reduced invariant quotient, so the commutator defect can be tested on
+  the Cartan.
 
   Lemma~\ref{lem:app-radial-pure-shear-extension} explains the minimal
   normalization package that would imply the full displayed formula:
   pure \(z_1\)-powers, pure \(z_2\)-powers, and compatibility with the
   plus shear \(Y\mapsto Y+p(X)\) in the convention
   \(Y=-\hbar\partial_X^t\), equivalently
-  \(z_2=-\hbar\partial_\lambda\) on the Cartan.  The present sources do
-  not verify that package; it remains part of the external input.
+  \(z_2=-\hbar\partial_\lambda\) on the Cartan.
 
-  Finally the \(i\)-th summand of \(S_N\) is an ordinary one-particle
-  Weyl algebra and distinct summands commute, hence
+  Finally
+  Lemma~\ref{lem:app-radial-cartan-moyal-representation} gives
+  \(\hbar^{-1}[S_N(f),S_N(g)]=S_N(\{f,g\}_\hbar)\).  Equivalently,
+  Lemma~\ref{lem:app-radial-dunkl-calogero-cancellation} gives the
+  same identity after Vandermonde conjugation:
   \[
-    \hbar^{-1}[S_N(f),S_N(g)]=S_N(\{f,g\}_\hbar).
+    \hbar^{-1}[R_N(f),R_N(g)]=R_N(\{f,g\}_\hbar).
   \]
-  Conjugation by \(\Delta\) preserves commutators, so
-  \(\operatorname{Rad}_0(D_N(f,g))=0\).  Injectivity of the radial
-  map on the reduced quotient puts \(D_N(f,g)\) in the quantum
-  moment-map ideal.
+  Thus \(\operatorname{Rad}_0(D_N(f,g))=0\).  The radial-map
+  injectivity of Lemma~\ref{lem:app-radial-map-injectivity} puts
+  \(D_N(f,g)\) in the quantum moment-map ideal.
 \end{proof}
 
-\begin{cor}[Conditional stable scalar-reduced connected bracket]
+\begin{defn}[Stable cumulant extraction]
+\label{def:app-radial-stable-cumulant-extraction}
+  Fix a total polynomial degree bound \(d\) and take \(N\geq d\).  Let
+  \[
+    \kappa_{N,d}
+  \]
+  denote the connected single-trace cumulant projection on the stable
+  trace algebra in degrees \(\leq d\): it kills the empty trace and
+  all decomposable multi-trace products, and it sends the
+  Capelli-renormalized generator
+  \[
+    J_N(z_1^az_2^b),\qquad 0<a+b\leq d,
+  \]
+  to its single-trace indecomposable class.  The stable map
+  \(\kappa_{\infty,d}\) is the direct limit of these projections in
+  the Procesi--Razmyslov stable range.
+\end{defn}
+
+\begin{lem}[Connected-trace projection after Capelli triangularization]
+\label{lem:app-radial-connected-projection}
+  Fix a polynomial degree bound \(d\).  In the stable range
+  \(N\geq d\), the Capelli triangular system
+  \[
+    J_N(z_1^az_2^b)\equiv
+      \sum_{r=0}^{\min(a,b)}
+        \left(-\frac{\hbar N}{2}\right)^r
+        r!\binom ar\binom br\,T_{a-r,b-r}
+  \]
+  identifies the span of nonempty Weyl traces \(J_N(z_1^az_2^b)\),
+  \(a+b\leq d\), with the span of nonempty normal-ordered traces
+  \(T_{a,b}\), modulo the empty trace and decomposable multi-traces.
+  The cumulant projection
+  \[
+    \kappa_{N,d}\bigl(J_N(z_1^az_2^b)\bigr)
+      \longmapsto z_1^az_2^b
+  \]
+  is therefore degreewise injective on the scalar-reduced connected
+  single-trace quotient in the stable range.
+\end{lem}
+
+\begin{proof}
+  The displayed Capelli formula is triangular for total degree:
+  its \(r=0\) term is \(T_{a,b}\), and every \(r\geq1\) term has total
+  degree \(a+b-2r\).  The diagonal coefficient is \(1\), hence the
+  triangular matrix is unipotent and invertible over
+  \(\C[[\hbar N]]\).  The only term which can become the empty trace is
+  the term with \(a-r=b-r=0\), and the scalar-reduced connected quotient
+  removes it.  Decomposable products are removed by the connected
+  projection.  Stable Procesi--Razmyslov trace independence in degree
+  \(d\) gives linear independence of the remaining connected trace
+  generators for \(N\geq d\).  Thus the stated projection is injective
+  degreewise in the stable range.
+\end{proof}
+
+\begin{thm}[Connected-trace bracket compatibility and stable cumulants]
 \label{cor:app-radial-stable-connected}
   Under the same radial-parts input as
   Theorem~\ref{thm:app-radial-finite-N}, for each fixed polynomial
@@ -310,20 +582,166 @@ realization is not part of this appendix.
       =
       \partial_{\mathrm{bb},\hbar}(\{f,g\}_\hbar).
   \]
+  More explicitly, for \(N\geq d\) and all \(f,g\) with all monomials
+  in \(f,g,\{f,g\}_\hbar\) of total degree \(\leq d\),
+  \[
+    \kappa_{N,d}\!\left(
+      \hbar^{-1}[J_N(f),J_N(g)]
+    \right)
+    =
+    \kappa_{N,d}\!\left(
+      J_N(\{f,g\}_\hbar)
+    \right),
+  \]
+  and these identities are compatible under \(N\mapsto N+1\).
+\end{thm}
+
+\begin{proof}
+  Lemma~\ref{lem:app-radial-connected-projection} gives the
+  degreewise stable connected single-trace projection and its
+  injectivity after removing the empty trace and decomposable products.
+  The finite-\(N\) identity of
+  Theorem~\ref{thm:app-radial-finite-N} gives equality in the reduced
+  quantum Hamiltonian quotient.  Applying \(\kappa_{N,d}\) gives the
+  displayed connected-trace identity, since the cumulant projection
+  kills only the empty trace and decomposable products and is injective
+  on the Capelli-renormalized single-trace span by
+  Lemma~\ref{lem:app-radial-connected-projection}.  The identity is
+  compatible with adjoining extra Cartan variables, because
+  \(S_{N+k}(f)\) is obtained from \(S_N(f)\) by adding commuting
+  one-particle summands.  Therefore the bracket identity stabilizes
+  degreewise in \(N\).
+\end{proof}
+
+\begin{defn}[Reduced open-line Wick graph data]
+\label{def:app-reduced-open-line-wick-graph-data}
+  In the reduced first-order open-line model with action
+  \[
+    S_0=\int_\R\operatorname{Tr}(\phi_1\,d\phi_2),
+  \]
+  use Weyl-ordered boundary vertices \(f(\phi_1,\phi_2)\), and choose
+  the zero-mode-removed midpoint propagator
+  \[
+    G(t,s)=\frac12\operatorname{sgn}(t-s),\qquad
+    \langle\phi_1(t)\phi_2(s)\rangle=\hbar G(t,s),\qquad
+    \langle\phi_2(t)\phi_1(s)\rangle=-\hbar G(t,s).
+  \]
+  Self-contractions at a Weyl vertex are set to zero.  The only
+  connected two-vertex graphs are \(r\)-fold cross-contractions between
+  the two boundary vertices.
+\end{defn}
+
+\begin{thm}[Reduced open-line Wick graph expansion]
+\label{thm:app-reduced-open-line-moyal-product}
+  With the graph data of
+  Definition~\ref{def:app-reduced-open-line-wick-graph-data}, the
+  ordered local product for two boundary Hamiltonians at \(t>s\) is
+  the formal Moyal product
+  \[
+    F\star G=m\circ\exp\left(\frac{\hbar}{2}P\right)(F\otimes G).
+  \]
+  More precisely, the graph with exactly \(r\) cross-edges contributes
+  \[
+    W_r^{>}(f,g)
+      =
+    \frac{1}{r!}\left(\frac{\hbar}{2}\right)^rP^r(f,g),
+  \]
+  while the reversed ordering \(s>t\) contributes
+  \[
+    W_r^{<}(f,g)
+      =
+    \frac{1}{r!}\left(-\frac{\hbar}{2}\right)^rP^r(f,g).
+  \]
+  Hence the antisymmetrized factorization commutator is
+  \[
+    [f,g]_{\mathrm{graph}}
+      =
+    \sum_{r\geq0}
+      \frac{1-(-1)^r}{2^r r!}\hbar^rP^r(f,g)
+      =
+    \sum_{\substack{r\geq1\\r\ \mathrm{odd}}}
+      \frac{2}{2^r r!}\hbar^rP^r(f,g).
+  \]
+  The one-edge and three-edge commutator coefficients are exactly
+  \[
+    \hbar P(f,g),\qquad \frac{\hbar^3}{24}P^3(f,g).
+  \]
+  All even commutator orders vanish.
+\end{thm}
+
+\begin{proof}
+  For ordered insertions with \(t>s\), the midpoint propagator gives
+  \(G(t,s)=1/2\).  A single cross-contraction therefore contributes
+  \[
+    \frac{\hbar}{2}
+    \left(\partial_{z_1}\otimes\partial_{z_2}
+      -\partial_{z_2}\otimes\partial_{z_1}\right)
+    =\frac{\hbar}{2}P.
+  \]
+  Wick expansion of the free first-order model exponentiates the
+  cross-contraction operator.  With Weyl vertices there are no
+  self-contractions; hence a connected two-vertex graph is determined
+  by its number \(r\) of cross-edges.  The exponential supplies the
+  symmetry factor \(1/r!\), and the ordered propagator supplies
+  \((\hbar/2)^r\).  This proves the formula for \(W_r^{>}\).  Reversing
+  the order changes the propagator from \(1/2\) to \(-1/2\), giving
+  \(W_r^{<}\).  Subtracting the two orderings gives the displayed
+  commutator series.  The coefficients in orders \(1\) and \(3\) are
+  \(2/(2\cdot1!)=1\) and \(2/(2^3\cdot3!)=1/24\).
+\end{proof}
+
+\begin{cor}[All-order reduced graph realization of Moyal]
+\label{cor:app-reduced-graph-realizes-moyal}
+  The reduced open-line Wick graph expansion of
+  Theorem~\ref{thm:app-reduced-open-line-moyal-product} realizes the
+  Weyl/Moyal Lie bracket of
+  Definition~\ref{def:app-radial-moyal-convention} to all orders:
+  \[
+    [f,g]_{\mathrm{graph}}=[f,g]_{\mathrm{raw}},\qquad
+    \hbar^{-1}[f,g]_{\mathrm{graph}}=\{f,g\}_\hbar .
+  \]
 \end{cor}
 
 \begin{proof}
-  The Capelli system of Lemma~\ref{lem:app-radial-capelli-triangular}
-  is triangular with leading term \(T_{a,b}\).  Its lower terms have
-  smaller total degree and include the scalar empty trace only when
-  both indices have been contracted away.  The connected projection
-  removes the empty trace and disconnected products, while preserving
-  the single-trace \(J_N\)-basis.  The finite-\(N\) identity of
-  Theorem~\ref{thm:app-radial-finite-N} is compatible with adjoining
-  extra Cartan variables, because \(S_{N+k}(f)\) is obtained from
-  \(S_N(f)\) by adding commuting one-particle summands.  Therefore the
-  bracket identity stabilizes degreewise in \(N\).
+  Compare the graph commutator series in
+  Theorem~\ref{thm:app-reduced-open-line-moyal-product} with the formal
+  Weyl commutator series in
+  Theorem~\ref{prop:app-radial-moyal-coefficients}.  The coefficient of
+  \(P^r\) is \(2\hbar^r/(2^r r!)\) for odd \(r\) and \(0\) for even
+  \(r\) in both series.
 \end{proof}
+
+\begin{rmk}[Finite exact arithmetic anchors]
+\label{rmk:app-radial-finite-verification}
+  The script \texttt{scripts/check\_moyal\_coefficients.py} is an
+  exact rational-arithmetic falsification harness for the algebraic
+  coefficients used above.  It checks:
+  \[
+  \begin{gathered}
+    14641\text{ monomial pairs }(z_1^kz_2^l,z_1^mz_2^n),
+      \quad 0\leq k,l,m,n\leq10,\\
+    \text{Moyal commutator orders }0\leq r\leq11,\\
+    121\text{ Capelli triangular round trips }J\to T\to J
+      \text{ with }0\leq a,b\leq10,\\
+    80\text{ direct }N=2\text{ radial restrictions and }
+      80\text{ direct }N=3\text{ radial restrictions},\\
+    [S_2(f),S_2(g)]=S_2([f,g]_{*})
+      \text{ on the primary and higher-order Cartan test pairs},\\
+    \text{the connected-cumulant leading bracket and the open-line }
+      r=1,3\text{ graph weights.}
+  \end{gathered}
+  \]
+  These checks verify the constants
+  \[
+    1,\qquad \frac1{24},\qquad
+    \frac1{1920},\qquad \frac1{322560}
+  \]
+  in the tested Moyal orders, the Capelli signs
+  \((-\hbar N/2)^r\) and \((+\hbar N/2)^r\), and the rank-two/rank-three
+  shadows of the radial image formula.  They do not prove the
+  all-\(N\) Harish-Chandra radial-parts theorem or the analytic
+  Costello brane-defect graph specialization.
+\end{rmk}
 
 \begin{rmk}[Scalar quotient and the \(U(1)\) anomaly]
 \label{rmk:app-radial-scalar-quotient}
@@ -331,45 +749,8 @@ realization is not part of this appendix.
   \(\bar A_\hbar\).  Before this scalar reduction the linear
   commutator carries the central term
   \([z_1,z_2]_*= \hbar\), and on the brane side the corresponding
-  matrix trace is the Capelli shift \(\hbar N\).  The conditional
-  reduced theorem is the theorem after quotienting by this scalar line.
+  matrix trace is the Capelli shift \(\hbar N\).  The reduced theorem
+  is the theorem after quotienting by this scalar line.
   The unreduced line is the \(U(1)\) anomaly class of
   Theorem~\ref{thm:u1-center-anomaly}.
-\end{rmk}
-
-\begin{rmk}[Relation to the finite exact verification]
-\label{rmk:app-radial-finite-verification}
-  The finite exact verification is independent evidence for the local
-  Moyal and Capelli normalizations, not a substitute for the external
-  radial-parts input. It uses rational arithmetic to check:
-  \[
-  \begin{gathered}
-    \text{Moyal monomial pairs with exponents }0,\ldots,10
-    \text{ through order }11,\\
-    \text{the Capelli triangular round trip for }a,b\leq10,\\
-    \text{the direct }N=2\text{ and }N=3\text{ radial restrictions on }
-    80\text{ operator/test-polynomial pairs in each rank},\\
-    [S_2(f),S_2(g)]=S_2([f,g]_*)
-    \text{ on the primary and higher-order radial test pairs},\\
-    \text{the leading connected-cumulant bracket in the primary cases},\\
-    \text{and the open-line first/third graph weights.}
-  \end{gathered}
-  \]
-  The finite exact verification therefore checks the coefficients \(1\) and \(1/24\), the
-  vanishing of even commutator orders in the tested range, the
-  Capelli signs, the rank-two Cartan shadow of the radial-parts
-  identity, and the direct rank-two and rank-three restriction of
-  \(J_N(f)\) on the stated \(80\) operator/test-polynomial pairs in
-  each of ranks \(N=2\) and \(N=3\).  It does not prove
-  injectivity of the all-\(N\) Harish-Chandra radial-part map or source
-  the exact image normalization beyond these low-rank tests.
-\end{rmk}
-
-\begin{rmk}[Residual graph problem]
-\label{rmk:app-radial-residual-graph-problem}
-  The formal Weyl/Moyal product fixes the algebraic target.  It does
-  not prove that a Costello closed-open brane-defect model realizes
-  this target to all orders.  That requires the sector specialization,
-  propagator, counterterm, anomaly, and QME data named in
-  Problem~\ref{prob:first-third-graph-normalizations}.
 \end{rmk}

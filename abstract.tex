@@ -1,45 +1,62 @@
 \begin{abstract}
-We study the formal local mixed holomorphic-topological brane at the
-symplectic disk with coordinates \(z_1,z_2\) and form
-\(dz_1\wedge dz_2\). On a stack of \(N\) probes these coordinates are
-matrices \(\phi_1,\phi_2\in\mathfrak{gl}_N\), and the open ghost-zero
-system is the Dirac first-order theory
+We build the theorem infrastructure for a universal formal-local
+Koszul duality theory at the mixed holomorphic-topological brane on the
+symplectic disk \((\operatorname{Spf}\C[[z_1,z_2]],dz_1\wedge dz_2)\).
+On a stack of \(N\) probes the coordinates become matrices
+\(\phi_1,\phi_2\in\mathfrak{gl}_N\), and the open sector starts from
+the Dirac first-order theory
 \[
   \int_\R\operatorname{Tr}\bigl(\phi_1\,d\phi_2
-  +A[\phi_1,\phi_2]\bigr)
+  +A[\phi_1,\phi_2]\bigr),
 \]
-with first-class constraint \([\phi_1,\phi_2]=0\) and BV/Koszul
-variable \(\psi=A^*\) satisfying \(Q\psi=[\phi_1,\phi_2]\). Closed
-Hamiltonian modes act through the reduced CE/PV Hamiltonian
-central-operation model. A full \(P_0\)-factorization-centre theorem for the
-unreduced open theory is not asserted. The cotangent modes are not polynomial
-descendants: in the local theorem they are Grothendieck--Matlis
-residue currents in
+with Koszul field \(\psi=A^*\) and differential
+\(Q\psi=[\phi_1,\phi_2]\).  The closed side is the shifted cotangent
+Hamiltonian Lie algebra
+\[
+  \mathfrak h=\C[[z_1,z_2]]/\C\cdot1,\qquad
+  \mathfrak g=\mathfrak h\ltimes
+  \mathfrak h^\vee_{\mathrm{cont}}[1].
+\]
+Finite cotangent windows carry the Chevalley--Eilenberg/polyvector
+identity
+\[
+  C^\bullet_{\mathrm{CE}}
+  (\mathfrak h_{\le M}\ltimes D_{\le M}[1])
+  \simeq \mathrm{PV}(\mathbf S(\mathfrak h_{\le M})),
+  \qquad c^I\mapsto\theta^I,\quad u_I\mapsto O_I,
+\]
+and the completed formal disk is obtained by the same generator map
+after the bracket, coadjoint, and Casimir transition obstructions
+vanish.
+
+The cotangent variables are Grothendieck--Matlis residue currents
 \[
   \mathcal P=\operatorname{Ann}_{\mathrm{res}}(\C\cdot1)\subset
   H^2_{\mathfrak m}(\C[[z_1,z_2]])\,dz_1dz_2
-  =\bigoplus_{a+b>0}\C\,\rho_{a,b}.
+  =\bigoplus_{a+b>0}\C\,\rho_{a,b},
 \]
-The stable polynomial one-\(\psi\) classes \(\Psi_{a,b}\) are PBW
-special-fibre open labels; they are not another basis of
-\(\mathcal P\) as an \(\mathfrak h\)-module.
+while the stable polynomial one-\(\psi\) classes \(\Psi_{a,b}\) are the
+PBW special-fibre open labels.  The paper keeps these two modules
+separate and computes the bridge between them by Koszul, Matlis, and
+Moyal methods.  The Rees Weyl algebra
+\(\mathcal D_\hbar\) supplies the Fourier bridge
+\[
+  z_1^az_2^b\mapsto\partial_1^a\partial_2^be_0
+  \mapsto (-1)^{a+b}\hbar^{a+b}a!b!\rho_{a,b},
+\]
+and the same-action obstruction shows that this is a Fourier-polarized
+label comparison, not a polynomial realization of principal parts.
 
-The finite algebraic part proves the Dirac brane reduction, the
-scalar-reduced degree-zero Weyl/Moyal comparison, and the scalar
-\(U(1)\) anomaly. The degreewise stable part proves the PBW trace
-sector, the cochain-level CE/PV derived-centre map for
-\(\mathfrak h=\C[[z_1,z_2]]/\C\cdot1\), the Matlis principal-part
-cotangent module, the compactly supported brane-line current model, and
-the principal-part defect model after de Rham-current contraction. The weighted Tate
-construction is proved only in the weighted Tate coefficient model and
-makes no regulator-independence claim. The first and third Costello
-graph normalizations are reduced open-line Weyl/Moyal boundary
-coefficient computations to stated order. The all-order brane-defect
-graph realization is conditional on a mixed brane-defect QME theorem,
-the radial-parts input where finite \(N\) is used, and the required
-centrality homotopies. The unreduced
-cotangent factorization-centre morphism, a one-antifield descendant
-Moyal lift, a Rees/Fourier bridge between \(\Psi_{a,b}\) and
-\(\rho_{a,b}\), compact Calabi--Yau consequences, BKM/Igusa
-consequences, and sister-volume transfers are not asserted here.
+The formal-local package consists of finite CE/PV, completed disk
+CE/PV, the admissible Tate bar-cobar/Quillen envelope
+\(B^!\simeq\widehat U(\mathfrak g_{\mathrm{adm}})\), weighted
+finite-window regulator independence, endpoint admissibility criteria,
+primitive higher-\(\psi\) Koszul extraction, the
+\(\mathcal D_\hbar\) bridge and obstruction, the unreduced
+factorization-current lift datum, and the scalar QME obstruction
+complex.  The Moyal normalization fixes the first and third raw
+commutator weights \(1\) and \(1/24\).  Global BCOV, compact
+Calabi--Yau, Vol III, Igusa/BKM, and sister-volume uses enter through
+matched-conventions descent data and vanishings of the corresponding
+period, anomaly, QME, and operadic obstruction classes.
 \end{abstract}

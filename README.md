@@ -1,25 +1,46 @@
-# amstex-template
+# Closed Hamiltonian BF Theory as a Derived Poisson Centre
 
+This repository contains a research manuscript on the formal local
+mixed holomorphic-topological Dirac brane model on
+\(\mathbb R^2\times\mathbb C^2\).  The source of the paper is
+`main.tex`, with front matter and support files split into the adjacent
+`.tex` files.
 
-Project template for the management and build of large AmSTeX LaTeX projects.
+The manuscript builds a universal formal-local Koszul duality theory:
+finite cotangent CE/PV, completed formal-disk CE/PV, the closed-open
+generator map \(c^I\mapsto\theta^I\), \(u_I\mapsto O_I\), the
+admissible Tate bar-cobar/Quillen envelope, primitive higher-\(\psi\)
+Koszul sectors, the \(\mathcal D_\hbar\) Fourier--Rees bridge and its
+same-action obstruction, weighted finite-window regulator independence,
+endpoint criteria, unreduced factorization-current lift data, and
+global/descent acceptance criteria.  Analytic and global claims enter
+through named obstruction complexes rather than by transfer from the
+formal disk alone.
 
-## prereqs
-- GNU coreutils, basic latex installation, pf2htmlex (included as git submodule)
+## Build
 
-## basic properties
-- configured for use with vim-latex-suite (see https://github.com/vim-latex/vim-latex)
-- builds with GNU make (see Makefile)
-- build targets are { tar, pdf, html }
+Prerequisites: a TeX installation with `pdflatex`, `makeindex`, GNU
+`make`, and the local style files available to TeX.
 
-## common build rules
-- make { q, qc, qa, pdf, html, tar, install-pdf, install-html }
+Common targets:
 
-## config
-See beginning of Makefile for configuration variables / flags
+```bash
+make pdf
+make quick
+make standalone
+make help
+```
 
-## TODO
-- check cross platform compatability (at present only tested on darwin)
-- improve dependency management with intermediate build targets
-- documentation esp. { TEXMAIN, TEXSUITEMAIN, pdf2htmlex }
-- investigate latexmk
-- improve on $(KILL) blindly using -rf
+The main PDF is written to `out/main.pdf`.  Build success is a TeX
+integrity check; it is not a mathematical certification.
+
+## Source Layout
+
+- `main.tex` is the root file.
+- `abstract.tex`, `claim-strength-ledger.tex` (programme theorem interface),
+  and `local-dictionary.tex` are rendered before the table of contents.
+- `mathmacros.tex`, `commands.tex`, `notation.tex`, and
+  `nomenclature.tex` hold notation and macro support.
+- `scripts/` contains finite checks for local computations.
+- `standalone/` holds standalone TeX artifacts built by
+  `make standalone`.

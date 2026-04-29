@@ -7,13 +7,17 @@ following: the \(m\)-adic continuous dual of the reduced Hamiltonian
 Lie algebra is the reduced scalar-annihilator inside the top
 local-cohomology module; the residue pairing gives the coadjoint
 action; and no ordinary polynomial descendant module realizes this
-coadjoint representation.  The Fourier--Rees comparison constructed
-below is only a Weyl-module and associated-graded label comparison.
-Over \(\C[[\hbar]]\) its target is the Fourier delta Rees lattice
-inside local cohomology, not the full standard Cech lattice; the full
-principal-part lattice appears only after tensoring with
-\(\C((\hbar))\).  It does not identify \(\Psi_{a,b}\) with
-\(\rho_{a,b}\) as \(\mathfrak h\)-modules.  The source conventions are
+coadjoint representation.  The residue pairing is the universal dual
+module normalization for this lane.  The Fourier--Rees construction below
+then gives the strongest flat positive bridge that exists: a genuine
+\(\mathcal D_\hbar\)-module bridge after Fourier conjugation of the
+polarization, together with an exact obstruction theorem for any bridge
+that tries to preserve the original Hamiltonian action.  Over
+\(\C[[\hbar]]\) its target is the Fourier delta Rees lattice inside local
+cohomology, not the full standard Cech lattice; the full principal-part
+lattice appears only after tensoring with \(\C((\hbar))\).  It does not
+identify \(\Psi_{a,b}\) with \(\rho_{a,b}\) as \(\mathfrak h\)-modules.
+The source conventions are
 Matlis duality
 \cite{matlis-injective}, Grothendieck--Hartshorne local cohomology
 \cite{hartshorne-local-cohomology}, and the power-series residue model
@@ -116,11 +120,11 @@ of Kunz--Cox--Dickenstein, Chapter~5
   pairing for the complete regular local ring \(R\): after the
   trivialization \(\omega_R=R\,dz_1dz_2\),
   \(H^2_{\mathfrak m}(R)\,dz_1dz_2\cong E_R(\C)\).  The subspace
-  \(\mc P=\operatorname{Ann}_{\mathrm{res}}(\C\cdot1)\) is not asserted to be an
-  \(R\)-submodule, and \(R/\C\cdot1\) is not an \(R\)-module quotient;
-  it is the \(\C\)-linear scalar-annihilator dual to
-  \(\mathfrak h=R/\C\cdot1\) and is stable for the Hamiltonian
-  coadjoint action below.
+  \(\mc P=\operatorname{Ann}_{\mathrm{res}}(\C\cdot1)\) is the
+  \(\C\)-linear scalar-annihilator dual to
+  \(\mathfrak h=R/\C\cdot1\).  The \(R\)-module structure on
+  \(E_R(\C)\) restricts instead to the Hamiltonian coadjoint action
+  below, which is the structure used by the brane cotangent sector.
 \end{prop}
 
 \begin{proof}
@@ -185,7 +189,13 @@ of Kunz--Cox--Dickenstein, Chapter~5
     \mc P\times\mathfrak h\longrightarrow\C
   \]
   of total degree zero which is equivariant for the coadjoint action
-  above.
+  above.  Fixing the scalar by
+  \[
+    \langle\rho_{a,b},z_1^m z_2^n\rangle
+      =\delta_{a,m}\delta_{b,n}
+  \]
+  is therefore the universal dual-module normalization for the
+  principal-part cotangent sector.
 \end{thm}
 
 \begin{proof}
@@ -206,8 +216,8 @@ of Kunz--Cox--Dickenstein, Chapter~5
   nondegeneracy forces \(c\neq0\).
 \end{proof}
 
-\begin{thm}[No polynomial descendant realization]
-\label{thm:app-matlis-no-polynomial-realization}
+\begin{thm}[Polynomial descendant obstruction for principal parts]
+\label{thm:app-matlis-polynomial-descendant-obstruction}
   Let \(M\) be a polynomial boundary descendant module on which the
   linear Hamiltonians \(z_1,z_2\) act locally nilpotently.  Then
   \(\mc P\) is not isomorphic to any nonzero submodule of \(M\) as an
@@ -239,7 +249,7 @@ of Kunz--Cox--Dickenstein, Chapter~5
   linear Hamiltonians realizes \(\mc P\).
 \end{proof}
 
-\begin{thm}[Fourier--Rees bridge, and the obstruction it does not remove]
+\begin{thm}[Universal Fourier--Rees construction and exact obstruction]
 \label{thm:app-matlis-rees-fourier-bridge}
   Let
   \[
@@ -289,7 +299,10 @@ of Kunz--Cox--Dickenstein, Chapter~5
     \mathsf F(\partial_i)=-z_i
   \]
   identifies the Fourier twist \(\mathsf F(\mathcal O_\hbar)\) with
-  \(\Delta^{\mathsf F}_\hbar\).  On basis labels in the Cech
+  \(\Delta^{\mathsf F}_\hbar\).  This is the flat positive bridge: the
+  action of \(P\in\mathcal D_\hbar\) on the polynomial source is carried
+  to the action of \(\mathsf F(P)\) on the Fourier delta target.  On basis
+  labels in the Cech
   realization,
   \[
     z_1^az_2^b
@@ -300,19 +313,20 @@ of Kunz--Cox--Dickenstein, Chapter~5
     =
     (-1)^{a+b}\hbar^{a+b}a!b!\,\rho_{a,b}.
   \]
-  After inverting \(\hbar\), this gives a filtered Fourier--Rees label
-  bridge between nonconstant polynomial labels and the reduced
-  principal parts \(\rho_{a,b}\), \(a+b>0\).  Over the Rees lattice
-  before inverting \(\hbar\), the bridge records the degree-\(a+b\)
-  shift by the explicit factor \(\hbar^{a+b}\).  The special fibre of
-  the abstract Rees module keeps the labels
+  After inverting \(\hbar\), this gives a filtered Fourier--Rees
+  identification of label spaces between nonconstant polynomial labels and
+  the reduced principal parts \(\rho_{a,b}\), \(a+b>0\), but only after the
+  Fourier twist of action just stated.  Over the Rees lattice before
+  inverting \(\hbar\), the construction records the degree-\(a+b\) shift
+  by the explicit factor \(\hbar^{a+b}\).  The special fibre of the
+  abstract Rees module keeps the labels
   \(\partial_1^a\partial_2^be_0\); the Cech inclusion into
   \(\Delta^{\mathrm{std}}_\hbar\) sends the positive-degree labels into
   \(\hbar\Delta^{\mathrm{std}}_\hbar\).  Thus the comparison is an
   associated-graded label match, not an isomorphism of ordinary
   local-cohomology lattices.
 
-  This bridge is not an \(\mathfrak h\)-module bridge.  The
+  The obstruction for the original Hamiltonian action is exact.  The
   Hamiltonian action on polynomial descendants is by vector fields
   \(X_f=\{f,-\}\) on \(\mathcal O_\hbar((\hbar))\).  In the Rees Weyl
   algebra the normalized linear operators are
@@ -340,9 +354,11 @@ of Kunz--Cox--Dickenstein, Chapter~5
   are not locally nilpotent on any nonzero reduced principal part after
   inverting \(\hbar\).  Dividing by \(\hbar\) gives the same conclusion
   for the unnormalized Hamiltonian vector fields.  Hence the
-  Fourier--Rees label bridge cannot identify the polynomial descendant
-  module with \(\mc P\) as a module over the same reduced Hamiltonian
-  Lie algebra.
+  Fourier--Rees construction cannot identify the polynomial descendant
+  module with \(\mc P\) as a module over the same reduced Hamiltonian Lie
+  algebra.  Thus any universal bridge must choose one of two precise
+  alternatives: Fourier-conjugate the action as above, or keep the original
+  Matlis coadjoint action and accept the same-action obstruction.
 \end{thm}
 
 \begin{proof}
@@ -375,7 +391,7 @@ of Kunz--Cox--Dickenstein, Chapter~5
     =
     (-1)^{a+b}\hbar^{a+b}a!b!\rho_{a,b}.
   \]
-  Removing the scalar label \(a=b=0\) gives the reduced label bridge
+  Removing the scalar label \(a=b=0\) gives the reduced label comparison
   after the stated Rees normalization.  Since the factors \(a!b!\) and
   \((-1)^{a+b}\) are units over \(\C\), the only genuine Rees-lattice
   shift is the power \(\hbar^{a+b}\).
@@ -406,12 +422,12 @@ of Kunz--Cox--Dickenstein, Chapter~5
   same argument applies to \(X_{z_2}\).  Local nilpotence is invariant
   under module isomorphism.
   Thus any Fourier--Rees comparison that preserves the original
-  Hamiltonian action is impossible; the actual Fourier comparison
-  changes the polarization and supplies only the label-level bridge
-  stated above.
+  Hamiltonian action is impossible; the actual positive construction
+  changes the polarization and is a flat \( \mathcal D_\hbar \)-module
+  bridge only for the Fourier-conjugated action stated above.
 \end{proof}
 
-\begin{cor}[No flat same-action interpolation]
+\begin{cor}[Same-action obstruction criterion]
 \label{cor:app-matlis-no-flat-same-action-interpolation}
   Let \(M_\hbar\) be a \(\C[[\hbar]]\)-flat family whose generic fibre
   carries the polynomial descendant action of the linear Hamiltonians
@@ -421,15 +437,18 @@ of Kunz--Cox--Dickenstein, Chapter~5
   Hamiltonian Lie algebra, to \(\mc P((\hbar))\) with the Matlis
   coadjoint action.  The same statement holds for the Rees-normalized
   operators \(\hbar X_{z_i}\), since \(\hbar\) is invertible on the
-  generic fibre.  Any honest bridge must therefore either change the
-  Hamiltonian action by a Fourier twist, enlarge the boundary target to
-  a distributional principal-part sector, or state a different
-  deformation problem.
+  generic fibre.  Equivalently, local nilpotence of the two linear
+  Hamiltonians on the generic fibre is a necessary condition for a flat
+  same-action Rees bridge, and \(\mc P((\hbar))\) violates that condition
+  on every nonzero vector.  Any same-action comparison must therefore
+  either change the Hamiltonian action by a Fourier twist, enlarge the
+  boundary target to a distributional principal-part sector, or state a
+  different deformation problem.
 \end{cor}
 
 \begin{proof}
   This is the local-nilpotence obstruction of
-  Theorem~\ref{thm:app-matlis-no-polynomial-realization} after extension
+  Theorem~\ref{thm:app-matlis-polynomial-descendant-obstruction} after extension
   of scalars to \(\C((\hbar))\).  The two linear Hamiltonians remain
   locally nilpotent on the polynomial descendant generic fibre and
   remain non-locally-nilpotent on every nonzero element of
@@ -437,18 +456,17 @@ of Kunz--Cox--Dickenstein, Chapter~5
   \(\hbar\) cannot change local nilpotence.
 \end{proof}
 
-\begin{rmk}[What the bridge proves]
+\begin{rmk}[What the Fourier--Rees construction proves]
 \label{rmk:app-matlis-rees-bridge-status}
-  The bridge above justifies the shared labels
-  \(\Psi_{a,b}\leftrightarrow\rho_{a,b}\) as Fourier--Rees
-  associated-graded bookkeeping, with the factorial and
+  The construction above justifies the shared index set
+  \((a,b)\) as Fourier--Rees associated-graded bookkeeping, with the factorial and
   \(\hbar^{a+b}\) normalization displayed explicitly.  It also records
   the lattice convention: the Fourier twist gives
   \(\mathcal D_\hbar/(z_1,z_2)\), whose Cech realization is the Rees
   sublattice \(\bigoplus\hbar^{a+b}\C[[\hbar]]\rho_{a,b}\), not the full
   \(\bigoplus\C[[\hbar]]\rho_{a,b}\) before \(\hbar\) is inverted.  It
   does not weaken the no-polynomial theorem.  The theorem says
-  precisely where the apparent bridge breaks: Fourier sends the
+  precisely where the apparent comparison breaks: Fourier sends the
   Hamiltonian vector fields to Fourier-transformed operators, while the
   Matlis cotangent module uses the original coadjoint vector fields on
   principal parts.

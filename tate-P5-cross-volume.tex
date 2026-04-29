@@ -1,12 +1,12 @@
 % !TEX root = main.tex
 %
-% Cross-volume convention firewall.
+% Cross-volume matched conventions and obstruction complexes.
 %
-% This appendix is only a boundary condition for reading the local
-% theorem.  It is not a transfer dictionary and it records no export
-% profile into neighbouring programmes.
+% This appendix gives the exact convention data and obstruction classes
+% needed to use the local Hamiltonian theorem inside a global or
+% cross-volume theorem.
 
-\section{Cross-volume convention firewall}\label{app:convention-contract}
+\section{Cross-volume matched conventions and obstruction complexes}\label{app:convention-contract}
 
 The theorem proved in this manuscript is local on
 \[
@@ -22,52 +22,58 @@ its open sector is the Dirac brane probe on the brane line. The statement
 is at \(d=\dim_\C Y=2\) in the holomorphic factor and uses the brane line
 \(\R_{\mathrm{brane}}\) as its one-dimensional factorization direction.
 
-This appendix fixes the boundary of that statement.  It does not
-define a cross-volume dictionary.  It does not record forward or
-backward transfer profiles.  It only states what the local theorem
-does not assert.
+This appendix states the transfer problem in theorem form.  The local
+result contributes a \(d=2\) formal-disk convention base for the
+universal Koszul-duality programme.  A global or cross-volume theorem
+using it is an accepted universal target exactly when it gives a target
+convention datum, comparison morphisms, and null-homotopies for the
+named obstruction classes.
 
-\begin{rmk}[Non-assertions]
-  No compact Calabi--Yau threefold theorem is asserted here.  No
-  theorem of Vol III is asserted here.  No Igusa cusp-form, Borcherds
-  product, or BKM denominator identity is asserted here.  No global
-  twisted-M-theory realization is asserted here.  No global
-  CY-to-chiral statement, compact-CY$_3$ chiral-homology statement, or
-  global BCOV amplitude statement follows from the local Hamiltonian
-  BF/Moyal calculation.
-\end{rmk}
+\begin{defn}[Local Hamiltonian convention base]\label{defn:local-hamiltonian-convention-base}
+  The local theorem supplies the convention base
+  \[
+  \mathfrak C_{\mathrm{loc}}^{(2)}=
+  \bigl(
+    d=2,\,
+    \R^2_{\mathrm{top}}\times\widehat{\C^2}_{0,\mathrm{hol}},\,
+    \R_{\mathrm{brane}},\,
+    \widehat{\mathfrak h},\,
+    \widehat{\mathfrak h}^{\vee}_{\mathrm{cont}}[1],\,
+    \Ext^*(\mc O_0,\mc O_0),\,
+    [\bar c],\,
+    \hbar_{\mathrm{Weyl}},\,
+    \Phi^{\mathrm{Ham}}_{\mathrm{fact}}
+  \bigr),
+  \]
+  where
+  \(\widehat{\mathfrak h}=\C[[z_1,z_2]]/\C\cdot 1\).  The base includes
+  the brane-line factorization convention, the scalar quotient, and the
+  reduced degree-zero Capelli/Moyal normalization.
+\end{defn}
 
-\begin{rmk}[Allowed use]
-  The local theorem may be used as a convention check: it fixes the
-  $d=2$ formal-disk normalization, the brane-line factorization
-  convention, the scalar anomaly class $[\bar c]$, and the reduced
-  degree-zero Moyal/Capelli coefficients.  This is not a compact
-  CY$_3$ trace pairing, not an $S^3$ framing, not a specialisation to
-  a chiral curve, and not an automorphic or Borcherds construction.
-\end{rmk}
-
-\begin{rmk}[Matched-conventions requirement]
-  Any global transfer to Vol III, Vol II, Vol I, the Igusa cusp-form
-  programme, a compact Calabi--Yau threefold, a $K3\times E$
-  specialisation, a compact-CY$_3$ chiral-homology theorem, a global
-  BCOV amplitude theorem, or a BKM denominator identity requires a
-  separate matched-conventions theorem.  Such a theorem would have to
-  state its holomorphic dimension, worldsheet or specialisation curve,
-  trace pairing, framing datum, coefficient topology, anomaly
-  normalization, deformation parameter, QME hypothesis, exact comparison
-  morphism, and claim status.  No such theorem is proved or assumed in
-  this manuscript, and no sibling-volume theorem may use the local result
-  or this appendix as a substitute for these data.
-\end{rmk}
-
-\begin{lem}[No formal-disk transfer]\label{lem:no-formal-disk-transfer}
-  The local theorem at
-  \(\R^2_{\mathrm{top}}\times\widehat{\C^2}_{0,\mathrm{hol}}\), with brane
-  line \(\R_{\mathrm{brane}}\times\{0\}\times\{0\}\), does not determine a
-  compact Calabi--Yau threefold theorem, a global BCOV theorem, a Vol
-  III CY-to-chiral or chiral-homology theorem, an Igusa cusp-form
-  theorem, a Borcherds product theorem, a BKM denominator theorem, or a
-  \(K3\times E\) specialization.
+\begin{lem}[Formal-disk universal acceptance criterion]\label{lem:no-formal-disk-transfer}
+  The formal-disk theorem gives universal Koszul-duality target data for
+  a proposed global or cross-volume target \(\mathfrak T\) exactly after
+  the target supplies a matched-conventions datum
+  \(\mathfrak C_{\mathrm{tar}}\) and a null-homotopy of the acceptance
+  class
+  \[
+  \operatorname{Ob}_{\mathrm{UKD}}(\mathfrak T)
+  =
+  \left(
+    \operatorname{Ob}_{\mathfrak C_{\mathrm{tar}}},
+    \operatorname{Ob}_{\mathrm{glob}},
+    \operatorname{ob}_{6r},
+    \operatorname{ob}_{\mathrm{MD}}
+  \right),
+  \]
+  with the entries omitted only when the corresponding structure is not
+  asserted by \(\mathfrak T\).  The accepted morphism has formal stalk
+  \[
+    \chi_{\mathrm{op}}^{-1}
+    \Phi^{\mathrm{Ham}}_{\mathrm{fact}}
+    \chi_{\mathrm{cl}}.
+  \]
 \end{lem}
 
 \begin{proof}
@@ -75,57 +81,692 @@ does not assert.
   \(\C[[z_1,z_2]]/\C\), its continuous cotangent extension, the point
   brane Ext algebra, the brane-line factorization-current convention,
   the scalar quotient, and the Capelli/Weyl normalization.  These data
-  are invariant under the formal Darboux germ and omit compact topology,
-  a negative-cyclic Calabi--Yau class, a worldsheet or specialization
+  are invariant under the formal Darboux germ.  Compact topology, a
+  negative-cyclic Calabi--Yau class, a worldsheet or specialization
   curve, an \(S^3\) framing, a global BV propagator, the holomorphic
   anomaly equation, Borcherds input data, a Weyl chamber, a compact Hall
-  orientation, and a compact chiral-homology object.  Hence the local
-  theorem can serve only as a \(d=2\) convention check until a separate
-  matched-conventions theorem supplies the missing global data.
+  orientation, and a compact chiral-homology object therefore enter as
+  components of \(\mathfrak C_{\mathrm{tar}}\), not as consequences of the
+  formal germ.  The four displayed components record exactly the target
+  convention, global descent, six-relation mixed-factorization, and
+  mixed-Dunn acceptance tests.  Vanishing with null-homotopies is the
+  universal acceptance datum; a nonzero component is the corresponding
+  obstruction class.
 \end{proof}
 
 \begin{defn}[Matched-conventions theorem datum]\label{defn:matched-conventions-theorem-datum}
-  A cross-volume transfer theorem citing the local result must state at
-  least the following datum: the holomorphic dimension, the ambient
-  geometric object, the worldsheet or factorization-homology
-  specialization curve, the brane or boundary condition, the trace
-  pairing, the framing, the coefficient topology, the anomaly
-  normalization, the deformation parameter, the QME or obstruction
-  hypothesis, the exact comparison morphism, the claim status, and the
-  precise role of the local theorem as convention check, source theorem,
-  or unused comparison datum.
+  A matched-conventions theorem datum is a tuple
+  \[
+  \mathfrak C_{\mathrm{tar}}=
+  \bigl(
+    d,Y,\eta,(\Sigma_{d-1},C),L,\tau,\lambda,\mathfrak f,\Lambda,
+    \hbar_{\mathrm{tar}},\mc O_{\mathrm{tar}},
+    \chi_{\mathrm{cl}},\chi_{\mathrm{op}},\chi_{\mathrm{anom}},
+    \mc K_{\mathrm{obs}},\mathfrak K_{\mathrm{KD}},\Theta_{\mathrm{KD}}
+  \bigr)
+  \]
+  with the following meaning.  Here \(d=\dim_\C Y\);
+  \(\eta\) is the negative-cyclic Calabi--Yau class, holomorphic volume
+  form, or holomorphic-symplectic form used by the target theory;
+  \((\Sigma_{d-1},C)\) is the worldsheet or factorization-homology
+  specialization when a \(\Phi_d\)-type theorem is asserted; \(L\) is the
+  brane or boundary condition; \(\tau\) is the trace pairing and scalar
+  quotient; \(\lambda\) is the anomaly normalization; \(\mathfrak f\) is the
+  framing datum, including an \(S^3\)-framing for compact CY\(_3\)
+  statements; \(\Lambda\) is the coefficient topology; \(\hbar_{\mathrm{tar}}\)
+  is the deformation parameter; \(\mc O_{\mathrm{tar}}\) is the QME or
+  obstruction hypothesis; \(\chi_{\mathrm{cl}}\), \(\chi_{\mathrm{op}}\),
+  and \(\chi_{\mathrm{anom}}\) are the closed-field, open-field, and anomaly
+  comparison morphisms from the target formal restriction to
+  \(\mathfrak C_{\mathrm{loc}}^{(2)}\); and
+  \(\mc K_{\mathrm{obs}}\) is the obstruction complex in which descent,
+  QME, and operadic coherence are solved;
+  \(\mathfrak K_{\mathrm{KD}}\) is the filtered dg Lie algebra governing
+  the target universal Koszul-duality Maurer--Cartan problem; and
+  \(\Theta_{\mathrm{KD}}\) is the transported local closed-open
+  Maurer--Cartan element whose curvature is the target acceptance class.
 \end{defn}
 
-\begin{rmk}[Templates, not theorems]\label{rmk:matched-conventions-templates}
-  The following are templates for future separate theorems.
-  They are not assertions in this manuscript.
+\begin{defn}[Compact Hamiltonian period complex]\label{defn:compact-hamiltonian-period-complex}
+  Let \((X,\omega)\) be a compact connected holomorphic-symplectic
+  surface.  For a holomorphic symplectic vector field \(v\), set
+  \[
+    \alpha_v=-\iota_v\omega\in H^0(X,\Omega^1_{X,\mathrm{cl}}).
+  \]
+  Choose a Stein cover \(\mathfrak U=\{U_i\}\) and local holomorphic
+  primitives \(h_i\in\mc O_X(U_i)\) with \(dh_i=\alpha_v|_{U_i}\).
+  The differences \(h_i-h_j\in\C\) define a Cech cocycle, and its class
+  \[
+    \operatorname{per}_X(v)=
+    [\,h_i-h_j\,]\in H^1(X,\C_X)
+  \]
+  is the Hamiltonian period obstruction.  Equivalently, it is the
+  connecting image of \(\alpha_v\) for the holomorphic de Rham exact
+  sequence
+  \[
+    0\longrightarrow\C_X\longrightarrow\mc O_X
+      \xrightarrow{d}\Omega^1_{X,\mathrm{cl}}\longrightarrow0.
+  \]
+\end{defn}
+
+\begin{defn}[Global Hamiltonian descent complex]\label{defn:global-hamiltonian-descent-complex}
+  Let \(L\) be the brane locus in a proposed global target and suppose
+  that formal Darboux charts have produced local Hamiltonian maps
+  \(\Phi_U\) on a Weiss/Ran cover of \(L\).  The descent target for these
+  maps is the total complex
+  \[
+  \mathfrak G_{\mathrm{WR}}(L)=
+  \operatorname{Tot} C^\bullet_{\mathrm{WR}}\!\left(
+    \operatorname{Ran}(L);
+    \underline{\operatorname{RHom}}\left(
+      \mathrm{Obs}^{\mathrm{cl}}_{\mathrm{closed},H},
+      \mathrm Z^{P_0}_{\mathrm{fact}}
+        (\mathrm{Obs}^{\mathrm{cl}}_{\mathrm{open}})
+    \right)\right).
+  \]
+  The degree-zero Cech-Weiss cochain \(\Phi_{\mathrm{loc}}=\{\Phi_U\}\)
+  has first descent obstruction
+  \[
+    \operatorname{ob}^{(1)}_{\mathrm{WR}}(\Phi_{\mathrm{loc}})
+      =[d_{\mathrm{WR}}\Phi_{\mathrm{loc}}]
+      \in H^1(\mathfrak G_{\mathrm{WR}}(L)).
+  \]
+  After choosing a filtration by number of factorization collisions and
+  cotangent insertions, the higher coherence obstructions live in
+  \[
+    \operatorname{ob}^{(r)}_{\mathrm{WR}}(\Phi_{\mathrm{loc}})
+      \in
+      H^{r+1}\!\left(
+        \operatorname{gr}^r\mathfrak G_{\mathrm{WR}}(L)
+      \right),
+      \qquad r\ge 1.
+  \]
+  Vanishing of all these classes, together with chosen null-homotopies, is
+  the exact assertion that the local Darboux maps descend to a global
+  factorization-centre morphism.
+\end{defn}
+
+\begin{thm}[Formal local-to-global Hamiltonian descent theorem data]\label{thm:global-descent-criterion}
+  Let \((X,\omega)\) be a compact connected holomorphic-symplectic
+  surface and \(L\subset X\) a brane locus for which the formal local
+  Hamiltonian theorem is applied along Darboux charts.  Fix the finite
+  collection of locally Hamiltonian symplectic vector fields and local
+  Darboux Hamiltonians used by the construction.  The following data are
+  equivalent.
   \begin{enumerate}[label=(\roman*)]
-    \item \emph{Vol III CY-to-chiral template.}  State \(d\), the
-      compact or non-compact CY object, the CY class in negative cyclic
-      homology, the stage-one object \(\Phi^{\mathrm{FA}}_d\), the
-      stage-two specialization \((\Sigma_{d-1},C)\), the trace pairing,
-      the framing, and the QME/anomaly witness.  Then prove that the
-      \(d=2\) formal-disk normalization used here is the stated local
-      convention check for that theorem.
-    \item \emph{Compact BCOV template.}  State the compact CY$_3\),
-      holomorphic volume form, BCOV field complex, propagator,
-      gauge-fixing, boundary or brane condition, holomorphic anomaly
-      equation, zero-mode treatment, and counterterm scheme.  Then prove
-      the global amplitude statement inside that BCOV theory.  The
-      local Moyal coefficient can serve only as a boundary normalization
-      after these choices are fixed.
-    \item \emph{Igusa/BKM template.}  State the Jacobi or modular input,
-      Borcherds lift normalization, lattice and Weyl chamber, character,
-      compact \(K3\times E\) or CHL host if one is claimed, Hall or
-      chiral source, orientation line, primitive recognition theorem,
-      and scalar DT/PT/OP normalization.  Then prove the denominator or
-      compact realization theorem in that setting.  The local theorem
-      supplies no Borcherds input form, no Weyl denominator, and no
-      compact Hall orientation.
+    \item A global Hamiltonian universal Koszul-duality descent datum:
+      a closed-open morphism
+      \[
+        \mathrm{Obs}^{\mathrm{cl}}_{\mathrm{closed},H}\big|_L
+          \longrightarrow
+        \mathrm Z^{P_0}_{\mathrm{fact}}
+          (\mathrm{Obs}^{\mathrm{cl}}_{\mathrm{open}})
+      \]
+      whose Darboux restrictions are the local maps
+      \(\Phi_{\mathrm{loc}}\), together with its interval,
+      Weiss/Ran, scalar, and connected-stable coherence homotopies.
+    \item Vanishing of the obstruction vector
+      \[
+      \operatorname{Ob}_{\mathrm{glob}}(X,L,\Phi_{\mathrm{loc}})
+      =
+      \left(
+        \{\operatorname{per}_X(v)\}_v,\,
+        \operatorname{ob}_{\mathrm{scal}},\,
+        \operatorname{ob}^{(1)}_{\mathrm{WR}}(\Phi_{\mathrm{loc}}),\,
+        \{\operatorname{ob}^{(r)}_{\mathrm{WR}}(\Phi_{\mathrm{loc}})\}_{r\ge1}
+      \right)
+      \]
+      with null-homotopies compatible with disjoint unions, interval
+      inclusions, cotangent boundary realization, \(P_0\)-centrality, and
+      the stable connected quotient.
   \end{enumerate}
-  These templates are failure tests.  If the listed datum is absent, the
-  proposed cross-volume sentence is not a theorem and must be read as an
-  open obligation.
-\end{rmk}
+  The morphism in (i) is the global accepted Koszul-duality surface
+  \[
+    \mathrm{Obs}^{\mathrm{cl}}_{\mathrm{closed},H}\big|_L
+      \longrightarrow
+    \mathrm Z^{P_0}_{\mathrm{fact}}
+      (\mathrm{Obs}^{\mathrm{cl}}_{\mathrm{open}})
+  \]
+  and the entries in (ii) are:
+  \begin{enumerate}[label=(\alph*)]
+    \item every locally Hamiltonian symplectic vector field used by the
+      construction has period class
+      \[
+        \operatorname{per}_X(v)=
+        \delta(-\iota_v\omega)\in H^1(X,\C_X)
+      \]
+      equal to zero;
+    \item the first Weiss/Ran class
+      \(\operatorname{ob}^{(1)}_{\mathrm{WR}}\) vanishes;
+    \item all higher coherence classes
+      \(\operatorname{ob}^{(r)}_{\mathrm{WR}}\), \(r\ge1\), vanish after
+      the cotangent boundary realization and \(P_0\)-centrality homotopies
+      have been fixed;
+    \item the scalar anomaly class agrees with the local class
+      \([\bar c]\).
+  \end{enumerate}
+  When these conditions hold, the local Darboux maps glue, uniquely up to
+  the corresponding contractible space of choices, to the displayed
+  global Hamiltonian factorization-centre morphism.  When one component
+  is nonzero, that component is the exact universal descent obstruction.
+
+  On a compact connected \(X\) the period condition is sharp:
+  \[
+    \operatorname{per}_X(v)=0
+    \quad\Longleftrightarrow\quad
+    \alpha_v=0
+    \quad\Longleftrightarrow\quad
+    v=0 .
+  \]
+  Thus a nonzero global holomorphic symplectic vector field on a compact
+  surface, for example a translation on an abelian surface, has nonzero
+  \(\operatorname{per}_X(v)\) and is rejected by the global Hamiltonian
+  acceptance criterion.
+\end{thm}
+
+\begin{proof}
+  The period calculation is Definition~\ref{defn:compact-hamiltonian-period-complex}.
+  If \(\operatorname{per}_X(v)=0\), the local primitives \(h_i\) can be
+  modified by constants and glued to a global holomorphic function
+  \(h\) with \(dh=-\iota_v\omega\).  Since \(X\) is compact and
+  connected, \(H^0(X,\mc O_X)=\C\), hence \(dh=0\).  Therefore
+  \(\iota_v\omega=0\), and nondegeneracy of \(\omega\) gives \(v=0\).
+  The converse is immediate.  This proves the sharp compact-surface
+  obstruction: \(\operatorname{per}_X(v)\) is the exact class preventing
+  formal local Hamiltonians from becoming nonzero compact global
+  Hamiltonians by descent alone.
+
+  Once local primitives and Darboux charts are fixed, the remaining
+  problem is ordinary descent for morphisms of factorization objects.  On
+  double overlaps the failure of the local maps to agree is
+  \(d_{\mathrm{WR}}\Phi_{\mathrm{loc}}\), hence the first obstruction is
+  the displayed class in \(H^1(\mathfrak G_{\mathrm{WR}}(L))\).  If it
+  vanishes, a first homotopy can be chosen.  The obstruction to making
+  those homotopies coherent on higher overlaps and higher collision
+  strata is computed by the associated graded pieces of the same filtered
+  total complex, giving the classes
+  \(\operatorname{ob}^{(r)}_{\mathrm{WR}}\).  This is the standard
+  obstruction theory for a Maurer--Cartan element in a filtered dg Lie
+  algebra of descent data.  Scalar compatibility is separate because the
+  local theorem has already quotiented by the distinguished scalar line.
+  If all classes vanish and null-homotopies have been chosen, the
+  Maurer--Cartan element is gauge equivalent to a global descent datum,
+  which is exactly the displayed morphism.
+\end{proof}
+
+\begin{thm}[Matched-conventions universal transfer theorem]\label{thm:matched-conventions-transfer}
+  Let \(\mathfrak C_{\mathrm{tar}}\) be a matched-conventions datum and
+  suppose that its comparison morphisms identify the formal restriction of
+  the target closed and open theories with
+  \(\mathfrak C_{\mathrm{loc}}^{(2)}\):
+  \[
+    \chi_{\mathrm{cl}}\colon
+    \mathrm{Obs}^{\mathrm{cl}}_{\mathrm{closed},\mathrm{tar}}\big|_{\widehat p}
+      \xrightarrow{\simeq}
+    \mathrm{Obs}^{\mathrm{cl}}_{\mathrm{closed},H},
+    \qquad
+    \chi_{\mathrm{op}}\colon
+    \mathrm{Obs}^{\mathrm{cl}}_{\mathrm{open},\mathrm{tar}}\big|_{\R_{\mathrm{brane}}}
+      \xrightarrow{\simeq}
+    \mathrm{Obs}^{\mathrm{cl}}_{\mathrm{open},H}.
+  \]
+  Assume that \(\chi_{\mathrm{anom}}\) sends the target scalar anomaly to
+  \([\bar c]\), that the target period classes specified by
+  \(\mc K_{\mathrm{obs}}\) vanish for the locally Hamiltonian fields used
+  by the comparison, that the Weiss/Ran obstructions in
+  \(\mathfrak G_{\mathrm{WR}}(L)\) vanish with chosen null-homotopies, and
+  that the QME obstruction specified by \(\mc O_{\mathrm{tar}}\) vanishes.
+  If \(\mathfrak C_{\mathrm{tar}}\) also asserts a mixed topological-holomorphic
+  operadic comparison, assume the map \(\delta_{m,n}\) satisfies
+  Theorem~\ref{thm:mixed-dunn-criterion}.
+  Equivalently, assume the target obstruction vector
+  \[
+  \operatorname{Ob}_{\mathfrak C_{\mathrm{tar}}}
+  =
+  \left(
+    \operatorname{per}_{\mathrm{tar}},\,
+    \operatorname{ob}_{\mathrm{WR}},\,
+    \operatorname{ob}_{\mathrm{anom}},\,
+    \operatorname{ob}_{\mathrm{QME}},\,
+    \operatorname{ob}_{\mathrm{MD}}
+  \right)
+  \]
+  is zero, with \(\operatorname{ob}_{\mathrm{MD}}\) omitted only when no
+  mixed topological-holomorphic operad is part of the target datum.
+  Let
+  \[
+    \operatorname{Ob}_{\mathrm{UKD}}(\mathfrak C_{\mathrm{tar}})
+      =
+    \left(
+      \operatorname{Ob}_{\mathfrak C_{\mathrm{tar}}},
+      [d\Theta_{\mathrm{KD}}+\frac12[\Theta_{\mathrm{KD}},\Theta_{\mathrm{KD}}]]
+    \right)
+    \in
+    H^1(\mc K_{\mathrm{obs}})
+      \oplus H^1(\mathfrak K_{\mathrm{KD}})
+  \]
+  be the universal Koszul-duality acceptance class of the transported
+  closed-open Maurer--Cartan element.
+
+  If \(\operatorname{Ob}_{\mathrm{UKD}}(\mathfrak C_{\mathrm{tar}})=0\)
+  and a null-homotopy of this class has been chosen, then the local
+  Hamiltonian theorem determines an accepted target
+  factorization-centre morphism
+  \[
+    \Phi_{\mathfrak C_{\mathrm{tar}}}\colon
+    \mathrm{Obs}^{\mathrm{cl}}_{\mathrm{closed},\mathrm{tar}}\big|_L
+      \longrightarrow
+    \mathrm Z^{P_0}_{\mathrm{fact}}
+      (\mathrm{Obs}^{\mathrm{cl}}_{\mathrm{open},\mathrm{tar}})
+  \]
+  whose formal restriction at \(p\) is
+  \[
+    \chi_{\mathrm{op}}^{-1}\,
+    \Phi^{\mathrm{Ham}}_{\mathrm{fact}}\,
+    \chi_{\mathrm{cl}}.
+  \]
+  If a specialization functor
+  \(\mathrm{Sp}_{\Sigma_{d-1},C}\) is part of
+  \(\mathfrak C_{\mathrm{tar}}\), the specialized morphism is
+  \(\mathrm{Sp}_{\Sigma_{d-1},C}(\Phi_{\mathfrak C_{\mathrm{tar}}})\).
+  If the acceptance class is nonzero, that class is the obstruction to
+  accepting the target theorem in the universal Koszul-duality programme.
+\end{thm}
+
+\begin{proof}
+  The comparison morphisms transport the local closed-open map to each
+  Darboux chart of the target.  Anomaly compatibility identifies the scalar
+  quotient with the local class \([\bar c]\), so the transported bracket and
+  connected-trace normalization agree with the Hamiltonian theorem.  The
+  vanishing of the target period classes gives Hamiltonian primitives for
+  the local symplectic vector fields in every chart where the Hamiltonian
+  model is used, and the vanishing of the Weiss/Ran classes in
+  \(\mathfrak G_{\mathrm{WR}}(L)\) glues the local maps with coherent
+  factorization homotopies by
+  Theorem~\ref{thm:global-descent-criterion}.  The QME obstruction
+  vanishing upgrades the classical comparison to the target quantum
+  normalization specified by \(\mc O_{\mathrm{tar}}\).  When a mixed
+  topological-holomorphic operad is present, the mixed-Dunn criterion gives
+  the required equivalence of algebra categories before applying
+  specialization.  The displayed formula is the definition of the glued map
+  on the formal stalk.  The remaining Maurer--Cartan curvature is exactly
+  \(d\Theta_{\mathrm{KD}}+\frac12[\Theta_{\mathrm{KD}},\Theta_{\mathrm{KD}}]\);
+  a chosen null-homotopy makes the transported local datum a global
+  universal Koszul-duality datum.  Descent gives the global morphism.
+\end{proof}
+
+\begin{defn}[Functor of points of mixed six-relation factorization]\label{defn:mixed-dunn-fact6r-datum}
+  Let \(M\) be a real \(m\)-manifold and \(Y\) a complex \(n\)-fold.  For
+  an Artinian commutative dg algebra \(R\), an \(R\)-point of
+  \(\mathrm{Fact}^{6r}_{\mathrm{mix}}(M,Y)\) is a datum
+  \[
+    \mathcal A_R=
+    (A_R,\mu_R,\ell_R,\bar\partial_R,\mathsf W_R,\mathsf R_R,\iota_R)
+  \]
+  on product disks \(D\times B\subset M\times Y\), where \(D\) is a
+  real disk and \(B\) is a holomorphic polydisk:
+  \begin{enumerate}[label=(\roman*)]
+    \item \(A_R(D\times B)\) is a nilcomplete \(R\)-linear cochain
+      complex, functorial for inclusions of product disks;
+    \item \(\mu_R\) gives factorization products for pairwise disjoint
+      finite families of product disks;
+    \item \(\ell_R\) gives local-constancy homotopies for inclusions of
+      real disks in the \(M\)-direction;
+    \item \(\bar\partial_R\) gives Dolbeault null-homotopies for
+      anti-holomorphic translations in the \(Y\)-direction;
+    \item \(\mathsf W_R\) gives Weiss descent in the real direction;
+    \item \(\mathsf R_R\) gives Ran descent in the holomorphic direction;
+    \item \(\iota_R\) gives the interchange homotopies between real
+      collision products and holomorphic factorization products.
+  \end{enumerate}
+  These data are required to satisfy six relations.  Put
+  \[
+  \mathsf{Rel}^{6r}(\mathcal A_R)=
+  \bigl(
+    \operatorname{Assoc}(\mu_R),\,
+    \operatorname{LC}(\ell_R),\,
+    \bar\partial_R^2,\,
+    d_{\mathrm{WR}}\mathsf W_R,\,
+    d_{\mathrm{Ran}}\mathsf R_R,\,
+    \operatorname{Int}(\iota_R)
+  \bigr).
+  \]
+  An \(R\)-point is precisely a seven-tuple with
+  \(\mathsf{Rel}^{6r}(\mathcal A_R)=0\): associativity of \(\mu_R\),
+  homotopy invariance for \(\ell_R\), Dolbeault closedness for
+  \(\bar\partial_R\), Weiss cocycle descent for \(\mathsf W_R\), Ran
+  cocycle descent for \(\mathsf R_R\), and the mixed interchange
+  identity for \(\iota_R\).  A \(k\)-simplex of the
+  derived functor of points is the same datum over
+  \(R\otimes\Omega^\bullet(\Delta^k)\).  Base change in \(R\) defines
+  the functor
+  \[
+    \mathrm{Fact}^{6r}_{\mathrm{mix}}(M,Y)\colon
+    \mathrm{dgArt}_\C\longrightarrow\mathrm{sSet}.
+  \]
+
+  This functor is the mixed factorization surface used by the universal
+  Koszul-duality programme.  Its acceptance condition is the equation
+  \(\mathsf{Rel}^{6r}=0\) together with coherent
+  null-homotopies in square-zero families.  For a partial lift
+  \(\widetilde{\mathcal A}_{R'}\) over a square-zero extension
+  \(R'\twoheadrightarrow R\) with kernel \(I\), the six-relation
+  obstruction is
+  \[
+    \operatorname{ob}_{6r}(\widetilde{\mathcal A}_{R'})
+      =
+    [\,\mathsf{Rel}^{6r}(\widetilde{\mathcal A}_{R'})\,]
+      \in
+    H^2\!\left(
+      \operatorname{Der}^{\mathrm{fact,mix}}(\mathcal A_R)\otimes_R I
+    \right).
+  \]
+
+  A mixed-Dunn comparison is a morphism of cofibrant operadic models
+  \[
+    \delta_{m,n}\colon
+    \mathbb E_m^{\mathrm{top}}\otimes\mathbb E_n^{\mathrm{hol}}
+      \longrightarrow
+    \mathbb E_{m,n}^{\mathrm{mix}}
+  \]
+  whose induced algebra functor realizes this functor of points.
+\end{defn}
+
+\begin{prop}[Recognition and tangent complex for mixed six-relation factorization]\label{prop:fact6r-functor-of-points-recognition}
+  Let \(\mathcal A_R\) be an \(R\)-point of
+  \(\mathrm{Fact}^{6r}_{\mathrm{mix}}(M,Y)\).  Then \(\mathcal A_R\)
+  determines a mixed factorization object on
+  \(\operatorname{Ran}(M\times Y)\), locally constant in the
+  \(M\)-directions and holomorphic in the \(Y\)-directions.  Conversely,
+  restriction to product disks sends every such mixed factorization
+  object to an \(R\)-point of
+  \(\mathrm{Fact}^{6r}_{\mathrm{mix}}(M,Y)\).
+
+  If \(R'\twoheadrightarrow R\) is a square-zero extension with kernel
+  \(I\), the obstruction to lifting \(\mathcal A_R\) to an
+  \(R'\)-point is the six-relation class
+  \(\operatorname{ob}_{6r}\), lying in
+  \[
+    H^2\!\left(
+      \operatorname{Der}^{\mathrm{fact,mix}}(\mathcal A_R)
+      \otimes_R I
+    \right),
+  \]
+  and the space of lifts, when nonempty, is a torsor under
+  \[
+    H^1\!\left(
+      \operatorname{Der}^{\mathrm{fact,mix}}(\mathcal A_R)
+      \otimes_R I
+    \right).
+  \]
+\end{prop}
+
+\begin{proof}
+  Product disks form a basis for the mixed Weiss/Ran topology on
+  \(M\times Y\).  The factorization products \(\mu_R\) define the
+  multiplication on disjoint configurations.  The homotopies
+  \(\ell_R\) and \(\bar\partial_R\) impose the two directional
+  invariance conditions.  The descent systems \(\mathsf W_R\) and
+  \(\mathsf R_R\) glue the basis values to the mixed Ran object, and
+  \(\iota_R\) is exactly the compatibility between the two collision
+  operations.  Nilcompleteness over \(R\) identifies this glued object
+  with the derived functor of points.  Restricting a mixed
+  factorization object to product disks recovers the seven pieces of
+  data and the six relations.
+
+  For a square-zero extension \(R'\to R\), deforming the seven
+  structure maps while preserving the six relations is the
+  Maurer--Cartan lifting problem in the dg Lie algebra of mixed
+  factorization derivations
+  \(\operatorname{Der}^{\mathrm{fact,mix}}(\mathcal A_R)\otimes_R I\).
+  The curvature of a partial lift is the degree-two component of
+  \(\mathsf{Rel}^{6r}\) for the lifted seven-tuple; its cohomology class
+  is precisely \(\operatorname{ob}_{6r}\) and is independent of choices.
+  If this class vanishes, the remaining choices form the usual
+  \(H^1\)-torsor.  This proves the positive recognition criterion for the
+  mixed surface: a target supplies a universal Koszul-duality
+  factorization surface exactly by giving an \(R\)-point and killing the
+  six-relation obstruction tower in square-zero thickenings.
+\end{proof}
+
+\begin{defn}[Mixed-Dunn obstruction complex]\label{defn:mixed-dunn-obstruction-complex}
+  The deformation complex of the candidate operad map
+  \(\delta_{m,n}\) is
+  \[
+    \mathfrak D_{\mathrm{MD}}(m,n)=
+    \operatorname{Cone}\!\left(
+      C^\bullet_{\mathrm{Operad}}\!
+        (\mathbb E_{m,n}^{\mathrm{mix}},\mathbb E_{m,n}^{\mathrm{mix}})
+      \longrightarrow
+      C^\bullet_{\mathrm{Operad}}\!
+        (\mathbb E_m^{\mathrm{top}}\otimes\mathbb E_n^{\mathrm{hol}},
+         \mathbb E_{m,n}^{\mathrm{mix}})
+    \right)[-1].
+  \]
+  After a cofibrant filtration of the source operad has been chosen, the
+  mixed-Dunn curvature is
+  \[
+    F_{\delta}=d\delta+\frac12[\delta,\delta]
+      \in Z^1(\mathfrak D_{\mathrm{MD}}(m,n)).
+  \]
+  Its class
+  \[
+    \operatorname{ob}_{\mathrm{MD}}(\delta_{m,n})
+      =[F_\delta]\in H^1(\mathfrak D_{\mathrm{MD}}(m,n))
+  \]
+  measures the simultaneous failure of the topological \(E_m\)
+  operations, the holomorphic \(E_n\) operations, and the mixed
+  interchange law to assemble into a strict operadic comparison.  Higher
+  rectification obstructions lie in
+  \(H^{r+1}(\operatorname{gr}^r\mathfrak D_{\mathrm{MD}}(m,n))\).
+\end{defn}
+
+\begin{thm}[Mixed-Dunn universal acceptance criterion]\label{thm:mixed-dunn-criterion}
+  Let \(\delta_{m,n}\) be a morphism between cofibrant operadic models as
+  in Definition~\ref{defn:mixed-dunn-fact6r-datum}.  The mixed-Dunn
+  surface is accepted by the universal Koszul-duality programme exactly
+  under the following equivalent conditions.
+  \begin{enumerate}[label=(\roman*)]
+    \item \(\delta_{m,n}\) rectifies to a weak equivalence of operads and
+      induces an equivalence
+      \[
+        \operatorname{Alg}_{\mathbb E_{m,n}^{\mathrm{mix}}}
+          \simeq
+        \operatorname{Alg}_{\mathbb E_m^{\mathrm{top}}\otimes
+          \mathbb E_n^{\mathrm{hol}}}
+      \]
+      on the homotopy categories of algebras, with
+      \(\mathrm{Fact}^{6r}_{\mathrm{mix}}(M,Y)\) represented by the
+      tensor product of the topological and holomorphic structures.
+    \item The aritywise homology map of \(\delta_{m,n}\) is an
+      isomorphism, the primary class
+      \(\operatorname{ob}_{\mathrm{MD}}(\delta_{m,n})\) vanishes, and
+      every higher class in
+      \(H^{r+1}(\operatorname{gr}^r\mathfrak D_{\mathrm{MD}}(m,n))\)
+      vanishes with chosen null-homotopies compatible with operadic
+      composition.
+  \end{enumerate}
+  When these classes do not vanish, their ordered tuple is the exact
+  mixed-Dunn acceptance obstruction.
+\end{thm}
+
+\begin{proof}
+  A weak equivalence between cofibrant operads induces a Quillen
+  equivalence on their algebra categories
+  \cite{lurie-ha}*{Thm.~A.3.7.5}.  This proves that (i) implies the
+  aritywise homology isomorphism and that the curvature classes in
+  \(\mathfrak D_{\mathrm{MD}}(m,n)\) vanish.
+
+  Conversely, suppose (ii) holds.  The cofibrant filtration reduces
+  rectification of \(\delta_{m,n}\) to a tower of lifting problems.  The
+  primary curvature \(F_\delta\) is the obstruction at the first stage;
+  the associated-graded obstruction groups record the successive
+  failures of operadic composition, Beilinson--Drinfeld holomorphic
+  compatibility, and the topological-holomorphic interchange law.  By
+  hypothesis each obstruction class is zero and a compatible
+  null-homotopy has been chosen, so the tower has a rectified operad map.
+  The aritywise homology isomorphism makes the rectified map a weak
+  equivalence.  Applying the cofibrant-operad Quillen-equivalence theorem
+  gives (i), and Proposition~\ref{prop:fact6r-functor-of-points-recognition}
+  identifies the resulting algebra objects with the displayed functor of
+  points.
+\end{proof}
+
+\begin{cor}[Matched-conventions factorization]\label{cor:matched-conventions-factorization}
+  Every target theorem using the local Hamiltonian BF/Moyal theorem through
+  a matched-conventions datum \(\mathfrak C_{\mathrm{tar}}\) factors through
+  the morphism
+  \[
+    \Phi_{\mathfrak C_{\mathrm{tar}}}=
+    \chi_{\mathrm{op}}^{-1}\,
+    \Phi^{\mathrm{Ham}}_{\mathrm{fact}}\,
+    \chi_{\mathrm{cl}}
+  \]
+  constructed in Theorem~\ref{thm:matched-conventions-transfer}, followed
+  by the target's own specialization, compactification, or automorphic
+  construction.
+\end{cor}
+
+\begin{proof}
+  Theorem~\ref{thm:matched-conventions-transfer} constructs the only map
+  whose formal stalk is obtained from the local theorem and the comparison
+  morphisms \(\chi_{\mathrm{cl}}\), \(\chi_{\mathrm{op}}\).  Any subsequent
+  operation belongs to the target datum: specialization along
+  \((\Sigma_{d-1},C)\), compact BV integration, or the Borcherds
+  automorphic construction.  Thus the local theorem enters the target proof
+  through the displayed factorization.
+\end{proof}
+
+\begin{cor}[Universal Koszul target acceptance criterion]\label{cor:target-obstruction-criterion}
+  A compact BCOV, Vol III CY-to-chiral, Igusa/BKM, or other
+  cross-volume theorem is accepted as a universal Koszul-duality target of
+  the local Hamiltonian BF/Moyal theorem exactly by a datum
+  \(\mathfrak C_{\mathrm{tar}}\) with
+  \[
+    \operatorname{Ob}_{\mathrm{UKD}}(\mathfrak C_{\mathrm{tar}})=0
+  \]
+  and chosen null-homotopies for all components of the obstruction tower.
+  The accepted theorem-data include the formal stalk
+  \[
+    \chi_{\mathrm{op}}^{-1}\,
+    \Phi^{\mathrm{Ham}}_{\mathrm{fact}}\,
+    \chi_{\mathrm{cl}},
+  \]
+  the global descent datum, the QME/anomaly null-homotopies, and any
+  mixed-Dunn or six-relation factorization null-homotopies asserted by
+  the target.  If one component is absent or nonzero, the exact residual
+  is the corresponding component of
+  \(\operatorname{Ob}_{\mathrm{UKD}}(\mathfrak C_{\mathrm{tar}})\);
+  no compact CY\(_3\), global BCOV, Vol III, Igusa, or BKM conclusion is
+  accepted without killing that class.
+\end{cor}
+
+\begin{proof}
+  Theorem~\ref{thm:matched-conventions-transfer} constructs the accepted
+  target morphism after the target datum has been fixed and the universal
+  Koszul-duality acceptance class has been null-homotoped.  The class
+  contains the period, descent, anomaly, QME, six-relation, and
+  mixed-Dunn components.  Lemma~\ref{lem:no-formal-disk-transfer}
+  identifies these components as target theorem data rather than
+  consequences of the formal disk.  Therefore a nonzero component is the
+  named obstruction class, and a zero component with a null-homotopy is
+  exactly the accepted theorem datum.
+\end{proof}
+
+\begin{defn}[Named target convention data]\label{rmk:matched-conventions-templates}
+  The cross-volume targets require the following matched-conventions data.
+  \begin{enumerate}[label=(\roman*)]
+    \item \emph{Vol III CY-to-chiral datum.}
+      \[
+      \mathfrak C_{\mathrm{CY\to ch}}=
+      \bigl(d,Y,\eta_{\mathrm{CY}}\in HC^-_d(Y),
+      (\Sigma_{d-1},C),\Phi^{\mathrm{FA}}_d,
+      \mathrm{Sp}_{\Sigma_{d-1},C},\kappa_{\mathrm{ch}},
+      \tau,\mathfrak f,\mc O_{\mathrm{QME}},
+      \mathfrak K_{\mathrm{KD}},
+      \operatorname{Ob}_{\mathrm{UKD}}\bigr).
+      \]
+      The comparison map from \(\mathfrak C_{\mathrm{loc}}^{(2)}\) is the
+      formal \(d=2\) Darboux normalization at the chosen brane point.
+      The Vol III convention is the two-stage factorization
+      \[
+        \Phi_d=\mathrm{Sp}_{\Sigma_{d-1},C}\circ\Phi^{\mathrm{FA}}_d .
+      \]
+      For a compact CY\(_3\) target the total-space
+      \(\kappa_{\mathrm{ch}}\) is the Hodge supertrace
+      \(\sum_q(-1)^qh^{0,q}(Y)\); in particular
+      \(\kappa_{\mathrm{ch}}(K3\times E)=0\).  Any BKM weight comparison
+      is therefore a separate component of
+      \(\operatorname{Ob}_{\mathrm{UKD}}\), not a consequence of the
+      unqualified total-space supertrace.
+    \item \emph{Compact BCOV datum.}
+      \[
+      \mathfrak C_{\mathrm{BCOV}}=
+      \bigl(Y^3,\Omega_Y,\mathrm{PV}^{*,*}(Y)[[t]],Q_{\mathrm{BCOV}},
+      P_{\mathrm{prop}},L,\mathfrak f_{S^3},
+      I_{\mathrm{ct}},\mc O_{\mathrm{HAE}},
+      \mathfrak K_{\mathrm{KD}},
+      \operatorname{Ob}_{\mathrm{UKD}}\bigr).
+      \]
+      Here \(P_{\mathrm{prop}}\) is the global gauge-fixed propagator,
+      \(I_{\mathrm{ct}}\) is the counterterm scheme, and
+      \(\mc O_{\mathrm{HAE}}\) is the holomorphic-anomaly/QME obstruction
+      complex.
+    \item \emph{Igusa/BKM datum.}
+      \[
+      \mathfrak C_{\mathrm{BKM}}=
+      \bigl(\varphi_{\mathrm{Jac}},\Lambda_{\mathrm{Borch}},
+      W,\rho,\mathrm{ch}_{\mathrm{Hall}},\ell_{\mathrm{or}},
+      \pi_{\mathrm{prim}},\kappa_{\mathrm{BKM}},
+      \tau_{\mathrm{DT/PT/OP}},
+      \operatorname{Ob}_{\mathrm{UKD}}\bigr).
+      \]
+      The entries are the Jacobi or modular input, Borcherds lattice, Weyl
+      chamber, character, Hall or chiral source, orientation line, primitive
+      recognition map, and scalar DT/PT/OP normalization.
+      In the \(\Delta_5\) row the matched constants are
+      \[
+        D_5=64^{-1}\Delta_5,\qquad
+        \operatorname{den}(\mathfrak g_{\Delta_5})
+          =64^{-1}\Delta_5(2Z),
+      \]
+      \[
+        \kappa_{\mathrm{BKM}}(\Phi_1)=c_1(0)/2=10/2=5,\qquad
+        Z^X_{\mathrm{OP}}=-4096\,\Delta_5^{-2}.
+      \]
+      The orientation comparison
+      \(\epsilon_o=\nu_{\Delta_5}\), compact Hall constants, and
+      primitive BKM recognition are target obstructions; they are not
+      supplied by the local \(d=2\) Hamiltonian theorem.
+    \item \emph{Global Hamiltonian descent datum.}
+      \[
+      \mathfrak C_{\mathrm{glob}}=
+      \bigl(L,\mc H_X=\mc O_X/\C_X,
+      \operatorname{per}(v)=\delta(-\iota_v\omega),
+      \mathfrak G_{\mathrm{WR}}(L),
+      \{\operatorname{ob}^{(r)}_{\mathrm{WR}}\}_{r\ge1},
+      h_{\mathrm{cent}},\operatorname{Ob}_{\mathrm{glob}},
+      \Theta_{\mathrm{KD}}\bigr).
+      \]
+      The vanishing condition is the one in
+      Theorem~\ref{thm:global-descent-criterion}; its output is the
+      global universal Koszul-duality descent surface.
+    \item \emph{Mixed-Dunn datum.}
+      \[
+      \mathfrak C_{\mathrm{MD}}=
+      \bigl(\mathbb E_m^{\mathrm{top}},\mathbb E_n^{\mathrm{hol}},
+      \mathbb E_{m,n}^{\mathrm{mix}},
+      \mathrm{Fact}^{6r}_{\mathrm{mix}},
+      \mathsf{Rel}^{6r},\delta_{m,n},
+      \operatorname{ob}_{6r},
+      \mathfrak D_{\mathrm{MD}}(m,n),
+      \operatorname{ob}_{\mathrm{MD}}\bigr).
+      \]
+      The vanishing condition is the simultaneous six-relation and
+      rectification condition in
+      Proposition~\ref{prop:fact6r-functor-of-points-recognition} and
+      Theorem~\ref{thm:mixed-dunn-criterion}.
+  \end{enumerate}
+\end{defn}
 
 % --- End of appendix.

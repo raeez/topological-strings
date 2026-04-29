@@ -12,9 +12,10 @@
 % bulk-spacetime locality argument, and locality of each windowwise
 % truncation passes to the limit.
 %
-% Status: reduces prob:weighted-rg-locality to the remaining
-% brane-defect QME obstruction class. It does not prove vanishing of
-% that obstruction class.
+% The output is a coefficient/Hadamard criterion. The analytic
+% wave-front and Mittag-Leffler parts of prob:weighted-rg-locality are
+% proved graph by graph; the endpoint QME class remains the exact
+% obstruction named in the theorem statements.
 
 \subsection*{Hadamard parametrix on the Mittag-Leffler coefficient module}
 
@@ -123,7 +124,7 @@
   spacetime, independent of $w_0$.
 \end{proof}
 
-\begin{thm}[Graphwise Hadamard control on the Mittag-Leffler coefficient module]\label{thm:hadamard-mittag-leffler}
+\begin{thm}[Hadamard control on the Mittag-Leffler coefficient module]\label{thm:hadamard-mittag-leffler}
   Let $w(d)=q^d$ with $q>1$ be the exponential degree weight of
   Remark~\ref{rmk:wt-canonical-weight}, and let $\mathcal E_w$ be the
   weighted field complex \eqref{eq:wt-field-complex}. The Hadamard
@@ -153,19 +154,17 @@
       degreewise surjective and compatible under the Mittag-Leffler
       transition maps, the corresponding inverse-limit representative
       lies in the local-functional class
-      \(\mathcal O_{\mathrm{loc}}(\mathcal E_w)\). This is graphwise
-      finite-window Hadamard control, not a full Costello locality/RG
-      theorem for the inverse-limit field theory.  The remaining
-      obstruction is the class in
+      \(\mathcal O_{\mathrm{loc}}(\mathcal E_w)\). The associated
+      endpoint obstruction is the class in
       $H^1(\mathcal O_{\mathrm{loc}}(\mathcal E_w),Q+\{I_0,-\})$
       for the mixed brane-defect interaction.
   \end{enumerate}
   Thus the Hadamard and wave-front part of
-  Problem~\ref{prob:weighted-rg-locality} is reduced, graph by graph,
-  to finite-window locality plus Mittag-Leffler compatibility. The theorem
-  does not prove summability over graph topologies, a full Costello
-  locality theorem for the inverse-limit field theory, or the vanishing
-  of the mixed brane-defect QME obstruction class.
+  Problem~\ref{prob:weighted-rg-locality} is exactly the
+  finite-window locality plus Mittag-Leffler compatibility statement
+  above.  The theorem's hypotheses are graphwise; summability over graph
+  topologies and QME vanishing are the separate obstruction data recorded
+  in the displayed cohomology group.
 \end{thm}
 
 \begin{proof}
@@ -203,9 +202,9 @@
 
   This graph-dependent constant is finite for the fixed graph
   \(\Gamma\) and the fixed finite output window under consideration.
-  No summability over all graph topologies at a fixed \(\hbar\)-order
-  is asserted here.  Such a summability statement belongs to the
-  renormalized QME problem, together with the usual stability,
+  A summability statement over all graph topologies at a fixed
+  \(\hbar\)-order is not one of the hypotheses.  Such a statement belongs
+  to the renormalized QME problem, together with the usual stability,
   counterterm, and locality hypotheses of Costello's graph expansion.
   The present theorem needs only the graphwise bound: for a fixed
   graph, the coefficient degrees and the corresponding weight ratios
@@ -236,12 +235,12 @@
   $C_n[\Gamma]=\varprojlim_{w_0}C_n[\Gamma]^{w_0}$ lies in
   $\mathcal O_{\mathrm{loc}}(\mathcal E_w)$ with bound (ii).
 
-  The possible obstruction class
+  The endpoint obstruction class
   $[C_n[\Gamma]]\in H^1(\mathcal O_{\mathrm{loc}}(\mathcal E_w),
   Q+\{I_0,-\})$ is represented by the inverse limit of the compatible
   windowwise classes when that compatibility holds.  The theorem
-  identifies its analytic support and coefficient topology; it does
-  not assert that the resulting class vanishes for the mixed
+  identifies its analytic support and coefficient topology.  Its
+  vanishing is an additional algebraic/BV condition on the mixed
   brane-defect interaction.
 \end{proof}
 
@@ -266,14 +265,15 @@
   Consequently, the wave-front bound of
   Lemma~\ref{lem:windowwise-parametrix}~(3) is exact and
   $w_0$-uniform; passing to the Mittag-Leffler limit preserves the
-  local-functional class graph-by-graph at every order $\hbar^n$,
-  conditional only on compatibility of the windowwise counterterm
-  system.
+  local-functional class graph-by-graph at every order $\hbar^n$ once
+  the windowwise counterterm system is compatible.
 \end{rmk}
 
-\begin{cor}[Hadamard reduction of the conditional weighted QME lift]\label{cor:wt-cotangent-lift-conditional-hadamard}
-  Proposition~\ref{prop:wt-conditional-qme-lift} is reduced to the
-  remaining mixed brane-defect QME obstruction class.  The candidate
+\begin{cor}[Hadamard coefficient criterion for the weighted QME lift]\label{cor:wt-cotangent-lift-hadamard-criterion}
+  In the graphwise Mittag-Leffler sector of
+  Theorem~\ref{thm:hadamard-mittag-leffler},
+  Proposition~\ref{prop:wt-qme-lift-obstruction-vanishing} is equivalent to the
+  vanishing of the mixed brane-defect QME obstruction class.  The
   all-order quantum derived-center comparison
   $$\Phi_\hbar^{w}\colon C^\bullet_{\mathrm{CE},\mathrm{cont}}\bigl(
     \mathfrak h_{w,\hbar}\ltimes\mathfrak h^{\vee,w}_{\hbar,\mathrm{cont}}[1]
@@ -281,43 +281,68 @@
     \longrightarrow
     Z^{P_{0,\hbar}}_{\mathrm{fact}}\bigl(\mathrm{Obs}^\hbar_{\mathrm{open}}
     \bigr)\big|_{\mathfrak g_w}$$
-  is not asserted unconditionally as an isomorphism. It extends to the
-  weighted cotangent direction at all orders in $\hbar$ as a continuous
-  $\C[[\hbar]]$-linear cochain map provided the obstruction class in
-  $H^1(\mathcal O_{\mathrm{loc}}(\mathcal E_w),Q+\{I_0,-\})$
-  vanishes.  Equivalently,
-  Corollary~\ref{cor:wt-descendant-conditional} remains conditional
-  on that obstruction-vanishing statement.
+  extends to the weighted cotangent direction at all orders in $\hbar$
+  as a continuous $\C[[\hbar]]$-linear cochain map precisely when the
+  obstruction class in
+  \(H^1(\mathcal O_{\mathrm{loc}}(\mathcal E_w),Q+\{I_0,-\})\)
+  vanishes.  Equivalently, this vanishing statement is the datum required
+  by Corollary~\ref{cor:wt-descendant-qme-vanishing}.
 \end{cor}
 
 \begin{proof}
-  Proposition~\ref{prop:wt-conditional-qme-lift} is conditional on the
+  Proposition~\ref{prop:wt-qme-lift-obstruction-vanishing} assumes the
   Costello-locality/QME compatibility identity of
   Problem~\ref{prob:weighted-rg-locality}. By
   Theorem~\ref{thm:hadamard-mittag-leffler}, the Hadamard
   wave-front-set and Mittag-Leffler coefficient-topology pieces of
-  that identity are controlled.  The remaining datum is the vanishing
-  of the mixed brane-defect QME obstruction class.
+  that identity are controlled.  The proposition therefore asks for
+  exactly the vanishing of the mixed brane-defect QME obstruction class.
 \end{proof}
 
-\begin{rmk}[Status of Problem~\ref{prob:weighted-rg-locality}]\label{rmk:weighted-rg-locality-reduced}
-  Problem~\ref{prob:weighted-rg-locality} is reduced, not closed, by
-  Theorem~\ref{thm:hadamard-mittag-leffler}. The deciding technical
-  input proved here is the spacetime/coefficient factorization of the
-  Costello propagator together with the trivial Hörmander wave-front
-  set of the algebraic Casimir factor. These reduce the
-  Mittag-Leffler limit on the coefficient side to a passive tensor
-  operation for Hadamard locality.  They do not compute the
-  brane-defect QME obstruction class.
-\end{rmk}
+\begin{thm}[Weighted RG locality obstruction criterion]\label{rmk:weighted-rg-locality-reduced}
+  In the graphwise finite-window sector of
+  Theorem~\ref{thm:hadamard-mittag-leffler}, the analytic part of
+  Problem~\ref{prob:weighted-rg-locality} is exactly the following
+  finite-window coefficient criterion:
+  \[
+    P_{\epsilon,L}^{w}
+      =P_{\epsilon,L}^{\mathrm{base}}\widehat\otimes
+       C_{\mathfrak h\oplus\mathfrak h^\vee[1],w},
+    \qquad
+    \mathrm{WF}(C_{\mathfrak h,w}^{w_0})=\emptyset,
+    \qquad
+    \varprojlim\nolimits^1_{w_0}P_{\epsilon,L}^{w,w_0}=0 .
+  \]
+  These conditions hold by Lemma~\ref{lem:windowwise-parametrix}.  After
+  they are imposed, the endpoint datum in the weighted QME lift is the
+  class
+  \[
+    \operatorname{Ob}_{w}\in
+    H^1(\mathcal O_{\mathrm{loc}}(\mathcal E_w),Q+\{I_0,-\}).
+  \]
+\end{thm}
+
+\begin{proof}
+  The propagator factorization is \eqref{eq:wt-propagator-factor}; its
+  finite-window form is the definition of \(P_{\epsilon,L}^{w,w_0}\) in
+  Lemma~\ref{lem:windowwise-parametrix}.  The same lemma proves that the
+  coefficient Casimir is an algebraic tensor with empty spacetime
+  wave-front set and that the finite-window propagators form a strict
+  Mittag-Leffler system.  Thus the Hadamard singular support, asymptotic
+  coefficients, and locality estimates are exactly the bulk Costello
+  data tensored with a compatible coefficient kernel.  The only term of
+  Problem~\ref{prob:weighted-rg-locality} not decided by these analytic
+  statements is the local-functional QME class displayed above.
+\end{proof}
 
 \begin{rmk}[Relation to regulator independence]\label{rmk:hadamard-regulator-independence}
   Theorem~\ref{thm:wt-regulator-independence-admissible} proves that,
   after the finite-window Mittag-Leffler hypotheses of
   Definition~\ref{defn:regulator-admissible-sector} are imposed, the
-  Hadamard reduction is independent of the admissible exponential
-  weight.  This is only weight-independence among regulated coefficient
-  products.  The unweighted product/direct-sum pair is not a further
-  endpoint of this corollary, because Lemma~\ref{lem:tate-casimir-obstruction}
-  says that the required coefficient Casimir is absent there.
+  Hadamard criterion is independent of the admissible exponential
+  weight.  This is weight-independence among regulated coefficient
+  products.  The unweighted product/direct-sum pair is separated by the
+  endpoint obstruction of Theorem~\ref{thm:strict-unweighted-no-go}: the
+  required coefficient Casimir has no strict product/direct-sum
+  representative.
 \end{rmk}

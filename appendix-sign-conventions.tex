@@ -1,0 +1,325 @@
+\section{Sign conventions for the Hamiltonian comparison}
+\label{sec:app-sign-conventions}
+\label{app:sign-conventions}
+
+This appendix fixes the signs used in the CE/PV comparison, the
+primitive one-\(\psi\) complex, the principal-part coadjoint action, and
+the Moyal deformation.  The cohomological shift convention is
+\[
+  (V[1])^n=V^{n+1}.
+\]
+The reduced matrix Koszul letter \(\psi\) is odd.  All cyclic signs
+below use its parity; the absolute BV grading enters only through the
+global shift of the cotangent coordinate.
+
+\begin{defn}[Hamiltonian and cyclic conventions]
+\label{def:app-sign-hamiltonian-cyclic}
+  On \(\C[z_1,z_2]\) the Poisson bracket is
+  \[
+    \{f,g\}
+      =
+      \partial_{z_1}f\,\partial_{z_2}g
+      -
+      \partial_{z_2}f\,\partial_{z_1}g,
+  \]
+  so
+  \[
+    X_f=(\partial_{z_1}f)\partial_{z_2}
+        -(\partial_{z_2}f)\partial_{z_1},\qquad
+    X_{z_1}=\partial_{z_2},\quad X_{z_2}=-\partial_{z_1}.
+  \]
+  In the graded cyclic quotient,
+  \[
+    [uv]_{\mathrm{cyc}}=(-1)^{|u||v|}[vu]_{\mathrm{cyc}},
+    \qquad |x|=|y|=0,\quad |\psi|=1.
+  \]
+\end{defn}
+
+\begin{lem}[CE/PV signs]
+\label{lem:app-sign-ce-pv}
+  Let \(\mathfrak h\) have basis \(e_I\) and
+  \([e_I,e_J]=C^K_{IJ}e_K\).  Let \(c^I\) be the CE ghost dual to
+  \(e_I\), and let \(u_K\) be the shifted cotangent coordinate paired
+  with the basis vector \(e_K\) in the right-adjoint index convention.
+  The Chevalley--Eilenberg differential is
+  \[
+    d_{\mathrm{CE}}c^K=-\frac12 C^K_{IJ}c^Ic^J,\qquad
+    d_{\mathrm{CE}}u_K=C^L_{KJ}u_Lc^J.
+  \]
+  On the polyvector model with even coordinates \(O_K\) and odd
+  coordinates \(\theta^I\),
+  \[
+    [\theta^I,O_J]=\delta^I_J,\qquad d_\pi=[\pi,-],
+  \]
+  and the signs are
+  \[
+    d_\pi\theta^K=-\frac12 C^K_{IJ}\theta^I\theta^J,\qquad
+    d_\pi O_K=C^L_{KJ}O_L\theta^J.
+  \]
+  Therefore the assignment
+  \[
+    c^I\longmapsto\theta^I,\qquad u_K\longmapsto O_K
+  \]
+  intertwines \(d_{\mathrm{CE}}\) and \(d_\pi\).
+\end{lem}
+
+\begin{proof}
+  The first CE formula is the standard dual of the bracket.  The second
+  is the right-adjoint action convention on the shifted cotangent
+  coordinate:
+  \[
+    e_J\cdot u_K=[u_K,e_J]=C^L_{KJ}u_L.
+  \]
+  Applying \(d_{\mathrm{CE}}\) once more gives terms proportional to
+  \[
+    C^L_{KJ}C^M_{LA}u_Mc^Ac^J
+    -\frac12 C^L_{KJ}C^J_{AB}u_Lc^Ac^B,
+  \]
+  which vanish by the Jacobi identity for the right-adjoint
+  representation.
+
+  For the PV model, take
+  \[
+    \pi=\frac12 C^K_{IJ}O_K\theta^I\theta^J.
+  \]
+  The Schouten rule with \([\theta^I,O_J]=\delta^I_J\) gives exactly the
+  two displayed formulas.  Hence \(c^I\mapsto\theta^I\) and
+  \(u_K\mapsto O_K\) commute with the differentials.
+\end{proof}
+
+\begin{lem}[Primitive one-\(\psi\) boundary signs]
+\label{lem:app-sign-one-psi-boundary}
+  In the reduced matrix Koszul algebra \(Q\psi=xy-yx\),
+  \(Qx=Qy=0\).  For ordinary words \(u,v\),
+  \[
+    Q\,\operatorname{Tr}(\psi u\psi v)
+      =
+      \operatorname{Tr}\bigl(\psi vxyu-\psi vyxu-\psi uxyv+\psi uyxv\bigr).
+  \]
+  Hence the boundary in the one-\(\psi\) chain model is
+  \[
+    \partial_2(u,v)=vxyu-vyxu-uxyv+uyxv.
+  \]
+\end{lem}
+
+\begin{proof}
+  The first displayed \(\psi\) contributes \(+(xy-yx)\); the second
+  displayed \(\psi\) contributes \(-(xy-yx)\), because one odd letter
+  precedes it.  Move the even word created by the first replacement
+  cyclically past the remaining \(\psi\) and the word \(v\); no further
+  sign is introduced.  Removing the common front \(\psi\) gives the
+  formula.
+\end{proof}
+
+\begin{lem}[Principal-part coadjoint signs]
+\label{lem:app-sign-principal-part}
+  Let
+  \[
+    \rho_{a,b}=z_1^{-a-1}z_2^{-b-1}dz_1dz_2,\qquad a,b\ge0.
+  \]
+  The residue realization of the coadjoint action is
+  \[
+    z_1^pz_2^q\cdot\rho_{a,b}
+      =-(pb-qa+p-q)\rho_{a-p+1,b-q+1},
+  \]
+  with negative-index targets equal to zero.  In particular,
+  \[
+    z_1\cdot\rho_{a,b}=-(b+1)\rho_{a,b+1},\qquad
+    z_2\cdot\rho_{a,b}=(a+1)\rho_{a+1,b}.
+  \]
+\end{lem}
+
+\begin{proof}
+  Hamiltonian vector fields preserve \(dz_1dz_2\), so the coadjoint sign
+  is the residue integration-by-parts sign.  Directly,
+  \[
+  \begin{aligned}
+    \{z_1^pz_2^q,z_1^{-a-1}z_2^{-b-1}\}
+      &=
+      pz_1^{p-1}z_2^q\, (-(b+1))z_1^{-a-1}z_2^{-b-2} \\
+      &\quad
+      -qz_1^pz_2^{q-1}\, (-(a+1))z_1^{-a-2}z_2^{-b-1} \\
+      &=-(pb-qa+p-q)z_1^{p-a-2}z_2^{q-b-2}.
+  \end{aligned}
+  \]
+  Multiplication by \(dz_1dz_2\) identifies the last monomial with
+  \(\rho_{a-p+1,b-q+1}\) exactly when both indices are nonnegative.
+\end{proof}
+
+\begin{lem}[PBW descendant sign]
+\label{lem:app-sign-pbw-descendant}
+  The polynomial primitive one-\(\psi\) descendants carry the PBW
+  special-fibre action
+  \[
+    z_1^pz_2^q:\widetilde\Psi_{a,b}
+      \longmapsto
+      (pb-qa)\widetilde\Psi_{a+p-1,b+q-1}.
+  \]
+  This is a raising action and is not the principal-part coadjoint action
+  of Lemma~\ref{lem:app-sign-principal-part}.
+\end{lem}
+
+\begin{proof}
+  The Hamiltonian vector field of \(z_1^pz_2^q\) is
+  \[
+    pz_1^{p-1}z_2^q\partial_{z_2}
+    -qz_1^pz_2^{q-1}\partial_{z_1}.
+  \]
+  Acting on the symmetrised trace with \(a\) \(x\)-letters and \(b\)
+  \(y\)-letters, the first summand differentiates one of the \(b\)
+  \(y\)-letters and contributes \(pb\) copies of the symmetrised target
+  \(\widetilde\Psi_{a+p-1,b+q-1}\).  The second differentiates one of
+  the \(a\) \(x\)-letters and contributes \(-qa\) copies of the same
+  symmetrised target.  The total coefficient is \(pb-qa\).
+\end{proof}
+
+\begin{lem}[Current source convention]
+\label{lem:app-sign-current-source}
+  For an interval \(I\subset\R\), the Hamiltonian source complex is
+  \(\Omega^\bullet_c(I)\widehat\otimes\mathfrak h\).  A degree-zero
+  source density is written \(a(t)dt\otimes f\), and the cotangent CE
+  source coordinate maps to the boundary observable by
+  \[
+    u_{a(t)dt\otimes f}\longmapsto
+    B_f(a)=\int_I a(t)B_f(t)\,dt.
+  \]
+  The companion ghost coordinate \(c_{a\otimes f}\) maps to the PV
+  coordinate \(\theta_{a\otimes f}\).  If
+  \(B\in\mathcal D'_c(I)\), multiplication by a test function is the
+  ordinary distribution product \(aB\), and
+  \[
+    \{B_f(a),\Theta_\rho(B)\}=\Theta_{f\cdot\rho}(aB),\qquad
+    \{\Theta_\rho(B),\Theta_\sigma(C)\}=0.
+  \]
+\end{lem}
+
+\begin{proof}
+  The de Rham factor supplies the compactly supported density on the
+  brane line; the Hamiltonian factor supplies \(f\).  Pairing this source
+  with the boundary field gives the integral defining \(B_f(a)\).  The
+  distributional cotangent factor is a module over
+  \(C_c^\infty(I)\), so \(aB\) is defined by
+  \((aB)(\varphi)=B(a\varphi)\).  The first bracket is the semidirect
+  product bracket for
+  \(\mathfrak h_I\ltimes\mathcal D'_c(I)\widehat\otimes\mc P[1]\);
+  the second vanishes because the shifted principal-part summand is an
+  abelian odd ideal.
+\end{proof}
+
+\begin{lem}[Moyal coefficients]
+\label{lem:app-sign-moyal-coefficients}
+  With
+  \[
+    P=\partial_{z_1}\otimes\partial_{z_2}
+      -\partial_{z_2}\otimes\partial_{z_1},
+    \qquad
+    f*g=m\exp\!\left(\frac{\hbar}{2}P\right)(f\otimes g),
+  \]
+  the normalized Moyal Lie bracket is
+  \[
+    \{f,g\}_\hbar
+      =
+      \hbar^{-1}(f*g-g*f)
+      =
+      \sum_{s\ge0}
+      \frac{\hbar^{2s}}{2^{2s}(2s+1)!}P^{2s+1}(f,g).
+  \]
+  The first quantum correction has coefficient \(1/24\):
+  \[
+    \{f,g\}_\hbar=\{f,g\}+\frac{\hbar^2}{24}P^3(f,g)+O(\hbar^4).
+  \]
+\end{lem}
+
+\begin{proof}
+  The even powers of \(P\) are symmetric under exchanging \(f\) and
+  \(g\), and the odd powers are antisymmetric.  Thus
+  \[
+    f*g-g*f
+      =
+      2\sum_{s\ge0}
+      \frac{(\hbar/2)^{2s+1}}{(2s+1)!}P^{2s+1}(f,g),
+  \]
+  and division by \(\hbar\) gives the displayed formula.  The
+  \(s=1\) coefficient is \(1/(2^2\cdot3!)=1/24\).
+\end{proof}
+
+\begin{lem}[Moyal coadjoint signs]
+\label{lem:app-sign-moyal-coadjoint}
+  Let \((n)_r=n(n-1)\cdots(n-r+1)\), with \((n)_0=1\).  For
+  \(f=z_1^pz_2^q\), the normalized Moyal coadjoint action on principal
+  parts is
+  \[
+    f\cdot_\hbar\rho_{a,b}
+      =
+      -\sum_{\substack{r\ge1\\ r\ \mathrm{odd}}}
+      \frac{\hbar^{r-1}}{2^{r-1}r!}
+      C_r(p,q;a-p+r,b-q+r)\,
+      \rho_{a-p+r,b-q+r},
+  \]
+  where negative-index targets and the scalar target \(\rho_{0,0}\) are
+  set to zero, and
+  \[
+    C_r(p,q;m,n)=
+      \sum_{\alpha=0}^{r}(-1)^\alpha\binom r\alpha
+      (p)_{r-\alpha}(q)_\alpha(m)_\alpha(n)_{r-\alpha}.
+  \]
+  The \(r=1\) term is the Matlis coadjoint action
+  \[
+    z_1^pz_2^q\cdot\rho_{a,b}
+      =-(pb-qa+p-q)\rho_{a-p+1,b-q+1}.
+  \]
+\end{lem}
+
+\begin{proof}
+  The \(r\)-fold bidifferential \(P^r\) applied to
+  \(z_1^pz_2^q\otimes z_1^mz_2^n\) has coefficient
+  \(C_r(p,q;m,n)\) and output
+  \(z_1^{p+m-r}z_2^{q+n-r}\).  The normalized Moyal bracket keeps only
+  odd \(r\), with coefficient \(\hbar^{r-1}/(2^{r-1}r!)\) by
+  Lemma~\ref{lem:app-sign-moyal-coefficients}.  The coadjoint sign is
+  the residue sign
+  \[
+    (f\cdot_\hbar\rho)(g)=-\rho(\{f,g\}_\hbar).
+  \]
+  To hit the coefficient functional \(\rho_{a,b}\), the test monomial
+  must have exponents \(m=a-p+r\), \(n=b-q+r\).  Substitution gives the
+  displayed formula.  For \(r=1\),
+  \(C_1(p,q;a-p+1,b-q+1)=pb-qa+p-q\), giving the classical Matlis sign.
+\end{proof}
+
+\begin{cor}[Universal dual-module normalization]
+\label{cor:app-sign-universal-dual-normalization}
+  The residue basis \(\rho_{a,b}\) is normalized by
+  \[
+    \langle\rho_{a,b},z_1^m z_2^n\rangle
+      =\delta_{a,m}\delta_{b,n},
+  \]
+  and the coadjoint convention is
+  \[
+    (f\cdot\rho)(g)=-\rho(\{f,g\}),\qquad
+    (f\cdot_\hbar\rho)(g)=-\rho(\{f,g\}_\hbar).
+  \]
+  Therefore the linear Hamiltonians act by
+  \[
+    z_1\cdot\rho_{a,b}=-(b+1)\rho_{a,b+1},\qquad
+    z_2\cdot\rho_{a,b}=(a+1)\rho_{a+1,b}.
+  \]
+  This is the universal cotangent normalization used by the Matlis
+  principal-part module.  With it fixed, the polynomial descendant formulas
+  \(z_1\cdot\Psi_{a,b}=b\Psi_{a,b-1}\) and
+  \(z_2\cdot\Psi_{a,b}=-a\Psi_{a-1,b}\) cannot be made into the same
+  \(\mathfrak h\)-module action by changing signs, factorials, or the
+  Moyal \(1/24\) convention.
+\end{cor}
+
+\begin{proof}
+  The first two displayed formulas are the residue pairing and the
+  coadjoint sign convention used in
+  Lemma~\ref{lem:app-sign-moyal-coadjoint}.  Substituting
+  \((p,q)=(1,0)\) and \((p,q)=(0,1)\) in the \(r=1\) term gives the two
+  linear formulas.  They raise pole order, whereas the polynomial
+  descendant formulas lower polynomial degree.  No scalar renormalization of
+  basis vectors can turn a locally nilpotent lowering action into this
+  non-locally-nilpotent raising action; the obstruction is structural, not a
+  convention error.
+\end{proof}

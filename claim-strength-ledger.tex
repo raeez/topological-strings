@@ -1,204 +1,224 @@
-\section*{Claim-strength ledger}
-\addcontentsline{toc}{section}{Claim-strength ledger}
+\section*{Universal formal-local Koszul duality interface}
+\addcontentsline{toc}{section}{Universal formal-local Koszul duality interface}
 
 \begingroup
 \small
 \setlength{\parindent}{0pt}
-\setlength{\tabcolsep}{3pt}
-\renewcommand{\arraystretch}{1.18}
 
-The status vocabulary in this ledger is:
-\emph{proved in finite algebraic model},
-\emph{proved degreewise stable},
-\emph{proved in weighted Tate coefficient model},
-\emph{computed to stated order},
-\emph{conditional on named QME/radial-parts/unweighted-regulator theorem},
-\emph{reduced target constructed; unreduced lift open},
-\emph{conjectural},
-\emph{open}, and
-\emph{not asserted}.
+\noindent\fbox{\begin{minipage}{0.96\textwidth}
+\textbf{Formal-local theorem infrastructure.}
+The manuscript builds a universal formal-local Koszul duality theory for
+the shifted cotangent Hamiltonian Lie algebra
+\[
+  \mathfrak h=\C[[z_1,z_2]]/\C\cdot1,\qquad
+  \mathfrak g=\mathfrak h\ltimes
+    \mathfrak h^\vee_{\mathrm{cont}}[1].
+\]
+Its visible interface is the chain
+\[
+\begin{gathered}
+  \text{finite cotangent CE/PV}\\
+  \Downarrow\\
+  \text{completed formal-disk CE/PV}\\
+  \Downarrow\\
+  \text{admissible Tate bar-cobar/Quillen envelope}\\
+  \Downarrow\\
+  \text{closed-open derived-centre data}.
+\end{gathered}
+\]
+The closed-open generator map is fixed once and for all:
+\[
+  c^I\longmapsto\theta^I,\qquad u_I\longmapsto O_I .
+\]
+The theory is extended by the primitive higher-\(\psi\) extraction, the
+\(\mathcal D_\hbar\) Fourier--Rees bridge, the weighted finite-window
+regulator, the endpoint criteria, and the unreduced factorization-current
+lift datum.
 
-\subsection*{Main theorem-status exclusions}
+\smallskip
+\textbf{Acceptance principle.}
+Every frontier extension is stated as theorem data plus an obstruction
+complex.  The manuscript does not infer compact BCOV, Vol III,
+Igusa/BKM, or global Calabi--Yau statements from the formal disk alone;
+such statements are accepted exactly by a matched-conventions datum with
+vanishing period, anomaly, QME, descent, and operadic obstruction vector.
+\end{minipage}}
 
-\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.28\textwidth}
-  >{\raggedright\arraybackslash}p{0.22\textwidth}
-  >{\raggedright\arraybackslash}p{0.42\textwidth}@{}}
-\hline
-\textbf{Claim a reader might infer} & \textbf{Status here} &
-\textbf{Replacement statement}\\
-\hline
-\endhead
-Full \(Z^{P_0}_{\mathrm{fact}}\) theorem for the open brane algebra &
-\emph{not asserted} &
-The proved object is the reduced CE/PV Hamiltonian central-operation
-model. The unreduced factorization-centre morphism and centrality
-homotopies are open.\\
-\hline
-Full unreduced BV identification &
-\emph{not asserted} &
-Only the finite ghost-zero Dirac/Koszul model and reduced
-principal-part extensions are used.\\
-\hline
-Conilpotent Koszul duality for the full formal Hamiltonian algebra &
-\emph{not asserted} &
-Bar-cobar arguments apply only under the stated Tate-conilpotent,
-nilpotent, or admissible-envelope hypotheses. The full formal
-Hamiltonian algebra is treated by direct CE/PV computation and by
-conditional replacements.\\
-\hline
-Bare \(R\)-submodule Matlis annihilator wording &
-\emph{not asserted} &
-The object is the \(\C\)-linear residue annihilator
-\(\operatorname{Ann}_{\mathrm{res}}(\C\cdot1)\) inside top local
-cohomology, with the Hamiltonian coadjoint action.\\
-\hline
-Unconditional finite-\(N\) radial-parts theorem &
-\emph{conditional on named QME/radial-parts/unweighted-regulator theorem} &
-The formal Moyal coefficient theorem is algebraic. The finite-\(N\)
-comparison uses the named Harish-Chandra--Wallach--Levasseur--Stafford
-radial-parts input.\\
-\hline
-Normalized-Moyal vanishing beyond the Poisson bracket &
-\emph{not asserted} &
-The raw star commutator has only odd powers. The normalized bracket
-\(\hbar^{-1}[f,g]_*\) generally has even powers
-\(\hbar^{2s}P^{2s+1}\), including a possible \(\hbar^2P^3/24\) term.\\
-\hline
-Unconditional Costello realization from reduced Wick diagrams &
-\emph{not asserted} &
-The paper computes reduced open-line Weyl/Moyal boundary coefficients
-to first and third order. A Costello graph realization requires the
-analytic brane-defect graph/QME package.\\
-\hline
-Exactly three QME mechanisms &
-\emph{not asserted} &
-The manuscript lists known candidate mechanisms. Exhaustiveness would
-require a computation of the relevant \(H^1\) obstruction complex.\\
-\hline
-\end{longtable}
+\medskip
+\paragraph{Theorem data.}
 
-\subsection*{Claim ledger}
+\begin{enumerate}
+  \item \emph{Finite cotangent CE/PV.}
+  For each finite window,
+  \[
+    \Phi_M\colon
+    C^\bullet_{\mathrm{CE}}
+      (\mathfrak h_{\le M}\ltimes D_{\le M}[1])
+    \xrightarrow{\sim}
+    \mathrm{PV}(\mathbf S(\mathfrak h_{\le M}))
+  \]
+  with \(c\mapsto\theta\), \(u\mapsto O\).  The finite windows assemble
+  when the bracket, coadjoint, and Casimir transition defects vanish.
 
-\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.24\textwidth}
-  >{\raggedright\arraybackslash}p{0.27\textwidth}
-  >{\raggedright\arraybackslash}p{0.40\textwidth}@{}}
-\hline
-\textbf{Claim} & \textbf{Status} & \textbf{Scope and exclusions}\\
-\hline
-\endhead
-Dirac brane probe &
-\emph{proved in finite algebraic model} &
-Finite-\(N\) constrained mechanics on the matrix probe. The BV/Koszul
-variable satisfies \(Q\psi=[\phi_1,\phi_2]\).\\
-\hline
-Stable Hamiltonian trace sector and \(\Psi_{a,b}\) labels &
-\emph{proved degreewise stable} &
-Stable connected range only. The classes \(\Psi_{a,b}\) are primitive
-one-\(\psi\) PBW special-fibre classes; they are not principal-part
-cotangent modes and do not realize \(\mathfrak h^\vee_{\mathrm{cont}}\).\\
-\hline
-CE/PV reduced Hamiltonian central-operation model &
-\emph{proved degreewise stable} &
-Cochain-level identity for
-\(\mathfrak h\ltimes\mathfrak h^\vee_{\mathrm{cont}}[1]\), with
-\(c^I\mapsto\theta^I\) and \(u_I\mapsto O_I\). The conilpotent
-bar-cobar statement is used only inside its stated Tate-conilpotent
-hypothesis. This is not the full unreduced factorization-centre theorem.\\
-\hline
-Principal-part cotangent module &
-\emph{proved degreewise stable} &
-Residue and Matlis/local-cohomology identification
-\(\mathfrak h^\vee_{\mathrm{cont}}\cong
-\operatorname{Ann}_{\mathrm{res}}(\mathbb C\cdot1)\subset
-H^2_{\mathfrak m}(\mathbb C[[z_1,z_2]])\,dz_1dz_2\). Polynomial
-descendants do not realize the coadjoint module. The Fourier--Rees
-bridge is only an associated-graded label comparison.\\
-\hline
-Brane-line factorization currents &
-\emph{proved degreewise stable} &
-Compactly supported de Rham-current convention
-\(\mathfrak h_I=\Omega^\bullet_c(I)\widehat\otimes\mathfrak h\). The
-length-one source of the boundary Hamiltonian observable is the
-shifted-cotangent coordinate \(u_{a(t)dt\otimes f}\).\\
-\hline
-Reduced principal-part boundary sector &
-\emph{proved degreewise stable} &
-Reduced defect-current model after de Rham-current contraction only. This is not an
-unreduced open observable algebra.\\
-\hline
-Primitive one-\(\psi\) projection &
-\emph{proved degreewise stable} &
-Indecomposable \(P_0\) shadow of the reduced comparison. It does not
-construct the unreduced cotangent factorization-centre morphism or its
-centrality homotopies.\\
-\hline
-Degree-zero Moyal/Weyl quantization &
-\emph{proved in finite algebraic model} &
-Scalar-reduced degree-zero Hamiltonian sector, with the Capelli/Weyl
-normalization and formal Moyal commutator, modulo the distinguished
-scalar anomaly line \([\bar c]\). No one-antifield descendant lift and
-no graph realization are included.\\
-\hline
-Weighted Tate regulator &
-\emph{proved in weighted Tate coefficient model} &
-Internal coefficient-kernel and finite-scale graphwise regulator.
-Independence of the admissible finite-window weight is proved; equivalence
-with the strict unweighted product/direct-sum graph theory is not asserted.
-The mixed brane-defect QME is separate.\\
-\hline
-Strict unweighted product/direct-sum regulator endpoint &
-\emph{not asserted} &
-The positive endpoint theorem is impossible under the Costello
-coefficient-kernel and finite-window compatibility hypotheses:
-Theorem~\ref{thm:strict-unweighted-no-go} proves that no tensor in the
-strict product/direct-sum pair projects to all finite-window Casimirs.
-Tail-sensitive ordinary cohomology of the weighted product is also not
-identified with the strict direct-sum dual.\\
-\hline
-Scalar \(U(1)\) anomaly &
-\emph{proved in finite algebraic model} &
-Closed polynomial scalar cocycle, finite-\(N\) open centre, and
-Capelli/Weyl scalar shift. It records the obstruction to unreduced
-lifting; it is not a compact Calabi--Yau, BKM, Igusa, or sister-volume
-transfer.\\
-\hline
-First and third Costello graph normalizations &
-\emph{computed to stated order} &
-Only the first and third graph normalizations are claimed. They match
-the formal Moyal coefficients in the stated normalization.\\
-\hline
-All-order Costello graph realization &
-\emph{conditional on named QME/radial-parts/unweighted-regulator theorem} &
-Requires a mixed brane-defect QME theorem, the all-\(N\) radial-parts
-source input, any unweighted-regulator comparison if the strict
-product/direct-sum theory is used, and a centrality-homotopy theorem in
-the same normalization.\\
-\hline
-Quantum descendant lift &
-\emph{reduced target constructed; unreduced lift open} &
-Construction~\ref{constr:quantum-principal-part-descendant-target}
-constructs the reduced Moyal principal-part target.  The unreduced
-cotangent factorization-centre morphism is not constructed here, and
-Theorem~\ref{thm:no-hbar-primitive-descendant-intertwiner} rules out
-strict \(\hbar\)-adic deformations of the classical
-\(\Psi_{a,b}\mapsto\rho_{a,b}\) projection with PBW linear leading
-action.\\
-\hline
-Stable bulk--boundary Koszul duality &
-\emph{conjectural} &
-Strategic large-\(N\) horizon only. It is not used to prove the local
-Hamiltonian BF/Moyal core.\\
-\hline
-Cross-volume consequences &
-\emph{not asserted} &
-No compact Calabi--Yau, global BCOV, Vol III, chiral-homology,
-Borcherds, BKM, Igusa, \(K3\times E\), or sister-volume theorem
-follows from this local Hamiltonian BF/Moyal calculation without a
-separate matched-conventions proof.  Lemma~\ref{lem:no-formal-disk-transfer}
-and Lemma~\ref{lem:admissibility-not-globalization} state the
-non-transfer claim; they are firewalls, not export theorems.  The
-local theorem may be cited only as a \(d=2\) formal-disk normalization
-after the target volume supplies its own global datum and proof.\\
-\hline
-\end{longtable}
+  \item \emph{Completed formal disk CE/PV.}
+  The completed formal-disk comparison is
+  \[
+    \Phi=\varprojlim_M\Phi_M\colon
+    C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g)
+    \longrightarrow
+    \mathrm{PV}(\widehat{\mathbf S}_{\mathrm{Tate}}(\mathfrak h)).
+  \]
+  Its transition obstruction terms are
+  \[
+    \mathfrak o^{\mathrm{br}}_{M,N},\qquad
+    \mathfrak o^{\mathrm{coad}}_{M,N},\qquad
+    \mathfrak o^{\mathrm{Cas}}_{M,N}.
+  \]
+
+  \item \emph{Admissible Tate bar-cobar/Quillen envelope.}
+  For an admissible Tate replacement
+  \(\mathfrak g_{\mathrm{adm}}\),
+  \[
+    B_{\mathrm{adm}}=
+    C^\bullet_{\mathrm{CE},\mathrm{cont}}(\mathfrak g_{\mathrm{adm}}),
+    \qquad
+    B_{\mathrm{adm}}^!\simeq
+    \widehat U(\mathfrak g_{\mathrm{adm}}).
+  \]
+  The envelope hypotheses are conilpotent CE coalgebra, PBW
+  completeness, completed symmetric associated graded, and an admissible
+  transferred \(P_0\)-algebra model structure.
+
+  \item \emph{Closed-open generator map.}
+  The Hamiltonian CE ghost \(c^I\) becomes the Schouten vector
+  \(\theta^I\).  The shifted-cotangent CE coordinate \(u_I\) becomes the
+  Hamiltonian boundary coordinate \(O_I\).  Boundary Hamiltonian
+  observables come from \(u_I\).
+
+  \item \emph{Dirac open Koszul model.}
+  The brane stack is the derived commuting-pair locus:
+  \[
+    S_\partial=\int_\R\operatorname{Tr}
+    (\phi_1\,d\phi_2+A[\phi_1,\phi_2]),\qquad
+    Q\psi=[\phi_1,\phi_2].
+  \]
+  Stable trace invariants are read degreewise; for total word degree
+  \(d\), the stable range is \(N\ge d\).
+
+  \item \emph{Primitive higher-\(\psi\) extraction.}
+  The primitive Koszul complex has nonconstant Hamiltonian \(H_0\)
+  classes and one-\(\psi\) primitive \(H_1\) classes \(\Psi_{a,b}\);
+  the higher primitive sectors satisfy \(H_p=0\) for \(p\ge2\).  The
+  one-\(\psi\) action is
+  \[
+    \{\overline{\operatorname{Tr}(\phi_1^p\phi_2^q)},
+      \widetilde\Psi_{a,b}\}
+    =(pb-qa)\widetilde\Psi_{a+p-1,b+q-1}.
+  \]
+
+  \item \emph{Matlis cotangent module.}
+  The cotangent coefficient module is
+  \[
+    \mathcal P=
+    \operatorname{Ann}_{\mathrm{res}}(\C\cdot1)
+    \subset H^2_{\mathfrak m}(R)\,dz_1dz_2,
+    \qquad
+    \rho_{a,b}=z_1^{-a-1}z_2^{-b-1}dz_1dz_2 .
+  \]
+  Its coadjoint action is
+  \[
+    z_1^pz_2^q\cdot\rho_{a,b}
+    =-(pb-qa+p-q)\rho_{a-p+1,b-q+1}.
+  \]
+
+  \item \emph{Polynomial-descendant obstruction.}
+  Polynomial one-\(\psi\) representatives have locally nilpotent linear
+  Hamiltonian action, while
+  \[
+    z_1\cdot\rho_{a,b}=-(b+1)\rho_{a,b+1},\qquad
+    z_2\cdot\rho_{a,b}=(a+1)\rho_{a+1,b}
+  \]
+  is not locally nilpotent on principal parts.  Any polynomial
+  realization of \(\mathcal P\) must therefore change the target, the
+  action, or the category.
+
+  \item \emph{\(\mathcal D_\hbar\) Fourier--Rees bridge.}
+  With
+  \[
+    \mathcal D_\hbar=
+    \C[[\hbar]]\langle z_i,\partial_i\rangle/
+    ([\partial_i,z_j]=\hbar\delta_{ij}),
+  \]
+  the Fourier delta lattice gives
+  \[
+    z_1^az_2^b\mapsto\partial_1^a\partial_2^be_0
+    \mapsto(-1)^{a+b}\hbar^{a+b}a!b!\rho_{a,b}.
+  \]
+  Before inverting \(\hbar\) the image is the Rees sublattice
+  \(\bigoplus\hbar^{a+b}\C[[\hbar]]\rho_{a,b}\).  The bridge changes
+  polarization; same-action Rees families from \(\Psi_{a,b}\) to
+  \(\rho_{a,b}\) are obstructed.
+
+  \item \emph{Quantum Hamiltonian and Moyal sector.}
+  The Weyl convention is
+  \[
+    f*g=m\exp\!\left(\frac{\hbar}{2}P\right)(f\otimes g),
+    \qquad
+    \{f,g\}_\hbar=\hbar^{-1}[f,g]_* .
+  \]
+  The first and third raw commutator coefficients are \(1\) and
+  \(1/24\).  The descendant sector is governed by the principal-part
+  Moyal target and the no-\(\hbar\)-adic same-action intertwiner.
+
+  \item \emph{Weighted finite-window regulator.}
+  Admissible weights \(w,w'\) are related by diagonal finite-window
+  transport \(R_{w,w'}^{w_0}\).  The regulator theorem identifies the
+  Mittag-Leffler local-functional complexes and carries
+  \(\mathrm{Ob}_w\) to \(\mathrm{Ob}_{w'}\).  Vanishing of the mixed
+  brane-defect QME class is independent of the admissible weight.
+
+  \item \emph{Endpoint criteria.}
+  An endpoint for \(w_q(d)=q^d\) is admissible when conditions
+  (E1)--(E5) hold.  The obstruction tuple is
+  \[
+    \mathfrak o_{\mathrm{BV,end}}=
+    (\mathfrak o_{\mathrm{Cas}},
+     \mathfrak o_{\mathrm{def}},
+     \mathfrak o_{\mathrm{RG}},
+     \mathfrak o_{\mathrm{QME}}).
+  \]
+  The strict product/direct-sum endpoint fails because no tensor
+  projects to all finite-window Casimirs \(C_{\mathfrak h}^{w_0}\).
+
+  \item \emph{Unreduced factorization-current lift.}
+  Distributional principal-part currents give the target for cotangent
+  boundary modes.  The lift datum consists of boundary representatives,
+  product centrality homotopies, \(P_0\)-bracket homotopies, the
+  coefficient kernel, the brane-defect propagator, and the QME solution.
+  The scalar component is
+  \[
+    \operatorname{Ob}_{\mathrm{sc}}
+    =\hbar N\,\omega(f,g)
+      \int_\R a(t)b(t)\gamma_{\mathbf 1}(t)\,dt ,
+  \]
+  with associated graded \(\hbar N[\bar c]\).  Central-character,
+  balanced-supertrace, or closed-exchange data must kill this class.
+
+  \item \emph{Global and cross-volume descent.}
+  A target theorem supplies a matched-conventions datum
+  \(\mathfrak C_{\mathrm{tar}}\).  The acceptance vector is
+  \[
+    \operatorname{Ob}_{\mathfrak C_{\mathrm{tar}}}
+    =
+    (\operatorname{per}_{\mathrm{tar}},
+     \operatorname{ob}_{\mathrm{WR}},
+     \operatorname{ob}_{\mathrm{anom}},
+     \operatorname{ob}_{\mathrm{QME}},
+     \operatorname{ob}_{\mathrm{MD}}).
+  \]
+  It must vanish, with compatible null-homotopies, before any compact
+  BCOV, Vol III, Igusa/BKM, or global Calabi--Yau consequence is read
+  from the formal-local theorem.
+\end{enumerate}
+
 \endgroup
