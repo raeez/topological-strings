@@ -1,0 +1,1379 @@
+                                                                                                hep-th/0405146
+                                                                                                HUTP-04/A020, CALT-68-2501
+
+
+
+
+                                      Black Hole Attractors and the Topological String
+
+
+
+
+arXiv:hep-th/0405146v2 1 Jun 2004
+                                                      Hirosi Ooguri,a Andrew Strominger,b and Cumrun Vafab
+
+                                                 a
+                                                     California Institute of Technology, Pasadena, CA 91125, USA
+                                                        b
+                                                            Jefferson Physical Laboratory, Harvard University
+                                                                     Cambridge, MA 02138, USA
+
+
+
+
+                                                                              Abstract
+                                        A simple relationship of the form ZBH = |Ztop |2 is conjectured, where ZBH is a
+                                    supersymmetric partition function for a four-dimensional BPS black hole in a Calabi-Yau
+                                    compactification of Type II superstring theory and Ztop is a second-quantized topological
+                                    string partition function evaluated at the attractor point in moduli space associated to
+                                    the black hole charges. Evidence for the conjecture in a perturbation expansion about
+                                    large graviphoton charge is given. The microcanonical ensemble of BPS black holes can be
+                                    viewed as the Wigner function associated to the wavefunction defined by the topological
+                                    string partition function.
+                                          Contents
+1. Introduction    . . . . . . . . . . . . . . . . . . . . . . .         .   .   .   .   .   .   .   .   .   . 1
+2. Supergravity    . . . . . . . . . . . . . . . . . . . . . . .         .   .   .   .   .   .   .   .   .   . 5
+  2.1. The N = 2, d = 4 area-entropy formula . . . . . . . . . .         .   .   .   .   .   .   .   .   .   . 5
+  2.2. Higher order corrections . . . . . . . . . . . . . . . . .        .   .   .   .   .   .   .   .   .   . 7
+  2.3. Reinterpretation of the corrected entropy formula     . . . . .   .   .   .   .   .   .   .   .   .   . 8
+3. The topological string    . . . . . . . . . . . . . . . . . . .       .   .   .   .   .   .   .   .   .   . 10
+  3.1. Black hole and topological string partition functions   . . . .   .   .   .   .   .   .   .   .   .   . 10
+  3.2. A simplified derivation? . . . . . . . . . . . . . . . . .        .   .   .   .   .   .   .   .   .   . 12
+4. The holographic CFT dual . . . . . . . . . . . . . . . . .            .   .   .   .   .   .   .   .   .   . 14
+  4.1. Gauge theory on the D6 brane . . . . . . . . . . . . . .          .   .   .   .   .   .   .   .   .   . 14
+  4.2. Wrapped 5-brane dual      . . . . . . . . . . . . . . . . .       .   .   .   .   .   .   .   .   .   . 15
+  4.3. The supersymmetric index . . . . . . . . . . . . . . . .          .   .   .   .   .   .   .   .   .   . 16
+5. Counting of BPS states and topological string . . . . . . . . .       .   .   .   .   .   .   .   .   .   . 17
+  5.1. A realization of the D-brane theory for Type IIA superstrings     .   .   .   .   .   .   .   .   .   . 18
+6. Ztop as a quantum wave function      . . . . . . . . . . . . . .      .   .   .   .   .   .   .   .   .   . 21
+7. Further Issues . . . . . . . . . . . . . . . . . . . . . . .          .   .   .   .   .   .   .   .   .   . 25
+  7.1. Fragmentation and jumping lines . . . . . . . . . . . . .         .   .   .   .   .   .   .   .   .   . 25
+  7.2. The holomorphic anomaly . . . . . . . . . . . . . . . .           .   .   .   .   .   .   .   .   .   . 26
+  7.3. Coulomb branches . . . . . . . . . . . . . . . . . . .            .   .   .   .   .   .   .   .   .   . 26
+  7.4. Hypermultiplets . . . . . . . . . . . . . . . . . . . .           .   .   .   .   .   .   .   .   .   . 27
+
+
+
+
+1. Introduction
+
+     Critical string theory compactified on Calabi-Yau spaces has played a central role
+in both the mathematical and physical development of modern string theory. The rich
+topological data, as well as much of the low energy 4d physics associated with such com-
+pactifications, are elegantly summarized by the ĉ = 6 topological strings of A and B types.
+These topological string theories have led to a variety of deep physical and mathematical
+insights.
+     The physical relevance of the data provided by the topological string has been that it
+computes F -type terms in the corresponding four dimensional theory [1,2]. These higher-
+derivative F -type terms for Type II superstring on a Calabi-Yau are of the general form
+                              Z
+                                 d4 xd4 θ(Wab W ab )g Fg (X Λ ),                     (1.1)
+
+
+where Wab is the graviphoton superfield of the N = 2 supergravity and X Λ are the vector
+multiplet fields. The lowest component of W is F the graviphoton field strength and the
+
+                                               1
+highest one is the Riemann tensor. The lowest components of X Λ are the complex scalars
+parameterizing Calabi-Yau moduli and their highest components are the associated U (1)
+vector fields. These terms contribute to multiple graviphoton-graviton scattering. (1.1)
+includes (after θ integrations) an R2 F 2g−2 term. This fact was used in [3], upon considering
+a constant graviphoton background, to provide a precise physical interpretation of the
+meaning of A-model topological strings as computing degeneracy of BPS states involving
+M2 branes wrapped around 2-cycles of Calabi-Yau upon M-theory compactifications to
+five dimensions. Roughly speaking the genus expansion of topological string encodes the
+spin of the BPS state and the 2-cycle it wraps corresponds to the charge of the M2 brane.
+More precisely the topological string partition function Ztop is the canonical ensemble for
+multi-particle spinning five dimensional black holes [4] as was discussed in [5].
+      In this paper we define and propose a simple and direct relationship between the
+second-quantized topological string partition function Ztop and BPS black hole partition
+function ZBH in four dimensions of the form1
+
+
+                                  ZBH (pΛ , φΛ ) = |Ztop (X Λ )|2 ,                          (1.2)
+
+
+where X Λ = pΛ + πi φΛ in a certain Kähler gauge. The left hand side here is evalu-
+ated as a function of integer magnetic charges pΛ and continuous electric potentials φΛ ,
+which are conjugate to integer electric charges qΛ . The right hand side is the holomorphic
+square of the partition function for a gas of topological strings on a Calabi-Yau whose
+moduli are those associated to the charges/potentials (pΛ , φΛ ) via the attractor equations
+[6,7,8,9,10,11] . Both sides of (1.2) are defined in a perturbation expansion in 1/Q, where
+Q is the graviphoton charge carried by the black hole.2 The nonperturbative completion of
+either side of (1.2) might in principle be defined as the partition function of the holographic
+CFT dual to the black hole, as in [12]. We then have the triple equality,
+
+
+                                    ZCF T = ZBH = |Ztop |2 .                                 (1.3)
+
+  1
+      Here and hereafter the partition functions are presumed to contain F 2 (−1)F type insertions,
+where F is an appropriate R charge, so that only BPS states contribute.
+  2
+      The string coupling gs is in a hypermultiplet and decouples from the computation.
+
+                                                 2
+This will be discussed herein for two cases: One in which the CFT is a 2d sigma model
+arising form the moduli space of wrapped fivebranes [13] compactified on a circle, or the
+IR limit of the U (N ) gauge theory on the D6 brane considered in [14].3
+      As noted already in [8-10], terms such as (1.1) are nonvanishing in the presence of
+a black hole and therefore correct the BPS entropy. It is plausible that, as discussed in
+[8-10], due to supersymmetric nonrenormalization theorems, these F -terms are the only
+ones which correct the (indexed) BPS entropy. We derive (1.2) building on the super-
+gravity analysis of [8-10]. A key new point is that the supergravity partition function
+naturally produces a mixed thermodynamic ensemble, in which magnetic charges pΛ are
+fixed integers, while electric charges qΛ are summed over weighted by the electric potential
+        Λ
+as e−φ qΛ . This distinction is irrelevant to the computation of the leading order area-
+entropy relation. However it plays a crucial role in disentangling higher order corrections
+and achieving the simple relation (1.2).
+      The existence of fundamental connection between four-dimensional BPS black holes
+and the topological string might have been anticipated from the following observation.
+Calabi-Yau spaces have two types of moduli: Kähler and complex structure. The world-
+sheet twisting which produces the A (B) model topological string from the critical super-
+string eliminates all dependence on the complex structure (Kähler) moduli at the pertur-
+bative level. Hence the perturbative topological string depends on only half the moduli.
+Black hole entropy on the other hand, insofar as it is an intrinsic property of the black
+hole, cannot depend on any externally specified moduli (this statement is corrected by the
+anomaly as we discuss in the next paragraph). What happens at leading order is that the
+moduli in vector multiplets are driven to attractor values at the horizon which depend only
+on the black hole charges and not on their asymptotically specified values. Hypermultiplet
+vevs on the other hand are not fixed by an attractor mechanism but simply drop out of
+the entropy formula. Consistency suggests this mechanism should extend beyond leading
+order, and some evidence for this has been given in [8,9,10]. It is natural to assume this
+is valid to all orders in a 1/Q expansion. Hence the perturbative topological string and
+the large black hole partition functions depend on only half the Calabi-Yau moduli. It
+
+  3
+      This latter realization, even though it has the disadvantage of not being conformal, it has
+the advantage of being able to realize arbitrary charge states for the black hole. Having a QFT
+is sufficient for computation of (1.3) and the result (being an index) should not depend on taking
+the IR limit.
+
+                                                3
+would be surprising if string theory produced two functions on the same space that were
+not simply related. Indeed we shall argue that they are simply related as in (1.2).
+    The fact that the mixed ensemble, rather than microcanonical ensemble, should cor-
+respond to topological string is very natural. The very formulation of mixed ensemble
+depends on how one splits the charges to electric/magnetic pairs. Indeed topological
+string partition function also depends on the choice of how one splits electric and magnetic
+charges, as was discussed in [15]. Choice of electric versus magnetic is like a choice of
+position versus momentum for topological strings. In fact purely from this perspective
+and the commutation relations between electric and magnetic charges and the correspond-
+ing chemical potentials one can derive the fact that the imaginary part of the attractor
+moduli should be identified with the chemical potentials. Furthermore according to [15]
+Ztop behaves as a wave function Ztop ∼ ψ(x) in a given basis and going from electric to
+magnetic leads to its Fourier transform ψ̃(p). In this context the formula we are propos-
+ing ZBH = |Ztop |2 = |ψ|2 becomes even more suggestive and intriguing: The probability
+density of the topological wave function ψ is being related to the number density of black
+holes of a fixed magenetic charge and fixed electric chemical potential. More precisely
+we can view the black hole microcanonical ensemble as the Wigner function on the elec-
+tric/magnetic charge space determined by the topological string wave function. This is
+one of the most intriguing consequences of the present paper. Aspects of this relation is
+discussed in section 6.
+    In the preceding discussion and most of the paper we ignore several important sub-
+tleties. It is known that the degeneracy of actual single particle states can jump as we
+change the vevs for the scalars in the vector multiplets [16]. One might try to avoid this
+by dropping the restriction to single black hole states in ZBH , as we shall ultimately find
+appropriate. However this does not avoid the problem because the asymptotic values of
+the moduli still enter the index due to the noncompact center-of-mass integrations. Thus
+even the perturbative entropy would not be expected to depend just on the charges of
+the black hole, but also the background the black hole is embedded in. In fact this is
+consistent with another fact for topological strings which reinforces (1.2): the holomorphic
+anomaly! It is known that the topological string partition function Ztop does depend on
+the background (tB , t∗B ) we expand about, and not just on the chiral vector multiplet X
+[17,1]. In (1.2) we identify, via the attractor mechanism, the X with magnetic charge
+and electric potential. If we identify (tB , t∗B ) with the background where the black hole
+entropy is computed in, then (1.2) is consistent with the fact that both sides do depend on
+
+                                             4
+the choice of the background. We thus expect that both sides of (1.2) to depend in addition
+on vector and possibly hypermultiplets of the background (the moduli at infinity) where
+the black hole is embedded in. Finally we note that the holographic dual partition function
+ZCF T is also likely to acquire background dependence via non-compact Coulomb branches.
+A partial and inconclusive discussion of these issues appear in section 7. A particualrly
+interesting issue is whether or not the partition functions depend on hypermultiplet vevs
+at the nonperturbative level via D-brane instantons as in [18,19,20].
+    To summarize, we have suppressed some subtle and important issues which are ulti-
+mately essential for a complete understanding of the meaning of (1.2). Our hope is that
+the naive analysis presented here has suggested the correct exact relation, in which both
+sides of (1.2) acquire background dependence. We leave this to future investigations.
+    The relation (1.2) states that the supersymmetric partition function of BPS black hole
+microstates equals the squared partition function of a second-quantized gas of topological
+strings on a Calabi-Yau. Our derivation is mechanical in nature and relies on a detailed
+comparison of the perturbation expansion of both quantities. (We propose a streamlined
+derivation of this perturbative statement in section 3.3.) However we feel that such a sim-
+ple physical relationship should have an equally simple physical derivation which extends
+beyond perturbation theory.
+    This paper is organized as follows: In section 2 we discuss the supergravity aspects of
+F-term corrections. There we motivate the relation ZBH = |Ztop |2 and the interpretation
+of ZBH as a mixed ensemble. In section 3 we discuss some normalization issues for relating
+this to topological string amplitudes and propose an alternative simple, but non-rigorous
+derivation of the main formula ZBH = |Ztop |2 . Section 4 discusses two choices for dual
+CFT’s. In Section 5 we discuss the relation between our proposal with the proposed rela-
+tionship between topological string amplitudes and crystal melting. Section 6 comments
+on the interpretation of Ztop as a quantum amplitude. In section 7 we discuss how the
+entropy of black hole as well as the topological string amplitudes do depend in addition on
+vector multiplet background (through holomorphic anomaly) and possibly hypermultiplet
+background (through non-perturbative corrections).
+
+
+2. Supergravity
+
+2.1. The N = 2, d = 4 area-entropy formula
+
+    In this subsection, we review the leading semiclassical area-entropy formula for a
+general N = 2, d = 4 extremal black hole characterized by magnetic and electric
+
+                                             5
+charges (pΛ , qΛ ) derived in [6,7] and recently reviewed in [11].           The asymptotic val-
+ues of the moduli in vector multiplets, parameterized by complex projective coordinates
+X Λ , Λ = 0, 1, . . . , nV , in the black hole solution are arbitrary. These moduli couple to
+the electromagnetic fields and accordingly vary as a function of the radius. At the horizon
+they approach an attractor point whose location in the moduli space depends only on the
+charges. The locations of these attractor points can be found by looking for supersymmet-
+ric solutions with constant moduli. They are determined by the attractor equations,4
+
+                                          pΛ = Re[CX Λ ],                                      (2.1)
+
+                                          qΛ = Re[CF0Λ ],                                      (2.2)
+
+where F0Λ = ∂F0 /∂X Λ are the holomorphic periods, and the subscript 0 distinguishes these
+from the string loop corrected periods to appear in the next subsection. Both (pΛ , qΛ ) and
+(X Λ , F0Λ ) transform as vectors under the Sp(2n + 2; Z) duality group.
+      The (2nv + 2) real equations (2.1) and (2.2) determine the (nv + 2) complex quantities
+(C, X Λ ) up to Kähler transformations, which act as
+
+           K → K − f (X) − f¯(X̄),        X Λ → ef X Λ ,     F0 → e2f F0 ,   C → e−f C,        (2.3)
+
+where the Kähler potential K is given by
+
+                                    e−K = i X̄ Λ F0Λ − X Λ F̄0Λ .
+                                                               
+                                                                                               (2.4)
+
+We could at this point set C = 1 and fix the Kähler gauge but later we shall find other
+gauges useful. It is easy to see that - as required - the charges (pΛ , qΛ ) determined by
+the attractor equations (2.1), (2.2) are invariant under Kähler transformations. Given
+the horizon attractor values of the moduli determined by (2.1) and (2.2) the Bekenstein-
+Hawking entropy may be written
+                                               1
+                                      SBH =      Area = π|Q|2 ,                                (2.5)
+                                               4
+where Q = Qm + iQe is a complex combination of the magnetic and electric graviphoton
+charges and
+                                    i                         C C̄ −K
+                           |Q|2 =     qΛ C̄ X̄ Λ − pΛ C̄ F̄0Λ =    e .                         (2.6)
+                                    2                           4
+  4
+      As in [13], we have redefined C, X and F by factors of eK/2 relative to [7] so that (X Λ , FΛ )
+is a holomorphic section. At the attractor point our variables are related to those of [9] by
+  L
+CXus        Λ
+     = −2iYthem ,      CFΛus (X Λ ) = −2iFΛthem (Y Λ ),    C = −2iZ̄eK/2 .
+
+                                                  6
+The normalization of Q here is chosen so that |Q| equals the radius of the two sphere at
+the horizon.
+      It is useful to rephrase the above results in the context of type IIB superstrings in
+terms of geometry of Calabi-Yau. In this case the attractor equations fix the complex
+geometry of the Calabi-Yau. The electric/magentic charges correlate with three cycles of
+Calabi-Yau. Choosing a symplectic basis for the three cycles gives a choice of the splitting
+to electric and magnetic charges. Let AΛ denote a basis for the electric three cycles, B Σ
+the dual basis for the magnetic charges and Ω the holomorphic 3-form at the attractor
+point. Ω is fixed up to an overall multiplication by a complex number Ω → λΩ. There is
+a unique choice of λ such that the resulting Ω has the property that
+                        Z                                    Z
+                   Λ                          Λ
+                  p =         ReΩ = Re[CX ]           qΛ =          ReΩ = Re[CF0Λ ]         (2.7)
+                         AΛ                                    BΛ
+
+
+where ReΩ = 12 (Ω + Ω). In terms of this choice the black hole entropy can be written as
+
+                                            π
+                                                  Z
+                                      SBH =                Ω∧Ω                              (2.8)
+                                            4         CY
+
+2.2. Higher order corrections
+
+      In this subsection we review some results of [8,9,10,21], in which higher derivative
+corrections, suppressed at large charges, to the entropy5 formula (2.5) are derived from
+the F -term corrections to the supergravity action using Wald’s method [22]. (For a com-
+prehensive review of the results of these papers and related subjects, see [23].) All other
+corrections to the action involve hypermultiplets. Hypermultiplet vevs are not fixed at the
+horizon and can be varied continuously. If the entropy depended on hypermultiplet vevs,
+it could not be an intrinsic property of the black hole and the number of microstates for
+fixed charges could not be an integer. Hence we expect the vector multiplet F -terms to
+encode all corrections to the entropy.
+      F -term corrections to the action are encoded in a string loop corrected holomorphic
+prepotential
+                                                  ∞
+                                                  X
+                                     Λ    2
+                                F (X , W ) =            Fh (X Λ )W 2h ,                     (2.9)
+                                                  h=0
+
+  5
+      The term entropy in [8,9,10,21] and here more precisely should refer to an indexed quantity
+protected from some types of corrections by supersymmetry. This is discussed in section 4.3 below.
+
+                                                  7
+where Fh can be computed by topological string amplitudes (as we review in the next
+section) and W 2 involves the square of the anti-self dual graviphoton field strength. This
+obeys the homogeneity equation
+
+                  X Λ ∂Λ F (X Λ , W 2 ) + W ∂W F (X Λ , W 2 ) = 2F (X Λ , W 2 ).       (2.10)
+
+Near the black hole horizon, the attractor value of W 2 obeys
+
+                                         C 2 W 2 = 256.                                (2.11)
+
+The exact attractor equations are then simply
+
+                                        pΛ = Re[CX Λ ],                                (2.12)
+                                                 
+                                             Λ 256
+                                qΛ = Re CFΛ X , 2     .                                (2.13)
+                                               C
+This is essentially the only possibility consistent with symplectic invariance. It is then
+argued in [8,9,10,21] that the entropy as a function of the charges is
+
+                               πi                            π
+                      SBH =       (qΛ C̄ X̄ Λ − pΛ C̄ F̄Λ ) + Im[C 3 ∂C F ],           (2.14)
+                               2                             2
+
+where FΛ , X Λ and C are expressed in terms of the charges using (2.12) and (2.13).
+
+2.3. Reinterpretation of the corrected entropy formula
+
+    In this subsection we reinterpret the F -term corrected entropy formula (2.14), and
+thereby cast it in a significantly simpler form.
+    Let us introduce φΛ as the imaginary parts of CX Λ and write
+
+                                                      i Λ
+                                      CX Λ = pΛ +       φ ,                            (2.15)
+                                                      π
+
+where we applied the first half of the attractor equations (2.12) for the real parts of CX Λ .
+Defining a function F of (φ, p) by
+                                                        
+                                                  2   256 Λ
+                          F (φ, p) = −π Im C F X , 2
+                                                      C
+                                   = −πIm F CX Λ , 256
+                                                      
+                                                                                       (2.16)
+                                                          
+                                              Λ    i Λ
+                                   = −πIm F p + φ , 256 ,
+                                                   π
+
+                                                  8
+the second half of the attractor equations (2.13) can be written as
+
+                                                           ∂
+                           qΛ = 12 (CFΛ + C̄ F̄Λ ) = −        F (φ, p),                (2.17)
+                                                          ∂φΛ
+where
+                                 ∂      i  ∂      i     ∂
+                                   Λ
+                                     =       Λ
+                                               −             .                         (2.18)
+                                ∂φ     πC ∂X     π C̄ ∂ X̄ Λ
+    Using the homogeneity relation,
+                                       
+                                  Λ 256    ∂
+                       C∂C F X , 2 = X Λ       F − 2F,                                 (2.19)
+                                    C     ∂X Λ
+
+and the attractor equations (2.17), the fully corrected entropy formula (2.14) is brought
+into the simple form
+                                                           ∂
+                           SBH (q, p) = F (φ, p) − φΛ         F (φ, p).                (2.20)
+                                                          ∂φΛ
+Here q in the left-hand side and φ in the right-hand side are related by (2.17). We recognize
+that (2.20) combined with (2.17) is the Legendre transformation from SBH (qΛ , pΛ ) to
+F (φΛ , pΛ ) and that φΛ are chemical (electric) potentials for qΛ .
+    In order to interpret (2.20) we note that in the usual formulation of a path integral,
+magnetic-type charges are associated to a choice of vector bundle and are not summed
+over. On the other hand electric-type charges are typically not fixed. Instead one chooses
+a boundary condition on the electric potential, which gives a weighted sum over electric
+charges. Hence the usual thermal path integral should be interpreted as a microcanonical
+ensemble of magnetic charges pΛ and a canonical ensemble for electric charges qΛ with
+potentials φΛ . Such a “mixed” partition function can be written
+                                               X                  Λ
+                            ZBH (φΛ , pΛ ) =        Ω(pΛ , qΛ )e−φ qΛ ,                (2.21)
+                                               qΛ
+
+
+where Ω(pΛ , qΛ ) are integer black hole degeneracies and ln Ω(pΛ , qΛ ) is the microcanonical
+entropy.
+    Hence we see that F (φΛ , pΛ ) defined by (2.16) is simply related to the mixed partition
+function ZBH as
+                              ZBH (φΛ , pΛ ) = exp F (φΛ , pΛ ) ,
+                                                              
+                                                                                       (2.22)
+
+and that SBH (qΛ , pΛ ) computed in [8,9,10,21] based on a spacetime path integral picture
+is the mixed canonical/microcanonical entropy given by the Legendre transform F as in
+(2.20). We note that, according to our proposal, the microcanonical entropy ln Ω(qΛ , pΛ )
+
+                                                9
+is not equal the mixed entropy SBH (qL , pΛ ) since the Legendre transformation is not the
+inverse of the Laplace transformation (2.21), except in the limit of large electric charges
+|q Λ | ≫ 1, where the latter can be approximated by the former in the steepest descent
+method.
+      It is instructive to rewrite ZBH in terms of the complex graviphoton charge Q =
+Qm + iQe ,6 which is given as a function of φΛ and pΛ by
+
+                                   pΛ                   φΛ
+                          Q2 = i      (CFΛ − C̄ F̄Λ ) +    (CFΛ + C̄ F̄Λ ).                     (2.23)
+                                    4                   4π
+
+Choosing a gauge in which
+
+                                                                    64
+                                 K = 0,       C = 2Q,        W2 =                               (2.24)
+                                                                    Q2
+
+at the attractor point, we find from (2.6) that
+
+                                                          pΛ + iφΛ /π
+                                 C = 2Q,           XΛ =               ,                         (2.25)
+                                                              2Q
+
+and                                         "          Λ           2h #
+                                             X         p + iφΛ /π    8
+                    ln ZBH = −4πQ2 Im              Fh                       .                   (2.26)
+                                                          2Q         Q
+                                               h
+
+
+
+3. The topological string
+
+3.1. Black hole and topological string partition functions
+
+      The notion of topological string was introduced in [24]. Subsequently a connection
+between them and superstring was discovered: It was shown in [1,2], that the superstring
+loop corrected F -terms (2.9) can be computed as topological string amplitudes. The
+purpose of this subsection is to translate the supergravity notation of the previous section
+to the topological string notation.
+      The second quantized partition function for the topological string may be written
+
+                               Ztop (tA , gtop ) = exp Ftop (tA , gtop ) ,
+                                                                       
+                                                                                                 (3.1)
+
+  6
+      This is a slight abuse of terminology, as Q is not precisely a charge. Rather it is a combination
+of charges and potentials.
+
+                                                    10
+where
+                                                   X
+                                                             2h−2
+                             Ftop (tA , gtop ) =            gtop  Ftop,h (tA ),         (3.2)
+                                                       h
+
+and Ftop,h is the h-loop topological string amplitude. The Kähler moduli are expressed in
+the flat coordinates
+                                              XA
+                                      tA =      0
+                                                  = θ A + ir A ,                        (3.3)
+                                              X
+where r A are the Kähler classes of the Calabi-Yau M and θ A are periodic θ A ∼ θ A + 1.
+     We would like to determine relations between supergravity quantities and topological
+string quantities. Using the homogeneity property (2.10) and the expansion (2.9), the
+holomorphic prepotential in supergravity can be expressed as
+
+                                                                   XΛ
+                                                                                   
+                                 Λ                     0 2               256
+                         F (CX , 256) = (CX ) F                       ,
+                                                                   X 0 (CX 0 )2
+                                              ∞
+                                              X                                         (3.4)
+                                                             0 2−2h             A
+                                          =        (CX )               fh (t ),
+                                              h=0
+
+
+where fh (tA ) is related to Fh (X Λ ) in (2.9) as
+
+                                                                   XΛ
+                                                                       
+                                        A              2h
+                                     fh (t ) = 16 Fh                        .           (3.5)
+                                                                   X0
+
+This suggests an identification of the form fh (tA ) ∼ Ftop,h (tA ) and gtop ∼ (CX 0 )−1 .
+For later purposes, we need precise relations between supergravity and topological string
+quantities including numerical coefficients. These can be determined by studying the limit
+of a large Calabi-Yau space.
+     In the supergravity notation, the genus 0 and 1 terms in the large volume are given
+by [9]
+                                             X AX B X C    1     XA
+                   F CX Λ , 256 = C 2 DABC
+                               
+                                                         −   c2A    +···
+                                                X0         6     X0                     (3.6)
+                                                            1
+                                 = (CX 0 )2 DABC tA tB tC − c2A tA + · · · ,
+                                                            6
+where                                              Z
+                                        c2A =              c2 ∧ αA ,                    (3.7)
+                                                    M
+
+with c2 being the second Chern class of M , and CABC = −6DABC are the four-cycle
+intersection numbers. These terms are normalized so that the mixed entropy SBH is given
+
+                                                       11
+by (2.14). On the other hand, the topological string amplitude in this limit is given by
+[17,1]7
+                                    (2π)3 i                πi
+                         Ftop = −     2     DABC tA tB tC − c2A tA + · · · ,                    (3.8)
+                                     gtop                  12
+The normalization here is fixed by the holomorphic anomaly equations in [1], which are
+nonlinear equations for Ftop,h . The same normalization of Ftop is also used in the M theory
+interpretation [3] and in the quantum foam interpretaion [25].
+       Comparing the one-loop terms in (3.6) and (3.8), which are independent of gtop , we
+find
+                                                         2i
+                                F (CX Λ , 256) = −          Ftop (tA , gtop ).                  (3.9)
+                                                         π
+Given this, we can compare the genus 0 terms to find
+                                                         4πi
+                                            gtop = ±          .                                (3.10)
+                                                         CX 0
+This implies
+                         ln ZBH = −π Im F (CX Λ , 256) = Ftop + F̄top .
+                                                     
+                                                                                               (3.11)
+
+and
+                                  ZBH (φΛ , pΛ ) = |Ztop (tA , gtop )|2 ,                      (3.12)
+
+with
+                                    pA + iφA /π              4πi
+                             tA =    0     0
+                                                , gtop = ± 0         .
+                                    p + iφ /π             p + iφ0 /π
+Such a simple relation between ZBH and Ztop calls for an explanation. The remainder of
+this paper is devoted to physical interpretation of this relation.
+
+3.2. A simplified derivation?
+
+       In this section we propose a simpler supergravity derivation of the relation
+
+                                            ZBH = |Ztop |2 .                                   (3.13)
+
+With the exception of one assumption, which we cannot a priori justify, the proposed
+derivation may clarify the origin of such a relation. However we will not carefully work
+out the details and we omit the factors of 2 and π in this section.
+  7
+       In [1] it was found that consistency requires that an additional factor of 1/2 be multiplied to
+the one-loop amplitude Ftop,1 defined in [17]. The factor 1/2 comes from the Z2 automorphism
+of the worldsheet torus.
+
+                                                    12
+    One main ingredient in this derivation is the observation of [26] that the N = 2
+supergravity coupled to vector multiplets can be written as
+
+                                                            √
+                  Z                                       Z
+              S = d xd θ (supervolume form) + h.c. = d4 x −gR + ...
+                      4  4
+                                                                                           (3.14)
+
+where the supervolume form in the above depends non-trivially on curvature of the fields.
+This reproduces the ordinary action after integrating over d4 θ and picking up the θ 4 term
+in the supervolume. In the context of black holes the boundary terms accompanying (3.14)
+give the classical black hole entropy.
+    We now come to the derivation of (3.13). As was observed in [1,2] topological string
+computes the terms
+                                 ∞ Z
+                                 X
+                           F =              d4 xd4 θFh (X)(W 2 )g + c.c.                   (3.15)
+                                 h=0
+
+There are various terms one can get from the above action after integrating over d4 θ. Let
+us concentrate on one of the terms which turns out to be the relevant one for us: Take the
+top components of X Λ and W 2 , and absorb the d4 θ integral from the supervolume measure
+as in (3.14). We will work in the gauge X 0 ∼ 1 and thus C ∼ 1/gtop . As noted before in
+the near-horizon black hole geometry in this gauge the top component W 2 ∼ 1/C 2 ∼ gtop
+                                                                                    2
+
+and the X Λ are fixed by the attractor mechanism. We thus have the black hole free energy
+                                 ∞
+                                 X                               Z
+                                        2h
+                     ln ZBH =          gtop Ftop,h (X Λ /X 0 )       d4 xd4 θ + c.c.
+                                 h=0
+                                 X∞
+                             =         (gtop )2h−2 Ftop,h (X Λ /X 0 ) + c.c.
+                                 g=0
+
+                             = 2 Re Ftop ,
+
+                                            d4 xd4 θ ∼ 1/gtop
+                                                          2
+                                        R
+where we have used the fact that                              . Upon exponentiation this leads to
+(3.13).
+    Here we have shown that if we consider one absorption of θ 4 term in (3.15) upon
+d4 θ integral we get the desired result. That there be no other terms is not obvious. For
+example another way to absorb the θ’s would have given the familiar term R2 F 2g−2 where
+F is the graviphoton field. However, as has been observed in [8,9,10] such terms do not
+contribute in the black hole background. It would be nice to find a simple way to argue
+why these terms do not contribute and that we are left with this simple absorption of the
+θ integrals.
+
+                                                   13
+4. The holographic CFT dual
+
+    The near-horizon geometry of a four-dimensional BPS black hole is the Robinson-
+Bertotti universe AdS2 ×S2 .    On general grounds one expects a holographically dual
+conformally-invariant quantum mechanics CFT1 , but such AdS/CFT dualities are not
+yet well-understand for the general case. In the special case p0 = 0 a CFT2 dual is known
+[13], where the black hole geometry is expected to arise upon considering a specific circle
+compactification (i.e. a quotient of AdS3 geometry [27]). These cases are discussed in sec-
+tion 4.2. However to obtain the most general allowed black hole charges we could consider
+more general realization of the branes. In the context of type IIA superstring this can be
+achieved by considering the gauge theory on D6 branes wrapped on Calabi-Yau, which is a
+particular topolgoically twisted gauge theory studied in [14], which will be briefly reviewed
+in section 4.1. Since the main interest of this paper focuses on index computations the
+details of the CFT are not essential. The index computation can be done for the QFT even
+before flowing to the IR. The basic idea is that the dual QFT should involve the gauge
+theory living on the brane which leads to the black hole. Suppose the D brane in question
+has d + 1 dimensional worldvolume. Then we write the QFT as a theory on V d × S 1 and
+the IR limit of this theory should lead to a dual CFT1 on S 1 (we view R1 as the infinite
+radius limit of S 1 ). In such cases we would be referring to a (d + 1) dimensional QFT as
+the dual theory and sometimes we loosely call it the “CFT dual”.
+    For the purposes of our mixed ensemble we would like to realize the theory on the
+brane to be such that the electric charges can be induced as excitations in the corresponding
+QFT. Below we will present two examples of such a theory.
+
+4.1. Gauge theory on the D6 brane
+
+    Consider type IIA theory compactified on the Calabi-Yau M . We consider the D6
+and D4 branes wrapped over cycles of Calabi-Yau as magnetic charged states and D0
+and D2 branes as electrically charaged states. More specifically we wrap N D6 branes
+on the Calabi-Yau M and we get a U (N ) gauge theory on M × S 1 . This gauge theory
+is a topologically twisted version of the maximally supersymmetric Yang-Mills theory on
+Calabi-Yau (see [14] for details). Moreover the lower brane charges can be viewed as
+gauge excitations on the D6 brane, as is well known. Thus we end up with a maximally
+supersymmetric gauge theory in 7 dimensions on M × S 1 . Fixing the D6 and D4 brane
+charges as pA , we will denote this theory by T (M, pA ). Here p0 = N .
+
+                                             14
+     As we will discuss below we will be interested in the limit where the radius of S 1 ,
+β → 0. In this limit the gauge theory simplifies by T-duality on the circle to a gauge
+thoery on N D5 branes wrapping M . Precisely this theory was studied in [14] in finding
+a dual description of the topological string. We will discuss how this case is related to a
+special case of our conjecture in section 5.
+
+4.2. Wrapped 5-brane dual
+
+     For the other holographic dual we set one of the magnetic charges p0 = 0. In this case
+the holographic duality can be simply understood in one higher dimension. Briefly, (see
+[13] for details ) it is a compactification of the AdS3 /CFT2 duality associated to the black
+string obtained by wrapping fivebranes on a four-cycle in the class pA of a Calabi-Yau
+compactification of M theory. Membrane charge corresponds to turning on the self-dual
+three form flux on the 2-cycle qA in the fivebrane. 0-brane charge is obtained on further
+compactification to IIA by adding momentum to the black string wrapping the M-theory
+circle.
+     The resulting dual CFT, which we will denote T (M, pA ) can be briefly described as
+follows [13]. The four-cycle is dual to an element P of H 2 (M, Z), where M denotes the
+Calabi-Yau and we assume P corresponds to a very ample divisor. Then the moduli space
+MP has dimension
+                                  1
+                                      Z
+                                              2P 3 + P c2 (M ) − 2.
+                                                              
+                             dP =                                                       (4.1)
+                                  6       M
+
+The theory T (M, pA ) contains dP bosons with target space MP . There are also 3 more
+nonchiral bosons from translation in R3 . In addition reduction of the self-dual three-form
+living on the fivebrane gives chiral bosons. The number of such left-moving bosons is
+
+                                     1
+                                       Z
+                                           4P 3 + 5P c2 (M ) − 1,
+                            −
+                                                            
+                           b2 (P ) =                                                 (4.2)
+                                     6 M
+
+while the number of right movers is
+
+                                      1
+                                          Z
+                            b+                 2P 3 + P c2 (M ) − 1.
+                                                               
+                             2 (P ) =                                                   (4.3)
+                                      6   M
+
+
+These massless scalars live on the signature (b+    −                        2
+                                               2 , b2 ) Narain lattice ΓP = H (P, Z).
+Membrane charges qA correspond to momenta in the signature (1, b2 (M ) − 1) sublattice
+ΓM = H 2 (M, Z) of ΓP . Hence we can regard qA as an operator constructed from the
+chiral scalars in T (M, pA ), while 0-brane charge is simply q0 = L0 .
+
+                                                 15
+    The theory T (M, pA ) has (0, 4) supersymmetry, and accordingly the number of right
+moving fermions is
+                                    1
+                                         Z
+                              NRF =              2P 3 + P c2 (M ) .
+                                                                 
+                                                                                       (4.4)
+                                     3       M
+
+Assuming b1 (M ) = 0 there are no left moving fermions.
+    We note that a priori T (M, pA ) depends on all the moduli of M (as well as the
+integer magnetic charges pA ) through the moduli-dependence of MP . The electric charges
+(q0 , qA ) arise as momentum operators in the theory associated the chiral scalars spanning
+the Narain lattice ΓP .
+
+4.3. The supersymmetric index
+
+    The holographic duals we have described above both contain the center of mass degree
+of freedom. In comparison with the AdS2 ×S2 geometry it is natural to mod out the center
+of mass degree of freedom. This gets rid of an infinite volume factor as well as fermionic
+zero modes associated with the center of mass degree of freedom. We then define the
+supersymmetric index for this theory by
+
+
+                   ZCF T (pA , φΛ ; β, M ) = Tr′ (−)F exp(−βH − φΛ qΛ ) .
+                                                                      
+                                                                                       (4.5)
+                                               3
+    In the wrapped fivebrane description F = 2JR . Naively one might think that ZCF T ,
+being an index, is invariant under all smooth deformations of T , in particular variations
+of the complex structure and Kähler moduli of M , and also independent of the inverse
+temperature β. In fact this is not obviously the case for the following reason. Consider for
+example the contributions with qΛ = 0. For the wrapped 5-brane dual, the moduli space
+MP of the four cycle P has points at which the single four cycle degenerates into two
+four-cycles. These points are junctions with Coulomb branches at which the four cycle can
+fragment into two four-cycles which move apart in the R3 . For the U (N ) gauge theory on
+D6 brane the same phenomenon happens where there are points where U (N ) → U (K) ×
+U (N − k). Thus in either case the holographic dual theory develops a new noncompact
+direction and a new continuum in the spectrum.
+    It is well-known that the number of BPS states can jump in such a case; for example,
+it was observed in the case of N = 2 gauge theories in four dimensions in [16], and it
+is realized in the Calabi-Yau context in [28]. When this happens via the emergence of
+a noncompact direction, it is expected that an index becomes a continuous function of
+background moduli. This is shown explicitly in two-dimensional models [29], where the
+
+                                                 16
+index Tr(−1)F F e−βH defined for Landau-Ginzburg theories turns out to be a continuous
+function of moduli as it receives anomalous contribution from multiparticle states, even
+though the number of BPS states jumps in this case.
+      This fragmentation phenomenon is generic [30] and occurs at many values of the
+charges.8 We thus expect that ZCF T acquires anomalous dependence on the moduli of M .
+We will discuss this issue in more detail in secton 7. The index (4.5) can also depend on
+the inverse temperature β, as we will discuss in the next section. We will argue that the
+mixed partition function of black holes discussed in this paper is identified with the β → 0
+limit of the index.
+
+
+5. Counting of BPS states and topological string
+
+      The aim of this section is to consider some possible checks for the conjecture ZBH =
+|Ztop |2 , by using the microscopic description of the black hole entropy.
+      Given that ZBH is expressed in terms of the topological string partition function as
+|Ztop |2 , it is natural to expect that we are computing an index, i.e., the number of black
+hole microstates of a given set of charges where we count each BPS multiplet with a ±
+sign correlated with whether the lowest component is a boson or a fermion. An obvious
+candidate would be the index (4.5) discussed in the last section.
+      Due to the presence of noncompact directions, the index (4.5) may depend on β.
+Thus, we should ask what is the natural value for β from the perspective of the black hole
+entropy. We propose that for the four-dimensional black hole under study, we should take
+the trace over all states of a given charge with some electric potential, regardless of their
+energy. In other words we should take the limit β → 0. According to what we have found
+in this paper, we would then identify
+
+                        lim Z(p, φ; β, M ) = ZBH = |Ztop (gtop , t; M )|2,                  (5.1)
+                        β→0
+
+where
+                                             1       A   XA
+                                   gtop ∼        , t   ∼    ,
+                                            CX 0         X0
+with X’s are fixed by the attractor mechanism as
+
+                                                       φA
+                                        X A ∼ pA + i      .
+                                                        π
+  8
+      A closely related phenomenon of multiple basins of attraction was pointed out in [31,32,33].
+
+                                                17
+    Recently it was shown that the topological string partition function Ztop for a toric
+Calabi-Yau manifold is expressed in the following form [25,14],
+                                    X
+                           Ztop =       Ω(q) exp(−gtop q0 − tA qA ),
+                                    q
+
+
+where Ω(q) is an integer given by the number of configuration of a classical statistical model.
+We will find that, when pΛ = 0, the limit of the black hole entropy limβ→0 ZBH (p, φ; β, M )
+can also be brought into this form via a chain of duality transformations of Type II string
+theory. More precisely we argue that the inclusion of the anti-holomorphic contributions
+to the gauge theory description of [14] leads to |Ztop |2 instead of Ztop . More precisely we
+argue that the QFT dual of our black hole in the β → 0 and by a combination of T and S
+duality gets mapped to the same QFT as discussed in [14] where the transformed chemical
+potentials take the values given above. Thus the crystal melting ensemble is the S-dual of
+the mixed black hole ensemble.
+
+5.1. A realization of the D-brane theory for Type IIA superstrings
+
+    Consider Type IIA superstring compactified on a Calabi-Yau threefold. In order to
+formulate the partition function (4.5) in the superstring context, we take a Euclidean
+time and compactify it on a circle of radius β with periodic (supersymmetry preserving)
+boundary conditions for the fermions. We consider a system of D6 and D4 branes carrying
+magnetic charges p0 and pA , and regard D0 and D2 branes as electric excitations. The
+theory on the branes is a gauge theory, which is topologically twisted [34] to give the right
+amount of supersymmetry. Gauge theories of this type have been discussed in [35,36]. We
+will consider the case with pΛ = 0 since this will simplify some of the analysis below. In
+this context we should view the gauge theory as U (N |N ) where the lower brane charges
+are induced as excitations of this gauge theory.
+    The index (4.5) can be computed either as a trace over the QFT Hilbert space (with
+the center-of-mass degrees of freedom removed in the case of (4.5)) or by periodically
+identifying the imaginary time of Euclideanized AdS2 with period β. From the latter
+point of view, the index is given by a sum over BPS states in AdS2 . If the type IIA string
+coupling gA is small, dominant contributions would come from D0 and D2 branes carrying
+electric charges q0 and qA in the form,
+                                                 
+                                         β  β A
+                                exp − q0 −    t qA ,                                      (5.2)
+                                        gA gA
+
+                                               18
+where tA is the Kähler class measured in the type IIA string frame.
+    Let us consider the limit β → 0, where we expect the identification (5.1) works. In
+order for the D0 and D2 branes to give finite contributions, we also take gA → 0 keeping
+the ratio β/gA ≪ 1. Comparing this with the corresponding contribution in (4.5) from
+states with charges q0 , qA , we can identify the type IIA variables gA , tA with the chemical
+potentials φ0 , φA as
+                                            β         β A
+                                    φ0 =      , φA =    t .                              (5.3)
+                                           gA        gA
+The contribution of the D0 branes also suggests the identification of the type IIA string
+coupling with the topological string coupling as
+
+                                                       gA
+                                           gtop ∼         .                              (5.4)
+                                                       β
+
+    Note that this gives an alternative derivation of the attractor mechanism. As we have
+shown in section 3, X 0 , X A are related to topological string parameters as
+
+                                            1                  tA
+                                  X0 ∼            , XA ∼           .                     (5.5)
+                                           gtop               gtop
+
+Assuming (5.4), we arrive at the relation,
+
+                                            1          β
+                                 X0 ∼             ∼       = φ0 ,
+                                           gtop        gA
+                                            tA    β A
+                                 XA ∼           ∼    t = φA .
+                                           gtop   gA
+
+This reproduces the attractor values (2.15) of the moduli.
+    Note however, that in the limit of small β it is natural to do a T -duality. Taking T
+dual around the imaginary time direction gives Type IIB theory on a circle of radius 1/β
+and with string coupling gB = gA /β. As already mentioned we are interested in the limit
+β/gA ≪ 1 which implies that gB ≫ 1. Thus to get a better description of this type IIB
+theory we need to do an S-duality. After S duality gB → 1/gB . Note that under S-duality
+tI /gB → tI . By doing this S-duality the amplitudes of topological (A-model) string get
+related to amplitudes of D(-1) and D1 brane instantons in the CY. This is related to the
+fact that topological string partition function has an expansion of the form
+                                    X
+                           Ztop =        Ω(q) exp(−gtop q0 − tA qA ),                    (5.6)
+                                     q
+
+
+                                                  19
+where in the latter q0 and qA can be interpreted as the D-instanton and D1-brane contri-
+bution in the type IIB theory. This result for topological string was recently derived in
+[25,14], for toric Calabi-Yau manifolds, where it was shown that Ω(q) counts a number of
+configurations in a classical statistical model describing melting of a crystal. More pre-
+cisely Ω(q) is related to the partition function of the theory on a D5 brane wrapping the
+Calabi-Yau with fixed induced D0 and D2 brane charge–exactly the same theory which
+we have discussed as a holographic dual to the black hole. Moreover it was conjectured
+in [14] and in [37] that this relation is true for general compact Calabi-Yau as well. We
+thus find that Ω(q) is related to the number of BPS states of the black hole with p = 0.
+This relation between states of the topologically twisted theory on the brane and the topo-
+logical string partition function has been recently explained in [20] by using S-duality of
+Type IIB superstrings, which is T-dual to the S-duality we have used here.9 The relation
+(5.6) is similar the relation we are anticipating from our general analysis applied to this
+special case. Namely the right hand side of (5.6) is similar to what we have called ZBH for
+this holographic dual. However there are two important differences: This equation relates
+Zcrystal = Ztop instead of ZBH = |Ztop |2 . We believe this may be due to the fact that
+in the analysis of [14] one was specifically considering holomorphic moduli dependence of
+the holographic dual Yang-Mills theory on Calabi-Yau. But there is a more fundamental
+difference between the two ensembles: The black hole ensemble and the crystal melting
+ensemble are S-dual of one another (i.e., we have a strong/weak duality on the topological
+string coupling constant) and so there is no one to one map from a melting crystal config-
+uration to that of a black hole. Nevertheless, it would be important to study this relation
+further.
+      Note that the connection between topopological strings and topologically twisted
+Yang-Mills theory we have proposed is analogous to that of N = 2 topological Yang-
+Mills theory in 2 dimensions. In that case it is known that N = 2 topological Yang-Mills
+theory is equivalent to ordinary non-supersymmetric Yang-Mills theory [39]. Moreover the
+ordinary Yang-Mills theory has been studied in the limit of large rank [40,41,42], which is
+analogous to our semiclassical expansion of black holes, and it has been seen that it can
+be written as a square of a topological theory, which maps worldsheet Riemann surfaces
+holomorphically to the target 2d space where the Yang-Mills lives on. They find for the
+2D Yang-Mills case
+                                           ZY M = |Ztop |2 ,
+  9
+      See [38] for discussion of a related issue from a different point of view.
+
+                                                  20
+very much in the spirit of what we are predicting for the higher dimensional topologically
+twisted version of YM on CY.
+    Let us now turn to the other limit β → ∞. In this case, only ground states can
+contribute to (4.5). In order for D0 and D2 branes contribute appreciably, as is evident
+from (4.5), we need to take gA → ∞ so that gA /β stays finite. Thus, it is natural that the
+limβ→∞ Z is related to a 5d black hole computation in M theory on the Calabi-Yau space
+times a circle. This is in fact the duality explored in [3] where M2 brane degeneracies
+was connected to topological A-model strings. More precisely in this five-dimensional
+context one identifies the tA chemical potential, as the chemical potential for the M 2
+brane, and the gtop with the chemical potential for the J3 generator in SU (2)L subgroup
+of the SU (2)L × SU (2)R = SO(4) spatial rotation group in five dimensions.
+    It is natural also to ask what does the β dependence of Z mean for the black hole
+entropy. It is morally a black hole in the background of “supersymmetric temperature β1 ”
+(due to periodic fermionic boundary conditions).
+
+
+
+6. Ztop as a quantum wave function
+
+    The relation ZBH = |Ztop |2 suggests that Ztop should be interpreted as a quantum
+state and ZBH the corresponding probability amplitude. Roughly speaking, Ztop is the
+quantum amplitude for finding a black hole with charges (pΛ , qΛ ) = (Re CX Λ , Re CFΛ ).
+    This fits nicely with the discussion in [15], where it was observed that the holomorphic
+anomaly of [1] can be interpreted in a simple way if one identifies Ztop as a state in an
+“auxiliary” Hilbert space arising from geometric quantization of the moduli space MM of
+the Calabi-Yau M as a phase space: In the B-model context we define
+                                  Z                 Z
+                              Λ
+                          CX =         Ω,    CFΛ =      Ω
+                                       AΛ                     BΛ
+
+
+where AΛ , B Σ are symplectic conjugate 3-cycles and assign a commutation relation which
+in our normalizations is given by
+
+                                                      2i Λ
+                                    [CX Λ , CFΣ ] =     δ ,                            (6.1)
+                                                      π Σ
+
+or equivalently
+                                                     2i Λ
+                                    [X Λ , FΣ ] =       δ .
+                                                    πC 2 Σ
+                                              21
+The topological string amplitudes depend only on half of these variables, which we take to
+by X Λ . The choice of the background Calabi-Yau M0 which one expands about changes
+what one means by Ω and thus how one writes the Ztop (X Λ ). This dependence on M0
+was proposed in [15] to be equivalent to the holomorphic anomaly equation of [1]. This
+relation has been further elucidated recently in [43]. Note that Ztop not only depends on
+the background (whose black hole interpretation we will discuss in the next section) but it
+also depends on the choice of a symplectic basis of 3-cycles (i.e. the separation of 3-cycles
+into the A and B cycles). In this section we would like to explore, for a fixed background
+M0 the dependence of Ztop on the choice of the symplectic basis.
+       Note that (6.1) is compatible with the semiclassical statement that FΣ = ∂Σ F0 (X Λ ).
+To see this recall that in our normalization we have
+                                                          
+                               Ftop         πi 2       256
+                              e     = exp     C F X, 2
+                                            2          C
+                                                             
+                                            πi 2
+                                    = exp     C F0 (X) + · · · ,
+                                            2
+
+Note that 1/C plays the role of the topological string coupling constant gtop . Thus, rep-
+resenting
+                                                 2   ∂
+                                      FΣ = −i
+                                                πC ∂X Σ
+                                                   2
+
+acting on the topological string wave function and taking the semi-classical limit C → ∞
+(i.e., gtop → 0), we recover the classical relation FΣ = ∂Σ F0 (X Λ ).
+       In our context we also have to deal with the anti-topological sector. The same analysis
+goes through. To keeps the sign conventions compatible with our previous discussion note
+that                                      h π                      i
+                                                         Λ
+                              eF top = exp −i C̄ 2 F 0 (X ) + · · ·
+                                             2
+which is compatible with the commutation relation
+                                        Λ              2i Λ
+                                     [X , F Σ ] = −         δ                            (6.2)
+                                                      π C̄ 2 Σ
+Moreover the topological and anti-topological amplitudes are independent of one another,
+which implies that all the barred variables commute with all the unbarred variables.
+       How are these commutation relations compatible with our black hole interpretation?
+To see this recall
+                                        pΛ = Re CX Λ
+                                                    
+
+                                        qΛ = Re [CFΛ ] .
+
+                                               22
+Using the above commutation relations we learn that, as expected the electric and magnetic
+charges do commute:
+                                         [pΛ , qΣ ] = 0.
+
+This is expected because we can measure both at the same time. However, we can learn
+something new from these commutation relations: So far we have talked about electric
+chemical potentials φΛ . We could also define magnetic chemical potentials χΛ . Note that
+because of their definition one expects these to be conjugate to the corresponding charges
+(this is true if we replace sum over charges by integrals which is true to all order in string
+expansion)
+                               [φΛ , qΣ ] = δΣ
+                                             Λ
+                                                      [χΣ , pΛ ] = δΣ
+                                                                    Λ
+
+
+                                [φΛ , pΣ ] = 0        [χΣ , qΛ ] = 0
+
+For these to be compatible with the above commutation relation we are led to the unique
+choice
+                                                 i Λ
+                                      CX Λ = pΛ +  φ
+                                                 π
+                                                i
+                                      CFΛ = qL + χΛ ,
+                                                π
+which is exactly the relations we had obtained before. We thus see that the structure of
+topological string anticipates the identification of chemical potential with the imaginary
+parts of the periods.
+    Now we come to another issue which is the dependence of Ztop on the choice of the
+symplectic basis. The fact that Ztop does depend non-trivially on a choice of symplectic
+basis is perfectly compatible with the black hole interpretation of it: The choice of the
+mixed ensemble also depends on which charges we choose as electric and which ones we
+choose as magnetic. However topological string amplitudes tells us how the wave function
+Ztop changes as we change this basis. For example if we switch the role of A and B cycles,
+i.e. exchange electric and magnetic charges, the topological string partition function goes
+to its Fourier transform. What does this mean for our black hole interpretation?
+    To gain insight into this let us turn off the chemical potentials. So we have X Λ ∼
+pΛ , FΣ ∼ qΣ . Let us denote
+
+                                Ztop (X Λ ) = Ztop (pΛ ) = ψ̃(p)
+
+                                Ztop (FΣ ) = Ztop (qΣ ) = ψ(q)
+
+                                                 23
+The fact that exchanging A and B cycles conjugates the variables implies that ψ(q) and
+ψ̃(p) are Fourier transform of one another. In other words
+                                     Z
+                             ψ(q) = dp ψ̃(p) exp(2πipΛ qΛ )
+
+(note that this expression is well defined in the perturbative topological string expansion
+where q, p are not fixed to be integer).
+    Let us relate these to black hole partition function. When we set chemical potentials
+to zero we have
+                                           X
+                                 ZBH =          Ω(p, q) = |ψ̃(p)|2
+                                            q
+                                           X
+                                 ZBH =          Ω(p, q) = |ψ(q)|2
+                                            p
+
+    We can invert this relation as well. Namely, if we are given the topologial string
+amplitude ψ(q) we could ask how does this lead to Ω(p, q)? This can be done by inverting
+the relation ZBH = |Ztop |2 and we find (ignoring for simplicity the discretization of charge,
+which is fine to all orders in perturbative string expansion)
+
+                                                              χ 2
+                                    Z                   
+                          Ω(p, q) = dχ exp(−pχ) ψ q + i
+                                                              π
+
+The fact that the topological string amplitude transforms as a wavefunction, i.e. that φ(p)
+is Fourier transform of ψ(q) implies that even if we had chosen a different polarization we
+would have gotten the same answer, in other words we can also write
+                                                             2
+                                                            i
+                                      Z
+                         Ω(p, q) =        dφ exp(−qφ) ψ̃ p + φ
+                                                            π
+
+Note that this relation between Ω and ψ or φ is a bit formal, and to makes sense of it we
+have to choose a suitable contour. In fact this is the reason why Ω does not a priori have
+to be positive. It is natural to choose the contour so it looks like a Fourier transform and
+we have
+                                                        χ ∗  χ
+                                 Z                 
+                     Ω(p, q) =       dχ exp(−ipχ) ψ q +   ψ q−
+                                                        π      π
+Note that this relation implies that Ω is real, but it is not necessarily positive. We recognize
+Ω as the Wigner function associated to the wave function ψ. This is familiar in the
+reformulation of quantum mechanics as a deformation quantization (see [44] for a review
+and further references). In the context of this reformulation of quantum mechanics the
+
+                                                 24
+fact that Wigner’s function is a ‘quasi-probability distribution’ refers to the fact that Ω
+need not be positive. For us this is also the case because Ω is an index of the black
+hole. Even though the lack of positivity was a difficult thing to interpret in the context of
+Wigner’s reformulation of quantum mechanics, it is perfectly natural for us in the context
+of the relation between the black hole and topological strings: The black hole entropy is
+an indexed object.
+     These formulae are very suggestive and in need of a deeper physical explanation: Is
+black hole teaching us about a reformulation of quantum mechanics? Are the black hole
+information puzzles resolved in this new reformulation?
+
+
+
+7. Further Issues
+
+     In most of the preceding sections we have ignored important subtleties related to
+background dependence. These subtleties arise in all three pictures. In the supergrav-
+ity picture we have black hole fragmentation, in the dual CFT picture we have multiple
+Coulomb branches and in the topological string picture we have the holomorphic anomaly.
+Although we have not understood these issues in detail, we believe that they are different
+manifestations of the same thing, and that a relation of the form ZCF T = ZBH = |Ztop |2
+will survive these corrections. This section contains some preliminary discussion of these
+issues.
+
+7.1. Fragmentation and jumping lines
+
+     Usually it is assumed that the number of BPS states of a single black hole depends
+only on the charges of the black hole. However this is not quite true for the case of 4d
+BPS black holes obtained from compactification of Type II superstrings on Calabi-Yau
+threefolds. There are two main issues. The first one is that it is known that the number
+of BPS states preserving half of the N = 2 supersymmetries does not depend just on
+the charges; it was already discovered in [16] that the number of such states can jump
+as we change the moduli of the scalars in the vector multiplet. This is likely related
+to the black hole fragmentation discussed in [30] as well as the phenomenon of multiple
+basins of attraction [31,32,33]. We thus expect ZBH not only to depend on X, which
+captures the magnetic charge and the electric potentials, but also on the “background”,
+i.e. the asymptotic value of the moduli in the supergravity solution. The asymptotic
+
+                                             25
+vector multiplet background is denoted by tV . (Possible hypermultiplet dependence is also
+discussed below.)
+    Next we ask whether or not tV dependence appears in the supersymmetric index,
+
+                                                Λ
+                                    Tr′ (−)F e−φ qΛ .
+                                                  
+                                                                                       (7.1)
+
+In doing so we must specify whether the trace is over multi-black hole or single black
+hole states. The spectrum of single black hole states changes erratically as the asymptotic
+moduli cross basins of attraction or jumping lines. Hence the trace will be a discontinuous
+function of the background moduli. The other option is to include multi-black-hole states
+in the trace. However in that case the spectrum will in general have many continuous
+parameters arising from the non-compact R3 positions of the black holes (which are never-
+theless expected to yield finite answers due to the index nature of the computation). The
+index can still be defined in this context, but it will depend on the asymptotic values of
+the moduli. Hence either way we have background dependence. The best we can do is to
+define the multi-black hole index which has a smooth background dependence:
+
+                                ZBH = ZBH (pΛ , φΛ ; tV ).                             (7.2)
+
+7.2. The holomorphic anomaly
+
+    Now we come to the discussion of similar issues for the topological strings. It is known
+that the perturbative topological string partition function depends on the background they
+are expanded about. This is encoded in the holomorphic anomaly of topological strings
+[1,17]. Thus, at least perturbatively we know that
+
+                                  pert.    pert.
+                                 Ztop   = Ztop   (X Λ ; tV ).                          (7.3)
+
+This fits with the expectation on ZBH in the above. An important check would be to show
+that the tV dependence in (7.2) agrees with that of (7.3).
+
+7.3. Coulomb branches
+
+    In the dual CFT picture we have the graded partition function ZCF T of fivebranes
+with fluxes wrapping Calabi-Yau four-cycles, or D6 branes wrapping the Calabi-Yau. At
+certain points of their moduli space, the fivebranes/D6 branes can fragment and move
+apart in R3 . This again leads to dependence on tV .
+
+                                             26
+7.4. Hypermultiplets
+
+    The dependence on background vector multiplets is however not the end of the story;
+it is also known that the number of BPS states do change even as we change the hypermul-
+tiplet moduli. To give a simple example, consider Type IIA strings compactified on the
+quintic threefold. Suppose we wish to know the number of BPS D2 branes wrapping the
+basic cycle of quintic once. It is known that the number of such D2 branes does depend
+on the complex structure of the quintic. The complex structure in this case is part of the
+hypermultiplet moduli. Thus we expect that the number of BPS states to also depend
+on the background hypermultiplet moduli, which we denote by tH . In other words it is
+already known that we should expect the relevant black hole partition function to be a
+function of tH . However it is not clear whether or not this tH dependence persists when
+we consider the index. Naively one may think it disappears.
+    Some evidence that tH dependence may indeed persist is that there exist natural non-
+perturbative completions of the topological string which depend on tH . This is for example
+natural in the twistor application of topological strings [18] where the D-instantons of the
+topological string play a role. As noted in [19,20] these D-branes couple to tH , and thus
+we expect that the full non-perturbative topological string to also depend on it, in other
+words one might expect non-perturbatively
+
+                                       Ztop (X Λ ; tV , tH )
+
+    If so it would be natural to expect that our relation continues to hold even after we
+take into account these subtleties on both sides, taking the form
+
+                          ZBH (X Λ ; tV , tH ) = |Ztop (X Λ ; tV , tH )|2              (7.4)
+
+Consistency of this relation with tH -independence of perturbative topological string would
+require that the dependence of the black hole entropy on hypermultiplets is not present
+to all orders in the (1/Q) expansion, and only shows up in non-perturbative terms of the
+form exp(−Q).
+    It is also conceivable that there are other completions of topological strings which
+do not depend on tH . This would in particular require setting the D-brane contributions
+to zero by hand, as they clearly do couple to tH . If there were such alternative non-
+perturbative definitions we could imagine having
+
+                             index
+                            ZBH    (X Λ ; tV ) = |Ztop (X Λ , tV )|2 .
+
+                                                27
+The question is analogous to asking “can we define alternative definitions of topological
+Type II superstrings in which D-branes decouple?” One might think this is unlikely and
+that the tH dependence of ZBH should be there. As is clear we have just opened up a
+direction of investigation. Much more work is needed for a deeper understanding of the
+beautiful link between topological strings and black holes.
+
+
+
+                                  Acknowledgements
+    We would like to thank M. Aganagic, F. Denef, R. Dijkgraaf, M. Douglas, G. Moore,
+A. Neitzke, M. Rocek, A. van Proeyen and E. Witten for valuable discussions. The work of
+HO was supported in part by DOE grant DE-FG03-92-ER40701, that of AS was supported
+in part by DOE grant DE-FG02-96ER and that of CV was supported in part by NSF grants
+PHY-0244821 and DMS-0244464.
+
+
+
+
+                                            28
+                                      References
+
+ [1] M. Bershadsky, S. Ceccoti, H. Ooguri and C. Vafa, “Kodaira-Spencer theory of gravity
+     and exact results for quantum string amplitudes,” Commun. Math. Phys. 165, 311
+     (1994), hep-th/9309140.
+ [2] I. Antoniadis, E. Gava, K. S. Narain and T. R. Taylor, “Topological amplitudes in
+     string theory,” Nucl. Phys. B 413, 162 (1994), hep-th/9307158.
+ [3] R. Gopakumar and C. Vafa, “M-theory and topological strings, I,II,” hep-th/9809187,
+     hep-th/9812127.
+ [4] J. C. Breckenridge, R. C. Myers, A. W. Peet and C. Vafa, “D-branes and spinning
+     black holes,” Phys. Lett. B 391, 93 (1997), hep-th/9602065.
+ [5] S. Katz, A. Klemm and C. Vafa, “M-theory, topological strings and spinning black
+     holes,” Adv. Theor. Math. Phys. 3, 1445 (1999), hep-th/9910181;
+     T. J. Hollowood, A. Iqbal and C. Vafa, “Matrix models, geometric engineering and
+     elliptic genera,” hep-th/0310272 .
+ [6] S. Ferrara, R. Kallosh and A. Strominger, “N = 2 extremal black holes”, Phys. Rev.
+     D52, 512 (1995), hep-th/9508072.
+ [7] A. Strominger, “Macroscopic Entropy of N = 2 black holes,” Phys. Lett. B383 (1996)
+     39, hep-th/9602111.
+ [8] G. Lopes Cardoso, B. de Wit and T. Mohaupt, “Corrections to macroscopic super-
+     symmetric black-hole entropy,” Phys. Lett. B 451, 309 (1999), hep-th/9812082.
+ [9] G. Lopes Cardoso, B. de Wit and T. Mohaupt, “Deviations from the area law for
+     supersymmetric black holes,” Fortsch. Phys. 48, 49 (2000), hep-th/9904005.
+[10] G. Lopes Cardoso, B. de Wit and T. Mohaupt, “Macroscopic entropy formulae and
+     non-holomorphic corrections for supersymmetric black holes,” Nucl. Phys. B 567, 87
+     (2000), hep-th/9906094.
+[11] G. W. Moore, “Les Houches lectures on strings and arithmetic,” hep-th/0401049.
+[12] A. Strominger and C. Vafa, “On the microscopic origin of the Bekenstein-Hawking
+     entropy,” Phys. Lett. B379 (1996) 99, hep-th/9601029.
+[13] J. M. Maldacena, A. Strominger and E. Witten, “Black hole entropy in M-theory,”
+     JHEP 9712, 002 (1997), hep-th/9711053.
+[14] A. Iqbal, N. Nekrasov, A. Okounkov and C. Vafa, “Quantum foam and topological
+     strings,” hep-th/0312022.
+[15] E. Witten, “Quantum background independence in string theory,” hep-th/9306122.
+[16] N. Seiberg and E. Witten, “Electric-magnetic duality, monopole condensation, and
+     confinement in N = 2 supersymmetric Yang-Mills theory,” Nucl. Phys. B 426, 19
+     (1994) [Erratum-ibid. B 430, 485 (1994)], hep-th/9407087.
+[17] M. Bershadsky, S. Cecotti, H. Ooguri and C. Vafa, “Holomorphic anomalies in topo-
+     logical field theories,” Nucl. Phys. B 405, 279 (1993), hep-th/9302103.
+
+                                           29
+[18] E. Witten, “Perturbative gauge theory as a string theory in twistor space,” hep-
+     th/0312171.
+[19] A. Neitzke and C. Vafa, “N = 2 strings and the twistorial Calabi-Yau,” hep-
+     th/0402128.
+[20] N. Nekrasov, H. Ooguri and C. Vafa, “S-duality and topological strings,” hep-
+     th/0403167.
+[21] G. Lopes Cardoso, B. de Wit and T. Mohaupt, “Area law corrections from state
+     counting and supergravity,” Class. Quant. Grav. 17, 1007 (2000), hep-th/9910179.
+[22] R. M. Wald, “Black hole entropy in the Noether charge,” Phys. Rev. D 48, 3427
+     (1993), gr-qc/9307038;
+     V. Iyer and R. M. Wald, “Some properties of Noether charge and a proposal for
+     dynamical black hole entropy,” Phys. Rev. D 50, 846 (1994), gr-qc/9403028.
+[23] T. Mohaupt, “Black hole entropy, special geometry and strings,” Fortsch. Phys. 49,
+     3 (2001), hep-th/0007195.
+[24] E. Witten, “On the structure of the topological phase of two-dimensional gravity,”
+     Nucl. Phys. B 340, 281 (1990).
+[25] A. Okounkov, N. Reshetikhin and C. Vafa, “Quantum Calabi-Yau and classical crys-
+     tals,” hep-th/0309208.
+[26] E. Sokatchev, “A superspace action for N = 2 supergravity,” Phys. Lett. B 100, 466
+     (1981).
+[27] A. Strominger, “AdS2 quantum gravity and string theory,” JHEP 9901, 007 (1999)
+     hep-th/9809027.
+[28] S. Kachru, A. Klemm, W. Lerche, P. Mayr and C. Vafa, ‘Nonperturbative results on
+     the point particle limit of N = 2 heterotic string compactifications,” Nucl. Phys. B
+     459, 537 (1996), hep-th/9508155;
+     A. Klemm, W. Lerche, P. Mayr, C. Vafa and N. P. Warner, “Self-dual strings and
+     N = 2 supersymmetric field theory,” Nucl. Phys. B 477, 746 (1996), hep-th/9604034.
+[29] S. Cecotti, P. Fendley, K. A. Intriligator and C. Vafa, “A new supersymmetric index,”
+     Nucl. Phys. B 386, 405 (1992), hep-th/9204102.
+[30] J. M. Maldacena, J. Michelson and A. Strominger, “Anti-de Sitter fragmentation,”
+     JHEP 9902, 011 (1999), hep-th/9812073.
+[31] G. W. Moore, “Arithmetic and attractors,” hep-th/9807087.
+[32] G. W. Moore, “Attractors and arithmetic,” hep-th/9807056.
+[33] F. Denef, “Supergravity flows and D-brane stability,” JHEP 0008, 050 (2000), hep-
+     th/0005049.
+[34] M. Bershadsky, C. Vafa and V. Sadov, “D-branes and topological field theories,” Nucl.
+     Phys. B 463, 420 (1996), hep-th/9511222.
+[35] L. Baulieu, H. Kanno and I. M. Singer, “Special quantum field theories in eight and
+     other dimensions,” Commun. Math. Phys. 194, 149 (1998), hep-th/9704167;
+
+                                            30
+       B. S. Acharya, M. O’Loughlin and B. Spence, “Higher-dimensional analogues of
+       Donaldson-Witten theory,” Nucl. Phys. B 503, 657 (1997), hep-th/9705138;
+       M. Blau and G. Thompson, “Euclidean SYM theories by time reduction and special
+       holonomy manifolds,” Phys. Lett. B 415, 242 (1997), hep-th/9706225.
+[36]   S. Donaldson and R. Thomas, “Gauge theory in higher dimensions,” in The geometric
+       universe; science, geometry, and the work of Roger Penrose, S. Huggett et. al eds.,
+       Oxford Univ. Press. 1998.
+[37]   D. Maulik, N. Nekrasov, A. Okounkov and R. Pandharipande, “Gromov-Witten theory
+       and Donaldson-Thomas theory,” math.AG/0312059.
+[38]   A. Kapustin, “Gauge theory, topological strings, and S-duality,” hep-th/0404041.
+[39]   E. Witten, “Two-dimensional gauge theories revisited,” J. Geom. Phys. 9, 303 (1992),
+       hep-th/9204083.
+[40]   D. J. Gross, “Two-dimensional QCD as a string theory,” Nucl. Phys. B 400, 161
+       (1993), hep-th/9212149.
+[41]   D. J. Gross and W. I. Taylor, “Two-dimensional QCD is a string theory,” Nucl. Phys.
+       B 400, 181 (1993), hep-th/9301068; “Twists and Wilson loops in the string theory
+       of two-dimensional QCD,” Nucl. Phys. B 403, 395 (1993), hep-th/9303046.
+[42]   S. Cordes, G. W. Moore and S. Ramgoolam, “Large N 2-D Yang-Mills theory and
+       topological string theory,” Commun. Math. Phys. 185, 543 (1997), hep-th/9402107.
+[43]   R. Dijkgraaf, E. Verlinde and M. Vonk, “On the partition sum of the NS five-brane,”
+       hep-th/0205281.
+[44]   C. K. Zachos, “Deformation quantization: Quantum mechanics lives and works in
+       phase-space,” Int. J. Mod. Phys. A 17, 297 (2002), hep-th/0110114.
+
+
+
+
+                                             31
+

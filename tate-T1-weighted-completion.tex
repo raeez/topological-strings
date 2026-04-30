@@ -365,6 +365,247 @@ of Theorem~\ref{thm:strict-unweighted-no-go}.
   coordinate $t$.
 \end{rmk}
 
+\subsection*{Normal \(\Omega\)-weights and equivariant kernel admissibility}
+
+\begin{defn}[Equivariant finite normal window]\label{defn:wt-omega-normal-window}
+  Fix normal equivariant parameters
+  \(\epsilon_s,\epsilon_1,\epsilon_2\), with \(t\) fixed and
+  \(s,z_1,z_2\) carrying weights
+  \(\epsilon_s,\epsilon_1,\epsilon_2\).  For a finite normal/Hamiltonian
+  window \((N,M)\), write
+  \[
+    \mathsf W_{N,M}
+      =
+    \{(n,a,b)\mid 0\leq n\leq N,\ a,b\geq0,\ 1\leq a+b\leq M\}.
+  \]
+  The integer \(n\) is the total \(s\)-weight of the homogeneous normal
+  summand; if a de Rham \(ds\)-factor is present, its weight is included in
+  \(n\).  For the Hamiltonian monomial \(s^n z_1^{a}z_2^{b}\) the normal
+  character is
+  \begin{equation}\label{eq:wt-omega-hamiltonian-character}
+    \chi^H_{n,a,b}
+      =
+    n\epsilon_s+a\epsilon_1+b\epsilon_2
+  \end{equation}
+  For the residue-dual principal-part label with the same \(s\)-weight,
+  the holomorphic part has the opposite character:
+  \begin{equation}\label{eq:wt-omega-cotangent-character}
+    \chi^\vee_{n,a,b}
+      =
+    n\epsilon_s-a\epsilon_1-b\epsilon_2
+  \end{equation}
+
+  Let \(\mathsf X_{N,M}\) be the finite set of nonzero formal characters
+  among \(\chi^H_{n,a,b}\) and \(\chi^\vee_{n,a,b}\) for those homogeneous
+  summands which the normal Koszul contraction is required to move.  The
+  finite-window equivariant coefficient ring is
+  \[
+    R_{\Omega}^{N,M}
+      =
+    \C[\epsilon_s,\epsilon_1,\epsilon_2,\hbar_\omega]
+    [\chi^{-1}\mid \chi\in\mathsf X_{N,M}],
+    \qquad
+    \operatorname{wt}(\hbar_\omega)=\epsilon_1+\epsilon_2
+  \]
+  A scalar specialization of
+  \((\epsilon_s,\epsilon_1,\epsilon_2)\) is
+  \((N,M)\)-nonresonant if every \(\chi\in\mathsf X_{N,M}\) remains
+  nonzero.  It is all-window nonresonant if this holds for every
+  \((N,M)\).  If one imposes an analytic Kothe norm rather than the
+  algebraic Mittag--Leffler product topology, the stronger
+  \(q\)-moderate nonresonance condition is required:
+  there are constants \(A,Q\) such that
+  \[
+    |\chi_{n,a,b}|^{-1}\leq A\,Q^{n+a+b}
+  \]
+  for every inverted character.  Without this quantitative bound,
+  nonresonance still gives every finite-window algebraic kernel, but not
+  an analytic all-window bounded homotopy in a fixed normed scale.
+\end{defn}
+
+\begin{thm}[Equivariant weighted-kernel admissibility]\label{thm:wt-omega-kernel-admissibility}
+  Let \(w\) be a degree weight satisfying
+  Definition~\ref{defn:wt-degree-weight}.  Work in a finite normal window
+  \((N,M)\) over \(R_{\Omega}^{N,M}\), and let
+  \(\mathsf A_{N,M}\) be a homogeneous basis of the corresponding
+  Hamiltonian-plus-cotangent coefficient pair.  For
+  \(\alpha=(n,a,b,\tau)\in\mathsf A_{N,M}\), put
+  \(d(\alpha)=a+b\), let \(e_{\alpha,w}=w(d(\alpha))e_\alpha\), let
+  \(e^\alpha_{w^{-1}}=\bigl(w(d(\alpha))\bigr)^{-1}e^\alpha\), and let
+  \(\chi_\alpha\) be the character~\eqref{eq:wt-omega-hamiltonian-character}
+  for Hamiltonian labels and~\eqref{eq:wt-omega-cotangent-character} for
+  cotangent labels.
+
+  Then the equivariant diagonal coefficient Casimir
+  \begin{equation}\label{eq:wt-omega-casimir}
+    C_{\Omega,w}^{N,M}
+      =
+    \sum_{\alpha\in\mathsf A_{N,M}}
+      e_{\alpha,w}\otimes e^\alpha_{w^{-1}}
+  \end{equation}
+  is a finite-window kernel, and these kernels are compatible under the
+  normal/Hamiltonian truncation maps.  Thus the inverse system of
+  \(C_{\Omega,w}^{N,M}\)'s is a strict Mittag--Leffler diagonal Casimir in
+  the weighted coefficient category.
+
+  Suppose moreover that on each moving homogeneous normal summand there is
+  a finite-dimensional Koszul numerator \(k^{\mathrm{Kos}}_\alpha\) with
+  \[
+    Q_\Omega k^{\mathrm{Kos}}_\alpha
+      +k^{\mathrm{Kos}}_\alpha Q_\Omega
+      =
+    \chi_\alpha\,\operatorname{id}_\alpha
+  \]
+  before division by the character.  Then the normal contracting kernel
+  \begin{equation}\label{eq:wt-omega-normal-kernel}
+    H_{\Omega,w}^{N,M}
+      =
+    \sum_{\alpha\in\mathsf A^{\mathrm{mov}}_{N,M}}
+      \chi_\alpha^{-1}\,
+      e_{\alpha,w}\otimes e^\alpha_{w^{-1}}\otimes
+      k^{\mathrm{Kos}}_\alpha
+  \end{equation}
+  is a well-defined element of the finite-window weighted kernel module and
+  satisfies
+  \[
+    Q_\Omega H_{\Omega,w}^{N,M}
+      +H_{\Omega,w}^{N,M}Q_\Omega
+      =
+    \operatorname{id}-\operatorname{pr}_{\chi=0}
+  \]
+  on that window.  A character with specialized value zero is not a small
+  denominator to be regularized; it is a genuine resonant summand.  It must
+  be retained in \(\operatorname{pr}_{\chi=0}\), or the contraction does not
+  exist.
+
+  The residue and Euler normalizations do not change the diagonal Casimir.
+  They change the brane pushforward/scalar-contact normalization.  With
+  orientation sign \(\sigma_s=\pm1\),
+  \[
+    \nu_\Omega^{\mathrm{res}}=1,\qquad
+    \nu_\Omega^{\mathrm{Eu}}
+      =
+    \sigma_s\bigl(\epsilon_s\epsilon_1\epsilon_2\bigr)^{-1}.
+  \]
+  A normalized equivariant kernel row is therefore
+  \(K_{\Omega,w,\nu}^{N,M}=\nu_\Omega K_{\Omega,w}^{N,M}\).  The comparison
+  between residue and Euler conventions is the scalar map
+  \[
+    K_{\Omega,w,\mathrm{res}}^{N,M}
+      \longmapsto
+    \nu_\Omega^{\mathrm{Eu}}K_{\Omega,w,\mathrm{res}}^{N,M}.
+  \]
+  Using both conventions in one scalar-contact or trace statement without
+  this factor is exactly the normalization obstruction.
+\end{thm}
+
+\begin{proof}
+  The Casimir is finite in the window \((N,M)\).  The two diagonal weights
+  \(w(d(\alpha))\) and \(\bigl(w(d(\alpha))\bigr)^{-1}\) cancel in the
+  evaluation pairing, so the finite sum is the identity tensor on the
+  corresponding finite-dimensional coefficient quotient.  Truncating from
+  \((N,M)\) to a smaller window simply deletes the omitted homogeneous
+  labels, hence sends \(C_{\Omega,w}^{N,M}\) to the smaller-window Casimir.
+  This proves strict Mittag--Leffler compatibility.
+
+  For a moving homogeneous summand, the displayed Koszul identity gives
+  \[
+    Q_\Omega(\chi_\alpha^{-1}k^{\mathrm{Kos}}_\alpha)
+      +(\chi_\alpha^{-1}k^{\mathrm{Kos}}_\alpha)Q_\Omega
+      =
+    \operatorname{id}_\alpha
+  \]
+  after adjoining \(\chi_\alpha^{-1}\) to the coefficient ring.  Summing
+  over the finite set of moving labels gives~\eqref{eq:wt-omega-normal-kernel}
+  and the homotopy identity with the
+  unmoved zero-character projection.  If a specialized character vanishes,
+  \(\chi_\alpha^{-1}\) is not an element of the specialized coefficient
+  ring; the same equation cannot be written.  Thus resonance is precisely
+  the obstruction to moving that summand.
+
+  The last paragraph is bookkeeping in the one-dimensional scalar
+  localization line.  The residue convention fixes the formal residue
+  density and inserts no smooth normal Euler factor.  The Euler convention
+  pushes along the normal bundle with inverse equivariant Euler class
+  \(\sigma_s\bigl(\epsilon_s\epsilon_1\epsilon_2\bigr)^{-1}\).  The coefficient
+  Casimir pairs dual bases before this scalar pushforward is applied, so it
+  is unchanged.  Scalar-contact rows and trace rows are changed by
+  multiplication by the chosen \(\nu_\Omega\), which is exactly the
+  displayed comparison map.
+\end{proof}
+
+\begin{cor}[Equivariant denominators do not decide the Costello QME]\label{cor:wt-omega-denominators-qme-boundary}
+  Theorem~\ref{thm:wt-omega-kernel-admissibility} proves the coefficient
+  Casimir and the localized normal contracting kernel in the weighted
+  finite-window category.  It gives the input needed to form an
+  equivariant Costello kernel complex; it is not the vanishing theorem for
+  that complex.
+
+  Once an equivariant brane-defect Costello package is supplied, in the
+  sense of
+  Definition~\ref{def:app-normal-omega-costello-kernel-datum}, the exact
+  remaining obstruction vector is
+  \[
+    \operatorname{Ob}^{\mathrm{QME}}_{\Omega,w}
+      =
+    \left(
+      \mathcal R_{\Omega},
+      \operatorname{ob}_{\Omega,\nu},
+      \{\mathfrak s_{n,\Omega}\}_{n\geq1},
+      \{(([\mathfrak o^{\mathrm{ns}}_{n,\Omega,M}])_M,
+          \lambda_{n,\Omega})\}_{n\geq1}
+    \right).
+  \]
+  Here
+  \[
+    \mathcal R_{\Omega}^{N,M}
+      =
+    \{\alpha\in\mathsf A^{\mathrm{mov}}_{N,M}
+      \mid \chi_\alpha=0\}
+  \]
+  is the resonance obstruction to the normal contraction,
+  \(\operatorname{ob}_{\Omega,\nu}\) is the failure to use one named
+  residue/Euler normalization, \(\mathfrak s_{n,\Omega,M}\) is the scalar
+  gate
+  \[
+    \widehat\sigma_{\mathrm{sc},\Omega,M}
+      (R^{\mathrm{ns}}_{n,\Omega,M}),
+  \]
+  and
+  \[
+    ([\mathfrak o^{\mathrm{ns}}_{n,\Omega,M}])_M
+      \in
+    \varprojlim_M
+    H^1(\mathcal K^\bullet_{\mathrm{ns},\Omega,M}(I)),
+    \qquad
+    \lambda_{n,\Omega}\in
+    \varprojlim\nolimits^1_M
+    H^0(\mathcal K^\bullet_{\mathrm{ns},\Omega,M}(I))
+  \]
+  are the non-scalar cohomology and primitive-compatibility obstructions.
+  The equivariant weighted kernel package promotes to a Costello
+  brane-defect QME solution exactly on the common zero locus of this
+  vector, and only there.
+\end{cor}
+
+\begin{proof}
+  Theorem~\ref{thm:wt-omega-kernel-admissibility} supplies only
+  \(C_{\Omega,w}\), the normal denominators, and the normalization line.
+  Costello's QME is the Maurer--Cartan equation for the Hom-valued
+  brane-defect graph kernel plus local counterterms.  Therefore, after the
+  equivariant package is present, the scalar projection must first be a
+  chain projection and its scalar gate must vanish.  Only then is the
+  residual a class in the non-scalar kernel complex, and the finite-window
+  counterterm criterion is the same inverse-limit \(H^1\) and
+  \(\varprojlim^1H^0\) criterion as
+  Theorem~\ref{thm:wt-nonscalar-counterterm-criterion}, with
+  \(Q,d_M,\widehat\sigma_{\mathrm{sc}}\) replaced by their equivariant
+  versions.  Resonant normal modes and normalization mismatch occur before
+  this cohomology class is even formed.  Hence the displayed vector is
+  necessary and sufficient for the equivariant weighted-kernel construction
+  to become a QME solution.
+\end{proof}
+
 \subsection*{Renormalization-flow compatibility}
 
 The Costello RG flow on effective interactions is the assignment
@@ -926,6 +1167,1620 @@ is excluded by Theorem~\ref{thm:strict-unweighted-no-go}.
 
   Functoriality in triples is the groupoid identity proved in
   Theorem~\ref{thm:wt-transport-groupoid}.
+\end{proof}
+
+\begin{defn}[Finite-window non-scalar QME tower]
+\label{defn:wt-nonscalar-qme-tower}
+  Fix an interval \(I\), a degree weight \(w\), and a
+  regulator-admissible interaction satisfying
+  Statement~\ref{stmt:weighted-rg-acceptance-gate}.  For a finite
+  Hamiltonian window \(M\), put
+  \[
+    D_{w,\leq M}:=\prod_{d\leq M}w(d)^{-1}H_d^\vee,
+  \]
+  and define the truncated principal-part target
+  \[
+  \begin{aligned}
+    A_{\partial,\hbar}^{\mathrm{pp},w,M}(I)
+      =
+      \widehat{\mathbf S}_{\C[[\hbar]]}
+      \bigl(\Omega^\bullet_c(I)\otimes\prod_{d\leq M}w(d)H_d[[\hbar]]\bigr)
+      \widehat\otimes
+      \widehat{\mathbf S}_{\C[[\hbar]]}
+      \bigl((\mathcal D'_c(I)\widehat\otimes
+        D_{w,\leq M}[[\hbar]])[1]\bigr).
+  \end{aligned}
+  \]
+  Assume that the scalar-contact projection of
+  Problem~\ref{prob:quantum-p0-operation-realization} has been chosen
+  windowwise, commutes with truncation, and is transported by
+  \(R^M_{w,w'}\).  The finite-window non-scalar obstruction complex is
+  \[
+    \mathcal Q^\bullet_{w,M}(I)
+      =
+      \ker(\widehat\sigma_{\mathrm{sc},M})
+      \subset
+      \left(
+        \mathcal O_{\mathrm{loc}}^{\mathrm{bd}}\bigl(
+          \mathcal E_w^M|_I;
+          A_{\partial,\hbar}^{\mathrm{pp},w,M}(I)\bigr),
+        d_M
+      \right),
+  \]
+  where
+  \(d_M=Q+\{I^w_{0,M},-\}_{\hbar,M}\).  The bracket, interaction, and
+  differential are the transported finite-window structures supplied by
+  the acceptance gate; they are not naive projected Hamiltonian brackets.
+  The inverse system
+  \(\{\mathcal Q^\bullet_{w,M}(I)\}_{M\geq1}\) uses degree truncation
+  \(\pi_{M,N}\) for \(M\geq N\), together with the \(\hbar\)-adic
+  filtration, the scalar-contact filtration, and the finite-window
+  coefficient filtration.
+\end{defn}
+
+\begin{thm}[Finite-window counterterm criterion for the non-scalar QME]
+\label{thm:wt-nonscalar-counterterm-criterion}
+  Work in the tower of
+  Definition~\ref{defn:wt-nonscalar-qme-tower}.  Suppose that a
+  counterterm system has been chosen through order \(\hbar^{n-1}\), and
+  let
+  \[
+    \mathfrak o^{\mathrm{ns}}_{n,M}
+      \in Z^1\bigl(\mathcal Q^\bullet_{w,M}(I)\bigr)
+  \]
+  be the order-\(n\) non-scalar residual after those lower-order choices.
+  Equivalently, in the curved Maurer--Cartan form,
+  \[
+    \mathfrak o^{\mathrm{ns}}_{n,M}
+      =
+      [\hbar^n]\left(
+        \operatorname{Ob}^{\mathrm{red}}_{w,\partial,\hbar,M}
+        +d_MC_{<n,M}
+        +\frac12\{C_{<n,M},C_{<n,M}\}_{\hbar,M}
+      \right),
+  \]
+  with the quadratic term omitted for the linearized equation
+  \(\operatorname{Ob}^{\mathrm{red}}+d_MC=0\).  Compatible
+  order-\(n\) finite-window counterterms
+  \[
+    C_{n,M}\in\mathcal Q^0_{w,M}(I),\qquad
+    d_MC_{n,M}=-\mathfrak o^{\mathrm{ns}}_{n,M},\qquad
+    \pi_{M,N}C_{n,M}=C_{n,N},
+  \]
+  exist if and only if the following two obstructions vanish:
+  \[
+    \bigl([\mathfrak o^{\mathrm{ns}}_{n,M}]\bigr)_M
+      \in
+      \varprojlim_M H^1\bigl(\mathcal Q^\bullet_{w,M}(I)\bigr),
+  \]
+  and, after choosing any windowwise primitives
+  \(c_{n,M}\) with \(d_Mc_{n,M}=-\mathfrak o^{\mathrm{ns}}_{n,M}\), the
+  Milnor primitive-compatibility class
+  \[
+    \lambda_n\in
+      \varprojlim\nolimits^1_M
+      H^0\bigl(\mathcal Q^\bullet_{w,M}(I)\bigr)
+  \]
+  represented, after passing to cohomology, by
+  \[
+    \bigl[\pi_{M,N}c_{n,M}-c_{n,N}\bigr]\in
+      H^0\bigl(\mathcal Q^\bullet_{w,N}(I)\bigr)
+  \]
+  is zero.  If the inverse system
+  \(\{H^0(\mathcal Q^\bullet_{w,M}(I))\}_M\) is Mittag--Leffler, then
+  \(\lambda_n=0\) automatically, so windowwise vanishing of the
+  \(H^1\)-classes is sufficient.
+
+  Iterating this criterion for all \(n\geq1\) constructs an
+  \(\hbar\)-adic compatible counterterm
+  \(C_{\hbar,w}=\sum_{n\geq1}\hbar^n C_{n,w}\) in the admissible
+  finite-window inverse limit.  The transport maps \(R^M_{w,w'}\)
+  identify the obstruction pair
+  \[
+    \mathfrak O^{\mathrm{ns}}_n
+      =
+      \bigl(([\mathfrak o^{\mathrm{ns}}_{n,M}])_M,\lambda_n\bigr)
+  \]
+  for all admissible weights.  Therefore a nonzero
+  \(\mathfrak O^{\mathrm{ns}}_n\), at the first order where it occurs, is
+  the precise finite-window obstruction to killing the non-scalar QME
+  class by compatible weighted counterterms.
+\end{thm}
+
+\begin{proof}
+  The lower-order counterterms solve the QME modulo \(\hbar^n\).  Applying
+  \(d_M\) to the displayed order-\(n\) residual and using
+  \(d_M^2=0\), the graded Jacobi identity, and the lower-order equations
+  gives \(d_M\mathfrak o^{\mathrm{ns}}_{n,M}=0\).  The scalar-contact
+  projection is a chain map by
+  Definition~\ref{defn:wt-nonscalar-qme-tower}, and the balanced scalar
+  branch has zero scalar symbol, so the residual lies in
+  \(\mathcal Q^\bullet_{w,M}(I)\).
+
+  Necessity is immediate.  A compatible counterterm \(C_{n,M}\) is a
+  primitive of \(-\mathfrak o^{\mathrm{ns}}_{n,M}\), hence each
+  \(H^1\)-class vanishes.  Its truncation identities make
+  \(\pi_{M,N}C_{n,M}-C_{n,N}=0\), so the associated Milnor
+  \(\varprojlim^1 H^0\)-class is also zero.
+
+  Conversely, assume the two displayed obstructions vanish.  The first
+  condition gives primitives \(c_{n,M}\) window by window.  For
+  \(M\geq N\), the difference
+  \(\pi_{M,N}c_{n,M}-c_{n,N}\) is \(d_N\)-closed because the residuals
+  commute with truncation.  The cohomology classes of these closed
+  degree-zero differences form the standard Roos \(1\)-cocycle computing
+  \(\varprojlim^1_MH^0(\mathcal Q^\bullet_{w,M}(I))\).  Vanishing of
+  \(\lambda_n\), together with the degreewise Mittag--Leffler property of
+  the finite-window truncation tower, means that the primitives can be
+  adjusted by degree-zero cocycles and degree-zero boundaries so that the
+  adjusted primitives commute with every truncation map.  Those adjusted
+  primitives are the desired \(C_{n,M}\).  Passing to the inverse limit
+  gives \(C_{n,w}\).
+
+  The assertion about the \(H^0\)-Mittag--Leffler hypothesis is the
+  standard vanishing of \(\varprojlim^1\) for a Mittag--Leffler inverse
+  system.  Weight invariance follows from
+  Theorem~\ref{thm:wt-regulator-independence-admissible}: the maps
+  \(R^M_{w,w'}\) are cochain isomorphisms, commute with truncation, and
+  carry residuals, primitives, and their difference cocycles to the
+  corresponding data for \(w'\).
+\end{proof}
+
+\begin{defn}[Regular-density closed-exchange finite-window complex]
+\label{defn:wt-regular-density-closed-exchange-complex}
+  Work in the tower of
+  Definition~\ref{defn:wt-nonscalar-qme-tower}, and assume the
+  regular-density Costello graph habitat of
+  Proposition~\ref{prop:app-regular-density-costello-graph-kernel} on
+  every finite Hamiltonian window.  Thus the cotangent current labels are
+  restricted to
+  \[
+    \mathcal D^{\mathrm{reg}}_c(I)
+      =\{\,b(t)dt\mid b\in C^\infty_c(I)\,\},
+  \]
+  and the finite-window graph weights
+  \[
+    W^{R,\mathrm{reg},M}_{\Gamma,L}
+      (a_\bullet,b_\bullet;f_\bullet,\rho_\bullet)
+  \]
+  are renormalized brane-defect local functionals compatible with
+  interval extension, degree truncation, and admissible weight transport.
+  Let \(\mathcal G^{\bullet,\mathrm{reg}}_{w,M}(I)\) be the complete
+  filtered \(\C[[\hbar]]\)-span, inside
+  \(\mathcal Q^\bullet_{w,M}(I)\), of the scalar-zero members among these
+  graph weights and their regular-density local counterterms.  The
+  zero-internal-edge generators are the coefficient-current terms
+  \[
+    \iota_I(B^w_f(a)),\qquad
+    \iota_I(\Theta^w_\rho(b(t)dt)),
+  \]
+  whenever they have zero scalar-contact projection.
+
+  Define
+  \[
+    \mathcal X^{\bullet,\mathrm{reg}}_{w,M}(I)
+      \subset \mathcal Q^\bullet_{w,M}(I)
+  \]
+  to be the smallest complete filtered \(d_M\)-stable subspace containing
+  \(\mathcal G^{\bullet,\mathrm{reg}}_{w,M}(I)\).  Its differential is
+  \[
+    d^{X,\mathrm{reg}}_M=d_M|_{\mathcal X^{\bullet,\mathrm{reg}}_{w,M}(I)}.
+  \]
+  This is a finite-window graph complex, not the naive finite-dimensional
+  Hamiltonian Lie quotient ruled out by
+  Lemma~\ref{lem:finite-window-hamiltonian-obstruction}.  The window is a
+  coefficient-support and graph-locality condition on already constructed
+  regular-density local functionals.
+\end{defn}
+
+\begin{prop}[Regular-density construction of \(X\) and \(\Xi\)]
+\label{prop:wt-regular-density-X-Xi-construction}
+  The complexes of
+  Definition~\ref{defn:wt-regular-density-closed-exchange-complex} form an
+  inverse system
+  \[
+    \rho^{X,\mathrm{reg}}_{M,N}\colon
+    \mathcal X^{\bullet,\mathrm{reg}}_{w,M}(I)
+      \longrightarrow
+    \mathcal X^{\bullet,\mathrm{reg}}_{w,N}(I),
+    \qquad M\geq N,
+  \]
+  by restricting the finite-window truncation maps
+  \(\pi_{M,N}\) of \(\mathcal Q^\bullet_{w,M}(I)\).  The closed-exchange
+  insertion map is the degree-zero inclusion
+  \[
+    \Xi^{\mathrm{reg}}_M\colon
+    \mathcal X^{\bullet,\mathrm{reg}}_{w,M}(I)
+      \hookrightarrow
+    \mathcal Q^\bullet_{w,M}(I).
+  \]
+  It is a cochain map and satisfies
+  \[
+    \pi_{M,N}\Xi^{\mathrm{reg}}_M
+      =
+    \Xi^{\mathrm{reg}}_N\rho^{X,\mathrm{reg}}_{M,N}.
+  \]
+  For admissible weights \(w,w'\), the diagonal transports restrict to
+  cochain isomorphisms
+  \[
+    R^{M,X}_{w,w'}\colon
+    \mathcal X^{\bullet,\mathrm{reg}}_{w,M}(I)
+      \xrightarrow{\cong}
+    \mathcal X^{\bullet,\mathrm{reg}}_{w',M}(I)
+  \]
+  and intertwine the inclusions:
+  \[
+    R^M_{w,w'}\Xi^{\mathrm{reg}}_M
+      =
+    \Xi^{\mathrm{reg}}_{M,w'}R^{M,X}_{w,w'}
+  \]
+  Consequently the abstract closed-exchange criterion of
+  Theorem~\ref{thm:wt-closed-exchange-counterterm-criterion} applies to
+  the regular-density tower
+  \(\mathcal X^{\bullet,\mathrm{reg}}_{w,M}(I)\) with
+  \(\Xi_M=\Xi^{\mathrm{reg}}_M\).
+\end{prop}
+
+\begin{proof}
+  Proposition~\ref{prop:app-regular-density-costello-graph-kernel} gives
+  the finite-window identities
+  \[
+    \pi_{M,N}W^{R,\mathrm{reg},M}_{\Gamma,L}
+      =
+    W^{R,\mathrm{reg},N}_{\Gamma,L}\pi^{\mathrm{CE}}_{M,N},
+    \qquad
+    R^M_{w,w'}W^{R,\mathrm{reg},M}_{\Gamma,L}
+      =
+    W^{R,\mathrm{reg},M}_{\Gamma,L,w'}R^{M,\mathrm{CE}}_{w,w'}
+  \]
+  and the same compatibility for the regular-density counterterms.  Since
+  \(\widehat\sigma_{\mathrm{sc},M}\) is a chain map in
+  Definition~\ref{defn:wt-nonscalar-qme-tower}, its kernel
+  \(\mathcal Q^\bullet_{w,M}(I)\) is a subcomplex.  Therefore scalar-zero
+  graph weights and their \(d_M\)-closures stay in
+  \(\mathcal Q^\bullet_{w,M}(I)\).
+
+  Truncation \(\pi_{M,N}\) and weight transport \(R^M_{w,w'}\) are cochain
+  maps on the non-scalar tower.  They carry the generating regular-density
+  graph weights and counterterms to the corresponding generators in the
+  lower window or transported weight.  By minimality of the complete
+  \(d_M\)-stable subcomplex generated by these elements, they restrict to
+  the displayed maps on \(\mathcal X^{\bullet,\mathrm{reg}}\).
+
+  The map \(\Xi^{\mathrm{reg}}_M\) is inclusion of a subcomplex of
+  \(\mathcal Q^\bullet_{w,M}(I)\), hence
+  \(d_M\Xi^{\mathrm{reg}}_M=\Xi^{\mathrm{reg}}_Md^{X,\mathrm{reg}}_M\).
+  The compatibility with \(\rho^{X,\mathrm{reg}}_{M,N}\) and
+  \(R^{M,X}_{w,w'}\) is precisely the restriction of the same identities
+  on \(\mathcal Q^\bullet\).
+\end{proof}
+
+\begin{prop}[Raw kernel obstruction to a stronger cochain map]
+\label{prop:wt-raw-kappa-cochain-obstruction}
+  Let
+  \(\kappa^{\mathrm{graph,reg},M}_{\hbar,w,I}\) be the finite-window
+  regular-density graph kernel of
+  Proposition~\ref{prop:app-regular-density-costello-graph-kernel},
+  viewed as a degree-zero element of the convolution Hom from the
+  regular-density CE source to the target
+  \(\mathfrak Q^\bullet_{w,\partial,\hbar}(I)\).  If one tries to take the
+  regular-density CE source itself as the closed-exchange complex and
+  \(\Xi_M=\kappa^{\mathrm{graph,reg},M}_{\hbar,w,I}\), then the exact
+  obstruction to an ordinary cochain map into
+  \(\mathcal Q^\bullet_{w,M}(I)\) is the pair
+  \[
+    \widehat\sigma_{\mathrm{sc},M}
+      \kappa^{\mathrm{graph,reg},M}_{\hbar,w,I},
+    \qquad
+    d_{\mathbf K}\kappa^{\mathrm{graph,reg},M}_{\hbar,w,I}
+      =
+      d_M\kappa^{\mathrm{graph,reg},M}_{\hbar,w,I}
+      -
+      \kappa^{\mathrm{graph,reg},M}_{\hbar,w,I}d_{\mathrm{CE}}
+  \]
+  The first term is the obstruction to landing in
+  \(\ker\widehat\sigma_{\mathrm{sc},M}\); the second is the obstruction
+  to commuting with differentials.  If the desired closed-exchange datum
+  is required to be a \(P_{0,\hbar}\)-central-operation kernel, the
+  ordinary cochain obstruction is strengthened to the Maurer--Cartan
+  curvature
+  \[
+    \operatorname{Curv}_{\mathbf K}
+      (\kappa^{\mathrm{graph,reg},M}_{\hbar,w,I})
+      =
+      d_{\mathbf K}\kappa^{\mathrm{graph,reg},M}_{\hbar,w,I}
+      +\frac12[
+        \kappa^{\mathrm{graph,reg},M}_{\hbar,w,I},
+        \kappa^{\mathrm{graph,reg},M}_{\hbar,w,I}
+      ]_{\mathbf K}.
+  \]
+  Thus the regular-density graph layer supplies a theorem-grade
+  closed-exchange tower by the subcomplex construction above.  The
+  stronger assertion that the raw bulk-to-defect CE kernel itself is the
+  cochain map is equivalent to vanishing of the displayed scalar and
+  convolution defects, with finite-window and weight-transport
+  compatibility.
+\end{prop}
+
+\begin{proof}
+  The convolution differential is
+  \(d_{\mathbf K}T=d_MT-(-1)^{|T|}Td_{\mathrm{CE}}\).  Since
+  \(\kappa^{\mathrm{graph,reg},M}_{\hbar,w,I}\) has degree zero, the
+  displayed formula is exactly the commutator of the proposed map with the
+  two differentials.  Hence it vanishes if and only if the raw kernel is a
+  cochain map into the ambient target.  It lands in the non-scalar complex
+  precisely when its scalar-contact projection vanishes.
+
+  The bracket term is the completed convolution bracket of
+  Definition~\ref{def:app-bulk-defect-convolution-habitat}.  A
+  \(P_{0,\hbar}\)-central-operation kernel is a Maurer--Cartan element in
+  that convolution dg Lie algebra, so its exact obstruction is
+  \(d_{\mathbf K}\kappa+\frac12[\kappa,\kappa]_{\mathbf K}\).  The
+  generator-level form of this statement is the obstruction list in
+  Proposition~\ref{prop:app-nonscalar-current-lift-obstructions}.  The
+  compatibility clauses follow from the same truncation and weight-transport
+  identities used in
+  Proposition~\ref{prop:wt-regular-density-X-Xi-construction}.
+\end{proof}
+
+\begin{thm}[Closed-exchange plus counterterm criterion]
+\label{thm:wt-closed-exchange-counterterm-criterion}
+  Work in the non-scalar tower of
+  Definition~\ref{defn:wt-nonscalar-qme-tower}.  Let
+  \[
+    \rho^X_{M,N}\colon
+    \mathcal X^\bullet_{w,M}(I)\longrightarrow
+    \mathcal X^\bullet_{w,N}(I),\qquad M\geq N,
+  \]
+  be an inverse system of closed-exchange local-functional complexes, and
+  let
+  \[
+    \Xi_M\colon
+    \mathcal X^\bullet_{w,M}(I)\longrightarrow
+    \mathcal Q^\bullet_{w,M}(I)
+  \]
+  be degree-zero cochain maps satisfying
+  \[
+    \pi_{M,N}\Xi_M=\Xi_N\rho^X_{M,N}.
+  \]
+  Assume also that the closed-exchange tower and the maps \(\Xi_M\) are
+  transported by \(R^M_{w,w'}\), in the same sense as the non-scalar
+  tower.  Let
+  \[
+    \mathfrak o^{\mathrm{ns}}_{n,M}
+      \in Z^1(\mathcal Q^\bullet_{w,M}(I)),\qquad
+    \pi_{M,N}\mathfrak o^{\mathrm{ns}}_{n,M}
+      =\mathfrak o^{\mathrm{ns}}_{n,N},
+  \]
+  be the order-\(n\) residual after the lower-order choices.
+
+  For a fixed window \(M\), the branch equation
+  \[
+    \mathfrak o^{\mathrm{ns}}_{n,M}
+      +\Xi_M(W_{n,M})+d_M C_{n,M}=0,
+      \qquad
+      W_{n,M}\in Z^1(\mathcal X^\bullet_{w,M}(I)),
+      \quad C_{n,M}\in\mathcal Q^0_{w,M}(I),
+  \]
+  has a solution if and only if
+  \[
+    [\mathfrak o^{\mathrm{ns}}_{n,M}]
+      \in
+      -\,\operatorname{im}\!\left(
+        H^1(\Xi_M)\colon
+        H^1(\mathcal X^\bullet_{w,M}(I))
+        \to H^1(\mathcal Q^\bullet_{w,M}(I))
+      \right).
+  \]
+
+  In the inverse limit, put
+  \[
+    \beta^{\mathrm{cl}}_n
+      =
+      \left[\bigl([\mathfrak o^{\mathrm{ns}}_{n,M}]\bigr)_M\right]
+      \in
+      \operatorname{coker}\!\left(
+        \varprojlim_M H^1(\mathcal X^\bullet_{w,M}(I))
+        \xrightarrow{\ \varprojlim H^1(\Xi_M)\ }
+        \varprojlim_M H^1(\mathcal Q^\bullet_{w,M}(I))
+      \right).
+  \]
+  Compatible closed-exchange cocycles and compatible counterterms solving
+  \[
+    \mathfrak o^{\mathrm{ns}}_{n,M}
+      +\Xi_M(W_{n,M})+d_M C_{n,M}=0,\qquad
+    \rho^X_{M,N}W_{n,M}=W_{n,N},\quad
+    \pi_{M,N}C_{n,M}=C_{n,N},
+  \]
+  exist if and only if \(\beta^{\mathrm{cl}}_n=0\) and one can choose the
+  following secondary data with zero Roos classes.  Vanishing of
+  \(\beta^{\mathrm{cl}}_n\) is equivalent to the existence of a compatible
+  cohomology class
+  \[
+    \alpha=(\alpha_M)_M
+      \in\varprojlim_M H^1(\mathcal X^\bullet_{w,M}(I))
+  \]
+  with
+  \[
+    H^1(\Xi_M)(\alpha_M)
+      =-[\mathfrak o^{\mathrm{ns}}_{n,M}]
+      \quad\text{for every }M.
+  \]
+  For such a choice of \(\alpha\), the representative-compatibility class
+  \[
+    \mu^{\mathrm{cl}}_n(\alpha)
+      \in
+      \varprojlim\nolimits^1_M
+      H^0(\mathcal X^\bullet_{w,M}(I))
+  \]
+  vanishes.  Explicitly, choose cocycles
+  \(w_M\in Z^1(\mathcal X^\bullet_{w,M}(I))\) representing \(\alpha_M\).
+  Since \(\alpha\) is compatible, for the cofinal successor tower one can
+  choose \(u_M\in\mathcal X^0_{w,M}(I)\) with
+  \[
+    \rho^X_{M+1,M}w_{M+1}-w_M=d^X_M u_M.
+  \]
+  With the Roos convention
+  \[
+    \Delta_X((a_M)_M)
+      =
+      \bigl(\rho^X_{M+1,M}a_{M+1}-a_M\bigr)_M,
+  \]
+  the class of \(( [u_M] )_M\) in
+  \(\operatorname{coker}\Delta_X
+  =\varprojlim\nolimits^1_M H^0(\mathcal X^\bullet_{w,M}(I))\)
+  is \(\mu^{\mathrm{cl}}_n(\alpha)\).  Its vanishing is exactly the
+  condition that the representatives \(w_M\) can be changed by
+  degree-zero coboundaries to compatible cocycles \(W_{n,M}\).
+
+  After choosing such compatible \(W_{n,M}\), the counterterm
+  compatibility class
+  \[
+    \lambda^{\mathrm{cl}}_n(W)
+      \in
+      \varprojlim\nolimits^1_M
+      H^0(\mathcal Q^\bullet_{w,M}(I))
+  \]
+  vanishes.  Namely, set
+  \[
+    r_M=\mathfrak o^{\mathrm{ns}}_{n,M}+\Xi_M(W_{n,M}).
+  \]
+  The class of \(r_M\) in \(H^1(\mathcal Q^\bullet_{w,M}(I))\) is zero,
+  so choose \(c_M\in\mathcal Q^0_{w,M}(I)\) with \(d_M c_M=-r_M\).  The
+  differences
+  \[
+    \pi_{M+1,M}c_{M+1}-c_M
+      \in Z^0(\mathcal Q^\bullet_{w,M}(I))
+  \]
+  define, with the analogous Roos operator \(\Delta_Q\), the class
+  \[
+    \lambda^{\mathrm{cl}}_n(W)
+      =
+      \left[\bigl(
+      [\pi_{M+1,M}c_{M+1}-c_M]\bigr)_M\right]
+      \in\operatorname{coker}\Delta_Q
+  \]
+  This class vanishes exactly when the primitives \(c_M\) can be changed by
+  degree-zero cocycles and coboundaries to compatible counterterms
+  \(C_{n,M}\).
+
+  If the inverse system
+  \(\{H^0(\mathcal X^\bullet_{w,M}(I))\}_M\) is Mittag--Leffler, then
+  \(\mu^{\mathrm{cl}}_n(\alpha)=0\) for every admissible lift
+  \(\alpha\).  If
+  \(\{H^0(\mathcal Q^\bullet_{w,M}(I))\}_M\) is Mittag--Leffler, then
+  \(\lambda^{\mathrm{cl}}_n(W)=0\) for every compatible closed-exchange
+  representative \(W\).  Under both Mittag--Leffler hypotheses, the
+  compatible closed-exchange branch is obstructed only by
+  \(\beta^{\mathrm{cl}}_n\).  The counterterm-only criterion of
+  Theorem~\ref{thm:wt-nonscalar-counterterm-criterion} is the special case
+  \(\mathcal X^\bullet_{w,M}(I)=0\).
+  The admissible weight transports \(R^M_{w,w'}\) identify the fixed-window
+  image condition, \(\beta^{\mathrm{cl}}_n\), and the secondary Roos
+  classes for \(w\) with the corresponding data for \(w'\).
+\end{thm}
+
+\begin{proof}
+  The fixed-window statement is the cohomology calculation.  If the
+  branch equation holds, then passing to \(H^1\) gives
+  \([\mathfrak o^{\mathrm{ns}}_{n,M}]
+  =-H^1(\Xi_M)[W_{n,M}]\).  Conversely, if the displayed image condition
+  holds, choose a cocycle \(W_{n,M}\) in the closed-exchange complex whose
+  class maps to \(-[\mathfrak o^{\mathrm{ns}}_{n,M}]\).  Then
+  \(\mathfrak o^{\mathrm{ns}}_{n,M}+\Xi_M(W_{n,M})\) is a
+  \(d_M\)-boundary, so a degree-zero \(C_{n,M}\) gives the branch
+  equation.
+
+  The compatibility of the residuals and the identity
+  \(\pi_{M,N}\Xi_M=\Xi_N\rho^X_{M,N}\) make
+  \(([\mathfrak o^{\mathrm{ns}}_{n,M}])_M\) a point of
+  \(\varprojlim_M H^1(\mathcal Q^\bullet_{w,M}(I))\).  Its cokernel class
+  is zero exactly when a compatible cohomology class \(\alpha\) in the
+  closed-exchange tower maps to its negative.  This proves the first
+  inverse-limit obstruction.
+
+  Fix such an \(\alpha\).  The differences
+  \(\rho^X_{M+1,M}w_{M+1}-w_M\) are closed degree-one elements with zero
+  cohomology class, hence have the form \(d^X_M u_M\).  Changing the
+  representatives \(w_M\) by degree-zero coboundaries changes
+  \(([u_M])_M\) by the Roos coboundary \(\Delta_X\).  Thus the displayed
+  class \(\mu^{\mathrm{cl}}_n(\alpha)\) is independent of the choices.  In
+  the two-term Roos complex computing the first derived inverse limit of
+  the tower \(H^0(\mathcal X^\bullet_{w,M}(I))\), its vanishing is exactly
+  the equation needed to absorb these differences by changing
+  \(w_M\).  This gives compatible cocycles \(W_{n,M}\), and no weaker
+  condition gives such a family.
+
+  With compatible \(W_{n,M}\), the cochains
+  \(r_M=\mathfrak o^{\mathrm{ns}}_{n,M}+\Xi_M(W_{n,M})\) are compatible
+  \(d_M\)-cocycles whose windowwise \(H^1\)-classes vanish.  Choose
+  primitives \(c_M\).  Since \(\pi_{M+1,M}r_{M+1}=r_M\), the differences
+  \(\pi_{M+1,M}c_{M+1}-c_M\) are \(d_M\)-closed of degree zero.  Changing
+  the primitives by closed degree-zero cochains, and by boundaries, changes
+  their cohomology classes by the Roos coboundary \(\Delta_Q\).  Hence the
+  displayed \(\lambda^{\mathrm{cl}}_n(W)\) is independent of primitive
+  choices and vanishes exactly when the primitives can be adjusted to a
+  compatible system \(C_{n,M}\).  This system is precisely the desired
+  compatible local counterterm family.
+
+  The last paragraph is the standard vanishing of
+  \(\varprojlim^1\) for Mittag--Leffler inverse systems of vector spaces.
+  Therefore an \(H^0\)-Mittag--Leffler hypothesis on the closed-exchange
+  tower kills the representative obstruction \(\mu^{\mathrm{cl}}_n\), and
+  the corresponding hypothesis on the non-scalar counterterm tower kills
+  \(\lambda^{\mathrm{cl}}_n\).  If both hold, only the cokernel
+  \(H^1\)-class remains.  If the closed-exchange tower is zero, the
+  cokernel condition reduces to vanishing of
+  \(([\mathfrak o^{\mathrm{ns}}_{n,M}])_M\), and the only secondary class
+  is the \(\lambda_n\) of
+  Theorem~\ref{thm:wt-nonscalar-counterterm-criterion}.
+  The weight-transport assertion follows because \(R^M_{w,w'}\) is a
+  compatible cochain isomorphism on both towers and intertwines
+  \(\Xi_M\), residuals, truncation maps, cocycle representatives, and
+  primitive-difference cocycles.
+\end{proof}
+
+\begin{prop}[Regular-density quotient obstruction for the first residual]
+\label{prop:wt-Xi-reg-first-residual-quotient-obstruction}
+  Work in the regular-density tower of
+  Definition~\ref{defn:wt-regular-density-closed-exchange-complex} and
+  Proposition~\ref{prop:wt-regular-density-X-Xi-construction}.  Let
+  \(n_0\) be the first \(\hbar\)-order at which the lower-order choices
+  leave a compatible non-scalar residual
+  \[
+    \mathfrak o^{\mathrm{ns}}_{n_0,M}
+      \in Z^1\bigl(\mathcal Q^\bullet_{w,M}(I)\bigr),
+      \qquad
+    \pi_{M,N}\mathfrak o^{\mathrm{ns}}_{n_0,M}
+      =
+    \mathfrak o^{\mathrm{ns}}_{n_0,N}.
+  \]
+  Put
+  \[
+  \begin{aligned}
+    \mathcal C^{\bullet,\mathrm{reg}}_{w,M}(I)
+      &=
+    \mathcal Q^\bullet_{w,M}(I)/
+    \mathcal X^{\bullet,\mathrm{reg}}_{w,M}(I),\\
+    \bar d_M
+      &=
+    d_M\bmod
+    \mathcal X^{\bullet,\mathrm{reg}}_{w,M}(I),
+    q_M\colon
+    \mathcal Q^\bullet_{w,M}(I)
+      &\twoheadrightarrow
+    \mathcal C^{\bullet,\mathrm{reg}}_{w,M}(I).
+  \end{aligned}
+  \]
+  The maps \(\pi_{M,N}\) and \(R^M_{w,w'}\) descend to quotient cochain
+  maps on \(\mathcal C^{\bullet,\mathrm{reg}}\).  Define the finite-window
+  quotient class
+  \[
+    \eta^{\mathrm{reg}}_{n_0,M}
+      =
+    \bigl[q_M(\mathfrak o^{\mathrm{ns}}_{n_0,M})\bigr]
+      \in
+    H^1\bigl(\mathcal C^{\bullet,\mathrm{reg}}_{w,M}(I)\bigr).
+  \]
+  Then, for a fixed \(M\),
+  \[
+    [\mathfrak o^{\mathrm{ns}}_{n_0,M}]
+      \in
+    -\,\operatorname{im}H^1(\Xi^{\mathrm{reg}}_M)
+      \quad\Longleftrightarrow\quad
+    \eta^{\mathrm{reg}}_{n_0,M}=0.
+  \]
+  Equivalently, the regular-density closed-exchange branch at window
+  \(M\) is solvable exactly when the image of the residual is exact in
+  \(\mathcal Q^\bullet_{w,M}(I)/
+  \mathcal X^{\bullet,\mathrm{reg}}_{w,M}(I)\).
+
+  The compatible classes
+  \[
+    \eta^{\mathrm{reg}}_{n_0}
+      =
+    \bigl(\eta^{\mathrm{reg}}_{n_0,M}\bigr)_M
+      \in
+    \varprojlim_M
+    H^1\bigl(\mathcal C^{\bullet,\mathrm{reg}}_{w,M}(I)\bigr)
+  \]
+  are the quotient shadow of the closed-exchange obstruction
+  \[
+    \beta^{\mathrm{cl},\mathrm{reg}}_{n_0}
+      \in
+      \operatorname{coker}\!\left(
+        \varprojlim_M H^1(\mathcal X^{\bullet,\mathrm{reg}}_{w,M}(I))
+        \xrightarrow{\ \varprojlim H^1(\Xi^{\mathrm{reg}}_M)\ }
+        \varprojlim_M H^1(\mathcal Q^\bullet_{w,M}(I))
+      \right).
+  \]
+  If \(\eta^{\mathrm{reg}}_{n_0}\neq0\), then
+  \(\beta^{\mathrm{cl},\mathrm{reg}}_{n_0}\neq0\).  On the zero locus of
+  \(\eta^{\mathrm{reg}}_{n_0}\), choose windowwise classes
+  \[
+    \alpha_M\in
+    H^1(\mathcal X^{\bullet,\mathrm{reg}}_{w,M}(I)),
+    \qquad
+    H^1(\Xi^{\mathrm{reg}}_M)(\alpha_M)
+      =
+    -[\mathfrak o^{\mathrm{ns}}_{n_0,M}].
+  \]
+  Let
+  \[
+    K^{\mathrm{reg}}_M
+      =
+    \ker\!\left(
+      H^1(\Xi^{\mathrm{reg}}_M)\colon
+      H^1(\mathcal X^{\bullet,\mathrm{reg}}_{w,M}(I))
+      \to
+      H^1(\mathcal Q^\bullet_{w,M}(I))
+    \right).
+  \]
+  For the cofinal successor tower the differences
+  \[
+    \rho^{X,\mathrm{reg}}_{M+1,M}\alpha_{M+1}-\alpha_M
+      \in K^{\mathrm{reg}}_M
+  \]
+  define a Roos class
+  \[
+    \kappa^{\mathrm{reg}}_{n_0}
+      \in
+    \varprojlim\nolimits^1_M K^{\mathrm{reg}}_M.
+  \]
+  It is independent of the chosen windowwise lifts up to Roos
+  coboundary, and
+  \[
+    \beta^{\mathrm{cl},\mathrm{reg}}_{n_0}=0
+      \quad\Longleftrightarrow\quad
+    \eta^{\mathrm{reg}}_{n_0}=0
+      \ \text{and}\
+    \kappa^{\mathrm{reg}}_{n_0}=0.
+  \]
+
+  In particular, suppose the branch is restricted to a complete
+  regular-density subhabitat
+  \[
+    \mathcal Q^{\bullet,\mathrm{rd}}_{w,M}(I)
+      \subset
+    \mathcal Q^\bullet_{w,M}(I)
+  \]
+  on which
+  \[
+    \mathcal Q^{\bullet,\mathrm{rd}}_{w,M}(I)
+      =
+    \mathcal X^{\bullet,\mathrm{reg}}_{w,M}(I)
+  \]
+  compatibly with truncation and admissible weight transport, and assume
+  \(\mathfrak o^{\mathrm{ns}}_{n_0,M}\in
+  Z^1(\mathcal Q^{\bullet,\mathrm{rd}}_{w,M}(I))\) for all \(M\).  Then
+  \[
+    \beta^{\mathrm{cl},\mathrm{reg}}_{n_0}=0.
+  \]
+  The canonical compatible choice
+  \(W_{n_0,M}=-\mathfrak o^{\mathrm{ns}}_{n_0,M}\) and \(C_{n_0,M}=0\)
+  has
+  \[
+    \mu^{\mathrm{cl}}_{n_0}=0,\qquad
+    \lambda^{\mathrm{cl}}_{n_0}=0.
+  \]
+  Thus a regular-density equality
+  \(\mathcal X^{\bullet,\mathrm{reg}}=\mathcal Q^{\bullet,\mathrm{rd}}\)
+  kills the first residual only for residuals lying in that specified
+  subhabitat.  Outside it, the exact obstruction is the quotient/Roos pair
+  \((\eta^{\mathrm{reg}}_{n_0},\kappa^{\mathrm{reg}}_{n_0})\) above.
+\end{prop}
+
+\begin{proof}
+  Proposition~\ref{prop:wt-regular-density-X-Xi-construction} says that
+  \(\mathcal X^{\bullet,\mathrm{reg}}_{w,M}(I)\) is a complete
+  \(d_M\)-stable subcomplex of \(\mathcal Q^\bullet_{w,M}(I)\), and that
+  truncation and admissible weight transport preserve this subcomplex.
+  Therefore the quotient complexes and their transition maps are defined.
+  Since the residuals commute with truncation, the classes
+  \(\eta^{\mathrm{reg}}_{n_0,M}\) form an inverse-system element; weight
+  transport gives the same statement for \(w'\).
+
+  For a fixed window, the short exact sequence of complexes
+  \[
+    0\longrightarrow
+    \mathcal X^{\bullet,\mathrm{reg}}_{w,M}(I)
+    \xrightarrow{\ \Xi^{\mathrm{reg}}_M\ }
+    \mathcal Q^\bullet_{w,M}(I)
+    \xrightarrow{\ q_M\ }
+    \mathcal C^{\bullet,\mathrm{reg}}_{w,M}(I)
+    \longrightarrow0
+  \]
+  gives the long exact cohomology sequence.  Exactness at
+  \(H^1(\mathcal Q^\bullet_{w,M}(I))\) gives
+  \[
+    \operatorname{im}H^1(\Xi^{\mathrm{reg}}_M)
+      =
+    \ker H^1(q_M).
+  \]
+  The sign is irrelevant over \(\C\).  Hence the image criterion is
+  exactly the vanishing of
+  \([q_M(\mathfrak o^{\mathrm{ns}}_{n_0,M})]\).  Equivalently, if
+  \(q_M(\mathfrak o^{\mathrm{ns}}_{n_0,M})=-\bar d_M\bar C_M\), choose
+  any lift \(C_M\) of \(\bar C_M\).  Then
+  \(\mathfrak o^{\mathrm{ns}}_{n_0,M}+d_MC_M\) lies in
+  \(\mathcal X^{1,\mathrm{reg}}_{w,M}(I)\) and is closed, so
+  \(W_{n_0,M}=-(\mathfrak o^{\mathrm{ns}}_{n_0,M}+d_MC_M)\) solves the
+  branch equation.  The converse follows by applying \(q_M\) to the
+  branch equation.
+
+  Passing to the inverse limit, the quotient maps induce a map from the
+  displayed cokernel to
+  \(\varprojlim_MH^1(\mathcal C^{\bullet,\mathrm{reg}}_{w,M}(I))\), and
+  the image of \(\beta^{\mathrm{cl},\mathrm{reg}}_{n_0}\) is precisely
+  \(\eta^{\mathrm{reg}}_{n_0}\).  Thus nonvanishing of
+  \(\eta^{\mathrm{reg}}_{n_0}\) forces nonvanishing of
+  \(\beta^{\mathrm{cl},\mathrm{reg}}_{n_0}\).
+
+  Assume now \(\eta^{\mathrm{reg}}_{n_0}=0\).  Windowwise exactness gives
+  the classes \(\alpha_M\).  Since both
+  \(\rho^{X,\mathrm{reg}}_{M+1,M}\alpha_{M+1}\) and \(\alpha_M\) map to
+  \(-[\mathfrak o^{\mathrm{ns}}_{n_0,M}]\), their difference lies in
+  \(K^{\mathrm{reg}}_M\).  Changing the windowwise lift \(\alpha_M\) by
+  an element of \(K^{\mathrm{reg}}_M\) changes the difference family by
+  the Roos coboundary.  Hence the class
+  \(\kappa^{\mathrm{reg}}_{n_0}\) is well defined.  It vanishes exactly
+  when the \(\alpha_M\) can be adjusted to a compatible element of
+  \(\varprojlim_MH^1(\mathcal X^{\bullet,\mathrm{reg}}_{w,M}(I))\)
+  mapping to
+  \(-([\mathfrak o^{\mathrm{ns}}_{n_0,M}])_M\).  This is exactly the
+  vanishing of the cokernel class
+  \(\beta^{\mathrm{cl},\mathrm{reg}}_{n_0}\).
+
+  On a subhabitat
+  \(\mathcal Q^{\bullet,\mathrm{rd}}=\mathcal X^{\bullet,\mathrm{reg}}\),
+  the inclusion is the identity.  If the residual lies in that subhabitat,
+  then
+  \(W_{n_0,M}=-\mathfrak o^{\mathrm{ns}}_{n_0,M}\) is a compatible
+  \(d_M\)-cocycle in
+  \(\mathcal X^{1,\mathrm{reg}}_{w,M}(I)\), and \(C_{n_0,M}=0\) gives
+  \[
+    \mathfrak o^{\mathrm{ns}}_{n_0,M}
+      +\Xi^{\mathrm{reg}}_M(W_{n_0,M})
+      +d_MC_{n_0,M}=0.
+  \]
+  The representative differences defining
+  \(\mu^{\mathrm{cl}}_{n_0}\) are zero because the residuals are
+  compatible, and the primitive differences defining
+  \(\lambda^{\mathrm{cl}}_{n_0}\) are zero because every primitive is
+  chosen to be \(0\).  This proves the saturated regular-density claim.
+\end{proof}
+
+\begin{prop}[Actual first residual and the regular-density decision]
+\label{prop:wt-actual-first-residual-regular-density-decision}
+  The first non-scalar residual used in the closed-exchange criterion is
+  not an additional symbol.  For the chosen scalar-contact chain
+  projection, the chosen lower-order counterterms, and the finite window
+  \(M\), it is the curvature coefficient
+  \[
+    \mathfrak o^{\mathrm{ns}}_{n_0,M}
+      =
+      [\hbar^{n_0}]\left(
+        \operatorname{Ob}^{\mathrm{red}}_{w,\partial,\hbar,M}
+        +d_MC_{<n_0,M}
+        +\frac12\{C_{<n_0,M},C_{<n_0,M}\}_{\hbar,M}
+      \right)
+      \in Z^1\bigl(\mathcal Q^\bullet_{w,M}(I)\bigr),
+  \]
+  where \(n_0\) is the first order at which this compatible family is not
+  killed by the lower-order choices.  Thus the residual lies in the
+  saturated regular-density subhabitat
+  \[
+    \mathcal Q^{\bullet,\mathrm{rd}}_{w,M}(I)
+      =
+    \mathcal X^{\bullet,\mathrm{reg}}_{w,M}(I)
+  \]
+  if and only if the following regular-density residual certificate is
+  supplied for every finite window \(M\), compatibly with \(\pi_{M,N}\) and
+  \(R^M_{w,w'}\).
+  \begin{enumerate}[label=(R\arabic*)]
+    \item The displayed curvature coefficient is represented, in
+      \(\mathcal Q^1_{w,M}(I)\), by a complete filtered sum whose image in
+      every finite filtration quotient is finite:
+      \[
+        \sum_{\Gamma,\ell}
+          a_{\Gamma,\ell}\,
+          W^{R,\mathrm{reg},M}_{\Gamma,L,w}
+          (a_{\Gamma,\ell,\bullet},
+           b_{\Gamma,\ell,\bullet}dt;
+           f_{\Gamma,\ell,\bullet},
+           \rho_{\Gamma,\ell,\bullet})
+        \;+\; d_M B^{\mathrm{reg}}_{n_0,M},
+      \]
+      where all defect cotangent labels are smooth compactly supported
+      densities \(b_{\Gamma,\ell,j}(t)dt\), all coefficient labels lie in
+      degree \(\leq M\), and \(B^{\mathrm{reg}}_{n_0,M}\) is a
+      regular-density local counterterm in the graph/counterterm habitat.
+    \item The representative has zero scalar-contact projection:
+      \[
+        \widehat\sigma_{\mathrm{sc},M}
+        (\mathfrak o^{\mathrm{ns}}_{n_0,M})=0
+      \]
+    \item The equality with the curvature coefficient above holds in the
+      local-functional complex
+      \(\mathcal O_{\mathrm{loc}}^{\mathrm{bd}}
+      (\mathcal E_w^M|_I;
+      A_{\partial,\hbar}^{\mathrm{pp},w,M}(I))\), not merely after
+      applying cohomology or scalar reduction.
+    \item The representatives commute with finite-window truncation and
+      admissible weight transport:
+      \[
+        \pi_{M,N}\mathfrak o^{\mathrm{ns}}_{n_0,M}
+          =
+        \mathfrak o^{\mathrm{ns}}_{n_0,N},
+        \qquad
+        R^M_{w,w'}\mathfrak o^{\mathrm{ns}}_{n_0,M,w}
+          =
+        \mathfrak o^{\mathrm{ns}}_{n_0,M,w'}
+      \]
+  \end{enumerate}
+
+  If this certificate is supplied, then
+  \[
+    \mathfrak o^{\mathrm{ns}}_{n_0,M}
+      \in
+    Z^1\bigl(\mathcal X^{\bullet,\mathrm{reg}}_{w,M}(I)\bigr)
+  \]
+  for every \(M\).  The closed-exchange equation is solved by the explicit
+  compatible representatives
+  \[
+    W_{n_0,M}=-\mathfrak o^{\mathrm{ns}}_{n_0,M},
+    \qquad
+    C_{n_0,M}=0,
+  \]
+  and hence
+  \[
+    \eta^{\mathrm{reg}}_{n_0}=0,\qquad
+    \kappa^{\mathrm{reg}}_{n_0}=0,\qquad
+    \beta^{\mathrm{cl},\mathrm{reg}}_{n_0}=0,\qquad
+    \mu^{\mathrm{cl}}_{n_0}=0,\qquad
+    \lambda^{\mathrm{cl}}_{n_0}=0
+  \]
+  for this saturated branch.
+
+  If the certificate is not supplied, the regular-density branch is not
+  decided.  The exact computable obstruction is
+  \[
+  \begin{aligned}
+    \eta^{\mathrm{reg}}_{n_0,M}
+      &=
+    \left[
+      q_M[\hbar^{n_0}]\left(
+        \operatorname{Ob}^{\mathrm{red}}_{w,\partial,\hbar,M}
+        +d_MC_{<n_0,M}
+        +\frac12\{C_{<n_0,M},C_{<n_0,M}\}_{\hbar,M}
+      \right)
+    \right]
+      \in
+    H^1\bigl(\mathcal C^{\bullet,\mathrm{reg}}_{w,M}(I),\bar d_M\bigr).
+  \end{aligned}
+  \]
+  Computing this class requires the finite-window coefficient array of
+  \(\operatorname{Ob}^{\mathrm{red}}_{w,\partial,\hbar,M}\), the lower-order
+  counterterms \(C_{<n_0,M}\), the scalar-contact chain projection
+  \(\widehat\sigma_{\mathrm{sc},M}\), and the reduction of the displayed
+  degree-one cochain modulo the regular-density graph/counterterm
+  subcomplex.  If all these quotient classes vanish, choose quotient
+  primitives \(\bar C_{n_0,M}\) and lifts \(C_{n_0,M}\in
+  \mathcal Q^0_{w,M}(I)\) with
+  \[
+    q_M(\mathfrak o^{\mathrm{ns}}_{n_0,M}+d_MC_{n_0,M})=0.
+  \]
+  Then
+  \[
+    x_{n_0,M}:=
+    \mathfrak o^{\mathrm{ns}}_{n_0,M}+d_MC_{n_0,M}
+      \in
+    Z^1\bigl(\mathcal X^{\bullet,\mathrm{reg}}_{w,M}(I)\bigr),
+    \qquad
+    \alpha_M=[-x_{n_0,M}]
+  \]
+  is a windowwise lift of
+  \(-[\mathfrak o^{\mathrm{ns}}_{n_0,M}]\).  The remaining
+  cohomology-lift obstruction is precisely
+  \[
+    \kappa^{\mathrm{reg}}_{n_0}
+      =
+    \left[
+      \bigl(
+        \rho^{X,\mathrm{reg}}_{M+1,M}\alpha_{M+1}-\alpha_M
+      \bigr)_M
+    \right]
+      \in
+    \varprojlim\nolimits^1_M
+    \ker H^1(\Xi^{\mathrm{reg}}_M).
+  \]
+  Only after this class vanishes does the regular-density branch have a
+  compatible cohomology lift; the representative and primitive
+  compatibility classes
+  \(\mu^{\mathrm{cl}}_{n_0}\) and \(\lambda^{\mathrm{cl}}_{n_0}\) are then
+  the secondary Roos classes of
+  Theorem~\ref{thm:wt-closed-exchange-counterterm-criterion}.
+\end{prop}
+
+\begin{proof}
+  The formula for \(\mathfrak o^{\mathrm{ns}}_{n_0,M}\) is the order
+  \(n_0\) specialization of
+  Theorem~\ref{thm:wt-nonscalar-counterterm-criterion}.  The Bianchi
+  identity in the QME complex gives
+  \(d_M\mathfrak o^{\mathrm{ns}}_{n_0,M}=0\), and the chosen
+  scalar-contact chain projection places it in
+  \(\mathcal Q^\bullet_{w,M}(I)\).
+
+  Conditions (R1)--(R4) are exactly the definition of membership in the
+  complete regular-density graph/counterterm subcomplex constructed in
+  Definition~\ref{defn:wt-regular-density-closed-exchange-complex} and
+  Proposition~\ref{prop:wt-regular-density-X-Xi-construction}.  Hence the
+  certificate is equivalent to
+  \(\mathfrak o^{\mathrm{ns}}_{n_0,M}\in
+  Z^1(\mathcal X^{\bullet,\mathrm{reg}}_{w,M}(I))\) compatibly in the
+  finite-window tower.  Since
+  \(\Xi^{\mathrm{reg}}_M\) is inclusion on the saturated subhabitat,
+  \(W_{n_0,M}=-\mathfrak o^{\mathrm{ns}}_{n_0,M}\) and
+  \(C_{n_0,M}=0\) give
+  \[
+    \mathfrak o^{\mathrm{ns}}_{n_0,M}
+    +\Xi^{\mathrm{reg}}_M(W_{n_0,M})
+    +d_MC_{n_0,M}=0
+  \]
+  Compatibility of the residual family makes the Roos differences for
+  \(W\) vanish, and the zero primitives make the counterterm Roos
+  differences vanish.  This proves the displayed vanishing of
+  \(\eta\), \(\kappa\), \(\beta\), \(\mu\), and \(\lambda\).
+
+  Without the certificate, the only invariant operation supplied by the
+  constructed regular-density tower is quotienting by
+  \(\mathcal X^{\bullet,\mathrm{reg}}\).  Applying
+  Proposition~\ref{prop:wt-Xi-reg-first-residual-quotient-obstruction} to
+  the explicit curvature coefficient gives the displayed
+  \(\eta^{\mathrm{reg}}_{n_0,M}\).  Its computation needs precisely the
+  coefficient array of the curvature coefficient, the lower-order
+  counterterms entering it, the chain projection defining
+  \(\mathcal Q\), and the quotient reduction modulo
+  \(\mathcal X^{\mathrm{reg}}\).  If \(\eta^{\mathrm{reg}}_{n_0,M}=0\),
+  a quotient primitive gives
+  \(q_M(\mathfrak o^{\mathrm{ns}}_{n_0,M}+d_MC_{n_0,M})=0\), hence
+  \(x_{n_0,M}\in\mathcal X^{1,\mathrm{reg}}_{w,M}(I)\).  Closedness follows
+  from \(d_M\mathfrak o^{\mathrm{ns}}_{n_0,M}=0\) and \(d_M^2=0\).  The
+  Roos differences of the resulting cohomology classes lie in
+  \(\ker H^1(\Xi^{\mathrm{reg}}_M)\) because both terms map to
+  \(-[\mathfrak o^{\mathrm{ns}}_{n_0,M}]\).  This is exactly the
+  \(\kappa^{\mathrm{reg}}_{n_0}\) obstruction of
+  Proposition~\ref{prop:wt-Xi-reg-first-residual-quotient-obstruction}.
+\end{proof}
+
+\begin{prop}[Regular-density certificate for the evaluated curvature]
+\label{prop:wt-regular-density-curvature-certificate}
+  Work at a fixed finite window \(M\).  Assume the finite-window
+  graph/QME package of
+  Definition~\ref{defn:finite-window-graph-qme-package} is the
+  regular-density package: every cotangent defect label is
+  \(B_j=b_j(t)dt\in\mathcal D^{\mathrm{reg}}_c(I)\), the finite graph list
+  is closed under the \(d_M\)-boundary and BV-bracket terms appearing in
+  the package, and the scalar-contact projection is zero on the chosen
+  subhabitat.  Let
+  \[
+    \operatorname{Ob}^{\mathrm{red,reg}}_{w,\partial,\hbar,M}
+      =
+    \operatorname{ev}_{\mathcal G_M}
+      \operatorname{Curv}_{\mathbf K}
+      \bigl(\kappa^{\mathrm{graph,reg},M}_{\hbar,w,I}\bigr)
+      \in
+    \mathcal Q^1_{w,M}(I)
+  \]
+  be the evaluated reduced curvature of the regular-density graph kernel.
+  Suppose the lower-order counterterms are compatible and regular-density:
+  \[
+    C^{\mathrm{reg}}_{<n_0,M}
+      \in
+    \mathcal Q^{0,\mathrm{rd}}_{w,M}(I)
+      =
+    \mathcal X^{0,\mathrm{reg}}_{w,M}(I),
+    \qquad
+    \pi_{M,N}C^{\mathrm{reg}}_{<n_0,M}
+      =
+    C^{\mathrm{reg}}_{<n_0,N}.
+  \]
+  Put
+  \[
+    \mathfrak o^{\mathrm{ns,reg}}_{n_0,M}
+      =
+      [\hbar^{n_0}]\left(
+        \operatorname{Ob}^{\mathrm{red,reg}}_{w,\partial,\hbar,M}
+        +d_MC^{\mathrm{reg}}_{<n_0,M}
+        +\frac12
+          \{C^{\mathrm{reg}}_{<n_0,M},
+            C^{\mathrm{reg}}_{<n_0,M}\}_{\hbar,M}
+      \right).
+  \]
+  Then
+  \[
+    \mathfrak o^{\mathrm{ns,reg}}_{n_0,M}
+      \in
+    Z^1\bigl(\mathcal Q^{\bullet,\mathrm{rd}}_{w,M}(I)\bigr)
+      =
+    Z^1\bigl(\mathcal X^{\bullet,\mathrm{reg}}_{w,M}(I)\bigr)
+  \]
+  compatibly with finite-window truncation and admissible weight transport.
+
+  More explicitly, after expanding the finite graph package at the
+  coefficient of \(\hbar^{n_0}\), there is a finite indexing set
+  \(\mathcal A^{\mathrm{reg}}_{n_0,M}\) and coefficients
+  \(\varepsilon_{\alpha,M}\in\C\) such that
+  \[
+    \mathfrak o^{\mathrm{ns,reg}}_{n_0,M}
+      =
+    \sum_{\alpha\in\mathcal A^{\mathrm{reg}}_{n_0,M}}
+      \varepsilon_{\alpha,M}\,G^M_{\alpha,w}
+      +[\hbar^{n_0}]d_MC^{\mathrm{reg}}_{<n_0,M}
+      +\frac12[\hbar^{n_0}]
+        \{C^{\mathrm{reg}}_{<n_0,M},
+          C^{\mathrm{reg}}_{<n_0,M}\}_{\hbar,M},
+  \]
+  where each graph generator is of the form
+  \[
+    G^M_{\alpha,w}
+      =
+    W^{R,\mathrm{reg},M}_{\Gamma_\alpha,L,w}
+      (a_{\alpha,\bullet},b_{\alpha,\bullet}dt;
+       f_{\alpha,\bullet},\rho_{\alpha,\bullet}),
+    \qquad
+    b_{\alpha,j}\in C^\infty_c(I),
+  \]
+  or is one of the regular-density local counterterm generators attached
+  to such a labelled graph.  The last two displayed terms also lie in
+  \(\mathcal X^{\bullet,\mathrm{reg}}_{w,M}(I)\): the first by
+  \(d_M\)-stability, the second by the bracket-closure clause in the
+  finite-window graph/QME package.
+
+  Hence the regular-density residual certificate of
+  Proposition~\ref{prop:wt-actual-first-residual-regular-density-decision}
+  is supplied for this actual evaluated curvature.  The closed-exchange
+  solution is
+  \[
+    W_{n_0,M}
+      =
+    -\mathfrak o^{\mathrm{ns,reg}}_{n_0,M},
+    \qquad
+    C_{n_0,M}=0,
+  \]
+  and
+  \[
+    \eta^{\mathrm{reg}}_{n_0}
+      =
+    \kappa^{\mathrm{reg}}_{n_0}
+      =
+    \beta^{\mathrm{cl},\mathrm{reg}}_{n_0}
+      =
+    \mu^{\mathrm{cl}}_{n_0}
+      =
+    \lambda^{\mathrm{cl}}_{n_0}
+      =
+    0
+  \]
+  on this regular-density branch.
+
+  If the chosen curvature contains non-regular labelled data, choose any
+  linear splitting modulo
+  \(\mathcal Q^{\bullet,\mathrm{rd}}_{w,M}(I)\) and write
+  \[
+    \operatorname{Ob}^{\mathrm{red}}_{w,\partial,\hbar,M}
+      =
+    \operatorname{Ob}^{\mathrm{red,reg}}_{w,\partial,\hbar,M}
+      +
+    \operatorname{Ob}^{\mathrm{red},\neg\mathrm{rd}}_{w,\partial,\hbar,M},
+    \qquad
+    C_{<n_0,M}
+      =
+    C^{\mathrm{reg}}_{<n_0,M}
+      +
+    C^{\neg\mathrm{rd}}_{<n_0,M}.
+  \]
+  The resulting quotient class is independent of the splitting.  The
+  non-regular summand is generated exactly by graph weights
+  \[
+    W^{R,\mathrm{WF},M}_{\Gamma,L,w}
+      (a_\bullet,B_\bullet;f_\bullet,\rho_\bullet)
+      \quad\text{with some }B_j\notin\mathcal D^{\mathrm{reg}}_c(I),
+  \]
+  by the corresponding distributional current counterterms, and by
+  \(d_M\)- or BV-bracket terms involving such counterterms.  Its quotient
+  obstruction is the explicit component
+  \[
+  \begin{aligned}
+    \eta^{\mathrm{reg}}_{n_0,M}
+      =
+      \Bigl[
+      q_M[\hbar^{n_0}]\Bigl(
+        &\operatorname{Ob}^{\mathrm{red},\neg\mathrm{rd}}_{w,\partial,\hbar,M}
+        +d_MC^{\neg\mathrm{rd}}_{<n_0,M} \\
+        &+\{C^{\mathrm{reg}}_{<n_0,M},
+             C^{\neg\mathrm{rd}}_{<n_0,M}\}_{\hbar,M}
+        +\frac12
+          \{C^{\neg\mathrm{rd}}_{<n_0,M},
+             C^{\neg\mathrm{rd}}_{<n_0,M}\}_{\hbar,M}
+      \Bigr)\Bigr]
+  \end{aligned}
+  \]
+  in
+  \[
+    H^1\bigl(
+      \mathcal Q^\bullet_{w,M}(I)/
+      \mathcal X^{\bullet,\mathrm{reg}}_{w,M}(I)
+    \bigr).
+  \]
+  Thus a single wavefront-admissible but non-smooth cotangent label, or a
+  distributional current counterterm forced by such a label, is the exact
+  datum that leaves \(Q^{\mathrm{rd}}=X^{\mathrm{reg}}\).
+\end{prop}
+
+\begin{proof}
+  Proposition~\ref{prop:app-regular-density-costello-graph-kernel}
+  constructs \(W^{R,\mathrm{reg},M}_{\Gamma,L,w}\) with smooth compactly
+  supported density labels and proves compatibility with interval
+  extension, finite-window truncation, and admissible weight transport.
+  Definition~\ref{defn:wt-regular-density-closed-exchange-complex} then
+  puts all scalar-zero regular graph weights and their regular local
+  counterterms in
+  \(\mathcal X^{\bullet,\mathrm{reg}}_{w,M}(I)\), and closes this space
+  under \(d_M\).  The finite-window graph/QME package includes the
+  BV-bracket terms forced by the finite graph differential, so the
+  quadratic counterterm term remains in the same complete regular-density
+  graph/counterterm habitat.  Hence every summand in the displayed
+  \(\hbar^{n_0}\)-coefficient lies in
+  \(\mathcal X^{\bullet,\mathrm{reg}}_{w,M}(I)\).
+
+  The Bianchi identity in the convolution dg Lie algebra gives closedness
+  of the first unsolved coefficient after the lower-order equations have
+  been imposed.  The scalar projection is zero on the chosen
+  regular-density package, so this closed coefficient lies in
+  \(\mathcal Q^\bullet_{w,M}(I)\).  The same truncation and
+  weight-transport identities hold term by term for the graph weights,
+  counterterms, differential, and bracket; therefore the residuals are
+  compatible in the finite-window tower.
+
+  Since
+  \(\mathcal Q^{\bullet,\mathrm{rd}}_{w,M}(I)=
+  \mathcal X^{\bullet,\mathrm{reg}}_{w,M}(I)\) on this branch and
+  \(\Xi^{\mathrm{reg}}_M\) is inclusion, the displayed
+  \(W_{n_0,M}\) and \(C_{n_0,M}=0\) give
+  \[
+    \mathfrak o^{\mathrm{ns,reg}}_{n_0,M}
+      +\Xi^{\mathrm{reg}}_M(W_{n_0,M})
+      +d_MC_{n_0,M}=0.
+  \]
+  Compatibility of the residual family makes the closed-exchange Roos
+  differences vanish, and the primitive family is identically zero.  The
+  quotient class \(\eta^{\mathrm{reg}}_{n_0}\), the lift class
+  \(\kappa^{\mathrm{reg}}_{n_0}\), and the three closed-exchange and
+  counterterm obstruction classes therefore vanish.
+
+  For a non-regular label package, the quotient map \(q_M\) kills exactly
+  the regular-density subcomplex.  Expanding the same curvature expression
+  into regular and non-regular summands therefore leaves only the four
+  non-regular terms displayed in the formula for
+  \(\eta^{\mathrm{reg}}_{n_0,M}\): the non-regular graph curvature, the
+  \(d_M\)-image of non-regular lower counterterms, the mixed bracket with
+  a regular counterterm, and the purely non-regular bracket.  The
+  wavefront-admissible graph layer of
+  Proposition~\ref{prop:app-wavefront-admissible-costello-graph-kernel}
+  is theorem-grade as a distributional graph layer, but it is not a
+  regular-density layer when some \(B_j\notin
+  \mathcal D^{\mathrm{reg}}_c(I)\).  Such a term can enter the
+  regular-density branch only if its displayed quotient class is killed
+  by an explicit degree-zero primitive in the ambient distributional
+  quotient complex.  This proves the obstruction formula.
+\end{proof}
+
+\begin{thm}[Wavefront singular-current obstruction]
+\label{thm:wt-wavefront-singular-current-eta-obstruction}
+  Fix a finite window \(M\) and a wavefront-admissible finite graph/QME
+  package as in
+  Proposition~\ref{prop:app-wavefront-admissible-costello-graph-kernel}.
+  Put
+  \[
+    \mathcal S_c(I)
+      =
+    \mathcal D'_c(I)/\mathcal D^{\mathrm{reg}}_c(I).
+  \]
+  A non-smooth label \(B\in\mathcal D'_c(I)\) with
+  non-empty wavefront has nonzero class in \(\mathcal S_c(I)\).  Hence no
+  smoothing or finite-part prescription can give a canonical
+  regular-density representative of \(B\) modulo
+  \(\mathcal D^{\mathrm{reg}}_c(I)\): if
+  \(B-B^{\mathrm{sm}}\in\mathcal D^{\mathrm{reg}}_c(I)\) for some
+  \(B^{\mathrm{sm}}\in\mathcal D^{\mathrm{reg}}_c(I)\), then \(B\) was
+  already regular.
+
+  Let the first non-scalar wavefront residual be written as
+  \[
+    \mathfrak o^{\mathrm{ns,WF}}_{n_0,M}
+      =
+      [\hbar^{n_0}]\left(
+        \operatorname{Ob}^{\mathrm{red,WF}}_{w,\partial,\hbar,M}
+        +d_MC^{\mathrm{WF}}_{<n_0,M}
+        +\frac12
+          \{C^{\mathrm{WF}}_{<n_0,M},
+            C^{\mathrm{WF}}_{<n_0,M}\}_{\hbar,M}
+      \right)
+      \in Z^1\bigl(\mathcal Q^\bullet_{w,M}(I)\bigr),
+  \]
+  with at least one cotangent label in
+  \(\mathcal D'_{c,\mathrm{WF}}(I;\Gamma,M)\setminus
+  \mathcal D^{\mathrm{reg}}_c(I)\) or at least one distributional
+  current counterterm.  Its singular-current component is
+  \begin{equation}\label{eq:wt-wavefront-singular-component}
+  \begin{aligned}
+    \mathfrak s^{\mathrm{WF}}_{n_0,M}
+      =
+      q_M[\hbar^{n_0}]\Bigl(
+        &\operatorname{Ob}^{\mathrm{red},\neg\mathrm{rd}}_{w,\partial,\hbar,M}
+        +d_MC^{\neg\mathrm{rd}}_{<n_0,M} \\
+        &+\{C^{\mathrm{reg}}_{<n_0,M},
+             C^{\neg\mathrm{rd}}_{<n_0,M}\}_{\hbar,M}
+        +\frac12
+          \{C^{\neg\mathrm{rd}}_{<n_0,M},
+             C^{\neg\mathrm{rd}}_{<n_0,M}\}_{\hbar,M}
+      \Bigr)
+      \in
+      \mathcal C^{1,\mathrm{reg}}_{w,M}(I),
+  \end{aligned}
+  \end{equation}
+  where
+  \[
+    \mathcal C^{\bullet,\mathrm{reg}}_{w,M}(I)
+      =
+    \mathcal Q^\bullet_{w,M}(I)/
+    \mathcal X^{\bullet,\mathrm{reg}}_{w,M}(I).
+  \]
+  The obstruction class is exactly
+  \[
+    \eta^{\mathrm{reg}}_{n_0,M}
+      =
+    [\mathfrak s^{\mathrm{WF}}_{n_0,M}]
+      \in
+    H^1\bigl(\mathcal C^{\bullet,\mathrm{reg}}_{w,M}(I)\bigr).
+  \]
+
+  More concretely, for a graph summand
+  \(W^{R,\mathrm{WF},M}_{\Gamma,L,w}
+  (a_\bullet,B_\bullet;f_\bullet,\rho_\bullet)\), choose arbitrary smooth
+  densities \(B_j^{\mathrm{sm}}\in\mathcal D^{\mathrm{reg}}_c(I)\) and put
+  \(S_j=B_j-B_j^{\mathrm{sm}}\).  By multilinearity,
+  \[
+  \begin{aligned}
+    q_M W^{R,\mathrm{WF},M}_{\Gamma,L,w}
+      (a_\bullet,B_\bullet;f_\bullet,\rho_\bullet)
+      =
+    q_M\sum_{\emptyset\neq J\subset\{1,\ldots,r\}}
+      W^{R,\mathrm{WF},M}_{\Gamma,L,w}
+      (a_\bullet,B^J_\bullet;f_\bullet,\rho_\bullet),
+  \end{aligned}
+  \]
+  where \(B^J_j=S_j\) for \(j\in J\) and
+  \(B^J_j=B^{\mathrm{sm}}_j\) for \(j\notin J\).  This expression is
+  independent of the chosen smooth densities after passing to
+  \(\mathcal C^{\bullet,\mathrm{reg}}_{w,M}(I)\).  The zero-internal-edge
+  case, whenever the generator lies in the non-scalar kernel, is the
+  current class
+  \[
+    q_M\iota_I(\Theta^w_\rho(B))
+      =
+    [B]\otimes\rho
+      \in
+    \mathcal S_c(I)\widehat\otimes D_{w,\leq M},
+  \]
+  so a singular cotangent current with nonzero coefficient is already a
+  nonzero regular-density quotient generator.
+
+  The wavefront of \(\mathfrak s^{\mathrm{WF}}_{n_0,M}\) is contained in
+  the finite union obtained from the graph pushforward of
+  \[
+    \operatorname{WF}(K^M_{\Gamma,\alpha})
+      +\operatorname{WF}(B_\Gamma)
+  \]
+  over the Hadamard coefficients appearing at order \(n_0\), together with
+  the local counterterm wavefronts supported on
+  \[
+    \bigcup_{\Delta\in\operatorname{Diag}(\Gamma)}
+      \Delta\cap\operatorname{supp}(B_\Gamma).
+  \]
+  Thus the component in~\eqref{eq:wt-wavefront-singular-component} is the
+  exact wavefront/counterterm component left after quotienting by the
+  regular-density graph complex.
+
+  A finite-window counterterm kills the non-regular branch if and only if
+  there is a degree-zero distributional counterterm
+  \(C^{\mathrm{sing}}_{n_0,M}\in\mathcal Q^0_{w,M}(I)\) such that
+  \[
+    \bar d_M\,q_M(C^{\mathrm{sing}}_{n_0,M})
+      =
+    -\,\mathfrak s^{\mathrm{WF}}_{n_0,M}.
+  \]
+  In that case
+  \(\eta^{\mathrm{reg}}_{n_0,M}=0\), and the remaining compatibility
+  obstruction is the Roos class
+  \(\kappa^{\mathrm{reg}}_{n_0}\) of
+  Proposition~\ref{prop:wt-Xi-reg-first-residual-quotient-obstruction}.
+  If no such distributional primitive exists, then
+  \[
+    \eta^{\mathrm{reg}}_{n_0,M}\neq0,
+  \]
+  and the regular-density closed-exchange branch cannot be repaired by a
+  smoothing prescription.  The only honest enlargement is a new
+  wavefront-labelled closed-exchange complex; it is not
+  \(\mathcal X^{\bullet,\mathrm{reg}}\).
+\end{thm}
+
+\begin{proof}
+  A compactly supported smooth density has empty wavefront set.  Therefore
+  a compactly supported distribution with non-empty wavefront cannot differ
+  from a smooth density by another smooth density.  This proves the
+  label-level obstruction to canonical smoothing.  The zero-internal-edge
+  generator shows that this obstruction is already visible in the current
+  target: \(\Theta^w_\rho(B)\) records the distribution \(B\) linearly in
+  \(\mathcal D'_c(I)\widehat\otimes D_{w,\leq M}\), and the quotient by
+  \(\mathcal X^{\bullet,\mathrm{reg}}\) kills only the smooth-density
+  subspace.
+
+  Proposition~\ref{prop:app-wavefront-admissible-costello-graph-kernel}
+  constructs the finite-window wavefront graph weights and the
+  corresponding distributional current counterterms.  The regular-density
+  subcomplex of
+  Definition~\ref{defn:wt-regular-density-closed-exchange-complex} contains
+  exactly the smooth-label graph weights, their regular counterterms, and
+  their \(d_M\)-closures.  Hence applying \(q_M\) to the first residual
+  removes precisely the regular-density terms and leaves the four
+  non-regular terms displayed in
+  Formula~\eqref{eq:wt-wavefront-singular-component}.  Changing the auxiliary
+  smooth densities \(B_j^{\mathrm{sm}}\) changes the expansion only by
+  graph terms with all labels smooth; these lie in
+  \(\mathcal X^{\bullet,\mathrm{reg}}\), so the quotient expression is
+  independent of the splitting.
+
+  Closedness follows from the same Bianchi identity used in
+  Proposition~\ref{prop:wt-regular-density-curvature-certificate}, after
+  passing to the quotient complex.  The wavefront and support containment
+  is exactly the H\"ormander product and extension statement in
+  Proposition~\ref{prop:app-wavefront-admissible-costello-graph-kernel}:
+  graph terms have wavefront contained in the pushforward of the product
+  wavefronts, and local extension ambiguities are supported on the
+  collision diagonals meeting \(\operatorname{supp}(B_\Gamma)\).
+
+  Finally,
+  \(H^1(\mathcal C^{\bullet,\mathrm{reg}}_{w,M}(I),\bar d_M)\) is the
+  cohomology of the quotient complex.  Therefore the class represented by
+  \(\mathfrak s^{\mathrm{WF}}_{n_0,M}\) vanishes exactly when it is a
+  \(\bar d_M\)-boundary, equivalently exactly when a degree-zero
+  distributional counterterm \(C^{\mathrm{sing}}_{n_0,M}\) with the
+  displayed equation exists.  If it is not a boundary, the quotient
+  obstruction \(\eta^{\mathrm{reg}}_{n_0,M}\) is nonzero and the
+  regular-density branch is obstructed.
+\end{proof}
+
+\begin{thm}[Distributional primitive cone for the wavefront quotient]
+\label{thm:wt-wavefront-distributional-primitive-cone}
+  Keep the hypotheses and notation of
+  Theorem~\ref{thm:wt-wavefront-singular-current-eta-obstruction}, and
+  assume that the chosen wavefront graph/QME packages are compatible under
+  finite-window truncation and admissible weight transport.  Thus
+  \[
+    \pi_{M,N}\mathfrak o^{\mathrm{ns,WF}}_{n_0,M}
+      =
+    \mathfrak o^{\mathrm{ns,WF}}_{n_0,N},
+    \qquad
+    R^M_{w,w'}\mathfrak o^{\mathrm{ns,WF}}_{n_0,M,w}
+      =
+    \mathfrak o^{\mathrm{ns,WF}}_{n_0,M,w'} .
+  \]
+  Let
+  \[
+    \widehat{\mathfrak s}^{\mathrm{WF}}_{n_0,M}
+      :=
+    \mathfrak o^{\mathrm{ns,WF}}_{n_0,M}
+      \in Z^1\bigl(\mathcal Q^\bullet_{w,M}(I)\bigr)
+  \]
+  be the closed residual lift of
+  \(\mathfrak s^{\mathrm{WF}}_{n_0,M}\), so that
+  \(q_M\widehat{\mathfrak s}^{\mathrm{WF}}_{n_0,M}
+  =\mathfrak s^{\mathrm{WF}}_{n_0,M}\).
+
+  Define the local wavefront-primitive extension by
+  \[
+    \widetilde{\mathcal Q}^{\bullet,\mathrm{WFpr}}_{w,M}(I)
+      =
+    \mathcal Q^\bullet_{w,M}(I)
+      \widehat{\oplus}
+    \C[[\hbar]]\cdot p^{\mathrm{WF}}_{n_0,M},
+    \qquad |p^{\mathrm{WF}}_{n_0,M}|=0,
+  \]
+  completed in the same \(\hbar\)-adic, scalar-contact, and
+  finite-window filtrations as \(\mathcal Q^\bullet_{w,M}(I)\).  The new
+  generator is placed in \(\hbar\)-order \(n_0\), in the scalar-contact
+  filtration of \(\widehat{\mathfrak s}^{\mathrm{WF}}_{n_0,M}\), and with
+  local support and wavefront label equal to the support and wavefront
+  cone displayed in
+  Theorem~\ref{thm:wt-wavefront-singular-current-eta-obstruction}.  Set
+  \[
+    \widetilde d_M|_{\mathcal Q}=d_M,\qquad
+    \widetilde d_Mp^{\mathrm{WF}}_{n_0,M}
+      =
+    -\,\widehat{\mathfrak s}^{\mathrm{WF}}_{n_0,M}.
+  \]
+  Let
+  \[
+    \widetilde{\mathcal C}^{\bullet,\mathrm{reg}}_{w,M}(I)
+      =
+    \widetilde{\mathcal Q}^{\bullet,\mathrm{WFpr}}_{w,M}(I)/
+    \mathcal X^{\bullet,\mathrm{reg}}_{w,M}(I),
+  \]
+  and write again \(q_M\) for the quotient map and
+  \(\bar d_M\) for the induced differential.  Then
+  \(\widetilde d_M^2=0\), the inclusion
+  \(\mathcal Q^\bullet_{w,M}(I)\hookrightarrow
+  \widetilde{\mathcal Q}^{\bullet,\mathrm{WFpr}}_{w,M}(I)\) is a
+  filtered cochain map, and the element
+  \[
+    C^{\mathrm{sing}}_{n_0,M}:=p^{\mathrm{WF}}_{n_0,M}
+  \]
+  satisfies the desired quotient primitive equation
+  \[
+    \bar d_Mq_M(C^{\mathrm{sing}}_{n_0,M})
+      =
+    -\,\mathfrak s^{\mathrm{WF}}_{n_0,M}.
+  \]
+
+  The extension is strict Mittag--Leffler on compatible finite-window
+  towers: define
+  \[
+    \widetilde\pi_{M,N}p^{\mathrm{WF}}_{n_0,M}
+      =
+    p^{\mathrm{WF}}_{n_0,N}
+  \]
+  and let \(\widetilde\pi_{M,N}\) be \(\pi_{M,N}\) on
+  \(\mathcal Q^\bullet_{w,M}(I)\).  For admissible weights set
+  \[
+    \widetilde R^M_{w,w'}p^{\mathrm{WF}}_{n_0,M,w}
+      =
+    p^{\mathrm{WF}}_{n_0,M,w'}
+  \]
+  and let \(\widetilde R^M_{w,w'}\) be \(R^M_{w,w'}\) on
+  \(\mathcal Q^\bullet_{w,M}(I)\).  These maps are continuous filtered
+  cochain maps and commute with the quotient to
+  \(\widetilde{\mathcal C}^{\bullet,\mathrm{reg}}\).
+
+  This theorem is an extension theorem.  It does not say that
+  \(p^{\mathrm{WF}}_{n_0,M}\) belongs to the original Costello
+  counterterm complex, and it does not identify a singular current with a
+  smooth density.  Inside the original complex
+  \(\mathcal Q^\bullet_{w,M}(I)\), existence of a primitive remains
+  exactly the vanishing condition
+  \(\eta^{\mathrm{reg}}_{n_0,M}=0\) of
+  Theorem~\ref{thm:wt-wavefront-singular-current-eta-obstruction}.
+\end{thm}
+
+\begin{proof}
+  The residual
+  \(\widehat{\mathfrak s}^{\mathrm{WF}}_{n_0,M}\) is \(d_M\)-closed by the
+  Bianchi identity used in
+  Theorem~\ref{thm:wt-wavefront-singular-current-eta-obstruction}.  Hence
+  \[
+    \widetilde d_M^2p^{\mathrm{WF}}_{n_0,M}
+      =
+    -\,d_M\widehat{\mathfrak s}^{\mathrm{WF}}_{n_0,M}=0,
+  \]
+  and \(\widetilde d_M^2=0\) on the old summand because \(d_M^2=0\).
+  The image of the new generator has the same local support,
+  wavefront cone, \(\hbar\)-order, scalar-contact order, and finite
+  coefficient window assigned to the generator.  Therefore the
+  differential is continuous for the completed filtration topology.
+
+  Since
+  \(q_M\widehat{\mathfrak s}^{\mathrm{WF}}_{n_0,M}
+  =\mathfrak s^{\mathrm{WF}}_{n_0,M}\), applying the quotient map to the
+  defining differential gives
+  \[
+    \bar d_Mq_M(p^{\mathrm{WF}}_{n_0,M})
+      =
+    q_M\widetilde d_Mp^{\mathrm{WF}}_{n_0,M}
+      =
+    -\,\mathfrak s^{\mathrm{WF}}_{n_0,M}.
+  \]
+  This is the displayed primitive equation.
+
+  The truncation and weight-transport formulas are cochain identities
+  because the closed residual lifts are compatible:
+  \[
+    \widetilde\pi_{M,N}\widetilde d_Mp^{\mathrm{WF}}_{n_0,M}
+      =
+    -\,\pi_{M,N}\widehat{\mathfrak s}^{\mathrm{WF}}_{n_0,M}
+      =
+    -\,\widehat{\mathfrak s}^{\mathrm{WF}}_{n_0,N}
+      =
+    \widetilde d_N\widetilde\pi_{M,N}p^{\mathrm{WF}}_{n_0,M},
+  \]
+  and similarly
+  \[
+    \widetilde R^M_{w,w'}\widetilde d_Mp^{\mathrm{WF}}_{n_0,M,w}
+      =
+    -\,R^M_{w,w'}\widehat{\mathfrak s}^{\mathrm{WF}}_{n_0,M,w}
+      =
+    -\,\widehat{\mathfrak s}^{\mathrm{WF}}_{n_0,M,w'}
+      =
+    \widetilde d_M\widetilde R^M_{w,w'}
+      p^{\mathrm{WF}}_{n_0,M,w}.
+  \]
+  On the old summand these are the already proved identities for
+  \(\mathcal Q^\bullet_{w,M}(I)\).  The transition maps are surjective on
+  the single new generator and are the old strict Mittag--Leffler maps on
+  \(\mathcal Q\), so the extended tower is again strict
+  Mittag--Leffler.  The same formulas descend to the quotient because
+  \(\mathcal X^{\bullet,\mathrm{reg}}\) is preserved by truncation and
+  weight transport.
+
+  The last assertion is formal.  The construction adjoins a new
+  degree-zero generator whose differential is the closed wavefront
+  residual.  It leaves the quotient
+  \(\mathcal D'_c(I)/\mathcal D^{\mathrm{reg}}_c(I)\) unchanged on the
+  original current labels, and therefore does not smooth a singular
+  distribution.  If the new generator is not adjoined, the primitive
+  equation is precisely the statement that
+  \(\mathfrak s^{\mathrm{WF}}_{n_0,M}\) is a boundary in the original
+  quotient complex, i.e. that
+  \(\eta^{\mathrm{reg}}_{n_0,M}\) vanishes.
+\end{proof}
+
+\begin{cor}[Finite-window machinery does not by itself kill the non-scalar class]
+\label{cor:wt-finite-window-nonscalar-boundary}
+  The weighted Tate construction supplies the coefficient kernel,
+  graphwise Hadamard control, Mittag--Leffler transport, and
+  regulator-independence inside the admissible finite-window sector.  It
+  constructs non-scalar QME counterterms exactly on the vanishing locus of
+  the obstruction vector
+  \(\{\mathfrak O^{\mathrm{ns}}_n\}_{n\geq1}\) of
+  Theorem~\ref{thm:wt-nonscalar-counterterm-criterion}.  If some
+  \(\mathfrak O^{\mathrm{ns}}_n\) is nonzero, the non-scalar class in
+  \[
+    H^1(\ker\widehat\sigma_{\mathrm{sc}},d_{\mathrm{QME}})
+  \]
+  remains.  The obstruction is not removed by changing admissible weight
+  and is not an endpoint effect of the strict product/direct-sum Tate
+  pair.
+\end{cor}
+
+\begin{proof}
+  The first sentence is the content of
+  Theorems~\ref{thm:wt-cotangent-lift},
+  \ref{thm:hadamard-mittag-leffler}, and
+  \ref{thm:wt-regulator-independence-admissible}.  The second and third
+  sentences are exactly the equivalence and weight-transport statement of
+  Theorem~\ref{thm:wt-nonscalar-counterterm-criterion}.  The strict
+  endpoint obstruction is separate and is treated in
+  Theorem~\ref{thm:strict-unweighted-no-go}.
 \end{proof}
 
 \begin{thm}[Strict unweighted endpoint obstruction]

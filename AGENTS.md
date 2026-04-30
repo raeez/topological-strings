@@ -10,11 +10,17 @@
 
 ## What this repository is for
 
-This repository is an instrument for advancing human mathematical
-knowledge around Kodaira-Spencer gravity, BCOV-style topological string
-amplitudes, twisted M-theory motivation, open/closed string field
-theory, and Koszul-duality checks between brane operator algebras and
-closed-string observables.
+This repository is an instrument for advancing the formal-local mixed
+holomorphic-topological string field theory on
+\[
+  \mathbb R^2_{\mathrm{top}}\times \mathbb C^2_{\mathrm{hol}}.
+\]
+The active manuscript concerns the local Hamiltonian/Kodaira-Spencer
+holomorphic sector, the topological de Rham sector, defect/brane
+operator algebras, BV/QME complexes, Koszul-duality checks, and
+Weyl/Moyal/radial-parts computations.  BCOV and Kodaira-Spencer gravity
+are source conventions and physical motivation; compact Calabi-Yau
+threefold theory is not the base geometry of the paper.
 
 Every read, grep, edit, computation, proof repair, or retraction should
 serve the manuscript `main.tex`: make the open-string Ext algebra,
@@ -24,10 +30,17 @@ line by line.
 
 ## The mathematics you are working on
 
-- Kodaira-Spencer gravity and BCOV quantum amplitudes.
-- Topological A/B and mixed A-B models, branes, Ext algebras, and
+- Mixed holomorphic-topological SFT on
+  `\mathbb R^2_{\mathrm{top}}\times\mathbb C^2_{\mathrm{hol}}`.
+- The local holomorphic symplectic / Hamiltonian
+  Kodaira-Spencer-type sector on `\mathbb C^2`, with the fixed local
+  holomorphic volume form supplying BV pairing and divergence data.
+- The native holomorphic `E_2` / factorization algebra on the complex
+  surface `\mathbb C^2`, distinct from any curve vertex algebra.
+- Topological A/B and mixed A-B local models, branes, Ext algebras, and
   open string field theory.
-- Twisted M-theory motivation on `\mathbb R \times X`.
+- Twisted M-theory motivation only where it reduces to the same local
+  mixed HT model.
 - Koszul duality between brane-side algebras and closed-string
   observables in the large-N limit.
 - Loday-Quillen-Tsygan style comparison between matrix Lie algebra
@@ -45,7 +58,11 @@ line by line.
 - A quantum correction verified by direct local computation and a
   primary-source comparison.
 - A healed statement whose natural hypotheses prevent false transfer into
-  the CY-to-chiral, BKM, or Igusa-cusp-form repositories.
+  compact Calabi-Yau, CY-to-chiral, BKM, CoHA, quintic, OSV/GV, or
+  Igusa-cusp-form repositories.
+- A correction that removes compact-CY evidence from the core local
+  theorem surface unless an explicit matched-conventions theorem is
+  being proved.
 
 ## Agent rules
 
@@ -60,7 +77,62 @@ line by line.
    motivation separately from proved algebraic statements.
 7. User-authorized large swarms are permitted and should be run with
    disjoint scopes, explicit integration ownership, and deep semantic
-   merge discipline across all relevant research repositories.
+   merge discipline across relevant research repositories only when the
+   claim genuinely crosses those repositories.
+
+8. Do not spend attack-heal proof budget on compact-CY, quintic,
+   OSV/GV, Abel-Jacobi, CoHA, Igusa, or BKM fixtures for this paper
+   unless the user explicitly reopens a global comparison lane.  In the
+   core manuscript, the Calabi-Yau input is local unimodularity on
+   `\mathbb C^2`: holomorphic volume, BV pairing, divergence-free
+   Hamiltonians, and cyclic traces.
+9. Do not treat Volume II's `\mathbb C\times\mathbb R` chiral/topological
+   apparatus as the native geometry of this paper.  Curve chiral
+   algebras, Zhu algebras, and `SC_{ch,top}` comparisons require a
+   controlled reduction from
+   `\mathbb R^2_{\mathrm{top}}\times\mathbb C^2_{\mathrm{hol}}`,
+   retaining the `z_2` mode or principal-part coefficient system and
+   proving the pushed-forward bracket, BV pairing, brane image, and
+   anomaly data.
+10. For Omega-background work, use the brane-preserving normal scaling
+    torus on `N_LX = R_s \oplus C_{z_1}\oplus C_{z_2}` with `t` fixed.
+    Do not call a literal rotation in the `(t,s)`-plane native unless a
+    different brane/fixed-locus problem has been explicitly defined.
+    The theorem surface must include `Q_\Omega=Q+\iota_{V_\Omega}`,
+    `Q_\Omega^2=L_{V_\Omega}`, normal-weight contraction, residue/Euler
+    normalization, and stratified factorization data.
+
+11. The late 2026-04-30 theorem-control predicates are binding before
+    theorem work: native `\mathbb C^2` holomorphic `E_2` taxonomy before
+    curve reduction; BMK one-pair pro-Matlis retract is not strict
+    native all-window support-local current transfer, whose obstruction
+    is `\operatorname{Ob}^{\Pi}_{\mathrm{BM}}`; `\theta_3` requires a CE
+    ancestor, scalar-zero Costello counterterm, or complete
+    companion-face table plus `\Delta^1_{M,N}` and secondary
+    `\varprojlim^1H^0`; radial/Weyl means the
+    `\Omega^{\mathrm{rad}}` / decorated PBW Stokes / signed-row
+    obstruction surface; larger non-scalar QME means scalar projection,
+    finite row arrays, `A^Mc=-r^M`, transition matrices, Roos
+    compatibility, centrality homotopies, and a curved bulk-to-defect
+    kernel.
+12. For manuscript-proper writing, rewriting, or theorem-lane
+    reconstitution, load and follow
+    `~/chiral-bar-cobar-vol2/.agents/skills/chriss-ginzburg-rectify/SKILL.md`
+    before editing.
+
+13. Deep Supremum Discipline is mandatory.  Always take the harder
+    route.  Never downgrade a theorem as a convenience move.  First seek
+    the stronger true theorem by constructing the missing object,
+    habitat, topology, comparison map, homotopy, kernel, counterterm,
+    computation, verified source theorem, or obstruction class.  A
+    conditional theorem is only a temporary ledger entry after the exact
+    obstruction has been named.  A failed theorem surface must be
+    reworked until it becomes either a proved theorem with all missing
+    data supplied or a proved obstruction theorem naming the precise
+    cohomology class, cokernel functional, Roos class, graph row, or
+    finite-window matrix equation that blocks the original statement.
+    Do not leave theorem surfaces merely `conditional', `external', or
+    `expected' when a sharper construction problem can be inscribed.
 
 ## User-authorized max-effort swarm protocol
 
@@ -76,10 +148,11 @@ max-effort mathematical reasoning.
 Swarm design must be explicit before launch: partition agents by
 disjoint mathematical axes, files, or proof obligations; name the
 integration owner; forbid agents from reverting work they did not make;
-and require deep semantic merge across
-`~/chiral-bar-cobar`, `~/chiral-bar-cobar-vol2`,
-`~/calabi-yau-quantum-groups`, `~/igusa-cusp-form`, and
-`~/topological-strings` whenever claims cross those repositories.
+and require deep semantic merge across `~/chiral-bar-cobar`,
+`~/chiral-bar-cobar-vol2`, and `~/topological-strings`.  Consult
+`~/calabi-yau-quantum-groups`, `~/igusa-cusp-form`, or compact-CY source
+fixtures only for an explicitly assigned matched-conventions comparison
+or firewall audit.
 
 Every attack-heal agent must return a compact, checkable report:
 claim attacked, failure mode or proof, local file anchors, primary
@@ -87,7 +160,10 @@ source anchors where needed, exact formulas/constants, claim-status
 recommendation, files changed, tests or computations run, and remaining
 open questions. For theorem-level work, require repeated attack/heal
 cycles until convergence: no new fatal attack survives, and at least
-one real mathematical improvement is inscribed.
+one real mathematical improvement is inscribed.  If the attack breaks a
+theorem surface, the heal step must not stop at demotion: it must build
+the missing theorem data or prove the exact obstruction theorem and
+queue the next construction target.
 
 The main thread integrates; agents do not vote truth into existence.
 Preserve all mathematically substantive content, resolve conflicts by
@@ -125,7 +201,7 @@ Systematic restatement of the settings, discipline, and load order that already 
 
 | Parameter | Setting | Rationale |
 |---|---|---|
-| `reasoning_effort` | **`xhigh`** (always; never lower than `high`) | BCOV / Kodaira–Spencer / holomorphic-anomaly / $L_\infty$-renormalization — frontier mathematical physics. No downgrade permitted. |
+| `reasoning_effort` | **`xhigh`** (always; never lower than `high`) | Mixed HT SFT / Kodaira-Spencer-type local BV / Costello graph-QME / $L_\infty$-renormalization — frontier mathematical physics. No downgrade permitted. |
 | `model` | **Deepest host-exposed model**: GPT-5.5 Pro / Heavy in ChatGPT when available; GPT-5.5 or latest GPT-5-Codex-family model in Codex; API fallback latest GPT-5.4 / GPT-5-Codex model with `xhigh` where supported. | Pro-class mathematics + physics harness. |
 | `verbosity` | As the argument requires | No abridgment of load-bearing expansions, anomaly-equation terms, or Feynman-graph sums. |
 | Token budget | **Unbounded** for research tasks | If context fills, compact side work. Never elide a propagator term, a Feynman graph, or a named anomaly. |
@@ -153,8 +229,10 @@ verification, and repeated attack-heal cycles.
    cited theorems, computations, and the remaining obstruction if any.
 3. **Context before invention.** Load `CLAUDE.md`, this file, `main.tex`,
    preamble / macros / notation, diagram sources, compute scripts, cited
-   BCOV / Costello / Witten sources, and Vol III anchors before the first
-   mathematical edit. Build an internal outline; do not write from memory.
+   local BV / Costello / Hamiltonian / Witten sources before the first
+   mathematical edit. Load Vol III or compact-CY anchors only for an
+   explicit comparison or firewall audit. Build an internal outline; do
+   not write from memory.
 4. **Multiple routes.** For any load-bearing identity, seek independent
    derivations: low-order amplitude, BV-degree check, graph computation,
    primary literature, local script, and cross-repo consistency.
@@ -179,11 +257,11 @@ verification, and repeated attack-heal cycles.
 |---|---|
 | Correctness | Every expansion term, sign, measure, and BV degree verified. |
 | Rigor | Every load-bearing claim carries *proved / conjectured / expected / heuristic / computed / folklore*. |
-| Attribution | Every prior result cited by author + year + equation number (BCOV 1993, Costello 2011, Costello–Li 2012, Witten 1988, Candelas–de la Ossa–Green–Parkes 1991). |
+| Attribution | Every prior result cited by author + year + equation number when available (BCOV 1993 for source convention only, Costello 2011, Costello--Li 2012 when actually used, Witten 1988, and local BV / Hamiltonian references). |
 | Concrete-before-abstract | A worked $F_g$ order precedes the general claim; first-/third-order figures are the anchor. |
 | Voice | Russian school + mathematical-physics frontier (`INVARIANTS.md §IV`). |
 | Standalone | No version labels, no phase labels, no prior-draft references (`INVARIANTS.md §III`). |
-| Convention agreement | CY degree $d$, worldsheet $\Sigma$, framing $S^3$, BV / Ext / cyclic conventions agree with Vol III (`~/calabi-yau-quantum-groups`) when stated in both. |
+| Convention agreement | Local dimension \(2_{\mathbb R}+2_{\mathbb C}\), BV / Ext / cyclic / Weyl-Moyal conventions agree across this repo and Vol II. Vol III compact-CY conventions are checked only when a comparison theorem is explicitly in scope. |
 
 If any category falls short — restart that category. Do not patch.
 
@@ -199,21 +277,28 @@ If any category falls short — restart that category. Do not patch.
 
 - `~/chiral-bar-cobar` — Vol I of the chiral bar–cobar series.
 - `~/chiral-bar-cobar-vol2` — Vol II ($A_\infty$ chiral algebras + 3D HT QFT).
-- `~/calabi-yau-quantum-groups` — Vol III (CY-to-chiral frontier). BCOV / Kodaira–Spencer supplies physics motivation and convention-checking for the chiral homology of a Calabi-Yau threefold. Treat this as context unless a local theorem states and proves a precise comparison; no compact CY$_3$, Vol III, or global BCOV theorem follows from this repository without a separate matched-conventions proof.
-- `~/igusa-cusp-form` — Borcherds lift + BKM + $\Delta_5$. Topological-string generating functions motivate comparison with the Borcherds / BKM route there. In this repository that relation is heuristic and convention-checking unless a theorem explicitly proves otherwise; no BKM consequence follows from the local Hamiltonian BF/Moyal calculation alone.
+- `~/calabi-yau-quantum-groups` — Vol III (CY-to-chiral frontier). External comparison only. No compact CY$_3$, Vol III, or global BCOV theorem follows from this repository without a separate matched-conventions proof.
+- `~/igusa-cusp-form` — Borcherds lift + BKM + $\Delta_5$. External comparison only. No BKM consequence follows from the local Hamiltonian BF/Moyal calculation alone.
 
-Load-bearing claims about $F_g$, the holomorphic anomaly equation, worldsheet instanton sums, or mirror-symmetric corrections must be consistent with the Vol III CY frontier. Disagreement is the deliverable; report, do not silently reconcile.
+Load-bearing claims in the core paper are local mixed-HT claims.  Claims
+about compact \(F_g\), the holomorphic anomaly equation, worldsheet
+instanton sums, mirror-symmetric corrections, CoHA, quintic arithmetic,
+OSV/GV, or BKM are external comparison claims and must not be imported
+into the core theorem surface without a separate theorem.
 
 ### Codex load order
 
 1. `./CLAUDE.md`.
 2. `~/ecosystem/INVARIANTS.md §IV` + `~/ecosystem/AGENTS-HARNESS.md §VIII`.
-3. `main.tex` (root) + `preamble.tex` + `commands.tex` + `mathmacros.tex` + `notation.tex`.
-4. Cross-repo: `~/calabi-yau-quantum-groups/FRONTIER.md` for convention alignment.
+3. `~/chiral-bar-cobar-vol2/.agents/skills/chriss-ginzburg-rectify/SKILL.md`
+   before manuscript-proper writing, rewriting, or theorem-lane
+   reconstitution.
+4. `main.tex` (root) + `preamble.tex` + `commands.tex` + `mathmacros.tex` + `notation.tex`.
 5. Figure sources (`firstorder.svg`, `thirdordera.svg`, `thirdorderb.svg`) and `scripts/` for any quoted computation.
+6. Cross-repo Vol III / Igusa / compact-CY sources only when an explicit comparison or firewall task requires them.
 
 ### Escalation — research-grade triggers (additional to `AGENTS-HARNESS.md §XVI`)
 
 - A computation cannot be closed with honest rigor → the open term, named precisely, **is** the deliverable.
-- A convention disagreement with `~/calabi-yau-quantum-groups` → stop, report; let the principal decide which tree is canonical.
+- A compact-CY, Vol III, CoHA, Igusa, or BKM claim appears inside the core local theorem surface → stop, report, and quarantine it unless the principal explicitly assigns a comparison theorem.
 - A figure's contents disagree with the prose narrative → stop, report; the figure is usually the computation, overwrite only under the principal's direction.

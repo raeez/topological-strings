@@ -1,0 +1,838 @@
+                                                                                                               HUTP-98/A070
+                                                                                                               hep-th/9812127
+
+
+
+
+                                                   M-Theory and Topological Strings–II
+
+
+
+
+arXiv:hep-th/9812127v1 15 Dec 1998
+                                                               Rajesh Gopakumar 1 and Cumrun Vafa 2
+
+                                                                     Lyman Laboratory of Physics
+                                                                         Harvard University
+                                                                        Cambridge, MA 02138
+
+
+                                           It is shown how the topological string amplitudes encode the BPS structure of wrapped
+                                     M2 branes in M-theory compactification on Calabi-Yau threefolds. This in turn is related
+                                     to a twisted supersymmetric index in 5 dimensions which receives contribution only from
+                                     BPS states. The spin dependence of BPS states in 5 dimensions is captured by the string
+                                     coupling constant dependence of topological string amplitudes.
+
+
+
+
+                                     December 1998
+                                       1
+                                           gopakumr@tomonaga.harvard.edu
+                                       2
+                                           vafa@string.harvard.edu
+1. Introduction
+
+     Topological string theories [1] are among the most beautiful and simple string theories.
+In particular in connection with target space being Calabi-Yau 3-folds they have a rich
+structure. Their definition (in the A-model) involves summing over holomorphic maps from
+worldsheets to the Calabi-Yau 3-fold. In this sense, they seem to be related to counting
+some BPS 2-brane states, such as M2/D2 branes in M/IIA compactifications on Calabi-Yau
+threefold. A natural question is to find the precise connection between the BPS content
+involving M2/D2 branes and the topological string amplitudes. One aim of the present
+paper is to make this connection more precise. The key ingredient in this connection is the
+reinterpretation of topological string amplitudes on Calabi-Yau threefolds as computing
+particular F-terms in N = 2 supersymmetric theories in 4 dimensions [2][3]. Our basic
+strategy is to find the contribution of BPS states to F-terms and thus read off the BPS
+content of topological string amplitudes. Some steps in this direction had already been
+taken in [4][5][6].
+     This paper is a continuation of our previous paper [7] where we considered the contri-
+bution of the simplest BPS states to the topological string amplitudes. In that paper it was
+useful to view the D2 brane BPS content of Type IIA on Calabi-Yau 3-fold, from M-theory
+perspective compactified on the same Calabi-Yau times a circle. The momentum modes
+around the circle were crucial in reading off from the M2 brane spectrum, the structure of
+D2/D0 brane contribution. Similarly in this paper, we find that the M-theory perspective
+is useful. In fact this link is even more important in connection with the present paper: It
+turns out that off shell quantum field content of BPS states in type IIA string is necessary
+in order to evaluate their contribution to topological string amplitudes. On the other hand
+the D2 brane bound state quantum numbers do not yield the corresponding off shell quan-
+tum field. Whereas, the M2 brane on shell state, will give rise to the corresponding off
+shell field in 4 dimensions. It is this link between M-theory and type IIA BPS states which
+proves crucial for connecting topological string amplitudes to BPS structure of M-theory
+on CY threefold. Along the way we introduce a generalized supersymmetric index in 5
+dimensions, somewhat analogous to similar objects introduced in 2 dimensions [8], which
+captures the BPS content of the theory.
+     The organization of the paper is as follows: In section 2 we show how to compute the
+contribution of a single BPS state in 4 dimensional compactification of type IIA strings to
+topological string amplitudes. This turns out to be a straightforward one loop computation
+
+                                              1
+generalizing Schwinger’s computation to this setup. In section 3 we connect the M-theory
+content of BPS states with those of type IIA and use that to rewrite the topological string
+amplitudes in terms of BPS content of M-theory in 5 dimensions. This section contains
+the main result of this paper. In section 4 we show how in some cases one can compute
+the BPS spectrum explicitly, by studying M2/D2 branes wrapped over a genus g Riemann
+surface in Calabi-Yau.
+
+
+2. Schwinger Re-interpretation of Topological String Amplitudes
+
+      Topological A-model string amplitude at genus g roughly speaking computes the
+weighted sum over holomorphic maps from a Riemann surface of genus g to a Calabi-
+Yau threefold:
+                                                X
+                                 Fg (ti ) =               exp(−2πA)
+                                              Hol.Maps.
+              P
+where A =         ni ti denotes the area of the surface in the Calabi-Yau M relative to a
+(complexified) Kahler form parameterized by ti in terms of a choice of H2 (M ) and ni
+denotes the H2 class of the image. The sum over the holomorphic curves in the above
+is sometimes replaced by an appropriate integral when there are families of holomorphic
+                                                                                   2 2g−2
+curves. The topological string amplitudes compute corrections of the form Fg (ti )R+ F+
+in type IIA compactifications on a Calabi-Yau [2][3], where R+ and F+ denote the self-dual
+parts of Riemann and graviphoton field strengths3 . It is natural to consider giving vev to
+F+ = F and denoting gs F = λ. Then the topological string partition function defined as
+                                                  X
+                                   F (λ, ti ) =        λ2g−2 Fg (ti )
+                                                  g
+
+                                                                 2
+can be viewed as computing the correction of the form F (λ, ti )R+ in type IIA compactifi-
+cation on a Calabi-Yau threefold.
+      It is well known that these amplitudes do not receive any further perturbative or even
+non-perturbative string correction beyond genus g (due to the decoupling of the dilaton,
+which is in a hypermultiplet, from kahler moduli which are in vector multiplets). Thus
+one can evaluate them at strong coupling, in which case one would expect the dominant
+  3
+      This is strictly speaking valid for g > 0, however our expressions continue to be valid also
+for g = 0 when they are appropriately interpreted as computing prepotential terms in the corre-
+sponding N = 2 theory.
+
+                                                   2
+contribution to come from light D-brane bound states. Moreover, due to the fact that it
+is an F-type term, one expects this to receive contribution only from BPS states involving
+D-branes. In the limit of a large volume Calabi-Yau, the relevant D-brane states would
+be D2 branes wrapped around cycles, bound to D0 branes. The effect of integrating these
+fields out should be to reproduce the above amplitude. Given the minimal couplings of
+these fields to supergravity multiplets, one is thus reduced to doing a one loop computation
+with bound states of D-branes going around the loop with emission of graviphoton and
+graviton fields.
+     It is crucial to note that the contribution of the fields at one loop will depend on their
+off-shell quantum fields (see e.g. [9]). In particular knowing the SO(4) = SU (2)L ×SU (2)R
+Lorentz group content of the fields is necessary. An N = 2 BPS state is represented by a
+field content of the form
+                                1                  X
+                              [( , 0) ⊕ 2(0, 0)] ⊗      Nj1 ,j2 (j1 , j2 )
+                                2                  j ,j1   2
+
+
+for some integers Nj1 ,j2 . Before computing the contribution of such states, let us note
+what it could depend on. First of all, we can compute the contribution for each (j1 , j2 )
+and add the total result weighted with Nj1 ,j2 to get the final result. In addition to its mass
+(or more precisely the BPS central term Z), the SU (2)R content of the fields should be
+                                    2 2g−2
+irrelevant for the contribution to R+ F+   amplitudes. The reason for this is that R+ and
+F+ by definition only couple to the SU (2)L quantum number. In other words, only the
+degeneracy and fermi/bose statistics is relevant in computing the contribution of SU (2)R
+                                                      P
+quantum numbers. Thus, the relevant contribution is j2 (−1)2j2 (2j2 + 1)Nj1 ,j2 times the
+contribution of the state with left-spin [( 21 ) + 2(0)] ⊗ [j1 ].
+     As in [7], the Schwinger one-loop calculation for a particle in a background constant
+electromagnetic field, will be a surprisingly powerful way of determining the structure of
+higher genus topological partition functions Fg . This is natural in view of the fact noted
+above that the topological string partition function arises naturally by considering constant
+self-dual field strength for the graviphoton field. Let us first recall Schwinger’s computa-
+tion. Schwinger (see for example [10]) studied the case of a particle minimally coupled to a
+constant background electromagnetic field. Using the proper time formalism, the resulting
+determinant (a one loop contribution) can be explicitly evaluated. For instance, the free
+energy of a charged scalar (of mass m) in a constant self-dual field of magnitude F is
+                       Z ∞                      Z
+                            ds    −s(△+m2 )   1 ∞ ds        1       −sm2
+                  F=           Tre          =                     e      .           (2.1)
+                        ǫ    s                4 ǫ    s sinh2 seF
+                                                               2
+
+                                                   3
+                                         eF
+Note that F can be expanded in powers of m 2 – the only dimensionless combination. These
+
+terms are the quantum corrections to Maxwell’s action due to the presence of charged
+                                                                                                  2
+particles. There are in addition, non-perturbative pieces which go like exp− m
+                                                                             eF
+                                                                                .
+    When the charged particle carries non-trivial spin, then the answer is modified to
+        Z ∞                                                  Z ∞
+                ds                2           1                        ds     1         2
+   F=              Tr(−1)F e−s(△+m +2eJ·F ) =                                 2 seF
+                                                                                    e−sm Tr(−1)F e−2seJ·F .
+            ǫ    s                            4                  ǫ      s sinh 2
+                                                                                                         (2.2)
+where J = JR + JL is the generator of spin angular momentum J · F ≡ Jµν F µν .
+    What does all this have to do with topological string amplitudes? As we mentioned,
+                             2 2g−2
+we are really computing the R+ F+   terms in the four dimensional effective action. As
+argued earlier, these should be given by a one loop computation where we integrate out
+D0/D2 branes. This seems like a generalization of the Schwinger computation to the case
+where one has both background electromagnetic and metric fields. In other words, we want
+the R2 term in a heat kernel expansion in this background. This can be quite tedious.
+Fortunately, the answer turns out to be simple due to supersymmetry. Basically, what we
+find is that the effect of N = 2 supersymmetry is to convert the Schwinger’s computation
+for the vacuum amplitude in the presence of constant electromagnetic field strength in the
+non-supersymmetric case, to the correction for R2 in the supersymmetric case.
+    For instance, in the case of an isolated S 2 , lightest states at strong coupling, other
+than the 0-branes, are wrapped 2-branes. The 0-branes as well as the S 2 wrapped 2-
+brane are BPS states in the [( 21 , 0) ⊕ 2(0, 0)] representation of the Lorentz group SO(4) =
+                                                                2 2g−2
+SU (2)×SU (2). The contribution of such a hypermultiplet to Fg R+ F+   is exactly that of
+a charged scalar to F+2g−2 in the ordinary Schwinger computation [11]. Roughly speaking,
+the fermionic contribution compensates for the extra insertions of the curvature.
+    Thus the contribution of such a hypermultiplet to Fg is that in (2.1) (note that here
+|Z| = |m| = e, where Z is the central term in the N = 2 algebra)
+
+                         X                               Z ∞
+                                                     1               ds    1         Z
+                               (F gs )   2g−2
+                                                Fg =                        2 sF
+                                                                                 e−s gs .                (2.3)
+                         g=0
+                                                     4       ǫ        s sinh 2
+
+which gives
+                                                Fg = −χg Z 2−2g                                          (2.4)
+
+where χg = χ(Mg ) is the euler characteristic of the moduli space of genus g Riemann
+surfaces.
+
+                                                         4
+     Though this was evaluated in a heterotic computation in [11] the final answer was
+extracted in a field theory limit. This will help us to get the contribution of a general
+N=2 BPS state. Since the stringy one loop computation had particles of arbitrary spin
+                                                                      2 2g−2
+inside the loop, we can also extract the respective contributions to R+ F+ . We might
+                                                                            2 2g−2
+guess from our experience with the hypermultiplet that the contribution to R+ F+   from
+a state with spin [( 21 , 0) ⊕ 2(0, 0)] ⊗ [(j1 , j2 )] is the same as that to F+2g−2 from a particle
+of spin [(j1 , j2 )] from a Schwinger computation. This will prove to be right.
+     Even though one can do a Schwinger computation at one loop in a field theory setup, it
+turns out that the one loop heterotic setup is more convenient. As already mentioned, this
+computation has already been done in [11]. The fermionic zero modes at one loop absorb
+the R2 fermion vertex fields and the effect of having a constant self dual graviphoton field
+strength is to modify the spacetime contribution to quadratic bosonic path integral on a
+torus with modulus τ (Eq. 4.13 in [11])
+                            RQ          i   i             F
+                                                                  R
+                                                               1¯ 2    2¯ 1 2
+                              i=1,2 DZ iD Z̄ exp(−S +     τ2 (Z ∂Z + Z̄ ∂ Z̄ )d σ)
+            G(F, τ, τ̄) =                 RQ
+                                                     i     i
+                                             i=1,2 DZ iD Z̄ exp(−S)
+                                                                                              (2.5)
+                            2πiF η̄ 3 2      πF 2
+                       =(                  ) exp(−            )
+                            Θ̄1 (F, τ̄ )             τ2
+
+Here Z i ’s are complex bosonic fields representing spacetime variables with the usual free
+field action denoted by S. And F as before, is the expectation value of the background
+self-dual electromagnetic field. Θ1 is the Jacobi theta function.
+     This formula has a straightforward Hamiltonian interpretation which can be read off
+from the path integral in (2.5). The λ dependent term is that from a self-dual electro-
+magnetic field in the four dimensions labelled by Z 1 , Z 2 . This can also be seen from the
+answer in the second line of Eq.(2.5) which can be written as
+                                            Q
+                       πF                      n=1 (1  − q n )4                     πF 2
+  G(F, τ, τ̄) = F (          ) Q
+                              2
+                                          2πiF q n )2
+                                                      Q          −2πiF q n )2
+                                                                              exp(−      )    (2.6)
+                    sin(πF )    n=1 (1 − e             n=1 (1 − e                    τ2
+
+(In comparing with the conventions we are using we should make the replacement F →
+ F
+2πi .)   In [11] only the first term was extracted as the contribution of a hypermultiplet
+which we saw in Eqn(2.3) . But now it is easy to read off the contribution of higher spins.
+Note that the spin content of an elementary BPS state in the heterotic string comes from
+ground state oscillators on the right-moving sector (the supersymmetric side) tensored with
+a tower of left-moving bosonic oscillators. In particular the spacetime quantum numbers
+
+                                                          5
+of fields will come from the left-moving bosonic oscillators. These consist of four bosonic
+oscillators αµ−n each of which transforms according to [ 21 , 21 ] representation of SO(4). Given
+the fact that we have turned on only F = F+ , it is easy to see that the the denominator
+in the second term indicates the Tr exp(−τ L0 + 2JL3 F+ ) structure for the bosonic string
+oscillators.
+                                 2
+     So the contribution to the R+ term from a general particle is given by the generaliza-
+tion of Eqn.(2.3)
+
+                 X                                                   Z ∞            L
+                        2                          2 1                     ds tre−2sJ3 F −s gZ
+                       R+ (gs F )2g−2 Fg = (−1)2j R+                                    e s.     (2.7)
+                 g=0
+                                                                 4   ǫ      s sinh2 sF
+                                                                                     2
+
+
+where j = jL + jR . Since gs F always appears in a single combination, we will henceforth
+denote the product by λ. We will also rescale s in all the Schwinger integrands to write it
+solely in terms of λ.
+     It is simple to use this to evaluate the contribution from a particle of a given spin. One
+just carries out the sum over the helicities signified by the trace. As already noted, only
+the left spin content of the multiplet is relevant for this contribution. It will turn out to be
+convenient to write down the contribution from the supersymmetric multiplet whose left
+spin content is given by I1 ⊗ Ir ≡ [( 21 ) + 2(0)] ⊗ [( 21 ) ⊕ 2(0)]r . The trace over the helicities
+comes out simply to be (−4)r sinh2r 2s (For r = 1 one has for example (2 − e−2s − e2s ).
+Thus the contribution of Ir is given by
+
+                       X
+                       ∞                          Z ∞
+                                                        ds        s            Z
+                             2g−2
+                             λ      Fg (Z) =               (2isinh )2r−2 exp(−s ).               (2.8)
+                       g=0                         ǫ     s        2            λ
+
+From this we see that Ir contributes only to the topological partition function Fg at genus
+g ≥ r. Moreover, the Ir have the utility of serving as a convenient basis for decompos-
+ing any supersymmetric multiplet – a multiplet with maximum spin j can be written as
+Pr=2j
+  r=0 αr Ir for some (possibly negative) integers αr . (Also note that Ir ⊗ Is = Ir+s .)
+
+     The contribution to the topological partition function from such a multiplet then takes
+the form
+                 X
+                 ∞                          X
+                                            r=2j        Z ∞
+                        2g−2                                    ds        s            Z
+                       λ         Fg (Z) =          αr              (2isinh )2r−2 exp(−s ).       (2.9)
+                 g=0                        r=0         ǫ        s        2            λ
+
+
+                                                            6
+3. 5 dimensional interpretation
+
+    In the previous section we have seen how a BPS state in type IIA compactification
+on CY 3-fold contributes to topological string amplitudes. We also saw that the off shell
+SO(4) Lorentz quantum numbers of the field describing the BPS states is necessary to
+find its contribution. This assignment of off shell states, which sounds unnatural for four
+dimensional Hilbert space, is quite natural from the perspective of M-theory Hilbert space.
+Recall that type IIA compactified on a CY 3-fold at strong coupling can be viewed as M-
+theory compactified on CY 3-fold times a circle S 1 . The bound states of D2 branes and
+D0 branes can be viewed in this set up as M2 branes wrapped around cycles of Calabi-Yau
+threefold, together with a momentum around S 1 . Thus the spectrum of relevant BPS
+states should come, from the M-theory perspective, by simply studying the BPS spectrum
+of M2 branes wrapped around cycles of Calabi-Yau threefold. Note that the rotation group
+in five dimensions is SO(4). Thus the BPS states will have quantum numbers in terms
+of it. This will also yield, upon compactification on S 1 the off-shell field content of the
+corresponding 4-dimensional state.
+    Let us then consider M-theory compactification on Calabi-Yau threefold. Consider
+
+                        I(α, β) = Tr(−1)2jL +2jR exp(−αJ3L − βH)
+
+where the trace is over all massive one particle states at zero center of mass momentum.
+The supercharges of N = 2 theories in d = 5 decompose under SO(4) spatial rotation
+group according to 2( 21 , 0) + 2(0, 21 ). The Hilbert space forms various representations
+according to the action of supercharges: the long multiplets and the short multiplets
+which are the BPS states. The long multiplets are not killed by any of the supercharges,
+whereas the BPS multiplets are killed either by the 2( 21 , 0) supercharges or 2(0, 21 ). Thus
+the long multiplets do not contribute to the above trace due to the (−1)2jR term. Only
+the BPS states which are annihilated by 2(0, 12 ) survive in the above trace. In this sense
+this is a “supersymmetric index” which receive contribution only from BPS states, in the
+same sense as Tr(−1)F F exp(−βH) considered in [8] in connection with BPS states of
+N = 2 supersymmetric theories in 2 dimensions. Note that this index is in particular
+independent of deformation of complex structure of Calabi-Yau threefold. For a given
+BPS state the masses depend only on the Kahler class of the Calabi-Yau metric, and so
+the only dependence could come from jumps. In fact it is known that when one changes
+the complex structure of Calabi-Yau there could be new BPS states (in other words the
+
+                                              7
+spectrum of bound M2 branes changes). However the change must be such that the new
+states created or destroyed under this operation collect themselves into long multiplets that
+thus do not contribute to the above index. In other words, the spectrum of BPS states
+by itself will change as one changes the complex structure of the Calabi-Yau, without
+changing the above index. In this sense, this is the more natural object to hope to be able
+to compute. Note that the existence of the above index is related to the fact that (only) in
+5 dimensions rotating black hole configurations which preserve supersymmetry can exist
+[12].
+        In application to topological string it is convenient to characterize the contribution
+of BPS states to the above index as follows: Consider the BPS states with a fixed central
+            PH2 (M )
+charge, A = i=1      ni ti where ni denotes the wrapping class of an M2 brane in H2 (M )
+relative to a basis and ti denotes the integral of the Kahler class on the corresponding class.
+The mass of the corresponding wrapped M2 brane (in our normalization) is M = 2πA.
+Consider the totality of all BPS states with central charge A. Note that if (ni ) are not
+relatively prime this also includes BPS states coming from multiwrapped M2 branes. We
+arrange the totality of such BPS states in class (ni ) according to their SO(4) spin content:
+                                                              X           (n )
+                                    [( 21 , 0) ⊕ 2(0, 0)] ⊗            Nj1 ,ji 2 (j1 , j2 )
+                                                              j1 ,j2
+
+
+Their relevant contribution to the above index is captured by just keeping track of the
+total degeneracy of the right rotation group while keeping the representation for the left
+rotation group:
+                           X                                  (n )
+                                                                                 X
+                                    (−1)2j2 (2j2 + 1)Nj1 ,ji 2 [j1 ] =               α(n
+                                                                                      r
+                                                                                        i)
+                                                                                           Ir     (3.1)
+                           j1 ,j2
+
+where we have written the left-spin content in terms of Ir = ([ 21 ] + 2[0])r , which is a
+                                                       (n )
+convenient basis. In this way of writing αr i may be positive or negative integers. The
+                                                                                                (n )
+quantity which will appear in the topological string amplitudes are the integers αr i for
+each class (ni ) and each integer r ≥ 0.
+        In going down from 5 to 4 dimensions on S 1 each BPS state can have in addition an
+arbitrary momentum m around the circle. In particular each of them lead to a BPS state
+                                                                    P
+in four dimensions with central charge Z = 2π(A + im) where A =        ni ti . Using the
+contribution of a single BPS state in 4 dimensions with central charge Z to the topological
+string amplitude (2.9), and doing a redefinition of topological string coupling constant
+
+                                                         8
+λ → iλ to make it consistent with the conventional topological definitions, we see that we
+can rewrite the full topological string amplitude as
+                       X            Z ∞
+                              (ni )     ds      s             s X
+            F (λ) =         αr             (2sin )2r−2 exp[−2π (  ni ti + im)]
+                                     ǫ   s      2             λ
+                      (ni ),r,m
+
+Rewriting the sum over m using the identity
+                          X               s X s
+                              exp(−2πim ) =  δ( − k)
+                           m
+                                          λ    λ
+                                                           k
+allows one to do the integral over s and we obtain our final formula for the topological
+string amplitude
+                                  X              1       kλ 2r−2           X
+                 F (λ) =                   α(n
+                                            r
+                                              i)
+                                                   (2sin    )    exp[−2πk(   ni ti )]          (3.2)
+                                                 k        2
+                           (ni ),r≥0,k>0
+                                                                                        (n )
+This formula encodes all the integrality properties of F (λ) in terms of αr i which are
+integers. Moreover it suggests that we should view these numbers as the fundamental
+invariants that topological string captures. It has been known that using mirror symmetry
+one can essentially compute topological string amplitudes [2]. However for every genus g
+there are a finite number of undetermined coefficients which need to be fixed first. The
+integrality properties of (3.2) is a powerful constraint in determining these coefficients and
+completely computing topological string amplitudes, as has been recently demonstrated in
+[13]. We will now explore some of the properties of the expression (3.2) for the topological
+string partition function.
+    We first wish to comment on the usefulness of the basis we have chosen to write the
+                                                    (n )
+BPS states (3.1). The first fact is that αr i do not contribute to Fg for g < r. In other
+words, up to a fixed genus, only a finite number of r’s contribute. The next point is that
+                       (n )
+the contribution of αr i to Fg for g ≥ r is of the form
+                                        X
+                             α(n
+                              r
+                                i)
+                                   Cr,g    k 2g−3 exp(−2πkA)                                   (3.3)
+                                                k
+            P
+where A =       ni ti and Cr,g are some universal rational numbers (involving Bernoulli num-
+bers). Moreover, Cg,g = 1. This implies that if we have computed topological string
+                                                                           (n )
+amplitudes up to a given genus g, we can inductively extract all αr i for r ≤ g. In partic-
+ular we can subtract out the contribution of lower g topological string amplitudes Fr with
+                                  (n )
+r < g from Fg and extract αg i from Fg . This encodes all the bubbling and multicovering
+structure that one should anticipate for topological string amplitudes. The connection
+between multi-covering for genus zero topological string amplitude and its M-theory in-
+terpretation was already pointed out in [14]. The formula (3.3) applies to contribution of
+non-zero (ni ). The case with (ni ) = 0 has already been considered in [7][15][16].
+
+                                                       9
+4. M2 branes wrapped around genus g surfaces in CY
+
+    We have seen that topological string amplitudes can be rewritten in terms of BPS
+degeneracies of M2 branes wrapped around Calabi-Yau 2-cycles. In particular the numbers
+ (n )
+αr i , which can be used to rewrite the topological string amplitudes according to (3.2),
+capture the SU (2)L content of M2 BPS states in the H2 class given by ni . In this section
+                                                                        (n )
+we would like to study how in principle one would compute αr i by considering M2 branes
+wrapped around a genus g curve in the Calabi-Yau 3-fold. It is also convenient to consider
+the related problem of studying the D2 brane bound states.
+    The worldvolume of a single M2 brane consists of 8 scalars transforming as a vector
+representation of SO(8) R-symmetry group, and 8 fermions, transforming as [s ⊗ 8s ] where
+s denotes the 3-dimensional spinor, and 8s denotes the spinor of SO(8) R-symmetry group.
+The SO(8) group is the rotation symmetry normal to the M2 brane worldvolume. Consider
+wrapping the M2 brane around a genus g curve Σg in a Calabi-Yau 3-fold. Then the SO(8)
+is naturally decomposed as
+
+
+                                 SOJ (4) × SON (4) ⊂ SO(8)                             (4.1)
+
+
+where we can identify SOJ (4) as the rotation subgroup of the Lorentz group in 5 di-
+mensional spacetime, and SON (4) as the rotation group normal to the M2 brane in the
+Calabi-Yau threefold. We can decompose the SO(8) spinor according to the breakup (4.1)
+
+
+                       8s → [( 21 , 0)J ⊗ ( 21 , 0)N ] ⊕ [(0, 12 )J ⊗ (0, 21 )N ]      (4.2)
+
+
+where for each SO(4) = SU (2)L × SU (2)R group we have used (p, q) to denote the corre-
+sponding SU (2) representations. Being inside a Kahler manifold means that the SO(4)N
+holonomy resides in a U (2) subgroup, U (1)L × SU (2)R ⊂ SU (2)L         R
+                                                               N × SU (2)N . The tangent
+
+bundle of Calabi-Yau, splits over Σg to
+
+
+                                         TCY → TΣg ⊕ N                                 (4.3)
+
+
+where N is a U (2) bundle over Σg . Moreover, the fact that the first Chern-class of Calabi-
+Yau is zero, means that the determinant bundle U (1)L ⊂ U (2) is the same as TΣ∗g , the
+cotangent bundle on Σg .
+
+                                                  10
+     The fields on the worldvolume of M2 brane are twisted because of the non-trivial
+embedding in the Calabi-Yau [17]. Consider in particular the fermions. Before the twisting
+they transform under SO(3) × [SO(4)J × (U (1)L × SU (2)R )] as
+
+                            [s, [(0, 12 )J ⊗ (0, 21 )] ⊕ [( 21 , 0)J ⊗ (±1, 0)]]
+
+If we consider the worldvolume of M2 brane to be Σg × S 1 , this twisting is basically
+adding a contribution of U (1)N
+                              L charge to the holonomy. Since this is related to the U (1)
+spin connection on the Riemann surface, due to (4.3), it follows that the fermions on the
+Riemann surface consist of the following:
+
+                  ±1
+           ψ→[       , [(0, 12 )J ⊗ ( 21 )]] ⊕ [2(0), ( 21 , 0)J ⊗ (0)] ⊕ [(±1), ( 21 , 0)J ⊗ (0)]   (4.4)
+                  2
+
+where the above quantum numbers denote the helicity on the surface, the SO(4)J quantum
+number and the SU (2)R                                       N
+                     N quantum number respectively (the U (1)L has been combined with
+the modified spin). The 8 scalars on M2, which before twisting transform according to
+
+                            [0, [( 21 , 12 )J ⊗ (0, 0)] ⊕ [(0, 0)J ⊗ (±1, 21 )]]
+
+after twisting transform according to
+
+                                                             ±1
+                             [0, [( 21 , 21 )J ⊗ (0)]] ⊕ [      , (0, 0)J ⊗ ( 21 )]                  (4.5)
+                                                             2
+
+     In finding the bound states, we need to quantize the zero modes in the above theory.
+Four zero modes for the scalars, corresponding to [0, [( 21 , 12 )J ⊗ (0)]] in (4.5) correspond to
+                                                                                         1
+the four momenta in 4+1 dimensions. The other scalars transforming as [ ±1
+                                                                         2 , (0, 0)J ⊗ ( 2 )]
+are paired with fermions with the same internal quantum numbers. If there are zero
+modes for these directions, they will correspond to deformations of Σg in the threefold.
+Let us call the corresponding moduli space M. Because of the pairing of the fermions
+with the bosons, this will give us a supersymmetric sigma model on M. Note that the
+SOJ (4) quantum numbers of these fermions are in (0, 21 ). In particular the SL(2) lefshetz
+action on the cohomology elements of the Kahler manifold M should be identified with the
+right SU (2) subgroup of SOJ (4). Finally there are the zero modes coming from the extra
+fermions which transform as scalars and 1-forms on the genus g curve ( [2(0), ( 21 , 0)J ⊗
+(0)] ⊕ [(±1), ( 21 , 0)J ⊗ (0)]). If the genus g surface is non-degenerate there will be g + 1
+
+                                                      11
+such zero modes. Quantizing them gives rise to the representation whose SOJ (4) quantum
+numbers are given by
+                                     [( 21 , 0) + 2(0, 0)]g+1
+
+Note in particular, that the SU (2)L content of this representation is exactly the same as
+the convenient basis we discussed before, namely a half hypermultiplet tensored with Ig .
+    If throughout the moduli space M the Riemann surface remains non-degenerate, the
+SOJ (4) quantum numbers of BPS bound states will be given by
+
+                                                          X
+                                                          d/2
+                           [( 21 , 0) + 2(0, 0)]g+1 ⊗ (         aj [(0, j)])
+                                                          j=0
+
+
+where the complex dimension of M is denoted by d and aj are determined from the SL(2)
+decomposition. In particular, the contribution of this family to Fg will be the same as the
+contribution of (−1)d χ(M)Ig , as the quantum number of the right SU (2) is counted only
+as far as its Z2 quantum number (−1)2jr is concerned. In other words, in this case we
+would have
+                                    αr = δg,r (−1)d χ(M)
+
+This result in particular means that an isolated genus g curve contributes to all Fk for
+k ≥ g according to (3.2). This result has also been independently derived recently from
+the mathematical definition of topological strings [18].
+    However quite frequently the moduli space M will consist of loci where the genus g
+surface has shrunk to a genus r ≤ g for some r. In such cases, even though in principle
+one can continue by studying the M-theory description of M2 bound states, it turns out to
+be also useful to view it from the type IIA perspective, by going down on a circle. This is
+also useful for the count of M2 brane bound states. As far as the total count of M2 BPS
+states, we can use the type IIA computation, as it is radius independent. However we will
+have to also recover the SU (2)L quantum number of states, which requires additional care
+discussed below.
+
+4.1. The Type IIA Perspective
+
+    The worldvolume theory for a single D2 brane is the same as that of M2 brane except
+that instead of 8 scalars, one has 7 scalars and one U (1) gauge field, which is dual to the
+8-th scalar; this is a reflection of duality between scalars and vectors in 3 dimensions. As
+far as constructing bound states and counting zero modes of wrapped D2 branes, the story
+
+                                               12
+is essentially the same as that of M2 brane, except that now we have only 3 bosonic zero
+modes, corresponding to spatial translation in 3 directions. The effects of the momentum
+in the 4-th direction is now replaced by the number of D0-branes bound to the D2 brane,
+which in turn is given by the quantum of flux of the U (1) field strength on the Riemann
+surface. Since the choice of the flux does not affect the degeneracy of the bound states we
+will recover the fourth momentum in this way. There is, however, one extra simplification:
+Now the extra U (1) gauge field will have zero modes on a genus g surface Σ and in fact
+will pair up with the unpaired fermionic zero mode in the M2 brane description. In other
+words, the moduli space M of deformations of Σ in the Calabi-Yau, is now replaced by
+M̂, which is the moduli space of deformations of Σ together with a choice of a flat U (1)
+connection on Σ. We thus have a fiber space
+
+                                           M̂ → M
+
+with fiber which is generically T 2g . Moreover, the number of bound states in this formu-
+lation is in 1-1 correspondence with the cohomology of M̂. The spacetime rotation group
+is SO(3) in this case and the SO(3) quantum numbers of the D2 brane bound states can
+be read off by the Lefshetz SL(2) action on the cohomologies of M̂. Note that this SO(3)
+is the diagonal SU (2) in SU (2)L × SU (2)R and we would need to read off this further
+decomposition from this data.
+      The basic idea to read off this decomposition of cohomology is to recall that SU (2)L
+refers to the cohomology in the torus direction (the Jacobian) and the SU (2)R refers to
+the cohomology in the base direction. Let us denote the base by M. The cohomology of
+M̂ decomposed taking into account this decomposition to SU (2)L × SU (2)R will consist
+of:
+                           Ig ⊗ Rg + Ig−1 ⊗ Rg−1 + ... + I0 ⊗ R0
+
+where Ig is the left representation defined before: Ik = [( 12 ) + 2(0)]k , and Rk are the right
+representation which couple to the left Ik . These will of course depend on the M̂ and its
+fibration structure. The fact that the highest rank I appearing above is Ig follows from
+the fact that highest differential form coming from T 2g will have this spin.
+      The contribution of this configuration to topological string amplitudes will be given
+by αr with r = 0, ..., g where
+                                         αk = χ(Rk )
+
+                                              13
+and χ(Rk ) refers to the sum of the dimension of SU (2)R representations in Rk weighted
+with (−1)2jR . These already imply the following facts: If we consider the Euler charac-
+teristic of M̂ we immediately learn using χ(Ik ⊗ Rk ) = χ(Ik ) ⊗ χ(Rk ) and χ(Ik ) = δk,0
+that:
+                                                    ˆ
+                                       α0 = (−1)d χ(M̂)                                     (4.6)
+
+where dˆ is the complex dimension of M̂. In other words, the contribution to genus zero
+of a family of holomorphic curves is given (up to sign) by the Euler characteristic of the
+moduli space of the curve together with the Jacobian on it. This fact had already been
+used in particular to compute the Euler characteristic of moduli space of instantons on
+1
+2 K3 [19] as well as resolve a puzzle in connection with the counting of black hole entropy
+in compactification of M-theory on Calabi-Yau threefolds [20]. For some other applications
+of this result see also the recent discussion in [21]. It is also in line with the observations in
+[22] that the euler characteristic of a Jacobian variety will localize on nodal rational curve,
+as one would expect from a contribution to the genus zero topological string amplitude F0 .
+    The structure of Rg is also easy to predict: The fact that the top cohomology of
+torus makes invariant sense, implies that the left spin [g] state will be accompanied by the
+full cohomology of the base. In other words Rg can be obtained by considering the base
+manifold M and its SL(2) decomposition. This in particular implies that
+
+                                       αg = (−1)d χ(M)
+
+where d is the complex dimension of M. In the case of g = 1 these two ingredients suffice to
+find the decomposition of the SU (2) action on the cohomology of M̂. For g > 1 one would
+need to decompose the M̂ into the cohomology of the fiber (or a sheaf theory extension of
+it) times that of the base. While this is standard mathematics (known as Leray spectral
+sequence [23]) the fact that the SU (2) action on the fiber continues to make sense on this
+decomposition has not been considered previously. Physically we are predicting that this
+should be possible because of the fact that the SU (2)L × SU (2)R quantum numbers of the
+cohomology have well defined meanings from the M-theory perspective on a Calabi-Yau
+threefold. It would be interesting to verify this mathematically.
+    It is useful to give an example of how things work. We present an example which was
+pointed out to us by Sheldon Katz: Consider a P2 in a Calabi-Yau threefold. Consider
+the contribution to F0 from primitive degree 3 curves. This has generically genus 1. In
+this case the M is P9 . Moreover M̂ can be studied by viewing it as follows: A flat bundle
+
+                                               14
+on T 2 can be identified with a point p on the dual torus. Consider the image of the point
+p ∈ P2 . The moduli space of elliptic curves passing through that point is P8 . Thus M̂ in
+this case can be viewed as a P8 bundle over P2 . The cohomology of this space is the same
+as the product of the cohomology of P2 and P8 . From what we said before we thus learn
+the SU (2)L × SU (2)R decomposition in this case to be
+
+                        1 9                     9                   9
+                      [( , )] + [(0, 3)] = [I1 , ] + [(I0 , (3) − 2( ))]
+                        2 2                     2                   2
+
+giving us α0 = 27 and α1 = −10.
+
+
+4.2. Multiwrapped 2-branes
+
+    As mentioned before, for multiwrapped M2 branes on a Riemann surface in a Calabi-
+Yau, it is more convenient to use the D2 brane description, as that is the definition of
+multi-wrapped M2 branes (by taking the coupling to infinity). The field content of N D2
+branes is the same as what was noted above, except that now every field is in addition
+in the adjoint representation of U (N ). In general the problem of solving for the bound
+state will involve the study of the cohomology of the mixed moduli space of light gauge
+degrees of freedom on the D2 brane as well as the scalar zero modes corresponding to
+normal deformation of the surface Σ in the Calabi-Yau. This of course will in general be
+a complicated system to study.
+    To give a flavor of what new things may happen when we have multi-wrapped branes,
+let us consider the case where the surface Σ has no normal deformation in the Calabi-Yau.
+In this case the only other zero mode would correspond to the moduli of the gauge system,
+which in this case is moduli of flat U (N ) connections on Σ. Let us call this space K g,N .
+Viewing the gauge group as
+                                            U (1) × SU (N )
+                                 U (N ) =
+                                                  ZN
+Corresponding to this, the moduli space K g,N splits up to
+
+                                             T 2g × K̂ g,N
+                                   K g,N =         2g                                  (4.7)
+                                                  ZN
+
+Here T 2g is the moduli of flat U (1) connection on Σ, which is also known as its Jacobian
+and K̂ g,N is the moduli of flat SU (N ) connections on Σ. This consists of the choice of 2g
+
+                                             15
+holonomies around the cycles of the “opened up” Riemann surface, up to conjugation by
+an SU (N ) gauge transformation, satisfying
+
+                              Y
+                              g
+                                    (gi hi gi−1 h−1
+                                                 i ) = exp(2πik/N )
+                              i=1
+
+
+giving a space of complex dimension (g − 1)(N 2 − 1). Here k is the quantum of U (1) flux
+                                                     2g
+through Σ which corresponds to the D0 brane charge. ZN  in (4.7) acts by translations
+by 1/N fractions along the cycles of T 2g at the same time as changing the corresponding
+SU (N ) holonomy by an N -th root of unity. If k and N are relatively prime K g,N is a
+smooth manifold. Physically the non-smoothness when k and N are not relatively prime
+can be intepreted as corresponding to the channel available for a decay of bound states of
+D0 and D2 brane at threshold. To avoid such subtleties it is natural to work in the case
+where k and N are relatively prime and expect the BPS degeneracies to be valid also when
+they are not prime. It is also known that all the cohomological question of this space is
+independent of which k one chooses as long as it is relatively prime with N .
+    Cohomology of the manifold K̂ g,N is known (for a recent discussion see [24] and refer-
+ences therein). Moreover it is known that the action of ZN 2g is trivial on the cohomologies.
+Thus the cohomologies of K g,N is the same as that of K̂ g,N times that of T 2g . As far as
+the SU (2)L content of the states, it follows that it is given by
+
+                                            Ig ⊗ IK̂ g,N
+
+where IK̂ g,N denotes the representation of the corresponding bound states coming from
+K̂ g,N . Even though apriori the SL(2) action is the diagonal SU (2) of SO(4), it is natural
+to believe that the full gauge degree of freedom is in the SU (2)L (as is the corresponding
+U (1) ⊂ U (N ) degrees of freedom) in which case one can recover the representation I from
+the known cohomology formula for K̂ g,N .
+    Let us now discuss some properties of K̂ g,N for various g. For genus g = 0 this is an
+empty space for N > 1. In other words there are no bound states of more than one D2
+brane around S 2 . For g = 1, K̂ g,N is a point for all N . In other words N D2 branes form a
+single bound state for all N . The same statement applies to M2 branes, and so we conclude
+that α1 = 1 and the rest of the αi for i 6= 1 are zero for all multiwrappings. Note that this
+implies, from (3.2) that isolated genus 1 curves and their multiwrappings only contribute
+
+                                                16
+to F1 . Thus from a single isolated elliptic curve with area A, and including its bound state
+contribution to D0 branes as well as its multiwrappings we get the F1 contribution
+                                    X
+                                −         log(1 − exp(−2πnA))
+                                    n>0
+
+
+in accordance with expectations from [25]. Note also that from (3.2) there is no contri-
+bution to Fg for g > 1, in accordance with [2]. This result has also been derived recently
+using the mathematical definition of topological strings [18].
+    The story is more complicated for genus g > 1. The cohomologies of K̂ g,N are known,
+and so the contribution of various N to various amplitudes can be obtained using (3.2).
+At first sight a puzzle appears: Consider the contribution of an isolated genus g curve with
+area A. As discussed before it follows from (3.2) that it contributes in particular to Fg . The
+surprising aspect of this is that it will contribute to Fg also in the form k 2g−3 exp(−2πkA),
+suggesting that there is a multicovering of a genus g by a genus g curve. However this is
+not possible for g > 1. One may have hoped, therefore that this contribution gets cancelled
+by the contribution of k M2 branes bound over that surface. However it turns out that
+χ(K̂ g,N ) = 0 and so IK̂ g,N will not contain I0 and so Ig ⊗ IK̂ g,N will not contain Ig (note
+Ik ⊗ Ir = Ik+r ). However, it turns out that multicovering of the M2 brane does have
+deformations to a higher genus curve. In other words multi-covering of an isolated curve
+is not isolated and it can deform to a higher genus surface (said differently extra scalar
+zero modes exist if one considers appropriate flat bundles turned on the D2 branes). Thus
+the relevant moduli space is not just the moduli of flat connection, but it will also include
+deformations having to do with a higher genus curve which does contribute to Fg . Aspects
+of this contribution is presently under study [26].
+    We would like to thank M. Bershadsky, S. Katz, A. Klemm, N.C. Leung, J. Maldacena,
+N. Nekrasov, R. Pandharipande, T. Pantev, A. Strominger, E. Witten and S.T. Yau for
+valuable discussions.
+    The research of R.G. is supported by DOE grant DE-FG02-91 ER40654 and that of
+C.V. is supported in part by NSF grant PHY-98-02709.
+
+
+
+
+                                               17
+                                     References
+
+ [1] E. Witten, “Topological Sigma Model,” Comm. Math. Phys. 118 (1988) 411 ;
+     “Chern-Simons Gauge Theory As a String Theory,” hep-th/9207094.
+ [2] M. Bershadsky, S. Cecotti,H. Ooguri, C. Vafa , “Kodaira-Spencer Theory of Gravity
+     and Exact Results for Quantum String Amplitudes”, Comm. Math. Phys. 165 (1994)
+     311 .
+ [3] I. Antoniadis, E. Gava, K.S. Narain and T.R. Taylor, “Topological Amplitudes in
+     String Theory”, Nucl. Phys. B413 (1994), 162.
+ [4] C. Vafa, “A Stringy Test of the Fate of the Conifold,” Nucl. Phys. B447 (1995) 252.
+ [5] J. Harvey and G. Moore, “Algebras, BPS States, and Strings,” Nucl.Phys. B463
+     (1996) 315.
+ [6] A. Klemm, P. Mayr and C. Vafa, “BPS States of Exceptional Non-critical Strings,”
+     Proc. of the conf. Advanced Quantum Field Theory, (in memory of Claude Itzykson),
+     hep-th/9607139.
+ [7] R. Gopakumar, C. Vafa, “M-Theory and Topological Strings -I”, hep-th/9809187 .
+ [8] S. Cecotti, P. Fendley, K. Intriligator and C. Vafa,“A New Supersymmetric Index,”
+     Nucl. Phys. B386 (1992) 405.
+ [9] S.M. Christensen and M.J. Duff, Nucl. Phys. B 154 (1979)340.
+[10] C. Itzykson, J. Zuber, “Quantum field theory”, Addison Wesley Publishing.
+[11] I.Antoniadis, E.Gava, K.S.Narain, T.R.Taylor, “N=2 Type II- Heterotic duality and
+     Higher derivative F-terms”, Nucl. Phys. B455 (1995), 109.
+[12] J.C. Breckenridge, R.C. Myers, A.W. Peet and C. Vafa, “D-branes and Spinning Black
+     Holes,” Phys. Lett. B391 (1997) 93.
+[13] A. Klemm, work to appear.
+[14] A. Lawrence and N. Nekrasov, “Instanton sums and five-dimensional gauge theories,”
+     Nucl. Phys. B513 (1998) 239.
+[15] M. Marino and G. Moore, “Counting higher genus curves in a Calabi-Yau manifold,”
+     hep-th/9808131.
+[16] C. Faber and R. Pandharipande, “Hodge integrals and Gromov-Witten theory,”
+     math.AG/9810173.
+[17] M. Bershadsky, V. Sadov and C. Vafa,“D-Branes and Topological Field Theories,”
+     Nucl. Phys. B463 (1996) 420.
+[18] R. Pandharipande, “Hodge Integrals and Degenerate Contributions,” math.AG/9811140.
+[19] J.A. Minahan, D. Nemeschansky, C. Vafa and N.P. Warner,“E-Strings and N=4 Topo-
+     logical Yang-Mills Theories,” hep-th/9802168.
+[20] C. Vafa, “Black Holes and Calabi-Yau Threefolds,” Adv. Theor. Math. Phys. 2 (1998)
+     207.
+[21] N. Nekrasov,“In the Woods of M-theory,” hep-th/9810168.
+
+                                          18
+[22] S.T. Yau and E. Zaslow,“BPS States, String Duality and Nodal Curves on K3,” Nucl.
+     Phys. B471 (1996) 503.
+[23] P. Griffiths and J. Harris, Principles of Algebraic Geometry, Wiley-Interscience, New
+     York 1978.
+[24] G. Laumon and M. Rapoport,“The Langlands Lemma and the Betti Numbers of
+     Stacks of G-bundles on a Curve,” alg-geom/9503006.
+[25] M.Bershadsky, S.Cecotti, H.Ooguri, C.Vafa , “Holomorphic Anomalies in Topological
+     Field Theories, Nucl. Phys. B405 (1993), 279 .
+[26] T. Pantev and C. Vafa, work in progress.
+
+
+
+
+                                            19
+

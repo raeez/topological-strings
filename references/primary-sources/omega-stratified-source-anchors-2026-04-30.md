@@ -1,0 +1,59 @@
+# Omega And Stratified Trace Source Anchors, 2026-04-30
+
+Scope: primary-source audit for external analogies around the normal
+\(\Omega\)-background, stratified factorization homology, M2-brane
+Koszul duality, and Chern--Simons factorization-homology traces.
+
+Verdict: none of the sources below proves a theorem of the present
+mixed HT manuscript by analogy.  Each source supplies vocabulary,
+model theorems, or comparison evidence only after its hypotheses are
+rebuilt inside the local
+\(\mathbb R^2_{\mathrm{top}}\times\mathbb C^2_{\mathrm{hol}}\)
+brane-defect model.
+
+## Source Rows
+
+| Key | Source | Stable public anchor | Checked anchors | Positive support | Non-support for this paper |
+|---|---|---|---|---|---|
+| `AFT-stratified-factorization` | David Ayala, John Francis, Hiro Lee Tanaka, "Factorization homology of stratified spaces" | arXiv `1409.0848`, submitted 2014-09-02, v3 2016-01-01, Selecta Math. (N.S.) 23 (2017), 293--362, arXiv DOI `10.48550/arXiv.1409.0848`, URL `https://arxiv.org/abs/1409.0848`. | Definition 2.14 defines factorization homology as the left adjoint from `Disk(B)`-algebras to `B`-manifolds. Theorem 2.15 gives the colimit formula over `Disk(B)/X`. Definition 2.37 defines homology theories by tensor-excision and continuity. Corollary 2.40 proves factorization homology satisfies these axioms. Theorem 2.43 characterizes factorization homology by equivalence between `Disk(B)`-algebras and homology theories. Corollary 0.3 and Proposition 4.8 treat framed \(n\)-manifolds with framed \(d\)-submanifolds and identify a `Disk^{fr}_{d\subset n}`-algebra with data \((A,B,\alpha)\), with \(\alpha:\int_{S^{n-d-1}}A\to HC^*_{D^{fr}_d}(B)\). Proposition 4.13 computes the free case by configuration objects of the complement and the submanifold. | Supplies the correct theorem-level grammar for a lower-stratum brane \(L\subset X\): a stratified factorization algebra is not just a bulk factorization algebra plus words; it requires a `Disk`-algebra datum on the stratified pair, excision, continuity, and the central-action map \(\alpha\). It supports using AFT as the source for the phrase "stratified factorization homology" and for the obligation to construct coefficients on \((X,L)\). | Does not construct the mixed HT bulk algebra, the Dirac brane algebra, the \(\Omega\)-localized coefficient category, a trace state, a BV/QME quantization, or a large-\(N\) protected trace for this manuscript. It is topological and conically smooth; any holomorphic/topological hybrid, Dolbeault coefficient, equivariant-normal, or residue/Euler normalization statement must be built separately. |
+| `Costello-Omega-M-theory` | Kevin Costello, "M-theory in the Omega-background and 5-dimensional non-commutative gauge theory" | arXiv `1610.04144`, submitted 2016-10-13, arXiv DOI `10.48550/arXiv.1610.04144`, URL `https://arxiv.org/abs/1610.04144`. | Section 2 gives the Cartan-style \(\Omega\)-background mechanism: a family \(Q_e\) with \(Q_e^2=eV_e\), reduction to the quotient, restriction to \(S^1\)-invariant objects, then twisting. Definition 3.0.1 defines supergravity in the twisted \(\Omega\)-background by reduction from \(X_e\) to \(Y_e=X_e/S^1\), removal of the constant \(S^1\)-ghost, invariance under constant gauge transformations, and setting the bosonic ghost to \(\Psi_e\). Theorem 4.1.1 constructs 11-dimensional supergravity backgrounds where the generalized Killing spinor squares to \(eV\). Proposition 1.2.1 identifies the Taub--NUT twisted \(\Omega\)-background with a 5-dimensional non-commutative Chern--Simons type gauge theory on \(\mathbb R\times\mathbb C^2\). Section 5 writes the Moyal product, partial connection, BV field space, action, and odd pairing. Theorems 9.0.2 and 9.0.3 state perturbative quantization results under conical/symmetry hypotheses and the \(\delta\ll e\) regime. Section 10 identifies M2 branes with instanton particles and Section 10.4 writes the resulting topological quiver quantum mechanics with equation \([X,Y]+IJ=e\,\mathrm{Id}\). Section 11.2 reduces the M5-brane discussion further to ordinary Chern--Simons theory in a special \(\Omega\)-background. | Supports Costello-style \(\Omega\)-background vocabulary: \(Q^2\) equal to a rotation, invariant-sector twisting, quotient/reduction, Moyal deformation on \(\mathbb C^2\), the 5d non-commutative Chern--Simons model, and M2/M5 branes as lower-dimensional objects inside that model. It is a primary source for the external analogy "Omega reduction can collapse directions and produce Chern--Simons type theories." | Does not prove the present brane-preserving normal scaling theorem on \(N_LX=\mathbb R_s\oplus\mathbb C_{z_1}\oplus\mathbb C_{z_2}\) with \(t\) fixed. It does not construct \(Q_\Omega=Q+\iota_{V_\Omega}\) in this mixed de Rham/Dolbeault coefficient category, the normal-weight contraction, residue-versus-Euler normalization, a stratified factorization algebra on \((X,L)\), a Dirac-brane QME, or a physical large-\(N\) trace state. Costello's model is Taub--NUT/M-theory leading to a 5d theory on \(\mathbb R\times\mathbb C^2\), not the manuscript's six-real-dimensional formal-local mixed HT SFT. |
+| `Costello-M2-Koszul` | Kevin Costello, "Holography and Koszul duality: the example of the \(M2\) brane" | arXiv `1705.02500`, submitted 2017-05-06, arXiv DOI `10.48550/arXiv.1705.02500`, URL `https://arxiv.org/abs/1705.02500`. | The abstract states the large-\(K\) Koszul-duality result for M2-brane supersymmetric operators and 11d supergravity operators in the \(\Omega\)-background of `1610.04144`, with all-order perturbative validity and an unspecified nonlinear coupling identification. Section 1 formulates the general brane/supergravity Koszul-duality principle as a conjecture and records the flux caveat. Section 1.3 describes the 5d gauge-theory observables as a factorization algebra and, at \(\delta=0\), as \(C^*(\mathcal O_e(\mathbb C^2)\otimes\mathfrak{gl}_N)\). Section 1.4 identifies the classical Koszul dual with \(U(\mathcal O_e(\mathbb C^2)\otimes\mathfrak{gl}_N)\) and the quantum dual with a deformation \(U^\mathrm{QFT}_\delta\). Section 1.6.1 gives the large-\(K\) theorem for the combinatorial algebra mapping to \(O_\delta(\mathcal M^e_{N,K})\), and Section 1.7 records the isomorphism between the QFT and combinatorial deformations up to a central-parameter reparametrization. Theorem 16.8.1 gives the corresponding isomorphism \(U^\mathrm{QFT}_{\hbar}(\mathrm{Diff}(\mathbb C)\otimes\mathfrak{gl}_N)\cong U^\mathrm{comb}_{\hbar}(\mathrm{Diff}(\mathbb C)\otimes\mathfrak{gl}_N)\). | Supports the existence of a genuine Costello M2 example where brane operators and bulk \(\Omega\)-background observables are related by Koszul duality after large-\(K\)/uniform-supergroup analysis and deformation-theoretic uniqueness. It is primary evidence that a brane-side algebra/closed-side observable duality can be theorem-grade in a related \(\Omega\)-background setting. | Does not identify the manuscript's Dirac-brane Ext algebra with Costello's M2 algebra, does not construct the present closed Hamiltonian BF/CE-PV observables, and does not supply the present large-\(N\) single-trace theorem. Its all-order result has its own non-linear coupling reparametrization and belongs to the M2/Taub--NUT/5d non-commutative gauge-theory setup. The enumerative-geometry applications in Sections 14--15 are conjectural and are not support for compact-CY, CoHA, or trace-state claims in this paper. |
+| `CFG-CS-factorization-trace` | Kevin Costello, John Francis, Owen Gwilliam, "Chern-Simons factorization algebras and knot polynomials" | arXiv `2602.12412`, submitted 2026-02-12, preliminary v1, arXiv DOI `10.48550/arXiv.2602.12412`, URL `https://arxiv.org/abs/2602.12412`; arXiv HTML `https://arxiv.org/html/2602.12412`. | Abstract and Theorem 1.1 identify, for ordinary perturbative Chern--Simons theory with semisimple \(\mathfrak g\), a filtered \(E_3\)-algebra \(\mathcal A^\lambda\), a perfect module from a finite-dimensional \(U_\hbar\mathfrak g\)-representation, and equality between a factorization-homology trace over a framed link in \(\mathbb R^3\) and the Reshetikhin--Turaev invariant. Definition 2.2 defines the trace of a perfect \(A\)-module over a framed link by pushing the Hochschild trace class through factorization homology. Theorem 1.5 states that the Reshetikhin--Turaev link invariants of the tangle TFT associated to a perfect \(E_3\)-module can be computed using factorization homology. Proposition 4.6 and Lemma 4.7 produce the locally constant factorization algebra/filtered \(E_3\)-algebra of quantum Chern--Simons observables. Proposition 6.1, Proposition 6.7, and Corollary 6.8 construct and quantify the one-dimensional fermionic defect coupled to Chern--Simons theory. Theorem 2.2 is explicitly marked as relying on beta factorization-homology claims from Ayala--Francis in development. | Supports a precise external model of a factorization-homology trace: ordinary 3d perturbative Chern--Simons, semisimple Lie algebra, invariant pairing, framed links, finite-dimensional quantum-group representations, perfect modules, and a BV-quantized coupled defect system. It is the right source for the analogy "a protected line observable can be encoded as a factorization-homology trace after an \(E_3\)-algebra, perfect module, and coupled defect quantization have been built." | Does not produce a trace theorem for the manuscript's mixed HT/Moyal/Hamiltonian model. It is not about the normal \(\Omega\)-background, not about the Dirac brane in \(\mathbb R^2\times\mathbb C^2\), not about non-commutative Hamiltonian reduction, and not about physical large-\(N\) cumulants or trace states. Its hypotheses are ordinary topological 3d Chern--Simons with semisimple \(\mathfrak g\). The paper is a 2026 preliminary preprint and uses beta factorization-homology input; therefore it can anchor an analogy and a proof obligation, but cannot be imported as a theorem for the present local SFT. |
+
+## Admissible Use In The Manuscript
+
+1. Use `AFT-stratified-factorization` to require an actual
+   stratified coefficient datum on \((X,L)\), with excision and
+   continuity, before saying "stratified factorization homology" as a
+   theorem.
+2. Use `Costello-Omega-M-theory` as source vocabulary for the
+   equivariant/Omega mechanism and for a related 5d non-commutative
+   Chern--Simons reduction, not as proof of the present normal-scaling
+   torus theorem.
+3. Use `Costello-M2-Koszul` as evidence that a brane/bulk
+   Koszul-duality theorem can be proved in a related Omega-M-theory
+   model, not as a transferred theorem for the Dirac-brane Ext algebra.
+4. Use `CFG-CS-factorization-trace` as the source for a precise
+   Chern--Simons trace mechanism, not as a trace theorem for mixed HT
+   SFT.  The manuscript must construct its own \(E_n\)-type algebra,
+   lower-stratum module, QME quantization, trace class, and
+   normalization.
+
+## Blocking Obligations Before Any Import
+
+- Construct the conically smooth or equivalent stratified pair
+  \((X,L)\) for
+  \(X=\mathbb R^2_{\mathrm{top}}\times\mathbb C^2_{\mathrm{hol}}\)
+  and \(L=\mathbb R_t\times\{s=z_1=z_2=0\}\), including the relevant
+  tangential/framing data.
+- Build the bulk and brane coefficient algebras and the central-action
+  or module map required by the appropriate `Disk`-algebra formalism.
+- Prove the normal \(\Omega\)-complex:
+  \(Q_\Omega=Q+\iota_{V_\Omega}\), \(Q_\Omega^2=L_{V_\Omega}\),
+  acyclicity after inverting nonzero normal weights, and the chosen
+  residue/Euler normalization.
+- Quantize the brane-defect system in the Costello/BV sense and solve
+  the QME in the actual local mixed HT model.
+- Define the trace state or trace class and prove its compatibility
+  with factorization homology, rather than invoking the CFG
+  Chern--Simons theorem by analogy.

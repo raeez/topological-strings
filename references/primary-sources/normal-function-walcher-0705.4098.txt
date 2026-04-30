@@ -1,0 +1,2464 @@
+                                                                                                              arXiv:0705.4098
+
+
+
+
+                                                   Extended Holomorphic Anomaly
+                                                                 and
+                                              Loop Amplitudes in Open Topological String
+
+
+
+
+arXiv:0705.4098v4 [hep-th] 4 Feb 2009
+                                                                          Johannes Walcher
+                                                       School of Natural Sciences, Institute for Advanced Study
+                                                                     Princeton, New Jersey, USA
+
+                                                                              Abstract
+                                          Open topological string amplitudes on compact Calabi-Yau threefolds are shown
+                                        to satisfy an extension of the holomorphic anomaly equation of Bershadsky, Cecotti,
+                                        Ooguri and Vafa. The total topological charge of the D-brane configuration must van-
+                                        ish in order to satisfy tadpole cancellation. The boundary state of such D-branes is
+                                        holomorphically captured by a Hodge theoretic normal function. Its Griffiths’ infinites-
+                                        imal invariant is the analogue of the closed string Yukawa coupling and plays the role
+                                        of the terminator in a Feynman diagram expansion for the topological string with D-
+                                        branes. The holomorphic anomaly equation is solved and the holomorphic ambiguity
+                                        is fixed for some representative worldsheets of low genus and with few boundaries on
+                                        the real quintic.
+
+
+
+
+                                        May 2007
+Contents
+
+1 Introduction and Summary                                                               3
+  1.1 General theory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       5
+  1.2 Examples . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       8
+  1.3 Conclusions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     10
+
+2 Extended Holomorphic Anomaly                                                          10
+  2.1 Twisted N = 2 theories      . . . . . . . . . . . . . . . . . . . . . . . . . .   11
+  2.2 Geometry of the vacuum bundle . . . . . . . . . . . . . . . . . . . . . .         13
+  2.3 First comments on boundaries . . . . . . . . . . . . . . . . . . . . . . .        16
+  2.4 Closed string holomorphic anomaly . . . . . . . . . . . . . . . . . . . .         20
+  2.5 More on the vacuum bundle. D-branes as normal functions . . . . . . .             23
+  2.6 Infinitesimal invariant and holomorphic anomaly on the disk . . . . . .           28
+  2.7 Holomorphic anomaly with D-branes . . . . . . . . . . . . . . . . . . .           33
+  2.8 Holomorphic anomaly at one loop . . . . . . . . . . . . . . . . . . . . .         36
+  2.9 Holomorphic anomaly with insertions . . . . . . . . . . . . . . . . . . .         40
+  2.10 Solution of extended holomorphic anomaly . . . . . . . . . . . . . . . .         41
+
+3 Open Topological String Amplitudes on the Real Quintic                                43
+  3.1 Conventions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     44
+  3.2 Large volume expansion . . . . . . . . . . . . . . . . . . . . . . . . . .        47
+  3.3 Orbifold expansion . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      49
+  3.4 Conifold expansion . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      51
+Acknowledgments                                                                         53
+References                                                                              53
+
+
+
+
+                                          2
+1    Introduction and Summary
+
+The topological phase of string theory is one of the cornerstones of modern mathemat-
+ical physics. The theory is highly solvable, perhaps even completely integrable, while
+at the same time capturing a wealth of highly non-trivial mathematical and physical
+information about the vacuum geometry of superstring theory. The topological string
+shares many important dynamical features with the ordinary string, including D-branes
+and gauge/gravity duality. Moreover, topological strings on Calabi-Yau threefolds in
+fact directly compute certain higher-derivative F-terms in the effective action of the
+critical superstring compactified on the same manifold. This allows the topological
+string to be an important ingredient in the understanding of string duality, as well as
+in black hole entropy computations.
+    One of the reasons that the topological string is so efficiently solvable is the existence
+of various differential equations satisfied by topological correlation functions. These
+differential equations originate for instance from topological Ward identities expressing
+independence of the worldsheet theory from the worldsheet metric. The special struc-
+tures of the topological theory allow to integrate these equations up to some integration
+constants which are specified by classical data of the underlying model.
+    There are many reasons for which the most interesting construction is to topolog-
+ically twist a family of unitary N = 2 superconformal field theories of central charge
+ĉ = 3. Such theories have the richest set of non-trivial topological amplitudes, and
+are most directly linked to physics in four dimensions. In this critical instance, the
+relevant differential equation is the holomorphic anomaly equation of Bershadsky, Ce-
+cotti, Ooguri and Vafa [1, 2], which controls the amplitudes as functions over coupling
+space. As will be reviewed more extensively below, the holomorphic anomaly is deeply
+rooted in the unitarity or CPT invariance of the underlying N = 2 CFT, which leads
+to an identification of BRST and anti-ghost cohomology. The latter is therefore non-
+trivial, in distinction to say the physical bosonic string. These states, although BRST
+trivial, do not decouple from the topological amplitudes, but they fail to do so in a
+very controlled fashion, precisely captured by the holomorphic anomaly equation. The
+integration of this equation leads to polynomial expressions for all topological ampli-
+tudes in terms of tree-level data plus (at each order of perturbation theory) a finite
+number of integration constants, the so-called holomorphic ambiguity. The tree-level
+data for the critical topological string is a special Kähler manifold such as for instance
+
+
+                                              3
+the moduli space of a Calabi-Yau manifold, first computed in the work of Candelas et
+al. [3]. Fixing the holomorphic ambiguity usually requires physical insights into the
+space-time physics associated with the corresponding compactification of the type II
+string.
+       Hitherto, most discussions of the holomorphic anomaly have focused on the closed
+string. On the one hand, it can be argued that the closed topological string is more
+intrinsic to the Calabi-Yau geometry as it does not depend on the choice of a D-
+brane configuration on top of the manifold. On the other hand, this point of view
+completely ignores the central role played by D-branes in mirror symmetry and of
+course in topological gauge/gravity duality, and hence for closed strings themselves.
+Any exploration of these topics does require knowledge of topological amplitudes in the
+presence of D-branes, i.e., on worldsheets with boundaries. So far, these amplitudes
+have been obtained only indirectly, such as from matrix models or via Chern-Simons
+theory, or in rather brute force toric computations in the A-model. It is clearly desirable
+to develop a more systematic approach to open topological string amplitudes, at the
+loop as well as at tree level.
+       The computation of Candelas et al. [3] was recently extended to the open string
+in ref. [4]. In that paper, a differential equation was proposed whose solution gives
+the tension of the domainwall between two vacua on a certain brane wrapped on the
+quintic, as a function of the single closed string modulus. From the topological string
+perspective, one is computing the disk amplitude. When expanded in A-model vari-
+ables, this solution contains the number (Gromov-Witten invariant) of holomorphic
+disks ending in a non-trivial one-cycle on the brane. These predictions were partially
+checked in [4], and fully verified in [5]. The B-model origin of the differential equation
+of [4] is being explained in [6], in line with what had been anticipated in previous work
+[7].
+       The consistency of the emerging general picture of the open topological string at
+tree level has given hope that the computation could be extended to higher worldsheet
+topologies, analogously to what was done in [1, 2] for the closed string, by using the
+holomorphic anomaly. We will show in this paper that this is indeed possible. The
+holomorphic anomaly for open string has been previously studied in [2, 8, 9, 10], and
+was interpreted also in [11, 12]. In particular, in [10], open topological string amplitudes
+on certain local Calabi-Yau geometries are computed to all orders using matrix models,
+and found to satisfy a holomorphic anomaly equation. The paper [9] discusses open
+
+
+                                             4
+topological string amplitudes in local toric geometries more generally, and finds an
+explicit expression for the holomorphic anomaly of the annulus amplitude. It will be
+very interesting to elucidate the relation to our present work, which is focused on
+compact Calabi-Yau manifolds.
+      We have divided the bulk of the paper into two parts. In the first part (section 2),
+we will review from [2] the vacuum geometry of twisted N = 2 models as well as the
+derivation of the holomorphic anomaly for closed string amplitudes. In parallel, we
+will describe the extension to open strings. In the second part of the paper (section
+3), we will apply the general formalism to compute topological amplitudes on various
+worldsheets with boundary on the real quintic, which is the D-brane geometry that
+was solved in [4]. But now, let us summarize the main ideas and results of this paper.
+
+1.1     General theory
+
+The quantities of interest in this paper are the perturbative topological string ampli-
+tudes F (g,h) for open plus closed strings. The F (g,h) are defined by integrating over the
+moduli space, M(g,h) , of (oriented) Riemann surfaces of genus g and with h boundary
+components, the appropriate correlation function of the topologically twisted 2d world-
+sheet theory. The F (g,h) are functions (or rather, sections of an appropriate bundle)
+over coupling space, M, which is a complex manifold. As in [2] (henceforth referred to
+simply as BCOV), the holomorphic anomaly is a statement about the anti-holomorphic
+           ¯ (g,h) . While naively zero, it turns out that ∂F
+derivative ∂F                                              ¯ (g,h) receives a contribution
+from, and only from, the boundary ∂M(g,h) of M(g,h) , where the term “boundary” here
+refers in the complex sense to the parts of M(g,h) that have been added to the space
+of actual Riemann surfaces to make a compact M(g,h). In other words, the boundary
+term arises from the singularities or contact terms that appear in the integrand of
+F (g,h) when the Riemann surface degenerates. The key to the holomorphic anomaly is
+that the boundary term itself is not a holomorphic function over M.
+      For the closed string, (g, h) = (g, 0), the Riemann surface can degenerate in one of
+two ways. It can either split into two Riemann surfaces of lower genus g1 and g2 , or a
+handle can pinch, leaving a Riemann surface of genus g − 1. The holomorphic anomaly
+equation for F (g) ≡ F (g,0) then takes the form (for g > 1; for g ≤ 1, see below)
+                            1                         X
+                                                               (g ) (g )   (g−1)
+                                                                                 
+                 ∂ī F (g) = Cīj̄ k̄ e 2K Gj̄j Gk̄k          Fj 1 Fk 2 + Fjk            (1.1)
+                            2                         g +g =g
+                                                  1   2
+
+
+Here, F (g) with subscripts, i, j, etc., refer to amplitudes with insertions, i.e., derivatives
+
+                                              5
+                                                           (0)
+of F (g) in holomorphic directions on M, and Cijk ≡ Fijk is the three-point function
+on the sphere (Yukawa coupling), which is holomorphic (whence Cīj̄ k̄ ≡ Cijk is anti-
+holomorphic). (See the next section for the precise explanation of all the symbols.)
+What is important to recognize here is that the sum involves only g1 , g2 < g, so that
+eq. (1.1) really is a recursive relation for the topological amplitudes genus by genus. The
+underlying reason is that the amplitude on the sphere with less than three insertions
+vanishes.
+   For the open string, h 6= 0, we first of all have to choose boundary conditions, in
+other words we have to specify a D-brane configuration. Then, we can write an exten-
+sion of (1.1) to the open string at the conjuncture of the following four fundamental
+facts.
+
+(F1) For generic values of the bulk moduli, the topological amplitudes do not depend
+ on any continuous open string moduli. To justify this, we note that the topological
+ disk amplitude, F (0,1) , is interpreted physically as the 4d superpotential on the brane
+ worldvolume. Brane moduli correspond to flat directions of this superpotential, so
+ F (0,1) cannot depend on them. Since the holomorphic anomaly ultimately reduces
+ everything to tree-level information, we do not expect any F (g,h) to depend on open
+ string moduli. Note, however, that we are not claiming that open string moduli are
+ generically absent, or otherwise uninteresting, just that we can ignore them for our
+ present purposes.
+(F2) The topological charge of the D-brane configuration under consideration van-
+ ishes. This can be traced back to the statement that the physical quantity we are
+ computing at tree-level is the tension of BPS domainwalls between various brane
+ vacua, in other words superpotential differences, and not directly the value of the
+ superpotential itself. Note that the topological charges are carried by the ground
+ states corresponding to marginal directions of the “other” topological string (for
+ B-branes—the A-model, for A-branes—the B-model), which are BRST trivial and
+ should decouple. We therefore view this restriction as a kind of topological tadpole
+ cancellation condition.
+(F3) The disk amplitude with two bulk insertions is the analogue of the closed string
+ Yukawa coupling. This is in fact easy to see. The Yukawa coupling is so central
+ data because it is the first non-vanishing amplitude at tree-level (the sphere 0, 1,
+ and 2-point functions vanish), and all higher-point functions on the sphere can be
+
+
+                                            6
+ computed from it by simply taking derivatives. (Although, taking derivatives requires
+ information not contained in the Yukawa coupling itself.) For open strings, the
+ naively simplest quantities to consider are the disk amplitude with three boundary
+ insertions or with one bulk and one boundary insertion. Both precisely cancel the
+ ghost-number anomaly on the disk. However, given (F1) above, we generically do
+ not have any non-trivial operators to insert on the boundary, and then the first non-
+ vanishing quantity is indeed the disk two-point function. Since one of the insertions
+ then has to be (half-)integrated, we find that the disk two-point function is itself
+ not holomorphic, in clear distinction to the closed string, where the Yukawa coupling
+ always remains holomorphic. The holomorphic anomaly equation for the disk two-
+ point function can be viewed as the open string analogue of special geometry.
+(F4) For 2g + h − 2 > 0, the holomorphic anomaly receives no contribution from
+ factorization in the open string channel. This can be understood as a consequence
+ of the rule that only moduli fields could contribute in such factorizations (cf., (1.1)),
+ and those are excluded by (F1) above. As a consequence, the only degenerations
+ which contribute new terms on the RHS of (1.1) are those where the length of a
+ boundary component shrinks to zero size. The only exception to this rule occurs for
+ (g, h) = (0, 2), i.e., the annulus amplitude. This exception is a direct counterpart of
+ the anomaly of the torus amplitude (g, h) = (1, 0).
+
+       (F4) above determines the general structure of the extended holomorphic anomaly
+equation, whereas (F3) gives the basic connection to geometric data at tree-level. To
+immediately1 give away the punchline of this identification, let us first recall the com-
+putation of the Yukawa coupling in the B-model. If Ω(z) ∈ H 3,0 (Y ) denotes the
+holomorphic three-form as a function of the complex structure moduli of the Calabi-
+Yau manifold Y , then the Yukawa coupling (which is mirror to the instanton corrected
+triple intersection in the A-model) can be computed as
+
+                             Cijk = −hΩ, ∇i ∇j ∇k Ωi = −hΩ, ∂i ∂j ∂k Ωi                         (1.2)
+                                                                 R
+where ∇ is the Gauss-Manin connection, and h·, ·i =               Y
+                                                                      · ∧ · the symplectic pairing on
+H 3 (Y ). The equality with ordinary derivatives is a consequence of Griffiths transver-
+sality,
+                                     hΩ, ∇∇Ωi = hΩ, ∇Ωi = 0 .                                   (1.3)
+   1
+       and very imprecisely; the patient reader is urged to skip the next paragraph or two.
+
+
+                                                    7
+      Now consider open strings. It will follow from (F1), (F2) above, and is further
+explained in [6] that the invariant holomorphic data that characterizes a topological
+D-brane at tree-level is a Poincaré normal function, in the sense introduced by Griffiths
+in his early work [13] on higher-dimensional Hodge theory. Very briefly, a normal
+function, ν, is defined by a three-chain Γ ⊂ Y whose boundary is a holomorphic curve.
+Such a three-chain does not quite specify an element in H 3 (Y ). But because the
+boundary is holomorphic, integration against Γ in any case gives a well-defined pairing
+with cohomology classes in H 3,0 (Y ) and H 2,1 (Y ). Physically, we identify
+                                                   Z
+                                   T = hΩ, νi = Ω                                        (1.4)
+                                                        Γ
+
+with the domainwall tension. The hallmark of a normal function is its own version of
+Griffiths transversality [13]
+                                           hΩ, ∇νi = 0                                   (1.5)
+
+obviously the analogue of (1.3). All the local information about ν is then contained
+in the Griffiths’ infinitesimal invariant [14, 15, 16], which we identify with the disk
+two-point function,
+                                  (0,1)
+                                Fij       = ∆ij = hΩ, ∇i ∇j νi .                         (1.6)
+
+Let us pause. Mathematically, the infinitesimal invariant is not known as a symmetric
+tensor defined by (1.6), but only as a certain Koszul cohomology class whose representa-
+tive depends on a lift of ν to H 3 (Y ; C). But, given (1.4) and its physical interpretation,
+there is a preferred lift given by declaring ν to be real, i.e., ν ∈ H 3 (Y ; R) ⊂ H 3 (Y ; C).
+Conspicuously, reality is not compatible with holomorphic dependence on the param-
+eters. But this is precisely the holomorphic anomaly of the disk two-point function
+expected from (F3) above! And with this point driven home, we can put off all further
+explanations to the next section.
+
+1.2     Examples
+
+The example on which we will test the extended holomorphic anomaly equation is in
+the A-model given by the quintic hypersurface X ⊂ P4 , where we wrap a D-brane
+on the real locus L ⊂ X inside of it. The B-model mirror of X is well-known as the
+mirror quintic, and the D-brane is best described by a certain matrix factorization
+of the corresponding Landau-Ginzburg potential. The holomorphic tree-level data for
+this brane configuration was determined in [4], further explanations appear in [6].
+
+                                                 8
+   The main point of [4] was that the domainwall tension (1.4) for the real quintic
+satisfies an extended or inhomogeneous version of the Picard-Fuchs differential equation
+governing periods of the mirror quintic,
+                                               √
+                                     LT (z) = c z,                                  (1.7)
+
+where L is the Picard-Fuchs operator. The value of the constant c was determined
+in [4] from monodromy considerations, and checked against explicit computations in
+the A- and B-model in [5] and [6], respectively. This constant will prove of crucial
+importance for the present purposes, as it allows us to identify the correct real lift of
+the corresponding normal function.
+   We can then plug this tree-level data into the holomorphic anomaly equations. We
+will here solve these equations for small (g, h) in a rather pedestrian fashion, compared
+with the best currently available technology. In particular, we will not attempt to
+formulate a polynomial solution as done by Yamaguchi and Yau in [17] for the closed
+string. But we note that the structure of the equations strongly suggests that this is
+straightforwardly possible.
+   We then also need to fix the holomorphic ambiguity, which is one of the central
+problems in using the holomorphic anomaly equations to solve the topological string.
+In the closed string case, constraints on the holomorphic ambiguity arise from the
+physical expectations on the expansion of the F (g) around the special or singular loci
+in the moduli space. This was convincingly pushed to very high order in recent work by
+Huang, Klemm and Quackenbush [18]. For the quintic, the three special points are large
+volume, conifold, and Gepner (or orbifold) point. The expansion of topological string
+amplitudes around large volume has been shown to capture the BPS content of an M-
+theory compactification, and as a consequence to satisfy a certain integrality property
+known after Gopakumar and Vafa [19]. Around the conifold, the F (g) are generally
+singular, but with a singularity structure determined by the appearance of precisely
+one massless BPS particle in the corresponding string compactification. Finally, the
+regularity of F (g) around the Gepner point also imposes additional constraints.
+   For the open string, we also have an integrality conjecture at large volume proposed
+by Ooguri and Vafa [20], and refined by Labastida, Mariño, and Vafa [21]. According
+to this conjecture, the open topological string amplitudes count degeneracies of BPS
+states (domainwalls) in the 2-dimensional worldvolume theory of a brane partially
+wrapped on the Calabi-Yau. We also expect some sort of singularity structure at the
+
+                                           9
+conifold. The main novelty for us is that the Gepner point is not a regular point once
+open strings are included. As pointed out in [22, 23], the D-brane under consideration
+exhibits an extra massless open string in its cohomology precisely at the Gepner point.
+As a consequence [4], a tensionless domainwall appears in the BPS spectrum, and this is
+expected to leave an imprint on the topological string amplitudes F (g,h) for h > 0. (The
+attentive reader will see this a qualification of the statement (F1) above.) We cannot
+at present describe the singularity structure in general. Nevertheless, with certain
+(likely too optimistic) assumptions, we will be able to fix the holomorphic ambiguity
+for the topological amplitudes F (0,2) , F (0,3) and F (1,1) . In particular, we will find an
+integral structure around large volume, as would be predicted from the existence of
+BPS invariants.
+
+1.3   Conclusions
+
+From what we have said in this introduction, it is clear that this work is a direct
+generalization of BCOV to the open string sector, and has bypassed many of the
+intervening developments on the structure of the holomorphic anomaly, techniques for
+solving it, as well as relations to target space physics. It will be very interesting to
+revisit these various connections.
+
+
+2     Extended Holomorphic Anomaly
+
+We will begin by refreshing the main ideas, results, and derivations from BCOV [2]. The
+main purpose of subsections 2.1, 2.2, 2.4 is to establish notation and collect some useful
+formulas. The interlaced subsection 2.3 contains a few basic points about D-branes in
+the topological string, emphasizing the deformation and obstruction theory that is
+needed to understand fact (F1) from the introduction. In subsection 2.5, we describe
+how D-branes fit into the geometry of the vacuum bundle. After these preparations,
+we are then ready to derive the holomorphic anomaly equation for the open string,
+for the disk in subsection 2.6, and for higher topologies in 2.7. In subsection 2.8, we
+discuss the special status of the holomorphic anomaly at one loop in both closed and
+open string. In subsection 2.9, we write down the holomorphic anomaly for amplitudes
+with chiral insertions. Finally, in subsection 2.10, we will develop the basic techniques
+for solving the extended holomorphic anomaly equation, in parallel to the method of
+BCOV.
+
+
+                                             10
+2.1     Twisted N = 2 theories
+
+The starting point for the definition of a topological string theory is a 2-dimensional
+conformal field theory with N = (2, 2) worldsheet supersymmetry. Such theories have
+a total of four real supercharges, two of holomorphic origin (on the worldsheet), G± ,
+                                      ±
+and two anti-holomorphic ones, G . Here, the superscript indicates the charge under
+the U(1) R-symmetries, J, J . We will for simplicity directly assume that the central
+charge of the theory is ĉ = 3, and that all U(1) charges are integer. The holomorphic
+supercharges satisfy the algebra
+
+                    (G± )2 = 0 ,     {G+ , G− } = 2L0 ,      [G± , L0 ] = 0             (2.1)
+
+where L0 denotes the zero mode of the holomorphic stress-tensor. The anti-holomorphic
+version of the algebra is similar.
+      Among the important operators in an N = (2, 2) SCFT are the chiral primary
+operators, which are defined from the cohomology of the supercharges. The chiral
+operators form a ring and are in one-to-one correspondence with the supersymmetric
+ground states of the theory [24]. There are in fact four different rings that can be
+constructed, depending on the combination of holomorphic/anti-holomorphic super-
+charges (see table 1). The U(1) R-symmetries provide the rings with two gradings,
+which we will denote by q and q̄. Fields which are chiral primary on the holomorphic
+side have 0 ≤ q ≤ ĉ, while the anti-chiral ones have 0 ≥ q ≥ ĉ, and similarly for the
+anti-holomorphic side. The U(1) charge of the corresponding RR ground states, which
+can be reached from each of the chiral rings by spectral flow, lie between −ĉ/2 and
+ĉ/2.
+      Two discrete symmetries of an N = 2 SCFT are of particular importance for the
+topological theory. The first one is simply CPT invariance on the worldsheet, which
+identifies the (c, c) ring with the (a, a) ring, and the (c, a) ring with the (a, c) ring.
+The other symmetry is just as obvious from the algebra (2.1), but more subtle in its
+consequences. It is the mirror automorphism which exchanges the (c, c) with the (c, a)
+ring and the (a, a) with the (a, c) ring. For most of the discussion in topological strings,
+only two of the rings are relevant at the same time. To be specific, we will concentrate
+on the topological B-model, and its conjugate counterpart, the anti-topological B-
+model. We will sometimes refer to the A-model as “the other model”.
+      Part of the interest of the chiral rings arises from the fact that the subset of fields
+of charge (q, q̄) = (1, 1) parametrize deformations of the SCFT. Given an infinitesimal
+
+                                              11
+          model                       chiral ring         BRST charges        anti-ghosts
+                                                                      −                 +
+          topological A-model             (c, a)                 G+ , G        G− , G
+                                                                      +                 −
+          anti-topological A-model        (a, c)                 G− , G        G+ , G
+                                                                      +                 −
+          topological B-model             (c, c)                 G+ , G        G− , G
+                                                                      −                 +
+          anti-topological B-model        (a, a)                 G− , G        G+ , G
+
+
+Table 1: Four different topological models can be constructed from any N = (2, 2) super-
+conformal field theory.
+
+chiral primary φ with those charges, we can deform the theory by adding to the action,
+                        Z             Z            Z        Z
+                             2  2         2  2          (2)
+                   δS = d zd θφ + d zd θ̄φ̄ = φ + φ̄(2)                          (2.2)
+                                                                                     −
+where φ̄ is the anti-chiral field conjugate to φ. Also, φ(2) = dzdz̄{G− , [G , φ]} will be
+the two-form descendant of φ.
+   The next step in the construction is the topological twist of the SCFT into a
+topological field theory. The twist amounts to redefining the worldsheet stress tensor
+T → T ± ∂J, or equivalently to couple the U(1) R-symmetry current to a background
+connection which is equal to the spin connection on the worldsheet. Just as there are
+four chiral rings, there are also four different topological twists. After the topological
+twist, half of the supercharges become scalar, the other half one-forms, and the algebra
+(2.1) coincides with the algebra satisfied by the BRST operator and anti-ghost in the
+critical bosonic string. The U(1) charges are identified with the ghost numbers. More
+specifically, for the topological B-model, one identifies
+
+                          2QBRST ↔ G+ ,       b0 ↔ G− ,              bc ↔ J                 (2.3)
+
+While formally similar, there are three important differences to the bosonic string.
+Firstly, there is no ghost field, or more precisely, ghost and matter fields are not
+decoupled from one another. Secondly, we have a finite-dimensional BRST cohomology.
+The Hilbert space of closed string physical states decomposes according to the grading
+of the chiral ring by the two U(1) charges,
+                                                3
+                                                M
+                                    Hclosed =            Hq,q̄                              (2.4)
+                                                q,q̄=0
+
+Finally, the cohomology of the anti-ghost is non-trivial. This is obvious from the
+definition since by the identification (2.3), the anti-ghost cohomology is simply the
+
+                                             12
+anti-chiral ring, which is isomorphic to the chiral ring by worldsheet CPT. This has
+profound consequences, among others the holomorphic anomaly. But at first, these
+modifications appear minor, and the structure obtained by the topological twist of a
+unitary N = 2 SCFT is sufficient to define a measure on the moduli space of Riemann
+surfaces just as in the bosonic string. This is the topological string.
+
+2.2     Geometry of the vacuum bundle
+
+The most interesting aspects of the structure of N = (2, 2) SCFTs and their topological
+twists are revealed when one considers them in families. It was already mentioned above
+that one can parametrize the infinitesimal deformations of the topological B-model by
+the chiral fields of charge (q, q̄) = (1, 1). These deformations are in fact all unobstructed
+and span a complex manifold, M, of dimension n = dim H1,1 . We will now continue
+to follow BCOV and concentrate on the subring of the chiral ring generated by the
+marginal fields. If (φi ) for i = 1, . . . , n is a basis of marginal fields, a basis for the
+subring they generate is given by (φ0 , φi , φi , φ0 ). Here, φ0 is the identity operator of
+charge (q, q̄) = (0, 0), and φi are the charge (2, 2) fields which are dual to φi with
+respect to the topological metric
+
+                                  η(φi , φj ) = hφi φj i0 = δij                        (2.5)
+
+where h · ig=0 denotes the correlation function of the topological field theory on the
+sphere. Finally, φ0 is the top element in the chiral ring, of charge (3, 3), and satisfies
+
+                                  η(φ0 , φ0) = hφ0φ0 i0 = 1                            (2.6)
+
+The ring structure is encoded in the three-point function on the sphere, also known as
+the Yukawa coupling,
+                                      Cijk = hφi φj φk i0                              (2.7)
+
+Namely,
+
+              φi φ0 = φi ,    φi φj = Cijk φk ,       φi φj = δij φ0 ,   φi φ0 = 0     (2.8)
+
+Note that by topological invariance, it does not matter where on the sphere we insert
+the operators in either the definition of the metric or the Yukawa coupling.
+      As we move around in the moduli space M, the space of vacua with q = q̄ generated
+by the moduli fields fit together into a holomorphic vector bundle known as the vacuum
+
+                                               13
+bundle V → M. At any point m ∈ M, we can decompose
+                                  Vm = H0,0 ⊕ H1,1 ⊕ H2,2 ⊕ H3,3                                  (2.9)
+As we have done before, we will use the operator-state correspondence to identify the
+basis of the chiral ring with a basis for Vm . Namely, we let e0 ∈ H0,0 be the unique-
+up-to-scale ground state of charge (0, 0), and then obtain a basis of Vm by
+                             ei = φi e0 ,       ei = φi e0 ,         e0 = φ0 e0 .               (2.10)
+The topological metric (2.5), (2.6) is then a metric on the vacuum bundle,2
+                          η(ea , eb ) = hea |eb i = δab ,        for a, b = 0, . . . n          (2.11)
+       Another essential ingredient for the holomorphic anomaly is the existence of another
+metric on V besides the topological one, (2.5), (2.6). This metric is known as the tt∗ -
+metric and its definition depends in an essential way on the unitarity of the underlying
+N = 2 SCFT. If Θ is the CPT operator acting on the ground states, we define the
+tt∗ -metric by [25]
+                                        gab̄ = g(eb , ea ) = hΘb|ai                             (2.12)
+(If one wants to define this inner product by a path integral as in (2.5), one has to
+be more careful about where one inserts the operators.) Using the tt∗ -metric, one can
+define a new basis for the charge 2 and 3 subbundles of V, via
+                                       eī = ek gkī        e0̄ = e0 g00̄                       (2.13)
+       The set of data discussed above satisfies a number of relations, known as the tt∗ -
+equations [25], and which specialize to special geometry for ĉ = 3. Let us write out
+these equations for future reference.
+       First of all, the tt∗ -metric induces a connection on the bundle V. This connection
+is simply the unique one compatible with the metric and the holomorphic structure
+on V. With respect to the basis (ea ) = (e0 , ei , eī , e0̄ ), the connection matrix of the tt∗ -
+connection, Di (ea ) = (Ai )ba eb , is given by the usual formula, Ai = g −1∂i g, or explicitly
+                                                                                     
+          g 0̄0 ∂i g00̄                                 0
+                          j̄l
+                                                                                     
+                       g     ∂i g mj̄
+                                                       0                              
+  Ai =                                   ,     Aī =                                  (2.14)
+                                                                l̄k
+        
+                                      0  
+                                          
+                                                       
+                                                             g     ∂  g
+                                                                     ī k m̄
+                                                                                        
+                                                                                        
+                                                                              0̄0
+                                         0                                   g ∂ī g00̄
+   2
+       ’h’ and ’i’ are somewhat over-used in this context. Our conventions are that h·i(g,h) denotes
+worldsheet correlators, h·|·i the symmetric topological metric, and h·, ·i the symplectic pairing, which
+is anti-symmetric. We will try to be consistent.
+
+                                                       14
+Furthermore, the vacuum bundle carries an action of the chiral fields, as we have already
+used in the definition of the basis (2.10). In matrix representation, multiplication by
+the chiral fields φi , φī is explicitly,
+                                                                                
+                        0      0      0      0                    0 Gj̄m 0    0
+                                                                 0 0 Cj̄ m̄l 0 
+                       l                                                        
+                      δi      0      0      0
+               Ci =   0 C l̄ 0
+                                               ,          Cj̄ = 
+                                                                 0 0
+                                                                                   
+                                                                                l̄ 
+                                                                                         (2.15)
+                              im            0                        0    δj̄ 
+                        0      0    Gim̄     0                    0 0    0    0
+
+where Ciml̄ := Ciml g l̄l . The tt∗ -connection and the multiplication by the chiral ring
+satisfy the so-called tt∗ -equations,
+
+                         [Di , Dj ] = [Dī , Dj̄ ] = [Di , Cj̄ ] = [Dī , Cj ] = 0
+                           [Di , Cj ] = [Dj , Ci ]         [Dī , Cj̄ ] = [Dj̄ , Cī ]   (2.16)
+                                        [Di , Dj̄ ] = −[Ci , Cj̄ ]
+
+These equations are equivalent to the flatness of the one-parameter family of “im-
+proved” connections on V, often referred to as the Gauss-Manin connection,
+
+                             ∇i = Di − αCi                ∇ī = Dī − α−1 Cī            (2.17)
+
+The value of the parameter α in identifying ∇ with the geometric Gauss-Manin con-
+nection has to do with the existence of a real structure on the vacuum bundle, which
+is a point to which we shall return below in subsection 2.5.
+    For ĉ = 3, the tt∗ -equations can be formulated more intrinsically in terms of the
+geometry of the moduli space M itself (as opposed to the vacuum bundle over it).
+As we have noted, there is an identification between the charge (1, 1) subbundle of V
+and the tangent bundle of M. The identification involves the charge (0, 0) space H0,0 ,
+which forms a holomorphic line bundle L over M. Namely,
+
+                                            H1,1 ∼
+                                                 = L ⊗ TM                                (2.18)
+
+The charge (2, 2) and (3, 3) subbundles can be identified with the duals of L ⊗ T M and
+L, respectively, by using the topological metric, or with their hermitian conjugates by
+using the tt∗ -metric.
+    A metric on M, known as the Zamolodchikov metric, can be defined by restricting
+the tt∗ -metric to H(1,1) and using the identification (2.18)
+                                                gij̄
+                                        Gij̄ =                                           (2.19)
+                                                g00̄
+
+                                                     15
+It follows from the tt∗ -equations that the Zamolodchikov metric is a Kähler metric on
+M, with Kähler potential K = − log g00̄ . Namely,
+
+                                                Gij̄ = ∂i ∂j̄ K                                  (2.20)
+
+Moreover, the Yukawa coupling is a symmetric rank 3 tensor with values in L−2 which
+is holomorphic, and whose covariant derivative is symmetric in all four indices,
+
+                                ∂l̄ Cij,k = 0 ,           Di Cjkl = Dj Cikl .                    (2.21)
+
+Here, by abuse of notation, we are using D to denote the natural connection on
+Sym3 T ∗ M ⊗ L−2 , given by the sum of the Zamolodchikov connection (the metric con-
+nection for Gij̄ ) and the Kähler connection on L. (This is consistent with D being the
+tt∗ -connection on L ⊗ T M.) Finally, the curvature of the Zamolodchikov metric is (in
+its representation on the tangent bundle, with basis φi )
+
+                (Rij̄ )kl = [Di , Dj̄ ]kl = Cilm Cj̄ m̄k̄ e 2K Gm̄m Gk̄k − δlk Gij̄ − δik Glj̄   (2.22)
+
+Many formulas compactify if we agree to raise and lower indices with the tt∗ -metric,
+e.g.,
+                               Cījk := Cīj̄ k̄ g j̄j g k̄k = Cīj̄ k̄ e 2K Gj̄j Gk̄k           (2.23)
+The conditions (2.20), (2.21), (2.22) are precisely equivalent to what is known as a
+special Kähler structure on the moduli space M.
+
+2.3     First comments on boundaries
+
+Boundary conditions in N = 2 theories have been studied in many works over the years
+since BCOV. We will here recall some standard and some possibly less-well appreciated
+facts (for background material see [26]), and then quickly move to the generalization
+of the structures described in the previous subsection, which is our main interest in
+this paper.
+      Recall that starting from an N = (2, 2) CFT, we can construct two different topo-
+logical theories, the A-model and the B-model, depending on which combination of left
+and right-moving supercharges becomes the BRST operator. Since defining D-branes
+involves choosing boundary conditions between left and right-movers, this means we
+can also consider two kinds of D-branes, called A-branes and B-branes, respectively
+[27]. For example, the boundary conditions for B-branes are,
+                 −                     +
+          G− + G |∂Σ = 0 ,       G+ + G |∂Σ = 0 ,
+                                                              
+                                                         J − J ∂Σ = 0                            (2.24)
+
+                                                        16
+B-type boundary conditions are compatible with B-type topological twist in the sense
+that we can define topological string amplitudes with background D-branes that are
+BRST invariant.
+       Somewhat oddly at first, it also makes sense to consider A-type boundary conditions
+when one is in the B-model, and B-type boundary conditions in the A-model. To see
+the relevance of the branes from the other model, consider the overlaps of some B-
+brane B, boundary state |Bi, with the supersymmetric (Ramond-Ramond) ground
+states, which compute the topological charges of D-branes modulo torsion,
+
+                                              hrgs|Bi                                          (2.25)
+
+Using (2.24), it is not hard to show that this vanishes unless qrgs + q̄rgs = 0, namely
+the vector R-charge of the ground state has to vanish. These ground states do not
+correspond to the marginal (c, c)-fields if one uses spectral flow to the B-model, but
+rather to the marginal (q, q̄) = (1, −1) fields from the (c, a) ring in the topological
+A-model. Somewhat informally, one can think that the topological charges of B-branes
+are carried by the A-model (and vice-versa).3 Conversely, it means that if we want
+to use D-branes to probe the structure of the vacuum bundle (see subsection 2.5), we
+have to take them from the other model.
+       For now, let us discuss aspects of B-branes in the B-model. For boundary conditions
+preserving N = 2 supersymmetry, the essentials of the discussion on chiral rings, their
+relation to (open string) supersymmetric ground states, etc., remain unchanged. The
+main difference is that we have only one R-charge to label the states and fields,
+
+                                         Hopen = ⊕3p=0 Hp                                      (2.26)
+
+The relation between bulk and boundary R-charges is
+
+                                             p = q + q̄                                        (2.27)
+
+We will generically denote elements of the boundary chiral ring by ψa , or ψi for the
+marginal fields with p = 1. We will write ui for the corresponding worldsheet couplings.
+In distinction to the closed string case, these deformation are not always unobstructed.
+   3
+    This interaction of A- and B-model has also become familiar in recent years in the context of
+stability conditions [28, 29, 30]. For Lagrangian (A-)branes, they involve the holomorphic three-form,
+which is a B-model quantity, whereas for B-branes, stability depends on the (complexified, quantum
+corrected) Kähler form.
+
+                                                 17
+Rather, there can be a higher order superpotential W = W(u), whose critical points
+as a function of the ui determine the supersymmetric vacua of the D-brane theory.
+   In the categorical approach to D-branes on Calabi-Yau manifolds, the obstructions
+and the superpotential are succinctly encoded in a so-called A∞ -structure on the trian-
+gulated D-brane category. (The study of A∞ -structures to which the present discussion
+is closest in spirit appears in [31]. See [32] for an extension to higher worldsheet topolo-
+gies. The homological background for D-brane physics is explained in many works, see
+for instance [33, 34, 35, 36].) More precisely, if B, B ′ are two B-branes, the topological
+Hilbert spaces of B–B ′ -strings are identified as Ext-groups between the objects in the
+category
+                                    p
+                                   HB−B   ∼    p     ′
+                                        ′ = Ext (B, B )                              (2.28)
+
+Infinitesimal deformations of a brane B correspond to Ext1 (B, B), obstruction spaces
+to Ext2 (B, B). Furthermore, there is a collection of higher-order obstruction maps,
+                                      ⊗n
+                   mn : Ext1 (B, B)         → Ext2 (B, B) ,        (n ≥ 2)           (2.29)
+
+which by using the topological open string metric can be identified with the n+ 1-point
+function on the disk, see Fig. 1. The worldvolume superpotential can then be defined
+as [37]
+                                       ∞
+                                       X    1
+                            WB (u) =           hu|mn (u⊗n )i .                       (2.30)
+                                       n=2
+                                           n+1
+Its critical points correspond precisely to the locus where the higher-order obstruction
+maps vanish.
+   Not only are open string deformations often obstructed by the non-vanishing of
+higher products on the Ext-groups, but the very presence of background D-branes can
+sometimes obstruct the closed string deformations. Since this will be important later
+on, let us give a brief worldsheet derivation of this fact.
+   A basic feature of F-terms in supersymmetric theories is that they are supersym-
+metric only up to a total derivative. In spacetimes or on worldsheets with boundary
+therefore, this can lead to a non-vanishing boundary term in the supersymmetry vari-
+ation. Consider in our framework the deformation of the bulk action as in (2.2). By
+using the topological descent relations
+                                                       +
+                       {G+ , φ(2) } = ∂φ(1) ,                      ¯ (1)
+                                                     {G , φ(2) } = ∂φ                (2.31)
+
+
+
+                                                18
+PSfrag replacements
+                                        ψ3
+                                                                                           φ
+                      ψn+1                   ψ2
+
+
+                                                   ψ1                                       ψ
+
+
+
+
+         Figure 1: Left: The disk amplitude with n + 1 boundary insertions captures the higher
+         A∞ products (2.29). Right: The disk amplitude with one bulk and one boundary insertion
+         encodes the bulk to boundary obstruction map (2.33), and will also define the infinitesimal
+         Abel-Jacobi map (2.62).
+
+
+
+         we see that its supersymmetry variation on a worldsheet, Σ, with non-empty boundary
+         produces a boundary term,
+                    Z                 Z         Z       Z
+                               +
+                         +        (2)    ¯  (1)     (1)
+                                                                                   φ(1)
+                                                                                               
+           δQ (δS) = {G + G , φ } = (∂ + ∂)φ =    dφ =                                    +c.c. (2.32)
+                        Σ                      Σ                         Σ    ∂Σ
+         In the context of topological field theories, the boundary term on the RHS of (2.32)
+         has come to be known as “the Warner problem” [38].
+            By using (2.27), the boundary U(1) charge of φ(1) |∂Σ is p = 2, and since it is still
+                                                                              2
+         BRST closed, we obtain a well-defined open string chiral field from Hopen . This defines
+         the bulk-to-boundary obstruction map
+
+                                         = Hclosed → Ext2 (B, B) ∼
+                                m0 : T M ∼  1,1                     2
+                                                                 = Hopen                         (2.33)
+         which as indicated fits as a zeroth order product into the A∞ -framework. (An m1 can
+         be identified as the BRST operator itself.) Diagrammatically, m0 composed with the
+         open string topological metric can be defined as the disk correlator with one bulk and
+         one boundary insertion, see Fig. 1.
+            The further fate of the Warner problem depends on whether m0 (φ) vanishes in
+         cohomology or not. If it is zero, this means that there is an open string operator ψ
+         satisfying
+                                          φ(1) |∂Σ = {G+       (1)
+                                                       bdry , ψ }                                (2.34)
+         where G+
+                bdry is the boundary part of the supercharge. Hence by adding the boundary
+         term                                                Z
+                                             δSbdry = −               ψ (1)                      (2.35)
+                                                                 ∂Σ
+
+                                                        19
+to the action, we can cancel the Warner term in the susy variation, and the brane
+deforms with the closed string background.
+      On the other hand, if m0 (φ) 6= 0 ∈ Ext2 (B, B), we will not be able to deform the
+brane linearly with the background. However, note that by Serre duality (or worldsheet
+CPT), Ext2 (B, B) ∼ = Ext1 (B, B), and it can happen that m0 (φ) is in the image of a
+higher product mn for some n. In this case, by locking together an obstructed boundary
+deformation with the bulk deformation, we can still deform the brane with the closed
+string.
+      The basic example to keep in mind is when there is just one bulk deformation, t,
+and one boundary deformation, u. The superpotential is now a function of u and t,
+where we can treat the latter as a parameter.
+                                                              µn n+1
+                       W = W(u; t) = µ0 tu −                     u   + O(un+2)                     (2.36)
+                                                             n+1
+where µ0 and µn are constants. If µ0 , µn 6= 0, then for t = 0, u is obstructed at order
+n, while for small t 6= 0, there are n vacua u ∼ t1/n , and u is massive around each of
+them.
+      Let us bring this discussion to the point. If the D-brane has no marginal defor-
+mations, then the bulk-to-boundary obstruction map must be zero because Ext2 = 0.
+If there is a marginal deformation, and a non-trivial m0 , but the D-brane does not
+obstruct the bulk deformation, then µn must be non-zero for some smallest n ≥ 2, and
+the marginal boundary direction is lifted by a small bulk deformation.
+
+2.4     Closed string holomorphic anomaly
+
+As we have mentioned, topologically twisted N = 2 SCFTs can be coupled to 2d
+(topological) gravity by identifying the supercharges and their conjugates with BRST
+operators and antighosts of a critical bosonic string in which the ghost and matter
+fields do not decouple. Indeed, the algebra (2.1) is all that is needed to define string
+amplitudes by integration over the moduli space of Riemann surfaces.
+      If M(g) denotes the moduli space of Riemann surfaces of genus g ≥ 2, and µa ,
+a = 1, . . . , 3g − 3 the Beltrami differentials, we define the topological string amplitude
+at genus g by the formula,
+                                    Z             3g−3 Z                     Z
+                          (g)
+                                                  Y
+                                                                     −
+                                                                                        −
+                      F         =          [dm]               µa G               µā G        Σg
+                                                                                                   (2.37)
+                                    M(g)          a=1
+
+
+
+                                                        20
+where µa G− ≡ (µa )zz̄ G−
+                        zz denotes the contraction of the Beltrami’s with the antighosts,
+and h· · · iΣg the 2d field theory correlator on the worldsheet Σg . By this definition,
+the F (g) become sections of the line bundle L2g−2 over the CFT moduli space M. The
+definition has to be modified slightly for g = 0 and g = 1 because of the presence of
+ghost zero modes as usual.
+    To derive the holomorphic anomaly equation, BCOV consider an infinitesimal de-
+formation of the action by                   Z              Z
+                                                  (2)                  (2)
+                                        ti
+                                                 φi + tī        φī                   (2.38)
+                                                                               R (2)
+and differentiate (2.37) with respect to tī . This leads to the insertion of φī =
+R 2 √            +
+  d z h{G+ , [G , φī ]} in the topological correlator. By contour deformation, one can
+move the action of the BRST operators to the Beltrami differentials folded with the
+anti-ghosts. By using the zero-mode algebra (2.1), the contractions are converted into
+                         ¯ · · i on M(g) ,
+differentials ∂h· · · i, ∂h·
+                               3g−3
+       ∂ (g)                             ∂2
+                 Z                              Z      Y Z           Z
+                               X
+                                                                 −
+                                                                             −
+           F  =          [dm]        4   a ∂mā
+                                                  φ ī     µ a′G       µ ā′G
+                                                                                 Σg
+                                                                                    (2.39)
+      ∂tī         M(g)       a,ā=1
+                                       ∂m              ′    a 6=a
+                                                            ā′ 6=ā
+
+Thus the anti-holomorphic derivative of F (g) has been converted into the integral of a
+total derivative over M(g) . Naively, this is zero, but a careful analysis reveals that the
+            R
+correlator h φī · · · iΣg exhibits singularities around certain “boundary components” of
+M(g) , which correspond to our Riemann surface degenerating in various ways. Two
+types of degenerations are relevant for the closed string. The Riemann surface can split
+in two components by developing a long tube, or a handle can pinch without leading
+to a disconnected Σg . See fig. 2.
+    In the derivation, one has to pay close attention to the location of the anti-chiral field
+in the limit where Σg degenerates. As it turns out, the whole contribution comes from
+the region where φī is sitting on the long tube. Thus, one is more nearly considering
+a Riemann surface which pinches at both ends of the tube. In the limit, the pinches
+are each repaired by inserting complete sets of chiral fields, φj , φk on the lower-genus
+Riemann surface. The long tube is replaced with the three-point function on the sphere
+with insertion of anti-chiral fields, φī , φj̄ , φk̄ . This reduces to the anti-holomorphic
+Yukawa coupling Cīj̄ k̄ . The connection between the various pieces of Σg occurs via the
+inverse of the topological metric g j̄j , g k̄k .
+    Another important aspect of the derivation is that (for g ≥ 2!), the sums at the
+location of the pinches are actually only over the marginal fields, i.e., those of charge
+
+                                                    21
+frag replacements                                         PSfrag replacements
+                                           R                                                                        R
+                                               φī                                                                      φī
+
+                    Figure 2: The two degenerations that contribute to the RHS of the holomorphic anomaly
+                    for closed strings.
+
+                    (q, q̄) = (1, 1). This restriction arises from combining U(1) charge conservation on the
+                                                                                (2)
+                    sphere, qi + qj + qk = 3, with the fact that φa = 0 for qa = 0. Namely, integrated
+                    insertion of the identity operator leads to a vanishing contribution. Since qi = 1 already,
+                    the only remaining possibility is qj = qk = 1.
+                        Taken together, one obtains the holomorphic anomaly equation for F (g) (g ≥ 2) as
+                    derived in BCOV
+                                                         1 X              (g ) (g ) 1       (g−1)
+                                           ∂ī F (g) =             Cījk Fj 1 Fk 2 + Cījk Fjk ,                     (2.40)
+                                                         2 g +g =g                  2
+                                                           1     2
+
+
+                    where the 12 is a symmetry factor, and Cījk ≡ Cīj̄ k̄ g j̄j g k̄k = Cīj̄ k̄ e 2K Gj̄j Gk̄k . The F (g)
+                    with subscripts are the topological string amplitudes with insertion of the corresponding
+                    chiral fields, and are defined by
+                                            Z       Z           Z      3g−3 Z          Z
+                                (g)                     (2)        (2)
+                                                                       Y
+                                                                                   −
+                                                                                              −
+                              Fi1 ,...,in =   [dm]    φ i1 · · · φ in         µa G       µā G                       (2.41)
+                                           M(g)                                 a=1
+
+                    As also shown in BCOV, the amplitudes with insertions can be obtained from the
+                    partition functions, F (g) , by covariant differentiation,
+                                                               (g)                    (g)
+                                                           Fi1 ,...,in+1 = Din+1 Fi1 ,...,in                         (2.42)
+
+                    where again D is the Zamolodchikov-Kähler covariant derivative on Symn T ∗ M ⊗L2g−2 .
+                        Note that in (2.40), the sum is restricted to gi ≥ 1, which is a consequence of the
+                    vanishing of the sphere one and two-point function. Namely, we only encounter stable
+                    degenerations, with 3gi − 3 + ni > 0 for i = 1, 2, where ni ≡ 1 is the number of marked
+                    points on the i-th component.
+
+                                                                          22
+2.5     More on the vacuum bundle. D-branes as normal functions
+
+Let us begin this subsection with a minor comment, which will gain some importance
+in the one-loop holomorphic anomaly in subsection 2.8. As we have recalled above,
+topological string amplitudes at genus g are sections of the non-trivial line bundle L2g−2
+over moduli space M. This arises because the ambiguity in normalizing the twisted
+path-integral on the worldsheet is determined by the choice of a canonical closed string
+vacuum e0 = |0iclosed . It is natural to ask whether the presence of boundaries could
+introduce new ambiguities, and lead to additional twisting. In fact, there are no new
+ambiguities, as can be seen from considering the topological path-integral on a disk
+with a long strip attached (Fig. 3). Given |0iclosed , this defines a canonical open string
+vacuum |0iopen , with a canonical normalization. As a consequence, open topological
+string amplitudes at genus g with h boundaries will be sections of L2g+h−2 over M.
+
+                                                                 |0iopen
+
+
+
+ PSfrag replacements
+
+
+
+Figure 3: The path-integral on the disk with a long strip attached defines a canonical open
+string vacuum.
+
+
+
+      To continue the discussion, it will be helpful to have in mind a more concrete
+geometric realization of the topological string. So let us consider the B-model on a
+family of Calabi-Yau manifolds, all denoted by Y . The ground states are identified
+with the cohomology of Y via
+
+                                    Hp,q ∼
+                                         = H 3−p,q (Y )                             (2.43)
+
+while the (c, c)-ring structure is determined from the identification
+
+                                H 3−p,q (Y ) ∼
+                                             = H q (Λp T Y )                        (2.44)
+
+given by contraction with the holomorphic 3-form, Ω. The moduli space M is the
+space of complex structure deformations of Y . As Y varies over M, the middle di-
+mensional cohomology groups H 3 (Y ) fit together into a holomorphic vector bundle,
+
+                                            23
+which is precisely the vacuum bundle V we have discussed in subsection 2.2 above.
+The decomposition (2.9) is now
+
+                       Vm = H 3,0(Y ) ⊕ H 2,1 (Y ) ⊕ H 1,2 (Y ) ⊕ H 0,3 (Y )              (2.45)
+
+An important point is that the decomposition (2.45) is not compatible with the holo-
+morphic structure on V. Instead, consider the Hodge filtration on H 3 (Y ),
+
+        H 3,0(Y ) = F 3 H 3 (Y ) ⊂ F 2 H 3 (Y ) ⊂ F 1 H 3 (Y ) ⊂ F 0 H 3 (Y ) = H 3(Y )   (2.46)
+
+where
+                                                           ′   ′
+                                  F q H 3 (Y ) = ⊕q′ ≥q H q ,3−q (Y )                     (2.47)
+
+is the space of three-forms with at least q holomorphic indices. The F q H 3 (Y ) do fit
+together into holomorphic subbundles of V over M. In particular, F 3 H 3 (Y ) = H 3,0 (Y )
+is identified with our canonical line bundle L.
+   The topological metric on V is up to a sign, (−1)q , the symplectic pairing between
+H 3−q,q (Y ) and H q,3−q (Y ), while the Zamolodchikov metric is identified with the Weil-
+Petersson metric on M
+                                                                    Z
+                       Gij̄ = ∂i ∂j̄ K ,     where K = − log i              Ω∧Ω           (2.48)
+                                                                        Y
+
+The structure constants of the chiral ring are given by
+                                         Z
+                              Cijk = − Ω ∧ ∂i ∂j ∂k Ω                                     (2.49)
+                                                 Y
+
+The vacuum bundle V comes equipped with a real structure, which is induced from
+the embedding H 3 (Y ; R) ⊂ H 3 (Y ; C). Complex conjugation acts by exchanging H q,3−q
+with H 3−q,q and corresponds on the worldsheet to the CPT operator Θ.
+   It can hardly be overemphasized that the starting point for much of special geome-
+try and in fact the entire story of the holomorphic anomaly is the competition between
+the holomorphicity of the filtration (2.46), which would make topological string ampli-
+tudes holomorphic, and the reality of the decomposition (2.45), which is preferred for
+maintaining unitarity of the worldsheet CFT. We will see that this is crucial when we
+add boundaries as well.
+   Not only do we have a real structure on H 3 (Y ; C) ⊃ H 3 (Y ; R), but we also have
+an integral structure from the embedding H 3 (Y ; Z) ⊂ H 3 (Y ; R). The Gauss-Manin
+connection on H 3 (Y ; C) can be characterized by the fact that it preserves this integral
+
+                                                  24
+structure. Namely, any section of H 3 (Y ; Z) is flat with respect to the Gauss-Manin
+connection. On the Hodge filtration, the Gauss-Manin connection satisfies Griffiths
+transversality
+                                 ∇F q H 3 (Y ) ⊂ F q−1 H 3(Y )                              (2.50)
+
+If Γ ∈ H3 (Y ; Z) is an integral 3-cycle, it defines an element in H 3 (Y ; Z) by integration
+against 3-forms and duality. Of importance are the periods of the holomorphic three-
+form                                                  Z
+                                  Π(z) = hφ0 , Γi =         Ω(z)                            (2.51)
+                                                        Γ
+
+where z = (z i )i=1,...,n is some collection of local coordinates on M. The pairings with
+the (2, 1)-forms χi can be obtained by differentiation,
+                                                                   Z
+                                                                          (2,1)
+                  Di Π(z) = ∂i Π(z) + ∂i KΠ(z) = hφi , Γi =              χi       (z)       (2.52)
+                                                                     Γ
+
+while the overlaps with the (1, 2) and (0, 3)-forms follow (for instance) by complex
+conjugation.
+   It will be useful for us to introduce at this stage the so-called Griffiths intermediate
+Jacobian. At any point in moduli space, we consider the complex torus
+
+  J 3 (Y ) = H 1,2(Y ) ⊕ H 0,3 (Y )/H 3 (Y ; Z) = H 3 (Y ; C)/(F 2H 3 (Y ) + H 3 (Y ; Z))   (2.53)
+
+(The underlying real torus is H 3 (Y ; R)/H 3 (Y ; Z), the complex structure is determined
+by the complex structure on Y .) Because of the holomorphicity of the filtration (2.46),
+the J 3 (Y ) fit together into a holomorphic family of complex tori, known as the inter-
+mediate Jacobian fibration.
+   We can now begin to ask more precisely how D-branes fit into the framework of
+special geometry and the vacuum bundle over M. A-branes first.
+   From the worldsheet perspective, A-branes are essential to define the integral struc-
+ture on the vacuum bundle. Indeed, while the worldsheet CPT operator defines the
+real structure, it does not allow the selection of an integral lattice inside of it. But
+consider two A-branes A and A′ . By general principles, we can express the Witten
+index in the Hilbert space of A–A′ -strings via the overlaps of the boundary states with
+the Ramond ground states, which for A-branes must be taken from the B-model as we
+have explained in subsection 2.3
+
+                              trA−A′ (−1)F = hA|ea iη ab heb |A′ i                          (2.54)
+
+                                               25
+where ea is some basis of V, and η ab the inverse topological metric. Geometrically, A-
+branes wrap (special) Lagrangian three-cycles in Y . Their class in H3 (Y ; Z) defines the
+overlap with V via (2.51), (2.52), and their (integral!) intersection number computes
+the Witten index (2.54). Thus, properly normalized A-brane boundary states define
+integral sections of V.
+   B-branes are more subtle. (Useful references for the geometric statements that will
+follow below include [39, 40].) As we have mentioned before, the modern perspective
+is that D-branes are mathematically well accommodated in certain categories endowed
+with extra structure, such as the A∞ -structure we have discussed in subsection 2.3. For
+our B-model on Y , the relevant category is the bounded derived category of coherent
+sheaves, D b (Y ). Essentially, this includes D-branes wrapped on even-dimensional, holo-
+morphic cycles carrying holomorphic vector bundles, as well as all possible “topological
+bound states” of those that can be obtained by “topological tachyon condensation”.
+   Our main goal is to extract holomorphic information from objects in the B-brane
+category, and to relate it to the vacuum bundle V. It is in any case clear already that
+the topological classification of B-branes involves ground states from the other model,
+which are not contained in V. For reasons that will become completely clear only
+in subsection 2.7, we want to restrict ourselves to B-branes whose overlaps with those
+ground states with qrgs = −q̄rgs vanish. The point is that if those overlaps don’t vanish,
+one is in danger that the corresponding A-model deformations, which are BRST exact
+in the B-model, will not decouple in loop computations. For this reason, and because
+it seems plausible that analogous effects can be achieved by (topological) orientifolds,
+we refer to this condition as “tadpole cancellation”.
+   Physically, all the holomorphic information one expects to extract from the open
+string at tree-level is captured in the spacetime superpotential W for the massless fields
+on the brane. The interpretation of the superpotential in A∞ -categories is quite well
+understood, but depends to a large extent on gauge-fixing data of the open string field
+theory [41, 37]. Gauge invariant physical information contained in the superpotential
+is for example the tension of BPS domainwalls, T = ∆W. Since such domainwalls
+carry no topological D-brane charge, they are precisely the physical objects satisfying
+the tadpole cancellation condition from the previous paragraph. We will henceforth
+restrict ourselves to such configurations.
+   Consider for instance wrapping of a D5-brane on a holomorphic curve C ⊂ Y . This
+B-brane carries no topological charge if its class in H2 (Y ; Z) vanishes. It can then arise
+
+
+                                             26
+as a domainwall between two D5-branes wrapped on two different holomorphic curves
+C+ and C− in the same class if C = C+ − C− holomorphically. The tension of the BPS
+domainwall is [42]                                 Z
+                                           T =             Ω                               (2.55)
+                                                       Γ
+
+where Ω(z) is the holomorphic three-form and Γ is a three-chain in Y with boundary
+∂Γ = C = C+ − C− . The domainwall tension depends on complex structure moduli
+both explicitly through the holomorphic three-form, as well as implicitly through the
+position of the curve C, which must vary in order to remain holomorphic as we vary the
+complex structure. At this stage, we also allow dependence of T on any moduli of C
+for fixed complex structure of Y , but we will drop this freedom in the next subsection.
+   Because the holomorphic three-form is unique up to scale, formula (2.55) is well-
+defined even if we think of Ω just as a representative of a cohomology class in H 3,0 (Y ).
+Because Γ has a boundary, we could not integrate an arbitrary cohomology class over
+it. However, next to Ω, we can do one more. Consider a class [χ(2,1) ] in H 2,1 (Y ). It is
+an elementary fact from Hodge theory that F p H k ∼
+                                                  = (F p Ak )c /dF p Ak−1 , where F p Ak
+are the k-forms on Y with at least p holomorphic indices, (·)c refers to closed forms, and
+d is the total differential. Thus we can represent [χ2,1 ] by a closed form χ(2,1) ∈ F 2 A3
+and define the integral                     Z
+                                                  χ(2,1)                                   (2.56)
+                                              Γ
+
+The integral does not depend on the choice of representative since under χ(2,1) →
+χ(2,1) + dξ (2,0) , where ξ (2,0) is a (2, 0)-form, the integral changes by ∂Γ ξ (2,0) , and since
+                                                                           R
+
+∂Γ = C is a holomorphic curve, the integral of a (2, 0)-form over it vanishes.
+   The properties we have just described are part of the definition of a Poincaré normal
+function, in the sense of Griffiths [13] (see [39] for a pedagogical introduction). For-
+mally, a normal function ν is a holomorphic section of the intermediate Jacobian (2.53)
+satisfying the infinitesimal condition for normal functions, or Griffiths transversality,
+defined as follows. If ν is any holomorphic section of J 3 (Y ) = H 3 (Y )/(F 2H 3 + H 3 (Z)),
+one can choose a lift of ν as a holomorphic section ν̃ of H 3 (Y ). Then we can apply
+the Gauss-Manin connection ∇ to ν̃, and Griffiths transversality for normal functions
+is the statement
+                                          ∇ν̃ ∈ F 1 H 3                                    (2.57)
+
+Instead of showing that this condition is independent of the lift (which it is), let us verify
+that a family of holomorphic curves indeed defines a normal function. Note that by du-
+
+                                                  27
+ality, we can identify H 3 /F 2 H 3 with (F 2 H 3 )∗ and J 3 (Y ) with (F 2 H 3 )∗ /H3 (Y ; Z). Cor-
+respondingly, the integrals (2.55), (2.56) define an element of (F 2 H 3 )∗ = (H 3,0 ⊕H 2,1 )∗ ,
+and the three-chain Γ with ∂Γ = C is only defined up to a three-cycle in H3 (Y ; Z).
+Thus, C defines a section of the intermediate Jacobian. Finally, Griffiths transversality
+(2.57) follows from the observation that when we vary the complex structure of Y , we
+can describe the first order variation of C by a normal vector n ∈ NC/Y . If δΓ is the
+corresponding first order variation of Γ, one has
+                                  Z        Z
+                                      Ω=      Ω(n) = 0                                       (2.58)
+                                       δΓ        C
+
+which again vanishes by type considerations since C is holomorphic. This is equivalent
+to hΩ, ∇ν̃i = 0, and hence to (2.57).
+      Normal functions also make sense for holomorphic vector bundles, and by splitting
+distinguished triangles can be defined for the entire derived category D b (Y ). The
+essential device that makes this possible is the notion of algebraic or holomorphic second
+Chern class. Given for example a holomorphic vector bundle, we can equip it with a
+hermitian metric, and thus specify a connection, A, whose curvature F = dA + A ∧ A
+is of type (1, 1). The second Chern form is c2 (A) = trF ∧ F and defines a cohomology
+class in H 4 (Y ; Z). If [c2 (A)] = 0, one may write c2 (A) = dCS (A), where CS (A) is
+the Chern-Simons form. This way, we identify the domainwall tension with Witten’s
+holomorphic Chern-Simons functional [43, 41, 44],
+                                    Z
+                               T = CS (A) ∧ Ω                                                (2.59)
+
+and indeed one can show that it depends only on the holomorphic class of the vector
+bundle.
+      Further details on the relation of D-branes to normal functions, with an important
+example, appear in [6].
+
+2.6     Infinitesimal invariant and holomorphic anomaly on the disk
+
+We have just seen that topologically trivial B-branes are holomorphically captured by
+a normal function, namely a holomorphic section of the intermediate Jacobian (2.53)
+satisfying Griffiths transversality (2.57). This association is known as the Abel-Jacobi
+map. It is worthwhile pointing out that in general, one can also consider intermediate
+Jacobians for 0-cycles, J 1 (Y ), and for four-cycles, J 5 (Y ). However, if Y is simply
+
+                                                28
+connected (which we assume), those Jacobians, known as the Albanese and Picard
+variety, respectively, vanish. The Abel-Jacobi map was first used used for open string
+disk instanton computations (on non-compact Calabi-Yau) by Aganagic and Vafa [45].
+Early speculations on the relevance of the Abel-Jacobi map to mirror symmetry appear
+in [46]. In this subsection, we study the relation between the Abel-Jacobi map for B-
+branes and the vacuum bundle V, especially at the infinitesimal level.
+   It is clear from the previous subsection that a normal function in itself cannot
+completely describe the topological boundary state of a B-brane. Granting a lift of the
+H 3 (Y ; Z) ambiguity, ν only defines the (0, 3) and (1, 2) components of an element of
+H 3 (Y ), and this only in the quotient. To get an actual state in V, we need a lift ν̃.
+   A little thought reveals that there is in fact a very natural lift of ν to all of V,
+dictated by worldsheet CPT invariance. Since the latter is simply complex conjugation
+acting on H 3 (Y ), we see that at the level of the pairing hΩ, νi = Γ Ω, (2.55), we are
+                                                                    R
+
+defining the lift by                      Z         Z
+                              hΩ, ν̃i =       Ω=            Ω = hΩ, ν̃i             (2.60)
+                                          Γ             Γ
+
+and similarly for the (1, 2)-forms. We will henceforth denote this real lift of the normal
+function also by ν.
+   Before studying the full consequences of this identification, let us finally clarify
+our intent to neglect open string moduli that has been lingering since (F1) in the
+introduction. We have seen already in subsection 2.3 that if bulk deformations are
+unobstructed by the D-brane and the obstruction map m0 is non-zero, we can remove
+open string moduli by a small bulk deformation.
+   To deal with the assumption that m0 is non-trivial, consider a family of homolog-
+ically trivial B-branes B(w), which as a function of some local parameter w are all
+holomorphic with a fixed complex structure of Y . We can define the Abel-Jacobi map
+AJ (w) ∈ J 3 (Y ). By considerations similar to those around (2.58), one can show that
+the first order variation of AJ (w) satisfies
+
+                       dw AJ (w) ∈ F 1 H 3 (Y )/F 2 H 3 (Y ) ∼
+                                                             = H 1,2(Y )            (2.61)
+
+This is similar to (2.57), except that we now vary only the brane for fixed complex
+structure of Y . Since the tangent space to moduli of B(w) is Ext1 (B, B) as reviewed
+in subsection 2.3, the infinitesimal Abel-Jacobi map is more abstractly a map
+                                                               2,2
+                       α : Ext1 (B, B) = Hopen
+                                          1
+                                               → H 1,2 (Y ) = Hclosed               (2.62)
+
+                                               29
+Diagrammatically, by using the closed string topological metric, we can identify α with
+the two point function on the disk with one boundary and one bulk insertion, see Fig.
+1. Referring back to subsection 2.3, we see that the infinitesimal Abel-Jacobi map is
+nothing but the dual of the bulk-to-boundary obstruction map (2.33), α = m∗0 . Thus,
+if m0 vanishes, the image of B(w) in the intermediate Jacobian is independent of w,
+and, if the brane does not obstruct the bulk, the corresponding normal function will
+also not depend on w.
+   When the B-brane is a holomorphic vector bundle, these statements are reflected
+in the fact that the holomorphic Chern-Simons functional (2.59) is constant on un-
+obstructed families of holomorphic connections [44]. In fact, the holomorphic Chern-
+Simons functional (or, more generally, the open string field theory) and its quantization
+encodes the entire deformation and obstruction theory for B-branes [47]. We are here
+only concerned with its most elementary application.
+   An extremely useful concept attached to normal functions in the context of infinites-
+imal variation of Hodge structure is the so-called Griffiths’ infinitesimal invariant. It
+was first considered by Griffiths in [14], and later refined by Voisin [15] and Green
+[16]. If one insists on holomorphicity, defining the infinitesimal invariant requires some
+ingenuity, because one cannot quite do it without choosing a lift of ν to H 3 (Y ) (see
+[39]). But since we have given up on holomorphicity long ago, and work with the
+real physical lift (2.60), we can be more pedestrian. Our main goal is to explain the
+identification of the infinitesimal invariant with the disk two-point function, see (F3)
+in the introduction.
+   Consider a real normal function ν, and expand in a basis of the vacuum bundle,
+see eq. (2.13),
+                                   ν = ν 0 e0 + ν i ei + ν ī eī + ν 0̄ e0̄                      (2.63)
+where reality means ν ī = ν i , ν 0̄ = ν 0 . The domainwall tension is of course T =
+hΩ, νi = he0 , νi = ν 0̄ g00̄ . By utilizing the explicit form of the connection matrices in
+subsection 2.2, we find
+
+  ∇i ν = (∂i ν 0 − ∂i Kν 0 )e0 + ∂i ν l + g k̄l ∂i gmk̄ ν m − δil ν 0 el +
+                                                                     
+                                                                ¯
+                                                   ∂i ν l̄ − Ciml ν m el̄ + ∂i ν 0̄ − Gim̄ ν m̄ e0̄ (2.64)
+                                                                                              
+
+
+Griffiths transversality for normal functions is the statement hΩ, ∇νi = 0, which trans-
+lates into
+                                Di T = ∂i T + ∂i KT = νi = gij̄ ν j̄                              (2.65)
+
+                                                     30
+The Griffiths’ infinitesimal invariant can now be defined as the following tensor in
+(T ∗ M)2 ⊗ L−1 ,
+                                           ∆ij := −h∇i Ω, ∇j νi                                    (2.66)
+
+By using Griffiths transversality and the compatibility of the Gauss-Manin connection
+with the symplectic metric, this is equivalent to
+
+                                            ∆ij = hΩ, ∇i ∇j νi                                     (2.67)
+
+which makes it obvious that ∆ij is symmetric in i and j, i.e., ∆ij ∈ Sym2 (T ∗ M) ⊗ L−1 .
+From (2.64), we find explicitly
+
+                                   ∆ij = Di Dj T − Cijk g k̄k Dk̄ T                                (2.68)
+
+From the definition, it is clear that ∆ij vanishes identically if T is a period of the
+holomorphic three-form over a (closed) three-cycle. To verify this, one has to be careful
+to insert an actual real period, and not just an arbitrary complex solution of the Picard-
+Fuchs equation. These notions are not equivalent since (2.68) is not holomorphic in
+T . But in any event, we see that the infinitesimal invariant does not depend on how
+we choose to lift the H 3 (Y ; Z) ambiguity in the definition of the normal function. It is
+also invariant under monodromies in the complex structure moduli space, for the same
+reason.
+   To show the identification of ∆ij with the disk two-point function, we will make
+use of the holomorphic anomaly. From (2.68) and the special geometry relations, it is
+not hard to see that our infinitesimal invariant satisfies the distinctive equation
+
+             ∂ī ∆jk = −Cjkl g l̄l Dī Dl̄ T + Cjkl Cīl̄m̄ g l̄l g m̄m Dm T = −Cjkl g l̄l ∆īl̄   (2.69)
+
+where ∆k̄l̄ = ∆kl . On the other hand, the topological string amplitude on the disk with
+two bulk insertions is defined by
+                                             Z 1
+                                  ˜ jk =                        [1]
+                                  ∆                drhφj (0)φk (r)i(0,1)                           (2.70)
+                                              0
+
+where one of the insertions is fixed at 0, and we are integrating over the radial position
+                                     [1]                    −
+of the one-form descendant φk = 12 [G− − G , φk ] of the other. Taking a deriva-
+        ˜ jk in the anti-holomorphic direction brings down the anti-chiral insertion
+tive of ∆
+R (2)          √            +         +
+  φī = d2 z h 12 {G+ + G , [G+ − G , φī ]}. This is BRST exact in the presence of
+         R
+
+
+
+                                                      31
+                                                                         R    [1]
+        PSfrag replacements                                                  φk (r)
+                               φj (0)
+
+
+
+
+               Figure 4: The disk amplitude with two bulk insertions.
+
+
+the boundary, and similarly to the derivation in subsection 2.4, we can move the BRST
+                                                             +    [1]
+operator to the chiral insertion, where {G+ + G , φk } = dφk . Thus we are reduced to
+                                      Z 1
+                                             ∂
+                                                     Z
+                             ˜ jk =                        [1]
+                         ∂ī ∆             dr h           φī φj (0)φk (r)i(0,1)                   (2.71)
+                                         0   ∂r
+        [1]             +
+where φī = 21 [G+ − G , φī ]. This is now a sum of two boundary terms. When φk hits
+the boundary at r = 1, we obtain a term similar to the Warner term in the supersym-
+metry variation of the bulk action (2.32). By our assumptions, the Warner term has
+been canceled as in (2.34), in other words φk |∂Σ is BRST exact on the boundary. So
+there is no contribution from r = 1. On the other hand, the boundary term at r = 0,
+when φj and φk collide, can be evaluated by using the bulk chiral ring and tt∗ -fusion.
+Thus,                                    Z 1
+                    ˜ jk = −Cjkl g l̄l                      [1]                     ˜ īl̄
+                ∂ī ∆                          drhφl̄(0)φī (r)i(0,1) = −Cjkl g l̄l ∆              (2.72)
+                                          0
+                                                                                             [1]
+where we have made use of the fact that the angular integration of φī is trivial once
+φj and φk have been fused. This shows that ∆ ˜ ij satisfies exactly the same holomor-
+phic anomaly equation as ∆ij . Modulo the holomorphic ambiguity, this completes our
+identification of the two-point function on the disk with the non-holomorphically lifted
+Griffiths infinitesimal invariant of the normal function. We believe that this identifica-
+tion also holds after the holomorphic ambiguity has been taken into account. We will
+be able to verify this in the example from independent information in the A-model.
+   We now have all the machinery in place to extend the holomorphic anomaly to
+higher worldsheet topologies.
+
+
+
+
+                                                     32
+2.7       Holomorphic anomaly with D-branes
+
+In analogy to (2.37), we want to define the open topological amplitude F (g,h) by an
+integral over the moduli space M(g,h) of Riemann surfaces with genus g and h boundary
+components. In this subsection, let us assume 2g + h − 2 > 0. (We have discussed the
+disk amplitude in the previous subsection, and will return to the annulus amplitude
+in the next.) Given such a Riemann surface Σg,h , we can close off all the boundaries
+by gluing in a standard centered disk at each boundary component. The data one
+is forgetting is the length of the boundary component. This describes M(g,h) as a
+                              (g)
+fibration over Mh , the moduli space of Riemann surfaces of genus g with h marked
+points
+                                                      h                               (g)
+                                                 R+        → M(g,h) → Mh                                                  (2.73)
+Consequentially, when thinking about the infinitesimal variations of Σg,h , we can isolate
+those which only change the lengths of the boundary components, from those which
+affect also the bulk of the Riemann surface. We introduce the (real) length moduli by
+                                               (g)
+lb , and the coordinates on Mh by ma . Let us also denote the Beltrami differentials
+                                     (g)
+pulled back from Mh by µa , µā , a, ā = 1, . . . 3g + h − 3, and the other ones by λb ,
+b = 1, . . . h.
+      We now define the topological string amplitude F (g,h) by
+                      Z                       3g+h−3 Z                    Z               h
+          (g,h)
+                                               Y                                       − Y                     −
+                                                                  −
+                                                                                                   λb (G− + G ) Σ
+                                                                      
+      F           =                [dm][dl]                µa G               µ̄ā G                                      (2.74)
+                                                                                                                    g,h
+                          M(g,h)               a=1                                           b=1
+
+It is important here that the µa are complex and can be localized away from the bound-
+                                                                                                            −
+ary ∂Σg,h . It therefore makes sense to contract them with the G− , G individually. On
+the other hand, the λb are real, and supported near ∂Σg,h . So we need to contract
+                                                                                                                −
+them with the combination that is preserved at the boundary, G− + G .
+      The F (g,h) are sections of L2g+h−2 over M. Recall that we assume all closed string
+deformations to be unobstructed by the branes, and do not consider any other inde-
+pendent open string moduli, so M is the same as before. Also as before, taking a
+derivative with respect to the anti-holomorphic parameter tī brings down the BRST
+                R (2) R       √          +
+trivial operator φī = d2 z h{G+ , [G , φī ]} into the correlator.
+      When we now pull the action of the BRST operator to the anti-ghosts, we have
+                                                                                                      (g)
+to distinguish whether we hit the complex Beltramis from Mh or the real ones cor-
+responding to the variation of the lengths of the boundary components. In the latter
+case, we can only contract with the BRST charge that is preserved at the boundary,
+
+                                                              33
+                                                                          [1]                  +
+                    and remain with an insertion of φī ≡ 12 [G+ − G , φī ] in the correlator [2]. Thus, we
+                    obtain
+                                                                " 3g+h−3
+                                                                                  ∂2
+                                           Z                                                   Z         Y Z                               Z
+                               (g,h)
+                                                                    X
+                                                                                                                                   −
+                                                                                                                                                       −
+                       ∂ī F           =             [dm][dl]                 4                    φī                    µ G a′               µā′ G
+                                           M(g,h)                      a,ā=1
+                                                                                ∂ma ∂mā
+                                                                                                         a′ 6=a
+                                                                                                         ā′ 6=ā
+                                                                                                                    h
+                                                                                                                    Y                          −
+                                                                                                                          λb (G− + G ) Σ +
+                                                                                                                                                       g,h
+                                                                                                                    b=1
+                                                                       3g+h−3 Z
+                                               h
+                                                                                                                                                                   #
+                                                     d
+                                                           Z                                   Z
+                                               X                 [1]
+                                                                        Y
+                                                                                         −                    − Y                                 −
+                                                                                                                              λb′ (G− + G ) Σ
+                                                                                           
+                                                   2 b         φī                µa G              µ̄ā G
+                                               b=1
+                                                    dl                  a=1
+                                                                                                                                                             g,h
+                                                                                                                     b′ 6=b
+
+                                                                                                                                                               (2.75)
+
+                    (Strictly speaking, there are also terms which mix the base and the fiber directions of
+                    M(g,h) , but those can be shown to lead to a vanishing boundary contribution. The
+                    arguments are similar to those at the end of section 3.1 of BCOV.)
+
+
+
+
+frag replacements                                                    PSfrag replacements
+                                                 R                                                                                                            R
+                                                     φī                                                                                                           φī
+
+                    Figure 5: When adding boundaries, the two degenerations from Fig. 2 remain unaffected.
+
+                       Now we have to analyze the contribution from the boundary of M(g,h) . As could be
+                    expected, the closed string degenerations familiar from subsection 2.4 remain essentially
+                    unaffected, see Fig. 5. The only difference is that when we split the Riemann surface
+                    in two pieces, we have to keep track of the distribution of the various components
+                    of ∂Σg,h . This leads to a sum over (g1 , h1 ), (g2 , h2 ) with g1 + g2 = g, h1 + h2 = h.
+                    The condition to have a stable degeneration imposes the additional restriction that
+                    3gi + 3hi /2 − 2 > 0 for i = 1, 2, but in particular allows gi = 0 as long as hi ≥ 2.
+                       There are three types of degenerations which are specific to the presence of open
+                    strings. The first two arise when the Riemann surface develops a very long strip,
+                    which can either split the Riemann surface in two pieces, or lead to the merging of two
+
+                                                                                  34
+                    boundary components. It is not hard to see that those degenerations actually do not
+                    contribute. The presence of the very long strip projects the intermediate open strings to
+                    their ground states, and we can therefore replace the strip by the insertion of complete
+                    sets of chiral boundary fields, ψa ψb , contracted with the open string topological metric
+                    η ab . But notice that when 2g + h − 2 > 0, at least one of the boundary fields has to be
+                    an integrated insertion, and as in the closed string case, the only contribution could
+                    have come from marginal (p = 1) open string states. Since those are generically absent,
+                    we conclude that degenerations with long strips do not contribute.
+
+
+
+
+frag replacements                         PSfrag replacements
+                                                   R [1]                                 R     [1]
+                                                     φī                                     φī
+
+                    Figure 6: The degeneration with an intermediate open string does not contribute generically.
+                    This leaves only the degeneration in which the length of a boundary component shrinks to
+                    zero size, or, equivalently, the boundary component is separated by a long tube.
+
+                       The final degeneration we have to take into account arises when the length of
+                    a boundary components shrinks to zero, i.e., lb → 0 in (2.75), see Fig. 6. This is
+                    conformally equivalent to pulling the boundary very far from the rest of the Riemann
+                    surface via a long tube, at which point it looks more like a closed string degeneration
+                    of the type we have seen before. Strictly speaking, however, it would not make sense to
+                    pinch off the tube because this would have corresponded to a non-stable degeneration
+                    (in real codimension 2!) involving a disk one-point function. Complementarily, we note
+                                                                                   [1]
+                    that as long as the integration of the anti-chiral field φī is away from the long tube,
+                    the intermediate closed string is projected onto the ground states. As explained in the
+                    previous subsection, our construction is such that all these one-point functions vanish
+                    (by tadpole cancellation or Griffiths transversality).
+                                                                             [1]
+                       Thus, we only remain with the integration of φī over the long tube. Note that
+                                                [1]
+                    the angular position of φī       does not matter after we pull the tube infinitely long.
+                    The infinitely long tube projects the closed string onto their ground states which can
+
+                                                                  35
+again be represented by inserting a complete set of chiral fields (only marginal ones
+contributing). So the rest of the Riemann surface has an additional chiral insertion
+of φj , while the long tube becomes nothing but the anti-topological disk two-point
+function,                                               Z 1
+                                                                [1]
+                                              ∆īj̄ =         hφī (r)φj̄ (0)i0,1 ,        (2.76)
+                                                         0
+familiar from the previous subsection. The connection to the bulk of the Riemann
+surface occurs via the inverse topological metric g j̄j . This way, we arrive at our final
+expression for the holomorphic anomaly equation in the presence of D-branes,
+                        1 X              (g ,h ) (g ,h ) 1     (g−1,h)         (g,h−1)
+        ∂ī F (g,h) =             Cījk Fj 1 1 Fk 2 2 + Cījk Fjk      − ∆jī Fj       ,   (2.77)
+                        2 g +g =g                        2
+                           1   2
+                          h1 +h2 =h
+
+where we have of course defined
+
+                                              ∆jī ≡ ∆īj̄ g j̄j = ∆īj̄ e K Gj̄j          (2.78)
+
+and the F (g,h) with subscripts are the amplitudes with closed string insertions as before.
+      We call eq. (2.77) the “extended holomorphic anomaly equation”. It would be very
+interesting to clarify in greater detail the role played by marginal open string operators
+in this equation. As we have mentioned, it seems reasonable to expect that actual open
+string moduli do not enter the F (g,h) at all. Massless open string fields with a higher
+order superpotential however will lead to additional singularities at isolated points in
+the moduli space, as we will see in examples in the second half of the paper. But
+before that, let us conclude this first half by tying up a few loose ends concerning the
+extended holomorphic anomaly.
+
+2.8     Holomorphic anomaly at one loop
+
+In our derivation so far, we have factored out the one-loop amplitudes, on the torus
+and the annulus for closed and open strings, respectively. These amplitudes are some-
+what exceptional, because information enters which is slightly external to the B-model
+proper. Nevertheless, they fit in the general framework, as we now explain.
+      The holomorphic anomaly for the closed string one-loop amplitude was derived in
+[1]. It takes the form
+
+                                        (1)                   1          χ
+                                   ∂ī Fj     = ∂ī ∂j F (1) = TrCī Cj − Gj ī            (2.79)
+                                                              2          24
+
+                                                                36
+Here, negative χ is the Euler characteristic of the Calabi-Yau manifold under consider-
+ation. Since χ = 2(h21 (Y ) − h11 (Y )), the holomorphic anomaly knows not only about
+the vacuum bundle (of rank 2h21 +2), but also about the total number of ground states,
+which is not part of the special geometry.
+       In (2.79), the second term comes from the collision of the anti-chiral and the chiral
+insertion (a special case of the holomorphic anomaly with insertions, see subsection
+2.9), while the first comes from the degeneration of the torus to a very long tube. It
+is important to note that the Tr in this first term is over the entire vacuum bundle,
+and not just over the marginal directions. By using the explicit form of the chiral ring
+multiplication matrices (2.15), one finds
+
+                                    (1)    1             χ
+                                          = Cīkl Cjkl −
+                                                               
+                               ∂ī Fj                       − 1 Gj ī                          (2.80)
+                                           2             24
+The first term can be viewed as the usual closed string factorization contribution,
+while the −1 in the second term comes from the propagation of the unique ground
+state of zero charge (q, q̄) = (0, 0). The insertion of the identity operator leads to a
+non-trivial contribution in this case because after factorization, one is dealing with a
+sphere correlator with three fixed insertions, and the unintegrated identity operator is
+non-trivial.
+       Much the same story holds for the open string as well. The contribution to the
+holomorphic anomaly of the annulus diagram from factorization in the open string
+channel was in fact already derived by BCOV. It was found to be
+
+                               ∂ī ∂j F (0,2) = ∂ī ∂j log det gopen + · · ·                   (2.81)
+
+where gopen is the tt∗ -metric on the space of open string ground states. We have so
+far been able to neglect the open string ground states because of the assertion that
+there are generically no open string moduli, and non-marginal open string operators
+do not contribute to the geometry of the vacuum bundle or the holomorphic anomaly
+for 2g + h − 2 > 0. For the one-loop amplitudes, however, the open string identity
+operator will also propagate for the same reason as in the closed string.
+       It is not too hard to determine the tt∗ -metric on the open string ground states of
+zero charge.4 But before that, let us briefly recall the description of the open string
+chiral ring and the topological metric. Categorically, we can identify the charge 0 sector
+   4
+    Discussions with Andrew Neitzke were essential in clarifying this point, and indeed for this entire
+subsection. I would also like to thank Kentaro Hori for useful feedback on the argument.
+
+                                                   37
+of the open string chiral ring as Ext0 (B, B). If B corresponds to a holomorphic vector
+bundle E, we have the simpler identification
+
+                                  Ext0 (B, B) ∼
+                                              = H 0 (EndE)                             (2.82)
+
+We can think physically of the Ext0 (B, B) as the unbroken generators of the gauge
+group. Let us also recall that the topological metric (Serre pairing) between H 0 (EndE)
+and H 3 (EndE) is given (up to a sign) by
+              Z
+     hψ|ψ i = Tr(ψ ∧ ψ ′ ) ∧ Ω ,
+           ′
+                                       for ψ ∈ H 0 (EndE), ψ ′ ∈ H 3 (EndE)            (2.83)
+
+Let us choose a basis (fa ), a = 1, . . . N of Ext0 (B, B), where we allow for a generic
+N = dim Ext0 (B, B) ≥ 1.
+   To determine the tt∗ -metric gopen in the p = 0 sector, it is better to work with the
+supersymmetric (Ramond) ground states. They differ from (2.82) by spectral flow,
+
+                                  H0 ∼
+                                            p
+                                     = H 0 ( KY ⊗ EndE)                                (2.84)
+        √
+where   KY is the squareroot of the canonical bundle. So as a bundle over M, the
+charge 0 ground states of the open string live in the bundle L1/2 ⊗ g, where g ∼
+                                                                               =
+H 0 (EndE) is a trivial rank N bundle. By the arguments at the beginning of subsection
+2.5, we do not expect any new ambiguities in the open string sector. Therefore, the
+tt∗ -metric on this space must be
+                                                   Z          1/2             1/2
+                 (gopen )ab̄ = hΘfb |fa i = δab̄            Ω∧Ω     = δab̄ g00̄        (2.85)
+                                                        Y
+
+where g00̄ = e −K is the closed string topological metric in the zero charge sector (2.48),
+and δab̄ is a constant matrix (independent of the moduli). In particular,
+
+                                                               N
+                                  ∂ī ∂j log det gopen =         Gj ī                 (2.86)
+                                                               2
+where Gj ī is the Weil-Petersson metric on M.
+   Returning to the dots in (2.81), there are two possible sources for additional contri-
+butions. The first comes from the collision between the chiral and anti-chiral insertion,
+but this is easily seen to not contribute. The open counterpart of the Euler character-
+istic χ(Y ) is the Witten index tr(−1)F in the space of B–B strings, and this vanishes
+because the intersection pairing is anti-symmetric for ĉ = 3.
+
+                                                   38
+   The final source of contributions to the right hand side of (2.81) comes from factor-
+ization in the closed string channel, in other words from shrinking the inner boundary
+of the annulus to zero size. This is the contribution that is also present in the higher
+topologies in the previous subsection. Thus, we arrive at the following holomorphic
+anomaly equation for the annulus amplitude:
+                            (0,2)                                    N
+                       ∂ī Fj       = ∂ī ∂j F (0,2) = −∆jk ∆kī +     G          (2.87)
+                                                                     2 j ī
+   It was also shown in BCOV that the one-loop topological amplitudes are given by
+holomorphic Ray-Singer torsion, and it was argued that the holomorphic anomalies
+at one loop are equivalent to the Quillen anomaly. This connection gives a further
+check on our result (2.87), although it has to be said that most of the issues related
+to Ray-Singer torsion have apparently not been studied for the most general objects
+in the derived category. In the following somewhat tentative comments, we consider
+the open string situation, and tacitly assume that we are dealing with a holomorphic
+vector bundle.
+   In general, the Quillen anomaly gives a formula for the curvature of the Quillen
+metric on the (derived) determinant bundle of a family of hermitian vector bundles E
+over a family of Kähler manifolds Y. The Quillen metric differs from the Ray-Singer
+torsion by factors of the L2 -metric on the cohomology, effectively moving the second
+term in (2.87) to the LHS of the holomorphic anomaly equation. The formula is [48]
+                                                 Z
+                      ¯
+                                          
+                     ∂∂ log || · ||Quillen = 2πi   Td(Y)ch(E)|(1,1)          (2.88)
+                                                      Y
+
+and means that we are to compute the Todd and Chern forms of the family with
+respect to the given metrics on E and Y, integrate over the fiber Y and take the
+(1, 1)-piece on the base of the family. In the case of our interest, the bundles E are
+typically endomorphism bundles of topologically trivial holomorphic vector bundles. In
+this situation, the only contribution to (2.88) is expected to come from the algebraic
+second Chern class. This is precisely the quantity that we are computing in terms of
+the normal function and its infinitesimal invariant, as explained in subsection 2.6.
+   This identifies the RHS of (2.88) with the first term in (2.87). But we can in fact
+be even more precise about this. It appears (see, e.g., [49, 50]) that the curvature
+of the Quillen metric on the determinant bundle can often be interpreted as a metric
+on moduli space of the corresponding geometric objects. The holomorphic anomaly
+of the torus amplitude (2.79) in this context is computing simply the Weil-Petersson
+
+                                                39
+              χ
+metric (times 24 ) on the complex structure moduli space itself. The moduli space of
+the Calabi-Yau with a B-brane over it can naturally be viewed geometrically as the
+image of the normal function as a section of the intermediate Jacobian fibration (2.53).
+It is not hard to see that the metric on the normal function that is induced from the
+tt∗ -metric on the vacuum bundle coincides with the RHS of (2.87), in precise agreement
+with the above mentioned interpretation of the Quillen anomaly.
+
+2.9     Holomorphic anomaly with insertions
+
+As in the closed string case, we can consider open topological string amplitudes with
+insertions of chiral operators in the bulk of the Riemann surface. These amplitudes
+are defined by
+                Z            Z                Z            3g+h−3 Z                   Z               h
+    (g,h)                          (2)               (2)
+                                                            Y                                      − Y                 −
+                                                                              −
+                                                                                                           λb (G− + G ) Σ
+                                                                                  
+  Fi1 ,...,in =                  φ i1 · · ·        φ in                µa G               µ̄ā G
+                                                                                                                               g,h
+                  M(g,h)                                    a=1                                      b=1
+                                                                                                                            (2.89)
+and can also be obtained from the partition functions by covariant differentiation
+                                                    (g,h)                     (g,h)
+                                                  Fi1 ,...,in+1 = Din+1 Fi1 ,...,in                                         (2.90)
+
+The main reason for introducing these amplitudes here is that they will arise in the next
+section when we solve the holomorphic anomaly equation. It is then useful to know
+the holomorphic anomaly equations satisfied by these amplitudes with insertions, and
+that the relations in (2.90) are consistent with the special geometry.
+      We have, cf., eq. (3.15) in BCOV
+
+        (g,h)         1 X             X       1       (g1 ,h1 )         (g2 ,h2 )            1 jk (g−1,h)
+  ∂ī Fi1 ,...,in =             Cījk                Fjiσ(1) ...,iσ(s) Fkiσ(s+1) ,...,iσ(n) + Cī Fjki1 ,...,in
+                      2 g +g =g       s,σ
+                                          s!(n − s)!                                         2
+                         1   2
+                        h1 +h2 =h
+                                                                                      n
+                                  (g,h−1)                                                            (g,h)
+                                                                                      X
+                          − ∆jī Fji1,...,in − (2g + h − 2 + n − 1)                         Gis ī Fi1 ,...,is−1 ,is+1 ,...,in (2.91)
+                                                                                      s=1
+
+The following relations are useful to verify consistency of (2.90) with the relations of
+special geometry (namely, the curvature formula (2.22)),
+
+                                                      Dl Cījk = 0
+                                                                                                                            (2.92)
+                                                       Dl ∆jī = −Cījk ∆kl
+      Finally, we note that the holomorphic anomaly on the disk, (2.69) can be viewed as
+a special case of the general holomorphic anomaly equation (2.91). Thus, just as the
+
+                                                                  40
+holomorphic anomaly for higher-point function n ≥ 4 on the sphere is equivalent to
+the statements of special geometry [2], we consider (2.69) as the open string analogue
+of special geometry.
+
+2.10   Solution of extended holomorphic anomaly
+
+In BCOV, it was shown that the closed string holomorphic anomaly equation can be
+solved by a recursive procedure that progressively moves the anti-holomorphic deriva-
+tive to lower and lower genus amplitudes. The resulting expressions allow a very in-
+teresting interpretation as Feynman diagrams. However, the number of terms quickly
+grows exponentially with the genus, and this is not very tractable in practice. More
+recently, Yamaguchi and Yau [17] have shown that in fact all closed topological string
+amplitudes are polynomial of a certain degree in a finite number of generators, which
+is more pleasant for calculations. It seems almost inevitable that a similar statement
+holds for the extended holomorphic anomaly as well. We will however not attempt this
+here, and rather solve the extended holomorphic anomaly in the same way as BCOV.
+   Because of the symmetry of Dī Cj̄ k̄l̄ ∈ Sym4 (T̄ ∗ M) ⊗ L̄−2 , one can locally integrate
+
+                                       Cīj̄ k̄ = Dī Dj̄ Dk̄ S̃                      (2.93)
+
+where S̃ ∈ L̄−2 . Namely,
+
+                       Cījk = Cīj̄ k̄ e 2K Gj̄j Gk̄k = ∂ī Gm̄j ∂m̄ Gn̄k ∂n̄ S      (2.94)
+
+where S = e 2K S̃ ∈ L2 . The relations satisfied by the quantities
+
+                        S,       S j = Gj̄j ∂j̄ S ,         S jk = Gj̄j ∂j̄ S k       (2.95)
+
+play the key role in moving the anti-holomorphic derivative to the lower genus ampli-
+tudes, necessary for solving the holomorphic anomaly equation. Explicit expressions
+for the S, S j and S jk can be found in BCOV.
+   We can proceed very similarly in the open string. Since Dī ∆j̄ k̄ ∈ (T̄ ∗ M)3 ⊗ L̄−1 is
+symmetric in all three indices, we can write
+
+                                                          ˜
+                                          ∆īj̄ = Dī Dj̄ ∆                           (2.96)
+
+     ˜ ∈ L̄−1 . Then
+with ∆
+                               ∆jī = ∆īj̄ e K Gj̄j = ∂ī Gk̄j ∂k̄ ∆                 (2.97)
+
+                                                 41
+             ˜ ∈ L. The key quantities analogous to (2.95) are
+with ∆ = e K ∆
+
+                                   ∆     and ∆j = Gj̄j ∂j̄ ∆                      (2.98)
+
+Explicit expressions for the ∆ and ∆j can be obtained as follows. From the holomorphic
+anomaly of the disk amplitude,
+
+                                        ∂ī ∆jk = −Cjkl ∆lī                      (2.99)
+
+we see that since Cjkl is holomorphic,
+
+                                    Cjkl∆l = −∆jk + fjk                          (2.100)
+
+where fjk is a holomorphic ambiguity. As in BCOV, we expect that by a judicious
+choice of fjk , the Yukawa coupling in (2.100) can be inverted, and we can solve for ∆l ,
+given ∆jk . If there is only one modulus as in our main example the quintic, we can set
+f11 = 0 and obtain
+                                                     ∆11
+                                          ∆1 = −                                 (2.101)
+                                                     C111
+To get an expression for ∆ itself, consider
+
+                        ∂ī Dk ∆j = −Cījm Ckml ∆l + δkj Glī ∆l − Dk ∆jī       (2.102)
+
+where we have just used the special geometry relation, and ∂ī ∆j = ∆jī . Using (2.100)
+and the second equation in (2.92), this is
+
+                                 = −Cījm fkm + δkj ∂ī ∆                        (2.103)
+
+After summing over j, k, we get
+                                       1
+                                         Dk ∆k + S mk fmk + f
+                                                              
+                               ∆=                                                (2.104)
+                                       n
+where n = dimM, and f is another holomorphic ambiguity. Let us use these results to
+solve the extended holomorphic anomaly equation in some representative examples.
+   For the annulus, (2.87) we find
+                                                N
+                     ∂ī ∂j F (0,2) = ∂ī −∆jk ∆k +∂j K − Cjkl ∆lī ∆k
+                                                       
+                                                2
+                                                1            N
+                                = ∂ī −∆jk ∆k − Cjkl ∆k ∆l + ∂j K
+                                                                       
+                                                                                 (2.105)
+                                                2             2
+                                       1                 N
+                                = ∂ī − (∆jk + fjk )∆k + ∂j K
+                                                                
+                                       2                 2
+                                                42
+where we have used (2.100) in the last step. This gives F (0,2) up to a holomorphic
+ambiguity.
+    The next more complicated cases are (g, h) = (1, 1) and (0, 3). Let’s do F (1,1) .
+                  1             (1,0)
+    ∂ī F (1,1) = Cījk ∆jk − Fj ∆jī
+                  2
+                      1             (1,0)    1          1            χ
+                = ∂ī S jk ∆jk − Fj ∆j + S jk Cjkl∆lī + Cjkl Cīkl −    − 1 Gj ī ∆j
+                                                                             
+                      2                        2         2            24
+                      1 jk          (1,0) j   1         χ
+                = ∂ī S ∆jk − Fj ∆ + Cjkl S kl ∆j −
+                                                                  
+                                                           −1 ∆
+                      2                       2         24
+                                                                                  (2.106)
+
+For F (0,3) , the result is
+
+                     (0,2)          N    1           1
+      F (0,3) = −Fj          ∆j +     ∆ − ∆jk ∆j ∆k − Cjkl ∆j ∆k ∆l + hol . amb.            (2.107)
+                                    2    2           6
+These results admit an interpretation in terms of Feynman graphs similar to the ones
+in BCOV.
+
+
+
+                     1                               1
+                 =                    −          +                −       + hol . amb.      (2.108)
+                     2                               2
+
+
+
+                                                    1                 1
+                 =−                  +          −                 −            + hol . amb. (2.109)
+                                                    2                 6
+
+
+where
+                                    = S ij ,             = ∆i ,           =∆                (2.110)
+
+and all other conventions are as in BCOV. It should not be hard to show that such a
+graphical expansion is valid for all, (g, h).
+
+
+3    Open Topological String Amplitudes on the Real Quintic
+
+                                          X := {P (z) = 0} ⊂ P4                               (3.1)
+
+where P is a homogeneous polynomial of degree 5 in 5 variables z1 , . . . , z5 . Our interest
+is in the A-model on X, which depends on the complexified Kähler parameter t of X.
+
+
+                                                     43
+Assume that X is real in the sense that all coefficients of P are real (or have the same
+phase). Then the real locus
+                                          L = {zi = z̄i } ⊂ X                             (3.2)
+
+                                                                      zi , we find L ∼
+                                                                     P 5
+is a Lagrangian submanifold. If X is Fermat, P (z) =                                 = RP3 . To
+wrap an A-brane on L, we need to specify a flat gauge field, for which there are two
+choices because H1 (L; Z) = Z2 . The BPS domainwalls between the corresponding
+worldvolume vacua are classified by those classes in H2 (X; L) ∼
+                                                               = Z with non-trivial
+image in H1 (L; Z). Modulo H2 (X; Z), the tension of those domainwalls is for large t
+given by [4]
+                                    t     1 15 1/2         
+                                  T (t) =
+                                      ±     + 2q + ···                             (3.3)
+                                    2     4 π
+where q ≡ e 2πit and the dots, which are of higher order in q, correspond to corrections
+from worldsheet (disk) instantons.
+      The domainwall tension T (t) effectively computes the topological string amplitudes
+on the disk, as we have explained in the previous section. More precisely, the relation
+of T (t) to topological amplitudes is similar to the relation between the genus 0 pre-
+potential F (0) and topological amplitudes on the sphere, which can be obtained by
+differentiation. We will here compute topological string amplitudes for higher world-
+sheet topologies, with boundary on the real quintic, by using the extended holomorphic
+anomaly equation and the tree-level data (3.3).
+
+3.1     Conventions
+
+There is also a B-model description of the above situation.5 The mirror quintic Y is
+obtained from the one-parameter family of quintics
+
+                   {W = x51 + x52 + x53 + x54 + x55 − 5ψx1 x2 x3 x4 x5 = 0} ⊂ P4          (3.4)
+
+after a (Z5 )3 quotient. The B-model can be equivalently described as a Landau-
+Ginzburg model with worldsheet superpotential W . The mirror of L with its two
+vacua is a twin family of matrix factorizations of W , described in [23, 6].
+      For the appropriate choice of holomorphic three-form, the Picard-Fuchs operator
+for the family Y is
+
+                          L = θ4 − 5z(5θ + 1)(5θ + 2)(5θ + 3)(5θ + 4)                     (3.5)
+  5
+      Our conventions follow, with minor changes, those of [3, 2], and later [18].
+
+
+                                                    44
+where z = (5ψ)−5 , and θ = zd/dz. As shown in [4, 5, 6], the domainwall tension
+satisfies the inhomogeneous Picard-Fuchs equation
+                                                 15 √
+                                     LT (z) =         z                                 (3.6)
+                                                16π 2
+This equation of course determines T only up to a solution of the homogeneous Picard-
+Fuchs equation. This is more ambiguity than we can tolerate when we lift the normal
+function from the intermediate Jacobian J 3 (Y ) = H 3 (Y ; C)/(F 2 H 3 (Y ) + H 3 (Y ; Z)) to
+H 3 (Y ; R) ⊂ H 3 (Y ; C), see subsection 2.6. Indeed, not any arbitrary complex linear
+combination of solutions of the Picard-Fuchs equation can be obtained by integrating Ω
+over an actual real three-cycle of Y . However note that the disk information enters the
+extended holomorphic anomaly via the infinitesimal invariant (2.68), which is invariant
+under adding to T a solution of the homogeneous Picard-Fuchs equation corresponding
+to an arbitrary real (but not necessarily integral) combination of periods. In any case,
+we know from (3.3) exactly which solution of (3.6) we want around large volume, and
+by analytical continuation we will know the reality properties of T (z) also around other
+points in moduli space.
+   When analyzing the physical interpretation of topological string amplitudes in var-
+ious regions of moduli space, one should do so by expanding in the so-called canonical
+coordinates appropriate for the region of interest. In this “holomorphic limit”, the
+F (g,h) become holomorphic function of the canonical coordinates, which is indeed re-
+quired for interpreting the amplitudes in terms of a 4-dimensional effective action.
+   Consider a point m ∈ M defined by some local coordinates z = z̄ = 0. Canonical
+coordinates and an accompanying canonical gauge for the holomorphic three-form [2]
+are defined by the property that the connection coefficients and all their holomorphic
+derivatives vanish to order O(z̄) around m. Canonical coordinates always exist and are
+the Kähler analogue of geodesic normal coordinates in Riemannian geometry. (Around
+singular points in M, some care is required to remove the most divergent terms, but
+this can always be done.)
+   To take the holomorphic limit of open topological string amplitudes, we proceed
+as follows. We note again that the infinitesimal invariant (2.68) is invariant under
+modifying T by a real linear combination of periods. If n = dimM, there are (2n + 2)
+real periods, ̟i , i = 1, . . . , 2n+2. Around a generic point in M, this freedom is enough
+to find a real linear combination
+
+                                 T̃ = T + αi ̟i      αi real                            (3.7)
+
+                                             45
+such that T˜ together with all its first holomorphic derivatives vanish to first order at
+m. Therefore, Dk̄ T̃ = O(z̄) and the holomorphic limit of (2.68) is simply
+                                     lim ∆ij = lim Di Dj T̃ = ∂i ∂j T˜                   (3.8)
+                                     z̄→0           z̄→0
+
+where the latter equality holds with respect to canonical coordinates and three-form
+gauge. This is how we will do our calculations below.
+   Let’s summarize what we know already. The Yukawa coupling on the quintic is in
+the Candelas gauge given by
+                                                             54 ψ 2
+                                               Cψψψ =                                    (3.9)
+                                                            1 − ψ5
+and the Euler character is
+                                             χ ≡ χ(X) = −200                           (3.10)
+We can use the same propagators as in BCOV,
+             1
+    S ψψ =      ∂ψ log Gψ̄ψ (ψe K )2
+                                     
+           Cψψψ
+             1                 2
+     Sψ =         ∂ψ log(ψe K ) − Dψ ∂ψ log(ψe K )
+                                                   
+                                                                             (3.11)
+           Cψψψ
+                 1            1                           1          1
+       S = S ψ − Dψ S ψψ − (S ψψ )2 Cψψψ ∂ψ log(ψe K ) + Dψ S ψ + S ψψ S ψ Cψψψ
+                                           
+                 2            2                           2          2
+while our terminators are given by the expressions in subsection 2.10
+                                              ∆ψψ
+                                       ∆ψ = −
+                                              Cψψψ                           (3.12)
+                                                    ∆ = Dψ ∆ψ
+The solutions of the extended holomorphic anomaly for low (g, h) are,
+                     (0,2)             1          (0,2)
+                   Fψ = −∆ψψ ∆ψ + ∂ψ K + fψ
+                                       2
+                     (1,1)     (1,0) ψ    χ
+                                            − 1 ∆ + f (1,1)
+                                                
+                   F       = −Fψ ∆ −                                                   (3.13)
+                                         24
+                               (0,2)    1     1
+                   F (0,3) = −Fψ ∆ψ + ∆ − ∆ψψ ∆ψ ∆ψ + f (0,3)
+                                        2     3
+       (0,2)
+Here fψ        , f (1,1) , and f (0,3) are holomorphic ambiguities which for reasons explained
+in more detail below, we parametrize as follows
+                             (0,2)          (0,2)
+                            fψ      = A0 ∂ψ log(ψ −5 − 1)
+                                      √ (1,1)        √ (1,1) ψ 5/2
+                            f (1,1) = 5A0 ψ −5/2 + 5A1                                 (3.14)
+                                                            1 − ψ5
+                                      √ (0,3)        √ (0,3) ψ 5/2
+                            f (0,3) = 5A0 ψ −5/2 + 5A1
+                                                            1 − ψ5
+
+                                                           46
+3.2   Large volume expansion
+
+The large complex structure point ψ → ∞, z → 0 is a point of maximal unipotent
+monodromy and the most convenient for finding an integral basis of periods. Such a
+basis is determined by [3],
+                     ∞
+                     X (5m)!
+       0
+      X = ̟0 (z) =            5
+                                zm
+                     m=0
+                         (m!)
+                                            ∞
+                       1 h                 X   (5m)! m                            i
+   X 1 = ̟1 (z) =         ̟0 (z) log z + 5           z    Ψ(1 +   5m) −  Ψ(1  + m)
+                     2πi                   m=1
+                                               (m!)5
+              5 h
+   F1 = −             ̟0 log2 z + (1540z + 1620450z 2 + · · · ) log z
+           2(2πi )2                                                                   (3.15)
+                                                4208174 2          i   25       11
+                                    + 1150z +            z + · · · + ̟0 − ̟1
+                                                   2                   12        2
+              5 h
+     F0 =             ̟0 log3 z + (2310z + 2430675z 2 + · · · ) log2 z + (3450z+
+           6(2πi )3
+ 12624525 2                            9895125 2         i 25          25i ζ(3)
+          z + · · · ) logz − 6900z −            z + · · · + ̟1 −                ̟0
+    2                                      2                 12           π3
+The canonical coordinate at large complex structure is the special coordinate
+                                              ̟1
+                                         t=                                          (3.16)
+                                              ̟0
+and taking the holomorphic limit amounts to putting
+                                                                dt
+                          e −K = ̟0 ,              Gψψ̄ = 2πi                        (3.17)
+                                                                dψ
+in the formulas like (3.11) and (3.13). The prepotential of the quintic is in this gauge
+and coordinate
+                h 5    11   25 25i ζ(3)     1             4876875 2        i
+ F (0) = (2πi )3 − t3 − t2 + t−         +         2875q +        q  +· · ·    (3.18)
+                  6    4    12   2π 3     (2πi )3            8
+
+where q ≡ e 2πit . Turning to the real quintic, we have found the domainwall tension to
+be the solution of (3.6) with asymptotics
+                           ∞
+                 ̟1 ̟0 15 X Γ(7/2 + 5m) Γ(3/2)5
+                   −   − 2                        z m+1/2                            (3.19)
+                 2   4  π m=0  Γ(7/2) Γ(3/2 + m)5
+
+The corresponding A-model expansion is
+                         ht 1       2            4600 3/2         i
+                                           1/2
+              T = (2πi )2 − +          30q     +     q    + · · ·                    (3.20)
+                          2 4 (2πi )2              3
+
+                                            47
+Note that taking the holomorphic limit of the infinitesimal invariant is particularly
+simple at large volume. Since (3.19) differs from a real (although not integral) period
+only in exponentially small instanton corrections, we can compute ∆ψψ in the holo-
+morphic limit (cf., (3.8)) simply by forgetting the ̟0 and ̟1 contribution in (3.19).
+We find
+
+         ∆tt = lim e K (Gψψ̄ )−2 ∆ψψ = 15q 1/2 + 6900q 3/2 + 13603140q 5/2 + · · ·                          (3.21)
+                  ψ̄→∞
+
+
+and can now plug all this data into (3.13).
+   To fix the holomorphic ambiguity, we can make use of the enumerative interpreta-
+tion of the topological string amplitudes in terms of BPS invariants [19, 20, 21]. To
+adapt the general multicover formula from [21] to our situation, we have to take into
+account that the only one-cycle on L by which we can classify the boundary data of
+BPS invariants is a torsion cycle. A most natural conjecture is that when we expand
+the F (g,h) as
+         ∞                                   ∞
+         X                                   X     X          (g,h) 1
+                                                                                   kgs 2g+h−2 kd/2
+               gs2g+h−2 F (g,h) = (−1)h−1                    nd             2 sin              q            (3.22)
+         g=0                                 g=0 d≡h mod 2
+                                                                   k                 2
+                                                   k odd
+
+     (g,h)
+all nd         should be integer. Notice that this multicover formula (as those in [21]) does
+not mix worldsheets with different numbers of boundaries. Also note that we have
+neglected any constant map contributions which would show up at d = 0. We expect
+                                                                                            (0,1)
+that there are such contributions only at (g, h) = (0, 1), where n0                                 = 12 (see [4]),
+                                   (0,2)
+and (g, h) = (0, 2), where n0               is given by ordinary (Reidemeister, or analytic Ray-
+Singer) torsion of L. Both contributions drop out of the higher-loop computations. The
+statement that the expansion (3.22) is regular means that the holomorphic ambiguities
+should all vanish as ψ → ∞. This is satisfied by our ansatz (3.14).
+
+A correction
+It has recently become clear [51] that an ansatz of the form (3.22) is probably too opti-
+mistic. Let us briefly summarize the main objection in the current context. Naively, one
+                                           (g,h)
+would attempt to identify the nd    as BPS invariants enumerating oriented Riemann
+surfaces of genus g with h boundary components in the class d ∈ H2 (X, L; Z) ∼
+                                                                             = Z, such
+that each boundary component is mapped to the non-trivial class of H1 (L; Z) ∼
+                                                                             = Z2 .
+At the level of Gromov-Witten invariants, it should indeed be possible to distinguish
+different topologically non-trivial boundary components by coupling to Wilson line
+
+                                                     48
+observables on an appropriate stack of D-branes. When some boundary components
+are trivial in H1 (L; Z), one expects a mixing with unoriented Riemann surfaces. The
+physics definition of the integral invariants, however, makes explicit reference to a
+certain supersymmetric string background. As a consequence, it appears that when
+H1 (L; Z) is torsion (or, more generally, when open string vacua are discrete) one can
+extract integral invariants from the topological string amplitudes only when unoriented
+worldsheets are included from the beginning and the number of D-branes is fixed, thus
+                                                          (g,h)
+precluding the measurement of indivual nd                         . See [51] for a complete discussion of
+these issues, as well as the relationship to real enumerative invariants.
+      In retrospect, it is somewhat surprising that with the naive ansatz (3.22), the
+ambiguities parameterized in (3.14) can in fact be fixed in such a way that the expansion
+coefficients are nevertheless integer, and moreover satisfy the low-degree vanishing
+                (g,h)                                      (2g+h−1,0)
+relation that nd         must vanish whenever nd                           does. This constraint arises from
+the observation that since our Lagrangian L is defined as the fixed point set of an
+anti-holomorphic involution, we can by complex conjugation complement any curve of
+genus g with h boundaries on L to a holomorphic curve of genus 2g + h − 1 with no
+                                                                   (g,h)
+boundaries. If some given curve contributes to nd                          , the doubled curve would have to
+               (2g+h−1,0)
+contribute to nd          . We have found that for (g, h) = (0, 2), (1, 1) and (0, 3), these
+conditions are sufficient to completely determine the holomorphic ambiguity, and the
+rest of the expansion (3.22) is then integral. The holomorphic ambiguities in (3.14)
+take the values
+                        (0,2)         3           (1,1)         211             (1,1)            9
+                   A0           =−       ,      A0        =         ,         A1        =
+                                     250                       1250                            5000   (3.23)
+                                   (0,3)        1887                (0,3)        3
+                                  A0 =                ,            A1 =
+                                               312500                          78125
+                                                                                   (g,h)
+but we refrain from presenting the explicit results for the nd                             .
+      We now proceed to the expansion of the topological amplitudes around the other
+special points in the moduli space, first the Gepner point, and then the conifold.
+
+3.3     Orbifold expansion
+
+A basis of solutions of the homogeneous Picard-Fuchs equation L̟ = 0 around the
+Gepner point ψ = 0 is given by (k = 1, 2, 3, 4)
+                                         ∞
+                                         X Γ(k/5 + m)5                Γ(k)
+                           πkorb = ψ k                                       (5ψ)5m                   (3.24)
+                                         m=0
+                                                Γ(k/5)5            Γ(k + 5m)
+
+                                                          49
+This basis is neither integral nor real, but the relation to the integral basis at large
+volume (3.15) is well-understood. We will not need the details here. A particular
+solution of the inhomogeneous Picard-Fuchs is
+                                ∞
+                              4 X Γ(−3/2 − 5m) Γ(1/2)5
+                 τ   orb
+                           =−                           (5ψ)5(m+1/2)                   (3.25)
+                              3 m=0 Γ(−3/2) Γ(1/2 − m)5
+
+   We now come to an important point. In parameterizing the holomorphic ambiguity
+(3.14), we have allowed for singularities around the Gepner point, whereas all closed
+string amplitudes are regular there. This is due to an important property of open
+strings ending on the real quintic that we have already mentioned in the introduction.
+Recall that when we start out at large volume, the brane wrapped on the real quintic
+has two vacua, corresponding to the choice of a discrete Wilson line. Based on B-model
+considerations, it was shown in [23] that those two vacua coalesce as we approach the
+point ψ = 0 in Kähler moduli space. The vacuum structure can be described locally
+around ψ = 0 by a superpotential [22]
+                                               1
+                                       W = ψϕ − ϕ3                                     (3.26)
+                                               3
+where ϕ is the open string field that becomes massless at ψ = 0. This is just as in (2.36)
+with n = 2. This behavior should be accompanied by the appearance of a tensionless
+domainwall in the BPS spectrum of the 4d theory. Indeed, it was shown in [4] that
+after analytic continuation of (3.19), T − τ orb is an integral period. Since τ orb ∼ ψ 5/2
+vanishes faster than the two lightest periods π1orb and π2orb , this implies that τ orb indeed
+corresponds to a tensionless domainwall. By the same token, one should work with
+T̃ = τ orb in (3.8) in order to take the holomorphic limit of the infinitesimal invariant
+at ψ = 0.
+   Via the connection to 4d physics, the existence of a tensionless domainwall will lead
+to singularities in the topological string amplitudes. This is similar to the appearance
+of a massless BPS state at the conifold in the closed string story. The singularity
+due to a tensionless domainwall is slightly milder in the sense that at least some of the
+massless states appear on the string worldsheet. In terms of the tensionless domainwall
+τ orb , the leading singularity of the F (g,h) is expected to be
+
+                                     F (g,h) ∼ (τ orb )2−2g−h                          (3.27)
+
+This is precisely the singularity we have allowed in our ansatz for the holomorphic
+ambiguity.
+
+                                               50
+      To quantify the structure of the F (g,h) around the Gepner point more explicitly, we
+use the canonical coordinates and Kähler gauge [18]
+
+                                 π2orb
+                            s=         ,          e −K = 5−3/2 π1orb                (3.28)
+                                 π1orb
+
+With these definitions, we obtain the following expansions
+                      20 3/2     4955 13/2    1007347465 23/2
+              T0 = −      s −          s   −              s    +···
+                       3        108108       124547601024
+                                4955 9/2 1007347465 19/2
+            ∆ss = −5s−1/2 −          s −             s   +···
+                                3024      1031450112
+                    103 −1 34921 4 4345923475 9
+          Fs(0,2) =      s +         s +            s +···                          (3.29)
+                     50        37800     8122669632
+                       67 −3/2 4523 7/2      207513043 17/2
+          F (1,1) = −      s    +      s +             s    +···
+                      150         7200      1628605440
+                      4616 −3/2     457217 7/2 1069164825109 17/2
+          F (0,3) = −        s   −         s −                 s   +···
+                      9375         1181250       5076668520000
+where we have used the values of the holomorphic ambiguity obtained at large volume.
+
+3.4     Conifold expansion
+
+The expansion around the conifold point, ψ = 1, is the hardest because it cannot be
+done completely analytically. In the local coordinate x = 5−5 z −1 − 1, the Picard-Fuchs
+operator is
+                                              1                                 24
+Lc = (1+x)L = x(1+x)4 ∂x4 +2(1+x)3 (1+3x)∂x3 + (1+x)2 (23+35x)∂x2 +(1+x)2 ∂x −
+                                              5                                625
+                                                                            (3.30)
+and has as a basis of solutions [18],
+                                      2 3
+                           π0c = 1 +     x +···
+                                     625
+                                      3     11
+                           π1c = x − x2 + x3 + · · ·
+                                     10     75                                      (3.31)
+                             c    2   23 3
+                           π2 = x − x + · · ·
+                                      30
+                                            9    169 3
+                           π3 = π1 log(x) + x2 −
+                             c    c
+                                                     x +···
+                                           20    450
+It is not known analytically what linear combinations of those solutions correspond to
+integral (or even real) periods. But the change of basis between (3.31) and the large
+
+                                             51
+volume symplectic basis (3.15) can be determined numerically [18], and this knowledge
+is sufficient for studying the holomorphic limit at the conifold, both for the closed and
+for the open string.
+    From the monodromy around the conifold, it at least follows that π1c is an integral
+period and that the intersection with the cycle corresponding to π3c /(2πi ) is one. This
+is enough to conclude that the Kähler potential has an expansion of the form
+
+                         e −K(x,x̄) = ω0 + x̄ω1 + x̄ log x̄π1c + O(x̄2 )             (3.32)
+
+where ω0 and ω1 are some linear combinations of π0c , π1c and π2c . Thus, the leading
+behavior of the metric at x̄ → 0 is a logarithmic divergence
+                                              πc 
+                       Gxx̄ = ∂x ∂x̄ K = −∂x 1 log x̄ + O(x̄0 )                      (3.33)
+                                               ω0
+Note that the higher order terms drop out of the Christoffel connection. Thus, taking
+the holomorphic limit at the conifold amounts to working with
+                                                               π1c
+                                     e −K = ω0 ,        tD =                         (3.34)
+                                                               ω0
+    For the open string, the inhomogeneous Picard-Fuchs equation around the conifold
+is, cf., eq. (3.6)
+                                              15 −5/2 √
+                                    Lc T =         5    1+x                          (3.35)
+                                             16π 2
+with particular solution τ c given by
+                                      1        13        5421
+                       4π 2 τ c =     √ x3 −    √ x4 +       √ x5                    (3.36)
+                                    80 5     800 5     320000 5
+As for the periods, one can determine numerically precisely which solution corresponds
+to the analytic continuation of T from (3.19). But to take the holomorphic limit of the
+infinitesimal invariant, we better find a solution T˜c which is equivalent to T modulo
+real periods such that Cxxx̄ Dx̄ T˜c → 0 as x̄ → 0 (see the discussion around eq. (3.8)).
+Because of the singularity in the metric, it is in fact sufficient to have T˜c ∼ x as x → 0.
+    At the end, this only leaves one parameter α whose precise value needs to be
+determined numerically. We find that the requisite solution is
+                                               √
+                              α        α         5(3 − 184α) 3
+              T˜c = 4π τ + √ π2 = √ x +
+                       2 c        c        2
+                                                               x +···                (3.37)
+                               5        5           1200
+with α ≈ −0.002396. Note that despite appearances, (3.37) is not a tensionless do-
+mainwall, because we have been working modulo real, not integral periods.
+
+                                                   52
+   With all this in hand, we obtain the following expansion of the open topological
+string amplitudes around the conifold:
+
+                         (0,2)   3     21 − 1280b1
+                       FtD       =−  +             +···
+                               250tD      2500
+                    √ (1,1)       9     12633 + 56500α
+                     5F     =−        +                 +···                      (3.38)
+                               1000tD        15000
+                    √ (0,3)        3     9423 + 64000α
+                     5F     =−         +                +···
+                               15625tD       312500
+where b1 ≈ 0.1641 is a numerical parameter from [18].
+
+Acknowledgments I owe special thanks to Andrew Neitzke for extensive discussions
+and many helpful suggestions. I would also like to thank Simeon Hellerman, Manfred
+Herbst, Juan Maldacena, Marcos Mariño, David Morrison, Tony Pantev, Jake Solomon,
+Jörg Teschner, and Cumrun Vafa for valuable discussions and communications. I thank
+Albrecht Klemm for bringing ref. [49] to my attention. This work was supported in
+part by the Roger Dashen Membership at the Institute for Advanced Study and by the
+NSF under grant number PHY-0503584.
+
+
+References
+
+ [1] M. Bershadsky, S. Cecotti, H. Ooguri and C. Vafa, “Holomorphic anomalies in topolog-
+     ical field theories,” Nucl. Phys. B 405, 279 (1993) [arXiv:hep-th/9302103].
+ [2] M. Bershadsky, S. Cecotti, H. Ooguri and C. Vafa, “Kodaira-Spencer theory of gravity
+    and exact results for quantum string amplitudes,” Commun. Math. Phys. 165, 311
+     (1994) [arXiv:hep-th/9309140].
+ [3] P. Candelas, X. C. De La Ossa, P. S. Green and L. Parkes, “A Pair Of Calabi-Yau Man-
+     ifolds As An Exactly Soluble Superconformal Theory,” Nucl. Phys. B 359, 21 (1991).
+ [4] J. Walcher, “Opening Mirror Symmetry on the Quintic,” To appear in Comm. Math.
+     Phys. [arXiv:hep-th/0605162]
+ [5] R. Pandharipande, J. Solomon and J. Walcher, “Disk enumeration on the Quintic 3-
+     fold,” arXiv:math/0610901
+ [6] D. R. Morrison and J.            Walcher,   “D-branes   and   Normal    Functions,”
+     arXiv:0709.4028 [hep-th].
+ [7] W. Lerche, P. Mayr and N. Warner, “Holomorphic N = 1 special geometry of open-
+    closed type II strings,” arXiv:hep-th/0207259; “N = 1 special geometry, mixed Hodge
+    variations and toric geometry,” arXiv:hep-th/0208039.
+
+
+                                           53
+ [8] I. Antoniadis, K. S. Narain and T. R. Taylor, “Open string topological amplitudes and
+     gaugino masses,” Nucl. Phys. B 729, 235 (2005) [arXiv:hep-th/0507244].
+ [9] M. Marino, “Open string amplitudes and large order behavior in topological string
+     theory,” arXiv:hep-th/0612127.
+[10] B. Eynard, M. Marino and N. Orantin, “Holomorphic anomaly and matrix models,”
+     arXiv:hep-th/0702110.
+[11] M. Aganagic, R. Dijkgraaf, A. Klemm, M. Marino and C. Vafa, “Topological strings and
+     integrable hierarchies,” Commun. Math. Phys. 261, 451 (2006) [arXiv:hep-th/0312085].
+[12] M. Aganagic, A. Neitzke and C. Vafa, “BPS microstates and the open topological string
+     wave function,” arXiv:hep-th/0504054.
+[13] P. A. Griffiths, “On the periods of certain rational integrals. I, II,” Ann. Math. 90,
+     460–541 (1969)
+[14] P. A. Griffiths, “Infinitesimal variations of Hodge structure. III. Determinantal varieties
+     and the infinitesimal invariant of normal functions,” Compositio Math. 50, no. 2-3,
+     267–324 (1983)
+[15] C. Voisin, “Une remarque sur l’invariant infinitésimal des fonctions normales,” C. R.
+     Acad. Sci. Paris Sr. I Math 307, no. 4, 157–160, (1988)
+[16] M. L. Green, “Griffiths’ infinitesimal invariant and the Abel-Jacobi map,” J. Differential
+     Geom. 29, no. 3, 545–555 (1989)
+[17] S. Yamaguchi and S. T. Yau, “Topological string partition functions as polynomials,”
+     JHEP 0407, 047 (2004) [arXiv:hep-th/0406078].
+[18] M. x. Huang, A. Klemm and S. Quackenbush, “Topological String Theory on Compact
+     Calabi-Yau: Modularity and Boundary Conditions,” arXiv:hep-th/0612125.
+[19] R. Gopakumar and C. Vafa, “M-theory and topological strings.                       I,   II,”
+     arXiv:hep-th/9809187, arXiv:hep-th/9812127.
+[20] H. Ooguri and C. Vafa, “Knot invariants and topological strings,” Nucl. Phys. B 577,
+     419 (2000) [arXiv:hep-th/9912123].
+[21] J. M. F. Labastida, M. Marino and C. Vafa, “Knots, links and branes at large N,” JHEP
+     0011, 007 (2000) [arXiv:hep-th/0010102].
+[22] I. Brunner, M. R. Douglas, A. E. Lawrence and C. Romelsberger, “D-branes on the
+     quintic,” JHEP 0008, 015 (2000) [arXiv:hep-th/9906200].
+[23] K. Hori and J. Walcher, “D-branes from matrix factorizations,” Talk at Strings ’04, June
+     28–July 2 2004, Paris. Comptes Rendus Physique 5, 1061 (2004) [arXiv:hep-th/0409204].
+[24] W. Lerche, C. Vafa and N. P. Warner, “Chiral Rings in N=2 Superconformal Theories,”
+     Nucl. Phys. B 324, 427 (1989).
+[25] S. Cecotti and C. Vafa, “Topological antitopological fusion,” Nucl. Phys. B 367 (1991)
+     359.
+
+
+                                              54
+[26] K. Hori et al., “Mirror Symmetry,” Clay Mathematics Monographs, Vol. 1, AMS 2003.
+[27] H. Ooguri, Y. Oz and Z. Yin, “D-branes on Calabi-Yau spaces and their mirrors,” Nucl.
+     Phys. B 477, 407 (1996) [arXiv:hep-th/9606112].
+[28] M. R. Douglas, “D-branes, categories and N = 1 supersymmetry,” J. Math. Phys. 42,
+     2818 (2001) [arXiv:hep-th/0011017].
+[29] T. Bridgeland, “Stability conditions on triangulated categories,” arXiv:math/0212237
+[30] R. P. Thomas, S.-T. Yau, “Special Lagrangians, stable bundles and mean curvature
+     flow,” Comm. Anal. Geom. 10 (2002), no. 5, [arXiv:math/0104197]
+[31] M. Herbst, C. I. Lazaroiu and W. Lerche, “Superpotentials, A(infinity) rela-
+    tions and WDVV equations for open topological strings,” JHEP 0502, 071 (2005)
+     [arXiv:hep-th/0402110].
+[32] M. Herbst, “Quantum A-infinity structures for open-closed topological strings,”
+     arXiv:hep-th/0602018.
+[33] E. R. Sharpe, “D-branes, derived categories, and Grothendieck groups,” Nucl. Phys. B
+     561, 433 (1999) [arXiv:hep-th/9902116].
+[34] M. R. Douglas, “D-branes, categories and N = 1 supersymmetry,” J. Math. Phys. 42,
+     2818 (2001) [arXiv:hep-th/0011017].
+[35] C. I. Lazaroiu, “D-brane categories,” Int. J. Mod. Phys. A 18, 5299 (2003)
+     [arXiv:hep-th/0305095].
+[36] E. Sharpe, “Lectures on D-branes and sheaves,” arXiv:hep-th/0307245.
+[37] C. I. Lazaroiu, “String field theory and brane superpotentials,” JHEP 0110, 018 (2001)
+     [arXiv:hep-th/0107162].
+[38] N. P. Warner, “Supersymmetry in boundary integrable models,” Nucl. Phys. B 450,
+     663 (1995) [arXiv:hep-th/9506064].
+[39] M. L. Green, “Infinitesimal methods in Hodge theory,” Algebraic cycles and Hodge
+     theory (Torino, 1993), Lecture Notes in Math., vol. 1594, Springer, 1994, pp. 1–92.
+[40] C. Voisin, “Hodge theory and complex algebraic geometry I,II” Cambridge University
+     Press, 2002, 2003
+[41] E. Witten, “Chern-Simons Gauge Theory As A String Theory,” Prog. Math. 133, 637
+     (1995) [arXiv:hep-th/9207094].
+[42] E. Witten, “Branes And The Dynamics Of QCD,” Nucl. Phys. B 507 658-690 (1997)
+     [arXiv:hep-th/9706109]
+[43] E. Witten, “New Issues In Manifolds Of SU(3) Holonomy,” Nucl. Phys. B 268, 79 (1986)
+[44] S. K. Donaldson and R. P. Thomas, “Gauge theory in higher dimensions,” The geometric
+     universe, Oxford Univ. Press, Oxford, 1998, pp. 31–47
+[45] M. Aganagic and C. Vafa, “Mirror symmetry, D-branes and counting holomorphic discs,”
+    arXiv:hep-th/0012041.
+
+
+                                            55
+[46] R. Donagi and E. Markman, “Cubics, integrable systems, and Calabi-Yau threefolds,”
+    Proceedings of the Hirzebruch 65 Conference on Algebraic Geometry, Israel Math. Conf.
+     Proc., 9, 199–221 (1993) [arXiv:alg-geom/9408004].
+[47] H. Clemens, “Cohomology and Obstructions II: Curves on K-trivial threefolds,” with
+     contributions by R. Thomas and C. Voisin arXiv:math/0206219
+[48] J.-M. Bismut, H. Gillet and C. Soulé “Analytic torsion and holomorphic determinant
+    bundles. I,II,III,” Comm. Math. Phys. 115 no. 1, 49–78, no. 1, 79–126, no. 2, 301–351,
+     (1988)
+[49] I. Biswas and G. Schumacher, “Determinant bundle, Quillen metric, and Petersson-Weil
+     form on moduli spaces,” Geom. Funct. Anal. 9, no. 2, 226–255 (1999)
+[50] H. Fang and Z. Lu, “Generalized Hodge metrics and BCOV torsion on Calabi-Yau
+     moduli,” J. Reine Angew. Math. 588, 49–69 (2005) [arXiv:math/0310007]
+[51] J. Walcher, “Evidence for Tadpole Cancellation in the Topological String,”
+    arXiv:0712.2775 [hep-th]
+
+
+
+
+                                           56
+

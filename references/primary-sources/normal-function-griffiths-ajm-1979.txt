@@ -1,0 +1,1706 @@
+A Theorem Concerning the Differential Equations Satisfied by Normal Functions Associated
+to Algebraic Cycles
+Author(s): Phillip A. Griffiths
+Source: American Journal of Mathematics, Vol. 101, No. 1 (Feb., 1979), pp. 94-131
+Published by: The Johns Hopkins University Press
+Stable URL: http://www.jstor.org/stable/2373941
+Accessed: 25/10/2010 11:07
+
+Your use of the JSTOR archive indicates your acceptance of JSTOR's Terms and Conditions of Use, available at
+http://www.jstor.org/page/info/about/policies/terms.jsp. JSTOR's Terms and Conditions of Use provides, in part, that unless
+you have obtained prior permission, you may not download an entire issue of a journal or multiple copies of articles, and you
+may use content in the JSTOR archive only for your personal, non-commercial use.
+
+Please contact the publisher regarding any further use of this work. Publisher contact information may be obtained at
+http://www.jstor.org/action/showPublisher?publisherCode=jhup.
+
+Each copy of any part of a JSTOR transmission must contain the same copyright notice that appears on the screen or printed
+page of such transmission.
+
+JSTOR is a not-for-profit service that helps scholars, researchers, and students discover, use, and build upon a wide range of
+content in a trusted digital archive. We use information technology and tools to increase productivity and facilitate new forms
+of scholarship. For more information about JSTOR, please contact support@jstor.org.
+
+
+
+
+                The Johns Hopkins University Press is collaborating with JSTOR to digitize, preserve and extend access to
+                American Journal of Mathematics.
+
+
+
+
+http://www.jstor.org
+A THEOREMCONCERNINGTHE DIFFERENTIALEQUATIONS
+    SATISFIEDBY NORMALFUNCTIONSASSOCIATED
+              TO ALGEBRAICCYCLES
+
+                           By PHILLIP A. GRIFFITHS*
+
+
+
+     In this paperwe shall give a generaldiscussionof normalfunctions
+culminatingin a result characterizingthose normal functions arising
+from algebraiccycles as being solutionsto a family of ordinarydiffer-
+ential equations parametrizedby the hypersurfacesof large degree
+passing through the given cycle or through one homologousto it. In
+Section 1 the theoremwill be informallydiscussedfor the case of curves
+on a surface where a minimum of technical machineryis necessary.
+Along the way we give proofsof the main classicalresultsin the theory
+of normal functions and find some new informationon the Hodge
+bundles arising from a Lefschetzpencil of curves. Then in Section 2
+we turn to higher dimensions.Followinga discussionof the definition
+and basic propertiesof normalfunctionswe analyzethe Hodge bundles
+arising from the cotangent spaces to the intermediateJacobiansin a
+Lefschetzpencil (c.f. (2.13c) and (2.14c)), and then shall reprovethe
+result (c.f. (2.9) for the statement) characterizingthe fundamental
+classesof normalfunctionsby their Hodgetype. Finally,after some gen-
+eral observationson Picard-Fuchsequationswe formulateand proveour
+main result Theorem2.2, and then concludethe paper with some ob-
+servationsconcerningthe problemof constructingalgebraiccycles.
+     Unless otherwisespecified,homologywill be with Z-coefflcientsand
+cohomologywith C-coefficients.Hopefullythe other notationsand ter-
+minologyare standard.
+
+      1. Discussion of the Theorem for Curves on a Surface.
+     a) Let S be a smooth algebraicsurfaceand L - S a very ample
+line bundle, which we shall think of as the hyperplanebundle for the
+embeddingS c- pN inducedby the completelinear system IL 1. Recall
+       t
+     * Research partially supported by NSF Grant MCS-78-07348.
+94
+      NORMAL FUNCTIONS      ASSOCIATED   TO ALGEBRAIC   CYCLES           95
+
+that a Lefschetz pencil is a pencil of curves ICt I selected from ILI such
+ that the generic curve Ct is smooth and the singular curves Ct,, . . ., CtN
+ are irreducible with one ordinary double point not in the base locus
+B = Co. Coo of the pencil. A general pencil is obtained by selecting a
+line in the dual projective space pN* parametrizing the curves in IL 1,
+and the pencil is Lefschetz when this line meets the hypersurface S* C
+pN* dual to S transversely at smooth points. It is classical how one
+understands the topology of S in terms of the monodrony on a general
+Hi(Ct) where t varies over P1 - {tI, . . ., tN}, and we shall review this
+below as needed. At the moment we shall discuss the Hodge bundle
+associated to the pencil.
+      Over the PI parametrizing the curves in the pencil there is a vec-
+tor bundle E - PI, the Hodge bundle, whose fibre over t E PI -
+{tl,  ..., tN} is the vector space H0(Oct') of holomorphic differentials
+on the smooth curve Ct. Each singular curve Ctoehas a normalization
+Cta, a smooth curve of genus one less than that of a generic Ct and
+having on it two marked points which when identified give back the
+singular curve Cto. The fibre Et, then consists of the meromorphic
+differentials on Ctc. having at most logarithmic singularities at the
+marked points.
+     Alternatively, we may describe the sections of the Hodge bundle by
+using residues. Given an irreducible curve C E IL I defined by a section
+s E H0(Os(L)), there is the Poincare residue sequence
+                                         Res
+              0O -Qs           Qs
+                              _.QS2(L)     -WC       O0.               (1.1)
+
+When C is smooth, wc = ?c' is the usual sheaf of holomorphic differ-
+entials; when C has a double point wc exactly corresponds to mero-
+morphic 1-forms on C having at most logarithmic singularities over
+the double point. For all t, then, the fibre of the Hodge bundle is
+                               Et = HO(wct).
+                                                               I
+Denoting by -1 E HI (is') the Chern class of L - S and using h (is2(L))
+= 0, the exact cohomology sequence of (1.1) gives a commutative
+diagram
+         0 -H0(Qs2)    -   H0(oi2s2(L)) -- HO(wc) - HI(Us2)   -   0.
+
+
+                                             I!                        (1.2)
+
+                                         H0(Us')
+96                             PHILLIP A. GRIFFITHS
+
+
+By the Hard Lefschetz theorem, v1induces an isomorphism,and the
+image of
+
+                             H0(Os')    -      H(cwct)
+
+may be thought of as the fixed part of the variationof Hodge structure
+definedby the curvesCt; this image thereforedefinesa trivialsummand
+of the Hodge bundle E - p 1.
+     To analyzethe variablepart of E we choose sectionsso and s. E
+H(OWs(L))definingCo and COO   (assumedsmooth)and set St = SO + ts00.
+For w EH0(Qs2(L))and t' = llt, since
+
+
+               Res(                   =t'      Res(
+                     \so   + tS,~~                     t'so + S.
+
+we deduce that the exact sequence in (1.2) globalizes over PI to give
+
+     0 -H0(Qs2)   -H0(o2s2(L)) 0 0 (1)-                E -H(Us2)        0.   (1.3)
+
+Here the vector spaces Hq(US2) and H0(Qs2(L)) are thought of as trivial
+bundles over PI, 0(1) has the usual meaning, and we are retainingE
+to denotethe correspondingsheaf Op~(E).With the usual characters
+
+                                     g =h I(Ct)
+                                     q = h,O(S)
+
+                                Upg         h2,0(S),
+
+
+
+
+we inferfrom (1.3) that the Grothendieckdecompositionof E is givenby
+givenby
+
+
+              E -= 9(q) (D (          t(ki + 1))
+                                      O                       ki 2 O,        (1.4)
+                               i=l
+
+
+so that the variablepart E, = (S) 0(ki + 1) of the Hodge bundle is
+positive. By tensoring(1.3) with 0((-2) and taking cohomology,using
+HI'(P, 0((-2)) _ C we deducethe isomorphism
+
+                  HO(P', E & 0((-2))              = H0(Qs2)                  (1.5)
+      NORMAL FUNCTIONS     ASSOCIATED   TO ALGEBRAIC    CYCLES           97
+
+a fact which may be seen directly as follows: Each holomorphic 2-form
+w on S may be uniquely written
+
+                              w = p(t) A dt,
+
+where easy local considerations show that po(t) E HO(wct). Since dt has
+a pole of order 2 at t = oo we infer that p(t) E HO(P', E 0
+vanishes to 2nd order there.
+     We remark that the exact nature of the numbers ki in (1.4) has to
+do with the linear series IK - , 1for A = 0, 1, .   For example, from
+
+                                pg = Ski
+
+we see that the canonical series is empty exactly when all ki = 0. Simi-
+larly, if K - L I is empty then the ki are all either zero or one, and so
+(1.4) becomes
+
+                   E-O ((q) ) (9(1l)g-q-pg)
+                                          ) (9(2)Pg,
+
+a situation which may always be achieved by choosing L sufficiently
+ample.
+     b) To discuss how the topology of S is described by the Lefschetz
+pencil it is useful to take two points of view. One is intuitive as in the
+Borel tract [6] or in the beautiful exposition [9], and the other is by
+applying Morse theory and the Leray spectral sequence as in Andreotti-
+Frankel [1].
+     In either case some local analysis around the critical values is neces-
+sary, and for this the essential points are the following: In the complex
+t-plane mark a non-critical reference point to and draw non-intersecting
+paths -ya from to to t,. Then there is for each a a vanishing cycle ba E
+Hi(Ct.) such that as t moves along 'ya the displaced cycle b6(t) on Ct
+shrinks to the double point as t - t,. The locus of 6a(t) along this path
+then gives a cone Aa E H2(5, Ct.) with aAa = bac. If -y E Hi (Ct.) is any
+other cycle and we displace -y along a closed loop turning once around
+ta, the change in -y is measured by the Picard-Lefschetz formula
+
+                        7' - 7/ + (7X,b") ba.                         (1.6)
+
+    To give what intuitive remarks about topology we shall require we
+98                                     PHILLIP A. GRIFFITHS
+
+
+recall that the primitivecohomologyHprim2 (S, Q) is representedvia
+Poincareduality(and ignoringtorsion)by 2-cyclesr E H2(S) such that
+the intersectioncycle r *
+                      CFO = 0 in Ho(CtO).For t in the punctured
+t-plane P     -{t1,      ...,   tN    we locally write
+
+
+
+
+where yt E Hi(Ct, Ct n rt) is a path on C, which maps to r * Ct in
+Ho(Ctn rt). An obviousextensionof (1.6) to the relativecase gives that
+as t turns once aroundta,
+
+                                       'Yt -       'yt +   Xa 6a
+
+
+where X) = (-yt, 6a) is an integer. Since yt is invariant when t transverses
+a sufficientlylargecircle(weassumethat t = oois not a criticalvalue)
+
+                            S)Xa 6a = 0              in Hi(Ct0).      (1.7)
+
+By virtueof this relation,the relative2-cycle
+
+                                     X, AAa E H2(S, Cto)              (1.8)
+
+is in the imageof the mapping
+
+                                     H2(S)- H2(S,Cto)
+
+and an easy argumentshows that F is representedby the cycle (1.8).
+Summarizing,the primitivehomologyis given by cycles (1.8) satisfying
+(1.7) where the coefficientsX. are determinedby consideringthe vari-
+ation of a chain pytwith yt = r Ct.            .
+
+
+     We now describethe same situation in the Andreotti-Frankelter-
+minology. By blowing up S at the base locus B = Cto*COO
+                                                      of the pencil
+we obtain the smooth surface X = U tEP Ct, which then admits an
+obviousfiberingf:X - PI. The Leray spectral sequencefor the con-
+stant sheaf Z degeneratesat E2 (Andreotti-Frankel,loc. cit.), and the
+primitivepart of H2(S, Q) C H2(X, Q) is easily seen to lie in the term
+E21   =   H'(Pl,      RAJ Z).
+      Nowthen to describeH' (P', Rf1 Z) we choosethe covering{Uo, Ui,
+      NORMAL FUNCTIONS    ASSOCIATED     TO ALGEBRAIC   CYCLES     99
+
+    UN} of Pl where Uo = Pl - {tl, ...,      tN} and UaYis an e-disc
+aroundta. For this coveringthe 1-cocyclesarejust
+
+                          H HO(Ua*, Rfl Z),
+
+
+which we may think of as being given by an invariant1-cycle in each
+punctured disc Ua*. For a primitive class given by (1.8) the corre-
+sponding Cech class is Ha {Xa*6a}. Similarly,a class in Hprim?(B) is
+representedby a zero-cycleD of degree zero supportedon the base
+locus. On each curve Ct we may write D = yt for some 1-chain ayt
+whose variation around t = tot leads again to a Cech cocycle in
+Ha HO(Ua*, Rf 1 Z). These two subspaces of H0(P1, Rf 1 Z) C H2(X, Z)
+are orthogonalunder the cup product, and again modulo torsion there
+is a decomposition
+
+          H1(P1 Rf1 Z) -Hprim0(B, Q)         Hprim2(S, Q).       (1.9)
+
+    c) Havingdescribedthe Hodgebundleand homologyin our pencil
+ CtI we now turn to the family of Jacobians.In general, if C E ILI has
+only ordinarydouble points the (generalized)JacobianvarietyJ(C) is
+definedto be
+
+                          HO(wc)*/Hi(C*, Z)
+
+where C* = C-{double points}, and whereH1(C*, Z) is embeddedas
+a discrete subgroupof HO(Oc)*by integration.By elementaryduality
+theory(or directly)
+
+                      J(C)     H1'(O9c)/H'(C,Z).
+
+Returningto our pencil, it is easilyverifiedthat
+
+                             J = U J(Ct)
+                                  tEP1
+
+
+
+forms naturallya complexmanifold(c.f. Jambois[5]) such that J - Pl
+is an analyticfibre space of complex Lie groups. The crossysections of
+this fibre space are by definitionthe groupof normalfunctions.
+100                           PHILLIP A. GRIFFITHS
+
+
+     The origin of the word "normalfunctions"may be explainedthis
+way. Givenw E H0(Qc2(L)),as explainedabovein Section la) we obtain
+the holomorphicsection
+
+
+                 w(t) = Res (      X     ) E H?(wct) = E
+
+of the Hodge bundle. Since J(Ct) = Et*/(periods), we may view a
+normalfunction v as a multi-valuedholomorphiclinear function on Et
+for t E PI - {ti, .. ., tN} which has a suitable growth property (noted
+below) as t - ta. Suppose we let
+
+                             I(t) = (I>,c(t)>
+
+denote this function. Analyticcontinuationof v(t) aroundt = t, adds
+on a period
+
+                           Ir (t) = )YXa w(t)                        (1.10)
+
+
+where&,,E Hi (Ct, Z) is the vanishingcycle. In this way the sections of
+J - PI may be representedby suitable multi-valuedanalyticfunctions
+whoselocal monodromyhas the form (1.10).
+      Since analyticcontinuationarounda suffi1ciently large circle leaves
+v(t) invariant,and since w was arbitrary,we inferthat
+
+                       X2Xa6a=0 in Hi(Cto,Z).
+
+Thus, by the discussioncenteredaround(1.7) and (1.8), to each normal
+function v we may assign the primitive cycle E,a X,a Aa E Hprim2(S, Q);
+this is calledthefundamentalclass -qpof the normalfunction.
+     Normal functions and their fundamentalclasses may also be de-
+scribed using the fiberingf:X - Pl of the blown up surface X =
+U tEPWCt. The basic observations are that
+
+
+                            RfasasocE*          a.i1                     1)
+
+is the sheaf of Lie algebras associated to the analytic fibre space J - pI1,
+     NORMAL FUNCTIONS     ASSOCIATED     TO ALGEBRAIC   CYCLES      101
+
+
+and that the sheaf of discretesubgroupsis
+
+                            Rf'Z C Rf'O.
+
+In other words, denotingstill by J the sheaf of holomorphicsections of
+the familyof Jacobians,we havethe exact sheaf sequence
+
+                  O-Rf IZ -Rfl I_         J - o.                 (1.12)
+
+To computethe cohomologysequencewe referto (1.4) to concludethat
+
+                      HO(P 1, Rf IO) _=HI (S, 0)
+
+It followsthat, withthe non-standardnotationJ(S) = H' (S, e)/H' (S, Z)
+for the Picardvarietyof S, the fixed part of the family {J(Ct)} is J(S)
+and the exact cohomologysequence of (1.12) leads to a commutative
+diagram
+
+O- J(S) - H?(P', J)   -   H'(P', RfZ)     -   H'(P', Rf'O)-      (1. 13)
+
+
+
+
+                          Hprim2(S, Q)    - H2(OS).
+
+Herethe verticalmap a is givenby the Lerayspectralsequenceaccording
+to (1.9) and the compositionca6(v) = rj gives the fundamentalclass
+of v, as may be verified using the Cech coveringdescribedabove. As
+for the verticalmap 1, from (1.5) and (1.11)
+
+               HI (Pl, Rf' O)    HI (P l, E*)
+                                HO(P', E 0 (9(-2))*
+                                HO(Us2)*
+                                H
+                                H2(OS),
+
+
+where we have used Serre duality twice. This allows us to derive the
+basic result, due to Lefschetz, characterizingthe fundamentalclasses
+of normalfunctions:
+102                                    PHILLIP A. GRIFFITHS
+
+
+     A class E7 Hprim2(S, Z) is the fundamental class of a normal func-
+tion if, and only if, 7 is of Hodge type (1, 1).                  (1.14)
+To prove this result we need only show that the mapping Hprim2(S, Q)-
+H02(S) in (1.13) is that given by the Hodge decomposition, and then
+the theorem follows by exactness of the cohomology sequence. This veri-
+fication is "just" a commutativity check.
+      Actually, it is quite instructive to give the classical global argument,
+for which the basic formula is the following: If v is a normal function
+with fundamental class E. X) Aa, and if w(t) = Res (w/so - ts) is a
+holomorphic section of the Hodge bundle, then we claim that
+
+
+                 v(t) =                       A                                        (1.15)
+                            a   1      2-xV         to t-s
+
+where 7rds) is the period (1.10) of w(s) over the vanishing cycle b.
+    Proof. On the complex t-sphere minus the cuts -y. from to to tc we
+may view the normal function v(t) as being a single-valued holomorphic
+function having the following properties:
+i) near the critical point to the difference
+
+
+                            v(t)         2    -1     7r(t) log (t-      ta)
+
+
+
+    is holomorphic and single-valued (thus v(t) has the jump Xaxo(t)
+    across the cut -y.), and
+ii) vI(t) vanishes to the same order k + 1 (k 2 0) at t = oo as the
+    section w(t) of E - Pl.
+     On the other hand, suppose we consider the potential-theoretic
+integral on the right hand side of (1.15). This integral has the jump
+X. Ira(t) across -y., and the difference
+
+              Xa            'ira(s) ds _
+                                                               i7r,(t) log (t -   t)
+           27 _-1     ito          s               2-r -,v-1
+
+is single-valued and holomorphic at t = ta. Moreover, using (1.7) which
+implies that a X)alra(t) - 0, the integral is single-valued outside a
+      NORMAL FUNCTIONS          ASSOCIATED            TO ALGEBRAIC          CYCLES      103
+
+large circle. To examine its behavior near infinity we set t' = lit and
+write it as
+
+
+                      ta (rc         /I       1       ' (s )
+                                                           ds16
+                                              to
+
+
+It follows that the difference of v(t) and the integral is single-valued
+and holomorphic on the t-sphere and vanishes at t = oo, which then
+establishes (1.15).
+     Now (1.14) is an immediate consequence. Using (1.16) we have
+near t = oo
+
+
+
+          v(t) = -"
+                       1=0
+                             (s =1 2 -x           l   to
+                                                             7r(s)       ds) t +     (1.17)
+
+
+If w(t) vanishes to order k + 1 at infinity the same must be true of v(t),
+and therefore if k 2 1
+
+
+              0 ==          2                     1r(s) ds
+                                                  7r                 I               (1.18)
+                     a=1     2r -1        t                          Jr
+
+
+where r = La Xa A,a is the fundamental class of v and sp = w(t) A dt E
+H0(Qs2) (c.f. (1.15)). This exactly says that r has Hodge type (1, 1).
+    Conversely, if r = sc X, Aa is any primitive cycle on S so that (1.7)
+is satisfied, then we may define a section of J - PI outside of t = 00 by
+the formula (1.15). The conditions that this section extend across t = oo
+are exactly that r be orthogonal to H0(Qs2), and this establishes (1.14).
+     d) We now take up the interplay between normal functions and
+the algebraic curves on S. If Z is a primitive algebraic 1-cycle (=divisor
+in this case) on S, then each intersection
+
+                           Zt = Z *Ct = N pi(t) - qi(t)
+
+is a divisor of degree zero on the curve Ct, and so represents a point
+vz(t) E J(Ct). Thinking of normal functions as multivalued sections of
+the Hodge bundle, the definition of vz(t) is given by the usual abelian
+104                           PHILLIP A. GRIFFITHS
+
+
+
+sum
+                                       pi(t)
+                        vz(t) =                @(t)                (1.19)
+                                       qi(t)
+
+
+where w(t) is any local holomorphicsection of E    Pl. This formula
+makes sense providedthat Z does not pass through any of the double
+points of the singularCta, a circumstancewhichmay alwaysbe achieved
+by movingZ in its linear equivalenceclass and noting that by Abel's
+theoremthe abeliansum (1.19) remainsinvariant.
+    We denote by vz the normal function associated to the cycle Z.
+The basic topologicalpropertyof the map {divisors} - {normal func-
+tions} is
+
+                Thefundamental class of vz is equal
+                  to thefundamental class of Z.                    (1.20)
+
+Indeed, write Zt =   3t for a 1-chain eyt so that (1.19) becomes
+
+
+                             vz(t) =            (t),
+                                          'Yt
+
+and then as t turns aroundt, the analyticcontinuation
+
+
+                     vz(t)    vz(t) +
+                              V                wa      co(t)
+
+
+is exactlyreflectedby the transformation
+
+                              t-   et + Xa6a
+
+Consequently,both fundamentalclasses are representedby the cycle
+Ea   xc Aa.
+      The main existencetheorem,whichis due to Poincare,states:
+
+Every normalfunction is of the form vzfor some algebraic cycle.    (1.21)
+
+When combinedwith (1.14) and (1.20) we obtain Lefschetz'soriginal
+proofof his famous(1, 1) theorem.
+     NORMAL FUNCTIONS     ASSOCIATED     TO ALGEBRAIC   CYCLES      105
+
+     The existence theorem (1.21) amounts to the Jacobi inversion
+theoremwith dependenceon parameters.Namely,select one of the base
+pointsp of the pencil jCt as a base point (differentuse of the word)
+on each Riemannsurface Ct. If for generic t the point i(t) E J(Ct) is
+not in the translateof the theta divisorby -gp, then as w varies over
+HO(PI, E) the equations
+
+                                   M
+                                   it)
+                       v(t) = S          @(t)                     (1.22)
+
+
+will have a uniquesolution
+
+                                   g
+                             Dt   iSl pi(t).
+
+This divisorobviouslyvariesholomorphicallywith t, and at pointswhere
+eithert = ta is a criticalvalueor else v(t) EJ(Ct)becomesa specialdivisor
+easy argumentsshowthatDt remainsuniquelydetermined.In this waywe
+have traced out an algebraiccurveD = U Dt on S, which providesthe
+essentialstepin the proofof (1.21) in this case.
+    In the situation where the equations (1.22) do not determine a
+unique Dt for a generic t, we will have dim D    IDt = r > 0. Then by
+imposingr independentbase point conditionsat p we genericallydeter-
+mine a uniqueDt, and the argumentproceedsas before.
+    In concludingthis discussionwe note that if we vary the normal
+functionby the image of the fixed part
+
+                           J(S) - H?(PI, J)
+
+in (1.13), we may construct a family of linearly inequivalentcurves
+parametrizedby the Picard variety of S. This was the first complete
+proof of this existence theorem and providedthe original motivation
+for the introductionof normalfunctions.
+     e) Now, as indicated in the introductionand will be explained
+more fully below, the formal aspects of the above discussioncarryover
+to higher dimensionswith intermediateJacobiansreplacingJacobians.
+In particular,the analogueof Lefschetz'scharacterization(1.14) of the
+fundamental classes goes through (c.f. Section 2b)), but the funda-
+106                          PHILLIP A. GRIFFITHS
+
+
+mental existencetheorem (1.21) does not generalizedue to the failure
+of the inversiontheoremfor intermediateJacobians.This suggeststhat
+we re-examinethe normal functions for curves on a surface having in
+mindthe followinggeneralphilosophy:In higherdimensionsa particular
+Hodge structurewill in generalnot arisefrom a geometricsituation,but
+a non-trivialglobal variation of Hodge structure should come from
+algebraicgeometry.Nowwe are not able to reprovethe existencetheorem
+without using Jacobi inversion, but we are able to show by suitable
+differentiationthat, in a certain sense, knowing the normal function
+vz allowsus to determinethe equationsof Z.
+     Our discussionof this will be facilitatedby introducingsome classi-
+cal notation.We imagineS as being genericallyprojectedinto P3 having
+therean affineequation
+
+                            f(x, y, z) = 0
+
+wheref is a polynomialof degreed, and wherethe Lefschetzpencil is
+given by the plane sectionsy = t. If D is the double curveof S, then it
+is well knownthat by residues
+
+                        Q5s2 O(d      -   4)(-D)
+
+and consequentlyQS2 (L)_ O(d - 3)(-D). Sectionsin H0(US2 (L)) are
+then given by polynomials p(x, y, z) of degree d - 3 passing through
+the double curve(adjointconditions),and the correspondingsection of
+the Hodgebundleis
+
+
+           @(t) = Res (Res (x(y,Yz)       dxA dyA dy))
+
+
+                   p(x, t, z) dx                                  (1.23)
+                    af
+                    az(x, t, z)
+                                                                  (123
+
+
+   Recall that a normal function is given by a multi-valuedholo-
+morphicfunctionv(t) on P - {tI, .. ., tWj whichhas certainprescribed
+behavior at the critical values t = ta and at t = oo, and whose indeter-
+minacyis givenby period
+     NORMAL FUNCTIONS            ASSOCIATED             TO ALGEBRAIC    CYCLES            107
+
+
+                   7r(t)=          Eo(t),           8 E Hl(Ct, Z).                      (1.24)
+
+
+Now it is well-knownthat these periods satisfy a linear differential
+equation(Picard-Fuchsequation)
+
+                            -                               dk7r(t)
+              P(t, d/dt)7r(t) =                     rk(t)           =                   (1.25)
+                                            k                (dt))
+
+with rationalfunctionsrk(t) as coefficients,and it is suggestedthat we
+apply the Picard-FuchsoperatorP(t, d/dt) to the normalfunction v(t)
+to obtain a single-valuedrationalfunctionr(t) which shouldthen reflect
+properties of v.
+     More precisely,we denote by D the Gauss-Maninconnectionfor
+the cohomologybundle H = Ut,,t HDRI (Ct) over P1 - {tl,            tNv}.         ...,
+
+
+Its characteristicpropertyis that we can differentiateunderthe integral
+
+                        d                               Dco(t)
+                       dt | <(t) =              L        dt                             (1.26)
+
+
+In fact in our case we may take
+
+                       Dw(t) a_(t)
+                            dt              at
+
+                                       -a /p(x,              t, z) dx
+                                       at V af                 t Z)
+
+to be the result of formallydifferentiatingw(t). What is importanthere
+is that Dw(t)/dt is a rational 1-form of the 2nd kind on Ct whose co-
+homology class in HDR1 (Ct) is well defined. If the genus of Ct is g then
+the classes
+
+                                  Dw(t)                     D2___(t)
+108                              PHILLIP A. GRIFFITHS
+
+
+will be dependentin HDR'(Ct), and so if they genericallyspan a sub-
+space of dimension1therewill be a minimallinearrelationon Ct
+
+
+                        rk-   (D(t      )k       (t),                  (1.27)
+
+where s? is the restrictionof a rationalfunction on S and the rk(t) are
+rationalfunctionsof t. It is clear that by using (1.26) the relation(1.27)
+impliesthe differentialequation(1.25).
+     In order to simplify the following discussionwe will assume that
+the irregularityq(S) = 0 (the generalcase will be taken up in Section2
+below). Then there is no fixed part to the family of JacobiansJ(Ct), and
+according to Lefschetz [6] the global monodromygroup acting on
+H1(Ctr) is irreducible(in general, it is irreducibleon the variablepart
+of the cohomology).It follows that the order 1 of the equation (1.25)
+is 2g, since the classes {co, Dw(t)/dt, D 2w(t)/dt2,       *   } span an in-
+variantsubspaceof HDR' (Ct) which must then be all of this group. The
+generalsolutionto (1.25) is then of the form
+
+                         2g   (
+                         E cj        co(t),   ci E C,                 (1.28)
+                        J=1
+
+
+whenbi, ..., 62g give a basis for HI (Ct).
+   Now to each normalfunctionv(t) we associatethe rationalfunction
+P(t, d/dt)v(t). A basic result is Manin's theorem [7]: The kernel of the
+mapping
+                       v(t) - P(t, d/dt)v(t)                      (1.29)
+
+consists exactly of the torsion elements in the group of normalfunctions.
+    Proof. If the right-handside of (1.29) is zero then v(t) has the
+local form (1.28). By analytic continuationaround the critical value
+t = tcr we infer that
+
+
+                X"       w(t) = S c,G5j, 6a)       w(t),              (1.30)
+
+
+wherethe Xaare the coefficientsin the fundamentalclass E ), Aa of v.
+     NORMAL FUNCTIONS       ASSOCIATED        TO ALGEBRAIC        CYCLES     109
+
+By differentiationwe deducethat (1.30) holdsfor any class in HI (Ct);i.e.
+
+                            Scj(bj,6a)       X=       EZ
+
+
+for all al. Since the global monodromygroup is irreducible,the 2g X N
+matrix (b8,68y)has maximalrank 2g. It follows that the bj are rational
+numbers,and hence that some multiplemv = 0. Q.E.D.
+     f) By virtue of (1.29) we may ask if additionalinformationmay
+be obtained by further differentiation,and our main result (Theorem
+1.36) will be that this is indeedthe case.
+     As a preliminaryto stating this theorem we need to observethat
+for the pair consistingof a smooth manifoldN and submanifoldS the
+relative de Rham cohomologyH*(N, S) may be computed from the
+complexof differentialforms s?on N such that s?Is 3 0. In case N is
+a smooth algebraicvarietyand S an algebraicsubvarietywe may simi-
+larly define the algebraicde Rham hypercohomology       and extend Groth-
+endieck'salgebraic   de  Rham  theorem to  this situation.
+      Returningto our considerationof curveson a surface,for an arbi-
+trary integerk > 0 we let E E IkL I and assume for the moment that
+E does not have multiple components,so that a Et = E* Ct is smooth
+for t in a Zariskiopen set U C Pl. Givena sectionwc(t)E HO(coct)   of the
+Hodge bundle as above, we may consider the relative class w(t) E
+HDR' (Ct, Et). Denoting by DE the Gauss-Maninconnection for the
+relative cohomologybundle UtEU HDR' (Ct, Et), exactly as in the pre-
+ceding discussiontherewill be a Picard-Fuchsoperator
+                                         /
+                                                       ~~dk
+                P(t, d/dt, E) = E rk (t E)               )k                (1.31)
+                                    k=O
+                                                       (dtjk(.1
+correspondingto a minimalrelation
+
+                        /                DE kW(t)
+                        E2rk(t,E) -=                       0
+                       k=O                   (dt) k
+
+
+in HDRI (Ct, Et). It is also the case that the coefficientsrk(t, E) are
+rationalfunctionsof t E P1 and of E E IkL j, at least providedwe nor-
+malize by requiring ri(t, E) = 1.
+110                              PHILLIP      A. GRIFFITHS
+
+
+    We will now show: For generic E and co(t), the equation (1.31) has
+the maximal possible rank
+
+                          1 = 2g + kd-1                           (1.32)
+
+where d = cl2(L) is the degree of L.
+      Proof. We considerthe exact homologysequence
+
+            0 -H    (C     -     Hi(Ct, Et) - Ho(Et) - Z - 0.
+
+The kernel of Ho(Et) - Z correspondsto zero cycles of degree zero
+supportedon Et, and so the global monodromygroup operatinghere
+is irreducibleprovidedthat the curveE is irreducible(it is essentially
+the Galois group of the branchedcoveringE        P
+                                                 pl). Consequently,the
+global monodromygroup acting on H (Ct, Et) preservesthe subspace
+H1(Ct) and acts irreduciblyon this subspaceand on the quotientspace.
+If the span of {co(t), DEW(t)/dt, *..} fails to be all of HDR1(Ct, Et),
+then writing
+
+                                           kd
+                                 Et =E            pi(t)
+
+and recallingthat p E Ct denotes a basepoint, we will have in a small
+t-disc
+
+
+                                  Pi(t)
+                   O=      ci           cot +             co(t)   (1.33)
+
+
+where-yis a constantlinearcombinationof cyclesin Hi (Ct). By analytic
+continuationof this equationarounda branch point of E      P
+                                                           p1 where,
+e.g., pi andp2 come togetherand interchange,we deducethat
+
+                                          P2(t)
+
+                         (C1 -    C2)             co(t) = 0.
+                                          l1(t)
+
+
+
+Since co(t)is assumedgenericthis implies that ci = C2. Continuingin
+this way we infer from the irreducibilityof E that all ci are equal, and
+     NORMAL FUNCTIONS    ASSOCIATED   TO ALGEBRAIC      CYCLES      111
+
+so (1.33) becomes
+
+
+                    o = c (s A     @(t))   +   co(t).
+
+
+By analytic continuation of this equation around the critical points
+t = tc we deduce that (^y,&r) = 0 for all vanishing cycles 6a, and hence
+-y =O. Q.E.D.
+      We remark that, just as for ordinary polynomials, the operator
+P(t, d/dt, E) may become reducible for special E E IkL I. What is
+important for our purposes is the observation that if under a special-
+ization E -Eo the coefficients rk(t, E) specialize to rational functions
+rk(t, Eo) which are not identically infinite, then the solutions to the
+O.D.E. P(t, d/dt, Eo)7r(t) = 0 are obtained by specializing solutions of
+P(t, d/dt, E)7r(t) = 0, and hence are constant linear combinations of
+periods of w(t) over cycles in H1(C,, Eo,).
+      Now suppose that Z is a primitive algebraic cycle on S with cor-
+responding normal function vz. If we want, by a linear equivalence we
+may think of Z as the difference of two smooth curves. Then for any
+Eo E IkL I passing through Z and for which P(t, d/dt, Eo) exists as a
+specialization-which will be the case for generic Eo E IkL I containing
+Z provided that k is sufficiently large-the normal function vz satisfies
+the relative Picard-Fuchs equation
+
+                    P(t, d/dt, Eo)vz(t) = 0.                      (1.34)
+
+     Conversely, suppose that a given normal function v(t) satisfies
+(1.34) for some Eo. Then by our remark about the solutions to (1.34)
+
+
+                            v(t) w(t)=
+
+
+where -y is a constant linear combination of cycles in HI (C,, Eo,). By
+considering the monodromy around the critical values t = t., we deduce
+that
+
+                           (y, at) = At E Z
+
+for all ce, and then E. X., Aa E H2(S, C,t) gives the fundamental class
+112                                PHILLIP    A. GRIFFITHS
+
+
+rv of the normal function, which is consequently in the image of
+
+                          H2(Eo, Q) -        H2(S, Q)                            (1.35)
+
+since the locus of the 1-chain -y(t) in the slit plane will give a 3-chain r
+with alr -     X. Aa modulo Eo.
+     Summarizing, we have established the following:
+    THEOREM.      For a given normal function v and each divisor E E
+ kL I we consider the equation
+
+                           P(t, d/dt, E)v(t) = 0.                                (1.36)
+
+ Thinking of E as variable, those divisors for which P(t, d/dt, E) is de-
+fined and (1.36) is satisfied are exactly the divisorsfor which the funda-
+ mental class q, is in the image of the mapping (1.35).
+
+        2. Discussion of the Theorem in Higher Dimensions.
+      a) We want to extend the result just given to higher dimensional
+varieties. For reasons stemming from the Lefschetz hyperplane theorem
+and Hard Lefschetz Theorem the crucial case is the middle dimension -
+i.e., we consider primitive algebraic n-cycles Z on a smooth projective
+variety M of complex dimension 2n. As in the case n = 1 of curves on
+a surface we assume given a very ample line bundle L - M and Lefschetz
+pencil IV, I selected from the complete linear system IL 1. The critical
+values t = ti, ..., tN correspond to Vt,chaving acquired one ordinary
+double point. As t- t there will be a vanishing cycle &, E H2n-1(Vt),
+and the Picard-Lefschetz transformation on H2n-1 (Vt) as t turns around
+tcris
+
+
+                            -Y - z-Y? (-Y, 6") ba.                                (2.1)
+
+Marking a path from a fixed point to to t. the locus of the vanishing
+cycles 6a along this path traces out the relative cycle Aa E H2m(M, VO).
+Ignoring questions of torsion the primitive part of H2n (M, Q) is exactly
+
+
+
+     1c.f. the discussion in [6] reducing the Lefschetz (1, 1) theorem in general to the
+case of curves on a surface.
+      NORMAL FUNCTIONS     ASSOCIATED               TO ALGEBRAIC   CYCLES   113
+                                    -
+ represented by relative cycles X.A,         satisfying Ea )\a& = 0 in
+H2n-I(Vo). In fact the topological discussion in the case n = 1 (c.f.
+Section lb)) goes over pretty much verbatim, the only real differences
+occurring between odd and even dimensions. Thus a primitive algebraic
+n-cycle Z on M satisfies either of the equivalent conditions: Z * Vt = 0 in
+H2n-2(Vt; Q); or, in cohomology, the fundamental class rz maps to zero
+under the restriction mapping H-'(M, Q)         H-n(Vt, Q). Given such a
+primitive algebraic n-cycle Z, its corresponding relative cycle E. XaAa
+is obtained by writing
+
+                            Zt = Z vt = et
+
+when yt E H2n-I (Vt, Zt). As t turns around the critical value t., by an
+obvious extension of (2.1) we have
+
+                                   - /t    ? Xa ba.
+                             -yt
+
+
+Then it is proved as before that these X. are the coefficients in the rela-
+tive cycle corresponding to Z.
+     Before taking up normal functions we must discuss a little Hodge
+theory. For a smoothwprojective variety V we denote by Hm(V) the com-
+plex cohomology and recall the Hodge decomposition
+
+
+                          Hm(V) =               i     Hpq(V),
+                                          P+q=m
+
+
+
+                          qHP(V) = HqP(V).
+
+
+It will be convenient to consider also the Hodge filtration defined by
+
+                      FkHm(V)       =     0D HPm(-P(V).
+                                          p-k
+
+
+
+We may think of H( V) as either de Rham cohomology or Cech co-
+homology for the constant sheaf C. In each of these cases the Hodge
+filtration has a useful description which we shall now recall. Denoting
+byAP q(V) the smooth (p, q) forms on V, byFkAm(V) = EDp-kAP'?'-P(V)
+the Hodge filtration on forms, by Z(FkAm(V)) the d-closed forms, and
+finally by ?vk the sheaf of closed holomorphic k-forms on V we have
+the following (c.f. [3]):
+114                              PHILLIP A. GRIFFITHS
+
+
+There are natural isomorphisms
+
+                Z(FkAn(V))/d(FkAm-l (V))             Hn-k(V,     O2Vk)          (2.2)
+                                                     FkH"'(V)
+
+      Now suppose that V has dimension 2n - 1. Setting
+
+
+                         H+(V)    = FnH2n-1(V),           and
+
+                         H-(V) = H2n-I(V)IH+(V)
+                                  _- H+(V)*
+
+the intermediateJacobian2is definedto be
+
+                        J(V) = H-(V)/H2n-'(V,           Z)
+                                  H+(V)*IH2n-l(V, Z)
+
+where the second isomorphismresults from duality. Thus, a point v E
+J(V) is given by a linear function on H+(V) taken modulothose linear
+functions arising by integrationover cycles, which are called periods.
+Each algebraic(n - 1)-cycleZ C V which is homologousto zero de-
+fines a point vz in J(V) by the linearfunction
+
+
+                                       (-ti                                     (2.3)
+
+
+where -y is a real (2n - 1) chain with dy = Z and
+
+               w>E z (FnA2n
+                          -1(V))/d (FnA2n-2(V)) =_H+(V)
+
+using (2.2). It is straightforwardto verify that (2.3) is independent
+moduloperiodsof the choiceof -yand of the choiceof form representing
+a class in H+(V), and so representsa well-definedpoint in J(V). When
+n = 1 we just have the familiar mappingfrom divisorsof degree zero
+to the Jacobianvarietyof a curve.
+
+   2We shall only be concerned with the intermediate Jacobian in the middle dimension.
+     NORMAL FUNCTIONS     ASSOCIATED    TO ALGEBRAIC   CYCLES         115
+
+    Some properties of the mapping (2.3) which are more or less im-
+mediate from the definition are these:
+       i) vz varies holomorphically with Z;
+      ii) consequently, v maps rationally equivalent cycles to the same
+          point, and we are free to utilize the moving lemma to put cycles
+          in general position; and
+     iii) if the Hodge decomposition is skew to the rational cohomology
+          in the sense that
+
+              H2-'(V,   Q)n (H -'(V) i) H -M'(V)) = (0),             (2.4)
+
+        then v maps algebraically equivalent cycles to the same point.
+    The next properties have to do with a holomorphic family { Vt} tEB of
+smooth Vt's. We denote by H - B the cohomology bundle with Gauss-
+Manin connection D; thus
+
+                           H = U H2n-'(Vt)
+                                  tEB
+
+
+
+and the equation D-yt = 0 defines the local condition that cycles zt E
+H2'-I(Vt) be displaced from a fixed cycle -Yto
+                                             by diffeomorphisms Vt0-
+Vt. We recall that the
+
+                        FkH   =   U FkH2n-1(Vt)
+                                  tEB
+
+
+
+give holomorphic sub-bundles and D(FkH) C OB' (Fk-l H). The relevant
+properties of (2.3) with dependence on parameters are these:
+    iv) the intermediate Jacobians J(Vt) vary holomorphically with t,
+        and J = U tEB J(Vt) forms in a natural way an analytic fibre
+        space of complex tori over B;
+     v) if Zt C Vt is an algebraic (n - 1)-cycle which varies holo-
+        morphically with t and which is homologous to zero, then vZtE
+        J(Vt) varies holomorphically with t; and finally
+    vi) the section vz of the fibre space J -B     defined by vz(t) = VZt
+        as in v) just above is quasi-horizontal in the sense that
+
+                                   Dvz = 0                          (2.5)
+116                            PHILLIP A. GRIFFITHS
+
+
+           where
+
+                                D:((J)_M -(F"+'H)
+
+           is the mapping induced from the Gauss-Maninconnection
+           (c.f. [3]).
+                 Our last propertieshave to do with the behaviorof J(Vt)
+           as t approachesa criticalvalue t = t, in the Lefschetzpencil
+            IVtIonM, andthey are:
+      vii) there is naturallydefined a generalizedintermediateJacobian
+           J(Vta) (whose precise propertieswill be recalled as needed
+           below)such that
+
+                                    J=   U J(Vt)
+                                         tEP1
+
+
+
+          forms naturallya fibre space of complex Lie groups over P1
+          extendingthe previouslydefinedfamilyoverP -{t,           .. ., tN;
+
+          and
+   (viii) given a primitivealgebraicn-cycle Z on M with Zt = Z* Vt,
+          the cross-sectionvz(t) E J(V,) definedfor t ? ti, . . ., tN by v)
+          above extends across the critical values to give a quasi-hori-
+          zontal sectionof J- P.
+      Definition.   The normalfunctions associated to the Lefschetz pencil
+ VtI are the quasi-horizontalholomorphiccross-sectionsof J -_ PI.
+    Intuitivelywe may view a normal function v as follows: First we
+define the Hodge bundle
+
+                            E = U To(J(Vt))*
+                                 tEP1
+
+
+
+to be the bundle of dual spaces to the Lie algebrasof the J(Vt); note
+that for t not a criticalvaluethe fibre
+
+                            Et =_FnH2n-l Vt);
+
+the remainingfibres Et,, will be identifiedbelow. If w(t) is any mero-
+morphicsection of the Hodge bundleE        P
+                                           pI, then consideringv as a
+multi-valued section of E* we obtain a multi-valued meromorphic
+     NORMAL FUNCTIONS              ASSOCIATED     TO ALGEBRAIC    CYCLES      117
+
+
+function
+
+                                         (v, co(t)>                          (2.6)
+
+on PI -{t,      ...,       tN}.   Under analytic continuation around t = t. this
+function changes by adding on a period X.a a, c(t) where &. is the
+vanishingcycle. Assumingthat t = co is not a critical value, as t de-
+scribes a circle ItI = r of sufficientlylarge radius the function (2.6)
+analyticallycontinuesback to itself, and consequently
+
+                                     N
+
+                                         Xa j w(t) = 0
+
+
+for all co(t).It followsthat
+
+                       N
+
+
+                   U=1
+                       E X,ba = 0             inH2 -I(Vt0)
+
+
+and thereforeE. Xa Aa E H2.(M, Vto) defines a primitive class ?ip E
+Hprim2(M, Q), which we shall call the fundamental class of the normal
+functionv.
+    In morepreciseterms, if we let
+
+                                         X=     U Vt
+                                               tEP'
+
+
+
+be obtained by blowing up the base locus B = Vto V.Oof the pencil,
+then X fl PI is an analytic fibre space and it is a consequenceof
+Lefschetztheorythat (c.f. [1] and (1.9))
+
+    HI(PI, R?2n-'Z) 0 Q _ Hprm2(M, Q) ( Hprm22(B                       Q).   (2.7)
+
+On the otherhand there is an exact sheaf sequence
+
+                              0 - Rf2n-Z - E*-J-             0,
+
+
+of whicha piece of the cohomologysequenceis
+
+             H0(P1, J) 6 H'(P1, Rj2"'Z)-               H'(P', E*).           (2.8)
+118                          PHILLIP A. GRIFFITHS
+
+
+The normalfunctionv gives a sectionin HO(P1,J), and the fundamental
+class 71pis just the projectionof b(v) in Hprim2n(M,Q) using (2.7). That
+these descriptionsagree is accomplishedby computingH1(P1,Rf2n-1Z)
+from the covering { Uo, U1, ..., UN} of PI where Uo = Pl -{t i,
+tN} and Ua!is a small disc aroundta, just as was done above(1.9).
+
+    Of courseif the normalfunctionv arisesfrom a primitivealgebraic
+cycle Z on M then their fundamentalclasses are the same; this follows
+from the abovediscussion.In particular
+
+                     77vE Hnn(M) n Hprim2n(MIQ).
+
+Conversely,it was provedby Zucker[10] that:
+
+  A cohomology class 71E Hprim2n
+                              (M, Q) is the fundamental class of a
+       normalfunction if and only if it has Hodge type (n, n).  (2.9)
+
+This result had been previouslyestablishedby SpencerBloch and the
+author for sufficientlyample Lefschetz pencils, and we shall give this
+argumentin the next sectionas a preliminaryto discussingPicard-Fuchs
+equations.
+    The upshotis that we havea completegeneralizationof the Lefschetz
+part of the classicaltheory of normal functions, but of course what is
+missing in Poincare's existence theorem. Now the existence theorem
+would undoubtedlyfollow from the Jacobi inversiontheorem for the
+J(Vt)'s (c.f. [11]), but it is well knownthat for n > 1 this resultis false.
+In fact, assumingfor simplicityof notation that H2n-1(M) = 0 (e.g.,
+take M C P2n+1 to be a smooth hypersurface),by taking IVtI from a
+sufficientlyample linear system we may assume that h2n-1'0(Vt,) ? 0.
+                                               I(PI - {tI,
+Recalling that the global monodromy action of 7r                 ...,   tN})
+on H2,-1(Vto, Q) is irreducible,it follows that (2.4) is satisfied for
+generic t, since otherwisethe left-hand side would give an invariant
+subspace.Thereforethe groupof invertiblepointson a genericJ(Vt) is a
+countable subgroup,one which will howeverbe infinite providedthat
+there is a primitivealgebraicn-cycleZ on M with 71z? 0 in H2n(M,Q).
+In a sense the basic difficulty here is that for higher weight not all
+Hodge structurescome from geometry, even in the broadest motiv-
+theoreticsense. However,since a non-trivialvariationof Hodge structure
+is in generalsupposedto come from geometry,and in fact since it seems
+that the family of determinantalvarietiesconstructedfrom the differen-
+         NORMAL FUNCTIONS   ASSOCIATED    TO ALGEBRAIC   CYCLES     119
+
+tial of the variationof Hodge structureobtainedby lookingat the linear
+maps of differentranks must be non-trivial,what is suggested is that
+we investigatefurtherthe infinitesimalpropertiesof normalfunctions.
+    b) Before taking up Picard-Fuchsequations it will be useful to
+analyzethe Hodge bundleE - Pl. We recall (c.f. Schmid[8]) that the
+generalfibre is Et = H+(Vt), and those sectionsof E definedin a punc-
+tured disc 0 < It - t, I < c around the critical value t, and which
+extend are definedby the growthcondition
+
+                        co(t) = 0(-log It - tal).                 (2.10)
+
+In orderto isolate the essentialpoints we shall considerthe case where
+dim M = 4 and the line bundleL - M is chosen sufficientlyample to
+insurethat
+
+                            = 0
+                HP(M, UMq(kL))           for p, k > 0.            (2.11)
+
+Along the way we shall then simply state the generalconclusionswhich
+may be drawnfrom similar arguments(for details, c.f. Zucker'spaper
+[10]).
+    To begin, by the Lefschetzhyperplanetheorem we may consider
+H3(M) as a subgroup of H3(Vt) (t ? ti, ..., tN), and in fact we may
+write
+
+                   H3(Vt) = H3(M) (? Hvar3( Vt) 3                 (2.12)
+
+whereH3(M) representsthe fixed part of the variationof Hodge struc-
+ture defined by the {FkH3(Vt)}, and whereHvar3(Vt) is the orthogonal
+complementof this fixed part relativeto the cup producton H3(Vt). We
+shall representHvar3( Vt) by residuesof meromorphicformson M having
+poles along Vtand wherethe filtrationby orderof pole correspondsto
+the Hodge filtration,and then it will be easy to see how this represen-
+tation varieswith t.
+     Supposethen that V E ILI is a smooth divisor,denoteby QMP(kV)
+the sheaf on M of meromorphicp-forms having a pole of order <5k
+
+     3his decomposition
+                      is definedon rationalcohomology.
+120                                 PHILLIP A. GRIFFITHS
+
+
+along V and by QMP(kV) the subsheafof closed forms. We claim then
+that there are a pair of exact sequences4
+
+                      0 - QM4        f2M4(V)     - __Qv3          ?0           (2.13)
+
+                 ro    QM3(V)~          M(V)    -   QM4(2V)        - 0
+                                                                               (2.14)
+                 LO~ QM3 -        QM3(V)_Ee_s_V2          .   0
+
+(recall that Q4 = Q since dim M = 4), where in both cases "Res" is
+the Poincareresidueoperator.
+    Proof. In local coordinatesx, y I, y2, y3 whereV is givenby x = 0,
+a sectionof QM4(2V) is
+
+                            f (x, y) dx A dyi A dy2 A dy3
+
+
+
+Setting
+
+                  f(x, y) dyl A dy2 A dy3           g (x, y) dxc A dy2 A dy3
+                              x                                        x
+
+
+we will have dp = f providedthat af/ax = ag/lay, and this implies
+the surjectivityof d in (2.14). The Poincare residues are defined by
+showingthat a section 7 of Q2MP(V)has the local form
+
+                                            dx
+                                  r7 = aA   -
+                                            x
+                                                    + r
+
+
+
+wherea and r are holomorphicforms, and then setting Res - = a I V.
+It is well-knownthat this procedureis well-definedand takes closed
+forms into closedforms.5
+
+
+      4 Whendim V = 2n - 1 thereare n such sequences.
+      5Whatis actuallygoing on here is that Q2Mk(V)are the closedformsin the log com-
+plex QMP(logV), and the Poincareresidue Res:QMP(logV) - QvP-1 is defined and
+commuteswithd.
+     NORMAL FUNCTIONS            ASSOCIATED     TO ALGEBRAIC      CYCLES         121
+
+    Using 2.2 and (2.11) the exact cohomologysequencesof (2.13) and
+(2.14) give commutativediagrams
+
+    o - H4,0(M)       -   H0(QM4( V)) -Re'      H3'0(V)   -    H4"1(M) _ 0
+
+    l                                                     71/                (2.13a)
+
+                                                H3'0(M)
+
+            H0(QM3(V)) - H0(QM4(2V)) - H'(QM3(V)) - 0
+
+
+            2)    H1(QM3)    _
+                                                 -RHe(Q2)
+                                                                 -H2(QM3)    (2.14a)
+                                 H1(QM3(V))--
+
+
+
+  HO(QM2)                                            H1(QM22)
+
+
+where -q E H'(QMl) represents cl(L). By the Hard Lefschetz Theorem
+the -qin (2.13a) and the - on the right in (2.14a) are isomorphisms,so
+that by (2.2) and (2.12)
+
+                          fResH0(f2M4(V))       = F3Hvar3(V)
+
+
+                            Res H'(QM3(V))      = F2Hvar3(V).
+
+
+Combiningthese identificationswith the definitionof primitiveclasses
+we obtainfrom (2.13a) and (2.14a) the sequences
+
+        O- F4Hprjm4(M)             H0(QM4(L)) -F3Hvar 3(V)            0      (2.13b)
+
+            -    F3Hprim H(M)lH'(M3(V))-F2Hvar3(V)                    0      (2.14b)
+        q                              ~~~~~~~~~~~~~~~~~~~11
+                                   H0(f2M4(2L))/dH0(QM3(L))
+
+
+    We now think of V as varying in the pencil IVt j. The Hodge bundle
+decomposes
+
+                                   E = Ef i) E,
+122                                 PHILLIP A. GRIFFITHS
+
+
+into a fixed and variablepart. By (2.12)
+
+                                    Ef =     2H3(M),
+
+whilefor t     ti,    ...,tN
+
+
+
+       (E)t=         F2Hvar3(Vt)
+               = F3Hprim 4(M) \ (H0(QM4(2L))/dH0(UM3(L)))              (2.15)
+
+by (2.14b). In fact, the isomorphism(2.15) also holds for the critical
+valuest = t,: If coEH0(UM4(2L))gives a form with a doublepole along
+Vt,af,then the formula
+
+
+                          tctJa(t) Res w = C tw(pc-
+                       tlim                                            (2.16)
+
+
+is valid and defines the point residueof X (c.f. [4]), where herepa!de-
+notes the doublepoint of Vtce.If Vtc.- Vtk,is the canonicaldesingular-
+ization, then this point residue is the obstructionto c inducinga class
+Res c EF2H3(Vt,). In generalRes c gives a differentialof the 3rd kind
+ on V,,L, and its residues there are just ? C te w(pce).The situation is
+ in fact completelyanalogousto curvesacquiringdoublepoints.
+      Concerningthe growthestimate(2.10), supposethat M has dimen-
+ sion 2n and w E H0(QM2n(kL)).Then according to [10]
+
+
+                               Resw = O(- It In-klog It 1),
+
+so that for k < n - 2 we may write
+
+                          lim FkH2n-l (Vt) = FkH2nl- (Vt),
+                          t-tcl
+
+whilefor k = n - 1 this is only true on that part of FkH2n-l(Vt) having
+zero residuein the abovesense. In particular,
+
+               h2nllkk(Vt7)         = h2nkk      (Vt),     k < n - 2
+
+                 n,n-1(Vta)      = hnn-l(Vt)-1
+     NORMAL FUNCTIONS       ASSOCIATED       TO ALGEBRAIC            CYCLES                123
+
+In all these cases the canonicalextensionsof the Hodge bundlesis given
+by taking residuesof formsin H0(QM2n(kL)).
+     Now using the abovenotationEv for the variablepart of the Hodge
+bundle and lettingE 3,0 C Ev be the part correspondingto F3Hvar3(Vt),
+the sequences(2.13b) and (2.14b) globalizeto
+
+     0 - F4Hprim4(M) -. H0(QM4(L)) 0 (9(2) -E                   30         0            (2.13c)
+
+    O    F3Hprim4 (M)      5 - Ev-O
+                                                                                        (2.14c)
+    o-   H0(QM3(L))      0 (1) - HO(QM4(2L)) 0 (2)                    -.       -.   0
+
+For example, if c E HO(QM4(2L) and if so and s0OE1H?(M, L) are sec-
+tions defining VOand VO.respectively, then so + ts0o defines Vt and
+Co/(so + ts0.)2 E HO(QM4(2Vt)). Setting t = l/t'
+
+
+
+                ((so      t2)        t       Rest    (t'so   + S0.)2       )
+
+and this defines the map HO(QM4(2L))0 (9p(2) - Ev. We shall analyze
+the abovetwo sequencesindividually.
+     Forthe firstwe tensorwith ( (-1) and Op(-2) and take cohomol-
+ogy sequencesto obtain
+
+                       O(QM4(L)) =_ HH(P', EV 0& 0(-1))
+
+
+                  H0(QM4)_ H0(P1, EV (0 0(-2)).
+
+
+The second isomorphismmeans that the top degree holomorphicdif-
+ferentialson M are uniquelyof the form
+
+                                p=   co(t)    A dt
+
+
+where c(t) E H3,0(Vt) vanishes to 2nd order at t = co, generalizinga
+phenomenonwe noted previouslyfor curveson a surface.
+    Coming to (2.14c) we again tensor with (9p1(-2)                  and take cohomol-
+124                           PHILLIP A. GRIFFITHS
+
+
+ogy to obtain
+
+      fo   H?(3(-2))-H0(P1,        E (0 O(-2))-      F3Hprim4(M-O
+
+
+       0H(5(-2)) =_HO(QM4(2L)).
+
+The forms in HO(UM4(2L)) give differentialsin H0(QM4(VO + VJ)) by
+the map c -. W/sos.. Taking double residues we obtain a holomorphic
+2-form on the base locus B. Consequentlythe above sequencemay be
+rewrittenas
+
+  0 - F2Hvar2(B) - H0(P1, E ( 9
+                              0(-2))          -F3Hprim4(M)    0.    (2.15)
+
+    We are now ready to sketch the proof of (2.9). Referringto (2.8)
+and (2.7) and using that H0(P1,E 0 (9(-2)) is dual to H1(P1,E*) we
+obtainfrom these togetherwith (2.15) the diagram
+
+HO(PI J) - Hprim4(M Q)         Hprim2(B Q)
+
+                          0
+                              I~~~~~~~~~~~~~~~~~~~~~~~~~
+                    F3Hpri 4(M)* -Hprjm"2(M) 0S H primo4(M)
+
+                    H1(P1,E*)                                       (2.16)
+                        I
+                    F F2H2(B)*    _ H0 2(B)
+
+
+What must be verifiednow is that the "obvious"maps in (2.16) render
+the diagramcommutative.The obviousmaps arejust the projections
+
+                Hprim4(M, Q)      Hprim193(M) (i HprM0'4(M)
+
+                    2(B, Q) -H02(B)
+                Hprim
+
+in the Hodge decompositionsof cohomology.The proof of this is the
+same as the case n = 1 given above. Once this is done, ignoringques-
+tions of torsionwe will havefound a sectionv E H0(P1,J) whosefunda-
+mental class is a given element of Hprim4(M,Q) n H22(M). The dif-
+     NORMAL FUNCTIONS         ASSOCIATED          TO ALGEBRAIC         CYCLES       125
+
+ferential
+
+                        Dv EHO(Pl,QpiI(E3,0*))
+                                              11
+                               H0(P1,E3,0* 0 (9(-2))
+
+                                              0
+
+by (2.13c). Thus the quasi-horizontality
+                                       conditionis automaticallysatis-
+fled for any v EHO(Pl,J), and this completesthe proofof (2.9).
+     c) The discussionin Section ld) and e) concerningPicard-Fuchs
+equations and their relative counterpartsnow carries directly over. In
+fact we can be quite explicit. Given X E H0(QM4(L))we have a holo-
+morphicallyvaryingsection
+
+                           (~
+                 ( =) Res(So +'S)E
+             (.o(t)                               H3(V~)=H.(.7
+                                                   ) (t = H,
+                                       ts,,                                      (2.17)
+
+The Gauss-Maninconnectionis then givenby
+
+
+                         dt         Res ((0 +              )2)
+
+
+Since the global monodromyaction on the variablepart of H3(Vt() is
+irreducible,we inferthat for generict
+
+                    C     Dco(t)        D 2CO(t)..
+                                                                       3V.
+            span '()                     (dt)2                   H
+                              dt   '                                 var3(   )
+
+
+
+Recalling that dim Hvar3(Vto) = 2g is even, there will be a unique
+normalizedO.D.E.
+
+               2g        dk7r(t)
+                                   -,
+              k-O         (dt)k                      r2g(t)=                     (2.18)
+
+
+satisfiedby the periods7r(t)=     wo(t)of w(t). We denote by P(t, d/dt)
+the differentialoperatoron the left in (2.18). If v is any normalfunction
+viewedas a multi-valuedholomorphicsectionof E*, then setting v(t) =
+126                              PHILLIP A. GRIFFITHS
+
+
+(v, W(t)>
+
+                        P(t, d/dt)v(t) = r(t)                        (2.19)
+
+is a rationalfunctionof t. Indeed,it is single-valuedand has no essential
+singularityat the criticalvalues.As beforethe kernelof the map
+
+                             v - P(t, d/dt)v
+
+consists exactlyof the torsionelementsin H0(P1,J)/J(M), whereJ(M)
+is the intermediateJacobianof M viewedas the fixed part of the family
+{J(V)} .
+     We may estimatethe degreeof the rationalfunctionr(t) as follows:
+The singularitiesof P(t, d/dt) occurat the criticalvaluest = t" together
+possiblywith the points where the DkCo(t)/(dt)k   fail to span Hvar3(Vi).
+The latter are, however,only apparentsingularitiesof v(t), while the
+formerare regularsingularpoints. Since aroundt.>the functionv(t) has
+the form
+
+                v(t) = (holomorphicfunction) + (period),
+
+it followsthat r(t) has a pole of order c 2g at each t.,. Thus we obtain
+the bound:
+                       degr(t) < hvar1(Vto)>N                        (2.20)
+
+where N is the number of critical values in the pencil IVt1. Geomet-
+rically, N representsthe degree of the hypersurfaceM* dual to M
+embeddedin projectivespaceby the completelinearsystemIL1.
+     If now E E IkL j is such that a genericEt E ln Vt is smooth
+(thus E may have isolated singularities),and if w(t) is given by (2.17),
+then w(t) E H3'0(Vt) restrictsto zero as a form on Vt and so defines a
+relative class in HDR3(Vt, Et). Letting DE denote the Gauss-Manin
+connectionfor the relative cohomologybundle U HDR3(Vt, Et) there
+will be a minimalrelation
+
+                                                    DE kW(t)
+           P(t, d/dt, E)X(t) =     S   rk(t,   E)    (d)k      = 0   (2.21)
+
+in HDR3(Vt,Et). As usual we normalize by taking r1(t, E) = 1.
+     NORMAL FUNCTIONS          ASSOCIATED       TO ALGEBRAIC   CYCLES     127
+
+     THEOREM.        For a given normal function v and each divisor E E
+IkLIwe considerthe equation
+                          P(t, d/dt, E)v(t) = 0.                        (2.22)
+
+Thinking of E as variable, those Eofor which the operator P(t, d/dt, Eo)
+is obtained by specialization from a generic E(6) and for which (2.22) is
+satisfied are exactly the divisorsfor which the fundamental class r * is in
+the image of
+
+                       H2n(EO, Q) - H2n(M, Q).                          (2.23)
+
+     The proof of this result is, at this juncture, prettymuch verbatim
+that for the special case of curveson a surfacediscussedin Section le)
+above. Ratherthan belaborthe detailsit seems more interestingto offer
+some observationson the theoremvis a vis the problemof constructing
+algebraiccycles.
+    According to (2.9), given a class ?7E Hprim2"l(M,Q)n H'1""(M) there
+will be a normal function v whose fundamentalclass is 77. We then
+considerthe mapping
+
+                          E - P(t, d/dt, E),(t),                        (2.24)
+
+and viewit as a rationalmapping
+
+                                |kL I _ pm(k)                           (2.25)
+
+where pm(k) is obtained by adding the hyperplaneat infinity to the
+vector space of rationalfunctions of some fixed degreed(k).7 We then
+claim that:
+
+     The Hodge conjecture is true if and only if, for k sufficiently large
+the image of the rational mapping (2.24) passes through the origin
+in pm(k).                                                           (2.26)
+
+   Proof. If Hodge is true, then 7 = 77zis the fundamentalclass of
+some algebraiccycle Z and (2.22) will be satisfiedfor those Eo E IkLI
+
+   6 We will see belowthat this is not a seriousqualifier.
+ 128                                  PHILLIP A. GRIFFITHS
+
+
+which pass throughZ. (Here, there is some problemabout the special-
+ization questionand this will be discussedbelow.)
+      Conversely,we assume by inductionthat Hodge is true for smooth
+varietiesof dimensionsless that dim M. By the variousLefschetztheo-
+rems we then reduce to primitivecohomologyin the middle dimension
+(c.f. Section 2a) above). Given ?7E Hprim2n(M, Q) nf Hn(M) coming
+from a normalfunction v we infer that 77is in the image of (2.23) for
+some divisorEo. Now Eo must be singular (c.f. the following discus-
+sion), but by applyingmixed Hodge theory [2] we may conclude that
+7 ultimatelycomes from (n, n) classes on smoothvarietiesof dimension
+less than dim M, and then by the inductionassumption77will be alge-
+braic. Q.E.D.
+     Now of course an obviouspossibilitywould be to show that, for k
+sufficientlylarge, the rational mapping (2.25) is surjective.This could
+be done by countingdimensionsand estimatingthe rank of the Jacobian
+matrix at a genericE. In fact the latter is not too difficult; a generic
+fibre is givenby all E for which
+
+                       P(t, d/dt, E)v(t) = r(t, E) = r(t)
+
+is a fixed rationalfunction. Differentiatingthis equation with respect
+to E we obtain a homogeneousequationsatisfiedby i(t), and the num-
+ber of these may be estimated. It is also possible to estimate m(k) by
+using the regularitytheoremto estimatethe degreeof the rationalfunc-
+tion r(t, E) in a mannersimilarto (2.20). When carriedout my crude
+count showedthat the dimensionson both sides of (2.25) growlike
+
+                          C   -C   kn + (lowerorder terms),
+
+but the coefficientof knappearsto be largerfor the right-handside of
+(2.25). This is probablycorrectsince one does not expect to get off so
+easily.
+     It is also quite instructiveto think about the divisorsEo for which
+(2.22) mightbe satisfied.The basic observationis
+
+
+    71f we write P(t, d/dt, E) in the form Sk [Pk(t, E)/qk(t, E)][dk/(dt)k]      where the
+Pk and qk are polynomials, then as E specializes to Eo it may happen that some qk (t, Eo)
+-0. In this case under the mapping (2.24) Eo will go to the hyperplane at infinity.
+     NORMAL FUNCTIONS            ASSOCIATED    TO ALGEBRAIC     CYCLES             129
+
+      If r7? 0 is in the image of the mapping (2.23), then Eo
+                          must be singular.                                     (2.27)
+
+Indeed, the Lefschetz decompositioninto primitive homology implies
+that the primitivecycles are exactly those which are not supportedon
+a smoothdivisorin the linearsystem IkL 1.
+     Now, given this it none-the-lessseems reasonableto hope that for
+sufficientlylarge k we may find an Eo with only ordinarydouble points
+which supports77.8This raises the question of just how allowingEo to
+have double points might increasethe rank of H2,,(E0), and this hap-
+pens as follows: Let A = Pi +         + pa be the zero-cycle of double
+                                         ...
+
+
+points on Eo and denote by ,   the  ideal sheaf of A. We pictureEo as
+the limit of smooth divisorsE, as t - 0. Then to each Pk there corre-
+sponds a vanishing cycle 6k(t) E H2,,1 (E,) which shrinks to the point
+Pk as t - 0. Supposenow that some linearcombination
+
+
+                    E Xk 6k(t)     =   0 in H2n-1(E,).                          (2.28)
+
+Writing Ek Xk 6k(t) = h(t) for a 2n-chain y(t) and letting t - 0 we
+obtain a cycle y = y(O) in H2,,(Eo). Conversely,any new cycle in
+H2n(E0)arisesin this way.
+     To put the condition (2.28) in algebro-geometricform we recall
+from Section2b) above that, if E - Eo denotes the canonicaldesingu-
+larization,we have
+
+                h2nl--k,k(-)     = h2n-1-k,k(E),        k < n - 2,
+
+                            '1(E) is givenby
+whilethe expectedvaluefor h11,
+
+                    h""-1(X) = h"I,1(E)         -   deg A.                      (2.29)
+
+Now, assumingfor simplicityof notationthat L has been replacedby kL
+so as to have Eo E ILI, the postulatedequation (2.29) will be correct
+exactly when the zero-cycleA imposes independentconditions on the
+linear system [K + nLj. This follows from our discussion of point
+
+     8This may be proved by writing Z as a difference of effective smooth subvarieties
+in the (rational equivalence ring) (0 Q. Many of the following observations were known
+to Spencer Block, and also to Herb Clemens in connection with his work on double solids.
+130                              PHILLIP A. GRIFFITHS
+
+
+residuescenteredaround(2.16). The correctformulafor the right-hand
+side of (2.29) is
+        hIIII-I()   = h'(E)       -   deg A + hI(,5,(K + nL)),                (2.30)
+
+wherethe superabundanceh' (q (K + nL)) exactlymeasuresthe failure
+of the pointsof A to imposeindependentconditionson IK + nL 1.9
+     All of this is very clear for curveson a surface. If M is a surface
+and Eo E ILI is an irreduciblecurve with only double points, then on
+the one hand the linear series I ,(K + L) I cuts out the canonical
+serieson Eo, whileon the otherhand the genus of Eo is givenby
+
+                           ir(Eo) = xr(E) - deg A.
+
+Consequently,A imposesindependentconditionson [K + L j, and the
+only way we can havehI(9, (K + L)) ; 0 is for Eo to becomereducible;
+in this case dimH2(Eo)clearlygoes up accordingly.
+     In general, we may say that the zeros of the equation(2.22) as E
+varies are detectingby analyticand topologicalmeans the solutionsto
+the followingalgebro-geometricproblem:
+Among zero cycles A on Mflnd those for which
+
+            Jdim Iqa2(kL)I        O0
+
+
+            Ldim I ,(K + nkL) I < dim [K + nkL -deg                   A.
+
+Fortunatelythe Lefschetz(1, 1) theoremfor curveson a surfacewas not
+formulatedin this way or else it might not havebeen proved.
+
+
+
+                                 BIBLIOGRAPHY
+
+
+
+
+ [1] A. Andreotti and T. Frankel, "The second Lefschetz theorem on hyperplane sec-
+            tions," Global Analysis (papers dedicated to K. Kodaira), Princeton Univ.
+            Press (1969), pp. 1-20.
+
+
+   9This observation follows from the exact cohomology sequence of 0 -S , (K + nL) -
+OM(K + nl) - CA- Oand h'(OM(K + nL)) = 0.
+      NORMAL FUNCTIONS           ASSOCIATED       TO ALGEBRAIC       CYCLES                  131
+
+ [2] P. Deligne,"The'oriede Hodge,II," Publ. Math. I.H.E.S., 40 (1971),pp. 5-57.
+ [3] P. Griffiths,"Periodsof integralson algebraicmanifoldsIII," Publ. Math. I.H.E.S.,
+             38 (1970),pp. 125-180.
+ [4] P. Griffiths, "On the periods of certain rational integrals I and II," Annals of
+             Math., 90 (1969),pp. 460-541.
+ [5] T. Jambois, "The theorem of Torelli for singular curves," Trans. Amer. Math.
+             Soc., to appear.
+ [6] S. Lefschetz, L'analysis et la ge'ometrie'algebrique, Gauthier-Villars, Paris (1924).
+ [7] Ju. I Manin,"Rationalpointsof algebraiccurvesoverfunctionfields,"Amer. Math.
+              Soc. Translations, 50 (1966), pp. 189-234.
+ [8] W. Schmid, "Variationof Hodge structure:The singularitiesof the period map-
+             ping,"InventionesMath., 22 (1973),pp. 211-319.
+ [9] 0. Zariski,Algebraicsurfaces,Springer-Verlag,Berlin-Heidelberg-New
+                                                                     York(1971).
+[10] S. Zucker, "GeneralizedintermediateJacobiansand the theoremon normalfunc-
+             tions,"InventionesMath., 33 (1976),pp. 185-222.
+[11] S. Zucker, "The Hodge conjecturefor cubic fourfolds," CompositioMath., 34
+             (1977),pp. 199-209.
+

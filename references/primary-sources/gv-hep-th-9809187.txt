@@ -1,0 +1,667 @@
+                                                                                                               HUTP-98/A069
+                                                                                                               hep-th/9809187
+
+
+
+
+                                                   M-Theory and Topological Strings–I
+
+
+
+
+arXiv:hep-th/9809187v1 25 Sep 1998
+                                                               Rajesh Gopakumar 1 and Cumrun Vafa 2
+
+                                                                     Lyman Laboratory of Physics
+                                                                         Harvard University
+                                                                        Cambridge, MA 02138
+
+
+                                           The R2 F 2g−2 terms of Type IIA strings on Calabi-Yau 3-folds, which are given by the
+                                     corresponding topological string amplitudes (a worldsheet instanton sum for all genera),
+                                     are shown to have a simple M-theory interpretation. In particular, a Schwinger one-loop
+                                     computation in M-theory with wrapped M2 branes and Kaluza-Klein modes going around
+                                     the loop reproduces the all genus string contributions from constant maps and worldsheet
+                                     instanton corrections. In the simplest case of an isolated M2 brane with the topology of the
+                                     sphere, we obtain the contributions of small worldsheet instantons (sphere “bubblings”)
+                                     which extends the results known or conjectured for low genera. Surprisingly, the ’t Hooft
+                                     expansion of large N Chern-Simons theory on S 3 can also be used in a novel way to
+                                     compute these gravitational terms at least in special cases.
+
+
+
+
+                                     September 1998
+                                       1
+                                           gopakumr@tomonaga.harvard.edu
+                                       2
+                                           vafa@string.harvard.edu
+1. Introduction
+
+      The relationship between eleven dimensional M-theory and type IIA string theory
+has been a fruitful source of insight since its discovery. Specifically, since fundamental
+strings and D-branes of type IIA are on a more unified footing in eleven dimensions, we
+can often say something non-perturbative about string theory from simple considerations
+in M-theory.
+      In this paper we concentrate on Type IIA strings on Calabi-Yau threefolds. The full
+IIA theory compactified on a Calabi-Yau threefold contains terms in the low energy action
+which are captured by the simpler N = 2 topological string theory. In this paper, we will
+reinterpret the worldsheet instanton sum of the latter in terms of a one loop computation
+in M-theory. This generalizes some of the observations made in [1] about obtaining the
+genus 0 topological amplitudes (the prepotential) from M-theory on a Calabi-Yau times a
+circle. It is also similar in spirit to the observations in [2] relating R4 amplitudes of type
+IIA to Kaluza-Klein contributions in M-theory.
+      The topological string theory computes certain F-terms in the low energy four dimen-
+sional theory. We briefly review this in Sec.2. Since some of these quantities are coupling
+constant independent, they can equally well be computed at strong coupling. M-theory
+provides a simple, physical way of doing this. For a large Calabi-Yau, in this limit, the
+lightest relevant objects are Kaluza-Klein modes (D0 branes). Integrating them out in a
+Schwinger type computation gives us precisely the leading contribution at every genus from
+constant maps (the whole worldsheet mapped to a point) in the topological string theory.
+The next to leading contributions come from M2 branes wrapped on Riemann surfaces in
+the Calabi-Yau. In this paper we will treat the simplest case when the surface is an isolated
+S 2 in the Calabi-Yau.3 There can be additional Kaluza-Klein modes here too, correspond-
+ing to bound states of D2 − D0 branes. Again, we can sum their one loop contributions
+exactly. What we obtain is usually interpreted in the string language as contributions from
+small worldsheet instantons. The one loop Schwinger computation has non-perturbative
+information as well, allowing us to compute non-perturbative corrections to topological
+string amplitudes. In fact, we can add together the perturbative and non-perturbative
+contributions and write the full partition function for the topological string in a suggestive
+way. All this will be the subject of Sec.3. In Sec.4, we consider open topological strings on
+  3
+      The higher genus M2 branes (as well as families of them) will be treated in a subsequent
+paper [3].
+
+                                               1
+T ∗ S 3 with dirichlet boundary conditions on the S 3 . We can compute the open topological
+string amplitudes using the large N Chern-Simons theory, to which it is equivalent [4]. By
+extrapolating the expressions for h boundaries, to the case h = 0, we surprisingly recover
+the leading topological closed string amplitude. This is a novel “h → 0” way of recovering
+a gravity result from (open string) gauge theory. The open string expansion itself seems
+to also reproduce the subleading contribution from 2-branes on an S 2 , though we do not
+have a deep understanding of this aspect of it.
+         After we had obtained the results of the present paper, we received a paper [5] which
+has some overlap with ours, but uses very different arguments.
+
+
+2. Topological Strings and What They Compute
+
+         Consider type IIA strings compactified on a Calabi-Yau threefold to 4 dimensions.
+We obtain an N = 2 supersymmetric theory, with vector and hypermultiplet fields. The
+scalars in these multiplets are moduli belonging to the Kahler moduli space and (a jacobian
+variety over) the complex moduli space respectively. For type IIB strings it is much the
+same, except that the role of Kahler and complex moduli are exchanged. There are a
+special class of F-terms which do not mix the two types of moduli.
+         For example, in the IIA theory the F-terms of the low energy theory involving only
+                                  2 2g−2
+Kahler moduli are of the form Fg R+ F+ . Here, + denotes the self-dual parts of the
+curvature, R denotes the Riemann tensor and F the graviphoton field strength. (We will
+be considering the euclidean effective action.) 4 The coefficient, Fg is purely a function of
+Kahler moduli. Rather remarkably, the Fg can be computed using a much simpler string
+theory, an N = 2 topological string, with the Calabi-Yau threefold as its target space [6][7].
+In fact, Fg is the partition function of the perturbative A-model topological closed string
+theory at genus g.
+         One can show that the above superpotential terms receive contributions only from
+genus g amplitudes in the physical string theory. Moreover, there are no non-perturbative
+string corrections. (The dilaton lies in a hypermultiplet and cannot mix with the vector
+multiplet moduli – the same statement would therefore not be true for superpotential terms
+involving hypermultiplets). Thus, the partition function of topological strings computes
+certain exact quantities in the full, physical string theory.
+    4
+         The contractions of indices here are determined from the fact that this term comes from
+R
+    d θW 2g in superspace. Here W is a Weyl superfield, Wµν = Fµν
+     4                                                         +     +
+                                                                  − Rµνλρ θσ λρ θ + ....
+
+                                                 2
+        In the limit of large volume (radius) of the Calabi-Yau three-fold, the Fg admits a
+purely topological interpretation: It is roughly given by the worldsheet instanton sum
+                                                X
+                                         Fg =        exp(−AC ).                        (2.1)
+                                                Cg
+
+
+The sum is over Riemann surfaces (holomorphic curves) Cg of genus g embedded in the
+Calabi-Yau threefold – the target space images of the worldsheet. And AC denotes the
+complex area (including the imaginary contribution from the B-field) of C. This, however,
+is not the full story: Sometimes, there are whole families of holomorphic curves embedded
+in the three-fold. The sum is now really an integral and one has to weight it appropriately.
+The integral is over an appropriate moduli space and the relevant object that enters as
+the weight turns out to be an appropriate cohomology class over this moduli space. In
+addition, there can be further contributions from degenerate genus g curves. In fact, the
+leading large radius contribution to (2.1) comes from constant maps where the whole genus
+g worldsheet is mapped to a point in the Calabi-Yau. (This is the leading contribution
+in the large volume limit, since it is not suppressed by the area exponent.) In this case,
+the relevant moduli space is the product, Mg times the Calabi-Yau threefold K itself
+(corresponding to the choice of the point in the target space). Mg is the familiar moduli
+space of all Riemann surfaces of genus g. Then the appropriately weighted contribution
+to Fg from constant maps (which, as we remarked, is the leading contribution for large
+volumes), was found by [6] to be
+
+                                   1
+                                            Z
+                               Fg = χK             c3g−1 + O(exp(−A))                  (2.2)
+                                   2          Mg
+
+Here χK denotes the Euler characteristic of K and cg−1 denotes the (g − 1)-th chern class
+of the Hodge bundle over Mg (The Hodge bundle is the g-dimensional holomorphic vector
+bundle over Mg locally spanned by the g holomorphic 1-forms on the genus g Riemann
+surface g > 1). Mg c3g−1 has only very recently been computed by mathematicians to be
+                R
+
+([8])
+                                      Bg        Bg−1                 2ζ(2g − 2)
+                   Z
+                         c3g−1 =                        = (−1)g−1 χg            .      (2.3)
+                    Mg             2g(2g − 2) (2g − 2)!               (2π)2g−2
+                         B
+Here χg = (−1)g−1 2g(2g−2)
+                      g
+                           is the euler characteristic of Mg . (Bg are the Bernoulli numbers
+taken here to be all positive.) The second way of writing this expression in terms of χg and
+the Riemann zeta function ζ was motivated by the physical derivation we shall present in
+this paper for this leading contribution.
+
+                                                     3
+    There are further kinds of degenerate contributions, known as “bubblings”. The
+simplest instance of this is when all of a genus g worldsheet, except the infintesimal neigh-
+borhood of a single point, is mapped to a point on an S 2 in the Calabi-Yau, while this
+neighborhood itself wraps the rest of the S 2 . From the two-dimensional worldsheet point
+of view, this is what is sometimes called a “small” instanton. The general case similarly
+involves a genus g curve which has a lower genus part which is mapped non-trivially to
+a genus g ′ (g > g ′ ) curve in the Calabi-Yau, while the rest of the surface is mapped to a
+point. These bubblings were first encountered in computing F1 which has a contribution
+from a sphere bubbling off of a torus [9] and was explained by Katz (see the appendix of
+[9] by Katz). Subsequently in [6], the contribution of genus 0 and genus 1 bubbling off of
+a genus 2 surface was conjectured (the genus 1 contribution was actually conjectured to
+be zero). Since the computation of higher genus Fg for g > 2 has not been carried out,
+the structure of degenerate contributions has not even been conjectured. We will see that
+the one loop amplitude in M-theory involving Kaluza-Klein states of massless fields as well
+as Kaluza-Klein modes of wrapped M2 branes reproduces and extends these topological
+string amplitudes to all perturbative orders as well as imply further non-perturbative cor-
+rections. In other words, all these contributions to the R2 F 2g−2 amplitudes in the IIA
+theory can be alternatively viewed as coming from integrating out wrapped brane states.
+
+
+
+3. M-theory and IIA amplitudes
+
+    M-theory compactified on a circle is conjectured to be equivalent to type IIA strings
+[10], where Kaluza-Klein modes of the circle become equivalent to bound states of D0
+branes. In the limit of a small S 1 in the eleventh dimension, we recover the perturbative
+regime of type IIA strings. Again, the M2 branes of M-theory reduce to fundamental
+strings or D2 branes of type IIA depending on whether or not they wrap around the S 1 .
+Thus, M-theory on a large radius Calabi-Yau threefold times a small S 1 is equivalent to
+perturbative type IIA strings on the same large Calabi-Yau. In particular, it is in this limit
+that the F-terms of Sec. 2 are given by a worldsheet instanton sum. Now consider the
+limit where the circle grows, corresponding to increasing the type IIA coupling constant.
+Since the superpotential computations (depending on Kahler moduli) are exact they are
+unmodified in this limit. But now, we have the perspective of M-theory and we can ask
+how the same computation would look from this vantage point. This is the basic strategy
+we follow in the next subsection.
+
+                                              4
+3.1. M-theory Computation of Topological String Amplitudes
+
+      In the limit of large string coupling of the IIA theory on a big Calabi-Yau threefold, the
+light objects from the IIA viewpoint are D0 branes and their bound states. As mentioned
+above, these are the Kaluza-Klein modes of massless fields of M-theory on the Calabi-Yau
+threefold.
+      First, let us determine from the type IIA perspective what the precise number of
+D0 brane bound states are, in this geometry. On R10 we have one bound state of n
+D0-branes for each n. The D0-branes are point like objects on the Calabi-Yau threefold
+times R3 . Therefore the quantum mechanical supersymmetric ground states are in one
+to one correspondence to the compact cohomology elements of the Calabi-Yau (times a
+hypermultiplet). Thus for each cohomology element and each integer n we obtain a state
+in type IIA with mass 2πn
+                       λ where λ is the string coupling. (It will be convenient in the
+following to work in units where α′ = 4π1 2 .) These are exactly the same as the S 1 Kaluza-
+Klein massless modes of M-theory compactified on the Calabi-Yau. Since they are charged
+under the U (1) graviphoton, they will have a one loop contribution to R2 F 2g−2 , which we
+will now compute.
+      Let us consider the contribution of one 4 dimensional N = 2 hypermultiplet to Fg . Let
+Z denote the central terms in the supersymmetry algebra for this hypermultiplet, where
+the mass m = |Z|. Then following the argument in [11] and the direct “Schwinger-type”
+computation of [12] one deduces that the contribution of this hypermultiplet to Fg (g > 1
+for most of the expressions in this section, though most statements hold more generally
+after an appropriate continuation) is
+
+                                         Fg = −χg Z 2−2g                                   (3.1)
+
+where χg = χ(Mg ) as before. After taking account of all the multiplets for a fixed
+Kaluza-Klein momentum around the circle, the net contribution turns out to be h2,1 (K) −
+h1,1 (K) = −χ(K)/2 times the contribution of a single hypermultiplet5 . Using (3.1) , with
+Z = 2πin
+     λ
+         and summing over the contribution of all Kaluza-Klein modes we find (for the
+coefficient of λ2g−2 )
+                                          χK     X
+                                Fg = χg                   (2πin)2−2g
+                                           2
+                                               n∈Z,n6=0
+
+  5
+      This involves a somewhat subtle contribution from various massive vector, hyper and spin 2
+multiplets, which will be explained in more detail in [3].
+
+                                                 5
+Comparing this with the expected large radius behaviour of topological amplitude in equa-
+tion (2.2) gives us
+                                                        2ζ(2g − 2)
+                            Z
+                                   c3g−1 = (−1)g−1 χg
+                              Mg                         (2π)2g−2
+precisely agreeing with the recent mathematical results (2.3) .
+    Actually, we can say more from M-theory. The Schwinger computation is famous
+for its prediction of non-perturbative pair creation. If we consider a constant self-dual
+                                                            2
+graviphoton field, then in addition to the contribution to R+ from the terms proportional
+                                                                  1
+to F 2g−2 , there will be those from terms behaving like e− F . The expression derived by
+Schwinger for the one-loop determinant captures both perturbative and non-perturbative
+parts. In our context, for a particle of BPS charge Z in a constant self-dual field F , the
+expression is (see for example [13] )
+                                        Z ∞
+                                              ds    s/2 2 − sZ
+                             F (Z) =             (        ) e F                        (3.2)
+                                        ǫ     s3 sinh s/2
+
+(where ǫ → 0+ is a cutoff). This has a perturbative expansion that agrees with (3.1)
+
+                                                              Z
+                                        X
+                             F (Z) =        Fg F 2g−2 + O(e− F ).
+                                        g
+
+
+In our case with Z = 2πin
+                      λ , we can easily carry out the sum over n ∈ Z, n 6= 0, using
+P∞                P∞
+  n=−∞ e
+         inθ
+             = 2π m=−∞ δ(θ − 2πm). Also taking into account the factor of χ2K , we
+have the complete zero brane contribution to be
+                                         ∞
+                                     χK X 1        1
+                             F (Z) =                       ,
+                                      8 m=1 m (sinh mλF
+                                                     2 )
+                                                         2
+
+
+
+after dropping an irrelevant field independent term. This sum can be more suggestively
+written after expanding out the denominator and carrying out the sum over m, as
+                                    ∞
+                                χK X
+                      F (Z) = −        n ln(1 − q n );        q = e−λF .
+                                 2 n=1
+
+    Let us now consider the contribution of isolated M2 branes with the topology of S 2 .
+This gives a hupermultiplet in 5 dimensions. Let A denote the area of the sphere. Consider
+the Kaluza-Klein modes of these states (which in the type IIA description correspond to
+bound states of a single D2 brane with a number of D0 branes). Then the central term
+
+                                                6
+in the susy algebra of the state with n units of Kaluza-Klein momentum is given by
+Z = 2π (A+in)
+         λ    and so using (3.1) we get its contribution to Fg to be
+
+             χg     X                          −χg           d 2g−2
+               2g−2
+                       (A + in)(2−2g) =      2g−2
+                                                           (    )   ln(1 − e−2πA )
+          (2π)                          (2π)      (2g − 3)! dA
+                    n∈Z
+                                                                                                          (3.3)
+                                               1     X
+                                      =χg                n2g−3 e−2πnA .
+                                          (2g − 3)! n
+
+                                                                           x2
+(Here we have used the product formula sinh(πx)
+                                                               Q
+                                          πx    =                  n=1 (1+ n2 ).) This agrees, for g = 1, 2,
+                                                                                   6
+with the contribution from degenerate genus zero instantons [9][6]                        and generalizes it to
+spherical bubbling contributions to an arbitrary genus topological amplitude7 .
+        Once again, the Schwinger computation gives us non-perturbative information, now
+about pair creation of bound states of 2-branes with 0-branes in a graviphoton field. With
+Z = 2π (A+in)
+         λ    , we can go over steps similar to before to obtain
+
+                                                 ∞
+                                           1 X e−2πmA   1
+                                F (Z) =
+                                           4 m=1 m (sinh mλF
+                                                          2
+                                                             )2
+
+or alternatively
+                                        ∞
+                                        X
+                           F (Z) = −            n ln(1 − zq n );      z = e−2πA .
+                                        n=1
+
+        Thus the combined contributions to the free energy can be written as
+                                      ∞
+                                      X                       χK             Y
+                     Ftot (Z) = −               n ln[(1 − q n ) 2 (1 − q n       zini )d[ni ] ],
+                                    n=1,[ni ]                                i
+
+
+where we are including the contribution of all isolated genus 0 M 2 branes, assuming there
+are d[ni ] of them in a homology class labelled by [ni ] and −logzi denotes the area of the
+corresponding class. These formulae are very much reminiscent of some observations in
+[15].
+
+  6
+        For the genus 0 and 1 the above expression should be interpreted in the regularized form
+χg /(2g − 3)! = 1, −1/12 respectively.
+  7
+        One may wonder about the existence of bound states of multiple D2 branes wrapped over S 2 ,
+but using the methods in [14] one can show that there are none. This is not the case for multiple
+D2 branes wrapped on higher genus surfaces and they do lead to contributions to topological
+amplitudes [3].
+
+                                                        7
+      Alternatively, with λF → λ, this can be thought of as a portion of the non-perturbative
+topological string partition function. We also recall that a similar Schwinger computation
+for wrapped D3 branes had yielded non-perturbative contributions to the full B-model
+topological string in the vicinity of a conifold [16]. In that case, a connection with Chern-
+Simons theory had also been made. In the next section we will see that a connection to
+Chern-Simons theory exists for our A-model closed string amplitudes as well.
+
+
+4. Chern-Simons theory in the ’t Hooft Expansion
+
+      Chern-Simons theory enjoys the advantage of being an exactly solvable gauge theory
+[17]. Therefore its large N expansion offers an instance where one can study the correspon-
+dence to string theory explicitly. Periwal [18] has studied the N → ∞ limit of this theory
+on S 3 . In [16] it was shown that the free energy of the gauge theory in the N = ∞ limit
+matched that of the B-model topological closed string in the vicinity of the conifold (and
+some generalizations). The gauge theory, remarkably enough, seems to capture both the
+perturbative and non-perturbative features of the closed string theory8 .
+      But here, we will be concerned with the alternative interpretation by Witten of Chern-
+Simons theory as an open string theory. This goes as follows. In any large N gauge theory
+with adjoint fields only, the ’t Hooft expansion for, say, the free energy can be written as
+                         X                              X
+                  F =             Cg,h N h κ2g−2+h =             Cg,h N 2−2g λ2g−2+h    (4.1)
+                        g=0,h=1                        g=0,h=1
+
+
+Here κ is the ordinary gauge coupling while λ = κN is the ’t Hooft coupling which is held
+fixed in the large N limit. As usual g is the genus of the Riemann surface built out of
+double index lines. While h is the number of closed index loops (or faces of the triangulated
+Riemann surface) which accounts for the factor of N h . It is not to be confused with the
+holes that appear in the presence of matter in the fundamental.
+      What Witten argued in the particular case of Chern-Simons theory on a three manifold
+M was that Cg,h = −Zg,h , where Zg,h is the partition function of the A-model topological
+open string theory at genus g with h boundaries on the 6-dimensional target space T ∗ M .
+Thus the ’t Hooft expansion tells us about the complete perturbative expansion of an open
+string theory.
+  8
+      For another possible connection between Chern-Simons theory and type IIA string theory
+instantons see [19].
+
+                                                 8
+    In the case when M = S 3 , the coefficients Cg,h for the SU (N ) level k theory are not
+too difficult to compute explicitly (see the appendix). The main subtlety to keep in mind is
+the fact that the bare Chern-Simons coupling undergoes a finite quantum renormalization.
+                                                        2πN
+Therefore, the ’t Hooft expansion is performed with λ = k+N . (To connect the ’t Hooft
+expansion in the appendix with the open string expansion, we must take λ → iλ, due to
+the i that is present in the definition of the Chern-Simons action. This introduces the
+extra factor of (−1)g−1+p in the answer below.) The final answer then is fairly simple:
+
+                                                   ζ(2g − 2 + 2p)
+                   Cg,2p = (−1)g−1+p χg,2p                        ;               Cg,2p+1 = 0            (4.2)
+                                                    (2π)2g−2+2p
+
+where
+                                                                          
+                           2g − 3 + h                           2g − 3 + h                     Bg
+     χg,h = (−1)   h
+                                            χg = (−1)   h
+                                                                                  (−1)g−1                (4.3)
+                               h                                    h                       2g(2g − 2)
+
+is the Euler characteristic of the moduli space of Riemann surfaces with genus g and h
+punctures (see [20] for a connection to the c = 1 string). Note that the ’t Hooft expansion
+starts off with at least one hole (actually in this case all the amplitudes with an odd number
+of holes vanish and the first term is one with 2 holes). Let us consider Cg,2p as an analytic
+function in h = 2p. The case with h = 0 would have corresponded to closed topological
+strings. In this limit we should get
+
+                                              χ(T ∗ S 3 )
+                                                                  Z
+                                     Zg,h→0 →                           c3g−1 .
+                                                 2                 Mg
+
+If we take χ(T ∗ S 3 ) = −2 (based on the fact that it is non-compact and that there is one
+complex deformation) we obtain
+
+                                                      ζ(2g − 2)
+                     Z
+                          c3g−1 = Cg,h→0 = (−1)g−1 χg
+                      Mg                              (2π)2g−2
+
+in agreement with the mathematical result Eq.(2.3) !
+    But can we also physically interpret the open string expansion (h 6= 0) in terms of
+closed strings? Apriori, we do not have any reason to anticipate any relation in this case.
+However, let us add the “closed string sector” (p = 0) to the Chern-Simons free energy and
+weigh terms with 2p holes with a factor of (2πA)2p. In other words,(for g > 1), we write
+the genus g contribution to the free energy as (remembering also the factor of (−1)g−1+p )
+
+              (−1)g−1 Bg X λ 2g−2 X
+                                                                        
+                                                 g−1+p 1     2g − 3 + 2p
+        Fg =                 (     )        (−1)                           (2πA)2p
+              2g(2g − 2)       2πn                    n 2p       2p
+                               n=1               p=0
+
+
+                                                        9
+or on performing the sum over p,
+
+                      (−1)g−1 Bg λ2g−2 X            1            1
+               Fg =                          [            +             ].
+                      2g(2g − 2) (2π)2g−2 n=1 (A + in)2g−2 (A − in)2g−2
+
+This is what we had seen in the previous section as the contribution to Fg from membranes
+wrapped on S 2 , with KK excitations of momentum n. It remains an open question to
+interpret this result. It is conceivable that the conifold transition from S 3 to S 2 , which is
+geometrically understood, is relevant here.
+
+
+
+5. Conclusions
+
+    In this paper we showed how the BPS content of type IIA strings on a Calabi-Yau
+threefold involving wrapped D2 branes and its bound states with D0 branes (or equiv-
+alently M 2 branes with Kaluza-Klein momenta) can be used, through a one loop com-
+putation to reproduce all the R2 F 2g−2 amplitudes that topological strings compute. In
+particular, a given BPS object affects all genus g topological amplitudes in a simple and
+computable way. In this paper, we exclusively dealt with the case of plain D0 branes or
+their bound states with D2 branes with the topology of (an isolated) S 2 in the Calabi-Yau.
+This in particular allowed us to compute non-trivial quantities over the moduli space of
+genus g curves, as well as the contribution of small worldsheet instantons in a physical way.
+The fact that they agree with known/conjectured results can be viewed as further confir-
+mation of properties of D-branes in type IIA context, or equivalently as further evidence (or
+applications) of M-theory–type IIA duality. We also expect that the non-perturbative form
+of the topological string partition function that we arrived at, will yield future insights.
+    In a subsequent paper [3] we extend these results to the case where the D2 branes
+have higher genus (including also wrapped multi D2 branes on continuous families of
+curves.) The M-theory description in conjunction with the type IIA description provides
+a powerful way to compute these contributions, and thus allows one to reformulate the
+entire topological string amplitudes in terms of its BPS content.
+    It is natural to expect these results to also extend to the N = 4 topological strings
+[21]. In particular the R4 F 4g−4 amplitudes of type IIA string in R10 should have a similar
+D0 brane interpretation [22]. The same should be true for its compactification on tori [23]
+or K3. It would be extremely interesting to relate the BPS content of these theories with
+the topological N = 4 amplitudes.
+
+                                              10
+     One possible application of our results is to questions involving 4 dimensional black
+holes. In particular the F-terms we have computed correct the R2 term in the effective 4
+dimensional action, in the presence of a non-vanishing graviphoton field strength. Noting
+that the graviphoton field strength is non-vanishing in a black hole background we conclude
+that there are R2 corrections which would affect the black hole geometry.
+                                           Acknowledgments
+     We would like to thank N. Berkovits, M. Bershadsky, C. Faber, S. Katz, A. Lawrence,
+J. Maldacena, N. Nekrasov and A. Strominger for valuable discussions.
+     The research of R.G. is supported by DOE grant DE-FG02-91 ER40654 and that of
+C.V. is supported in part by NSF grant PHY-98-02709
+
+                                               Appendix
+     Here we explicitly perform the ’t Hooft expansion of the Chern-Simons free energy on
+ 3
+S . The theory is defined on a three manifold M as
+
+                                       ik                 2
+                            Z              Z
+             Z[M, N, k] = [DA] exp [          T r(A ∧ dA + A ∧ A ∧ A)].
+                                       4π M               3
+
+     On the sphere with gauge group SU (N ), the exact partition function is
+                                                           r           N−1
+                              iπ               1               N +k Y          jπ
+                   3
+           Z[S , N, k] = e     8 N(N−1)                               {2 sin(      )}N−j .   (5.1)
+                                           (N + k)N/2           N
+                                                                       j=1
+                                                                              N +k
+
+We’d like to examine the N1 expansion of the free energy in the form Eqn. ⁀Hooft . The
+bare ’t Hooft coupling in the Chern-Simons theory is λb = 2πN
+                                                           k . But it is known that
+there is a finite renormalisation of the coupling such that k → k + N . In other words, the
+                                   2πN
+renormalised ’t Hooft coupling λ = k+N . This is the parameter we should be expanding
+in a perturbative (large k ) expansion.
+     Therefore, as in [18],
+
+                                         N−1
+                   −N        N −1        X                       λ     X           j 2 λ2
+F (S 3 , N, λ) =      ln N +      ln λ +     (N − j)[ln j + ln(     )+     ln(1 − 2 2 2 )]
+                    2          2                                2πN    n=1
+                                                                                 4π n N
+                                               j=1
+
+
+                                    x2
+                         Q
+(Using sin(πx) = πx        n=1 (1 − n2 )) We will focus on the last term in the sum, i.e.
+
+                                     N−1
+                                     X               X                j 2 λ2
+                              F̃ ≡         (N − j)         ln(1 −               ).
+                                     j=1             n=1
+                                                                    4π 2 n2 N 2
+
+                                                      11
+                                                       PN−1
+(The term in the F (S 3 , N, λ) given by                 j=1 (N − j) ln j = ln G(N + 1), where the G-
+function is defined recursively as G(z + 1) = Γ(z)G(z). This term is independent of λ and
+will not play a role in the following, though the term related to it by N, k duality is the
+one that survives in the N = ∞ limit and is related to IIB topological amplitudes [16] .)
+Expanding the logarithm in the second term and carrying out the sum over n gives
+
+                                     X ζ(2m)                   N−j
+                                                     λ 2m X
+                                                  (     )   (N − j)j 2m .
+                                     m=1
+                                             m      2πN
+                                                               j=1
+
+
+The sum over j can be carried out so that the final answer is
+
+ N−j                                             m 
+                              N 2m+2
+                                                            
+ X
+                   2m
+                                                X    2m − 1            Bg
+        (N − j)j        =                  + 2m               (−1)g            N 2m+2−2g .
+                          (2m + 1)(2m + 2)           2g − 3         2g(2g − 2)
+  j=1                                           g=1
+
+
+Then making the replacement for g > 0, (m = g − 1 + p), the relevant part of the free
+energy then reads as
+                               ∞                           λ 2p−2   ∞
+                               X
+                                         2 ζ(2p − 2)    ( 2π )      X    ζ(2p) λ 2p
+                        F̃ =         N                            −   B1      ( )
+                               p=2
+                                            p−1        2p(2p − 1) p=1     2p 2π
+
+                 ∞                             ∞
+                                    (−1)g Bg X
+                                                                              
+                 X                                                 2g − 3 + 2p     λ
+             +          N   2−2g
+                                                  ζ(2g − 2 + 2p)                 ( )2g−2+2p.
+                                   2g(2g − 2) p=1                      2p         2π
+                 g=2
+
+
+
+
+                                                          12
+                                      References
+
+ [1] A. Lawrence and N. Nekrasov, “Instanton sums and five-dimensional gauge theories,”
+     Nucl. Phys. B513 (1998) 239.
+ [2] M.B. Green, M. Gutperle, P. Vanhove,“One loop in eleven dimensions,” Phys. Lett.
+     B409 (1997) 177.
+ [3] R. Gopakumar and C. Vafa, “M-theory and Topological Strings–II,” to appear.
+ [4] E. Witten, “Chern-Simons Gauge Theory As A String Theory”, hep-th/9207094.
+ [5] M. Marino and G. Moore, “Counting higher genus curves in a Calabi-Yau manifold,”
+     hep-th/9808131.
+ [6] M. Bershadsky, S. Cecotti,H. Ooguri, C. Vafa , “Kodaira-Spencer Theory of Gravity
+     and Exact Results for Quantum String Amplitudes”, Comm. Math. Phys. 165 (1994),
+     311 .
+ [7] I. Antoniadis, E. Gava, K.S. Narain and T.R. Taylor, “Topological Amplitudes in
+     String Theory”, Nucl. Phys. B413 (1994), 162.
+ [8] C. Faber and R. Pandharipande, “Hodge integrals and Gromov-Witten theory,” in
+     preparation.
+ [9] M.Bershadsky, S.Cecotti, H.Ooguri, C.Vafa , “Holomorphic Anomalies in Topological
+     Field Theories, Nucl. Phys. B405 (1993), 279 .
+[10] P. Townsend, “The eleven dimensional supermembrane revisited,” Phys. Lett. B350
+     (1995) 184;
+     E. Witten, “String theory dynamics in various dimensions,” Nucl. Phys. B443 (1995)
+     85.
+[11] D. Ghoshal, C. Vafa, “c=1 String as the Topological Theory of the Conifold” , Nucl.
+     Phys. B453 (1995), 121 .
+[12] I.Antoniadis, E.Gava, K.S.Narain, T.R.Taylor, “N=2 Type II- Heterotic duality and
+     Higher derivative F-terms”, Nucl. Phys. B455 (1995), 109.
+[13] C. Itzykson, J. Zuber, “Quantum field theory”, Addison Wesley Publishing, 1980.
+[14] M. Bershadsky, V. Sadov and C. Vafa, “D-branes and topological field theories,” Nucl.
+     Phys. B463 (1996) 420.
+[15] J. Harvey and G. Moore, “Algebras, BPS States, and Strings,” Nucl.Phys. B463
+     (1996) 315.
+[16] R. Gopakumar, C.Vafa, “Topological Gravity as a Large N Gauge theory”, Adv.
+     Theor.Math.Phys. 2 (1998), 413
+[17] E. Witten, “Quantum Field Theory and the Jones Polynomial”, Commun.Math.Phys.121,
+     (1989), 351 .
+[18] V. Periwal, “ Topological Closed-string Interpretation of Chern-Simons Theory”,
+     Phys. Rev. Lett. 71 (1993), 1295.
+
+                                          13
+[19] M. O’Loughlin, “Chern-Simons from Dirichlet 2-brane instantons”, Phys.Lett. B385
+     (1996) 103 .
+[20] J. Distler, C. Vafa, “A Critical Matrix Model at c=1”, Mod. Phys. Lett. A6, (1991),
+     259 .
+[21] N. Berkovits and C. Vafa, “N=4 Topological Strings,” Nucl. Phys. B433 (1995) 123.
+[22] N. Berkovits and C. Vafa,“Type IIB R4 H 4g−4 Conjectures,” hep-th/9803145.
+[23] H. Ooguri and C. Vafa, “All Loop N=2 String Amplitudes,” Nucl. Phys. B451 (1995)
+     121.
+
+
+
+
+                                           14
+

@@ -40,32 +40,135 @@ working ambient category is the bounded-below filtered subcategory
 $\Cat{TateChain}_{\geq 0}$ of non-negatively filtered chain
 complexes in $\Cat{TateVec}$, large enough to contain every CE
   chain coalgebra and completed enveloping algebra used here.  The
-  model-categorical statements below are made in a fixed admissible
-  envelope, not in the raw category of all Tate spaces.
+  exact completion used below is constructed first.  The
+  model-categorical statements add transfer, smallness, and monoid
+  hypotheses to this exact Mittag-Leffler habitat; they are not
+  statements about the raw category of all Tate spaces.
+
+\begin{defn}[Strict finite-window Mittag-Leffler Tate habitat]
+\label{defn:strict-ml-tate-habitat}
+  Let \(\Cat{MLTateChain}_{\geq0}^{\mathrm{str}}\) be the category whose
+  objects are inverse systems
+  \[
+    V=(V_{\leq M},\pi^V_{M,N})_{M\geq N\geq1}
+  \]
+  of bounded-below finite-dimensional chain complexes over \(\C\), with
+  degreewise surjective transition maps.  The represented complete
+  object is
+  \[
+    |V|=\varprojlim_MV_{\leq M},\qquad
+    F^M|V|=\ker(|V|\to V_{\leq M-1}).
+  \]
+  Morphisms are compatible families of chain maps
+  \(f_{\leq M}\colon V_{\leq M}\to W_{\leq M}\).  The completed tensor
+  product is defined on paired windows by
+  \[
+    V\widehat\otimes_{\mathrm{ML}}W
+      =
+    \left(
+      V_{\leq M}\otimes W_{\leq M}
+    \right)_{M\geq1},
+  \]
+  with the induced surjective transition maps, and
+  \[
+    |V\widehat\otimes_{\mathrm{ML}}W|
+      =
+    \varprojlim_M(V_{\leq M}\otimes W_{\leq M}).
+  \]
+  The continuous dual attached to this strict tower is
+  \[
+    V^\vee_{\mathrm{ML}}=\varinjlim_MV_{\leq M}^\vee .
+  \]
+  A morphism is an admissible filtered weak equivalence when each
+  \(f_{\leq M}\) and the induced associated-graded map are
+  quasi-isomorphisms.
+
+  The only universal property asserted for this habitat is the ordinary
+  inverse-limit one: a compatible family \(x_M\in V_{\leq M}\) determines
+  a unique element \(x\in |V|\), and every map out of a test strict tower
+  is exactly a compatible family of finite-window maps.  No initial or
+  terminal property among all completions of a Tate vector space is
+  asserted.
+\end{defn}
+
+\begin{prop}[Exactness and kernels in the strict ML habitat]
+\label{prop:strict-ml-habitat-exactness}
+  In \(\Cat{MLTateChain}_{\geq0}^{\mathrm{str}}\):
+  \begin{enumerate}[label=(\roman*)]
+    \item the filtration on \(|V|\) is complete and Hausdorff;
+    \item inverse limits of strict surjective towers are exact, so
+      \(H^\bullet(|V|)=\varprojlim_MH^\bullet(V_{\leq M})\) and
+      \(\varprojlim^1_MH^{\bullet-1}(V_{\leq M})=0\);
+    \item completed tensor products and continuous duals are computed by
+      the displayed finite-window formulas;
+    \item if \(H=(H_{\leq M})\) and \(D=(D_{\leq M})\) are paired strict
+      ML systems and finite tensors
+      \(C_M\in H_{\leq M}\otimes D_{\leq M}\) are compatible under
+      transition, then
+      \[
+        C=\varprojlim_MC_M
+          \in |H|\widehat\otimes_{\mathrm{ML}}|D|
+      \]
+      exists and is the unique strict ML kernel with those finite-window
+      projections.
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  Completeness is the definition of \(|V|\) as an inverse limit; the
+  intersection of the kernels \(F^M|V|\) is zero because an element whose
+  image vanishes in every finite quotient is the zero compatible family.
+  Surjectivity of the transition maps gives the Mittag-Leffler condition.
+  The Milnor exact sequence then has zero \(\varprojlim^1\)-term, proving
+  exactness and the cohomology formula.  The tensor and dual formulas are
+  definitions inside the strict habitat and are finite-dimensional on each
+  window.  Finally, a compatible tensor family \((C_M)_M\) is precisely an
+  element of the inverse limit
+  \(\varprojlim_M(H_{\leq M}\otimes D_{\leq M})\), which is the completed
+  tensor product by definition.  The uniqueness is the inverse-limit
+  universal property of Definition~\ref{defn:strict-ml-tate-habitat}.
+\end{proof}
 
 \begin{stmt}[Admissible Tate model envelope]\label{stmt:tate-model-envelope}
-  Fix a bounded-below, locally presentable symmetric monoidal model
-  envelope $\Cat{TateChain}_{\geq0}^{\mathrm{adm}}$ containing the
-  CE chains, completed enveloping algebras, completed symmetric
-  algebras, and finite-window inverse systems used in this
+  An admissible Tate model envelope is a bounded-below, locally
+  presentable symmetric monoidal model category
+  \(\Cat{TateChain}_{\geq0}^{\mathrm{adm}}\) equipped with a fully
+  faithful exact symmetric-monoidal embedding of the strict habitat
+  \[
+    \Cat{MLTateChain}_{\geq0}^{\mathrm{str}}
+      \hookrightarrow
+    \Cat{TateChain}_{\geq0}^{\mathrm{adm}},
+  \]
+  and containing the CE chains, completed enveloping algebras, completed
+  symmetric algebras, and finite-window inverse systems used in this
   manuscript.  Weak equivalences are admissible filtered
-  quasi-isomorphisms: quasi-isomorphisms on every finite quotient
-  and on associated graded.  The tensor product is the completed
-  Tate tensor product on Mittag-Leffler systems, and filtered inverse
-  limits with surjective transition maps are exact.  Assume this
-  envelope satisfies the transfer and smallness hypotheses for the
-  bar-cobar adjunction, the monoid axiom for completed tensor products,
-  and compatibility of \(\widehat\otimes\) with the finite-window model
-  structures.  All Quillen statements below are relative to this envelope.
+  quasi-isomorphisms: quasi-isomorphisms on every finite quotient and on
+  associated graded.  The tensor product restricts to
+  \(\widehat\otimes_{\mathrm{ML}}\) on strict Mittag-Leffler systems, and
+  filtered inverse limits with surjective transition maps are exact by
+  Proposition~\ref{prop:strict-ml-habitat-exactness}.  The additional
+  hypotheses are transfer and smallness for the bar-cobar adjunction, the
+  monoid axiom for completed tensor products, and compatibility of
+  \(\widehat\otimes\) with the finite-window model structures.  All
+  Quillen statements below are relative to such an envelope.
 \end{stmt}
 
 \begin{lem}[Mittag-Leffler dictionary for closed Tate windows]
 \label{lem:tate-mittag-leffler-dictionary}
-  Let \(\{V_{\leq M}\}_{M\geq1}\) and
-  \(\{W_{\leq M}\}_{M\geq1}\) be inverse systems of
-  finite-dimensional complexes with surjective transition maps.  Put
-  \(V=\varprojlim_MV_{\leq M}\) and \(W=\varprojlim_MW_{\leq M}\).
-  In the admissible envelope:
+  Let
+  \[
+    \{V_{\leq M}\}_{M\geq1}
+    \quad\text{and}\quad
+    \{W_{\leq M}\}_{M\geq1}
+  \]
+  be inverse systems of finite-dimensional complexes with surjective
+  transition maps, and put
+  \[
+    V=\varprojlim_MV_{\leq M},\qquad
+    W=\varprojlim_MW_{\leq M}.
+  \]
+  In the strict ML habitat, and hence in any admissible envelope
+  containing it, the following assertions hold:
   \begin{enumerate}[label=(\roman*)]
     \item \(\varprojlim\) is exact on these systems, so
       \(H^\bullet(V)=\varprojlim_MH^\bullet(V_{\leq M})\);
@@ -91,9 +194,10 @@ complexes in $\Cat{TateVec}$, large enough to contain every CE
   killed.  Continuous linear functionals on \(V\) factor through a
   finite quotient \(V_{\leq M}\), giving the displayed direct limit of
   duals.  The completed tensor product in
-  Statement~\ref{stmt:tate-model-envelope} is defined by the same
-  finite-window inverse system, so item (iii) is tautological inside
-  the envelope.  Item (iv) is the definition of weak equivalence in
+  Definition~\ref{defn:strict-ml-tate-habitat} is defined by the same
+  finite-window inverse system, so item (iii) is tautological inside the
+  strict habitat.  Item (iv) is the definition of weak equivalence in
+  Definition~\ref{defn:strict-ml-tate-habitat} and
   Statement~\ref{stmt:tate-model-envelope}.
 \end{proof}
 
@@ -180,9 +284,9 @@ complexes in $\Cat{TateVec}$, large enough to contain every CE
   under transition in the chosen kernel-admissible tensor category.
 \end{proof}
 
-\subsubsection{Direct universal recognition}
+\subsubsection{Direct admissibility recognition}
 
-\begin{defn}[Universal open-side twisting cochain]
+\begin{defn}[Open-side twisting cochain datum]
 \label{defn:universal-open-side-twisting-cochain}
   Fix a candidate admissible filtered-cobar datum
   \[
@@ -201,8 +305,17 @@ complexes in $\Cat{TateVec}$, large enough to contain every CE
   \]
   Put \(C_{\mathrm{op}}=\mathrm{Bar}(A_{\mathrm{op}})\), with reduced bar
   differential \(b_{\mathrm{op}}\), coproduct \(\Delta\), and iterated
-  reduced coproducts \(\Delta^{(r)}\).  A universal open-side twisting
-  cochain is a continuous degree-one map
+  reduced coproducts \(\Delta^{(r)}\).  The bar coalgebra is required to
+  be locally conilpotent in the completed sense: for every finite output
+  window of \(B_{\mathrm{cl}}\) and every finite coaugmentation stage of
+  \(C_{\mathrm{op}}\), the iterated reduced coproducts \(\Delta^{(r)}\)
+  vanish for all sufficiently large \(r\).  Equivalently, the
+  conilpotence obstruction in
+  Definition~\ref{defn:universal-koszul-obstruction-complex} is zero.
+  Without this condition the Maurer--Cartan curvature below is not a
+  continuous map and no twisting-cochain datum has been constructed.
+
+  An open-side twisting cochain is a continuous degree-one map
   \[
     \tau\colon C_{\mathrm{op}}\longrightarrow B_{\mathrm{cl}}
   \]
@@ -252,14 +365,14 @@ complexes in $\Cat{TateVec}$, large enough to contain every CE
   in the principal-part local-dual basis.
 \end{defn}
 
-\begin{defn}[Universal Koszul obstruction complex]
+\begin{defn}[Open-side Koszul obstruction complex]
 \label{defn:universal-koszul-obstruction-complex}
   In the notation of
   Definition~\ref{defn:universal-open-side-twisting-cochain}, put
   \(D_{\leq M}=\mathfrak h_{\leq M}^\vee\),
   \(\mathrm{PV}_{\leq M}=\mathrm{PV}(\mathbf S(\mathfrak h_{\leq M}))\),
   and \(B_{\mathrm{cl},\leq M}\) for the corresponding finite CE/PV
-  window.  The universal obstruction datum is
+  window.  The obstruction datum is
   \[
     \mathcal O_{\mathrm{Kos}}(\mathfrak h,D,A_{\mathrm{op}},\tau)
       =
@@ -355,15 +468,17 @@ complexes in $\Cat{TateVec}$, large enough to contain every CE
   \]
 \end{defn}
 
-\begin{thm}[Universal filtered-cobar acceptance criterion]
+\begin{thm}[Filtered-cobar admissibility criterion]
 \label{thm:universal-filtered-cobar-recognition}
   Fix a candidate datum as in
   Definitions~\ref{defn:universal-open-side-twisting-cochain} and
   \ref{defn:universal-koszul-obstruction-complex}.  Assume the
   filtrations on \(\Omega C_{\mathrm{op}}\) and \(B_{\mathrm{cl}}\) are
   bounded below, complete, separated, and strongly convergent, with
-  finite-dimensional associated graded pieces in every total degree, and
-  assume continuous dualization is exact on the finite-window towers.
+  finite-dimensional associated graded pieces in every total degree.
+  Assume moreover that the local conilpotence condition in
+  Definition~\ref{defn:universal-open-side-twisting-cochain} holds and
+  continuous dualization is exact on the finite-window towers.
   Then the following conditions are equivalent.
   \begin{enumerate}[label=(A\arabic*)]
     \item The datum is accepted: the generator substitution
@@ -418,7 +533,9 @@ complexes in $\Cat{TateVec}$, large enough to contain every CE
   condition identifying cohomology of the completed CE/PV objects with
   the admissible finite-window calculation.
 
-  The equation \(\mathcal O_{\mathrm{MC}}(\tau)=0\) is the
+  The local conilpotence hypothesis makes the Maurer--Cartan sum finite
+  on each finite output window, hence a continuous curvature.  The
+  equation \(\mathcal O_{\mathrm{MC}}(\tau)=0\) is then the
   Maurer--Cartan equation in the continuous convolution dg Lie algebra.
   It is equivalent to the statement that the adjoint map
   \(\kappa_\tau\) commutes with the completed cobar differential and the
@@ -475,11 +592,8 @@ complexes in $\Cat{TateVec}$, large enough to contain every CE
 
 \begin{thm}[Admissible-envelope model-structure existence criterion]
   \label{thm:tate-model-structure}
-  Under Statement~\ref{stmt:tate-model-envelope},
-  the triple
-  \[
-    \bigl(\Cat{TateChain}_{\geq 0}^{\mathrm{adm}},I,J\bigr)
-  \]
+  Under Statement~\ref{stmt:tate-model-envelope}, the triple
+  \(\bigl(\Cat{TateChain}_{\geq 0}^{\mathrm{adm}},I,J\bigr)\)
   is a cofibrantly generated model category. The class of weak equivalences is
   closed under retracts and satisfies the two-out-of-three
   property; cofibrations and fibrations form complementary lifting
@@ -1043,6 +1157,43 @@ of \alpharef\ or its convergence in the Tate completion.
   flagged in \ref{prop:weiss-cosheaf-residual} below.
 \end{proof}
 
+\begin{prop}[No universal strict product/direct-sum kernel habitat]
+\label{prop:no-universal-strict-kernel-habitat}
+  Let \(\mathcal C_{\mathrm{ker}}\) be the category whose objects are
+  complete coefficient pairs \((H,D)\), equipped with finite quotients
+  \((H_{\leq M},D_{\leq M})\), compatible transition maps, and a tensor
+  \(K\in H\widehat\otimes D\) whose image in
+  \(H_{\leq M}\otimes D_{\leq M}\) is the finite Casimir \(C_M\) for
+  every \(M\).  Morphisms preserve the finite quotients and carry \(K\)
+  to \(K'\).  The original strict product/direct-sum pair
+  \[
+    H_\Pi=\prod_{d\geq1}H_d,\qquad
+    D_\oplus=\bigoplus_{d\geq1}H_d^\vee
+  \]
+  is not an object of \(\mathcal C_{\mathrm{ker}}\).  More strongly, no
+  object of \(\mathcal C_{\mathrm{ker}}\) can map to the strict pair by a
+  morphism inducing the identity on every finite window.
+
+  Hence the strict product/direct-sum pair has no initial, terminal, or
+  representing universal property for kernel-admissible completions.  A
+  weighted product completion is a constructed regulator habitat, not a
+  universal endpoint for tail-sensitive ordinary cohomology classes.
+\end{prop}
+
+\begin{proof}
+  If the strict pair were an object, it would contain a tensor
+  \(K\in H_\Pi\widehat\otimes D_\oplus\) whose image in every finite
+  window is \(C_M\).  If a kernel-admissible object mapped to the strict
+  pair by a finite-window identity morphism, the image of its kernel
+  would give the same forbidden tensor.  But \(D_\oplus\) has finite
+  support in the degree direction, while the compatible family
+  \((C_M)_M\) has a nonzero \(H_d^\vee\)-component for every \(d\).
+  This is exactly the support obstruction of
+  Theorem~\ref{thm:strict-unweighted-no-go}.  Therefore the strict pair
+  is outside \(\mathcal C_{\mathrm{ker}}\), and no universal property
+  through it is available.
+\end{proof}
+
 \begin{prop}[Residual Weiss-cosheaf condition]
   \label{prop:weiss-cosheaf-residual}
   The $\infty$-categorical equivalence of
@@ -1081,17 +1232,24 @@ of \alpharef\ or its convergence in the Tate completion.
 \subsubsection{Summary diagram}
 
 \begin{equation*}
-  \begin{array}{ccc}
-    \alpharef\text{ (filtered qiso of cochain complexes)} &
+  \begin{array}{@{}c@{\;}c@{\;}c@{}}
+    \begin{gathered}
+      \alpharef\\
+      \text{(filtered qiso of cochain complexes)}
+    \end{gathered}
+    &
     \xrightarrow{\text{admissible Tate promotion}} &
-    \text{Quillen equivalence of model cats} \\
+    \begin{gathered}
+      \text{Quillen equivalence}\\
+      \text{of model cats}
+    \end{gathered} \\
     \downarrow & & \downarrow \\
     \text{cochain identity }\Phi\,d_{\mathrm{CE}}=d_\pi\,\Phi &
     \xrightarrow{\text{Lurie A.3.7}} &
     \text{equivalence of }\infty\text{-cats}\\
     & & \downarrow\text{Lurie 5.5} \\
     & &
-	    \text{equivalence in admissible }\infty\text{-cats of}\\
+    \text{equivalence in admissible }\infty\text{-cats of}\\
     & & \text{completed dg }P_0\text{-algebras}
   \end{array}
 \end{equation*}

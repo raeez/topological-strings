@@ -49,10 +49,17 @@
 
 \begin{lem}[Windowwise parametrix compatibility]\label{lem:windowwise-parametrix}
   For each $w_0\in\Z_{\geq1}$, let
-  $C_{\mathfrak h,w}^{w_0}=\sum_{d\leq w_0}\sum_i(w(d)e_{d,i})\otimes
-  (w(d)^{-1}e^i_d)\in\bigl(\prod_{d\leq w_0}w(d)H_d\bigr)\otimes
-  \bigl(\prod_{d\leq w_0}w(d)^{-1}H_d^\vee\bigr)$ denote the
-  truncated weighted Casimir. Define the windowwise field complex
+  \[
+    C_{\mathfrak h,w}^{w_0}
+      =
+    \sum_{d\leq w_0}\sum_i
+      (w(d)e_{d,i})\otimes(w(d)^{-1}e^i_d)
+      \in
+    \Bigl(\prod_{d\leq w_0}w(d)H_d\Bigr)
+      \otimes
+    \Bigl(\prod_{d\leq w_0}w(d)^{-1}H_d^\vee\Bigr)
+  \]
+  denote the truncated weighted Casimir. Define the windowwise field complex
   \begin{equation}\label{eq:windowwise-field-complex}
     \mathcal E_w^{w_0}=\Omega^\bullet(\R^2)\widehat\otimes
       \Omega^{0,\bullet}(\C^2)\widehat\otimes
@@ -101,9 +108,10 @@
   on the coefficient direction; the bulk factor is unchanged. An
   inverse system with surjective transition maps satisfies the
   Mittag-Leffler condition trivially, so the inverse limit is exact in
-  the admissible Mittag-Leffler envelope of
-  Statement~\ref{stmt:tate-model-envelope} and $\varprojlim^1=0$ for
-  this tower. Compatibility with
+  the strict finite-window habitat of
+  Definition~\ref{defn:strict-ml-tate-habitat}, and
+  Proposition~\ref{prop:strict-ml-habitat-exactness} gives
+  \(\varprojlim^1=0\) for this tower. Compatibility with
   $P_{\epsilon,L}^{w,w_0'}\mapsto P_{\epsilon,L}^{w,w_0}$ follows from
   the tensor factorization and the truncation of the Casimir.
 
@@ -138,7 +146,10 @@
   \begin{enumerate}[label=(\roman*)]
     \item The propagator $P_{\epsilon,L}^{w}$ admits a Hadamard
       parametrix expansion as the inverse limit
-      $P_{\epsilon,L}^{w}=\varprojlim_{w_0}P_{\epsilon,L}^{w,w_0}$,
+      \[
+        P_{\epsilon,L}^{w}
+          =\varprojlim_{w_0}P_{\epsilon,L}^{w,w_0},
+      \]
       with bulk wave-front set independent of $w_0$.
     \item For every local interaction
       $I\in\mathcal O_{\mathrm{loc}}(\mathcal E_w)$ of bounded
@@ -158,6 +169,14 @@
       endpoint obstruction is the class in
       $H^1(\mathcal O_{\mathrm{loc}}(\mathcal E_w),Q+\{I_0,-\})$
       for the mixed brane-defect interaction.
+    \item The construction has the ordinary strict inverse-limit
+      universal property and no stronger one: a compatible graphwise
+      counterterm family
+      \(\{C_n[\Gamma]^{w_0}\}_{w_0}\) determines a unique element
+      \(C_n[\Gamma]\in
+      \varprojlim_{w_0}\mathcal O_{\mathrm{loc}}(\mathcal E_w^{w_0})\),
+      and every finite-window projection of this element is the given
+      counterterm.
   \end{enumerate}
   Thus the Hadamard and wave-front part of
   Problem~\ref{prob:weighted-rg-locality} is exactly the
@@ -173,15 +192,21 @@
   Lemma~\ref{lem:windowwise-parametrix}~(1). The Mittag-Leffler
   inverse system of (2) of that lemma is strict (surjective
   transition maps), so the inverse limit
-  $P_{\epsilon,L}^{w}=\varprojlim_{w_0}P_{\epsilon,L}^{w,w_0}$ exists
-  in the weighted Tate category and inherits the wave-front bound
-  (3) of that lemma uniformly in $w_0$. The inverse limit of the
+  \[
+    P_{\epsilon,L}^{w}
+      =\varprojlim_{w_0}P_{\epsilon,L}^{w,w_0}
+  \]
+  exists in the weighted Tate category and inherits the wave-front
+  bound (3) of that lemma uniformly in $w_0$. The inverse limit of the
   Hadamard expansions is itself a Hadamard expansion: the
   asymptotic Hadamard coefficients $a_k(x,y)$ on the bulk diagonal
   are independent of the coefficient direction, so the windowwise
   Hadamard expansion of $P_{\epsilon,L}^{w,w_0}$ is
-  $\bigl(\sum_{k\geq0}a_k(x,y)\,t^k\bigr)\widehat\otimes
-  C_{\mathfrak h,w}^{w_0}$, and the inverse limit in the
+  \[
+    \bigl(\sum_{k\geq0}a_k(x,y)\,t^k\bigr)\widehat\otimes
+      C_{\mathfrak h,w}^{w_0},
+  \]
+  and the inverse limit in the
   coefficient direction commutes with the asymptotic expansion in
   the bulk parameter $t$.
 
@@ -234,6 +259,9 @@
   and their inverse limit
   $C_n[\Gamma]=\varprojlim_{w_0}C_n[\Gamma]^{w_0}$ lies in
   $\mathcal O_{\mathrm{loc}}(\mathcal E_w)$ with bound (ii).
+  Its universal property is precisely the one proved in
+  Proposition~\ref{prop:strict-ml-habitat-exactness}: it is the unique
+  compatible strict ML element with these finite-window projections.
 
   The endpoint obstruction class
   $[C_n[\Gamma]]\in H^1(\mathcal O_{\mathrm{loc}}(\mathcal E_w),
@@ -275,12 +303,17 @@
   Proposition~\ref{prop:wt-qme-lift-obstruction-vanishing} is equivalent to the
   vanishing of the mixed brane-defect QME obstruction class.  The
   all-order quantum derived-center comparison
-  $$\Phi_\hbar^{w}\colon C^\bullet_{\mathrm{CE},\mathrm{cont}}\bigl(
-    \mathfrak h_{w,\hbar}\ltimes\mathfrak h^{\vee,w}_{\hbar,\mathrm{cont}}[1]
-    \bigr)[[\hbar]]
-    \longrightarrow
-    Z^{P_{0,\hbar}}_{\mathrm{fact}}\bigl(\mathrm{Obs}^\hbar_{\mathrm{open}}
-    \bigr)\big|_{\mathfrak g_w}$$
+  \[
+  \begin{aligned}
+    \Phi_\hbar^{w}\colon
+    &C^\bullet_{\mathrm{CE},\mathrm{cont}}\bigl(
+      \mathfrak h_{w,\hbar}\ltimes
+      \mathfrak h^{\vee,w}_{\hbar,\mathrm{cont}}[1]\bigr)[[\hbar]]\\
+    &\longrightarrow
+      Z^{P_{0,\hbar}}_{\mathrm{fact}}\bigl(
+      \mathrm{Obs}^\hbar_{\mathrm{open}}\bigr)\big|_{\mathfrak g_w}
+  \end{aligned}
+  \]
   extends to the weighted cotangent direction at all orders in $\hbar$
   as a continuous $\C[[\hbar]]$-linear cochain map precisely when the
   obstruction class in
@@ -306,13 +339,15 @@
   Problem~\ref{prob:weighted-rg-locality} is exactly the following
   finite-window coefficient criterion:
   \[
+  \begin{aligned}
     P_{\epsilon,L}^{w}
-      =P_{\epsilon,L}^{\mathrm{base}}\widehat\otimes
-       C_{\mathfrak h\oplus\mathfrak h^\vee[1],w},
-    \qquad
-    \mathrm{WF}(C_{\mathfrak h,w}^{w_0})=\emptyset,
-    \qquad
-    \varprojlim\nolimits^1_{w_0}P_{\epsilon,L}^{w,w_0}=0 .
+      &=P_{\epsilon,L}^{\mathrm{base}}\widehat\otimes
+        C_{\mathfrak h\oplus\mathfrak h^\vee[1],w},\\
+    \mathrm{WF}(C_{\mathfrak h,w}^{w_0})
+      &=\emptyset,\\
+    \varprojlim\nolimits^1_{w_0}P_{\epsilon,L}^{w,w_0}
+      &=0.
+  \end{aligned}
   \]
   These conditions hold by Lemma~\ref{lem:windowwise-parametrix}.  After
   they are imposed, the endpoint datum in the weighted QME lift is the
@@ -338,6 +373,2194 @@
   defect-current compatibility clause of
   Problem~\ref{prob:analytic-graph-realization}.
 \end{proof}
+
+\subsection*{Finite-window graph/QME assembly}
+
+\begin{defn}[Finite-window graph/QME package]\label{defn:finite-window-graph-qme-package}
+  Fix an interval \(I\), an admissible weight \(w\), a finite Hamiltonian
+  window \(M\), and a finite set \(\mathcal G_M\) of connected Costello
+  graphs.  A finite-window graph/QME package over \((I,w,M,\mathcal G_M)\)
+  consists of the following data.
+  \begin{enumerate}[label=(F\arabic*)]
+    \item For every \(\Gamma\in\mathcal G_M\) with \(r_\Gamma\) cotangent
+    external labels, a tuple
+    \(B^\Gamma_\bullet=(B^\Gamma_1,\ldots,B^\Gamma_{r_\Gamma})\) satisfying
+    one of the two proved label conditions:
+    \[
+      B^\Gamma_\bullet\in
+      \bigl(\mathcal D^{\mathrm{reg}}_c(I)\bigr)^{r_\Gamma}
+      \quad\text{or}\quad
+      B^\Gamma_\bullet\in
+      \mathcal D'_{c,\mathrm{WF}}(I;\Gamma,M).
+    \]
+    The second condition is the graphwise relation of
+    Definition~\ref{def:app-wavefront-admissible-defect-labels}.  If one
+    wants an honest CE source from a linear subspace
+    \(\mathcal V\subset\mathcal D'_c(I)\), every finite tuple from
+    \(\mathcal V\) must satisfy the corresponding graphwise relation.
+    Otherwise the source is only the finite CE span of the specified
+    labelled inputs.  Denote the resulting source CE object by
+    \(C^\bullet_{\mathrm{lab}}(\mathcal G_M)\).
+
+    \item The finite-scale regulator package
+    \[
+      P_{\epsilon,L}^{w,M},\qquad \Delta_{\epsilon,L}^{w,M},
+      \qquad I_{0,M}^{w},
+    \]
+    together with graph weights
+    \(W^M_{\Gamma,\epsilon,L}(B^\Gamma_\bullet)\), local counterterms
+    \(C^M_{\Gamma,w}(\epsilon;B^\Gamma_\bullet)\), and renormalized
+    weights
+    \[
+      W^{R,M}_{\Gamma,L,w}
+        =
+      \lim_{\epsilon\to0}
+      \bigl(
+        W^M_{\Gamma,\epsilon,L}
+        -
+        C^M_{\Gamma,w}(\epsilon;B^\Gamma_\bullet)
+      \bigr).
+    \]
+    These are the regular-density weights of
+    Proposition~\ref{prop:app-regular-density-costello-graph-kernel}, or
+    the wavefront-admissible weights of
+    Proposition~\ref{prop:app-wavefront-admissible-costello-graph-kernel}.
+
+    \item A complete filtered local-functional subcomplex
+    \[
+      \mathfrak Q^\bullet_{\mathcal G,M}(I)
+        =
+      \left(
+        \mathcal O^{\mathrm{bd}}_{\mathrm{loc},\mathcal G,M}\bigl(
+          \mathcal E_w^M|_I;\,
+          A_{\partial,\hbar}^{\mathrm{pp},w,M}(I)\bigr),
+        d_M
+      \right),
+      \qquad
+      d_M=Q+\{I^w_{0,M},-\}_{\hbar,M},
+    \]
+    generated, and then completed in the \(\hbar\)-adic and scalar-contact
+    filtrations, by the displayed renormalized graph weights, their local
+    counterterms, and the \(d_M\)-boundaries and BV brackets forced by the
+    finite graph differential on \(\mathcal G_M\).  This is a subcomplex
+    only after those boundary and bracket terms have been included.
+
+    \item A filtered chain projection on this subcomplex,
+    \[
+      \widehat\sigma_{\mathrm{sc},M}\colon
+      \mathfrak Q^\bullet_{\mathcal G,M}(I)
+      \longrightarrow
+      C^\bullet_{\mathrm{Lie}}(\bar A;\C\gamma_{\mathbf 1})[1][[\hbar]],
+    \]
+    whose associated graded is the scalar-symbol projection.  Equivalently,
+    either the graph package lies in the balanced graph/counterterm
+    subhabitat of
+    Definition~\ref{def:app-balanced-costello-graph-subhabitat}, or the
+    scalar-extension obstructions
+    \[
+      \delta^{(0)}_{\mathrm{Cost},\sigma}(I),
+      \qquad
+      \mathfrak o^{(r)}_{\mathrm{Cost},\sigma}(I),\quad r>0,
+    \]
+    of Theorem~\ref{thm:app-costello-graph-extension-obstruction} have been
+    killed on the chosen finite-window graph/counterterm subcomplex.
+
+    \item A degree-zero graph kernel
+    \[
+      \kappa^M_{\mathcal G,w,I}\in
+      \operatorname{Hom}_{\mathrm{cont}}\!\left(
+        C^\bullet_{\mathrm{lab}}(\mathcal G_M),
+        \mathfrak Q^\bullet_{\mathcal G,M}(I)\right),
+    \]
+    restricted to the chosen label package, whose zero-internal-edge part
+    is \(\kappa^{\mathrm{coef},M}_{\hbar,w,I}\) of
+    Proposition~\ref{prop:app-bulk-defect-kernel-layer} and whose positive
+    graph components are the renormalized weights
+    \(W^{R,M}_{\Gamma,L,w}\).
+  \end{enumerate}
+  No summation over graph topologies is part of the datum unless a separate
+  graph-summability hypothesis is supplied.
+\end{defn}
+
+\begin{thm}[Finite-window graph/QME assembly]\label{thm:finite-window-graph-qme-assembly}
+  Let
+  \((I,w,M,\mathcal G_M)\) carry a finite-window graph/QME package in the
+  sense of Definition~\ref{defn:finite-window-graph-qme-package}.  Put
+  \[
+    S^\bullet=
+    C^\bullet_{\mathrm{Lie}}(\bar A;\C\gamma_{\mathbf 1})[1][[\hbar]],
+    \qquad
+    \mathcal Q^\bullet_{\mathcal G,M}(I)
+      =
+    \ker(\widehat\sigma_{\mathrm{sc},M})
+      \subset \mathfrak Q^\bullet_{\mathcal G,M}(I).
+  \]
+  Let
+  \[
+    \operatorname{Ob}^{\mathrm{graph}}_{\mathcal G,M}
+      =
+    \operatorname{ev}_{\mathcal G}
+    \operatorname{Curv}_{\mathbf K}(\kappa^M_{\mathcal G,w,I})
+      \in \mathfrak Q^1_{\mathcal G,M}(I)
+  \]
+  be the graph curvature evaluated on the chosen finite labelled CE
+  cycles; before evaluation it is the corresponding Hom-valued curvature.
+  The source-differential term is included in
+  \(\operatorname{Curv}_{\mathbf K}\).  Here
+  \(\operatorname{Curv}_{\mathbf K}=d_{\mathbf K}
+  +\frac12[-,-]_{\mathbf K}\) as in
+  Definition~\ref{def:app-bulk-defect-convolution-habitat}.  Suppose
+  counterterms have been chosen through order \(\hbar^{n-1}\), and write
+  \(C_{<n,M}\in\mathfrak Q^0_{\mathcal G,M}(I)\) for their sum.  The
+  order-\(n\) residual is
+  \[
+    \mathfrak o^{\mathrm{fw}}_{n,M}
+      =
+    [\hbar^n]\left(
+      \operatorname{Ob}^{\mathrm{graph}}_{\mathcal G,M}
+      +d_M C_{<n,M}
+      +\frac12\{C_{<n,M},C_{<n,M}\}_{\hbar,M}
+    \right).
+  \]
+  Then the following statements hold.
+  \begin{enumerate}[label=(\arabic*)]
+    \item The analytic graph weights in the package are theorem-grade
+    finite-window local functionals.  For regular density labels this is
+    Proposition~\ref{prop:app-regular-density-costello-graph-kernel}; for
+    wavefront-admissible labels this is
+    Proposition~\ref{prop:app-wavefront-admissible-costello-graph-kernel}.
+    No statement for arbitrary \(\mathcal D'_c(I)\)-labels follows.
+
+    \item The first obstruction is scalar.  If
+    \[
+      \mathfrak s_{n,M}:=
+      [\hbar^n]\,
+      \widehat\sigma_{\mathrm{sc},M}\!\left(
+        \operatorname{Ob}^{\mathrm{graph}}_{\mathcal G,M}
+        +d_M C_{<n,M}
+        +\frac12\{C_{<n,M},C_{<n,M}\}_{\hbar,M}
+      \right)
+    \]
+    is nonzero in \(S^1\), the order-\(n\) graph/QME equation cannot be
+    solved inside the non-scalar kernel.  In the balanced graph/counterterm
+    subhabitat this scalar term is zero by
+    Proposition~\ref{prop:app-balanced-costello-graph-preservation}.
+
+    \item If the scalar term vanishes through order \(n\) and the
+    lower-order QME equations hold, then
+    \[
+      \mathfrak o^{\mathrm{fw}}_{n,M}
+        \in Z^1\bigl(\mathcal Q^\bullet_{\mathcal G,M}(I)\bigr).
+    \]
+    An order-\(n\) finite-window counterterm
+    \(C_{n,M}\in\mathcal Q^0_{\mathcal G,M}(I)\) satisfying
+    \[
+      d_M C_{n,M}=-\mathfrak o^{\mathrm{fw}}_{n,M}
+    \]
+    exists if and only if
+    \[
+      [\mathfrak o^{\mathrm{fw}}_{n,M}]
+        =0
+        \quad\text{in}\quad
+      H^1\bigl(\mathcal Q^\bullet_{\mathcal G,M}(I),d_M\bigr).
+    \]
+    If this class is nonzero, it is the precise finite-window non-scalar
+    obstruction to the graph/QME realization at order \(\hbar^n\).
+  \end{enumerate}
+\end{thm}
+
+\begin{proof}
+  The first assertion is exactly the analytic input supplied by the
+  regular-density and wavefront-admissible kernel propositions.  The
+  finite-window hypothesis makes every coefficient factor finite rank, so
+  Theorem~\ref{thm:hadamard-mittag-leffler} supplies the Hadamard
+  counterterm control for each fixed graph.  The label restriction is
+  essential: outside
+  \(\mathcal D'_{c,\mathrm{WF}}(I;\Gamma,M)\), the product of the graph
+  Hadamard coefficient with the pushed-forward current label is not a
+  canonical distribution.
+
+  The scalar statement is formal.  A filtered chain projection
+  \(\widehat\sigma_{\mathrm{sc},M}\) is part of the package.  If the
+  displayed scalar projection of the residual is nonzero, then the
+  residual does not lie in
+  \(\ker\widehat\sigma_{\mathrm{sc},M}\), so no counterterm inside that
+  kernel can solve the equation.  In the balanced graph/counterterm
+  subhabitat the projection is the zero chain map, hence the scalar branch
+  vanishes before the non-scalar class is formed.
+
+  Finally, the completed convolution Hom is a filtered dg Lie algebra.
+  The Bianchi identity
+  \[
+    d_{\mathbf K}\operatorname{Curv}_{\mathbf K}(\kappa)
+      +[\kappa,\operatorname{Curv}_{\mathbf K}(\kappa)]_{\mathbf K}=0
+  \]
+  and the lower-order QME equations imply that the first unsolved
+  \(\hbar^n\)-coefficient is closed in the convolution differential.
+  After evaluation on labelled CE cycles this is \(d_M\)-closed.
+  Since the scalar projection
+  is a chain map and its order-\(n\) value is zero, this coefficient lies
+  in the kernel complex \(\mathcal Q^\bullet_{\mathcal G,M}(I)\).  Adding a
+  degree-zero counterterm changes the first unsolved coefficient by the
+  \(d_M\)-boundary of that counterterm; quadratic counterterm terms are
+  already included in the displayed residual.  Therefore the finite-window
+  equation is solvable exactly when the displayed degree-one cohomology
+  class vanishes.
+\end{proof}
+
+\begin{prop}[Finite-window-to-limit obstruction]\label{prop:finite-window-qme-limit-condition}
+  Suppose that finite-window graph/QME packages
+  \(\{(I,w,M,\mathcal G_M)\}_{M\geq1}\) are given and satisfy the
+  following additional hypotheses.
+  \begin{enumerate}[label=(L\arabic*)]
+    \item The graph package is compatible under truncation:
+    \(\pi_{M,N}\mathfrak Q^\bullet_{\mathcal G,M}(I)\subset
+    \mathfrak Q^\bullet_{\mathcal G,N}(I)\), the kernels, counterterms,
+    and scalar projections commute with \(\pi_{M,N}\), and the same
+    compatibility holds under admissible weight transport \(R^M_{w,w'}\).
+    \item At the fixed \(\hbar\)-order under consideration the graph sum is
+    finite in each window, or a separate Costello graph-summability datum
+    has been supplied.  The finite-window theorem does not create this
+    datum.
+    \item The residuals
+    \(\mathfrak o^{\mathrm{fw}}_{n,M}\) of
+    Theorem~\ref{thm:finite-window-graph-qme-assembly} are compatible:
+    \[
+      \pi_{M,N}\mathfrak o^{\mathrm{fw}}_{n,M}
+        =
+      \mathfrak o^{\mathrm{fw}}_{n,N},
+      \qquad M\geq N.
+    \]
+  \end{enumerate}
+  Put
+  \[
+    \mathfrak O^{\mathrm{fw}}_n
+      =
+    \left(
+      \bigl([\mathfrak o^{\mathrm{fw}}_{n,M}]\bigr)_M,\,
+      \lambda^{\mathrm{fw}}_n
+    \right),
+  \]
+  where
+  \[
+    \bigl([\mathfrak o^{\mathrm{fw}}_{n,M}]\bigr)_M
+      \in
+    \varprojlim_M
+    H^1\bigl(\mathcal Q^\bullet_{\mathcal G,M}(I)\bigr),
+  \]
+  and, after choosing windowwise primitives
+  \(c_{n,M}\) with
+  \(d_M c_{n,M}=-\mathfrak o^{\mathrm{fw}}_{n,M}\),
+  \[
+    \lambda^{\mathrm{fw}}_n\in
+    \varprojlim\nolimits^1_M
+    H^0\bigl(\mathcal Q^\bullet_{\mathcal G,M}(I)\bigr)
+  \]
+  is represented by the Roos cocycle
+  \[
+    \bigl[\pi_{M,N}c_{n,M}-c_{n,N}\bigr]\in
+    H^0\bigl(\mathcal Q^\bullet_{\mathcal G,N}(I)\bigr).
+  \]
+  Then compatible order-\(n\) counterterms
+  \(C_{n,M}\) with
+  \(\pi_{M,N}C_{n,M}=C_{n,N}\) exist if and only if
+  \(\mathfrak O^{\mathrm{fw}}_n=0\).  If the tower
+  \(\{H^0(\mathcal Q^\bullet_{\mathcal G,M}(I))\}_M\) is
+  Mittag--Leffler, then \(\lambda^{\mathrm{fw}}_n=0\), and the inverse-limit
+  obstruction is only the compatible \(H^1\)-class above.
+
+  Without (L1)--(L3), no inverse-limit graph/QME theorem is asserted.  If
+  (L2) fails, the graph sum itself is not an element of the tower, so the
+  obstruction class is not formed.
+\end{prop}
+
+\begin{proof}
+  Windowwise, Theorem~\ref{thm:finite-window-graph-qme-assembly} says that
+  the only non-scalar obstruction is the class of
+  \(\mathfrak o^{\mathrm{fw}}_{n,M}\) in \(H^1\).  Necessity of the two
+  displayed inverse-limit conditions is immediate from any compatible
+  primitive \(C_{n,M}\).  Conversely, vanishing of the compatible
+  \(H^1\)-class gives primitives \(c_{n,M}\) window by window.  The
+  differences \(\pi_{M,N}c_{n,M}-c_{n,N}\) are closed degree-zero
+  elements, and their cohomology classes are the standard Roos
+  \(1\)-cocycle computing
+  \(\varprojlim\nolimits^1_M
+  H^0(\mathcal Q^\bullet_{\mathcal G,M}(I))\).  The
+  vanishing of \(\lambda^{\mathrm{fw}}_n\) is exactly the statement that
+  the \(c_{n,M}\)'s can be adjusted by closed degree-zero terms and
+  boundaries to become compatible under all truncation maps.  The
+  Mittag--Leffler sufficient condition is the standard vanishing of
+  \(\varprojlim^1\) for a Mittag--Leffler tower.  The weight-transport
+  compatibility follows from the same diagonal transport squares used in
+  Theorem~\ref{thm:wt-regulator-independence-admissible}.
+\end{proof}
+
+\begin{defn}[Finite-window graph array]\label{defn:finite-window-graph-array}
+  Fix a finite-window graph/QME package
+  \((I,w,M,\mathcal G_M)\), a codimension-two closed marked Costello list
+  \(\mathcal G^{\mathrm{mk}}_M\), and a labelled CE cycle \(\zeta_M\).
+  A finite-window graph array at order \(n\) is a finite set
+  \[
+    \mathsf A^{\mathrm{fw}}_{n,M}
+      =
+    \{\alpha\}
+  \]
+  together with the following row data.
+
+  \begin{enumerate}[label=(A\arabic*)]
+    \item \emph{Graph type and order.}  A row has a type
+    \[
+      \tau_\alpha\in
+      \{\mathrm{dK},\mathrm{CE},\mathrm{bracket},
+        \mathrm{lower}\text{-}d,\mathrm{lower}\text{-}\mathrm{bracket}\}.
+    \]
+    For \(\mathrm{dK}\), \(\mathrm{CE}\), and \(\mathrm{bracket}\) rows it
+    specifies, respectively, a marked graph \(\Gamma_\alpha\), a CE-source
+    face of such a graph, or an ordered pair
+    \((\Gamma_{\alpha,1},\Gamma_{\alpha,2})\), all in the finite marked list.
+    The order is
+    \[
+    \begin{array}{c|c}
+      \tau_\alpha & |\alpha|_\hbar \\ \hline
+      \mathrm{dK},\mathrm{CE} & |\Gamma_\alpha|_\hbar\\
+      \mathrm{bracket} &
+        |\Gamma_{\alpha,1}|_\hbar+|\Gamma_{\alpha,2}|_\hbar\\
+      \mathrm{lower}\text{-}d,\mathrm{lower}\text{-}\mathrm{bracket} & n ,
+    \end{array}
+    \]
+    and only rows with \(|\alpha|_\hbar=n\) enter
+    \(\mathsf A^{\mathrm{fw}}_{n,M}\).
+
+    \item \emph{Edge labels.}  Each internal edge of the graph carries one of
+    the finite-window edge kernels
+    \[
+      P_{\epsilon,L}^{w,M},\qquad
+      \Delta_{\epsilon,L}^{w,M},\qquad
+      E_{\mathrm{Weyl}},
+    \]
+    where \(E_{\mathrm{Weyl}}\) is the boundary Weyl edge whose scalar
+    two-Hamiltonian part is
+    \((f,g)\mapsto\omega(f,g)\gamma_{\mathbf 1}\).  The two half-edge
+    coefficient labels lie in
+    \[
+      \mathfrak h_{w,\leq M}\cup D^w_{\leq M},
+      \qquad
+      D^w_{\leq M}=\prod_{d\leq M}w(d)^{-1}H_d^\vee,
+    \]
+    and the edge record includes the source/target orientation used by the
+    BV bracket sign.
+
+    \item \emph{Vertex labels.}  Each vertex is labelled by one of the
+    finite package labels
+    \[
+      u_{a(t)dt\otimes f},\quad c_{B,\rho},\quad I^w_{0,M},\quad
+      W^{R,M}_{\Gamma,L,w}(B^\Gamma_\bullet),\quad
+      C^M_{\Gamma,w}(\epsilon;B^\Gamma_\bullet),\quad
+      \gamma_{\mathbf 1},
+    \]
+    with \(f,\rho\) in degree \(\leq M\) and
+    \(B^\Gamma_\bullet\) either regular-density or graphwise
+    wavefront-admissible as in
+    Definition~\ref{defn:finite-window-graph-qme-package}.
+
+    \item \emph{Markers and incidence coefficient.}  The row contains a
+    marker tensor
+    \[
+      \mathfrak m_\alpha=(\mathfrak m_{\alpha,L})_L,\qquad
+      \mathfrak m_{\alpha,L}\in\mathcal M^{\mathrm{full}}_{m_L}(\C^{N|N})
+    \]
+    or the explicitly chosen smaller marker habitat.  If the row comes from
+    an elementary boundary operation
+    \(\beta_i\in\mathsf B_M(\Gamma_\alpha)\), its incidence coefficient is
+    \[
+      \iota_{\alpha,M}=(-1)^{i-1}\varepsilon_{\beta_i}.
+    \]
+    For CE-source and convolution-bracket rows, \(\iota_{\alpha,M}\) is the
+    corresponding CE or BV Koszul sign, including the factor \(1/2\) in the
+    bracket row.
+
+    \item \emph{Weight and filtrations.}  The row records
+    \[
+      d_{\max}(\alpha)=
+      \max\{d:\ H_d\text{ or }H_d^\vee\text{ occurs in the row}\}\leq M,
+    \]
+    its scalar-contact filtration
+    \(p_\alpha=\#\{\text{scalar-contact open loops}\}\), and, for a boundary
+    operation \(\beta_i\),
+    \[
+      r_\alpha=p_\alpha-
+      p(\partial_{\beta_i}\Gamma_\alpha,\mu_{\beta_i}(\mathfrak m_\alpha)).
+    \]
+
+    \item \emph{Curvature value and scalar gate.}  The row evaluates to a
+    local functional
+    \[
+      R_{\alpha,M}^{\mathrm{row}}\in\mathfrak Q^1_{\mathcal G,M}(I).
+    \]
+    For the graph-curvature part these are
+    \[
+    \begin{array}{c|c}
+      \tau_\alpha & R_{\alpha,M}^{\mathrm{row}} \\ \hline
+      \mathrm{dK} & \iota_{\alpha,M}\,d_MK^M_{\Gamma_\alpha}\\
+      \mathrm{CE} & \iota_{\alpha,M}\,K^M_{\Gamma_\alpha}\\
+      \mathrm{bracket} &
+        \iota_{\alpha,M}\{K^M_{\Gamma_{\alpha,1}},
+        K^M_{\Gamma_{\alpha,2}}\}_{\hbar,M}.
+    \end{array}
+    \]
+    The two lower-counterterm row types are the corresponding homogeneous
+    summands of
+    \([\hbar^n]d_MC_{<n,M}\) and
+    \(\frac12[\hbar^n]\{C_{<n,M},C_{<n,M}\}_{\hbar,M}\).
+    The scalar-gate entry is
+    \[
+      S_{\alpha,M}=
+      \widehat\sigma_{\mathrm{sc},M}(R_{\alpha,M}^{\mathrm{row}}).
+    \]
+    If \(\alpha\) is a first filtration-lowering two-Hamiltonian scalar
+    contact row, this specializes to
+    \[
+      S_{\alpha,M}=
+      \iota_{\alpha,M}\,
+      \operatorname{Str}_{\mathrm{cyc}}
+        \bigl(\mu_{\beta_i}(\mathfrak m_\alpha)\bigr)\,
+      \omega(f_{\partial_{\beta_i}\Gamma_\alpha},
+             g_{\partial_{\beta_i}\Gamma_\alpha})
+      \gamma_{\mathbf 1}.
+    \]
+    The non-scalar reduced-curvature contribution is not an independent
+    entrywise projection.  It is the scalar-zero sum
+    \[
+      R^{\mathrm{ns}}_{n,M}
+        =
+      \sum_{\alpha\in\mathsf A^{\mathrm{fw}}_{n,M}}
+        R_{\alpha,M}^{\mathrm{row}}
+      \quad\text{provided}\quad
+      \sum_{\alpha\in\mathsf A^{\mathrm{fw}}_{n,M}}S_{\alpha,M}=0.
+    \]
+    If an entrywise non-scalar summand is wanted, the array must also supply a
+    chain splitting of \(\widehat\sigma_{\mathrm{sc},M}\); without such a
+    splitting only the displayed scalar-zero sum is canonical.
+
+    \item \emph{Truncation in \(M\).}  For \(M\geq N\) the array contains
+    truncation coefficients \(t^{M,N}_{\alpha\alpha'}\in\C\) with
+    \(\alpha'\in\mathsf A^{\mathrm{fw}}_{n,N}\), defined by
+    \[
+      \pi_{M,N}R^{\mathrm{row}}_{\alpha,M}
+        =
+      \sum_{\alpha'}t^{M,N}_{\alpha\alpha'}R^{\mathrm{row}}_{\alpha',N},
+      \qquad
+      \pi_{M,N}S_{\alpha,M}
+        =
+      \sum_{\alpha'}t^{M,N}_{\alpha\alpha'}S_{\alpha',N}.
+    \]
+    A row whose coefficient labels have no degree-\(\leq N\) component has
+    all \(t^{M,N}_{\alpha\alpha'}=0\).  If this equation cannot be filled for
+    a row, the lower-window theorem is missing exactly that truncation
+    entry.
+
+    \item \emph{Order-two boundary compositions.}  For an order-\(2\)
+    closure check the array also records the ordered pairs of distinct
+    first scalar-contact boundary operations
+    \[
+      (\beta_i,\beta_j),\qquad
+      r(\beta_i)=r(\beta_j)=1,\qquad
+      |\beta_i|_\hbar=|\beta_j|_\hbar=1,
+    \]
+    whose two composites occur in the codimension-two closure table of
+    Definition~\ref{def:app-finite-window-marked-costello-list}.  If
+    \(\operatorname{pos}_i(j)\) denotes the position of the induced face
+    \(\beta_j|\beta_i\) after deleting \(\beta_i\), the composite
+    incidence coefficient is
+    \[
+      \iota_{\beta_j|\beta_i,\beta_i}
+        =
+      {(-1)}^{i-1}{(-1)}^{\operatorname{pos}_i(j)-1}
+      \varepsilon_{\beta_i}\varepsilon_{\beta_j|\beta_i}.
+    \]
+    The corresponding two-contact scalar gate is the row
+    \[
+      S^{(2)}_{\beta_j|\beta_i,M}
+        =
+      \iota_{\beta_j|\beta_i,\beta_i}
+      \left(
+        \prod_{L\in\mathcal L_{\mathrm{sc}}
+        (\partial_{\beta_j|\beta_i}\partial_{\beta_i}\Gamma)}
+        \operatorname{Str}_{\mathrm{cyc}}(\mathfrak m'_L)
+      \right)
+      \omega(f_{\beta_i},g_{\beta_i})
+      \omega(f_{\beta_j|\beta_i},g_{\beta_j|\beta_i})
+      \gamma_{\mathbf 1}^{(2)}.
+    \]
+    Here \(\mathfrak m'_L\) is the transported marker on the output scalar
+    loop \(L\), and \(\gamma_{\mathbf 1}^{(2)}\) denotes the ordered
+    two-contact scalar symbol.  This notation records the associated
+    graded scalar-contact symbol; it is not a separate assertion that a
+    product \(\gamma_{\mathbf 1}^2\) survives in the target algebra.
+    If the equality of output graphs, coefficients, and marker transports
+    in~\eqref{eq:app-codim-two-marked-closure} is not supplied, the missing
+    order-\(2\) datum is exactly that composite face.
+  \end{enumerate}
+
+  The array is \emph{valid} if the row sum reproduces the order-\(n\)
+  residual:
+  \[
+    R_{n,M}
+      =
+    \sum_{\alpha\in\mathsf A^{\mathrm{fw}}_{n,M}}
+      R_{\alpha,M}^{\mathrm{row}},
+    \qquad
+    \mathfrak s_{n,M}
+      =
+    \sum_{\alpha\in\mathsf A^{\mathrm{fw}}_{n,M}}S_{\alpha,M},
+  \]
+  and if the truncation coefficients satisfy the displayed equations for
+  every \(M\geq N\).
+\end{defn}
+
+\begin{prop}[First finite-window array rows]\label{prop:first-finite-window-array-rows}
+  The universal rows that are presently computed are the reduced current
+  interface row in order \(0\) and the two-Hamiltonian scalar-contact row in
+  order \(1\).
+
+  On the length-one reduced current interface,
+  Theorem~\ref{thm:app-factorization-universal-current-interface} gives
+  strict CE/PV compatibility.  Thus the order-\(0\) row has
+  \[
+    R^{\mathrm{row}}_{0,M}=0,\qquad S_{0,M}=0.
+  \]
+
+  For the ordered Hamiltonian inputs \((a,z_1)\), \((b,z_2)\), the
+  one-cross boundary row has graph type \(\mathrm{dK}\), one boundary Weyl
+  edge \(E_{\mathrm{Weyl}}\), two external Hamiltonian vertices, one
+  scalar-contact output vertex \(\gamma_{\mathbf 1}\), and
+  \[
+    \omega(z_1,z_2)=1,\qquad |\alpha_{\mathrm{sc}}|_\hbar=1.
+  \]
+  Its scalar gate is
+  \[
+    S_{\alpha_{\mathrm{sc}},M}
+      =
+    \operatorname{Str}_{\mathrm{cyc}}
+      \bigl(\mu_{\beta_{\mathrm{sc}}}(\mathfrak m)\bigr)
+    \gamma_{\mathbf 1},
+  \]
+  after extracting the \(\hbar^1\)-coefficient and using the orientation
+  convention in which the ordered pair \((z_1,z_2)\) has positive sign.
+  Therefore:
+  \[
+  \begin{array}{c|c|c}
+    \text{branch} & S_{\alpha_{\mathrm{sc}},M} &
+    R^{\mathrm{ns}}_{1,M}\text{ from this row}\\ \hline
+    \lie{gl}_N\text{ ordinary} & N\gamma_{\mathbf 1} & \text{not formed}\\
+    \text{even block marker }\lambda_0P_{\bar0}+\lambda_1P_{\bar1}
+      & N(\lambda_0-\lambda_1)\gamma_{\mathbf 1} & \text{not formed unless }
+        \lambda_0=\lambda_1\\
+    \lie{gl}(N|N)\text{ full-equivariant}
+      & 0 & 0
+  \end{array}
+  \]
+  Consequently, for the minimal full-equivariant closed array containing only
+  the strict current-interface rows and this scalar-contact row, the first
+  order residual is zero and
+  \[
+    C_{1,M}=0
+  \]
+  is the compatible order-one non-scalar counterterm.  For any larger graph
+  package, the first non-scalar residual is
+  \[
+    R^{\mathrm{ns}}_{1,M}
+      =
+    \sum_{\alpha\in
+      \mathsf A^{\mathrm{fw}}_{1,M}\setminus\{\alpha_{\mathrm{sc}}\}}
+      R^{\mathrm{row}}_{\alpha,M}
+  \]
+  after the scalar gate has vanished.  Its primitive cannot be decided
+  without the remaining order-one rows of
+  Definition~\ref{defn:finite-window-graph-array}.
+\end{prop}
+
+\begin{proof}
+  The order-\(0\) assertion is exactly the strict current-source/target
+  identity of Theorem~\ref{thm:app-factorization-universal-current-interface}
+  on the length-one generators: the CE differential and target \(P_0\)
+  bracket use the same semidirect product constants.
+
+  The order-\(1\) scalar-contact row is the computation of
+  Proposition~\ref{prop:app-first-nonidentity-loop-scalar-symbol}, written in
+  the row notation of Definition~\ref{defn:finite-window-graph-array}.  The
+  monomial value is \(\omega(z_1,z_2)=1\).  In the ordinary branch the open
+  index loop contributes \(N\).  In the even block-diagonal marker branch
+  the cyclic supertrace is \(N(\lambda_0-\lambda_1)\).  In the
+  full-equivariant branch, Lemma~\ref{lem:app-full-equivariant-cyclic-supertrace}
+  kills the cyclic supertrace of every transported marker tensor in
+  \(\C^{N|N}\); the empty marker word is killed by the same
+  \(\operatorname{sdim}\C^{N|N}=0\) calculation.  Thus the row contributes
+  zero as a local functional in the full-equivariant branch, not merely zero
+  after cohomology.
+
+  If no further order-one rows are present, the order-one residual is zero,
+  so the zero counterterm is a primitive and is compatible under all
+  truncation maps.  If further order-one rows are present, the displayed sum
+  is the definition of the remaining scalar-zero residual.  A primitive for
+  it is a theorem exactly when the missing row values, signs, scalar gates,
+  and truncation coefficients are supplied and the resulting \(H^1\)-class
+  vanishes.
+\end{proof}
+
+\begin{prop}[Universal scalar-contact bracket rows]\label{prop:universal-scalar-contact-bracket-rows}
+  Work in the local full-equivariant marked branch with \(V=\C^{N|N}\), and
+  let \(\alpha_{\mathrm{sc}}\) be the one-cross two-Hamiltonian
+  scalar-contact row of
+  Proposition~\ref{prop:first-finite-window-array-rows}.  Write
+  \(K^M_{\alpha_{\mathrm{sc}}}\) for the local functional carried by this
+  row.  Then
+  \[
+    K^M_{\alpha_{\mathrm{sc}}}=0
+  \]
+  in the finite-window local-functional complex.
+
+  Consequently every order-\(2\) convolution-bracket row containing
+  \(\alpha_{\mathrm{sc}}\) has the following entries.  For any order-\(1\)
+  component \(\beta\) for which the bracket row is present,
+  \[
+  \begin{array}{c|c}
+    \text{row} & R^{\mathrm{row}}_{b,M} \\ \hline
+    b(\alpha_{\mathrm{sc}},\beta) &
+      \frac12\varepsilon_{\alpha_{\mathrm{sc}},\beta}
+      \{K^M_{\alpha_{\mathrm{sc}}},K^M_{\beta}\}_{\hbar,M}=0\\
+    b(\beta,\alpha_{\mathrm{sc}}) &
+      \frac12\varepsilon_{\beta,\alpha_{\mathrm{sc}}}
+      \{K^M_{\beta},K^M_{\alpha_{\mathrm{sc}}}\}_{\hbar,M}=0\\
+    b(\alpha_{\mathrm{sc}},\alpha_{\mathrm{sc}}) &
+      \frac12\varepsilon_{\alpha_{\mathrm{sc}},\alpha_{\mathrm{sc}}}
+      \{K^M_{\alpha_{\mathrm{sc}}},
+        K^M_{\alpha_{\mathrm{sc}}}\}_{\hbar,M}=0
+  \end{array}
+  \]
+  Their scalar gates are
+  \[
+    S_{b,M}=0.
+  \]
+  For every \(M\geq N\), the truncation row may be chosen as
+  \[
+    t^{M,N}_{b b'}=0
+    \qquad
+    \text{for every lower-window bracket row } b',
+  \]
+  since \(\pi_{M,N}R^{\mathrm{row}}_{b,M}=0\) and
+  \(\pi_{M,N}S_{b,M}=0\).  These rows therefore contribute no order-\(2\)
+  obstruction and require no counterterm.
+
+  This proposition closes only the bracket family containing
+  \(\alpha_{\mathrm{sc}}\).  Bracket rows \(b(\beta_1,\beta_2)\) with
+  \(\beta_1,\beta_2\neq\alpha_{\mathrm{sc}}\) remain part of the chosen
+  graph package and must be supplied row by row.
+\end{prop}
+
+\begin{proof}
+  Proposition~\ref{prop:first-finite-window-array-rows} proves the stronger
+  full-equivariant fact that the scalar-contact row is zero as a local
+  functional, because every transported scalar-loop marker has zero cyclic
+  supertrace on \(\C^{N|N}\).  The BV/convolution bracket is bilinear and
+  continuous on the finite-window completed local-functional complex, hence
+  any bracket with \(K^M_{\alpha_{\mathrm{sc}}}=0\) is zero before passing to
+  cohomology.  Applying the chain projection
+  \(\widehat\sigma_{\mathrm{sc},M}\) to zero gives the displayed scalar
+  gates.  Truncation sends zero to zero, so the zero truncation matrix row is
+  compatible with the defining equations of
+  Definition~\ref{defn:finite-window-graph-array}.
+\end{proof}
+
+\begin{prop}[Genuine order-two graph-weight rows]\label{prop:genuine-order-two-graph-weight-rows}
+  Work in the local
+  \(\R^2_{\mathrm{top}}\times\C^2_{\mathrm{hol}}\) full-equivariant marked
+  branch with \(V=\C^{N|N}\).  Let
+  \(\mathcal G^{\mathrm{gen}}_{2,M}\) be the part of a finite marked
+  Costello list consisting of genuine seed graph weights of
+  \(\hbar\)-order \(2\): these are not the codimension-two composites of
+  two first scalar-contact boundary faces and not the bracket rows
+  containing \(\alpha_{\mathrm{sc}}\) closed in
+  Proposition~\ref{prop:universal-scalar-contact-bracket-rows}.  For
+  \(\Gamma\in\mathcal G^{\mathrm{gen}}_{2,M}\), write
+  \[
+    K^M_\Gamma=
+    W^{R,M}_{\Gamma,L,w}(B^\Gamma_\bullet)
+  \]
+  for the normalized renormalized finite-window graph weight, and let
+  \(\varepsilon_\Gamma\) be the coefficient with which this component
+  occurs in \(d_M\kappa^M_{\mathcal G,w,I}\), including the orientation,
+  Koszul, and symmetry factors supplied by the finite graph package.
+
+  The genuine order-two rows have the following schema.
+  \begin{enumerate}[label=(G\arabic*)]
+    \item The graph-differential row \(d\Gamma\) has
+      \[
+        \tau_{d\Gamma}=\mathrm{dK},\qquad |d\Gamma|_\hbar=2,
+      \]
+      inherits its edge labels, vertex labels, marker tensor, and
+      coefficient degree from \(\Gamma\), and has
+      \[
+        R^{\mathrm{row}}_{d\Gamma,M}
+          =
+        \varepsilon_\Gamma\,d_M K^M_\Gamma,
+        \qquad
+        S_{d\Gamma,M}
+          =
+        \varepsilon_\Gamma\,
+        \widehat\sigma_{\mathrm{sc},M}(d_M K^M_\Gamma).
+      \]
+
+    \item Before evaluation on a strict CE cycle, or when the Hom-valued
+      kernel table is retained, each source face is a separate row.  Write
+      the relevant part of the source differential as
+      \[
+        d_{\mathrm{CE}}\zeta_M
+          =
+        \sum_\nu
+        \varepsilon^{\mathrm{CE}}_{\Gamma,\nu}\zeta_{M,\nu},
+      \]
+      where \(\varepsilon^{\mathrm{CE}}_{\Gamma,\nu}\) includes the CE
+      Koszul sign and the graph coefficient attached to the
+      \(\Gamma\)-component.  The source row is
+      \[
+        R^{\mathrm{row}}_{\mathrm{CE}(\Gamma,\nu),M}
+          =
+        -\varepsilon^{\mathrm{CE}}_{\Gamma,\nu}
+        K^M_\Gamma(\zeta_{M,\nu}),
+      \]
+      and its scalar gate is
+      \[
+        S_{\mathrm{CE}(\Gamma,\nu),M}
+          =
+        -\varepsilon^{\mathrm{CE}}_{\Gamma,\nu}
+        \widehat\sigma_{\mathrm{sc},M}
+        \bigl(K^M_\Gamma(\zeta_{M,\nu})\bigr).
+      \]
+      If the curvature has already been evaluated on a strict labelled CE
+      cycle, this source-face family is empty.
+  \end{enumerate}
+
+  If these row values and all their \(d_M\)-faces lie in the
+  full-equivariant marked habitat of
+  Theorem~\ref{thm:app-full-equivariant-marked-shadow-vanishing}, then
+  \[
+    S_{d\Gamma,M}=0,
+    \qquad
+    S_{\mathrm{CE}(\Gamma,\nu),M}=0.
+  \]
+  This is only a scalar-gate statement.  It does not imply
+  \(K^M_\Gamma=0\) or \(d_M K^M_\Gamma=0\).
+
+  After scalar-gate vanishing, the genuine seed-graph contribution to the
+  order-\(2\) reduced curvature is
+  \[
+  \begin{aligned}
+    R^{\mathrm{ns,gen}}_{2,M}
+      &=
+      \sum_{\Gamma\in\mathcal G^{\mathrm{gen}}_{2,M}}
+        \varepsilon_\Gamma\,d_M K^M_\Gamma
+      \\
+      &\quad -
+      \sum_{\Gamma,\nu}
+        \varepsilon^{\mathrm{CE}}_{\Gamma,\nu}
+        K^M_\Gamma(\zeta_{M,\nu})
+      \in
+      \mathcal K^1_{\mathrm{ns},M}(I).
+  \end{aligned}
+  \]
+  The second sum is absent after strict CE-cycle evaluation.  A genuine
+  order-\(2\) counterterm exists precisely when
+  \[
+    [R^{\mathrm{ns,gen}}_{2,M}]
+      =
+    0
+    \quad\text{in}\quad
+    H^1(\mathcal K^\bullet_{\mathrm{ns},M}(I),d_{\mathrm{ns},M}).
+  \]
+  If this class is nonzero, it is the explicit finite-window obstruction
+  carried by the genuine seed graphs.
+
+  Truncation is part of the row data.  For \(M\geq N\) one must supply
+  normalized coefficients
+  \[
+    \pi_{M,N}(\varepsilon_\Gamma K^M_\Gamma)
+      =
+    \sum_{\Gamma'}
+      u^{M,N}_{\Gamma\Gamma'}\,\varepsilon_{\Gamma'}K^N_{\Gamma'},
+  \]
+  and then the graph-differential truncation entries are
+  \[
+    t^{M,N}_{d\Gamma,d\Gamma'}=u^{M,N}_{\Gamma\Gamma'}.
+  \]
+  For source rows one must likewise supply
+  \[
+    \pi_{M,N}
+      \bigl(
+        -\varepsilon^{\mathrm{CE}}_{\Gamma,\nu}
+        K^M_\Gamma(\zeta_{M,\nu})
+      \bigr)
+      =
+    \sum_{\Gamma',\nu'}
+      v^{M,N}_{\Gamma,\nu;\Gamma',\nu'}\,
+      \bigl(
+        -\varepsilon^{\mathrm{CE}}_{\Gamma',\nu'}
+        K^N_{\Gamma'}(\zeta_{N,\nu'})
+      \bigr),
+  \]
+  and set
+  \(t^{M,N}_{\mathrm{CE}(\Gamma,\nu),\mathrm{CE}(\Gamma',\nu')}=
+  v^{M,N}_{\Gamma,\nu;\Gamma',\nu'}\).  Rows whose coefficient labels have
+  no degree-\(\leq N\) component have zero truncation coefficients.  If
+  either displayed truncation identity is not supplied, the lower-window
+  theorem is missing exactly that row entry.
+
+  In the minimal full-equivariant local package of
+  Proposition~\ref{prop:order-two-finite-window-boundary-rows},
+  \(\mathcal G^{\mathrm{gen}}_{2,M}=\emptyset\) and the source-face set is
+  empty.  Hence
+  \[
+    R^{\mathrm{ns,gen}}_{2,M}=0,
+    \qquad
+    C^{\mathrm{gen}}_{2,M}=0.
+  \]
+  In any larger package, the present manuscript does not yet decide
+  vanishing, counterterms, or obstruction.  The exact missing data are:
+  the finite seed list \(\mathcal G^{\mathrm{gen}}_{2,M}\); the
+  renormalized local weights \(K^M_\Gamma\) with regular-density or
+  wavefront-admissible current labels; the full \(d_M K^M_\Gamma\)
+  expansion with orientation signs; the CE-source decomposition and signs
+  unless strict CE-cycle evaluation has removed them; proof that every row
+  lies in the full-equivariant marked habitat, or else its scalar
+  projection; and the truncation matrices displayed above.
+\end{prop}
+
+\begin{proof}
+  This is the order-\(2\) part of the convolution-curvature formula in
+  Theorem~\ref{thm:actual-finite-window-nonscalar-decision-datum}, with
+  the scalar-contact bracket family removed by
+  Proposition~\ref{prop:universal-scalar-contact-bracket-rows}.  The
+  differential term contributes \(\varepsilon_\Gamma d_M K^M_\Gamma\).  The
+  source term in \(d_{\mathbf K}=d_M-(-1)^{|\cdot|}(\cdot)d_{\mathrm{CE}}\)
+  contributes the displayed minus sign for a degree-zero kernel.  After
+  evaluation on a strict CE cycle, that source term is zero.
+
+  The scalar-gate assertion follows from
+  Theorem~\ref{thm:app-full-equivariant-marked-shadow-vanishing}: on the
+  full-equivariant marked habitat the filtered scalar projection is the
+  zero chain map.  Since this projection only kills the scalar shadow, it
+  gives no vanishing theorem for the non-scalar local functional
+  \(K^M_\Gamma\).
+
+  The counterterm criterion is exactly
+  Definition~\ref{def:app-nonscalar-kernel-row-complex}: once the scalar
+  gate is zero, the row sum is a degree-one element of the non-scalar
+  kernel complex, and a degree-zero counterterm exists exactly when this
+  element is a \(d_{\mathrm{ns},M}\)-boundary.  The truncation formulas are
+  the row identities required in
+  Definition~\ref{defn:finite-window-graph-array}, written for normalized
+  graph and source rows.  In the minimal package no such genuine seed row
+  is present, so the sum is empty.
+\end{proof}
+
+\begin{prop}[Order-two finite-window boundary rows]\label{prop:order-two-finite-window-boundary-rows}
+  Work in the local
+  \(\R^2_{\mathrm{top}}\times\C^2_{\mathrm{hol}}\) full-equivariant marked
+  branch with \(V=\C^{N|N}\).  Let the minimal array be generated by the
+  strict current-interface rows and the one-cross scalar-contact row of
+  Proposition~\ref{prop:first-finite-window-array-rows}.  Assume no genuine
+  \(|\Gamma|_\hbar=2\) seed graph, no order-\(2\) CE-source face, and no
+  order-\(2\) graph counterterm face have been added to the finite marked
+  Costello list, and use \(C_{1,M}=0\).
+
+  Then the only order-\(2\) boundary data forced by codimension-two closure
+  are the two ordered composites of two first scalar-contact boundary
+  operations.  For
+  \(o=\beta_1\wedge\beta_2\) they have incidence signs
+  \[
+    \iota_{\beta_2|\beta_1,\beta_1}
+      =
+    \varepsilon_{\beta_1}\varepsilon_{\beta_2|\beta_1},
+    \qquad
+    \iota_{\beta_1|\beta_2,\beta_2}
+      =
+    -\varepsilon_{\beta_2}\varepsilon_{\beta_1|\beta_2}.
+  \]
+  Their scalar gates are
+  \[
+  \begin{aligned}
+    S^{(2)}_{\beta_2|\beta_1,M}
+      &=
+      \varepsilon_{\beta_1}\varepsilon_{\beta_2|\beta_1}
+      \prod_L\operatorname{Str}_{\mathrm{cyc}}(\mathfrak m'_L)\,
+      \omega(f_{\beta_1},g_{\beta_1})
+      \omega(f_{\beta_2|\beta_1},g_{\beta_2|\beta_1})
+      \gamma_{\mathbf 1}^{(2)},\\
+    S^{(2)}_{\beta_1|\beta_2,M}
+      &=
+      -\varepsilon_{\beta_2}\varepsilon_{\beta_1|\beta_2}
+      \prod_L\operatorname{Str}_{\mathrm{cyc}}(\mathfrak m''_L)\,
+      \omega(f_{\beta_2},g_{\beta_2})
+      \omega(f_{\beta_1|\beta_2},g_{\beta_1|\beta_2})
+      \gamma_{\mathbf 1}^{(2)}.
+  \end{aligned}
+  \]
+  The codimension-two closure equations identify the two output graphs,
+  the two products of coefficients, and the transported marker tensors.
+  Therefore the pair sum is zero.  In the full-equivariant branch it is
+  stronger: every factor
+  \(\operatorname{Str}_{\mathrm{cyc}}(\mathfrak m'_L)\) and
+  \(\operatorname{Str}_{\mathrm{cyc}}(\mathfrak m''_L)\) is zero by
+  Lemma~\ref{lem:app-full-equivariant-cyclic-supertrace}; hence each
+  two-contact scalar row already vanishes as a local scalar row.
+
+  Under these minimal hypotheses the order-\(2\) reduced non-scalar row sum
+  is
+  \[
+    R^{\mathrm{ns}}_{2,M}=0,
+    \qquad
+    C_{2,M}=0
+  \]
+  is a compatible order-\(2\) counterterm.
+
+  For any larger finite-window package, the order-\(2\) residual is not
+  decided by the present local data.  After scalar-gate vanishing its
+  exact row sum is
+  \[
+  \begin{aligned}
+    R^{\mathrm{ns}}_{2,M}
+     ={}&
+      \sum_{|\Gamma|_\hbar=2}
+        \varepsilon_\Gamma\,d_M K^M_\Gamma
+      -\sum_{|\Gamma'|_\hbar=2}
+        \varepsilon^{\mathrm{CE}}_{\Gamma'}K^M_{\Gamma'}\\
+      &\quad
+      +\frac12
+      \sum_{|\Gamma_1|_\hbar=|\Gamma_2|_\hbar=1}
+        \varepsilon_{\Gamma_1,\Gamma_2}
+        \{K^M_{\Gamma_1},K^M_{\Gamma_2}\}_{\hbar,M}\\
+      &\quad
+      +[\hbar^2]\left(
+        d_M C_{<2,M}
+        +\frac12\{C_{<2,M},C_{<2,M}\}_{\hbar,M}\right).
+  \end{aligned}
+  \]
+  Thus a nonzero order-\(2\) obstruction or its counterterm can be asserted
+  only after supplying the genuine two-cross/contact graph weights
+  \(K^M_\Gamma\), the CE-source faces, the BV bracket rows between
+  order-\(1\) graph components not containing
+  \(\alpha_{\mathrm{sc}}\) or another retained zero local-functional row
+  such as \(\alpha_{11}\), the
+  lower-counterterm rows if a nonminimal \(C_{1,M}\) was chosen, the scalar
+  projection of any non-full-equivariant two-contact symbol, and the
+  truncation coefficients \(t^{M,N}_{\alpha\alpha'}\).
+\end{prop}
+
+\begin{proof}
+  The signs are those of
+  Lemma~\ref{lem:app-oriented-marked-incidence-signs}.  Starting with
+  \(o=\beta_1\wedge\beta_2\), the face \(\beta_1\) followed by
+  \(\beta_2|\beta_1\) contributes \(+1\), while the face \(\beta_2\)
+  followed by \(\beta_1|\beta_2\) contributes \(-1\).  The
+  codimension-two closure equations
+  Equation~\eqref{eq:app-codim-two-marked-closure} identifies the output graph,
+  coefficient, and marker transport in the two composites, so the two
+  boundary-composition rows cancel pairwise.
+
+  The scalar-gate formula is the order-\(2\) instance of the last row datum
+  in Definition~\ref{defn:finite-window-graph-array}: one scalar-contact
+  factor is contributed by each first-lowering boundary face.  In the
+  full-equivariant marked habitat, marker transport preserves the signed
+  Brauer span.  Lemma~\ref{lem:app-full-equivariant-cyclic-supertrace}
+  gives zero cyclic supertrace for every transported scalar-loop marker,
+  including the empty marker word.  Hence the two-contact scalar rows
+  vanish before passing to cohomology.
+
+  Under the stated minimal hypotheses there are no genuine order-\(2\)
+  graph rows, no CE-source rows, no order-\(1\) non-scalar primitive to
+  feed a lower-counterterm row, and no nonzero scalar-contact row left
+  after the full-equivariant trace calculation.  The possible bracket row
+  between two one-cross scalar-contact components is also zero, because
+  each such component has zero local-functional value in the
+  full-equivariant branch by
+  Proposition~\ref{prop:first-finite-window-array-rows}.  The reduced
+  non-scalar order-\(2\) row sum is therefore zero, and the zero
+  counterterm is compatible under finite-window truncation.
+
+  Removing any minimal hypothesis reintroduces exactly the displayed row
+  types from the curvature formula in
+  Theorem~\ref{thm:actual-finite-window-nonscalar-decision-datum}.  The
+  bracket rows containing \(\alpha_{\mathrm{sc}}\) are the universal zero
+  rows of
+  Proposition~\ref{prop:universal-scalar-contact-bracket-rows}; bracket rows
+  containing a retained \(\alpha_{11}\)-row vanish by the same bilinearity
+  argument and
+  Proposition~\ref{prop:app-first-scalar-zero-order-one-row}.  Without the
+  remaining graph weights, signs, scalar projections, and truncation
+  coefficients, the cochain \(R^{\mathrm{ns}}_{2,M}\) is not defined, so no
+  order-\(2\) obstruction class or counterterm can be claimed.
+\end{proof}
+
+\begin{prop}[Truncation matrices for the computed finite-window rows]\label{prop:computed-finite-window-truncation-matrices}
+  Work with the finite-window graph arrays of
+  Definition~\ref{defn:finite-window-graph-array}.  For \(M\geq N\), use the
+  following label-retaining convention: if a labelled row has
+  \(d_{\max}\leq N\), the same label denotes its lower-window row; if
+  \(d_{\max}>N\), the row has no lower-window representative and all entries
+  from it are zero.  With this convention the computed rows have the
+  following truncation matrices.
+
+  \begin{enumerate}[label=(T\arabic*)]
+    \item The one-cross scalar-contact row
+    \(\alpha_{\mathrm{sc}}\) of
+    Proposition~\ref{prop:first-finite-window-array-rows} has
+    \(d_{\max}(\alpha_{\mathrm{sc}})=1\).  For \(M\geq N\geq1\),
+    \[
+      t^{M,N}_{\alpha_{\mathrm{sc}}\alpha_{\mathrm{sc}}}=1,
+      \qquad
+      t^{M,N}_{\alpha_{\mathrm{sc}}\alpha'}=0
+      \quad(\alpha'\neq\alpha_{\mathrm{sc}}).
+    \]
+    This applies to the ordinary, even-block, and full-equivariant branches.
+    In the full-equivariant branch the row value is already zero, so the
+    zero matrix would also satisfy the row equations; the displayed matrix is
+    the chosen transport of the retained row label.
+
+    \item The labelled scalar-zero row \(\alpha_{11}\) of
+    Proposition~\ref{prop:app-first-scalar-zero-order-one-row}, with ordered
+    inputs \((z_1,z_1)\), has
+    \[
+      R^{\mathrm{row}}_{\alpha_{11},M}=0,\qquad
+      S_{\alpha_{11},M}=0,
+      \qquad d_{\max}(\alpha_{11})=1.
+    \]
+    If the row convention retains this labelled zero row, then for
+    \(M\geq N\geq1\)
+    \[
+      t^{M,N}_{\alpha_{11}\alpha_{11}}=1,
+      \qquad
+      t^{M,N}_{\alpha_{11}\alpha'}=0
+      \quad(\alpha'\neq\alpha_{11}).
+    \]
+    If zero rows are suppressed, the \(\alpha_{11}\)-row and its truncation
+    matrix are empty.
+
+    \item Let
+    \(\gamma_{21}=(\beta_2|\beta_1,\beta_1)\) and
+    \(\gamma_{12}=(\beta_1|\beta_2,\beta_2)\) denote the two ordered
+    codimension-two scalar-contact composites in
+    Proposition~\ref{prop:order-two-finite-window-boundary-rows}.  When the
+    degree-\(\leq N\) window contains the two Hamiltonian labels, the
+    composite rows are transported diagonally:
+    \[
+      t^{M,N}_{\gamma_{21}\gamma_{21}}=1,\qquad
+      t^{M,N}_{\gamma_{12}\gamma_{12}}=1,\qquad
+      t^{M,N}_{\gamma_{ij}\gamma'}=0
+      \quad(\gamma'\neq\gamma_{ij}).
+    \]
+    The codimension-two pair cancellation is therefore stable under
+    truncation.  In the full-equivariant branch the stronger rowwise
+    vanishing is also stable.
+
+    \item Let \(b\) be any order-\(2\) bracket row containing a retained
+    zero local-functional row
+    \[
+      \alpha_0\in\{\alpha_{\mathrm{sc}},\alpha_{11}\}.
+    \]
+    Thus \(b=b(\alpha_0,\beta)\), \(b=b(\beta,\alpha_0)\), or
+    \(b=b(\alpha_0,\alpha_0)\), whenever the displayed row belongs to the
+    chosen finite marked list.  Then
+    \[
+      R^{\mathrm{row}}_{b,M}=0,\qquad S_{b,M}=0,
+    \]
+    and one may take the zero truncation row
+    \[
+      t^{M,N}_{bb'}=0
+      \qquad
+      \text{for every lower-window bracket row }b'.
+    \]
+
+    \item If genuine order-\(2\) seed rows are absent, as in the minimal
+    full-equivariant package, their truncation matrices are empty.  If a
+    larger package supplies genuine seeds
+    \(\Gamma\in\mathcal G^{\mathrm{gen}}_{2,M}\), then the graph-differential
+    rows are transported by the normalized matrix \(u^{M,N}\):
+    \[
+      \pi_{M,N}(\varepsilon_\Gamma K^M_\Gamma)
+        =
+      \sum_{\Gamma'}
+        u^{M,N}_{\Gamma\Gamma'}\,
+        \varepsilon_{\Gamma'}K^N_{\Gamma'},
+      \qquad
+      t^{M,N}_{d\Gamma,d\Gamma'}=u^{M,N}_{\Gamma\Gamma'}.
+    \]
+    Source-face rows, when present, are transported by the normalized matrix
+    \(v^{M,N}\):
+    \[
+      \pi_{M,N}
+      \bigl(-\varepsilon^{\mathrm{CE}}_{\Gamma,\nu}
+      K^M_\Gamma(\zeta_{M,\nu})\bigr)
+        =
+      \sum_{\Gamma',\nu'}
+        v^{M,N}_{\Gamma,\nu;\Gamma',\nu'}\,
+        \bigl(-\varepsilon^{\mathrm{CE}}_{\Gamma',\nu'}
+        K^N_{\Gamma'}(\zeta_{N,\nu'})\bigr),
+    \]
+    \[
+      t^{M,N}_{\mathrm{CE}(\Gamma,\nu),
+        \mathrm{CE}(\Gamma',\nu')}
+        =
+      v^{M,N}_{\Gamma,\nu;\Gamma',\nu'}.
+    \]
+    Under the projection-closed row-basis hypotheses of
+    Proposition~\ref{prop:projection-defined-uvq-truncation-data}, these are
+    the coordinate entries of the finite-window projection.  Without those
+    hypotheses the lower-window theorem is missing exactly the entries
+    \(u^{M,N}_{\Gamma\Gamma'}\) and
+    \(v^{M,N}_{\Gamma,\nu;\Gamma',\nu'}\) for those supplied genuine rows.
+
+    \item Bracket rows \(b(\beta_1,\beta_2)\) with
+    \(\beta_i\notin\{\alpha_{\mathrm{sc}},\alpha_{11}\}\) are not computed
+    by the present local data.  After a lower-window bracket row basis, or
+    an equivalent row presentation with chosen coordinates, is fixed, their
+    required truncation matrix is the coordinate family \(q^{M,N}\)
+    satisfying
+    \[
+      \pi_{M,N}\!\left(
+        \frac12\varepsilon_{\beta_1,\beta_2}
+        \{K^M_{\beta_1},K^M_{\beta_2}\}_{\hbar,M}\right)
+       =
+      \sum_{\beta'_1,\beta'_2}
+        q^{M,N}_{\beta_1,\beta_2;\beta'_1,\beta'_2}
+        \frac12\varepsilon_{\beta'_1,\beta'_2}
+        \{K^N_{\beta'_1},K^N_{\beta'_2}\}_{\hbar,N}.
+    \]
+    These \(q\)-entries, together with the underlying order-\(1\) row
+    values, signs, and lower-window bracket-basis reduction, are still
+    missing larger-package data.
+  \end{enumerate}
+
+  The nonempty displayed matrices are stable under further truncation:
+  for \(M\geq N\geq P\),
+  \[
+    t^{M,P}=t^{M,N}t^{N,P}
+  \]
+  on the scalar-contact, scalar-zero, codimension-two, and zero-bracket
+  families.  For genuine seed rows and nonzero added bracket rows, stability
+  is exactly the cocycle condition
+  \[
+    u^{M,P}_{\Gamma\Gamma''}
+      =
+    \sum_{\Gamma'}u^{M,N}_{\Gamma\Gamma'}u^{N,P}_{\Gamma'\Gamma''},
+  \]
+  \[
+    v^{M,P}_{\Gamma,\nu;\Gamma'',\nu''}
+      =
+    \sum_{\Gamma',\nu'}
+      v^{M,N}_{\Gamma,\nu;\Gamma',\nu'}
+      v^{N,P}_{\Gamma',\nu';\Gamma'',\nu''},
+  \]
+  and the analogous equation for \(q\).
+\end{prop}
+
+\begin{proof}
+  For the one-cross scalar-contact rows the coefficient labels are
+  \(z_1,z_2\), and for \(\alpha_{11}\) the labels are \(z_1,z_1\).  These
+  all have window degree \(1\).  Therefore \(\pi_{M,N}\) preserves the
+  labelled row for \(N\geq1\), and kills it only if the lower window does
+  not contain the degree-one labels.  The diagonal matrices in (T1) and
+  (T2) are exactly this statement.  The row \(\alpha_{11}\) is zero because
+  \(\omega(z_1,z_1)=0\).
+
+  The codimension-two rows use the same two degree-one Hamiltonian labels
+  and the same transported marker words before and after projection.  The
+  finite-window marked-habitat compatibility preserves the output graph,
+  coefficient product, marker transport, and incidence signs.  Hence the two
+  ordered composites truncate to the same labelled composites in the lower
+  window, and their pair cancellation survives.
+
+  If a bracket row contains \(\alpha_{\mathrm{sc}}\) or \(\alpha_{11}\), one
+  bracket input is zero as a local functional in the retained
+  full-equivariant row family.  Bilinearity of the BV/convolution bracket
+  gives \(R^{\mathrm{row}}_{b,M}=0\), and applying the scalar projection
+  gives \(S_{b,M}=0\).  The zero truncation row is then compatible with the
+  defining equations of
+  Definition~\ref{defn:finite-window-graph-array}.
+
+  For genuine seeds and for nonzero added bracket rows, the displayed
+  formulas are not consequences of the cutoff alone; they are the required
+  decompositions of the projected normalized row values in the chosen
+  lower-window row basis.  Applying
+  \(\pi_{N,P}\pi_{M,N}=\pi_{M,P}\) gives the displayed cocycle equations.
+  Conversely, those equations are exactly the statement that the supplied
+  matrices define a compatible finite-window row system.
+\end{proof}
+
+\begin{prop}[Projection formulas for the \(u\), \(v\), and \(q\) rows]\label{prop:projection-defined-uvq-truncation-data}
+  Work in a larger finite-window graph package in the local
+  \(\R^2_{\mathrm{top}}\times\C^2_{\mathrm{hol}}\) full-equivariant marked
+  branch.  Fix \(M\geq N\).  Suppose the package supplies ordered
+  lower-window row bases, or equivalently row presentations with chosen
+  coordinate maps, for the following three finite-dimensional spans:
+  \[
+  \begin{aligned}
+    \mathcal U_M
+      &=
+      \operatorname{span}\{\mathbf K^M_\Gamma\}_{\Gamma\in
+      \mathcal G^{\mathrm{gen}}_{2,M}},
+      \qquad
+      \mathbf K^M_\Gamma=\varepsilon_\Gamma K^M_\Gamma,\\
+    \mathcal V_M
+      &=
+      \operatorname{span}\{\mathbf E^M_{\Gamma,\nu}\}_{\Gamma,\nu},
+      \qquad
+      \mathbf E^M_{\Gamma,\nu}
+        =
+      -\varepsilon^{\mathrm{CE}}_{\Gamma,\nu}
+      K^M_\Gamma(\zeta_{M,\nu}),\\
+    \mathcal B_M
+      &=
+      \operatorname{span}\{\mathbf B^M_{\beta_1,\beta_2}\}_{\beta_i\notin
+      \{\alpha_{\mathrm{sc}},\alpha_{11}\}},
+      \qquad
+      \mathbf B^M_{\beta_1,\beta_2}
+        =
+      \frac12\varepsilon^M_{\beta_1,\beta_2}
+      \{K^M_{\beta_1},K^M_{\beta_2}\}_{\hbar,M}.
+  \end{aligned}
+  \]
+  Assume these spans are projection-closed:
+  \[
+    \pi_{M,N}\mathcal U_M\subset\mathcal U_N,\qquad
+    \pi_{M,N}\mathcal V_M\subset\mathcal V_N,\qquad
+    \pi_{M,N}\mathcal B_M\subset\mathcal B_N,
+  \]
+  and that \(\pi_{M,N}\) is the chain and BV-bracket projection on the
+  chosen finite-window subcomplex:
+  \[
+    \pi_{M,N}d_M=d_N\pi_{M,N},
+    \qquad
+    \pi_{M,N}\{x,y\}_{\hbar,M}
+      =
+    \{\pi_{M,N}x,\pi_{M,N}y\}_{\hbar,N}
+  \]
+  for the rows under consideration.
+
+  Then the missing entries isolated above are defined by coordinates of
+  finite-window projection:
+  \[
+    \pi_{M,N}\mathbf K^M_\Gamma
+      =
+    \sum_{\Gamma'}
+      u^{M,N}_{\Gamma,\Gamma'}\mathbf K^N_{\Gamma'},
+  \]
+  \[
+    \pi_{M,N}\mathbf E^M_{\Gamma,\nu}
+      =
+    \sum_{\Gamma',\nu'}
+      v^{M,N}_{\Gamma,\nu;\Gamma',\nu'}
+      \mathbf E^N_{\Gamma',\nu'},
+  \]
+  and
+  \[
+    \pi_{M,N}\mathbf B^M_{\beta_1,\beta_2}
+      =
+    \sum_{\beta'_1,\beta'_2}
+      q^{M,N}_{\beta_1,\beta_2;\beta'_1,\beta'_2}
+      \mathbf B^N_{\beta'_1,\beta'_2}.
+  \]
+  These equations are the definitions of \(u^{M,N}\), \(v^{M,N}\), and
+  \(q^{M,N}\) relative to the chosen lower-window coordinates.  If the
+  displayed lower-window families are honest bases, the entries are unique.
+  If the package supplies only a spanning family with relations, the
+  coordinates are an additional presentation datum; without it there is no
+  canonical matrix entry.
+
+  The \(u\)-entries also transport the differential rows:
+  \[
+    \pi_{M,N}(\varepsilon_\Gamma d_MK^M_\Gamma)
+      =
+    \sum_{\Gamma'}
+      u^{M,N}_{\Gamma,\Gamma'}\,
+      \varepsilon_{\Gamma'}d_NK^N_{\Gamma'}.
+  \]
+  This is just the first coordinate equation after applying
+  \(d_N\pi_{M,N}=\pi_{M,N}d_M\).
+
+  For the bracket rows there is a useful factorized form.  Suppose the
+  added nonzero order-\(1\) rows have transport
+  \[
+    \pi_{M,N}K^M_\beta
+      =
+    \sum_{\eta}r^{M,N}_{\beta,\eta}K^N_\eta,
+    \qquad
+    \eta\notin\{\alpha_{\mathrm{sc}},\alpha_{11}\},
+  \]
+  and write the lower-window ordered raw bracket reduction as
+  \[
+    \frac12\{K^N_{\eta_1},K^N_{\eta_2}\}_{\hbar,N}
+      =
+    \sum_{\beta'_1,\beta'_2}
+      \Theta^N_{\eta_1,\eta_2;\beta'_1,\beta'_2}
+      \mathbf B^N_{\beta'_1,\beta'_2}.
+  \]
+  Then
+  \[
+    q^{M,N}_{\beta_1,\beta_2;\beta'_1,\beta'_2}
+      =
+    \varepsilon^M_{\beta_1,\beta_2}
+    \sum_{\eta_1,\eta_2}
+      r^{M,N}_{\beta_1,\eta_1}
+      r^{M,N}_{\beta_2,\eta_2}
+      \Theta^N_{\eta_1,\eta_2;\beta'_1,\beta'_2}.
+  \]
+  If the lower package retains all ordered normalized bracket rows and no
+  further row relation, then
+  \[
+    \Theta^N_{\eta_1,\eta_2;\beta'_1,\beta'_2}
+      =
+    \frac{
+      \delta_{\eta_1,\beta'_1}\delta_{\eta_2,\beta'_2}
+    }{\varepsilon^N_{\beta'_1,\beta'_2}},
+  \]
+  and hence
+  \[
+    q^{M,N}_{\beta_1,\beta_2;\beta'_1,\beta'_2}
+      =
+    \frac{\varepsilon^M_{\beta_1,\beta_2}}
+         {\varepsilon^N_{\beta'_1,\beta'_2}}\,
+    r^{M,N}_{\beta_1,\beta'_1}
+    r^{M,N}_{\beta_2,\beta'_2}.
+  \]
+
+  For \(M\geq N\geq P\), these coordinate matrices satisfy
+  \[
+    u^{M,P}_{\Gamma,\Gamma''}
+      =
+    \sum_{\Gamma'}
+      u^{M,N}_{\Gamma,\Gamma'}u^{N,P}_{\Gamma',\Gamma''},
+  \]
+  \[
+    v^{M,P}_{\Gamma,\nu;\Gamma'',\nu''}
+      =
+    \sum_{\Gamma',\nu'}
+      v^{M,N}_{\Gamma,\nu;\Gamma',\nu'}
+      v^{N,P}_{\Gamma',\nu';\Gamma'',\nu''},
+  \]
+  and
+  \[
+    q^{M,P}_{\beta_1,\beta_2;\theta_1,\theta_2}
+      =
+    \sum_{\beta'_1,\beta'_2}
+      q^{M,N}_{\beta_1,\beta_2;\beta'_1,\beta'_2}
+      q^{N,P}_{\beta'_1,\beta'_2;\theta_1,\theta_2}.
+  \]
+
+  Consequently the larger-package order-\(2\) non-scalar residual is a
+  theorem-grade element of the compatible finite-window tower only after
+  the following data are supplied: the genuine seed weights, source-face
+  values, nonzero order-\(1\) rows, all orientation/Koszul/symmetry signs,
+  CE-source transport, lower-window row bases or presentations, scalar-gate
+  vanishing or scalar projections, and the projection-closure identities
+  above.  With this package the obstruction is exactly the class of the
+  resulting row sum in
+  \(H^1(\mathcal K^\bullet_{\mathrm{ns},M}(I),d_{\mathrm{ns},M})\),
+  together with the Roos compatibility class in
+  \(\varprojlim^1 H^0(\mathcal K^\bullet_{\mathrm{ns},M}(I))\).  Without
+  this package the non-scalar QME obstruction is not yet a defined class.
+\end{prop}
+
+\begin{proof}
+  The first three displayed equations are simply the coordinate expansion of
+  the projected normalized row values in the chosen lower-window row bases.
+  Projection-closure is exactly the hypothesis that these coordinates
+  exist.  If the lower rows are linearly independent, the coordinate
+  expansion is unique.  If there are row relations, uniqueness is lost unless
+  the package supplies a presentation or a coordinate splitting.
+
+  The \(d\Gamma\)-row formula follows by applying the chain-map identity to
+  \(\pi_{M,N}\mathbf K^M_\Gamma\).  The \(q\)-formula follows by applying the
+  BV-bracket identity:
+  \[
+  \begin{aligned}
+    \pi_{M,N}\mathbf B^M_{\beta_1,\beta_2}
+      &=
+      \frac12\varepsilon^M_{\beta_1,\beta_2}
+      \{\pi_{M,N}K^M_{\beta_1},
+        \pi_{M,N}K^M_{\beta_2}\}_{\hbar,N}  \\
+      &=
+      \frac12\varepsilon^M_{\beta_1,\beta_2}
+      \sum_{\eta_1,\eta_2}
+      r^{M,N}_{\beta_1,\eta_1}
+      r^{M,N}_{\beta_2,\eta_2}
+      \{K^N_{\eta_1},K^N_{\eta_2}\}_{\hbar,N},
+  \end{aligned}
+  \]
+  and then reducing each lower raw bracket by the matrix \(\Theta^N\).
+  The ordered normalized-row specialization is the case where the lower
+  raw bracket is already one basis row after division by its incidence
+  coefficient.
+
+  The cocycle identities are forced by
+  \(\pi_{N,P}\pi_{M,N}=\pi_{M,P}\).  Expanding first directly from \(M\) to
+  \(P\), and then through \(N\), gives two coordinate expansions of the same
+  projected row in the same lower-window coordinates.  Equality of
+  coordinates gives the three displayed matrix product formulas.  These
+  compatibility identities are precisely the truncation part of
+  Definition~\ref{defn:finite-window-graph-array}.  Once they are supplied,
+  the obstruction criterion is the non-scalar kernel criterion of
+  Definition~\ref{def:app-nonscalar-kernel-row-complex} and
+  Proposition~\ref{prop:finite-window-qme-limit-condition}.
+\end{proof}
+
+\begin{prop}[Finite-row primitive search interface]\label{prop:finite-row-primitive-search-interface}
+  Let \(\mathsf A^{\mathrm{fw}}_{n,M}\) be a valid finite-window graph
+  array at order \(n\), and suppose its scalar gate has vanished:
+  \[
+    \sum_{\alpha\in\mathsf A^{\mathrm{fw}}_{n,M}}S_{\alpha,M}=0.
+  \]
+  Choose an ordered row presentation
+  \[
+    \rho^M_1,\ldots,\rho^M_a
+  \]
+  for the degree-one non-scalar rows retained at this order: graph
+  differentials, CE-source faces, nonzero bracket rows, and the lower
+  counterterm rows.  Write the residual as
+  \[
+    R_{n,M}=\sum_i r^M_i\rho^M_i.
+  \]
+  Choose also an ordered finite list of degree-zero counterterm candidates
+  \[
+    \eta^M_1,\ldots,\eta^M_b\in
+    \mathcal K^0_{\mathrm{ns},M}(I)
+  \]
+  supplied by the same finite package, and write
+  \[
+    d_{\mathrm{ns},M}\eta^M_j=\sum_i A^M_{ij}\rho^M_i.
+  \]
+  Then a counterterm in the supplied candidate span,
+  \(C_{n,M}=\sum_j c_j\eta^M_j\), exists if and only if the finite linear
+  system
+  \[
+    A^M c=-r^M
+  \]
+  is solvable.  If it is not solvable, any covector
+  \(\ell\in{\left(\C^a\right)}^\vee\) satisfying
+  \[
+    \ell A^M=0,\qquad \ell(r^M)\neq0
+  \]
+  is a certificate that the class of \(R_{n,M}\) is nonzero in the
+  cohomology of the displayed finite row complex.
+
+  For a tower \(M\geq N\), let \(T^{M,N}\) be the row-truncation matrix on
+  the \(\rho\)-presentation and \(P^{M,N}\) the chosen transport matrix on
+  the primitive candidates.  The row block \(T^{M,N}\) is the direct sum of
+  the already computed identity or zero blocks, the \(u\)-block for genuine
+  seed rows, the \(v\)-block for CE-source faces, and the \(q\)-block for
+  nonzero bracket rows.  A compatible primitive search is defined only when
+  \[
+    T^{M,N}r^M=r^N,\qquad
+    T^{M,N}A^M=A^N P^{M,N}.
+  \]
+  After windowwise solutions \(c_M\) have been chosen, the remaining
+  compatibility obstruction is the Roos class represented by
+  \[
+    \bigl[P^{M,N}c_M-c_N\bigr]\in
+    H^0(\mathcal K^\bullet_{\mathrm{ns},N}(I)).
+  \]
+  Thus the primitive search has three gates, in this order: scalar gate,
+  fixed-window linear solvability, and Roos \(\varprojlim^1\)
+  compatibility.  The last gate is not reached when a fixed-window
+  \(H^1\)-obstruction is already certified by such a covector \(\ell\).
+\end{prop}
+
+\begin{proof}
+  Once the scalar gate vanishes, the residual lies in the non-scalar kernel
+  complex.  Restricting the possible counterterm to the supplied degree-zero
+  span turns the equation
+  \(d_{\mathrm{ns},M}C_{n,M}=-R_{n,M}\) into the displayed matrix equation.
+  Failure of solvability is equivalent to \(-r^M\notin\operatorname{im}A^M\).
+  In finite dimension this is certified by a linear functional annihilating
+  \(\operatorname{im}A^M\) and not annihilating \(r^M\), exactly as written.
+
+  The truncation identities say that the row residual and the boundaries of
+  candidate primitives commute with finite-window projection.  The computed
+  blocks are those of
+  Propositions~\ref{prop:computed-finite-window-truncation-matrices}
+  and~\ref{prop:projection-defined-uvq-truncation-data}.  If \(c_M\) and \(c_N\)
+  solve the two fixed-window equations, then
+  \(P^{M,N}c_M-c_N\) is closed in degree zero by
+  \(T^{M,N}A^M=A^N P^{M,N}\) and \(T^{M,N}r^M=r^N\).  Its cohomology class is
+  the Roos \(1\)-cocycle of
+  Proposition~\ref{prop:finite-window-qme-limit-condition}.
+\end{proof}
+
+\begin{prop}[Concrete order-three larger-package row]\label{prop:concrete-order-three-larger-package-row}
+  Work in the full-equivariant marked branch with \(V=\C^{N|N}\), and let
+  \(M\geq3\).  Enlarge the minimal finite-window package by one Hom-valued
+  CE-source face row
+  \[
+    \theta_3=\mathrm{CE}(\Theta_3,\nu_3),
+    \qquad |\Theta_3|_\hbar=3,
+  \]
+  where \(\Theta_3\) is a genuine marked Costello seed, not a
+  scalar-contact closure composite and not a bracket row.  The row data are
+  as follows.
+
+  The graph type and order are
+  \[
+    \tau_{\theta_3}=\mathrm{CE},\qquad |\theta_3|_\hbar=3.
+  \]
+  Its finite labels are
+  \[
+  \begin{aligned}
+    e_{\mathrm{pp}}&:\quad
+      P_{\epsilon,L}^{w,M},\quad
+      h_{2,1}=z_1^2z_2,\ \rho_{2,1},\\
+    e_{\mathrm{ct}}&:\quad
+      \Delta_{\epsilon,L}^{w,M},\quad
+      h_{1,1}=z_1z_2,\ \rho_{1,1},\\
+    e_{\mathrm{W}}&:\quad
+      E_{\mathrm{Weyl}},\quad
+      z_1^2,\ z_2
+  \end{aligned}
+  \]
+  with \(B_\theta\in\mathcal D^{\mathrm{reg}}_c(I)\) on the cotangent
+  external leg.  The vertex labels are
+  \[
+    u_{a(t)dt\otimes z_1^2},\qquad
+    u_{b(t)dt\otimes z_2},\qquad
+    c_{B_\theta,\rho_{2,1}},\qquad
+    I^w_{0,M},\qquad
+    W^{R,M}_{\Theta_3,L,w}(B^\Theta_\bullet).
+  \]
+  The marker tensor is a full
+  \(\lie{gl}(N|N)\)-equivariant signed Brauer marker
+  \[
+    \mathfrak m_{\theta_3}\in
+    \mathcal M^{\mathrm{full}}(\C^{N|N}),
+    \qquad
+    \operatorname{Str}_{\mathrm{cyc}}(\mathfrak m_{\theta_3})=0.
+  \]
+  Choose the source-face coefficient
+  \[
+    d_{\mathrm{CE}}\zeta_M
+      =
+    +\zeta_{M,\nu_3}+\text{other faces}
+  \]
+  on the \(\Theta_3\)-component.  Since the kernel has degree zero, the
+  incidence sign of this CE row in
+  \(-\kappa^M_{\mathcal G,w,I}(d_{\mathrm{CE}}\zeta_M)\) is \(-1\).
+
+  Write
+  \[
+    K^M_{\Theta_3}
+      =
+    W^{R,M}_{\Theta_3,L,w}(B^\Theta_\bullet).
+  \]
+  The row value is the nonzero symbolic local functional
+  \[
+    R^{\mathrm{row}}_{\theta_3,M}
+      =
+    -K^M_{\Theta_3}(\zeta_{M,\nu_3})
+      =:\mathsf E_{\theta_3,M}\neq0.
+  \]
+  Its scalar gate is
+  \[
+    S_{\theta_3,M}
+      =
+    \widehat\sigma_{\mathrm{sc},M}(\mathsf E_{\theta_3,M})=0.
+  \]
+  Indeed, the row lies in the full-equivariant marked habitat, so
+  Theorem~\ref{thm:app-full-equivariant-marked-shadow-vanishing} kills its
+  scalar projection; also the displayed Weyl half-edge has
+  \(\omega(z_1^2,z_2)=0\).
+
+  The class-forming closure check is part of the row datum:
+  \[
+    d_{\mathrm{ns},M}\mathsf E_{\theta_3,M}=0.
+  \]
+  If this equation is not supplied, the row is not a valid obstruction row
+  and no \(H^1\)-class is formed.  With it supplied, the row defines
+  \[
+    \mathfrak o^{\mathrm{ns}}_{\theta_3,M}
+      =
+    [\mathsf E_{\theta_3,M}]
+      \in
+    H^1\!\left(
+      \mathcal K^\bullet_{\mathrm{ns},M}(I),d_{\mathrm{ns},M}
+    \right).
+  \]
+
+  The truncation matrix is explicit.  For \(M\geq N\),
+  \[
+    \pi_{M,N}\mathsf E_{\theta_3,M}
+      =
+    \begin{cases}
+      \mathsf E_{\theta_3,N}, & N\geq3,\\
+      0, & N<3,
+    \end{cases}
+  \]
+  hence
+  \[
+    t^{M,N}_{\theta_3\theta_3}=1\quad(N\geq3),\qquad
+    t^{M,N}_{\theta_3\alpha'}=0\quad(\alpha'\neq\theta_3),
+  \]
+  and every entry from \(\theta_3\) is zero for \(N<3\).  These entries
+  satisfy \(t^{M,P}=t^{M,N}t^{N,P}\).
+
+  Therefore this larger-package row does not vanish as a local-functional
+  cochain, but its scalar gate vanishes.  It is an explicit symbolic
+  obstruction datum.  A fixed-window order-three counterterm exists
+  precisely when
+  \[
+    \mathfrak o^{\mathrm{ns}}_{\theta_3,M}=0,
+    \qquad
+    d_M C_{\theta_3,M}=-\mathsf E_{\theta_3,M}
+  \]
+  for some \(C_{\theta_3,M}\in\mathcal K^0_{\mathrm{ns},M}(I)\).  No such
+  primitive is supplied by this row, so the manuscript may name the class
+  but may not claim the larger order-three QME branch is solved.
+\end{prop}
+
+\begin{prop}[\(\theta_3\) finite-row obstruction certificate]\label{prop:theta-three-finite-row-obstruction}
+  Keep the one-row order-three package of
+  Proposition~\ref{prop:concrete-order-three-larger-package-row}.  In the
+  finite row complex actually supplied there, set
+  \[
+    \mathcal K^0_{\theta_3,M}=0,\qquad
+    \mathcal K^1_{\theta_3,M}=\C\mathsf E_{\theta_3,M},\qquad
+    d_{\theta_3,M}=0,
+  \]
+  and take residual \(R_{\theta_3,M}=\mathsf E_{\theta_3,M}\).  The scalar
+  gate has already vanished:
+  \[
+    \widehat\sigma_{\mathrm{sc},M}(\mathsf E_{\theta_3,M})=0.
+  \]
+  The primitive-search matrix is the \(1\times0\) zero matrix and the target
+  vector is \(-\mathsf E_{\theta_3,M}\).  Hence the equation
+  \(A^M c=-r^M\) has no solution in the displayed finite row complex.
+  The covector
+  \[
+    \ell_{\theta_3}(\mathsf E_{\theta_3,M})=1
+  \]
+  annihilates \(\operatorname{im}d_{\theta_3,M}=0\) and satisfies
+  \(\ell_{\theta_3}(R_{\theta_3,M})=1\).  Therefore
+  \[
+    [\mathsf E_{\theta_3,M}]\neq0
+    \quad\text{in}\quad
+    H^1(\mathcal K^\bullet_{\theta_3,M}).
+  \]
+  This is an exact obstruction statement for the finite row subcomplex
+  presently supplied.  It does not exclude a primitive in a larger
+  local-functional complex.  To heal the row one must add either a
+  degree-zero candidate \(C_{\theta_3,M}\) with
+  \(d_{\mathrm{ns},M}C_{\theta_3,M}=-\mathsf E_{\theta_3,M}\), or additional
+  Hom-valued companion rows whose sum changes the residual vector.
+
+  If such a candidate \(C_{\theta_3,M}\) is supplied and truncates by
+  \[
+    \pi_{M,N}C_{\theta_3,M}=C_{\theta_3,N}\quad(N\geq3),
+    \qquad
+    \pi_{M,N}C_{\theta_3,M}=0\quad(N<3),
+  \]
+  then the fixed-window search is solved and the Roos
+  \(\varprojlim^1\)-class of this one-row tower is zero.  If the
+  truncation identity fails, the residual fixed-window obstruction is gone
+  but the Roos class is represented by
+  \[
+    [\pi_{M,N}C_{\theta_3,M}-C_{\theta_3,N}]
+    \in H^0(\mathcal K^\bullet_{\mathrm{ns},N}(I)).
+  \]
+  For the minimal order-two full-equivariant rows and for bracket rows
+  containing \(\alpha_{\mathrm{sc}}\) or \(\alpha_{11}\), the same primitive
+  search has residual vector \(0\), so the zero counterterm is the unique
+  supplied solution and its Roos class is zero.
+\end{prop}
+
+\begin{proof}
+  This is Proposition~\ref{prop:finite-row-primitive-search-interface}
+  applied to the one-row presentation.  Since no degree-zero row is supplied,
+  the image of the finite differential is zero.  The residual vector is the
+  basis vector \(\mathsf E_{\theta_3,M}\), so the displayed covector is a
+  cokernel certificate.  The Roos statement is the same proposition applied
+  after a hypothetical primitive has been added.  The minimal order-two and
+  zero-bracket rows have zero residual before cohomology, hence the zero
+  primitive is compatible under truncation.
+\end{proof}
+
+\begin{prop}[\(\theta_3\) payload acceptance gate]\label{prop:theta-three-payload-acceptance-gate}
+  Keep the row \(\theta_3=\mathrm{CE}(\Theta_3,\nu_3)\) and the notation of
+  Propositions~\ref{prop:concrete-order-three-larger-package-row}
+  and~\ref{prop:theta-three-finite-row-obstruction}.  A proposed
+  degree-zero healing payload for this row is accepted by the finite-row
+  theorem only after the row array supplies one of the following two
+  primitive entries.
+  \begin{enumerate}[label=(P\arabic*)]
+    \item A CE-ancestor entry
+      \[
+        \eta_{\theta_3,M},\qquad
+        d_{\mathrm{CE}}\eta_{\theta_3,M}=\zeta_{M,\nu_3},
+      \]
+      together with the Hom-valued Bianchi and companion-face terms needed
+      to prove
+      \[
+        C^{\mathrm{CE}}_{\theta_3,M}
+          =
+        K^M_{\Theta_3}(\eta_{\theta_3,M})
+        \in\mathcal K^0_{\mathrm{ns},M}(I),
+        \qquad
+        d_{\mathrm{ns},M}C^{\mathrm{CE}}_{\theta_3,M}
+          =
+        -\mathsf E_{\theta_3,M}.
+      \]
+
+    \item A local counterterm entry
+      \(C^{\mathrm{ct}}_{\theta_3,M}\in
+      \mathcal K^0_{\mathrm{ns},M}(I)\), with its locality proof, scalar
+      projection, and differential expansion, satisfying
+      \[
+        d_{\mathrm{ns},M}C^{\mathrm{ct}}_{\theta_3,M}
+          =
+        -\mathsf E_{\theta_3,M}.
+      \]
+  \end{enumerate}
+  Equivalently, in the ordered one-row presentation
+  \[
+    \rho^M_1=\mathsf E_{\theta_3,M},\qquad r^M=(1),
+  \]
+  the supplied candidate column \(C_{\theta_3,M}\) must have boundary-matrix
+  coefficient
+  \[
+    A^M_{\theta_3,C}=-1,
+    \qquad
+    d_{\mathrm{ns},M}C_{\theta_3,M}
+      =
+    -\mathsf E_{\theta_3,M}.
+  \]
+  A row-data payload with no displayed differential entry, or with any
+  coefficient other than \(-1\) for the named candidate, is not this
+  accepted payload; it must first be replaced by an explicitly supplied
+  candidate whose differential column is the one above.
+
+  The scalar and tower gates are part of the same datum:
+  \[
+    \widehat\sigma_{\mathrm{sc},M}(C_{\theta_3,M})=0,
+    \qquad
+    \pi_{M,N}C_{\theta_3,M}=
+    \begin{cases}
+      C_{\theta_3,N}, & N\geq3,\\
+      0, & N<3.
+    \end{cases}
+  \]
+  With the row transport
+  \(T^{M,N}_{\theta_3\theta_3}=1\) for \(N\geq3\) and \(0\) for
+  \(N<3\), these equations give
+  \[
+    T^{M,N}A^M=A^N P^{M,N},
+    \qquad
+    [P^{M,N}c_M-c_N]=0
+    \quad\text{for the solution }c_M=1.
+  \]
+  Thus such a payload kills the fixed-window row and has zero Roos
+  compatibility class.  The present manuscript data do not contain this
+  payload: in the supplied one-row complex \(K^0_{\theta_3,M}=0\), so
+  Proposition~\ref{prop:theta-three-finite-row-obstruction} remains the
+  active claim.
+
+  A complete companion-face table is a different gate.  It does not supply a
+  primitive.  Instead it replaces the one-face residual by a full
+  CE-source-face row sum
+  \[
+    \sum_{\nu\in F_{\Theta_3,M}}
+      R^{\mathrm{row}}_{\mathrm{CE}(\Theta_\nu,\nu),M},
+    \qquad
+    \nu_3\in F_{\Theta_3,M},
+  \]
+  whose \(\nu_3\)-summand is \(\mathsf E_{\theta_3,M}\).  Such a table is
+  accepted only if it supplies every face, every CE coefficient, every
+  scalar gate, the \(v^{M,N}\)-truncation matrices with their cocycle
+  identity, and the codimension-two closure table, and if
+  \[
+    \sum_{\nu\in F_{\Theta_3,M}}
+      R^{\mathrm{row}}_{\mathrm{CE}(\Theta_\nu,\nu),M}=0,
+    \qquad
+    \sum_{\nu\in F_{\Theta_3,M}}
+      S_{\mathrm{CE}(\Theta_\nu,\nu),M}=0.
+  \]
+  The current one-face table is only an interface for this possibility: its
+  residual is \(\mathsf E_{\theta_3,M}\), not zero.  Hence it does not solve
+  the \(\theta_3\) row and does not form a primitive Roos class.  The first
+  source-algebraic companion table containing \(\nu_3\) is recorded in
+  Theorem~\ref{thm:theta-three-companion-face-obstruction}; it produces an
+  obstruction datum, not a cancellation theorem.
+\end{prop}
+
+\begin{proof}
+  For a primitive payload, apply
+  Proposition~\ref{prop:finite-row-primitive-search-interface} with
+  degree-one basis \(\rho^M_1=\mathsf E_{\theta_3,M}\) and residual vector
+  \(r^M=(1)\).  The equation \(A^M c=-r^M\) is solved by the supplied
+  candidate with \(c=1\) exactly when the candidate column is
+  \(A^M_{\theta_3,C}=-1\).  The CE-ancestor and local-counterterm
+  alternatives are precisely two ways of producing such a degree-zero
+  column; without the displayed target differential, scalar projection, and
+  support proof, the finite row complex has no boundary matrix entry to use.
+
+  The truncation assertion is the identity/zero transport already attached
+  to the row \(\mathsf E_{\theta_3,M}\).  With the same identity/zero rule
+  for \(C_{\theta_3,M}\), the matrix equation \(T A=A P\) is tautological:
+  above degree \(3\) it reads \((-1)=(-1)\), and below degree \(3\) both
+  sides are \(0\).  The chosen coefficients \(c_M=1\) are therefore
+  compatible, so the Roos representative vanishes.
+
+  For a companion-face table no degree-zero candidate is chosen.  The
+  residual vector itself is replaced by the signed row sum of all CE-source
+  faces.  The finite-row theorem can test that new row sum only after the
+  table supplies its scalar gates, truncation coordinates, and
+  codimension-two closure data.  If the signed sum is not zero, the row
+  remains a residual; if it is zero, cancellation occurs before the
+  primitive search and no primitive Roos class is formed.
+\end{proof}
+
+\begin{thm}[\(\theta_3\) companion-face construction obstruction]\label{thm:theta-three-companion-face-obstruction}
+  Work in the order-three full-equivariant marked branch of
+  Proposition~\ref{prop:concrete-order-three-larger-package-row}, and put
+  \(H_{p,q}=z_1^pz_2^q\).  Consider the two-\(u\) source-algebra ancestor
+  \[
+    \zeta^0_M=u_{a,H_{1,0}}u_{b,H_{0,1}},
+    \qquad
+    [H_{1,0},H_{2,1}]=H_{2,0}.
+  \]
+  Its monomial CE differential is the first source-algebraic table of the
+  same external shape whose source faces contain the displayed
+  \(\nu_3\)-row
+  \(u_{a,H_{2,0}}u_{b,H_{0,1}}c_{B_\theta,\rho_{2,1}}\).  After truncation
+  to Hamiltonian degree \(\leq3\), removal of constants, and cancellation of
+  the two \(\rho_{1,1}\)-terms, the nonzero candidate face set is the
+  following eight-face set.  With
+  \[
+    E^M_\nu=-K^M_{\Theta_3}(\zeta_{M,\nu}),
+    \qquad
+    E^M_{\nu_3}=\mathsf E_{\theta_3,M},
+  \]
+  the table is
+  \[
+  \begin{array}{c|c|l|l}
+    \nu & \epsilon^{\mathrm{CE}}_{\Theta_3,\nu}
+      & \zeta_{M,\nu} & \epsilon^{\mathrm{CE}}_{\Theta_3,\nu}E^M_\nu \\
+    \hline
+    \nu_{02} & +2
+      & u_{a,H_{0,1}}u_{b,H_{0,1}}c_{B_\theta,\rho_{0,2}}
+      & 2E^M_{\nu_{02}} \\
+    \nu_{20} & -2
+      & u_{a,H_{1,0}}u_{b,H_{1,0}}c_{B_\theta,\rho_{2,0}}
+      & -2E^M_{\nu_{20}} \\
+    \nu_{03} & +3
+      & u_{a,H_{0,2}}u_{b,H_{0,1}}c_{B_\theta,\rho_{0,3}}
+      & 3E^M_{\nu_{03}} \\
+    \nu_{12}^{(1)} & +2
+      & u_{a,H_{1,1}}u_{b,H_{0,1}}c_{B_\theta,\rho_{1,2}}
+      & 2E^M_{\nu_{12}^{(1)}} \\
+    \nu_{12}^{(2)} & -1
+      & u_{a,H_{1,0}}u_{b,H_{0,2}}c_{B_\theta,\rho_{1,2}}
+      & -E^M_{\nu_{12}^{(2)}} \\
+    \nu_3=\nu_{21}^{(1)} & +1
+      & u_{a,H_{2,0}}u_{b,H_{0,1}}c_{B_\theta,\rho_{2,1}}
+      & \mathsf E_{\theta_3,M} \\
+    \nu_{21}^{(2)} & -2
+      & u_{a,H_{1,0}}u_{b,H_{1,1}}c_{B_\theta,\rho_{2,1}}
+      & -2E^M_{\nu_{21}^{(2)}} \\
+    \nu_{30} & -3
+      & u_{a,H_{1,0}}u_{b,H_{2,0}}c_{B_\theta,\rho_{3,0}}
+      & -3E^M_{\nu_{30}}
+  \end{array}
+  \]
+  Hence the source-algebraic companion residual is
+  \[
+  \begin{aligned}
+    R^{\mathrm{cand}}_{\Theta_3,M}
+      ={}&2E^M_{\nu_{02}}-2E^M_{\nu_{20}}
+          +3E^M_{\nu_{03}}+2E^M_{\nu_{12}^{(1)}}
+          -E^M_{\nu_{12}^{(2)}}\\
+       &+\mathsf E_{\theta_3,M}
+          -2E^M_{\nu_{21}^{(2)}}-3E^M_{\nu_{30}} .
+  \end{aligned}
+  \]
+  This expression is the exact residual of the attempted companion route.
+  It is not known to be zero.
+
+  The induced source-face transport is the diagonal cutoff
+  \[
+    v^{M,N}_{\nu;\nu'}
+      =
+    \begin{cases}
+      1,&\nu=\nu'\ \text{and}\ d(\nu)\leq N,\\
+      0,&\text{otherwise},
+    \end{cases}
+  \]
+  where \(d(\nu_{02})=d(\nu_{20})=2\) and the other six faces have
+  degree \(3\).  It satisfies the cocycle identity
+  \(v^{M,P}=v^{M,N}v^{N,P}\).  For \(N=2\), however, the transported
+  residual is
+  \[
+    \pi_{M,2}R^{\mathrm{cand}}_{\Theta_3,M}
+      =
+    2E^2_{\nu_{02}}-2E^2_{\nu_{20}}.
+  \]
+  Thus even a fixed-window cancellation at \(M\geq3\) would not give a
+  theorem-grade compatible tower unless the lower-window identity
+  \(E^2_{\nu_{02}}=E^2_{\nu_{20}}\) is proved in the chosen row basis, or
+  the lower-window row presentation is changed and its \(v\)-matrix is
+  recomputed.
+
+  Consequently the companion route is a construction/obstruction theorem
+  with the following exact missing marked Costello datum:
+  \[
+    \left(
+      d_{\mathrm{CE}}\zeta_M,\,
+      \epsilon^{\mathrm{CE}}_{\Theta_3,\nu},\,
+      K^M_{\Theta_3}(\zeta_{M,\nu}),\,
+      \mu_\nu,\,
+      v^{M,N}_{\nu;\nu'},\,
+      \mathcal C^{(2)}_{\nu,\nu'}
+    \right)_{\nu,\nu'} .
+  \]
+  Here \(\mu_\nu\) is the marked output and marker-transport entry, and
+  \(\mathcal C^{(2)}_{\nu,\nu'}\) is the codimension-two source-face
+  incidence/weight table: the two orders of each pair of boundary
+  operations, the output graph, the orientation/Koszul coefficient, the
+  transported marker, and the resulting renormalized row coordinate in the
+  declared degree-one basis.  Until this table is supplied and proves both
+  \(R^{\mathrm{cand}}_{\Theta_3,M}=0\) and its transported lower-window
+  identities, the current theorem surface remains the one-row obstruction
+  of Proposition~\ref{prop:theta-three-finite-row-obstruction}.  No
+  companion cancellation and no primitive counterterm is claimed.
+\end{thm}
+
+\begin{proof}
+  The Poisson rule
+  \([H_{a,b},H_{r,s}]=(as-br)H_{a+r-1,b+s-1}\) gives the displayed
+  source-algebra faces from the differential of the two \(u\)-factors
+  against the current label.  In degree \(\leq3\), constants are removed by
+  the Hamiltonian quotient and the two \(\rho_{1,1}\)-faces have opposite
+  coefficients, so the eight listed terms remain.  Applying the row
+  convention
+  \(R^{\mathrm{row}}_{\mathrm{CE}(\Theta_3,\nu),M}
+  =\epsilon^{\mathrm{CE}}_{\Theta_3,\nu}E^M_\nu\) gives the signed residual
+  formula, with the \(\nu_3\)-summand equal to
+  \(\mathsf E_{\theta_3,M}\).
+
+  The diagonal transport is just finite-window projection on the Hamiltonian
+  degree of the \(c\)-label.  Such diagonal cutoffs compose, proving the
+  cocycle identity.  Projecting to \(N=2\) deletes every degree-three face
+  and leaves exactly the two degree-two summands.  Therefore the lower-window
+  residual is \(2E^2_{\nu_{02}}-2E^2_{\nu_{20}}\).
+
+  The passage from this source-algebra table to a Costello cancellation
+  theorem is precisely the missing marked incidence/weight computation.
+  Source coefficients alone do not determine the renormalized graph weights,
+  marker transports, codimension-two closure signs, or lower-window row
+  coordinates.  Those entries are the displayed missing datum.  Without
+  them, Definition~\ref{defn:finite-window-graph-array} supplies no zero
+  residual vector, and Proposition~\ref{prop:finite-row-primitive-search-interface}
+  still sees the current one-row obstruction.
+\end{proof}
+
+\begin{thm}[Actual finite-window non-scalar decision datum]\label{thm:actual-finite-window-nonscalar-decision-datum}
+  Fix a finite-window graph/QME package
+  \((I,w,M,\mathcal G_M)\), and fix the labelled CE cycle
+  \(\zeta_M\) on which the curvature is evaluated.  Write
+  \(K^M_{\Gamma}\) for the component of
+  \(\kappa^M_{\mathcal G,w,I}\) attached to a graph
+  \(\Gamma\); for the zero-internal-edge component this is
+  \(\kappa^{\mathrm{coef},M}_{\hbar,w,I}\), and for a positive graph it
+  is the renormalized weight \(W^{R,M}_{\Gamma,L,w}\).  If
+  \(|\Gamma|_\hbar\) denotes the \(\hbar\)-order assigned by the finite
+  graph package, then the order-\(n\) graph curvature is
+  \[
+  \begin{aligned}
+    \operatorname{Ob}^{\mathrm{graph}}_{\mathcal G,M}[n](\zeta_M)
+      ={}&[\hbar^n]\Bigl(
+        d_M\kappa^M_{\mathcal G,w,I}(\zeta_M)
+        -\kappa^M_{\mathcal G,w,I}(d_{\mathrm{CE}}\zeta_M)\\
+      &\hspace{3.2cm}
+        +\frac12
+        \sum_{(\zeta_M)}
+        \{\kappa^M_{\mathcal G,w,I}(\zeta'_M),
+          \kappa^M_{\mathcal G,w,I}(\zeta''_M)\}_{\hbar,M}
+      \Bigr)                                                     \\
+      ={}&
+      \sum_{|\Gamma|_\hbar=n}
+        \varepsilon_\Gamma\,d_M K^M_\Gamma
+      -\sum_{|\Gamma'|_\hbar=n}
+        \varepsilon^{\mathrm{CE}}_{\Gamma'}K^M_{\Gamma'}          \\
+      &\quad
+      +\frac12
+      \sum_{|\Gamma_1|_\hbar+|\Gamma_2|_\hbar=n}
+        \varepsilon_{\Gamma_1,\Gamma_2}
+        \{K^M_{\Gamma_1},K^M_{\Gamma_2}\}_{\hbar,M}.
+  \end{aligned}
+  \]
+  The signs are the orientation signs of the supplied finite graph
+  differential and the CE coproduct.  With lower counterterms
+  \(C_{<n,M}\), the cochain tested at order \(n\) is
+  \[
+    R_{n,M}
+      =
+    \operatorname{Ob}^{\mathrm{graph}}_{\mathcal G,M}[n]
+      +[\hbar^n]\left(
+        d_M C_{<n,M}
+        +\frac12\{C_{<n,M},C_{<n,M}\}_{\hbar,M}\right).
+  \]
+  Its scalar gate is
+  \[
+    \mathfrak s_{n,M}=\widehat\sigma_{\mathrm{sc},M}(R_{n,M}).
+  \]
+
+  The first scalar-contact graph whose coefficient is actually computed
+  in the present local model is the one-cross-contraction boundary graph
+  with two Hamiltonian external legs and one open scalar loop.  It has
+  \(\hbar\)-order \(1\).  For a full-equivariant marked boundary
+  generator \(X_{\Gamma,o,\mathfrak m,M}\), the extracted order-one
+  scalar gate is
+  \[
+    \mathfrak s^{\mathrm{mk}}_{1,M}
+      (X_{\Gamma,o,\mathfrak m,M})
+      =
+    \sum_{i:\,r(\beta_i)=1}
+      (-1)^{i-1}
+      \operatorname{Str}_{\mathrm{cyc}}
+        \bigl(\mu_{\beta_i}(\mathfrak m)\bigr)\,
+      \omega(f_{\partial_{\beta_i}\Gamma},
+             g_{\partial_{\beta_i}\Gamma})
+      \gamma_{\mathbf 1}.
+  \]
+  Before the coefficient extraction this is the
+  \(\hbar^1\)-term
+  \(\hbar\,\mathfrak s^{\mathrm{mk}}_{1,M}\).
+  If \(V=\C^{N|N}\) and the markers are full
+  \(\lie{gl}(V)\)-equivariant, then
+  \[
+    \operatorname{Str}_{\mathrm{cyc}}
+      \bigl(\mu_{\beta_i}(\mathfrak m)\bigr)=0
+  \]
+  for every elementary boundary term by
+  Lemma~\ref{lem:app-full-equivariant-cyclic-supertrace}; hence
+  \[
+    \mathfrak s^{\mathrm{mk}}_{1,M}=0.
+  \]
+  This is a scalar-gate vanishing, not a construction of a non-scalar
+  primitive.
+
+  After the scalar gate vanishes, the first non-scalar order is the least
+  \(n_0\) for which the cochain \(R_{n_0,M}\) is defined for the actual
+  graph list and is not already killed by the lower-order choices.  Its
+  class is
+  \[
+    [\mathfrak o^{\mathrm{fw}}_{n_0,M}]
+      =
+    [R_{n_0,M}]
+      \in
+    H^1\bigl(\mathcal Q^\bullet_{\mathcal G,M}(I),d_M\bigr).
+  \]
+  It vanishes exactly when there exists
+  \(C_{n_0,M}\in\mathcal Q^0_{\mathcal G,M}(I)\) with
+  \(d_M C_{n_0,M}=-R_{n_0,M}\).  In a compatible finite-window tower,
+  after choosing any such windowwise primitives, the remaining
+  compatibility obstruction is
+  \[
+    \lambda^{\mathrm{fw}}_{n_0}
+      =
+    \left[
+      \bigl(
+        [\pi_{M+1,M}C_{n_0,M+1}-C_{n_0,M}]
+      \bigr)_M
+    \right]
+      \in
+    \varprojlim\nolimits^1_M
+    H^0\bigl(\mathcal Q^\bullet_{\mathcal G,M}(I)\bigr).
+  \]
+  Thus compatible finite-window counterterms exist precisely when all
+  fixed-window classes \([\mathfrak o^{\mathrm{fw}}_{n_0,M}]\) vanish and
+  \(\lambda^{\mathrm{fw}}_{n_0}=0\).
+
+  The data above are not recoverable from the abstract existence of
+  \(\mathcal G_M\).  To decide \(n_0\), the class
+  \([\mathfrak o^{\mathrm{fw}}_{n_0,M}]\), or the Roos class
+  \(\lambda^{\mathrm{fw}}_{n_0}\), one must supply a valid finite-window
+  coefficient array in the sense of
+  Definition~\ref{defn:finite-window-graph-array}:
+  \[
+    \mathsf A^{\mathrm{fw}}_{n,M}
+  \]
+  whose rows specify graph type, edge labels, vertex labels, marker tensor,
+  incidence coefficient, \(\hbar\)-order, coefficient degree,
+  scalar-contact filtration, scalar-gate term, row curvature value, and
+  truncation coefficients in \(M\).  Without this array the manuscript has
+  only the formal obstruction symbol of
+  Theorem~\ref{thm:finite-window-graph-qme-assembly}; it has no
+  theorem-grade computation of \(n_0\), no proof that
+  \([\mathfrak o^{\mathrm{fw}}_{n_0,M}]=0\), and no defined
+  \(\lambda^{\mathrm{fw}}_{n_0}\).
+\end{thm}
+
+\begin{proof}
+  The first displayed formula is the definition of the convolution
+  curvature in
+  Definition~\ref{def:app-bulk-defect-convolution-habitat}, evaluated on
+  \(\zeta_M\) and then projected to the \(\hbar^n\)-coefficient.  Expanding
+  \(-\kappa d_{\mathrm{CE}}\) and the CE coproduct bracket gives the
+  three graph sums, with exactly the orientation signs supplied by the
+  finite graph package.  Adding the lower counterterm terms gives
+  \(R_{n,M}\), the residual of
+  Theorem~\ref{thm:finite-window-graph-qme-assembly}.
+
+  The order-one scalar-contact computation is
+  Proposition~\ref{prop:app-first-nonidentity-loop-scalar-symbol} applied
+  to each first filtration-lowering marked boundary term of
+  Definition~\ref{def:app-oriented-full-equivariant-marked-boundary-complex}.
+  The full-equivariant marker transport maps preserve the signed Brauer
+  marker span.  Lemma~\ref{lem:app-full-equivariant-cyclic-supertrace}
+  computes the cyclic supertrace of every such output marker as a power
+  of \(\operatorname{sdim}\C^{N|N}=0\), and the empty marker word gives the
+  same zero coefficient.  Therefore the scalar gate vanishes on the
+  full-equivariant marked habitat before any non-scalar cohomology class
+  is formed.
+
+  Once the scalar gate is zero, \(R_{n,M}\) lies in
+  \(\mathcal Q^\bullet_{\mathcal G,M}(I)=
+  \ker\widehat\sigma_{\mathrm{sc},M}\) exactly as in the proof of
+  Theorem~\ref{thm:finite-window-graph-qme-assembly}.  A degree-zero
+  counterterm changes \(R_{n,M}\) by a \(d_M\)-boundary, so the
+  fixed-window solvability criterion is precisely the vanishing of its
+  \(H^1\)-class.  If primitives are chosen window by window, their
+  truncation differences are closed degree-zero cochains; their classes
+  form the standard Roos cocycle computing
+  \(\varprojlim^1_M H^0(\mathcal Q^\bullet_{\mathcal G,M}(I))\).  Vanishing
+  of this class is exactly the condition that the primitives can be
+  adjusted to a compatible family.
+
+  The final assertion is a dependency statement.  The formulas require a
+  finite graph list with order assignment, CE cycle, signs, coproduct
+  decomposition, graph weights, lower counterterms, scalar projection, and
+  truncation maps.  Omitting any of these removes a term from the displayed
+  cochain \(R_{n,M}\), so neither its first nonzero order nor its
+  cohomology class is defined.
+\end{proof}
+
+\begin{rmk}[Scalar-gate boundary]\label{rmk:actual-finite-window-scalar-gate-boundary}
+  In the ordinary scalar-reduced \(\lie{gl}_N\) branch, the same
+  two-Hamiltonian one-cross graph gives the order-one scalar class
+  \(N\,\omega(f,g)\gamma_{\mathbf 1}\), equivalently
+  \(N[\bar c]\gamma_{\mathbf 1}\) in cohomology after extracting the
+  \(\hbar^1\)-coefficient.  In the even block-diagonal marked habitat a
+  single marker
+  \(T=\lambda_0P_{\bar0}+\lambda_1P_{\bar1}\) gives
+  \(N(\lambda_0-\lambda_1)\omega(f,g)\gamma_{\mathbf 1}\).  These vanish
+  only under the corresponding central-character, balanced, or
+  full-equivariant hypotheses; they are not non-scalar counterterms.
+\end{rmk}
 
 \begin{rmk}[Relation to regulator independence]\label{rmk:hadamard-regulator-independence}
   Theorem~\ref{thm:wt-regulator-independence-admissible} proves that,

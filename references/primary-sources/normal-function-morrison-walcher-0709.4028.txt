@@ -1,0 +1,1994 @@
+                                                                                                                      arXiv:0709.4028
+
+
+
+
+                                                                  D-branes and Normal Functions
+
+                                                                     David R. Morrisona,b and Johannes Walcherc
+
+
+
+
+arXiv:0709.4028v1 [hep-th] 26 Sep 2007
+                                                        a
+                                                            Center for Geometry and Theoretical Physics, Duke University,
+                                                                               Durham, NC 27708, USA
+                                                    b
+                                                        Departments of Mathematics and Physics, University of California,
+                                                                            Santa Barbara, CA 93106, USA
+                                                             c
+                                                                 School of Natural Sciences, Institute for Advanced Study,
+                                                                               Princeton, NJ 08540, USA
+
+                                                                                       Abstract
+                                          We explain the B-model origin of extended Picard–Fuchs equations satisfied by the
+                                         D-brane superpotential on compact Calabi–Yau threefolds. Via the Abel–Jacobi map,
+                                         the domainwall tension is identified with a Poincaré normal function—a transversal
+                                         holomorphic section of the Griffiths intermediate Jacobian. Within this formalism,
+                                         we derive the extended Picard–Fuchs equation associated with the mirror of the real
+                                         quintic.
+
+
+
+
+                                         September 2007
+Contents
+
+1 Introduction                                                                           2
+2 Normal Functions and D-branes                                                          5
+  2.1 Normal functions attached to algebraic cycles . . . . . . . . . . . . . .          6
+  2.2 Abel–Jacobi map on the derived category . . . . . . . . . . . . . . . . .          9
+  2.3 Comments on open problems . . . . . . . . . . . . . . . . . . . . . . . .         11
+3 The Real Quintic and its Mirror                                                       13
+  3.1 625 real quintics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   13
+  3.2 The prediction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    14
+  3.3 Matrix factorization . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    15
+  3.4 Intersection Index . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    17
+  3.5 Bundles . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     19
+  3.6 From matrix factorization to curve . . . . . . . . . . . . . . . . . . . .        22
+4 Main Computation                                                                      23
+  4.1 Sketch of computation . . . . . . . . . . . . . . . . . . . . . . . . . . .       24
+  4.2 Resolution of singularities . . . . . . . . . . . . . . . . . . . . . . . . .     25
+  4.3 Inhomogeneous Picard–Fuchs via Griffiths–Dwork . . . . . . . . . . . .            27
+  4.4 Boundary conditions and monodromy . . . . . . . . . . . . . . . . . . .           32
+5 Summary and Conclusions                                                               32
+Acknowledgments                                                                         33
+Appendix                                                                                34
+References                                                                              40
+
+
+1    Introduction
+
+Mirror symmetry is a powerful tool to manipulate physical and mathematical data
+associated with Calabi–Yau manifolds. Soon after the earliest examples of mirror sym-
+metry [1–3], a computation of the special geometry and the enumeration of rational
+curves on the quintic was made by Candelas, de la Ossa, Green and Parkes [4]. The
+computation was explained Hodge theoretically in [5], and the verification of the enu-
+merative predictions was completed in [6, 7]. A physics derivation of mirror symmetry
+from the worldsheet point of view has also been given [8, 9].
+    Meanwhile, D-branes have entered mirror symmetry in a variety of ways. To name
+the most important, Witten showed that for open topological strings, cubic string field
+
+
+                                            2
+theory reduces to ordinary or holomorphic Chern–Simons theory [10]. Kontsevich pro-
+posed to understand mirror symmetry as an equivalence of A∞ -categories [11], whose
+objects were later identified as D-branes. Strominger, Yau and Zaslow used D-branes to
+develop the geometric picture of mirror symmetry as a duality of torus fibrations [12].
+Vafa and various collaborators (beginning with Gopakumar) have shown that BPS
+states of D-branes are extremely useful invariants which carry a lot of physical and
+enumerative information [13]. Douglas has complemented the picture by a general
+formulation of stability conditions on D-brane categories [14] (see also [15]).
+      In the course of these developments, the established theory underlying closed string
+mirror symmetry for Calabi–Yau manifolds—special geometry and Gromov–Witten
+invariants—has played a very useful supporting role. It has, however, not always been
+clear whether D-branes would ultimately be part of the traditional picture or how one
+would derive the closed string story, e.g., from D-brane categories. (This problem was
+posed already in [11]; for some recent work see [16–18].) As a physicist, one feels
+that in some sense, the underlying reason is that A∞ -categories are too big. Since D-
+brane categories are defined off-shell, they carry a lot of redundant, gauge-dependent
+information. With some hindsight, one is led to ask the natural question: What is the
+invariant physical information stored in the derived category?
+      In this paper, we give answers to these questions by picking up the Hodge the-
+oretic considerations. Our main motivation is the recent realization that at least in
+some cases, there is indeed invariant information in the open string sector beyond its
+cohomology. In ref. [19], it was shown that for a certain D-brane configuration on
+the quintic,1 the on-shell value of the superpotential, as a function over closed string
+moduli space, satisfies a differential equation which is an extension of the Picard–Fuchs
+equation which governs closed string mirror symmetry. According to general principles,
+this superpotential makes enumerative predictions in the A-model, which were subse-
+quently verified rigorously in [22]. In this work, we will explain the B-model origin of
+this extended Picard–Fuchs equation. Previous studies of analogous problems in lo-
+cal Calabi–Yau manifolds include [23, 24], whose enumerative predictions were verified
+in [25, 26], and whose differential equations were discussed in [27, 28] (see also [29, 30]).
+      The main idea to derive Picard–Fuchs equations in the context of open strings has
+been implicit in many previous works. Consider for simplicity the case when we are
+wrapping a D5-brane on a curve in some second homology class of our Calabi–Yau
+  1
+      Very similar results appear to hold for many other one-parameter models [20, 21].
+
+
+                                                   3
+manifold. Assume that this class has two isolated holomorphic representatives C+ and
+C− . Choose a three-chain Γ, ∂Γ = C+ − C− connecting those two representatives. C+
+and C− correspond physically to two supersymmetric vacua of an N = 1 supersym-
+metric theory on the brane worldvolume. The tension of a BPS domainwall between
+the two vacua is, T = W+ − W− , equal to the superpotential difference, and given by
+the geometric formula [31]
+                                                      Z
+                         W+ (z) − W− (z) = T (z) =         Ω(z),                   (1.1)
+                                                       Γ
+
+where Ω(z) is the holomorphic three-form as a function of complex structure moduli.
+    The Picard–Fuchs equation, LΠ(z) = 0, is the (in general, system of partial) differ-
+                                              R
+ential equation satisfied by any period Π(z) = Γc Ω(z) of the holomorphic three-form
+over a closed three-cycle, ∂Γc = 0. When applying the Picard–Fuchs operator to a
+chain integral as in (1.1), we will not in general get zero. One type of non-vanishing
+contribution arises as a boundary term, but there are in general also other terms from
+differentiating the chain Γ. The inhomogeneous Picard–Fuchs equation associated with
+C+ − C− is then
+                                    LT (z) = f (z).                                (1.2)
+The general existence of inhomogeneous Picard–Fuchs equations similar to (1.2) has
+been known in the mathematical literature at least as early as [32]. (In dimension
+1, of course, such notions are completely classical.) A fairly recent reference with
+examples worked out in dimension 2 (i.e., for K3 surfaces) is [33]. The main result
+of the present work is a complete and mathematically rigorous derivation of the in-
+homogeneous Picard–Fuchs equation satisfied by T (z) for the B-brane mirror to the
+real quintic. This is to our knowledge the first explicit example of an inhomogeneous
+Picard–Fuchs equation in dimension bigger than 2.
+   The particular form of the inhomogeneous Picard–Fuchs equation for the real quin-
+tic was originally guessed in [19] based on very restrictive monodromy properties that
+its solution should possess. Combined with the results of [22], our derivation puts open
+string mirror symmetry for the real quintic at an equal level with the classical mirror
+theorems on rational curves in Calabi–Yau threefolds.
+   Before doing the computation in section 4 (some details having been deferred to
+the appendix), we will describe in section 2 how normal functions and the variation
+of mixed Hodge structure capture certain invariant information of the open string
+sector. We will not attempt a detailed comparison with the local toric case [27, 28].
+
+                                           4
+It would be very interesting to understand better the relation between those works
+and ours, especially in regard to open string moduli. We also note that the insights
+into the relation between D-branes and normal functions have proven central in the
+recent computation of loop amplitudes in the open topological string using the extended
+holomorphic anomaly equation, see [34].
+    In section 3, we review in a self-contained manner the geometry of the real quintic
+and its mirror. This will help explain some of the original background that led to the
+extended Picard–Fuchs equation. Alternatively, one can view our results in this paper
+as further evidence for the conjectural relation between the real quintic(s) and certain
+objects in the derived category of the mirror quintic. This could be a starting point for
+establishing homological mirror symmetry for the quintic. We present our conclusions
+in section 5.
+
+
+2    Normal Functions and D-branes
+
+The urge to understand the differential equation of [19] in Hodge theoretic terms is
+very natural. In hindsight, it is not even surprising that the correct framework is the
+theory of Poincaré normal functions, applied to Calabi–Yau threefolds. That theory
+was developed by Griffiths [35,32] as integral part of Hodge theory in higher dimension.
+Picard–Fuchs equations play an important role in the variation of Hodge structure and
+have been central to mirror symmetry for closed strings. So one should naturally have
+wondered about the use of normal functions in this context.
+    On the other hand, there are very good reasons to believe that normal functions
+will not be the full story for open string mirror symmetry computations. As is now
+well-accepted, D-branes on Calabi–Yau manifolds can only be fully understood in some
+sophisticated categorical framework. The D-brane superpotential, which is the physical
+observable governed by the differential equation, is realized mathematically in a fairly
+complicated way in the framework of A∞ categories [36, 37]. From this point of view,
+the relevance of classical Hodge theory is not immediate at all.
+    The purpose of this section is to compile the main definitions and theorems pertain-
+ing to normal functions, as well as to explain to the best of our present understanding,
+the relation to the D-brane superpotential. We point out that our main computation in
+section 4 takes this general theory as useful background, but does not strictly speaking
+depend on it.
+
+
+                                           5
+2.1      Normal functions attached to algebraic cycles
+
+For more details on normal functions, we recommend Griffiths’ original papers [35, 32],
+as well as the books [38, 39]. For an introduction to Hodge theory, see [40].
+       Let (HZ2k−1 , F ∗ HC2k−1) be an integral Hodge structure of odd weight 2k − 1. The
+Griffiths intermediate Jacobian is the complex torus
+
+                                                     HC2k−1
+                                  J 2k−1 =                        .                        (2.1)
+                                              F k HC2k−1 ⊕ HZ2k−1
+
+As real torus, J 2k−1 is isomorphic to HR2k−1/HZ2k−1 , and the complex structure on J 2k−1
+arises from the identification H 2k−1 /F k H 2k−1 ∼
+                               C          C       = H 2k−1 as real vector spaces. Now if
+                                                   R
+  2k−1 ∗ 2k−1
+(HZ , F H     ) is an integral variation of Hodge structure of weight 2k −1 over some
+base M, we can consider a relative version of (2.1),
+
+                                                    H2k−1
+                                  J 2k−1 =                       .                         (2.2)
+                                              F k H2k−1 ⊕ HZ2k−1
+
+J 2k−1 → M is known as the Griffiths intermediate Jacobian fibration of the integral
+variation of Hodge structure.
+       A normal function of the variation of Hodge structure is a holomorphic section ν of
+the intermediate Jacobian fibration (2.2) satisfying Griffiths transversality for normal
+functions2
+                                    ∇ν̃ ∈ F k−1H2k−1 ⊗ ΩM ,                                (2.3)
+
+where ν̃ is any lift of ν to H2k−1 . Also, ∇ is the Gauss–Manin connection and ΩM the
+sheaf of differentials on M. It is easy to see that the condition (2.3) is independent of
+the lift. For if ν̃ ′ is another lift, then
+
+                                        ν̃ ′ = ν̃ + ηF + ηZ ,                              (2.4)
+
+where ηF is a section of F k H2k−1 and ηZ is a section of HZ2k−1. The claim follows since
+∇ηZ = 0 and ∇ηF ∈ F k−1 H2k−1 ⊗ ΩM by Griffiths transversality applied to H2k−1 .
+       The variation of Hodge structure of interest in this paper arises from the deforma-
+tion of complex structure of a family Y → M of Calabi–Yau threefolds with typical
+fiber Y . The interesting values of k in this case are k = 1, 2, and 3. The intermediate
+Jacobians for k = 1, J 1 and for k = 3, J 5 are known as the Picard variety and the
+   2
+    We are here omitting the regularity conditions on normal functions that are required when the
+variation of Hodge structure degenerates. Those will play only a minor role in our application.
+
+                                                  6
+Albanese variety respectively. But when Y is simply connected, J 1 = J 5 = 0, and the
+only interesting value is k = 2, 2k − 1 = 3.
+   In the geometric situation, let’s say in dimension n, not necessarily equal to 3, a
+useful source of normal functions are the homologically trivial algebraic cycles. Let C ∈
+                                                                               P
+Z k (Y) be a relative algebraic cycle of codimension k, flat over M, i.e., C =   ni C i is a
+finite integral linear combination of algebraic subsets of Y. This cycle is “homologically
+trivial”, denoted C ∈ Z k (Y)hom if the image of Cm = C ∩ Ym in H 2k (Ym ; Z) is trivial
+for all m ∈ M. (Here, Ym is the fiber of Y → M over m ∈ M, and we are associating
+codimension k cycles with (k, k)-forms via Poincaré duality.)
+   Before defining the normal function, we note that in the geometric situation, we
+have the isomorphism (n := dim(Y ))
+                                                     ∗
+                J 2k−1 (Ym ) = F n−k+1 H 2n−2k+1(Ym ) /H2n−2k−1 (Ym ; Z),             (2.5)
+                                                                            ∗
+which follows from the isomorphism H 2k−1 /F k H 2k−1 ∼
+                                                      = F n−k+1H 2n−2k+1 , and the
+                                                  ∗
+equivalence from Poincaré duality, H 2k−1 (Y ; Z) ∼ = H2n−2k+1 (Y ; Z), given by inte-
+gration.
+   Stepping on (2.5), to define the normal function associated with C, we need to
+specify a map νC : F n−k+1 H2n−2k+1 → OM , defined modulo periods H2n−2k+1 (Y ; Z).
+To this end, for each m ∈ M, we pick a 2n − 2k + 1-chain Γm , such that
+
+                                    ∂Γm = Cm        in Ym ,                           (2.6)
+
+where Cm = C ∩ Ym as a codimension-k cycle. Such a chain exists because Cm is
+homologically trivial, but is ambiguous by closed 2n − 2k + 1 cycles. If we require that
+Γm depend in a continuous fashion on m, the ambiguity is reduced to H2n−2k+1 (Y ; Z).
+   Now given [ω] ∈ F n−k+1 H2n−2k+1 , we can locally on M represent it by a relative
+2n − 2k + 1-form ω ∈ F n−k+1A2n−2k+1 that is closed in the fiber direction and well-
+defined up to the image of dY : F n−k+1A2n−2k → F n−k+1 A2n−2k+1 (this last assertion
+follows from the Dolbeault theorem). We then define
+                                             Z
+                                νC ([ω])m :=   ωm .                                   (2.7)
+                                                    Γm
+
+   Let us check that this is well-defined. If we choose a different representative ω ′ of
+[ω], the difference is          Z                       Z
+                                           ′
+                                         (ωm − ωm ) =          αm ,                   (2.8)
+                                    Γm                   ∂Γm
+
+
+                                                7
+where α ∈ F n−k+1A2n−2k . This vanishes by type considerations since ∂Γm = Cm is
+holomorphic, so Poincaré dual to a (k, k)-form.
+   Finally, we check holomorphicity and transversality. Namely, we analyze the vari-
+ation of (2.7) as m varies to first order in M. If v is a (not necessarily holomorphic)
+complexified tangent vector to M at m, Kodaira–Spencer theory provides us with a
+lift, v ′ , of v to T Y. The differential of (2.7) in the direction of v can be written as
+                                             Z               Z
+                          (dv νC ([ω]))m = −            ′
+                                                 (ωm , v ) +    (∇˜ v ω)m ,              (2.9)
+                                            Cm              Γm
+
+
+where ˜
+      ∇v ω represents ∇v [ω], and ∇ is the Gauss–Manin connection on H2n−2k+1 .
+   To check holomorphicity, we let v be anti-holomorphic and [ω] be a holomorphic
+section of F n−k+1H2n−2k+1 . We then have that ∇v [ω] = 0 in H2n−2k+1 . In fact,
+ ˜ v ω)m = dY (ωm , v ′ ) by Kodaira–Spencer. Thus, (2.9) vanishes, and νC is a holomor-
+(∇
+phic section of J 2k−1 .
+    To show transversality, we take v to be holomorphic. Note that the statement
+                                                                                    ∗
+∇v ν̃C ∈ F k−1H2k−1 is under the isomorphism H 2k−1/F k−1 H 2k−1 ∼
+                                                                 = F n−k+2H 2n−2k+1
+(see (2.5)) equivalent to the assertion that (∇v ν̃C )([ω])m = 0, for [ω] ∈ F n−k+2H2n−2k+1 ,
+                                             ∗
+and where ν̃C is any lift of νC to H2n−2k+1 . By the compatibility of the Gauss–Manin
+connection with Poincaré duality, dv (ν̃C ([ω]))m = (∇v ν̃C )([ω])m + ν̃C (∇v [ω])m , so this
+criterion becomes dν̃C ([ω])m = ν̃C (∇v [ω])m , which is already independent of the lift.
+Now if [ω] ∈ F n−k+2 H2n−2k+1 , (ωm , v ′ ) ∈ F n−k+1H2n−2k , so the first term in (2.9)
+vanishes by type consideration. This implies transversality.
+   We close this subsection with one more definition: The association
+
+                           AJ : Z k (Y)hom → J 2k−1 (Y) ,        C 7→ νC               (2.10)
+
+is known as the Abel–Jacobi map. It contains some useful information about algebraic
+cycles and their algebraic equivalences. The theory is particularly rich for Calabi–Yau
+threefolds (as mentioned above, the interesting value is then k = 2), and led to a lot
+of early results on questions related to holomorphic curves [35, 41, 42]. That subject
+was later revolutionized by mirror symmetry and Gromov–Witten theory. As we will
+try to convey in this article, normal functions are returning to the enterprise as well,
+with promising applications in the context of D-branes and mirror symmetry for open
+strings.
+
+
+
+                                                 8
+2.2     Abel–Jacobi map on the derived category
+
+To explain the relevance of normal functions to D-branes in general, we take as starting
+point Witten’s holomorphic Chern–Simons functional. We denote by Y a (compact)
+Calabi–Yau threefold, E a holomorphic vector bundle over Y , with ∂¯ the Dolbeault
+operator coupled to E. If a ∈ A(0,1) (Y, End(E)) is a (0, 1)-form with values in the
+endomorphisms of E, we define
+                             Z     1                 
+                                            1
+                  ShCS (a) =     Tr a ∧ ¯
+                                        ∂a + a ∧ a ∧ a ∧ Ω,                         (2.11)
+                               Y    2       3
+
+where Ω is the (unique up to scale) holomorphic (3, 0)-form on Y . The functional (2.11)
+was originally proposed in [43], as an expression for the spacetime superpotential in
+the context of the heterotic string. This proposal can be explained on the basis that
+the critical points of (2.11) are precisely those a ∈ A(0,1) (Y, End(E)) for which the
+(0, 2)-part of the curvature vanishes,
+
+                                            ¯ + a ∧ a = 0,
+                                  F (0,2) = ∂a                                      (2.12)
+
+i.e., the deformed operator ∂¯a = ∂¯+a is an alternative Dolbeault operator on E, viewed
+as a differentiable vector bundle on Y . In general ∂¯a will define a different complex
+structure on E.
+      In [10], Witten showed that, in the context of the topological string, the functional
+(2.11) is the target space or string field theory action describing the tree-level dynamics
+of open strings on Y coupled to E (a topological B-brane). This also led to the
+suggestion that holomorphic Chern–Simons should make sense as a quantum theory,
+and to various puzzles related to non-renormalizability of (2.11), appearance of closed
+strings as intermediate states, etc.. The classical theory has been analyzed in depth
+over the years, see [44] for a review. The recent results on open-closed topological
+string [34] can be viewed as giving partial answers to the problems related to the
+quantum theory.
+      Connections of the holomorphic Chern–Simons functional with the theory of normal
+functions have appeared in the mathematical literature in [45, 46], see also [47]. In
+the physics literature, a relation to the Abel–Jacobi map for curves on Calabi–Yau
+threefold was established, e.g., in [48–50, 23]. When our B-brane, instead of being
+specified by a holomorphic vector bundle, is wrapping a holomorphic curve C, it was
+shown in [49, 50, 23] that the dimensional reduction of the holomorphic Chern–Simons
+
+                                              9
+action is nothing but the Abel–Jacobi integral
+                                 Z
+                          S(C) = Ω with ∂Γ = C − C0                                (2.13)
+                                      Γ
+
+viewed as a functional on all possible curves homotopic to some given reference holo-
+morphic curve C0 .
+   Neglecting the dynamics of open strings, the most direct physical interpretation of
+the formulas (2.11) and (2.13), is as the tension of BPS domainwalls connecting the
+background vacuum (∂¯ or C0 ), on the D-brane worldvolume, with some other vacuum,
+corresponding to a non-trivial critical point, a∗ or C∗ , respectively.
+                              
+                              W(a ) − W(0) = S (a )
+                                      ∗              hCS ∗
+                        T =                                                        (2.14)
+                              W(C ) − W(C ) = S(C )
+                                          ∗             0        ∗
+
+It should be clear that, even neglecting open string dynamics, those expressions cannot
+be fully satisfactory for describing the superpotential for an arbitrary B-brane, which
+might be neither a holomorphic vector bundle nor a holomorphic curve in general.
+The algebraic device needed to generalize these formulas to an arbitrary object B in
+D b (Y ) (or some category equivalent to it) is the notion of the algebraic second Chern
+class, calg                                             2
+        2 (B) [51]. It takes values in the Chow group CH (Y ) of algebraic cycles
+of codimension 2, modulo rational equivalence. The image of calg
+                                                             2 (B) in cohomology
+H 4 (Y ; Z) is equal to the ordinary (topological) second Chern class ctop         alg
+                                                                       2 (B), but c2 is
+generally a more refined invariant.
+   The algebraic Chern class satisfies axioms very similar to its topological counterpart.
+In particular, it splits exact triangles in the D-brane category. If
+
+                                                  B                                (2.15)
+                                               B :::
+                                                    ::
+                                                      ::
+                                                        :
+                                                  [1]
+                                      A o                    C
+for three objects, A, B, and C, then
+
+                              calg (A) − calg (B) + calg (C) = 0                   (2.16)
+
+which together with functoriality (and its behavior on holomorphic line bundles) is
+essentially enough to define calg .
+   Using the algebraic second Chern class puts us directly in the situation discussed in
+the previous subsection. When ctop          4
+                               2 (B) = 0 ∈ H (Y ; Z), the algebraic cycle defined by
+
+
+                                                10
+calg       2
+ 2 (B) ∈ CH (Y ) is homologically trivial, and yields a normal function νB = νcalg (B) .
+                                                                                     2
+In particular the formula for the domainwall tension is
+
+                                       T = νB (Ω),                                  (2.17)
+
+where Ω is the same holomorphic three-form as above. It is not hard to see that this
+definition reduces to (2.11) and (2.13) when B is a holomorphic vector bundle or a
+holomorphic curve, respectively.
+      We should emphasize that the second Chern class will certainly not capture all
+the intricacies of the superpotential for a general B-brane on a Calabi–Yau. This will
+require a much more sophisticated analysis, partly along the lines of the cited literature.
+
+2.3     Comments on open problems
+
+Before turning to the applications, we will collect a few more remarks from the general
+theory of normal functions, some of which might prove valuable for further develop-
+ments.
+
+Extension of Hodge structure
+
+Let (HZ2k−1, F ∗ H2k−1 ) be an integral variation of Hodge structure of weight 2k − 1 over
+a base M. Let ν be a normal function. In exercises 1 and 2 in Chapter 7 of [39], it
+is shown that this data can be used to define an extension of Hodge structure to yield
+an integral variation of mixed Hodge structure. At the integral level, this is a locally
+trivial extension
+                            HZ2k−1 → (HZ = HZ2k−1 ⊕ Z) → Z.                         (2.18)
+
+The weight filtration is given by W2k−2 HZ = 0, W2k−1 HZ = HZ2k−1 , W2k = HZ , while
+the Hodge filtration on H = (HZ2k−1 ⊕Z)⊗OM is such that it reduces to the given Hodge
+filtration F ∗ H2k−1 on H2k−1 , and to F k+1 OM = 0, F k OM = OM on the quotient.
+      In the context of mirror symmetry, a different mixed Hodge structure is relevant.
+This mixed Hodge structure is associated with the degeneration at a point of maximal
+unipotent monodromy in the moduli space [5,52]. The monodromy calculations of [19],
+partially reviewed in section 4 are indicative of a very interesting interaction between
+this limiting mixed Hodge structure and the one given by extension using the normal
+function (2.18). It would be interesting to elucidate this further.
+
+
+
+                                            11
+More extensions?
+
+We have so far largely suppressed the existence of an A∞ -structure on the category of
+B-branes, except to ask the natural question how much of that structure is possibly
+captured by the normal function. In thinking about this problem, we are led to the
+following speculations.
+    The A∞ -structure on a brane B in the category of B-branes is given by a collection
+of “higher” products mn satisfying certain conditions of associativity. At the level
+of the string worldsheet, the mn with n ≥ 2 can be determined by computing the
+(topological) disk amplitudes with n + 1 open string insertions on the boundary. m1 is
+identified with the open string BRST operator. Finally, m0 is related to the bulk-to-
+boundary obstruction map by taking one derivative with respect to the closed string
+moduli [34].
+    From general considerations, as well as the identification of the disk amplitude with
+two bulk insertions as the Griffiths infinitesimal invariant [34], it appears natural that
+the normal function ν can fit as an “m−1 ” into the A∞ -structure. As emphasized
+in [34], the obstruction map can be interpreted Hodge theoretically as the dual of the
+infinitesimal Abel–Jacobi map. Those two observations suggest that one should try to
+understand whether the higher A∞ products mn for n ≥ 1 can also be given a Hodge
+theoretic interpretation.
+
+A-model version
+
+All considerations in this paper are phrased in the language of the B-model. On the
+other hand, we recall that much of the deeper understanding of classical (closed string)
+mirror symmetry involved the reconstruction of Hodge theoretic structures in the A-
+model. In particular, the importance of quantum cohomology and the structure of
+the mirror map become especially clear in the “A-model variation of Hodge structure”
+[53, 54].
+    It would be very interesting to extend these insights to the open string. A gen-
+eral definition of a functional conjecturally mirror to the holomorphic Chern–Simons
+functional/domainwall tension (see, eq. (2.14)) is given in [22], extending [10]. This
+functional includes corrections from worldsheet instantons (holomorphic disks ending
+on Lagrangian submanifolds), and should in principle be related to Floer theory and
+the Fukaya category, as the open string analogues of quantum cohomology. This re-
+
+
+                                           12
+lation should be similar to that between the holomorphic Chern–Simons functional
+and the derived category. In the A-model, the precise relation is not currently under-
+stood, but as an intermediate step, it would be interesting to check at least the Hodge
+theoretic statements pertaining to normal functions, based on, say, axioms for open
+Gromov–Witten invariants.
+
+
+3     The Real Quintic and its Mirror
+
+Our interest now turns to the quintic Calabi–Yau X = {G = 0} ⊂ P4 , defined as
+the vanishing locus of a degree 5 polynomial G in 5 complex variables x1 , . . . , x5 . We
+assume that X is defined over the reals, which means that all coefficients of G are
+real (possibly up to some common phase). The real locus {xi = x̄i } ⊂ X is then
+a Lagrangian submanifold, and after choosing a flat U(1) connection, will define an
+object in the (derived) Fukaya category Fuk(X). In this section, we will first review
+a proposal which identifies a mirror object in the category of B-branes of the mirror
+quintic, in its Landau–Ginzburg description. Via some detours, we will be able to
+derive from the matrix factorization the corresponding normal function. In the next
+section, we will then show by an explicit computation that this normal function satisfies
+precisely the inhomogeneous Picard–Fuchs equation proposed in [19].
+
+3.1   625 real quintics
+
+Both the topological type and the homology class in H3 (X; Z) of the real locus depend
+on the complex structure of X (the choice of (real) polynomial G). On the other hand,
+the Fukaya category is independent of the choice of G (real or not). The object in
+Fuk(X) that we shall refer to as the real quintic is defined from the real locus L of X
+when G is the Fermat quintic G = x51 + x52 + x53 + x54 + x55 . It is not hard to see that
+topologically, L ∼
+                 = RP3 . There are therefore two choices of flat bundles on L, and we
+will denote the corresponding objects of Fuk(X) by L+ and L− , respectively. More
+precisely, since Fuk(X) depends on the choice of a complexified Kähler structure on X,
+we define L± for some choice of Kähler parameter t close to large volume Im(t) → ∞,
+and then continue it under Kähler deformations. In fact, the rigorous definition of
+the Fukaya category is at present only known infinitesimally close to this large volume
+point [55]. However, Fuk(X) does exist over the entire stringy Kähler moduli space
+of X, and at least some of the structure varies holomorphically. Our interest here is
+
+
+                                           13
+in the variation of the categorical structure associated with L± over the entire stringy
+Kähler moduli space of X, identified via mirror symmetry with the complex structure
+moduli space of the mirror quintic, Y .
+      The Fermat quintic is invariant under more than one anti-holomorphic involu-
+tion. If Z5 denotes the multiplicative group of fifth roots of unity, we define for
+χ = (χ1 , . . . , χ5 ) ∈ (Z5 )5 an anti-holomorphic involution σχ of P4 by its action on
+homogeneous coordinates
+                                        σχ : xi → χi x̄i .                                 (3.1)
+
+The Fermat quintic is invariant under any σχ . The involution and the fixed point locus
+only depend on the class of χ in (Z5 )5 /Z5 ∼
+                                            = (Z5 )4 , and we obtain in this way 54 = 625
+                     [χ]
+(pairs of) objects L± in Fuk(X). We will return to those 625 real quintics below, and
+                                    [χ=1]
+for the moment focus on L± = L±             .
+                                                                                    [χ]
+      We emphasize again that although we have defined the Lagrangians L± as fixed
+point sets of anti-holomorphic involutions of the Fermat quintic, we can think of the
+corresponding objects of Fuk(X) without reference to the complex structure.
+
+3.2     The prediction
+
+The image in K 0 (Fuk(X)) is the same for L+ and L− . This is the counterpart in the
+A-model of the triviality of topological Chern classes ctop (B+ − B− ) for two objects
+B± in the category of B-branes. As mentioned above, there should exist a definition of
+an Abel-Jacobi map to a normal function of the A-model variation of Hodge structure
+constructed from the quantum cohomology of X [53, 54]. As explained in [19], this
+normal function can be realized geometrically by wrapping a D-brane on a disk D
+whose boundary on L represents the non-trivial element of H1 (L; Z) ∼
+                                                                    = Z2 . Neglecting
+instanton corrections, the corresponding truncated normal function is 2t ± 41 mod tZ+Z.3
+Instanton corrections deform this to
+                                       t 1   1 X         
+                            TA (t) =     ±  + 2   nd q d/2 ,                               (3.2)
+                                       2   4 2π
+                                                       d odd
+
+where q = e 2πit , and nd are the open Gromov–Witten invariants of the real quintic
+defined in [56], predicted in [19], and fully computed in [22]. The precise result for the
+nd is as follows.
+  3
+   The sign depends on whether we consider L+ − L− or L− − L+ . For this to make sense, note that
+t   1      t   1
+2 − 4 = −( 2 + 4 ) mod tZ + Z. For details, see [19].
+
+
+
+                                                14
+      Mirror symmetry for the quintic is governed by the differential operator
+
+                         L = θ4 − 5z(5θ + 1)(5θ + 2)(5θ + 3)(5θ + 4) ,             (3.3)
+
+where θ = zd/dz. As we will review further below, L is the Picard–Fuchs operator of
+the mirror quintic. The equation L̟(z) = 0 has four linearly independent solutions.
+Two of those solutions are given by the following power-series expansion around z = 0:
+                         X
+                         ∞
+                           (5m)!
+              ̟0 (z) =                 zm
+                         m=0
+                               (m!)5
+                                                                                   (3.4)
+                                             X
+                                             ∞
+                                            (5m)! m                      
+              ̟1 (z) = ̟0 (z) log z + 5          5
+                                                   z Ψ(1 + 5m) − Ψ(1 + m)
+                                        m=1
+                                            (m!)
+
+and determine the mirror map as
+
+                                        1 ̟1 (z)
+                     t = t(z) =                   ,        q(z) = exp(2πi t(z)).   (3.5)
+                                       2πi ̟0 (z)
+
+The result of [19, 22] is
+                                              15 √
+                          L ̟0 (z)TA (z) =           z.                            (3.6)
+                                              16π 2
+Combined with the boundary conditions (3.2), this is equivalent to
+
+                                               ̟1 (z) ̟0 (z) 15
+                            ̟0 (z)TA (z) =           +      + 2 τ (z)              (3.7)
+                                                4πi    4     π
+where
+                     Γ(3/2)5 X Γ(5m + 7/2) m+1/2 √
+                                   ∞
+                                                     5005 3/2
+             τ (z) =                       5
+                                             z  = z+     z +···                    (3.8)
+                     Γ(7/2) m=0 Γ(m + 3/2)             9
+gives a particular solution of the inhomogeneous Picard–Fuchs equation (3.6).
+
+3.3     Matrix factorization
+
+For the rest of this work, W will denote the one-parameter family of quintic polynomials
+                               1 5                         
+                     W =         x1 + x52 + x53 + x54 + x55 − ψx1 x2 x3 x4 x5 .    (3.9)
+                               5
+Geometrically, the mirror quintic, Y , is the quotient of this one-parameter family of
+quintics by (Z5 )3 = (Z5 )4 /Z5 , where (Z5 )4 is the group of phase symmetries of W
+(for ψ 6= 0). Alternatively, we can think of a Landau–Ginzburg orbifold model with
+worldsheet superpotential W and orbifold group (Z5 )4 .
+
+                                                      15
+   We will also have occasion to work in the B-model on the one-parameter family of
+quintic hypersurfaces given by W = 0 in P4 (without quotient). In this context, we
+will denote this family by Xψ . When we work in the context of the A-model, with
+an arbitrary complex structure represented by a general quintic polynomial G, we will
+continue to denote the quintic simply by X.
+   Recall that for a quintic X defined by G = 0, the homological Calabi–Yau/Landau–
+Ginzburg correspondence [57–60] states that the derived category of coherent sheaves
+of X is equivalent to the graded, equivariant category of matrix factorizations of the
+corresponding Landau–Ginzburg superpotential,
+
+                                        D b (X) = MF(G/Z5 ),                                    (3.10)
+
+where Z5 is the diagonal group of phase symmetries. The analogous statement for the
+mirror quintic is
+                                        D b (Y ) ∼
+                                                 = MF(W/Z45 ),                                  (3.11)
+with (Z5 )4 as above.
+    To describe an object mirror to the real quintic, we begin with finding a matrix
+factorization of the one-parameter family of superpotentials (3.9). If V ∼
+                                                                         = C5 is a 5-
+dimensional vector space, we can associate to its exterior algebra a C[x1 , . . . , x5 ]-module
+M = ∧∗ V ⊗ C[x1 , . . . , x5 ]. It naturally comes with the decomposition
+
+ M = M0 + M1 + M2 + M3 + M4 + M5 ,                        where Ms = ∧s V ⊗ C[x1 , . . . , x5 ], (3.12)
+
+and the Z2 -grading (−1)i . Let ηi be a basis of V and η̄i the dual basis of V ∗ , both
+embedded in End(M). We then define two families of matrix factorizations (M, Q± )
+of W by
+                                5                        5
+                           1 X 2             3
+                                                      p Y
+                      Q± = √       (xi ηi + xi η̄i ) ± ψ (ηi − xi η̄i ).                        (3.13)
+                             5 i=1                      i=1
+
+To check that Q2± = W · idM , one uses that ηi , η̄i satisfy the Clifford algebra
+
+                                             {ηi , η̄j } = δij ,                                (3.14)
+
+as well as the ensuing relations
+
+             {(x2i ηi + x3i η̄i ), (ηi − xi η̄i )} = 0      and     (ηi − xi η̄i )2 = −xi .     (3.15)
+
+The matrix factorization (3.13) is quasi-homogeneous (C∗ -gradable). The R-charges
+of the superpotential and the xi are 2 and 2/5, respectively. So if we assign R-charge
+
+                                                     16
+1/5 and −1/5 to ηi and η̄i , respectively, Q will have uniform R-charge 1. Since Q
+is irreducible, this determines the R-charge of M uniquely up to an overall shift. As
+explained in [57], this ambiguity should be fixed by TrR = 0 for studying the stability
+of the matrix factorizations. But for the present purposes, we will use a different
+convention, see below.
+      To specify objects in MF(W/Γ), where Γ = Z5 or (Z5 )4 for the quintic and mirror
+quintic, respectively, we have to equip M with a representation of Γ such that Q is
+equivariant with respect to the action of Γ on the xi . Since Q is irreducible, this
+representation of Γ on M is determined up to a character of Γ by a representation on
+V , i.e., an action on the ηi . For γ ∈ Γ, we have γ(xi ) = γi xi for some fifth root of unity
+γi . We then set γ(ηi ) = γi−2 ηi , making Q equivariant. As noted, this representation is
+unique up to an action on M0 , i.e., a character of Γ.
+      For the mirror quintic, Γ = Ker((Z5 )5 → Z5 ), so Γ∗ = (Z5 )5 /Z5 , and we label
+its characters as [χ]. The corresponding objects of MF(W/Γ) constructed out of Q±
+                           [χ]
+(3.13) are classified as Q± = (M, Q± , ρ[χ] ), where ρ[χ] is the representation on M we
+just described.
+
+      Conjecture: There is an equivalence of categories Fuk(X) ∼
+                                                               = MF(W/(Z5 )4 ) which
+                                      [χ]
+identifies the 625 pairs of objects L± with the 625 pairs of equivariant matrix factor-
+            [χ]
+izations Q± .
+
+      Note: One can formulate a similar conjecture for any hypersurface in weighted
+projective space which has a Fermat point in its complex structure moduli space.
+
+3.4     Intersection Index
+
+The first piece of evidence for the above conjecture comes from ref. [61]. In that
+paper, the 625 Lagrangian submanifolds of X described above were associated with the
+so-called L = (1, 1, 1, 1, 1) A-type Recknagel–Schomerus states in the Gepner model.
+These A-type boundary states had been constructed in [62] as tensor products of Cardy
+states in the N = 2 minimal model building blocks of the Gepner model. In turn,
+these Cardy states of the minimal model were identified in [63] with the Lagrangian
+wedge branes of opening angle 4π/5 in the Landau–Ginzburg description of the N = 2
+minimal models. Via mirror symmetry for the minimal models, those wedges are
+equivalent to the matrix factorizations based on x5i = x2i · x3i , see, e.g., [64]. These
+are precisely the building blocks of the factorization (3.13), specialized to ψ = 0. The
+
+
+                                             17
+                                                                                                [χ]
+above deformation away from ψ = 0, as well as the identification of the pairs Q± with
+                           [χ]
+the pairs of objects L± was first noted in [65], following the suggestion of [61].
+                                                                     [χ]     [χ]
+       The initial step in the above identification of L± with Q± was justified in [61] by
+                                                               [χ]
+a comparison of the intersection indices of the L± with the corresponding intersection
+indices of the Gepner model boundary states. We will reproduce this here using the
+matrix factorizations. The match of the domainwall tensions4 L+ − L− and Q+ − Q−
+computed in the A- and B-model, respectively, constitutes further evidence for the
+above conjecture.
+                                                                                         ′
+       Let us start with the geometric intersection index between5 L[χ] and L[χ ] . Because
+of the projective equivalence, we have to look at the intersection of the fixed point loci
+of σχ and σωχ′ from (3.1) where ω runs over the 5 fifth roots of unity. It is not hard to
+see that topologically
+
+            Fix(σχ ) ∩ Fix(σωχ′ ) ∩ X ∼
+                                      = RPd−2 ,               where d = #{χ′i = ωχi }.            (3.16)
+
+After making the intersection transverse by a small deformation in the normal direction,
+we obtain a vanishing contribution for d = 0, 1, 3, 5, and ±1 for d = 2, 4, where the
+sign depends on the non-trivial phase differences χ∗i ωχ′i . Explicitly, one finds
+                                                  ′
+                                                       X
+                                      L[χ] ∩ L[χ ] =          f1 (χ′∗ ωχ),                        (3.17)
+                                                       ω∈Z5
+
+where                            
+                                 Q5                    
+                                      i=1 sgn Im(χi )       , if #{i, χi = 1} = 2, 4
+                     f1 (χ) =                                                                     (3.18)
+                                 0                            else.
+To compute the intersection index between the matrix factorizations, we use the index
+theorem of [57]. It says in general
+                                     X                                           
+  χHom (M, Q, ρ), (M ′ , Q′ , ρ′ ) :=   (−1)i dim Homi (M, Q, ρ), (M ′ , Q′ , ρ′ ) =
+                                              i
+                                               1 X                         1
+                                                      StrM ′ ρ′ (γ)∗ Q5             StrM ρ(γ), (3.19)
+                                              |Γ| γ∈Γ                 i=1 (1 − γi )
+
+   4
+       Note that because of the symmetries, these domainwall tensions do not depend on the discrete
+group representation.
+   5
+     The intersection index, being topological, does not depend on the Wilson lines on the A-branes.
+For the B-branes, it is correspondingly independent of the sign of the square root in (3.13).
+
+
+
+
+                                                       18
+where γi are the eigenvalues of γ ∈ Γ acting on the xi , and ρ, ρ′ are the representations
+of Γ on M. For M = M ′ , Q = Q′ and ρ = ρ[χ] , ρ′ = ρ[χ′ ] described above, this evaluates
+to
+                                 Y5                               X
+              1 X                             2     3     4
+          −     4
+                    χ(γ ′ ∗
+                         )  χ(γ)     (γ i + γ i − γ i − γ i ) = −     f2 (χ′∗ ωχ),   (3.20)
+              5   4              i=1                              ω∈Z
+                γ∈(Z5 )                                               5
+
+where                            
+                                 Q5                  
+                                      i=1 sgn Im(χi )   , if #{i, χi = 1} = 0
+                      f2 (χ) =                                                       (3.21)
+                                 0                      else.
+We do not know any generally valid result from the representation theory of finite
+cyclic group which shows that (3.17) and (3.20) coincide. It is however not hard to
+check by hand or computer that for all χ,
+                              X
+                                  (f1 + f2 )(ωχ) = 0.                                (3.22)
+                                       ω∈Z5
+
+Hence
+                                              ′                  ′
+                                 L[χ] ∩ L[χ ] = χHom(Q[χ] , Q[χ ] )                  (3.23)
+as claimed.
+
+3.5     Bundles
+
+We now proceed with the construction of the normal function from the matrix fac-
+torization (3.13). To this end, we use the homological Calabi–Yau/Landau–Ginzburg
+correspondence (3.10) for the quintic as described in [60]. This will produce for us a set
+of 5 complexes of coherent sheaves (bundles) on the one-parameter family of quintics
+Xψ . By making those equivariant with respect to the geometric (Z5 )3 action, this will
+yield the 625 objects in D b (Y ) mirror to the real quintics.
+      The technique underlying the algorithm of [60] is the gauged linear sigma model
+of [66]. Thus, we first construct a D-brane in the gauged linear sigma model from the
+equivariant matrix factorization, and in the second step a complex of (line) bundles
+on the quintic. We have to and can live with two ambiguities in the construction.
+The first ambiguity is the Landau–Ginzburg monodromy (cyclic permutation of the
+characters of Γ = Z5 ), while the second depends on a certain “Band Restriction Rule”
+for assignment of the gauge charges in the linear sigma-model. The upshot of the
+construction is the following. We can view the matrix factorization, namely, the Z2 -
+graded module M equipped with Q of Q2 = W , as a 2-periodic infinite complex over
+
+                                                  19
+the affine singularity W = 0. We then truncate this infinite complex to a semi-infinite
+complex in a way that depends on the charge and representation assignments in the
+gauged linear sigma model. The departure of this construction from the traditional
+(Serre) correspondence between sheaves on the hypersurface and graded modules on
+the affine singularity is that the cohomological grading of the complexes also depends
+on the linear sigma model charges. We now implement this algorithm in our example,
+referring to [60] for the complete details.
+   Given (M, Q, ρχ ), we first assign R-charges (i.e., a C∗ -representation, generated by
+a rational Hermitian matrix, R on M in such a way that
+
+                                        e iπR = ρχ (γ)(−1)s ,                      (3.24)
+
+where (−1)s is the Z2 -grading on M, and γ ≡ e 2πi/5 is the generator of Z5 . In the
+decomposition (3.12), ρχ (γ) = e 2πi(n−2s)/5 , where χ = e 2πin/5 . We choose the R-charge
+assignment of Ms in (3.12) as Rs = 5s + 2n
+                                         5
+                                           .
+   Following the algorithm of [60] we now select a ”band” of 5 consecutive integers
+Λ = {0, 1, 2, 3, 4} and find for each s an integer R̃s = s mod 2 and an integer qs ∈ Λ
+such that
+                                              2qs
+                                          Rs = R̃s −
+                                                  .                           (3.25)
+                                               5
+R̃s and qs are uniquely determined by this equation. Depending on n, we find for the
+pairs (R̃s , qs ) the following table
+                    ❍
+                      ❍❍   n
+                        ❍❍               0       1       2      3     4
+                     s    ❍
+                           ❍❍
+                            0           (0, 0) (2, 4) (2, 3) (2, 2) (2, 1)
+                            1           (1, 2) (1, 1) (1, 0) (3, 4) (3, 3)
+                                                                                   (3.26)
+                            2           (2, 4) (2, 3) (2, 2) (2, 1) (2, 0)
+                            3           (1, 1) (1, 0) (3, 4) (3, 3) (3, 2)
+                            4           (2, 3) (2, 2) (2, 1) (2, 0) (4, 4)
+                            5           (1, 0) (3, 4) (3, 3) (3, 2) (3, 1)
+
+This data yields a graded, gauge invariant matrix factorization, QGLSM of the linear
+sigma model superpotential WGLSM = P W , where P is Witten’s P-field [66]. In re-
+ducing to the non-linear sigma-model on the hypersurface, the bulk modes of P are
+integrated out, while the quantization of the single boundary degree of freedom yields
+the Fock space of a harmonic oscillator, HP ∼  = ⊕N ≥0 HP , where each HP ∼
+                                                                N           = C. The
+                                                                             N
+
+
+                                                 20
+resulting complex on the quintic hypersurface is built from the tensor product M ⊗HP ,
+            P
+where Ms ⊗ HN is placed in homological degree d = R̃s + 2N and twisted by the line
+bundle O(qs + 5N). The original matrix factorization Q acts on this complex in a way
+compatible with all gradings.
+      For the data above, we obtain explicitly the following five complexes, (here, V s ≡
+∧s V , and the integer in square brackets indicates the homological degree of the first
+term in the complex).
+   n =0 : [0]
+          O(0) ⊗ V 0         O(2) ⊗ V 1        O(5) ⊗ V 0        O(7) ⊗ V 1
+                                                                                            (3.27)
+                        → O(1) ⊗ V 3 → O(4) ⊗ V 2 → O(6) ⊗ V 3 → · · · · · ·
+                             O(0) ⊗ V 5        O(3) ⊗ V 4        O(5) ⊗ V 5
+
+   n =1 : [1]
+          O(1) ⊗ V 1         O(4) ⊗ V 0        O(6) ⊗ V 1        O(9) ⊗ V 0
+                                                                                            (3.28)
+          O(0) ⊗ V 3 → O(3) ⊗ V 2 → O(5) ⊗ V 3 → O(8) ⊗ V 2 → · · · · · ·
+                             O(2) ⊗ V 4        O(4) ⊗ V 5        O(7) ⊗ V 4
+   n =2 : [1]
+          O(0) ⊗ V 1         O(3) ⊗ V 0        O(5) ⊗ V 1        O(8) ⊗ V 0
+                                                                                            (3.29)
+                        → O(2) ⊗ V 2 → O(4) ⊗ V 3 → O(7) ⊗ V 2 → · · · · · ·
+                             O(1) ⊗ V 4        O(3) ⊗ V 5        O(6) ⊗ V 4
+   n =3 : [2]
+          O(2) ⊗ V 0         O(4) ⊗ V 1        O(7) ⊗ V 0        O(9) ⊗ V 1
+                                                                                            (3.30)
+          O(1) ⊗ V 2 → O(3) ⊗ V 3 → O(6) ⊗ V 2 → O(8) ⊗ V 3 → · · · · · ·
+          O(0) ⊗ V 4         O(2) ⊗ V 5        O(5) ⊗ V 4        O(7) ⊗ V 5
+   n =4 : [2]
+          O(1) ⊗ V 0         O(3) ⊗ V 1        O(6) ⊗ V 0        O(8) ⊗ V 1
+                                                                                            (3.31)
+          O(0) ⊗ V 2 → O(2) ⊗ V 3 → O(5) ⊗ V 2 → O(7) ⊗ V 3 → · · · · · ·
+                             O(1) ⊗ V 5        O(4) ⊗ V 4        O(6) ⊗ V 5
+The differential on these complexes is Q from (3.13), where as before ηi and η̄i act on
+the exterior algebra ∧∗ V in the usual way. It would be interesting to obtain a more
+intrinsic description of these 5 objects in D b (Xψ ), understand their deformations to a
+general quintic,6 investigate stability at large volume, etc. It is not hard to compute
+  6
+      We thank Tony Pantev and Ron Donagi for extensive discussions on possible such descriptions.
+
+                                                 21
+the topological Chern characters of these five objects, and to check that they agree
+with those determined from [61]. For example, the virtual ranks of the objects are
+given by (−3, 3, −7, 8, 7) for n = (0, 1, 2, 3, 4), respectively. The simplest and most
+canonical object appears to be the one corresponding to n = 3. Namely, as found
+in [67], it carries precisely the topological charges required for anomaly cancellation in
+a type I (or type IIB orientifold) string compactification on the quintic with non-trivial
+discrete B-field. (This is mirror to a type IIA orientifold compactification on the mirror
+quintic.) It is natural therefore to assume that this corresponds to a rank 8 bundle
+which moreover is stable at large volume on the quintic.
+
+3.6     From matrix factorization to curve
+
+The five complexes in the previous subsection define 5 objects in D b (Xψ ). (Although
+semi-infinite, they are quasi-isomorphic to finite complexes because of the eventual
+periodicity.) As discussed before, to obtain the 625 objects in D b (Y ) mirror to the
+real quintics, we have to make these objects (Z5 )3 equivariant. It would be interesting
+to understand this construction in detail, and in particular, what happens under the
+resolution of the orbifold singularities. For our purposes however, we do not need this.
+In fact, to compute the normal function by the Abel–Jacobi map, we do not even need to
+distinguish between the five objects on the quintic. Note that the defining semi-infinite
+complexes differ only in low homological degree by extensions by line bundles, which
+contribute only trivially to algebraic K-theory and the Abel–Jacobi map. In other
+words, all the information about the normal function is contained in the 2-periodic
+part of the complexes, which is nothing but the original matrix factorization! This fact
+would have allowed us to bypass all the complications associated with the homological
+Calabi–Yau/Landau–Ginzburg correspondence. We nevertheless presented the detailed
+results in the previous subsection, because we feel that they might be of independent
+interest, for instance for questions of stability.
+      In this subsection, we proceed with the computation of the algebraic second Chern
+              [χ]
+classes of Qǫ , where ǫ = ±1. Specifically, the domainwall tension of our interest is
+                                                       [χ]    [χ]
+given by the image under the Abel–Jacobi map of Q+ − Q− . Note that this is well-
+defined since, as follows e.g., from the index theorem (3.19), the topological Chern
+classes only depend on χ, and not on ǫ, which is the sign of the square root in (3.13).
+On the other hand, the Abel–Jacobi map is independent of χ, as explained in the
+previous paragraph.
+
+                                             22
+        It does, however, make a difference whether we work on the quintic or its mirror.
+On the quintic, we can work with the explicit bundle representatives from (3.30). Let
+                                            Q±                      
+             E± = Ker O(2) ⊕ O(1)10 ⊕ O(0)5 −→ O(4)5 ⊕ O(3)10 ⊕ O(2) .                          (3.32)
+
+In general, for a bundle of rank r with sufficiently many sections, one can determine the
+second Chern class by choosing r − 2 generic sections, and finding the codimension-2
+locus where those sections fail to be linearly independent. Since twisting by O(1) will
+alter the image in the Chow group only trivially, we can always arrange for sufficiently
+many sections by twisting with O(n) for n large enough. For bundles such as E± (n),
+we can conveniently find sections7 by using the 2-periodicity of the complex (3.30) as
+the image of Q in the previous step.
+        After some algebra, we find that the second Chern classes can be represented as
+
+                             c2 (E+ ) − c2 (E− ) = [C+ − C− ] ∈ CH2 (Xψ ),                      (3.33)
+
+where C± stands for the algebraic curve
+                                                              p
+                   C± = {x1 + x2 = 0, x3 + x4 = 0, x25 ±          5ψx1 x3 = 0} ⊂ Xψ .           (3.34)
+
+        Of course, we are really interested in the matrix factorizations and corresponding
+bundles as objects in D b (Y ), where Y = Xψ /(Z5 )3 is the mirror quintic. Their second
+Chern classes take values in CH2 (Y ), and can be described by considering the image
+of C± under the (Z5 )3 orbifold group. We will study this quotient procedure carefully
+in the next section.
+
+
+4        Main Computation
+
+As before, we let Xψ be the one-parameter family of quintics given by (3.9). The
+intersection of Xψ with the plane P = {x1 + x2 = x3 + x4 = 0} is a plane curve of
+degree 5 which is reducible, with 3 components (see left of Figure 1). One component is
+the line x5 = 0, the other two are conics C± described by (3.34). Obviously, [C+ −C− ] =
+0 ∈ H2 (Xψ ) for all ψ, and thus the cycle C+ − C− defines a normal function, ν for the
+one-parameter family of quintics Xψ . Consequently, we also obtain a pair of curves and
+a normal function for the mirror quintic Y , which we will denote by the same symbols.
+    7
+        This was initially suggested to us by Nick Warner, and anticipated also by Duco van Straten.
+
+
+
+                                                    23
+Now pick a family of three-chains Γ ⊂ Y with ∂Γ = C+ − C− . The domainwall tension
+or truncated normal function is given by
+                                                    Z
+                                    TB = TB (z) =        Ω̂,                            (4.1)
+                                                     Γ
+
+where Ω̂ is a particular choice of holomorphic three-form on Y , further specified below.
+      The main result of our paper is that the Picard–Fuchs operator from (3.3),
+
+             L = θ4 − 5z(5θ + 1)(5θ + 2)(5θ + 3)(5θ + 4)              θ = zd/dz         (4.2)
+
+acting on TB (z) gives
+                                                15 √
+                                    LTB (z) =         z                              (4.3)
+                                               16π 2
+(as usual, z = (5ψ)−5 ) where the constant is precisely the one in (3.6). We conclude that
+TB (z) coincides with ̟0 (z)TA (z), up to a solution of the homogeneous Picard–Fuchs
+equation. This is not unexpected since the choice of Γ is ambiguous by H 3(Y ; Z), so
+TB is ambiguous by an integral period. The claim that TB (z) − ̟0 (z)TA (z) is indeed
+an integral period will follow from the analytic continuation performed in [19] and the
+boundary conditions on TB as we shall discuss below.
+
+4.1     Sketch of computation
+
+The strategy for proving (4.3) is to use the representation of the holomorphic three-
+form on the hypersurface {W = 0} as the residue of a meromorphic 4-form Ω̃ on
+projective space (Griffiths–Dwork method). The domainwall tension, which is defined
+by integrating the holomorphic three-form over a three-chain Γ in Y with ∂Γ = C+ −C−
+can then be obtained by integrating Ω̃ over a 4-chain which is a tube in P4 \ {W = 0}
+around Γ.8 By following the usual steps in the derivation of the Picard–Fuchs equation
+(see, e.g., [5]), the action of L on the domainwall tension can be reduced to a boundary
+term consisting of the integral of certain meromorphic three-forms over a tube around
+the boundary curves C± . To be specific, let us consider the contribution from C+ . The
+main observation that will make the computation possible is the following.
+      The curve C+ lies in the plane P = {x1 + x2 = x3 + x4 = 0}. Therefore, if we could
+fit the tube around C+ completely inside of P , the integral over it of any meromorphic
+three-form with poles on W = 0 would vanish. The reason we cannot restrict the
+  8
+    We are here temporarily confusing the mirror quintic with the family Xψ . The homogeneous
+Picard–Fuchs equation does not depend on this. The inhomogeneous term however does, see below.
+
+                                             24
+computation to P is of course that P ∩ {W = 0} contains not just C+ , but also C− ,
+as well as the line x5 = 0, so that a tube around C+ inside of P will intersect one of
+the other components. But then, we can fit the tube around C+ into P except for a
+small neighborhood of the points where the components of P ∩ {W = 0} meet. There
+are two such points, p1 = {x1 = −x2 , x3 = x4 = x5 = 0} and p2 = {x1 = x2 = x5 =
+0, x3 = −x4 }, and the computation can be localized to a small neighborhood of p1 and
+p2 , which fit entirely inside an affine patch.
+       There is, however, an important subtlety in performing this computation as we have
+just sketched.9 Namely, the intersection points p1 and p2 are actually singular points
+of the mirror quintic, and these singularities must be resolved first in order to perform
+the computation. Recall that resolving the singularities amounts to varying the Kähler
+class on the quintic mirror to a generic value; since the inhomogeneous Picard–Fuchs
+equation should be independent of the Kähler class, it won’t matter how we do the
+resolution of singularities.
+
+4.2      Resolution of singularities
+
+Since the plane P = {x1 + x2 = x3 + x4 = 0} itself plays an important rôle in the
+computation, we also need to resolve singularities that appear on it after passing to
+                                                       5!
+the quotient. The symmetry group (Z5 )3 permutes 25 · 2!2! = 750 similar planes, but a
+Z5 subgroup preserves our plane, with a generator acting via
+
+               (x1 , −x1 , x3 , −x3 , x5 ) 7→ (x1 , −x1 , e2πi/5 x3 , −e2πi/5 x3 , e−4πi/5 x5 ).
+
+This group action has three fixed points, at p1 , p2 , and (0, 0, 0, 0, 1), and the first two
+of these must be resolved.10
+   These singularities on S = P/Z5 are Hirzebruch–Jung singularities [68, 69], and
+                                                                 \
+can be resolved by classical methods11 to obtain a surface Sb = CP2 /Z . The result is
+                                                                       5
+                                                                (−2)      (−3)
+that each singular point pi is replaced by two rational curves Di    and Di , in the
+configuration shown in Figure 1. We denote the intersections of (the transforms of)
+                           (−3)
+C± with the curve Di              by pi,± .
+       Resolving the quintic mirror itself is more involved, and we defer the explicit com-
+putation to an appendix. The result, however, is the existence of two coordinate charts
+   9
+      We can attest to the fact that if this subtlety is ignored, a wrong answer is obtained!
+  10
+      The third point does not lie on the quintic mirror for generic ψ, and need not be resolved.
+   11
+      See [70] for a recent discussion in the physics literature. In fact, the example in Figure 2 of [70]
+is exactly the case we must consider here.
+
+                                                      25
+                                                                             x 5 =0
+
+
+                   C+                                   (−2)                                   (−2)
+                                                      D1                                      D2
+
+
+                   x 5 =0
+                                                                               C+
+   p1                                  p2
+                                                        (−3)                                       (−3)
+                                                      D1                                      D2
+                    C−                                                         C−
+
+
+                                                          \
+Figure 1: The curves C± on P = CP2 (quintic) and on Sb = CP2 /Z5 (mirror quintic).
+
+
+
+for the quintic mirror: the first has coordinates
+
+                                        T = x−1
+                                             1 x2
+                                                   3 −2
+                                        X = x1 x−2
+                                                3 x4 x5
+                                                                                               (4.4)
+                                                5
+                                        Y = x−5
+                                             1 x5
+
+                                        Z = x1 x33 x−2 −2
+                                                    4 x5 ,
+
+and polynomial
+                   1                                        
+                     1 + T 5 + X 2 Y 2 Z 3 + X 3 Y 2 Z 2 + Y − ψT XY Z.
+                   5
+The resolution Sb of the surface S is given by T = −1, Z = −X, and the restriction of
+the polynomial to Sb is
+                      1             1      p        p
+                        Y − ψX 2 Y = Y (1 + 5ψX)(1 − 5ψX).
+                      5             5
+The points p1,± are given by X = ± √15ψ , Y = 0. In the other coordinate chart, we
+have coordinates
+                            T ′ = t′ = x−1
+                                        3 x4
+
+                            X ′ = (u′)−2 (v ′ )3 (w ′ )−2 = x−2 3     −2
+                                                             1 x2 x3 x5
+                                                                                               (4.5)
+                            Y ′ = (w ′)5 = x−5 5
+                                            3 x5
+
+                            Z ′ = (u′)3 (v ′ )−2 (w ′ )−2 = x31 x−2    −2
+                                                                 2 x3 x5 ,
+
+and polynomial
+          1                                                                     
+            (X ′ )2 (Y ′ )2 (Z ′ )3 + (X ′ )3 (Y ′ )2 (Z ′ )2 1 + (T ′ )5 + +Y ′ − ψT XY Z.
+          5
+                                                 26
+The resolution Sb of the surface S is given by T ′ = −1, Z ′ = −X ′ , and the restriction
+of the polynomial to Sb is
+                    1 ′                 1        p           p
+                      Y − ψ(X ′ )2 Y ′ = Y ′ (1 + 5ψX ′ )(1 − 5ψX ′ ).
+                    5                   5
+The points p2,± are given by X ′ = ± √15ψ , Y ′ = 0.
+
+4.3     Inhomogeneous Picard–Fuchs via Griffiths–Dwork
+
+Let’s recall our conventions. We have
+                            1 5                         
+                      W =     x1 + x52 + x53 + x54 + x55 − ψx1 x2 x3 x4 x5 ,         (4.6)
+                            5
+and z = (5ψ)−5 . To derive the Picard–Fuchs equations by the Griffiths–Dwork method,
+we introduce the four form on P4 ,
+                             X
+                        ω=                                  ci ∧ . . . ∧ dx5 ,
+                                   (−1)i−1 xi dx1 ∧ . . . ∧ dx                       (4.7)
+                               i
+
+as well as the contraction of ω with the tangent vectors ∂i (i = 1, . . . , 5)
+
+                                             ωi = ω(∂i ).                            (4.8)
+
+A convenient choice of gauge for the holomorphic three-form is
+                                                                           ω
+                    Ω(z) = ResW =0Ω̃(z)                 where Ω̃(z) :=          .    (4.9)
+                                                                          W (z)
+
+Traditionally, one derives the Picard–Fuchs equation by working with the expression
+(4.9), thought of as living on the quintic Xψ . The holomorphic three-form on the
+mirror quintic Y can be obtained by pulling back (4.9) in local patches via blowup
+maps such as described in the appendix. For ordinary periods, the net effect of the
+quotient by (Z5 )3 is then simply an additional normalization factor of 5−3 [4]. Such
+a simple relation is not expected to hold for generic normal functions, so we need to
+evaluate things more carefully.
+      Following the reduction of pole algorithm of Griffiths, and keeping track of exact
+pieces, we find with the above definitions,
+                                                                      
+          L̃Ω̃ := (1 − ψ 5 )∂ψ4 − 10ψ 4 ∂ψ3 − 25ψ 3 ∂ψ2 − 15ψ 2 ∂ψ − 1 Ω̃ = −dβ̃,   (4.10)
+
+
+
+                                                  27
+where the exact piece is
+               3! 4 4 4 4
+        β̃ =       x x x x ω1 + ψx2 x53 x54 x55 ω2 + ψ 2 x1 x2 x23 x64 x65 ω3
+               W4 2 3 4 5
+                                                                                 
+                       + ψ 3 x21 x22 x23 x34 x75 ω4 + ψ 4 x31 x32 x33 x34 x45 ω5
+                  2                                                                        
+               + 3 ψx3 x54 x55 ω3 + 3ψ 2 x1 x2 x3 x24 x65 ω4 + 6ψ 3 x21 x22 x23 x24 x35 ω5     (4.11)
+                 W
+                  1                                           
+               + 2 ψx4 x55 ω4 + 7ψ 2 x1 x2 x3 x4 x25 ω5
+                 W
+                 1         
+               +     ψx5 ω5 .
+                 W
+Now the standard Picard–Fuchs operator L from (3.3) is related to L̃ from (4.10) by
+                                                     1 1
+                                               L = − 4 L̃ .                                    (4.12)
+                                                    5 ψ
+On the other hand, the normalization of the holomorphic three-form in which the
+solutions (3.4) correspond to primitive integral periods of the mirror quintic is [4]
+                                    5 3               5 3                    ω
+                            Ω̂ =              ψΩ =                   ψ ResW =0     .           (4.13)
+                                    2πi                 2πi                      W
+The domainwall tension for which we claim (4.3) is defined by
+                                         Z
+                                 TB (z) = Ω̂(z),                                               (4.14)
+                                                            Γ
+
+where Γ is any three-chain in Y with ∂Γ = C+ − C− . Let Tǫ (Γ) be a small tube around
+Γ of size ǫ > 0. Then by (4.9),
+                                          Z                 Z
+                                                    1
+                                                Ω=                       Ω̃.                   (4.15)
+                                              Γ    2πi          Tǫ (Γ)
+
+By combining this with (4.12), (4.13), the claim (4.3) takes the form
+                                  Z
+                                                   3π 2
+                               L̃          Ω̃ = − 1/2 5/2 ,                                    (4.16)
+                                    Tǫ (Γ)       5 ψ
+
+which we now proceed to show.
+   There are two types of contributions to the RHS of (4.16), depending on whether
+the derivatives in L̃ act on the chain or on Ω̃. When L̃ acts entirely on Ω̃, we use (4.10)
+and obtain the boundary term                       Z
+                                               −                    β̃                         (4.17)
+                                                   Tǫ (C+ −C− )
+
+
+                                                       28
+We will see below that this in fact gives the entire contribution claimed in (4.16). To
+show that the contributions from derivatives acting on Tǫ (Γ) vanish, we use the fact
+that as ψ varies, the three-chain Γ changes to first order only at its boundary, in a way
+dictated by the dependence of C± on ψ. Namely, the first order variation of C± is a
+section n ∈ NC± /Y of the normal bundle of C± in Y . This normal vector lifts to the
+tube Tǫ (C± ), and we shall show below that for l = 0, 1, 2, 3,
+                           Z
+                                          (x1 x2 x3 x4 x5 )l ω(n)
+                                                                  = 0,              (4.18)
+                             Tǫ (C+ −C− )         W l+1
+
+where ω(n) is the contraction of ω with the normal vector n. Establishing this claim
+together with the fact that (4.17) evaluates to the RHS of (4.16) will complete the
+proof.
+   As described in subsection 4.1, we can evaluate integrals of meromorphic three-
+forms over Tǫ (C± ) as in (4.17) (4.18), by laying the tube into the plane P (or rather its
+           b outside a small neighborhood of the points pi,± . In those neighborhoods,
+resolution S)
+we can use the coordinates of subsection 4.2. Consider p1,+ , with coordinates (4.4).
+                                               √
+The curve C+ is given by T = −1, X = −Z = 1/ 5ψ and locally parametrized by
+
+                                              Y = re iϕ                             (4.19)
+
+varying in a neighborhood of r = 0. Our tube Tǫ (C+ ) is defined by picking a C ∞
+normal vector v which satisfies dv W 6= 0 on C+ and points inside of P outside of a
+small neighborhood of Y = 0. To this end, let f (r) be a non-negative C ∞ function
+with f (0) = 1 and f (r) = 0 for r ≥ r∗ > 0. We then choose
+
+                                   f (r)
+                              v=         ∂ − e −iϕ ∂X + e −iϕ ∂Z .
+                                       Y T
+                                                                                    (4.20)
+                                   1+ 5
+
+Clearly, v points inside of P for r > r∗ and one easily checks
+                                       q
+                   dv W |C+ = f (r) + 2 ψ5 r > 0     for 0 ≤ r ≤ 2r∗ .              (4.21)
+
+(We are here assuming that ψ > 0. This is no restriction as long as ψ 6= 0.) So the
+part of the tube Tǫ (C+ ; p1,+ ) around C+ which is close to p1,+ is parametrized as
+
+                                    f (r)                  1
+                 T = −1 + ǫe iχ           ,      X = −Z = √ − ǫe iχ e −iϕ ,         (4.22)
+                                   1 + Y5                  5ψ
+
+                      0 ≤ χ < 2π ,        0 ≤ ϕ < 2π ,        0 ≤ r < 2r∗ .         (4.23)
+
+                                                 29
+(In all of this, we should really be taking the limit ǫ → 0, but the result will turn out
+to be independent of ǫ.) There is then a corresponding piece of the tube around p2,+ .
+The part of the tube in between does not matter as it lies entirely within P , so any
+meromorphic three-form vanishes there. Finally, the contribution from C− will come
+                 √       √
+from substituting ψ → − ψ in the final answer.
+   We now apply the coordinate transformation (4.4) to evaluate the three-forms ωi
+on the tube (4.22). Choosing x1 = 1, we have
+
+        ω1 = −x2 dx3 dx4 dx5 + x3 dx2 dx4 dx5 − x4 dx2 dx3 dx5 + x3 dx2 dx3 dx4
+        ω2 = dx3 dx4 dx5
+        ω3 = −dx2 dx4 dx5                                                              (4.24)
+        ω4 = dx2 dx3 dx5
+        ω5 = −dx2 dx3 dx4 ,
+
+and
+                                dx2   dT
+                                    =
+                                x2     T
+                                dx3   3 dZ 2 dX 2 dY
+                                    =      +       +
+                                x3    5 Z      5 X   5 Y
+                                                                                       (4.25)
+                                dx4   3 dX 2 dZ 2 dY
+                                    =        +     +
+                                x4    5 X      5 Z   5 Y
+                                dx5   1 dY
+                                    =      .
+                                x5    5 Y
+After restricting to X = −Z, this yields, ω1 = ω2 = ω5 = 0 and
+                                                    x2 x3 x5
+                        ω3 = ω4 = dx2 dx3 dx5 =              dT dXdY.                  (4.26)
+                                                    5T XY
+Substituting (4.22), we obtain
+                                               f  rf ′     
+                        dT dXdY = ǫ2 e 2iχ              − 1  dχdϕdr,                   (4.27)
+                                             1 + Y5 f
+
+where f ′ = df /dr. The procedure to compute integrals of the forms pdx2 dx2 dx5 /W l+1 ,
+where p is some monomial in xi ’s, over the tube Tǫ (C+ ; p1,+ ) is to first write a Laurent
+series in powers of ǫe iχ and e iϕ . Integration over χ, ϕ will then retain only terms of
+order e 0iχ , and e 0iϕ , respectively. Finally, we’ll do the integral over r.
+  To begin with, on the tube we have the expansion
+             q                    q                  3                    
+              ψ
+ W = ǫ̃ f + 2 5 r −  ǫ̃2
+                         2 ˜
+                           f 2
+                               + 2   ψ ˜
+                                       f r + ψre −iϕ
+                                                      + ǫ̃ 2 ˜3 + ψ f˜re −iϕ + O(ǫ̃4 ), (4.28)
+                                                             f
+                                     5
+
+
+                                              30
+where ǫ̃ = ǫe iχ and f˜ = 1+f Y . In (4.28), we have truncated to order ǫ3 since ω3 ∝ ǫ2 ,
+                                       5
+and the highest power of W of interest corresponds to l = 3.
+   Let us consider the computation of a sample term in β̃ from (4.11). Expanding in
+ǫ̃, we have
+                           q                    q
+              ψx4 x55 ω3            ′
+                             ψ iϕ rf − f          ψ −2
+                                                             
+                        = − 5e r          (f + 2 5 r) + O(ǫ̃) dχdϕdr.                    (4.29)
+                W2                 1 + Y5
+
+The integration over ϕ clearly kills this term. In fact, it turns out that all the terms in
+β̃ which don’t already vanish after restricting to Tǫ (C+ ; p1 ) give zero after integration
+over χ and ϕ.
+   Going to p2,+ , where the local coordinates are (4.5) can be accomplished in the
+above formulas by exchanging x3 with x1 and x4 with x2 . There are then only two
+terms to consider.
+                 6x42 x43 x44 x45 ω1
+   • The term           W4
+                                     gives, after integration over χ and ϕ,
+                                                                                  
+                                                         2
+                                                               √               2
+                                                       ψr + 4 5ψrf + 15f 
+                       (2π)2 12(rf ′ − f )r 2                    q       .             (4.30)
+                                                                        6
+                                                        125ψ f + 2 ψ5 r
+
+Integration over r then gives
+                                                    3π 2
+                                                   √       .                             (4.31)
+                                                  2 5ψ 5/2
+                 6ψx2 x53 x54 x55 ω2
+   • The term         W4
+                                       gives some complicated expression after integration over
+the angles, but the integral over r vanishes.
+   Taking into account the contribution from C− , the final result for (4.17) is
+                              Z
+                                                     3π 2
+                            −                β̃ = − √        ,                   (4.32)
+                                Tǫ (C+ −C− )          5ψ 5/2
+
+precisely as claimed.
+   To show (4.18), we note that the normal vector implementing first order deformation
+of C+ is given by
+                                             x2 1         x2 1
+                                       n = −√ 5     ∂3 + √ 5     ∂4 .                    (4.33)
+                                              5ψ 2ψ        5ψ 2ψ
+Thus, we find
+                                           (x1 x2 x3 x4 x5 )l   x25              
+                        ∂ψl Ω̃(n) = l!                         √       ω 3 − ω 4   .     (4.34)
+                                                W l+1         2 5ψ 3/2
+The expression (4.34) vanishes after restriction to the tube, on which ω3 = ω4 holds.
+
+                                                       31
+4.4     Boundary conditions and monodromy
+
+We have just derived that the domainwall tension of the normal function associated
+with C+ − C− satisfies the same inhomogeneous Picard–Fuchs equation (4.3) as the
+generating function for open Gromov–Witten invariants of the real quintic, (3.6). This
+shows that
+                                     TB (z) = ̟0 (z)TA (t(z))                       (4.35)
+
+up to a solution of the homogeneous Picard–Fuchs equation. Identification of the normal
+function requires equality modulo periods, which is a stronger statement. To establish
+it, we need to determine a sufficient number of boundary conditions on TB (z). (The
+boundary conditions on TA are given by (3.7).)
+      To fix this result, we make an explicit choice of three-chain connecting C+ and C− .
+This is most easily done at ψ = 0, since C+ and C− degenerate there (see (3.34)). The
+Landau-Ginzburg monodromy ψ → e 2πi/5 ψ interchanges C+ with C− . The natural
+choice of three-chain is therefore one that vanishes at ψ = 0, and changes orientation
+under the monodromy.
+      Now note that in our choice of gauge (4.13), the solutions of the Picard–Fuchs
+equation L̟ = 0 actually all vanish as ψ k ∼ z −k/5 for some k = 1, 2, 3, 4 as ψ → 0.
+More precisely, the integral periods, known from [4], vanish as ψ 1 ∼ z −1/5 , and are
+cyclically permuted by the Landau–Ginzburg monodromy ψ → e 2πi/5 ψ. We also know
+however that the manifold itself is not singular at ψ = 0, so none of these vanishing
+periods corresponds to a vanishing cycle. The integral over the three-chain should
+therefore vanish faster than any period, and just change sign under the monodromy.
+The unique solution of (4.3) with these properties is given by
+
+                                   4 X Γ(−3/2 − 5m) Γ(1/2)5
+                                     ∞
+          TB (z) = τ orb (z) = −                             z −(m+1/2) .           (4.36)
+                                   3 m=0 Γ(−3/2) Γ(1/2 − m)5
+
+The explicit analytic continuation done in [19] now shows that τ orb (z) represents the
+same solution as ω0 (z)TA (t(z)), up to an integral period that depends on the path
+chosen to connect ψ = 0 with ψ = ∞.
+
+
+5      Summary and Conclusions
+
+In this paper, we have explained why the superpotential/domainwall tension for D-
+branes wrapped on compact Calabi–Yau manifolds will in general satisfy a differential
+
+                                               32
+equation which is an extension of the ordinary Picard–Fuchs equation. This relation-
+ship follows from the insight that certain invariant holomorphic information about the
+topological D-brane boundary state, as a function of closed string moduli, is contained
+in the image of the algebraic second Chern class under the Abel–Jacobi map to the
+intermediate Jacobian, known Hodge theoretically as a normal function. We have ap-
+plied this formalism to the B-brane mirror to the real quintic, and thereby re-derived
+the extended Picard–Fuchs equation proposed in [19].
+   In combination with the proof of the enumerative predictions in the A-model [22],
+our results put open string mirror symmetry for the real quintic [19] at the same level
+as the classical mirror theorems of Kontsevich, Givental, Lian-Liu-Yau, and others.
+What is more, we have seen at several places very close connections to ideas from
+homological mirror symmetry. We have listed in section 2 several open problems that
+would make these connections more concrete.
+   A somewhat unsatisfactory aspect of our derivation is that the nature of the com-
+putation in section 4 was severely analytic. For many reasons, it would be desirable
+to develop a more algebraic understanding of extended Picard–Fuchs equations. The
+Griffiths infinitesimal invariant is likely to play an important role in such a develop-
+ment. Among other things, this might allow an easier generalization to other situations,
+especially if the expected connections with the categorical framework can be realized.
+
+Acknowledgments We would like to thank Pierre Deligne, Ezra Getzler, Phillip Grif-
+fiths, Jaya Iyer, Stefan Müller-Stach, Rahul Pandharipande, Tony Pantev, Duco van
+Straten, Richard Thomas, and Edward Witten for valuable discussions and communi-
+cations. We are grateful to the Amsterdam Summer Workshop on String Theory, the
+Simons Workshop in Mathematics and Physics 2006, the KITP Santa Barbara during
+the program on String Phenomenology, the Workshop on Homological Mirror Symme-
+try at IAS, the Workshop on Enumerative Geometry at CRM in Montréal, the Aspen
+Center for Physics, and the Simons Workshop in Mathematics and Physics 2007, for
+providing a stimulating atmosphere during various stages of this project, and/or for the
+opportunity to present some preliminary versions of the results. The work of D.R.M.
+was supported in part by NSF grant DMS-0606578. The work of J.W. was supported
+in part by the Roger Dashen Membership at the Institute for Advanced Study and by
+the NSF under grant number PHY-0503584. Any opinions, findings, and conclusions
+or recommendations expressed in this material are those of the authors and do not
+necessarily reflect the views of the National Science Foundation.
+
+                                          33
+Appendix
+
+In this appendix, we describe the resolution of singularities of the quintic mirror, deriv-
+ing the coordinate charts which are used in making our key computation (see section
+4.3).
+   The starting point is the singular model of the quintic mirror as a hypersurface
+inside the singular ambient space CP4 /(Z5 )3 . Because the points p1 and p2 at which
+we wish to perform our computation are singular points of this quotient, we need to
+carefully resolve the singularities. We will also explicitly resolve the singularities on
+the surface S = CP5 /Z5 defined by x1 + x2 = 0, x3 + x4 = 0.
+   A consistent strategy for resolving singularities of the quintic mirror was described
+in Appendix B of [5]. This strategy involves a choice of blowup, and we will use the
+choice described in [71] rather than that described in [5].
+   What makes the resolution tricky is that the ambient space CP4 /(Z5 )3 does not have
+a crepant resolution: the coordinate vertices (1, 0, 0, 0, 0) (and cyclic permutations)
+cannot be resolved without introducing extraneous extra zeros into the holomorphic
+form of top degree. However, the quintic mirror does not pass through those points,
+so this fact does not prevent us from resolving the quintic mirror itself.
+   Each of the points p1 and p2 lies in the fixed locus of a particular (Z5 )2 subgroup of
+(Z5 )3 . Thus, we will describe a coordinate chart on the blowup for each by describing
+the blowup of the quotient by the (Z5 )2 subgroup, and indicating how the quotient by
+the remaining Z5 is to be performed.
+   The point p1 = (1, −1, 0, 0, 0) is contained in the affine chart x1 = 1, and its
+stabilizer is the (Z5 )2 subgroup of (Z5 )3 which fixes the affine coordinate x2 /x1 .
+   That is, we begin with affine coordinates t = x2 /x1 , u = x3 /x1 , v = x4 /x1 , w =
+x5 /x1 and the (Z5 )2 action on (u, v, w) which preserves the product uvw. The rational
+functions invariants under this action are generated by t, u5 , v 5 , and uvw; the remaining
+Z5 in our full (Z5 )3 symmetry group then preserves u5 and v 5 while acting oppositely
+on t and on uvw, so that the invariants under the full group would include t5 and tuvw.
+The polynomial defining the quintic mirror in this affine coordinate chart is
+                          1                        
+                            1 + t5 + u5 + v 5 + w 5 − ψtuvw,
+                          5
+and our surface S is defined by t = −1, v = −u.
+   The group action on the surface S is generated by
+                               (u, w) 7→ (e2πi/5 u, e−4πi/5 w),
+
+                                             34
+and the invariant rational monomials for this action are generated by w 5 and uw −2. To
+describe the corresponding toric geometry, we represent an arbitrary invariant rational
+monomial in the form
+                                     (w 5 )a (uw −2)b = ub w 5a−2b ,
+
+and note that the condition for this monomial to be regular, i.e., to have no pole at
+the origin, is b ≥ 0, 5a − 2b ≥ 0. These inequalities determine the toric data: the
+dual vectors (0, 1) and (5, −2) generate a cone consisting of all inequalities satisfied by
+regular monomials, as depicted in Figure 2 (which was borrowed from [70]).
+
+
+
+                           (0,1)
+
+
+
+                           (0,0)
+
+
+
+
+                                                                          (5,−2)
+
+
+
+     Figure 2: Toric data for the resolution of the C2 /Z5 quotient (from [70]).
+
+
+   To resolve the singularity, we subdivide this cone using cones whose edges form a
+basis for the lattice Z2 . This can always be done by using lattice elements which are
+close to the origin: in our example, the three subcones are generated by (i) (0, 1) and
+(1, 0), (ii) (1, 0) and (3, −1), and (iii) (3, −1) and (5, −2).
+   The coordinates on these three charts have the property that the inequalities defin-
+ing which monomials are regular within the chart are precisely spanned by the gener-
+ators of the cone. In our example, the first chart has coordinates
+
+                                      u(i) = uw −2,          w(i) = w 5
+
+so that
+                                      ub w 5a−2b = (u(i) )b (w(i) )a ;
+
+the second chart has coordinates
+
+                                   u(ii) = u3 w −1 ,        w(ii) = w 2u−1
+
+
+
+                                                       35
+so that
+                                    ub w 5a−2b = (u(ii) )a (w(ii) )3a−b ;
+
+and the third chart has coordinates
+
+                                      u(iii) = u5 ,      w(iii) = wu−3
+
+so that
+                                 ub w 5a−2b = (u(iii))3a−b (w(iii))5a−2b .
+                                     (−3)
+   The exceptional curve D1                 is represented by w(i) = u(ii) = 0, and has self-
+intersection −3 due to the change of coordinates map
+
+                                    u(ii) = u3(i) w(i) ,    w(ii) = u−1
+                                                                     (i) .
+
+                                    (−2)
+   The exceptional curve D1                 is represented by w(ii) = u(iii) = 0, and has self-
+intersection −2 due to the change of coordinates map
+
+                                   u(iii) = u2(ii) w(ii),   w(iii) = u−1
+                                                                      (ii) .
+
+
+   The defining polynomial for the quintic mirror, when restricted to S, takes the
+following form in these coordinate charts:
+                1                      1             p               p
+                  w(i) − ψu2(i) w(i) = w(i) (1 − 5ψu(i) )(1 + 5ψu(i) ),
+                5                      5
+        1         3                    1                     p            p
+          u(ii) w(ii) − ψu(ii)w(ii) = u(ii) w(ii) (w(ii) − 5ψ)(w(ii) + 5ψ),
+        5                              5
+      1 3       5                      1                     2
+                                                                    p           2
+                                                                                       p
+        u(iii)w(iii) − ψu(iii) w(iii) = u(iii) w(iii)(u(iii)w(iii) − 5ψ)(u(iii)w(iii) + 5ψ).
+      5                                5
+                                                              (−3)
+Thus, the intersection points p1,± of C± with D1                     can be found in either chart (i) at
+          −1/2                                     1/2
+(±(5ψ)           , 0) or chart (ii) at (0, ±(5ψ)         ). All of this agrees with the illustration in
+Figure 1.
+   We now turn to the resolution of the quintic mirror itself. In order to describe
+the C3 /(Z5 )2 quotient singularity in terms of toric geometry, we represent an arbitrary
+invariant rational monomial in the form
+
+                                 (u5 )a (v 5 )b (uvw)c = u5a+c v 5b+c w c ,
+
+and note that the condition for this monomial to be regular is 5a + c ≥ 0, 5b + c ≥ 0,
+and c ≥ 0. Those three inequalities determine the toric data: one takes the dual vectors
+
+                                                      36
+                                              (0, 0, 1)
+                                               ✡❏❏
+                                             ✡     ❏
+                                            ✡
+                                            ❏
+                                          ✡ ❏      ✡❏
+                                         ✡        ✡ ❏
+                                               ❏✡      ❏
+                                       ✡❏        ❏     ✡ ❏
+                                      ✡ ❏ ✡ ❏ ✡ ❏
+                                    ✡        ✡
+                                           ❏
+                                           ✡        ❏✡      ❏
+                                   ✡❏        ❏     ✡ ❏     ✡❏
+                                 ✡ ❏      ✡
+                                       ❏✡      ❏ ✡     ❏ ✡✡   ❏
+                                ✡               ❏
+                                                ✡       ❏
+                                ❏
+                               ✡ ❏     ✡❏              ✡      ✡❏
+                                     ✡   ❏ ✡ ❏ ✡ ❏ ✡ ❏
+                            ✡✡     ❏✡      ❏✡      ❏✡      ❏✡    ❏
+                       (0, 5, 1)                               (5, 0, 1)
+
+    Figure 3: Toric data for the resolution of the C3 /(Z5 )2 quotient (from [71]).
+
+(5, 0, 1), (0, 5, 1), (0, 0, 1) to these inequalities, and notes that all inequalities satisfied
+on the regular functions are nonnegative linear combinations of these vectors.
+   The resolutions of toric geometry are obtained by subdividing the cone generated
+by those vectors into cones whose generating vectors give a basis for the lattice Z3 .
+There are a number of ways of doing this, but we use the symmetric one illustrated
+in Figure 3 (which is borrowed from [71]). The three dual vectors (5, 0, 1), (0, 5, 1),
+(0, 0, 1) are the vertices of the large triangle, and the resolution has coordinate charts
+determined by the small triangles in the diagram.
+   There are two kinds of coordinate charts. The first type of chart Uαβ , labeled by α
+and β with α ≥ 0, β ≥ 0 and α + β ≤ 4, corresponds to the upward pointing triangle
+in Figure 3 with vertices (α, β + 1, 1), (α, β, 1) and (α + 1, β, 1). This chart will have
+coordinates Xαβ , Yαβ , Zαβ , and T = t satisfying
+
+           (Xαβ )aα+b(β+1)+c (Yαβ )aα+bβ+c (Zαβ )a(α+1)+bβ+c = (u5 )a (v 5 )b (uvw)c;
+
+this can be solved for the coordinates, giving
+
+                                     T =t
+                                   Xαβ = u−β v 5−β w −β
+                                   Yαβ = uα+β−4 v α+β−4 w α+β+1
+                                   Zαβ = u5−α v −α w −α .
+
+The defining polynomial of the quintic mirror in this chart is
+1                                                             
+                      α+1     β+1 β    β     4−α−β 5−α−β 4−α−β
+   1 + T 5 + Xαβ
+              α   α
+                 Yαβ Zαβ  + Xαβ  Yαβ Zαβ + Xαβ     Yαβ     Zαβ   − ψT Xαβ Yαβ Zαβ .
+5
+                                                37
+                            eαβ , labeled by α and β with α ≥ 0, β ≥ 0 and α + β ≤ 3,
+   The second type of chart U
+corresponds to the downward pointing triangles in Figure 3 with vertices (α, β + 1, 1),
+                                                                      eαβ , Yeαβ , Zeαβ , and
+(α + 1, β + 1, 1) and (α + 1, β, 1). This chart will have coordinates X
+Te = t satisfying
+
+        eαβ )aα+b(β+1)+c (Yeαβ )a(α+1)+b(β+1)+c (Zeαβ )a(α+1)+bβ+c = (u5 )a (v 5 )b (uvw)c;
+       (X
+
+this can be solved for the coordinates, giving
+
+                                  Te = t
+                               eαβ = uα−4 v α+1 w α+1
+                               X
+                                Yeαβ = u4−α−β v 4−α−β w −1−α−β
+                                Zeαβ = uβ+1 v β−4 w β+1 .
+
+The defining polynomial of the quintic mirror in this chart is
+1                                                                      
+   1 + Te5 + X
+             eαβ
+               α e α+1 eα+1
+                 Yαβ Zαβ + X                    e 4−α−β Ye 3−α−β Ze4−α−β −ψ TeX
+                             e β+1 Ye β+1 Zeβ + X                             eαβ Yeαβ Zeαβ .
+                               αβ    αβ     αβ    αβ      αβ       αβ
+5
+   To determine which chart we should use, we restrict the coordinates on Uαβ and
+e
+Uαβ to the blowup of S, and express them as functions of the coordinates u(i) , w(i) in
+the first coordinate chart of that blowup. In Uαβ we find
+
+                                T =1
+                             Xαβ = (−1)5−β u5−2β 2−β
+                                            (i) w(i)
+                                               2α+2β−8 α+β−3
+                              Yαβ = (−1)α+β−4 u(i)    w(i)
+                             Zαβ = (−1)α u(i)
+                                          5−2α 2−α
+                                              w(i) ,
+
+and from this we conclude that U22 restricts to this coordinate chart on S, and contains
+                     eαβ we find
+the points p1,± . In U
+
+                                Te = 1
+                             eαβ = (−1)α+1 u2α−3 w α−1
+                             X              (i)   (i)
+
+                              Yeαβ = (−1)4−α−β u(i)
+                                                8−2α−2β 3−α−β
+                                                       w(i)
+                             Zeαβ = (−1)β−4 u(i)
+                                             2β−3 β−1
+                                                 w(i) ,
+
+                                     eαβ is a neighborhood of p1,± .
+and so none of the coordinate charts U
+
+                                               38
+    Thus, the first coordinate chart we use will have coordinates
+
+                              T = T22 = t = x−1
+                                             1 x2
+
+                             X = X22 = u−2 v 3 w −2 = x1 x−2 3 −2
+                                                          3 x4 x5
+
+                              Y = Y22 = w 5 = x−5 5
+                                               1 x5
+
+                              Z = Z22 = u3 v −2 w −2 = x1 x33 x−2 −2
+                                                               4 x5 ,
+
+
+and polynomial
+                     1                                        
+                       1 + T 5 + X 2 Y 2 Z 3 + X 3 Y 2 Z 2 + Y − ψT XY Z.
+                     5
+
+The resolution Sb of the surface S is given by T = −1, Z = −X, and the restriction of
+the polynomial to Sb is
+                        1             1      p        p
+                          Y − ψX 2 Y = Y (1 + 5ψX)(1 − 5ψX).
+                        5             5
+The points p1,± are given by X = ± √15ψ , Y = 0.
+    To find a neighborhood of the points p2,± , we use the affine chart x3 = 1, and label
+the coordinates on this chart as u′ = x1 /x3 , v ′ = x2 /x3 , t′ = x4 /x3 , w ′ = x5 /x3 . The
+defining polynomial becomes
+                       1                                       
+                         (u′ )5 + (v ′ )5 + 1 + (t′ )5 + (w ′)5 − ψt′ u′ v ′ w ′,
+                       5
+and the surface S is defined by t′ = −1, v ′ = −u′ . We’ve chosen the notation so that
+the (Z5 )2 subgroup of (Z5 )3 which stabilizes p2 acts exactly as in the previous case:
+acting on (u′ , v ′, w ′ ) and preserving the product u′ v ′ w ′ .
+    Since the combinatorics are identical, the computation produces the same result as
+in the first part of this appendix. We find a neighborhood of p2,± with coordinates
+
+                             T ′ = t′ = x−1
+                                         3 x4
+
+                             X ′ = (u′)−2 (v ′ )3 (w ′ )−2 = x−2 3     −2
+                                                              1 x2 x3 x5
+
+                             Y ′ = (w ′)5 = x−5 5
+                                             3 x5
+
+                             Z ′ = (u′)3 (v ′ )−2 (w ′ )−2 = x31 x−2    −2
+                                                                  2 x3 x5 ,
+
+
+and polynomial
+            1                                                                     
+              (X ′ )2 (Y ′ )2 (Z ′ )3 + (X ′ )3 (Y ′ )2 (Z ′ )2 1 + (T ′ )5 + +Y ′ − ψT XY Z.
+            5
+                                                  39
+The resolution Sb of the surface S is given by T ′ = −1, Z ′ = −X ′ , and the restriction
+of the polynomial to Sb is
+                   1 ′                 1        p           p
+                     Y − ψ(X ′ )2 Y ′ = Y ′ (1 + 5ψX ′ )(1 − 5ψX ′ ).
+                   5                   5
+The points p2,± are given by X ′ = ± √15ψ , Y ′ = 0.
+   Just for completeness, we include the change of coordinates between these two
+charts.
+                                          p
+                                    T ′ = 5 X/Z
+                                             √
+                                    X ′ = T 3 X 2Z 3
+                                             5
+
+
+
+                                     Y ′ = 1/(X 2Y Z 3 )
+                                               √
+                                               5
+                                     Z ′ = T −2 X 2 Z 3 .
+
+These formulas illustrate the important point that the additional Z5 quotient must be
+considered in each case.
+
+
+References
+ [1] P. Candelas, M. Lynker, and R. Schimmrigk, Calabi–Yau manifolds in weighted P4 ,
+    Nuclear Phys. B 341 (1990) 383–402.
+ [2] B. R. Greene and M. R. Plesser, Duality in Calabi–Yau moduli space, Nuclear Phys. B
+    338 (1990) 15–37.
+ [3] P. S. Aspinwall, C. A. Lütken, and G. G. Ross, Construction and couplings of mirror
+    manifolds, Phys. Lett. B 241 (1990) 373–380.
+ [4] P. Candelas, X. C. De La Ossa, P. S. Green, and L. Parkes, A pair of Calabi–Yau
+    manifolds as an exactly soluble superconformal theory, Nucl. Phys. B 359 (1991) 21–74.
+ [5] D. R. Morrison, Mirror symmetry and rational curves on quintic threefolds: a guide for
+    mathematicians, J. Amer. Math. Soc. 6 (1993) 223–247, arXiv:alg-geom/9202004.
+ [6] A. B. Givental, Equivariant Gromov–Witten invariants, Internat. Math. Res. Notices
+    (1996) 613–663, arXiv:alg-geom/9603021.
+ [7] B. H. Lian, K. Liu, and S.-T. Yau, Mirror principle. I, Asian J. Math. 1 (1997) 729–763,
+    arXiv:alg-geom/9712011.
+ [8] D. R. Morrison and M. R. Plesser, Towards mirror symmetry as duality for two
+    dimensional abelian gauge theories, Nucl. Phys. Proc. Suppl. 46 (1996) 177–186,
+    arXiv:hep-th/9508107.
+ [9] K. Hori and C. Vafa, Mirror symmetry, arXiv:hep-th/0002222.
+
+                                             40
+[10] E. Witten, Chern–Simons gauge theory as a string theory, Prog. Math. 133 (1995) 637–
+       678, arXiv:hep-th/9207094.
+[11] M. Kontsevich, Homological algebra of mirror symmetry, Proc. Internat. Congress Math.,
+       Zürich 1994, vol. 1, Birkhäuser, 1995, pp. 120–139, arXiv:alg-geom/9411018.
+[12] A. Strominger, S.-T. Yau, and E. Zaslow, Mirror symmetry is T-duality, Nucl. Phys. B
+       479 (1996) 243–259, arXiv:hep-th/9606040.
+[13] R.     Gopakumar     and   C.   Vafa,   M-theory    and   topological   strings.   I,   II,
+       arXiv:hep-th/9809187, arXiv:hep-th/9812127.
+[14] M. R. Douglas, D-branes, categories and N = 1 supersymmetry, J. Math. Phys. 42 (2001)
+       2818–2843, arXiv:hep-th/0011017.
+[15] P. S. Aspinwall and A. E. Lawrence, Derived categories and zero-brane stability, JHEP
+       08 (2001) 004, arXiv:hep-th/0104147.
+[16] A. Kapustin and L. Rozansky, On the relation between open and closed topological strings,
+       Commun. Math. Phys. 252 (2004) 393–414, arXiv:hep-th/0405232.
+[17] K. Costello, Topological conformal field theories and Calabi–Yau categories, Adv. Math.
+       210 (2007) 165–214, arXiv:math.QA/0412149.
+[18] A. Caldararu and S. Willerton, The Mukai pairing, I: a categorical approach,
+       arXiv:0707.2052 [math.AG].
+[19] J. Walcher, Opening mirror symmetry on the quintic, Commun. Math. Phys., to appear,
+       arXiv:hep-th/0605162.
+[20] G. Almkvist, private communication.
+[21] V. Shende, private communication.
+[22] R. Pandharipande, J. Solomon, and J. Walcher, Disk enumeration on the quintic 3-fold,
+       arXiv:math.SG/0610901.
+[23] M. Aganagic and C. Vafa, Mirror symmetry, D-branes and counting holomorphic discs,
+       arXiv:hep-th/0012041.
+[24] M. Aganagic, A. Klemm, and C. Vafa, Disk instantons, mirror symmetry and the duality
+       web, Z. Naturforsch. A 57 (2002) 1–28, arXiv:hep-th/0105045.
+[25] T. Graber and E. Zaslow, Open-string Gromov–Witten invariants: calculations and a
+       mirror “theorem”, Orbifolds in mathematics and physics, Contemp. Math., vol. 310,
+       Amer. Math. Soc., 2002, pp. 107–121, arXiv:hep-th/0109075.
+[26] P. Mayr, Summing up open string instantons and N = 1 string amplitudes,
+       arXiv:hep-th/0203237.
+[27] W. Lerche, P. Mayr, and N. Warner, Holomorphic N = 1 special geometry of open-closed
+       type II strings, arXiv:hep-th/0207259.
+[28]          , N = 1 special geometry, mixed Hodge variations and toric geometry,
+       arXiv:hep-th/0208039.
+
+                                              41
+[29] S. Govindarajan, T. Jayaraman, and T. Sarkar, Disc instantons in linear sigma models,
+       Nucl. Phys. B 646 (2002) 498–523, arXiv:hep-th/0108234.
+[30] B. Forbes, Open string mirror maps from Picard–Fuchs equations, Mirror symme-
+       try, V, AMS/IP Stud. Adv. Math., vol. 38, Amer. Math. Soc., 2006, pp. 561–570,
+       arXiv:hep-th/0307167.
+[31] E. Witten, Branes and the dynamics of QCD, Nucl. Phys. B 507 (1997) 658–690,
+       arXiv:hep-th/9706109.
+[32] P. A. Griffiths, A theorem concerning the differential equations satisfied by normal func-
+       tions associated to algebraic cycles, Amer. J. Math. 101 (1979) 94–131.
+[33] P. L. del Angel and S. Müller-Stach, Differential systems associated to families of alge-
+       braic cycles, arXiv:math.AG/0305288.
+[34] J. Walcher, Extended holomorphic anomaly and loop amplitudes in open topological
+       string, arXiv:0705.4098 [hep-th].
+[35] P. A. Griffiths, On the periods of certain rational integrals. I, II, Ann. of Math. (2) 90
+       (1969), 460–495; ibid. (2) 90 (1969) 496–541.
+[36] C. I. Lazaroiu, String field theory and brane superpotentials, JHEP 10 (2001) 018,
+       arXiv:hep-th/0107162.
+[37] A. Tomasiello, A-infinity structure and superpotentials, JHEP 09 (2001) 030,
+       arXiv:hep-th/0107195.
+[38] M. L. Green, Infinitesimal methods in Hodge theory, Algebraic cycles and Hodge theory,
+       Lecture Notes in Math., vol. 1594, Springer, 1994, pp. 1–92.
+[39] C. Voisin, Hodge theory and complex algebraic geometry. II, Cambridge Studies in Ad-
+       vanced Mathematics, vol. 77, Cambridge University Press, 2003.
+[40]          , Hodge theory and complex algebraic geometry. I, Cambridge Studies in Advanced
+       Mathematics, vol. 76, Cambridge University Press, 2002.
+[41] H. Clemens, Homological equivalence, modulo algebraic equivalence, is not finitely gen-
+       erated, Publ. Math. IHES 58 (1983) 19–38.
+[42] C. Voisin, The Griffiths group of a general Calabi–Yau threefold is not finitely generated,
+       Duke Math. J. 102 (2000) 151–186.
+[43] E. Witten, New issues in manifolds of SU(3) holonomy, Nucl. Phys. B 268 (1986) 79–
+       112.
+[44] C. I. Lazaroiu, D-brane categories, Int. J. Mod. Phys. A 18 (2003) 5299–5335,
+       arXiv:hep-th/0305095.
+[45] S. K. Donaldson and R. P. Thomas, Gauge theory in higher dimensions, The geometric
+       universe, Oxford Univ. Press, 1998, pp. 31–47.
+[46] H. Clemens, Cohomology and Obstructions II: Curves on K-trivial threefolds,
+       arXiv:math.AG/0206219.
+
+                                               42
+[47] A. N. Tyurin, Nonabelian analogues of Abel’s theorem, Izv. Ross. Akad. Nauk Ser. Mat.
+       65 (2001) 133–196; Izvestija Math. 65 (2001) 123–180.
+[48] C.      Vafa,    Extending     mirror     conjecture    to   Calabi–Yau      with    bundles,
+       arXiv:hep-th/9804131.
+[49] S. Kachru, S. Katz, A. E. Lawrence, and J. McGreevy, Open string instantons and
+       superpotentials, Phys. Rev. D 62 (2000) 026001, arXiv:hep-th/9912151.
+[50] R. Dijkgraaf and C. Vafa, Matrix models, topological strings, and supersymmetric gauge
+       theories, Nucl. Phys. B 644 (2002) 3–20, arXiv:hep-th/0206255.
+[51] A. Grothendieck, La théorie des classes de Chern, Bull. Soc. Math. France 86 (1958)
+       137–154.
+[52] P. Deligne, Local behavior of Hodge structures at infinity, Mirror symmetry, II, AMS/IP
+       Stud. Adv. Math., vol. 1, Amer. Math. Soc., 1997, pp. 683–699.
+[53] D. R. Morrison, Compactifications of moduli spaces inspired by mirror symmetry,
+       Journées de Géométrie Algébrique d’Orsay, Astérisque, vol. 218, Société Mathématique
+       de France, 1993, pp. 243–271, arXiv:alg-geom/9304007.
+[54]          , Mathematical aspects of mirror symmetry, Complex Algebraic Geome-
+       try (J. Kollár, ed.), IAS/Park City Math. Series, vol. 3, 1997, pp. 265–340,
+       arXiv:alg-geom/9609021.
+[55] K. Fukaya, Y.-G. Oh, H. Ohto, and K. Ono, Lagrangian intersection theory – anomaly
+       and obstruction, Kyoto University preprint, 2000.
+[56] J. P. Solomon, Intersection theory on the moduli space of holomorphic curves with La-
+       grangian boundary conditions, arXiv:math.SG/0606429.
+[57] J. Walcher, Stability of Landau–Ginzburg branes, J. Math. Phys. 46 (2005) 082305,
+       arXiv:hep-th/0412274.
+[58] D. Orlov, Derived categories of coherent sheaves and triangulated categories of singular-
+       ities, arXiv:math.AG/0503632.
+[59] P. S. Aspinwall, The Landau–Ginzburg to Calabi–Yau dictionary for D-branes,
+       arXiv:hep-th/0610209.
+[60] M. Herbst, K. Hori, and D. Page, Phases of N = 2 theories in 1+1 dimensions with
+       boundary, (to appear), and talks at MSRI Berkeley (March 2006), LMU Munich (July
+       2006), IAS Princeton (January 2007).
+[61] I. Brunner, M. R. Douglas, A. E. Lawrence, and C. Romelsberger, D-branes on the
+       quintic, JHEP 08 (2000) 015, arXiv:hep-th/9906200.
+[62] A. Recknagel and V. Schomerus, D-branes in Gepner models, Nucl. Phys. B 531 (1998)
+       185–225, arXiv:hep-th/9712186.
+[63] K. Hori, A. Iqbal, and C. Vafa, D-branes and mirror symmetry, arXiv:hep-th/0005247.
+
+
+                                                 43
+[64] K. Hori, Boundary RG flows of N          = 2 minimal models, Mirror symmetry,
+    V, AMS/IP Stud. Adv. Math., vol. 38, Amer. Math. Soc., 2006, pp. 381–404,
+    arXiv:hep-th/0401139.
+[65] K. Hori and J. Walcher, D-branes from matrix factorizations, Comptes Rendus Physique
+    5 (2004) 1061–1070, arXiv:hep-th/0409204.
+[66] E. Witten, Phases of N = 2 theories in two dimensions, Nucl. Phys. B 403 (1993)
+    159–222, arXiv:hep-th/9301042.
+[67] I. Brunner, K. Hori, K. Hosomichi, and J. Walcher, Orientifolds of Gepner models, JHEP
+    02 (2007) 001, arXiv:hep-th/0401137.
+[68] F. Hirzebruch, Über vierdimensionale Riemannsche Flächen mehrdeutiger analytischer
+    Funktionen von zwei komplexen Veränderlichen, Math. Ann. 126 (1953) 1–22.
+[69] H. W. E. Jung, Darstellung der Funktionen eines algebraischen Körpers zweier un-
+    abhängiger Veränderlicher x, y in der Umgebung einer Stelle x = a, y = b, J. Reine
+    Angew. Math. 133 (1908) 289–314.
+[70] J. A. Harvey, D. Kutasov, E. J. Martinec, and G. W. Moore, Localized tachyons and RG
+    flows, arXiv:hep-th/0111154.
+[71] D. R. Morrison, Geometric aspects of mirror symmetry, Mathematics unlimited—2001
+    and beyond, Springer, 2001, pp. 899–918, arXiv:math.AG/0007090.
+
+
+
+
+                                            44
+

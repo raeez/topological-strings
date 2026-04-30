@@ -47,7 +47,10 @@ of Kunz--Cox--Dickenstein, Chapter~5
     \{f,g\}=\partial_{z_1}f\,\partial_{z_2}g
       -\partial_{z_2}f\,\partial_{z_1}g
   \]
-  followed by projection modulo constants.
+  followed by projection modulo constants.  The adjoint maps are continuous
+  for this topology: if \(f\in\mathfrak m\), then
+  \(\{f,\mathfrak m^{N+1}\}\subset \mathfrak m^N\).  The constant class
+  acts by zero and is not part of \(\mathfrak h\).
 \end{defn}
 
 \begin{lem}[Continuous dual]
@@ -91,8 +94,10 @@ of Kunz--Cox--Dickenstein, Chapter~5
   after multiplication by \(dz_1dz_2\); the displayed direct sum is
   the standard representative basis in which both exponents are
   strictly negative.
-  The reduced principal-part module is the \(\C\)-linear residue annihilator
-  of constants,
+  The basis vector \(\rho_{0,0}=z_1^{-1}z_2^{-1}dz_1dz_2\) is not zero in
+  \(H^2_{\mathfrak m}(R)\,dz_1dz_2\); it is the functional which evaluates
+  the constant coefficient.  The reduced principal-part module is the
+  \(\C\)-linear residue annihilator of constants,
   \[
     \mc P=\operatorname{Ann}_{\mathrm{res}}(\C\cdot1)
       =\bigoplus_{\substack{a,b\geq0\\a+b>0}}\C\,\rho_{a,b},
@@ -109,7 +114,9 @@ of Kunz--Cox--Dickenstein, Chapter~5
   inductive-limit topology through the basis \(\delta_{a,b}\). Thus the
   residue identification below is a continuous map of the declared
   locally finite topological vector spaces, not a bare algebraic
-  relabelling.
+  relabelling.  The space \(\mc P\) is a Hamiltonian-coadjoint module; it is
+  not an \(R\)-submodule of \(H^2_{\mathfrak m}(R)\,dz_1dz_2\), since
+  multiplication by \(z_i\) can hit the excluded scalar-residue line.
   The residue pairing is
   \[
     \langle \rho_{a,b},z_1^m z_2^n\rangle
@@ -146,8 +153,11 @@ of Kunz--Cox--Dickenstein, Chapter~5
   functional \(\delta_{a,b}\).  Lemma~\ref{lem:app-matlis-continuous-dual}
   shows that these coefficient functionals form the whole continuous
   dual.  The exclusion of \(\rho_{0,0}\) is exactly the condition that
-  the functional vanish on the constant Hamiltonian \(1\), which has
-  been removed from \(\mathfrak h\).
+  the functional vanish on the scalar line \(\C\cdot1\subset R\); this is
+  the continuous dual of the quotient \(R/\C\cdot1\).  On finite stages
+  the map sends \(\mc P_{\leq N}\) isomorphically to the functionals
+  vanishing on \(\mathfrak m^{N+1}\), so both the map and its inverse are
+  continuous for the declared locally finite topologies.
 \end{proof}
 
 \begin{prop}[Residue coadjoint action]
@@ -164,12 +174,21 @@ of Kunz--Cox--Dickenstein, Chapter~5
     z_1^p z_2^q\cdot\rho_{a,b}
       =-(pb-qa+p-q)\rho_{a-p+1,b-q+1},
   \]
-  with the convention that any term with a negative index is zero.
+  with the convention that any term with a negative index is zero.  If the
+  displayed target is \(\rho_{0,0}\), then the coefficient is zero; hence
+  the scalar residue line is not produced from \(\mc P\).
 \end{prop}
 
 \begin{proof}
-  Hamiltonian vector fields preserve the volume form \(dz_1dz_2\).
-  Hence the residue pairing satisfies integration by parts,
+  Let \(X_f=(\partial_{z_1}f)\partial_{z_2}
+  -(\partial_{z_2}f)\partial_{z_1}\).  Hamiltonian vector fields preserve
+  the volume form \(dz_1dz_2\).  For a Laurent coefficient \(\phi\) and
+  \(g\in R\), the residue of a total \(z_i\)-derivative is zero, hence
+  \[
+    0=\operatorname{Res}\bigl(L_{X_f}(\phi g\,dz_1dz_2)\bigr)
+      =\operatorname{Res}\bigl((\{f,\phi\}g+\phi\{f,g\})\,dz_1dz_2\bigr).
+  \]
+  Therefore the residue pairing satisfies integration by parts,
   \[
     \langle \{f,\rho\},g\rangle
       =-\langle \rho,\{f,g\}\rangle ,
@@ -191,18 +210,83 @@ of Kunz--Cox--Dickenstein, Chapter~5
   \]
   Multiplication by \(dz_1dz_2\) gives
   \(\rho_{a-p+1,b-q+1}\) precisely when the two new indices are
-  nonnegative; otherwise the principal-part projection gives zero.
+  nonnegative; otherwise the principal-part projection gives zero.  If
+  \(a-p+1=b-q+1=0\), then \(a=p-1\) and \(b=q-1\), and the coefficient
+  \(pb-qa+p-q=p(q-1)-q(p-1)+p-q\) is zero.  Thus the action preserves the
+  scalar-annihilator \(\mc P\).
+\end{proof}
+
+\begin{lem}[Continuity of the coadjoint action]
+\label{lem:app-matlis-coadjoint-continuity}
+  The formula of Proposition~\ref{prop:app-matlis-coadjoint-action}
+  extends from polynomial Hamiltonians to all of
+  \(\mathfrak h=\C[[z_1,z_2]]/\C\cdot1\).  The bilinear action
+  \[
+    \mathfrak h\times\mc P\longrightarrow\mc P
+  \]
+  is continuous for the \(\mathfrak m\)-adic topology on \(\mathfrak h\)
+  and the locally finite direct-sum topology on \(\mc P\).
+\end{lem}
+
+\begin{proof}
+  Fix \(\rho_{a,b}\).  In the monomial formula a term
+  \(z_1^p z_2^q\cdot\rho_{a,b}\) can be nonzero only if
+  \(p\leq a+1\) and \(q\leq b+1\).  Thus an arbitrary formal Hamiltonian
+  acts on \(\rho_{a,b}\) through a finite jet, so the action is
+  well-defined and continuous in the Hamiltonian variable.  Conversely,
+  if \(a+b\leq N\), every nonzero target has total index
+  \[
+    (a-p+1)+(b-q+1)=a+b-(p+q)+2\leq N+1
+  \]
+  because \(p+q>0\) for a reduced Hamiltonian.  Hence each fixed
+  Hamiltonian sends \(\mc P_{\leq N}\) into \(\mc P_{\leq N+1}\).  This is
+  exactly continuity for the locally finite direct limit.
+\end{proof}
+
+\begin{lem}[Coadjoint centralizer]
+\label{lem:app-matlis-coadjoint-centralizer}
+  Every \(\mathfrak h\)-module endomorphism of \(\mc P\), with the
+  coadjoint action above, is multiplication by one scalar.
+\end{lem}
+
+\begin{proof}
+  The vector \(\rho_{1,0}\) is cyclic.  Indeed
+  \(z_1^2\cdot\rho_{1,0}=-2\rho_{0,1}\); repeated action by the linear
+  Hamiltonians \(z_1\) and \(z_2\) then reaches every
+  \(\rho_{a,b}\), \(a+b>0\), with nonzero rising-factorial coefficient.
+
+  Let \(T\) be an \(\mathfrak h\)-module endomorphism.  Since
+  \(z_1z_2\cdot\rho_{a,b}=(a-b)\rho_{a,b}\), the vector
+  \(T\rho_{1,0}\) lies in the eigenvalue-one subspace
+  \[
+    \bigoplus_{r\geq0}\C\,\rho_{r+1,r}.
+  \]
+  It is a finite sum because \(\mc P\) is a direct sum:
+  \(T\rho_{1,0}=\sum_{r=0}^R c_r\rho_{r+1,r}\).  The Hamiltonian
+  \(z_2^2\) kills \(\rho_{1,0}\), hence it kills \(T\rho_{1,0}\).  But
+  for \(r\geq1\),
+  \[
+    z_2^2\cdot\rho_{r+1,r}
+      =(2r+4)\rho_{r+2,r-1},
+  \]
+  while the \(r=0\) target has negative second index and is zero.  The
+  displayed nonzero targets are linearly independent, so \(c_r=0\) for
+  all \(r\geq1\).  Therefore \(T\rho_{1,0}=c_0\rho_{1,0}\), and cyclicity
+  gives \(T=c_0\,\mathrm{id}_{\mc P}\).
 \end{proof}
 
 \begin{thm}[Residue pairing rigidity]
 \label{thm:app-matlis-residue-rigidity}
   Up to multiplication by one scalar in \(\C^\times\), the residue
-  pairing is the unique nondegenerate continuous pairing
+  pairing is the unique perfect continuous pairing
   \[
     \mc P\times\mathfrak h\longrightarrow\C
   \]
-  of total degree zero which is equivariant for the coadjoint action
-  above.  Fixing the scalar by
+  which is equivariant for the coadjoint action above.  Here
+  \emph{perfect} means that the adjoint map
+  \(\mc P\to\mathfrak h^\vee_{\mathrm{cont}}\) is a topological
+  vector-space isomorphism.  In particular the same uniqueness holds in
+  the narrower class of total-degree-zero pairings.  Fixing the scalar by
   \[
     \langle\rho_{a,b},z_1^m z_2^n\rangle
       =\delta_{a,m}\delta_{b,n}
@@ -212,24 +296,27 @@ of Kunz--Cox--Dickenstein, Chapter~5
 \end{thm}
 
 \begin{proof}
-  Let \(\beta\) be another such pairing and write
-  \(\beta_{a,b;m,n}=\beta(\rho_{a,b},z_1^m z_2^n)\).  Total-degree
-  zero gives \(\beta_{a,b;m,n}=0\) unless \(a+b=m+n\).
-  Equivariance for \(z_1z_2\) gives the second constraint
-  \(a-b=m-n\).  Together these force \((a,b)=(m,n)\), so
+  Let \(\beta\) be another perfect continuous equivariant pairing.  It
+  gives a topological vector-space isomorphism
   \[
-    \beta_{a,b;m,n}=c_{a,b}\delta_{a,m}\delta_{b,n}.
+    \Phi_\beta:\mc P\longrightarrow\mathfrak h^\vee_{\mathrm{cont}},
+    \qquad
+    \Phi_\beta(\rho)(g)=\beta(\rho,g).
   \]
-  Equivariance for \(z_1\) gives
-  \(c_{a,b+1}=c_{a,b}\) whenever both coefficients occur in the reduced
-  index set, because
-  \(z_1\cdot\rho_{a,b}=-(b+1)\rho_{a,b+1}\) and
-  \(\{z_1,z_1^m z_2^n\}=n z_1^m z_2^{n-1}\).  Equivariance for
-  \(z_2\) gives \(c_{a+1,b}=c_{a,b}\) under the same reduced-index
-  condition.  The omitted \(c_{0,0}\) is not a coefficient of
-  \(\mathcal P\).  Connecting through \(c_{1,1}\), all coefficients with
-  \(a+b>0\) are therefore a single scalar \(c\), and
-  nondegeneracy forces \(c\neq0\).
+  Equivariance of \(\beta\) says
+  \[
+    \beta(f\cdot\rho,g)=-\beta(\rho,\{f,g\}),
+  \]
+  so \(\Phi_\beta\) is an \(\mathfrak h\)-module map to the coadjoint
+  module.  Let \(\Phi_{\mathrm{res}}\) be the residue isomorphism of
+  Proposition~\ref{prop:app-matlis-realization}.  Then
+  \(T=\Phi_{\mathrm{res}}^{-1}\Phi_\beta\) is an \(\mathfrak h\)-module
+  automorphism of \(\mc P\).  By
+  Lemma~\ref{lem:app-matlis-coadjoint-centralizer},
+  \(T=c\,\mathrm{id}_{\mc P}\).  Since \(\Phi_\beta\) is an isomorphism,
+  \(c\neq0\), and
+  \(\beta=c\,\langle\,\cdot\,,\,\cdot\,\rangle_{\mathrm{res}}\).  The
+  displayed Kronecker normalization sets \(c=1\).
 \end{proof}
 
 \begin{thm}[Polynomial descendant obstruction for principal parts]
@@ -263,6 +350,20 @@ of Kunz--Cox--Dickenstein, Chapter~5
   preserved by module isomorphism and by restriction to submodules.
   Therefore no polynomial descendant module with locally nilpotent
   linear Hamiltonians realizes \(\mc P\).
+
+  For the manuscript's primitive PBW labels this obstruction is already
+  visible at the boundary of the index quadrant.  The special-fibre action
+  has
+  \[
+    z_1\cdot\widetilde\Psi_{a,b}=b\,\widetilde\Psi_{a,b-1},
+    \qquad
+    z_2\cdot\widetilde\Psi_{a,b}=-a\,\widetilde\Psi_{a-1,b},
+  \]
+  after the scalar descendant is removed.  Thus \(z_1\) kills
+  \(\widetilde\Psi_{a,0}\), \(a>0\), whereas
+  \(z_1\cdot\rho_{a,0}=-\rho_{a,1}\neq0\).  No rescaling
+  \(\widetilde\Psi_{a,b}\mapsto\lambda_{a,b}\rho_{a,b}\) with all
+  \(\lambda_{a,b}\neq0\) can intertwine the two actions.
 \end{proof}
 
 \begin{thm}[Universal Fourier--Rees construction and exact obstruction]
