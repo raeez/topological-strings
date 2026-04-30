@@ -2,7 +2,7 @@
 \label{sec:app-radial-parts-moyal}
 
 This appendix records the proof spine for
-Theorem~\ref{thm:lane-moyal-degree-zero}.  The stable core is the
+Theorem~\ref{thm:phi-hbar-all-order}.  The stable core is the
 scalar-reduced Weyl/Moyal normalization, the Capelli change of basis,
 the stable connected trace bracket, and the reduced open-line Wick
 graph expansion with midpoint propagator
@@ -11,7 +11,8 @@ comparison is isolated as the explicit input package stated below.
 Once that package is assumed, the radial argument is algebraic:
 Vandermonde conjugation removes the Dunkl--Calogero connection terms,
 injectivity detects the reduced quotient, and the stable connected
-cumulant projection extracts the single-trace Moyal bracket.
+primitive/indecomposable projection extracts the single-trace Moyal
+bracket.
 
 \begin{defn}[Formal Weyl/Moyal convention]
 \label{def:app-radial-moyal-convention}
@@ -1552,13 +1553,13 @@ exactly the assertion that the ordinary Weyl trace \(J_N(f)\) equals
   \(D_N(f,g)\) in the quantum moment-map ideal.
 \end{proof}
 
-\begin{defn}[Stable cumulant extraction]
-\label{def:app-radial-stable-cumulant-extraction}
+\begin{defn}[Stable primitive extraction]
+\label{def:app-radial-stable-primitive-extraction}
   Fix a total polynomial degree bound \(d\) and take \(N\geq d\).  Let
   \[
     \kappa_{N,d}
   \]
-  denote the connected single-trace cumulant projection on the stable
+  denote the connected single-trace primitive/indecomposable projection on the stable
   trace algebra in degrees \(\leq d\): it kills the empty trace and
   all decomposable multi-trace products, and it sends the
   Capelli-renormalized generator
@@ -1585,7 +1586,7 @@ exactly the assertion that the ordinary Weyl trace \(J_N(f)\) equals
   identifies the span of nonempty Weyl traces \(J_N(z_1^az_2^b)\),
   \(a+b\leq d\), with the span of nonempty normal-ordered traces
   \(T_{a,b}\), modulo the empty trace and decomposable multi-traces.
-  The cumulant projection
+  The primitive/indecomposable projection
   \[
     \kappa_{N,d}\bigl(J_N(z_1^az_2^b)\bigr)
       \longmapsto z_1^az_2^b
@@ -1608,7 +1609,7 @@ exactly the assertion that the ordinary Weyl trace \(J_N(f)\) equals
   degreewise in the stable range.
 \end{proof}
 
-\begin{thm}[Connected-trace bracket compatibility and stable cumulants]
+\begin{thm}[Connected-trace bracket compatibility and stable primitive projections]
 \label{cor:app-radial-stable-connected}
   Under the same radial-parts input as
   Theorem~\ref{thm:app-radial-finite-N}, for each fixed polynomial
@@ -1648,7 +1649,7 @@ exactly the assertion that the ordinary Weyl trace \(J_N(f)\) equals
   The finite-\(N\) identity of
   Theorem~\ref{thm:app-radial-finite-N} gives equality in the reduced
   quantum Hamiltonian quotient.  Applying \(\kappa_{N,d}\) gives the
-  displayed connected-trace identity, since the cumulant projection
+  displayed connected-trace identity, since the primitive projection
   kills only the empty trace and decomposable products and is injective
   on the Capelli-renormalized single-trace span by
   Lemma~\ref{lem:app-radial-connected-projection}.  The identity is
@@ -1957,5 +1958,5 @@ exactly the assertion that the ordinary Weyl trace \(J_N(f)\) equals
   Theorem~\ref{thm:app-reduced-open-line-moyal-product} together with
   Corollary~\ref{cor:app-reduced-graph-realizes-moyal}.  The separation
   from the Costello graph/QME realization is part of the hypothesis
-  boundary in Theorem~\ref{thm:lane-moyal-degree-zero}.
+  boundary in Theorem~\ref{thm:phi-hbar-all-order}.
 \end{proof}

@@ -1,245 +1,47 @@
 \begin{abstract}
-We work in the formal-local mixed holomorphic-topological string field
-theory on
+We work in the formal-local mixed holomorphic-topological theory on
 \[
   X=\R^2_{\mathrm{top}}\times\C^2_{\mathrm{hol}},
   \qquad
   L=\R_{\mathrm{brane}}\times\{s=z_1=z_2=0\},
 \]
-completed at the mixed Dirac brane whose holomorphic normal disk is
-\((\operatorname{Spf}\C[[z_1,z_2]],dz_1\wedge dz_2)\).  The theorem
-package proved in this local model has three cores: the Dirac brane
-probe, the Hamiltonian BF closed sector, and the reduced Hamiltonian
-CE/PV central-operation theorem, together with Matlis principal parts and
-the Weyl/Moyal--Capelli quantum coefficient surface, finite radial/Weyl
-certificates, and a finite-window non-scalar Costello/QME obstruction
-criterion.
-
-On a stack of \(N\) probes the holomorphic coordinates become
-\(\phi_1,\phi_2\in\mathfrak{gl}_N\).  The open sector is the
-Dirac-normalized first-order system
+completed at the Dirac brane whose holomorphic normal disk is
+\((\operatorname{Spf}\C[[z_1,z_2]],dz_1\wedge dz_2)\).  The closed
+sector is Hamiltonian BF theory for
 \[
-  S_\partial
-  =
-  \int_\R\operatorname{Tr}\bigl(\phi_1\,d\phi_2
-  +A[\phi_1,\phi_2]\bigr),
-  \qquad
-  Q\psi=[\phi_1,\phi_2].
-\]
-The closed sector is Hamiltonian BF theory for the shifted cotangent Lie
-algebra
-\[
-  \mathfrak h=\C[[z_1,z_2]]/\C\cdot1,
-  \qquad
+  \mathfrak h=\C[[z_1,z_2]]/\C\cdot1,\qquad
   \mathfrak g=\mathfrak h\ltimes
   \mathfrak h^\vee_{\mathrm{cont}}[1],
 \]
-with the Hamiltonian bracket induced by \(dz_1\wedge dz_2\), the local BV
-pairing supplied by continuous evaluation
-\(\mathfrak h^\vee_{\mathrm{cont}}\otimes\mathfrak h\to\C\), and the
-BF action
+and the brane sector is the Dirac/Koszul matrix probe
 \[
-  S_{\mathrm{BF}}
-  =
-  \int_{\R^2\times\C^2}
-  \bigl\langle \beta,\,
-  (d_{\R^2}+\bar\partial)\alpha+\tfrac12\{\alpha,\alpha\}
-  \bigr\rangle\,dz_1dz_2 .
+  S_\partial=\int_\R
+  \operatorname{Tr}(\phi_1\,d\phi_2+A[\phi_1,\phi_2]),
+  \qquad Q\psi=[\phi_1,\phi_2].
 \]
-The classical master equation is the Jacobi identity for
-\(\mathfrak h\) plus the coadjoint-module identity.
 
-The native holomorphic object is not a curve vertex algebra.  It is the
-two-complex-dimensional Hamiltonian holomorphic factorization algebra
+The proved core is a reduced coordinate theorem.  CE cochains on the
+shifted cotangent Hamiltonian Lie algebra identify with the coordinate
+polyvector model for reduced \(P_0\) central operations,
 \[
-  \mathcal F_{\mathrm{Ham}}^{\mathrm{hol}}(B)
-  =
-  C^\bullet_{\mathrm{CE},\mathrm{cont}}
-  \bigl(\Omega_c^{0,\bullet}(B)\widehat\otimes\mathfrak g\bigr)
+  c^I\mapsto \theta^I,\qquad u_I\mapsto O_I,
 \]
-on holomorphic polydisks \(B\subset\C^2\), with mixed enhancement
-\[
-  \mathcal F_{\mathrm{Ham}}^{\mathrm{mix}}(U\times B)
-  =
-  C^\bullet_{\mathrm{CE},\mathrm{cont}}
-  \bigl(
-  \Omega_c^\bullet(U)\widehat\otimes
-  \Omega_c^{0,\bullet}(B)\widehat\otimes\mathfrak g
-  \bigr)
-\]
-for \(U\subset\R^2_{\mathrm{top}}\).  This is the manuscript's native
-holomorphic \(E_2\)-type/factorization object.  Its brane avatars are the
-Weyl/Moyal open-string algebra, matrix or supermatrix cyclic trace
-models, and support-local principal-part currents on brane intervals.
-
-The inner CE/PV theorem is a reduced Hamiltonian central-operation
-statement.  For a finite-dimensional Lie algebra \(\mathfrak l\),
-\[
-  C^\bullet_{\mathrm{CE}}
-  (\mathfrak l\ltimes\mathfrak l^{\vee}[1])
-  \simeq \mathrm{PV}(\mathbf S(\mathfrak l)),
-  \qquad
-  c^I\mapsto\theta^I,\quad u_I\mapsto O_I .
-\]
-For the formal disk this becomes the coordinate completed map
-\[
-  \Phi_{\mathrm{coord}}\colon
-  C^\bullet_{\mathrm{CE},\mathrm{coord}}(\mathfrak g)
-  \xrightarrow{\sim}
-  \mathrm{PV}_{\mathrm{coord}}(A_{\partial,\mathrm{coord}}).
-\]
-It is a dg coordinate theorem.  The bracketed \(P_0\) form is asserted
-only after a bracket-admissible completion
-\(B\subset\mathrm{PV}_{\mathrm{coord}}\) is chosen; the Maurer--Cartan
-kernel \(\Theta_B\) is asserted only when the diagonal tensor converges
-in a kernel-admissible product.  This is not the unreduced
-factorization-centre theorem.
+after constants on the Hamiltonian side and the empty trace on the brane
+side have been removed.  Bracket and kernel forms require the stated
+bracket-admissible and kernel-admissible completions.  The theorem is not
+the unreduced factorization centre of the full open BV algebra.
 
 The cotangent coefficients are Grothendieck--Matlis principal parts,
-not polynomial one-\(\psi\) descendants:
-\[
-  \begin{aligned}
-  \mathcal P
-  &=
-  \operatorname{Ann}_{\mathrm{res}}(\C\cdot1)
-  \subset
-  H^2_{\mathfrak m}(\C[[z_1,z_2]])\,dz_1dz_2,\\
-  \rho_{a,b}
-  &=
-  z_1^{-a-1}z_2^{-b-1}dz_1dz_2,
-  \qquad a,b\ge0,\ a+b>0 .
-  \end{aligned}
-\]
-Their coadjoint action is
-\[
-  z_1^pz_2^q\cdot\rho_{a,b}
-  =
-  -(pb-qa+p-q)\rho_{a-p+1,b-q+1},
-\]
-with negative targets zero.
-The PBW one-\(\psi\) classes \(\Psi_{a,b}\) share bidegree labels with
-\(\rho_{a,b}\) but live in a different Hamiltonian module.  The
-\(\mathcal D_\hbar\) Fourier--Rees bridge
-\[
-  z_1^az_2^b\mapsto
-  \partial_1^a\partial_2^be_0
-  \mapsto
-  (-1)^{a+b}\hbar^{a+b}a!b!\rho_{a,b}
-\]
-is a polarization comparison; the same-action obstruction forbids a flat
-polynomial realization of \(\mathcal P\) with the original action.
+not polynomial one-\(\psi\) descendants.  The stable trace computation
+supplies an algebraic PBW special-fibre shadow; the deformation-level
+cotangent module is
+\(\mathfrak h^\vee_{\mathrm{cont}}\), realized by residue principal
+parts.  The Weyl/Moyal--Capelli computation gives the formal quantum
+coefficient target and the scalar class \(\hbar N[\bar c]\) in the
+ordinary scalar-reduced \(\mathfrak{gl}_N\) branch.
 
-The quantum target uses the Weyl/Moyal convention
-\[
-  f*g=m\exp\!\left(\frac{\hbar}{2}
-  (\partial_{z_1}\otimes\partial_{z_2}
-  -\partial_{z_2}\otimes\partial_{z_1})\right)(f\otimes g),
-  \qquad
-  \{f,g\}_\hbar=\hbar^{-1}[f,g]_* .
-\]
-The raw commutator has first and third coefficients \(1\) and \(1/24\).
-At finite \(N\) the normal-ordered quantum comoment carries the
-Capelli contact term
-\[
-  \widehat\mu_\epsilon
-  =
-  \operatorname{Tr}\bigl(\epsilon(YX-XY+\hbar N I)\bigr),
-\]
-and the scalar QME obstruction in the ordinary scalar-reduced
-\(\mathfrak{gl}_N\) branch is
-\[
-  \operatorname{Ob}_{\mathrm{sc}}
-  =
-  \hbar N\,\omega(f,g)
-  \int_\R a(t)b(t)\gamma_{\mathbf 1}(t)\,dt,
-  \qquad
-  [\operatorname{Ob}_{\mathrm{sc}}]=\hbar N[\bar c].
-\]
-The central-character and balanced-supertrace branches cancel this scalar
-class by changing the source or open model before the reduced class
-forms; any other cancellation must supply an explicit null-homotopy with
-leading class \(-\hbar N[\bar c]\).
-
-The proved quantum surface is componentwise.  For an admissible weight
-and interval \(I\),
-\[
-  \mathfrak S_{\hbar,w}(I)=
-  \mathcal K_{\mathrm{BV}}^w
-  \times\{0_{\mathrm{sc}}\}
-  \times A^{\mathrm{pp},w}_{\partial,\hbar}(I)
-  \times T_{\mathrm{Ham},\hbar}.
-\]
-Its factors are weighted coefficient/BV-kernel convergence,
-balanced-supertrace scalar QME cancellation, reduced weighted
-Moyal principal-part current brackets, and the degree-zero Hamiltonian
-trace comparison relative to the radial/Weyl normal-form gate.  The
-finite certificates now close the edge families \((2,b),(b,2)\) through
-\(b=12\), the balanced diagonal through \((6,6)\), and all non-edge
-bidegrees of total degree at most \(12\).  The missing all-bidegree
-theorem is the uniform splitting of the free normal-diagram correction
-map \(\mathcal C_{a,b}\); the first balanced case outside the current
-certificate range is \((7,7)\), which is open rather than obstructed.
-
-The non-scalar Costello graph/QME surface is now a finite-window
-criterion.  After constructing the scalar-contact lift
-\(\widehat\sigma_{\mathrm{sc}}\), one must kill
-\[
-  [\operatorname{Ob}^{\mathrm{red}}_{w,\partial,\hbar}]
-  \in H^1(\ker\widehat\sigma_{\mathrm{sc}},d_{\mathrm{QME}})
-\]
-with finite-window counterterms, a curved bulk-to-defect kernel, and
-compatible centrality homotopies.  The closed rows
-\(\alpha_{\mathrm{sc}}\) and \(\alpha_{11}\) vanish in the constructed
-finite-window habitat.  The first exposed larger source-face row is
-\(\theta_3\):
-\[
-  \mathsf E_{\theta_3,M}
-  =
-  -K^M_{\Theta_3}(\zeta_{M,\nu_3}),\qquad
-  \ell_{\theta_3}(\mathsf E_{\theta_3,M})=1.
-\]
-It is not solved by naming a counterterm.  It is solved only by a CE
-ancestor, a scalar-zero Costello local counterterm, or a complete
-companion-face table whose differential gives
-\(d_MC_{\theta_3,M}=-\mathsf E_{\theta_3,M}\) with Roos-compatible
-finite-window projections.
-
-Curve chiral and Zhu objects are reduced surfaces, not native objects.
-A \(\C\times\R\) reduction must specify the projection, the retained
-\(z_2\)-mode or principal-part coefficient system, the image of the
-brane, the pushed-forward bracket, the BV pairing, the anomaly matching,
-and the Dirac BRST differential before any \(Q_{\mathrm{BRST}}^2=0\) or
-Zhu comparison is asserted.  The normal \(\Omega\)-background is likewise
-a theorem surface, not a consequence of the preceding constructions:
-one must use the brane-preserving normal torus on
-\[
-  N_LX=\R_s\oplus\C_{z_1}\oplus\C_{z_2},
-  \qquad
-  T_\Omega=
-  \C^*_{\epsilon_s}\times
-  \C^*_{\epsilon_1}\times
-  \C^*_{\epsilon_2},
-  \qquad t\ \text{fixed},
-\]
-construct
-\[
-  Q_\Omega=Q+\iota_{V_\Omega},\qquad
-  Q_\Omega^2=L_{V_\Omega},
-\]
-invert the moving normal weights, and use a line-valued or
-\(\hbar_\omega\)-weighted Hamiltonian bracket off the self-dual locus
-\(\epsilon_1+\epsilon_2=0\).  It must also state the
-residue/Euler normalization and build the resulting stratified
-factorization algebra on \((X,L)\).
-A protected stratified trace or physical \(\Omega\)-large-\(N\) trace
-requires, in addition, the brane-defect QME, trace-state normalization,
-and the same non-scalar obstruction vanishing.
-
-No compact Calabi--Yau, global BCOV, CoHA, quintic, HKQ/CDGP/GV/OSV,
-Abel--Jacobi, MNOP/chiral-volume, Vol III, Igusa, Borcherds/BKM, or
-sister-volume consequence follows from this local theorem.  Such a target
-requires a matched-conventions descent theorem and vanishing, with
-specified null-homotopies, of the corresponding period, anomaly, QME,
-convergence, hyperdescent, six-relation, and operadic obstruction
-classes.
+Compact Calabi--Yau, global BCOV, CoHA, quintic, OSV/GV,
+Abel--Jacobi, MNOP, Igusa, Borcherds/BKM, and sister-volume claims are
+external comparison targets.  They are not consequences of the local
+Hamiltonian BF/Dirac-brane theorem proved here.
 \end{abstract}
